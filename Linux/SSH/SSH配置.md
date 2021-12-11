@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-28 20:21:05
+ * @LastEditTime: 2021-12-11 22:46:30
 -->
 
 ## .ssh目录
@@ -29,6 +29,7 @@ ssh公钥生效需满足
 - .ssh目录的权限必须是700
 
 - .ssh/authorized_keys文件权限必须是600
+  
 ```sh
 # 首次登录时Client端会提示
 Host key not found from the list of known hosts.
@@ -43,21 +44,12 @@ known_hosts通过Client和Server的双向认证，以避免中间人($man-in-the
 
 Client向Server发起连接时，Server不仅要验证Client的合法性，Client也会通过known_hosts中的host key来验证Server的身份
 
-## SSH指令
-
-```sh
-# 连接
-ssh 用户名@IP地址 (-p 端口号)
-# 例,ssh dalao@192.168.1.1 (端口号默认为20)
-
-# 清除主机密钥
-ssh-keygen -R 远程主机IP
-``` 
 
 ## 配置文件
-```sh
-# /etc/ssh/sshd_condfig
 
+/etc/ssh/sshd_condfig
+
+```sh
 # 允许密钥登录
 RSAAuthentication yes
 
