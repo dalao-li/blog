@@ -5,16 +5,16 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-12 13:55:49
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-10 00:11:38
+ * @LastEditTime: 2021-12-13 19:37:34
 -->
 
-## 匹配
+## sed
 
 ```sh
 sed -参数 '起始范围，结束范围  操作' 文件
 
-# 例，打印file.txt 1-5行
-sed -n '1，5 p' file.txt
+# 打印file.txt 1-5行
+# sed -n '1，5 p' file.txt
 ```
 
 | 参数         | 含义                                            |

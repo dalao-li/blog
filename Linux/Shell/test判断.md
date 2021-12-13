@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-09-29 21:52:15
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-28 20:19:18
+ * @LastEditTime: 2021-12-12 22:14:09
 -->
 
 
@@ -14,7 +14,7 @@
 ## 数值测试
 
 ```sh
-test 数据1 参数 数据2
+test 数据1 [参数] 数据2
 ```
 
 | 参数  | 说明           |
@@ -27,10 +27,11 @@ test 数据1 参数 数据2
 | `-le` | 小于等于则为真 |
 
 ```sh
+#!bin/bash
 n1=100
 n2=100
 
-if test $[n1] -eq $[n2];then
+if test ${n1} -eq ${n2}a;then
     ......
 else
     ......
@@ -50,7 +51,7 @@ fi
 n1="ru1noob"
 n2="runoob"
 
-if test $n1 = $n2;then
+if test ${n1} = ${n2};then
     ......
 else
     ......
@@ -73,8 +74,7 @@ test [参数] 文件名
 
 
 ```sh
-if test -e ./bash
-then
+if test -e ./bash;then
     echo '文件已存在!'
 else
     echo '文件不存在!'

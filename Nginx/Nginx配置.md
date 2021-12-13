@@ -5,11 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-06 20:05:41
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-13 19:14:19
+ * @LastEditTime: 2021-12-13 19:45:16
 -->
 
 ```sh
-# docker容器中 nginx.conf 的位置
+# docker容器中 nginx.conf 位置
 /etc/nginx/nginx.conf
 
 docker run -itd -v $PWD/conf:/etc/nginx --net="host" nginx

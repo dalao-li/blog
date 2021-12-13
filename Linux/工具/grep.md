@@ -5,13 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-20 20:16:43
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-13 02:18:20
+ * @LastEditTime: 2021-12-13 19:37:14
 -->
 
 ## grep
 
 ```sh
-grep -参数
+grep -[参数]
 ```
 
 | 参数 | 说明                                   |
