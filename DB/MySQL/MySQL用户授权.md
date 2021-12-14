@@ -5,9 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-10 23:06:51
+ * @LastEditTime: 2021-12-14 21:56:34
 -->
-## 新建用户
+
+## 授权
 
 ```sql
 CREATE user '用户名'@'host' identified BY '密码';
@@ -35,12 +36,10 @@ mysql -u 用户名 -p
 
 ![](https://cdn.hurra.ltd/img/20200516001919.png)
 
-## 授权
-
-注意，授权操作只有$root$用户才有权限操作
+注意，授权操作只有root用户才有权限操作
 
 ```sql
-GRANT ALL PRIVILEGES ON *.* TO '用户名'@'%' identified BY '密码';
+GRANT ALL PRIVILEGES ON *.* TO '用户名'@'%' identified BY '密码';
 ```
 
 

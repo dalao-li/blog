@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-10 23:07:59
+ * @LastEditTime: 2021-12-14 21:54:06
 -->
 
 ## 映射目录
@@ -66,9 +66,8 @@ table_definition_cache=400
 
 table_open_cache=256
 EOF
-
-# 重启容器或者重启 MySQL 服务
 ```
+重启容器或者重启 MySQL 服务
 
 
 

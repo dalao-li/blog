@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-06 19:15:52
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-11 22:46:56
+ * @LastEditTime: 2021-12-13 20:24:10
 -->
 
 ## 监控
@@ -15,16 +15,16 @@
 ```sh
 #!/bin/bash
 
-#获取登录者的用户名
+# 获取登录者的用户名
 user=${USER}
 
-#获取登录者的IP地址
+# 获取登录者的IP地址
 ip=${SSH_CLIENT%% *}
 
-#获取登录的时间
+# 获取登录的时间
 time=${date +%F%t%k:%M}
 
-#服务器的IP地址
+# 服务器的IP地址
 server=${ifconfig wlp2s0 | sed -n '2p' | awk '{print $2}'}
 
 echo ${user} ${ip} ${time} ${server}
