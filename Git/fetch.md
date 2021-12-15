@@ -1,3 +1,12 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2021-12-15 21:10:23
+ * @LastEditors: DaLao
+ * @LastEditTime: 2021-12-15 21:12:25
+-->
 ## fetch
 
 `git fetch` 是将远程的最新内容拉到本地，用户在检查了以后决定是否合并到本地分支中
@@ -57,23 +66,3 @@ git log -p FETCH_HEAD
 
 可以通过这些信息来判断是否产生冲突，以确定是否将更新merge到当前分支.
 
-## pull
-
-`git pull` 是将远程主机的最新内容拉下来后直接合并，可能会产生冲突，需手动解决.
-
-```sh
-git pull 远程主机名 远程分支名:本地分支名
-
-# 若远程分支是与当前分支合并，则冒号后部分可省略
-# git pull origin master
-```
-
-`git pull`的过程可分解
-
-```sh
-# 从远程主机的master分支拉取最新内容 
-git fetch origin master
-
-# //将拉取下来的最新内容合并到当前所在的分支中
-git merge FETCH_HEAD 
-```

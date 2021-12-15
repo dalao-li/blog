@@ -5,8 +5,34 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-11 22:46:30
+ * @LastEditTime: 2021-12-15 21:41:44
 -->
+
+## 连接
+
+```sh
+ssh 用户名@IP地址 (-p 端口号)
+# 例,ssh dalao@192.168.1.1 (端口号默认为20)
+```
+
+## 清除主机密钥
+
+```sh
+ssh-keygen -R [远程主机IP]
+``` 
+
+## 免密
+
+- 方法1，手动复制
+
+把本地主机的`id_rsa.pub` 复制到远程主机的.ssh/authorized_keys里
+
+- 方法2，命令复制
+
+```sh
+# 本地执行
+ssh-copy-id -i ~/.ssh/id_rsa.pub 远程用户@远程主机IP
+```
 
 ## .ssh目录
 
@@ -23,22 +49,6 @@ ssh-keygen -t rsa
 | id_rsa          | 本机私钥文件             |
 | id_rsa.pub      | 本机公钥文件             |
 | know_hosts      | 存储已认证主机的host key |
-
-ssh公钥生效需满足
-
-- .ssh目录的权限必须是700
-
-- .ssh/authorized_keys文件权限必须是600
-  
-```sh
-# 首次登录时Client端会提示
-Host key not found from the list of known hosts.
-Are you sure you want to continue connecting (yes/no)?
-
-# 若选择yes则Server的host key就被加入Client的known_hosts中，格式如下
-# domain name+encryption algorithm+host key
-example.hostname.com ssh-rsa AAAAB4NzaC1yc2EAAAABIwAAAQEA...
-```
 
 known_hosts通过Client和Server的双向认证，以避免中间人($man-in-the-middle$ $attack$)攻击
 

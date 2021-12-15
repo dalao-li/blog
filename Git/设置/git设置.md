@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 17:59:27
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-07 16:51:54
+ * @LastEditTime: 2021-12-15 21:21:20
 -->
 
 ## Git 命令流程
@@ -13,7 +13,7 @@
 ![](https://cdn.hurra.ltd/img/20200720231600.png)
 
 
-## 设置信息
+## 设置
 
 ```sh
 # 配置用户名
@@ -38,3 +38,10 @@ ssh-keygen -t rsa -C "邮箱"
 
 公钥位置`.ssh/id_rsa.pub`
 
+## .git文件
+
+```sh
+git gc --prune=now
+
+git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -5 | awk '{print$1}')"
+```

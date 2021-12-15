@@ -5,10 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-20 20:16:43
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-11 22:56:55
+ * @LastEditTime: 2021-12-15 21:14:21
 -->
 
-$Docker$搭建$Gitlab$占用内存较大，若在虚拟机内操作建议虚拟机内存大于$4G$
+Docker搭建Gitlab占用内存较大，若在虚拟机内操作建议虚拟机内存大于4G
 
 ## 搭建
 
