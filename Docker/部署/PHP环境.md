@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-07 16:17:17
+ * @LastEditTime: 2021-12-15 23:20:46
 -->
 
 ## 拉取镜像
@@ -63,22 +63,20 @@ server {
 
 ```sh
 # PHP 容器
-
-# docker run -itd --name demo_php -v ~/nginx/www:/www php:7.1.30-fpm
 docker run -itd \
     --name demo_php \
     -v ~/nginx/www:/www \
     php:7.1.30-fpm
+# docker run -itd --name demo_php -v ~/nginx/www:/www php:7.1.30-fpm
 
 # Nginx 容器
-
-# docker run -itd -p 80:80 -v ~/nginx/www:/usr/share/nginx/html -v ~/nginx/conf:/etc/nginx/conf.d --link demo_php:php nginx
 docker run -itd \
     -p 80:80 \
     -v ~/nginx/www:/usr/share/nginx/html \
     -v ~/nginx/conf:/etc/nginx/conf.d \
     --link demo_php:php \
     nginx
+# docker run -itd -p 80:80 -v ~/nginx/www:/usr/share/nginx/html -v ~/nginx/conf:/etc/nginx/conf.d --link demo_php:php nginx
 ```
 
 ![](https://cdn.hurra.ltd/img/20200710113713.png)

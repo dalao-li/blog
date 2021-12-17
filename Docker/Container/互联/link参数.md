@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-09 00:06:17
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-13 21:55:19
+ * @LastEditTime: 2021-12-15 23:17:17
 -->
 
 ## --link 互联
@@ -25,14 +25,13 @@ docker inspect box_1 | grep IPAddress
 
 ![](https://cdn.hurra.ltd/img/20200726113742.png)
 
-
 使用 box_1 容器 ping box_2 容器
 
 ![](https://cdn.hurra.ltd/img/20200726114146.png)
 
 ![](https://cdn.hurra.ltd/img/20200726114219.png)
 
-- 跨容器访问
+## 跨容器访问
 
 建立一个 ubuntu 容器，使用--link 命令连接建立的 mysql 容器，实现从 ubuntu 容器中访问 mysql 服务
 

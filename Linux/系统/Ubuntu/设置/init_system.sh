@@ -7,7 +7,7 @@
  # @Email: dalao_li@163.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: DaLao
- # @LastEditTime: 2021-12-03 23:20:32
+ # @LastEditTime: 2021-12-16 23:46:15
 ### 
 
 # 设置flameshot快捷键
