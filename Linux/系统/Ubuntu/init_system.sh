@@ -7,7 +7,7 @@
  # @Email: dalao_li@163.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: DaLao
- # @LastEditTime: 2021-12-16 23:46:15
+ # @LastEditTime: 2021-12-23 00:18:58
 ### 
 
 # 设置flameshot快捷键
@@ -130,11 +130,11 @@ EOF
 
 # 安装jetbrains
 install_jetbrains_ide(){
-    tar=("pycharm-professional-2021.1.tar.gz" "ideaIU-2021.1.tar.gz" "CLion-2021.1.tar.gz" "goland-2021.1.tar.gz")
+    tar=("pycharm-professional-2021.1.tar.gz" "CLion-2021.1.tar.gz" "goland-2021.1.tar.gz")
     
-    file=("pycharm-2021.1" "idea-IU-211.6693.111" "clion-2021.1" "GoLand-2021.1")
+    file=("pycharm-2021.1" "clion-2021.1" "GoLand-2021.1")
     
-    name=("pycharm" "idea" "clion" "goland")
+    name=("pycharm" "clion" "goland")
 
     for i in {0..3}
     do 
@@ -167,7 +167,7 @@ install_vm(){
 }
 
 install_deb(){
-    deb=("microsoft-edge-beta_92.0.902.45-1_amd64.deb" "XMind-2020-for-Linux-amd-64bit-10.3.1-202101132117.deb" )
+    deb=("microsoft-edge-stable_96.0.1054.62-1_amd64" "XMind-2020-for-Linux-amd-64bit-10.3.1-202101132117.deb" )
 
     for j in {0..1}
     do 
@@ -175,17 +175,17 @@ install_deb(){
     done
 }
 
-init_system
+#init_system
 
-install_docker
+#install_docker
 
 install_jetbrains_ide 
 
-install_appimage  
+#install_appimage  
 
-install_deb
+#install_deb
 
-install_vm
+#install_vm
 
-install_anaconda
+#install_anaconda
 
