@@ -5,21 +5,42 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-28 20:27:11
+ * @LastEditTime: 2021-12-19 17:35:24
 -->
 
-## 类定义
+## 定义
 
 ```py
 class Stu:
-    def __init__(self，num，name，age):
+    def __init__(self ， num ， name ， age):
         self.num = num
         self.name = name
         self.age = age
 ```
 
-self代表类的实例，而非类，类的方法与普通的函数只有一个特别的区别——它们必须有一个额外的第一个参数名称，按照惯例它的名称是 self
+self代表类的实例，而非类
 
+类的方法与普通的函数的区别为它们必须有一个额外的首参数名称self
+
+## 封装
+
+```py
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    # get方法
+    @property
+    def name(self):
+        return self._name
+
+    # set方法
+    @name.setter
+        def name(self , value):
+            if not isinstance(value, str):
+                raise TypeError('Expected a string')
+            self._name = value
+```
 ## 继承
 
 ```py
@@ -27,8 +48,10 @@ class People:
     def __init__(self，name，age):
         self.name = name
         self.age = age
+
     def speak(self):
         print(self.name，self.age)
+
 
 
 class Student(People):
@@ -38,6 +61,7 @@ class Student(People):
     
     def speak(self):
         print(self.name，self.age，self.num)
+
 ```
 
 ## 获取类值
