@@ -5,14 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-18 23:31:15
+ * @LastEditTime: 2021-12-24 23:12:59
 -->
 
-## Ndarray 对象
 
-N 维数组对象 ndarray
-
-- 创建 ndarray
+## 创建 ndarray
 
 ```py
 numpy.array(object , dtype = None , copy = True , order = None , subok = False , ndmin = 0)

@@ -5,10 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-04 01:52:56
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-04 01:54:48
+ * @LastEditTime: 2021-12-25 01:19:19
 -->
 
-## 堆栈
+## 栈
 
 ```py
 stack = [3, 4, 5]

@@ -5,49 +5,55 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 21:05:31
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-27 00:22:10
+ * @LastEditTime: 2021-12-24 22:48:35
 -->
 
 ## 数值排序
   
 ```c
-sort(v.begin(), v.end());
+sort(v.begin() , v.end());
 ```
 
 ## 对象排序
 
-```c
+```c++
 #include <iostream>
 #include <algorithm>
 #include <vector>
 #include <string>
 
 using namespace std;
+
 class Stu {
+	public:
+		Stu() {};
+		string getName() {
+			return name;
+		}
+
+		int getNum() {
+			return num;
+		}
+        
+		bool operator == (const Stu &stu) const {
+			return stu.name == name;
+		}
 	private:
 		string name;
 		int num;
-	public:
-		Stu() {};
-		string getName() {return name;}
-		int getNum() {return num;}
-        
-		bool operator ==(const Stu &stu)const {
-			return stu.name==name;
-		}
 };
 
 
-bool cmp1(Stu a, Stu b) {
+bool cmp(Stu a, Stu b) {
 	return a.getName() < b.getName();
 }
 
 int main() {
     // 指定排序
-    sort(stu.begin()，stu.end()，cmp1);
+    sort(stu.begin() , stu.end() , cmp);
 	
     // 寻找指定对象下标
-    it = find(stu.begin()，stu.end()，s);
+    it = find(stu.begin() , stu.end() , s);
 }
 ```
 

@@ -7,7 +7,7 @@
  # @Email: dalao_li@163.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: DaLao
- # @LastEditTime: 2021-12-23 00:18:58
+ # @LastEditTime: 2021-12-23 22:54:09
 ### 
 
 # 设置flameshot快捷键
@@ -39,23 +39,20 @@ install_docker(){
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
 
     sudo add-apt-repository "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu $(lsb_release -cs) stable" 
-
+    
     sudo apt-get update -y && sudo apt-get install docker-ce -y
 
-    sudo service docker start 
-
     # 添加docker用户组，将登陆用户加入到docker用户组中
-    sudo groupadd docker
-    
-    sudo gpasswd -a ${USER} docker && sudo newgrp docker 
+    sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo newgrp docker 
 
+    su ${USER}
     # 修改源
     sudo bash -c "cat > /etc/docker/daemon.json" <<EOF
 {
     "registry-mirrors":["https://997nddro.mirror.aliyuncs.com"]
 }
 EOF
-    sudo service docker restart
+    sudo service docker start
 
     set_proxy &
 }
@@ -83,8 +80,7 @@ install_appimage(){
     # 防止出现双图标
     wm=("AppRun" "picgo")
     
-    for i in {0..1}
-    do
+    for i in {0..1};do
         sudo cp -r "${DISK_PATH}/Ubuntu/AppImage/${name[i]}" /usr/local/bin
 
         path="/usr/local/bin/${name[i]}/${name[i]}"
@@ -108,7 +104,7 @@ set_jetbrains_ide(){
     sudo tar -xvf ${DISK_PATH}/Ubuntu/Jetbrains/${1} -C /usr/local/bin
     sudo mv /usr/local/bin/${2} /usr/local/bin/${name}
 
-    path="/usr/local/bin/${name}/bin/${name}"
+    path="/usr/bin/${name}/bin/${name}"
 
     sudo bash -c "cat > /usr/share/applications/${name}.desktop" <<EOF
 [Desktop Entry]
@@ -136,8 +132,7 @@ install_jetbrains_ide(){
     
     name=("pycharm" "clion" "goland")
 
-    for i in {0..3}
-    do 
+    for i in {0..3};do 
         set_jetbrains_ide ${tar[i]} ${file[i]} ${name[i]} &
     done
     wait
@@ -169,19 +164,18 @@ install_vm(){
 install_deb(){
     deb=("microsoft-edge-stable_96.0.1054.62-1_amd64" "XMind-2020-for-Linux-amd-64bit-10.3.1-202101132117.deb" )
 
-    for j in {0..1}
-    do 
+    for j in {0..1};do 
         sudo dpkg -i ${DISK_PATH}/Ubuntu/App/${deb[j]}
     done
 }
 
-#init_system
+# init_system
 
-#install_docker
+# install_docker
 
-install_jetbrains_ide 
+# install_jetbrains_ide 
 
-#install_appimage  
+install_appimage  
 
 #install_deb
 
