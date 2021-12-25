@@ -43,7 +43,7 @@ python_version = "3.6"
 
 ## 全部安装  
 
-进入 demo 目录，创建虚拟环境
+进入目录，创建虚拟环境
 
 ![](https://cdn.hurra.ltd/img/20210122224056.png)
 
@@ -66,13 +66,16 @@ python_version = "3.8"
 ```
 
 安装，查看安装的包
+
 ![](https://cdn.hurra.ltd/img/20210122224537.png)
 
 可以看到 Flask 包已经安装
 
 ## 部分安装
 
-安装开发环境下的包: 通常有一些 Python 包只在你的开发环境中需要，而不是在生产环境中，例如单元测试包. Pipenv 使用--dev 标志区分两个环境. 加 --dev 表示包括 Pipfile dev-packages 中的依赖
+通常有一些 Python 包只在开发环境中需要，而不是在生产环境中，例如单元测试包
+
+Pipenv 使用--dev 标志区分两个环境. 加 --dev 表示包括 Pipfile dev-packages 中的依赖
 
 - 安装包记录是在[dev-packages] 部分，或是[packages] 部分.  
 
@@ -80,7 +83,7 @@ python_version = "3.8"
 
 - 若安装时不定指定`--dev` 参数，只会安装`[packages]` 下面的模块.
 
-另建立文件夹 demo2，内建立 Pipfile 文件
+另建立 Pipfile 文件
 
 ```sh
 [[source]]
