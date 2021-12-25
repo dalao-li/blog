@@ -81,7 +81,7 @@ $3$. 若队列为空则结束
 
 ## 代码
 
-```c
+```c++
 #include <iostream>
 #include <cstring>
 #include <queue>
@@ -132,15 +132,15 @@ void SPFA(char s) {
 		for (int i = 0; i < edge.size(); i++) {
 			// 若某个边的起点是x
 			if (edge[i].sp == x) {
-				//cout<<edge[i].sp<<" "<<edge[i].ep<<endl;
-				//获取该边的终点
+				// cout<<edge[i].sp<<" "<<edge[i].ep<<endl;
+				// 获取该边的终点
 				char end = edge[i].ep;
 				int end_index = getIndex(end);
 				// 若从点S经过点X到点end的距离比S直接到end的距离短，则可进行松弛操作
 				if (path[x_index] + edge[i].w < path[end_index]) {
 					// 从点S到点end的距离更新为点S到X的距离与X到end的距离之和
 					path[end_index] = edge[i].w + path[x_index];
-					//cout<<"path["<<end<<"] = "<<path[end_index]<<endl;
+					// cout<<"path["<<end<<"] = "<<path[end_index]<<endl;
 					if (!in[end_index]) {
 						q.push(end);
 						in[end_index] = 1;
@@ -163,7 +163,6 @@ int main() {
 	for(int i = 0 ; i< 6; i++) {
 		edge.push_back(e[i]);
 	}
-	
 	char s = 'A';
 	SPFA(s);
 	for(int i = 0 ; i<5;i++){
