@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-14 21:54:06
+ * @LastEditTime: 2021-12-25 23:49:59
 -->
 
 ## 映射目录
@@ -20,9 +20,6 @@ docker run -itd \
 # docker run -itd --name=mysql -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD= 123  mysql:5.7
 ```
 
-![](https://cdn.hurra.ltd/img/20200515202929.png)
-
-
 ## 远程连接
 
 ```sh
@@ -30,7 +27,7 @@ docker run -itd \
 mysql -u root -p
 
 # 允许远程登录
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '刚设置的MYSQL密码';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '密码';
 
 flush privileges;
 ```
@@ -43,14 +40,11 @@ flush privileges;
 
 如果设置了目录映射的话就能在宿主机中看见
 
-![](https://cdn.hurra.ltd/img/20200515234144.png)
-
 ## 常见问题
 
 - 中文乱码
 
 ```sh
-# 容器内执行
 echo "character-set-server=utf8" >> /etc/mysql/mysql.conf.d/mysqld.cnf
 
 service mysql restart
@@ -67,7 +61,6 @@ table_definition_cache=400
 table_open_cache=256
 EOF
 ```
-重启容器或者重启 MySQL 服务
 
 
 

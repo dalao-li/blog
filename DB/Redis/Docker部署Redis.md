@@ -5,8 +5,9 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 23:46:06
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-07 15:52:46
+ * @LastEditTime: 2021-12-25 22:33:55
 -->
+
 ```sh
 # GUI管理软件
 sudo snap install redis-desktop-manager

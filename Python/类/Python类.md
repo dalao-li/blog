@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-19 17:35:24
+ * @LastEditTime: 2021-12-26 00:10:00
 -->
 
 ## 定义
@@ -22,7 +22,7 @@ self代表类的实例，而非类
 
 类的方法与普通的函数的区别为它们必须有一个额外的首参数名称self
 
-## 封装
+## 方法
 
 ```py
 class Person:
@@ -41,30 +41,8 @@ class Person:
                 raise TypeError('Expected a string')
             self._name = value
 ```
-## 继承
 
-```py
-class People:
-    def __init__(self，name，age):
-        self.name = name
-        self.age = age
-
-    def speak(self):
-        print(self.name，self.age)
-
-
-
-class Student(People):
-    def __init__(self，name，age，num):
-        People.__init__(self，name，age)
-        self.num = num
-    
-    def speak(self):
-        print(self.name，self.age，self.num)
-
-```
-
-## 获取类值
+## 获值
 
 ```py
 class A(object):
@@ -78,7 +56,7 @@ a = A('lili'， 23)
 print(a.__dict__)
 ```
 
-## 给类赋值
+## 赋值
 
 ```py
 class Person:

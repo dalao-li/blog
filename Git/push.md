@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-25 23:07:05
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-18 22:10:56
+ * @LastEditTime: 2021-12-25 20:48:38
 -->
 
 ## push
@@ -27,24 +27,24 @@ git branch --set-upstream-to=origin/分支
 git push origin 分支
 ```
 
-- 查看远程仓库
+## 查看远程仓库
 
 ```sh
 git remote -v
 ```
 
-- 删除远程仓库
+## 删除远程仓库
 
 ```sh
 git remote rm [origin name]
 ```
 
-- 添加远程地址
+## 添加远程地址
 
 ```sh
 git remote add [origin name] [origin url]
 ```
-- 删除远程地址
+## 删除远程地址
 
 ```sh
 git remote set-url --del origin [origin url]
@@ -64,7 +64,7 @@ git remote add origin
 git remote set-url --add origin [origin url]
 ```
 
-![](https://cdn.hurra.ltd/img/20210125231032.png)
+![](https://cdn.hurra.ltd/img/20211225204827.png)
 
 
 - 方法2，配置.git/config

@@ -5,16 +5,16 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-14 21:55:21
+ * @LastEditTime: 2021-12-25 23:52:07
 -->
 
 ## 事务
 
-只有使用 $Innodb$ 数据库引擎的数据库或表才支持事务
+只有使用 Innodb 数据库引擎的数据库或表才支持事务
   
-事务处理可以用来维护数据库的完整性，保证 $SQL$ 语句要么全执行，要么全不执行
+事务处理可以用来维护数据库的完整性，保证 SQL 语句要么全执行，要么全不执行
   
-事务用来管理 $INSERT$、$UPDATE$、$DELETE$ 语句
+事务用来管理 `INSERT`，`UPDATE`，`DELETE` 语句
 
 
 ## 原子性 
@@ -50,3 +50,67 @@ $Isolation$
 事务处理结束后，对数据的修改就是永久的
 
 
+## 事务控制
+
+| 操作         | 指令       |
+| ------------ | ---------- |
+| 开始一个事务 | `BEGIN`    |
+| 事务回滚     | `ROLLBACK` |
+| 事务确认     | `COMMIT`   |
+
+```sql
+CREATE TABLE "info" (
+  "id" text NOT NULL，
+  "name" text，
+  PRIMARY KEY ("id")
+);
+
+```
+
+- 开始事务
+  
+```sql
+BEGIN;
+
+INSERT INTO info (id，name) VALUES ('000A-X'，'WANG-LI');
+
+# 事务确认
+COMMIT;
+```
+
+![](https://cdn.hurra.ltd/img/20200712233125.png)
+
+
+- 回滚事务
+  
+```sql
+BEGIN;
+
+INSERT INTO info (id，name) VALUES ('000B-Y'，'QING-XU');
+
+COMMIT;
+
+BEGIN;
+
+INSERT INTO info (id，name) VALUES ('000C-Z'，'SONG-LING');
+
+# 回滚，撤回插入
+ROLLBACK;
+```
+
+![](https://cdn.hurra.ltd/img/20200712235320.png)
+
+可以看到第二条数据并未写入
+
+```sql
+BEGIN;
+
+DELETE FROM info WHERE id = '000B-Y';
+
+# 回滚，撤销删除
+ROLLBACK;
+```
+
+![](https://cdn.hurra.ltd/img/20200713000345.png)
+
+可以看到数据没有被删除
