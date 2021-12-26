@@ -7,14 +7,14 @@
  # @Email: dalao_li@163.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: DaLao
- # @LastEditTime: 2021-12-23 22:54:09
+ # @LastEditTime: 2021-12-27 02:11:52
 ### 
 
 # 设置flameshot快捷键
 # flameshot gui
 
 
-DISK_PATH="/media/dalao/disk_my/"
+DISK_PATH="/media/${USER}/disk_my/"
 
 # 系统初始化配置 
 init_system(){
@@ -57,16 +57,33 @@ EOF
     set_proxy &
 }
 
+install_node(){
+    sudo wget https://nodejs.org/dist/v16.13.1/node-v16.13.1-linux-x64.tar.xz
+
+    sudo tar -xJf node-v16.13.1-linux-x64.tar.xz -C /opt
+
+    sudo ln -s /opt/node-v16.13.1-linux-x64/bin/npm /usr/local/bin/npm
+
+    sudo ln -s /opt/node-v16.13.1-linux-x64/bin/node /usr/local/bin/node
+
+    sudo npm config set registry https://registry.npm.taobao.org
+
+    source ~/.bashrc
+}
 
 # 安装代理
-set_proxy(){ 
-    sudo mkdir -p "/var/woccloud/"
+set_proxy(){
+    url="https://service-33p4qzr4-1256078775.gz.apigw.tencentcs.com/link/M3rJNhAKrmF29zkx?clash=1"
+    
+    path=".config/clash/config.yaml"
+    
+    sudo mkdir -p "${HOME}/.config/clash"
 
-    sudo wget "https://service-33p4qzr4-1256078775.gz.apigw.tencentcs.com/link/M3rJNhAKrmF29zkx?clash=1" -O "/var/woccloud/config.yml"
+    sudo wget ${url} -O "${HOME}/${path}"
  
     sudo docker run -itd \
         -p 7890:7890 -p 7891:7891 -p 9090:9090 \
-        -v "/var/woccloud/config.yml":"/root/.config/clash/config.yaml" \
+        -v "${HOME}/${path}":"/root/${path}" \
         --restart=unless-stopped \
         --name=clash_test \
         dreamacro/clash 
@@ -104,7 +121,7 @@ set_jetbrains_ide(){
     sudo tar -xvf ${DISK_PATH}/Ubuntu/Jetbrains/${1} -C /usr/local/bin
     sudo mv /usr/local/bin/${2} /usr/local/bin/${name}
 
-    path="/usr/bin/${name}/bin/${name}"
+    path="/usr/local/bin/${name}/bin/${name}"
 
     sudo bash -c "cat > /usr/share/applications/${name}.desktop" <<EOF
 [Desktop Entry]
@@ -151,6 +168,7 @@ install_anaconda(){
 
     # pip 换源
     pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+    
     pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 }
 
