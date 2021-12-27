@@ -1,3 +1,12 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2021-12-23 15:07:51
+ * @LastEditors: DaLao
+ * @LastEditTime: 2021-12-27 16:40:49
+ */
 #include<iostream>
 #include<vector>
 #include<algorithm>
@@ -5,53 +14,38 @@
 #include<string>
 using namespace std;
 
-class Student {
+class Stu {
 	public:
-		Student() {}
-		Student(string iname，float iscore):name(iname)，score(iscore) {}
-		~Student() {}
-
+		Stu(string name,float score):name(name),score(score) {}
 		string name;
 		float score;
 };
 
-class StudentAdapter:public unary_function<Student，bool> {
+class StuAdapter:public unary_function<Stu , bool> {
 	private:
 		string name;
 	public:
-		explicit StudentAdapter(string iname):name(iname) {}
-		//重载()运算符
-		bool operator()(const Student& student) {
-			return (student.name==name);
+		explicit StuAdapter(string name):name(name) {}
+		// 重载()运算符
+		bool operator()(const Stu &Stu) {
+			return Stu.name == name;
 		}
 };
 
 int main() {
-	vector<Student> v;
-	vector<Student>::iterator it;
-	Student stu1("lanzhihui"，89.1);
-	Student stu2("wangdan"，89.2);
-	Student stu3("wangqian"，89.3);
-	v.push_back(stu1);
-	v.push_back(stu2);
-	v.push_back(stu3);
+	vector<Stu> v;
+	v.push_back(Stu("lanzhihui",89.1));
+	v.push_back(Stu("wangdan",89.2));
+	v.push_back(Stu("wangqian",89.3));
 
-	for(it=v.begin(); it!=v.end(); ++it) {
-		cout<<it->name<<" "<<it->score<<endl;
-	}
-	cout<<endl;
-    cout<<"输入名字"<<endl;
+	// 按名字查找
     string str;
-    cin>>str;
-	//实验find_if
-	it=find_if(v.begin()，v.end()，StudentAdapter(str));
-
-	if(it!=v.end()) {
-		cout<<"找到了"<<endl;
-		cout<<it->name<<" "<<it->score<<endl;
+    cin >> str;
+	vector<Stu>::iterator it = find_if(v.begin() , v.end() , StuAdapter(str));
+	// 查找到
+	if(it != v.end()) {
+		
 	}
-
-	system("pause");
 	return 0;
 }
 

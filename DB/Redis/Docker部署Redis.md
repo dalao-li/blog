@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 23:46:06
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-25 22:33:55
+ * @LastEditTime: 2021-12-27 14:18:44
 -->
 
 ```sh
@@ -24,6 +24,8 @@ protected-mode no
 # password
 requirepass 123456   
 ```
+
+拉取容器
 
 ```sh
 # 使用刚才创建的redis.conf

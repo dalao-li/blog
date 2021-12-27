@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-10 21:21:56
+ * @LastEditTime: 2021-12-27 13:29:01
 -->
 
 ## 连接
@@ -17,7 +17,7 @@ client = pymongo.MongoClient("mongodb://user_name:password@ip:port/")
 
 db_list = client.list_database_names()
 
-#打印所有数据库
+# 打印所有数据库
 print(db_list)
 ```
 

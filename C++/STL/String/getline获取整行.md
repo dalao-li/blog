@@ -5,26 +5,27 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-27 20:15:15
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-27 20:19:07
+ * @LastEditTime: 2021-12-27 16:53:15
 -->
 
+## getline
 
-```c
 输入一行str，可含空格
-getline(cin，str);
+```c
+getline(cin,str);
 ```
 
 ```c++
 #include<iostream>
 
 using namespace std;
+
+const int n = 3;
 int main() {
 	string str;
-	int n;
-	cin >> n;
 
 	for(int i = 0; i < n; i++) {
-		getline(cin，str);
+		getline(cin,str);
 		cout << str << endl;
 	}
 
