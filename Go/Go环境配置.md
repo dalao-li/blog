@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-10 22:42:49
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-18 23:58:06
+ * @LastEditTime: 2021-12-27 20:09:03
 -->
 
 ## 安装
@@ -14,7 +14,7 @@
 # 下载安装
 wget https://dl.google.com/go/go1.17.3.linux-amd64.tar.gz
 
-sudo tar -C /usr/local -xzf go1.17.3.linux-amd64.tar.gz
+sudo tar -xzf go1.17.3.linux-amd64.tar.gz -C /usr/local
 
 export PATH=$PATH:/usr/local/go/bin
 
