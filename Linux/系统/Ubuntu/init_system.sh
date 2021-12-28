@@ -7,7 +7,7 @@
  # @Email: dalao_li@163.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: DaLao
- # @LastEditTime: 2021-12-27 02:11:52
+ # @LastEditTime: 2021-12-29 02:47:20
 ### 
 
 # 设置flameshot快捷键
@@ -73,6 +73,7 @@ install_node(){
 
 # 安装代理
 set_proxy(){
+    
     url="https://service-33p4qzr4-1256078775.gz.apigw.tencentcs.com/link/M3rJNhAKrmF29zkx?clash=1"
     
     path=".config/clash/config.yaml"
@@ -83,7 +84,7 @@ set_proxy(){
  
     sudo docker run -itd \
         -p 7890:7890 -p 7891:7891 -p 9090:9090 \
-        -v "${HOME}/${path}":"/root/${path}" \
+        --mount type=bind,source="${HOME}/${path}",target="/root/${path}",readonly \
         --restart=unless-stopped \
         --name=clash_test \
         dreamacro/clash 

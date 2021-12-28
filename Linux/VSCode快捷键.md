@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-15 21:10:23
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-15 21:30:13
+ * @LastEditTime: 2021-12-28 22:24:30
 -->
 
 ## 查找
@@ -28,7 +28,7 @@ highlight-icemode
     // 背景颜色
     "editor.selectionHighlightBackground": "#000000",
     // 边框颜色
-　　"editor.selectionHighlightBorder": "#ecd9d9"  
+    "editor.selectionHighlightBorder": "#ecd9d9"  
 }
 ```
 

@@ -5,12 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-20 20:16:43
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-15 21:14:21
+ * @LastEditTime: 2021-12-28 22:56:35
 -->
 
-Docker搭建Gitlab占用内存较大，若在虚拟机内操作建议虚拟机内存大于4G
-
 ## 搭建
+
+Docker搭建Gitlab占用内存较大，若在虚拟机内操作建议虚拟机内存大于4G
 
 ```sh
 #!/bin/sh
@@ -18,27 +18,27 @@ Docker搭建Gitlab占用内存较大，若在虚拟机内操作建议虚拟机�
 docker pull gitlab/gitlab-ce
 
 # gitlab数据目录
-GITLAB_HOME=/srv/gitlab
+gitlab_dir=/srv/gitlab
 
 # 主机IP
-IP=.......
+ip=.......
 
 # 建立服务器配置，日志，数据目录
 for i in config logs data;do 
-    mkdir -p $GITLAB_HOME/$i
+    mkdir -p ${gitlab_dir}/${i}
 done
 
 docker run -itd \
-    --hostname ${IP} \
+    --hostname ${ip} \
     -p 443:443 -p 80:80 -p 10080:22 \
     --name gitlab \
-    -v ${GITLAB_HOME}/config:/etc/gitlab \
-    -v ${GITLAB_HOME}/logs:/var/log/gitlab \
-    -v ${GITLAB_HOME}/data:/var/opt/gitlab \
+    -v ${gitlab_dir}/config:/etc/gitlab \
+    -v ${gitlab_dir}/logs:/var/log/gitlab \
+    -v ${gitlab_dir}/data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest
 ```
 
-修改$gitlab$配置文件/srv/gitlab/config/gitlab.rb
+修改gitlab配置文件/srv/gitlab/config/gitlab.rb
 
 ```sh
 # 改SSH端口为10080，以便不和宿主机22端口冲突
@@ -48,14 +48,14 @@ gitlab_rails['gitlab_shell_ssh_port'] = 10080
 external_url 'http://192.168.162.106'
 ```
 
-进入$Gitlab$容器，重启$Gitlab$服务
+进入Gitlab容器，重启Gitlab服务
 
 ```sh
 # 重新应用gitlab的配置
 docker exec -it gitlab gitlab-ctl reconfigure
 ```
 
-耐心等待一段时间，成功之后运行状态会显示$healthy$字样，这时就可以访问$gitlab$私服
+耐心等待一段时间，成功之后运行状态会显示healthy字样，这时就可以访问gitlab私服
 
 
 ```sh
