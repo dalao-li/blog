@@ -5,8 +5,17 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-17 00:11:16
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-20 23:02:15
+ * @LastEditTime: 2021-12-29 03:47:35
 -->
+
+## GRUB
+
+GRUB(GRand unified bootloader)是多操作系统启动程序，用来引导不同系统，如$Windows$、$Linux$.
+
+$GRUB$可用于选择操作系统分区上的不同内核，也可用于向这些内核传递启动参数.
+
+
+$Linux$常见的引导程序包括$LILO$、$GRUB$、$GRUB2$
 
 ## 多硬盘启动
 

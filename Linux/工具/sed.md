@@ -5,16 +5,19 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-12 13:55:49
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-13 19:37:34
+ * @LastEditTime: 2021-12-30 01:47:41
 -->
 
 ## sed
 
 ```sh
 sed -参数 '起始范围，结束范围  操作' 文件
+```
 
-# 打印file.txt 1-5行
-# sed -n '1，5 p' file.txt
+- 打印file.txt 1-5行
+  
+```sh
+sed -n '1，5 p' file.txt
 ```
 
 | 参数         | 含义                                            |
@@ -40,28 +43,24 @@ sed -参数 '起始范围，结束范围  操作' 文件
 | w    | 将匹配内容写入其他地方                 |
 | g    | 全部替换                               |
 
-> 若字符串中带有路径符号 `/` 则可以用 `#` 做分隔符
+若字符串中带有路径符号 `/` 则可以用 `#` 做分隔符
+
+## 文件修改
+
+- 第一行前添加字符串
 
 ```sh
-# 例，Ubuntu换源
-# . 匹配任意单个字符
-# * 匹配紧挨在前面的字符任意次(0，1，多次)
-sed -i 's#.*ubuntu.com#mirrors.aliyun.com#g' /etc/apt/sources.list
+sed -i '1i添加的内容' 文件路径
+```
 
-# 例，文件替换，test.cfg原内容
-...
-deb.debian.org
+- 最后一后行前添加字符串
 
-security.debian.org
-...
+```sh
+sed -i '$i添加的内容' 文件路径
+```
 
-# 执行替换 
-sed 's#.*debian.org#mirrors.aliyun.com#g' test.cfg
+- 最后一后行后添加字符串
 
-# test.cfg新内容
-...
-mirrors.aliyun.com
-
-mirrors.aliyun.com
-...
+```sh
+sed -i '$a添加的内容' 文件路径
 ```

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-10 10:19:22
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-10 23:00:09
+ * @LastEditTime: 2021-12-29 21:19:41
 -->
 ## 连接参数
 
@@ -94,13 +94,15 @@ Last login: Thu Mar 11 17:51:04 2021 from 192.168.43.231
 ```
 ## 日志
 
+很多Linux的新发行版已经不再使用，改为使用rsyslog，配置目录/etc/rsyslog.d
+
 ```sh
-# 很多$Linux$的新发行版已经不再使用，改为使用rsyslog，配置目录/etc/rsyslog.d
 /var/log/secure
 ```
 
+日志实例
+
 ```sh
-# 日志实例
 Mar 10 10:51:44 localhost sshd[10616] pam_unix(sshd:session) session opened for user root by (uid=0)
 ```
 | 信息             | 值                                      |

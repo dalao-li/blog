@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-09-29 21:52:15
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-28 22:23:38
+ * @LastEditTime: 2021-12-29 21:15:44
 -->
 
 ## test
@@ -33,9 +33,9 @@ n1=100
 n2=100
 
 if test ${n1} -eq ${n2};then
-    ......
+    ...
 else
-    ......
+    ...
 fi
 ```
 
@@ -50,13 +50,13 @@ fi
 
 
 ```sh
-n1="ru1noob"
-n2="runoob"
+n1="aaa"
+n2="bbb"
 
 if test ${n1} = ${n2};then
-    ......
+    ...
 else
-    ......
+    ...
 fi
 ```
 
@@ -77,9 +77,9 @@ test [参数] 文件名
 
 ```sh
 if test -e ./bash;then
-    echo '文件已存在!'
+    ...
 else
-    echo '文件不存在!'
+    ...
 fi
 ```
 
@@ -97,8 +97,8 @@ n2=20
 n3=10
 
 if test ${n1} -ge ${n2} -o ${n1} -eq ${n3};then
-    ......
+    ...
 else
-    ......
+    ...
 fi
 ```

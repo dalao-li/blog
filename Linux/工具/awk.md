@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-10 11:23:08
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-13 19:36:35
+ * @LastEditTime: 2021-12-29 03:50:56
 -->
 
 ## awk
@@ -27,10 +27,11 @@ awk [参数] '{pattern action}' {文件名}
 | action  | 在找到匹配内容时执行的命令             |
 | {}      | 用于根据特定的模式对一系列指令进行分组 |
 
+- 查看登录的用户名
+  
 ```sh
-# 查看登录的用户名
 last -n 5 | awk '{print $1}'
 ```
 
-![](https://cdn.hurra.ltd/img/20210310112806.png)
+![](https://cdn.hurra.ltd/img/20211229035123.png)
 
