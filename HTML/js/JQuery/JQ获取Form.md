@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-03 02:43:34
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-07 00:23:17
+ * @LastEditTime: 2022-01-01 01:46:15
 -->
 
 ## JQ获取表格值
@@ -26,7 +26,7 @@ function get_form_value() {
   const t = $("form").serializeArray();
 
   // .each() 对 jQuery 对象进行迭代，为每个匹配元素执行函数
-  $.each(t， function () {
+  $.each(t , function () {
     d[this.name] = this.value;
   })
     

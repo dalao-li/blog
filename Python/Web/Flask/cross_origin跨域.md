@@ -1,9 +1,19 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2021-12-23 15:07:52
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-01-01 17:22:22
+-->
 ## 问题
 
 前端使用 XMLHttpRequest 发送 GET 请求时，后端 Flask已收到请求，但前端无法显示返回值
 
+- 前端
+  
 ```html
-<!--前端代码-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,21 +22,20 @@
       function loadXMLDoc() {
         var xmlhttp;
         if (window.XMLHttpRequest) {
-          //  IE7+， Firefox， Chrome， Opera， Safari 浏览器执行代码
-          xmlhttp = new XMLHttpRequest();
+          //  IE7+,Firefox,Chrome,Opera,Safari 浏览器执行代码
+          xmlhttp = new XMLHttpRequest()
         } else {
-          // IE6， IE5 浏览器执行代码
-          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+          // IE6,IE5 浏览器执行代码
+          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
         }
         xmlhttp.onreadystatechange = function () {
           if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var v = xmlhttp.responseText;
-            console.log(v);
-            alert(v);
+            const v = xmlhttp.responseText
+            alert(v)
           }
         };
-        xmlhttp.open("GET"， "http://127.0.0.1:5000/"， true);
-        xmlhttp.send();
+        xmlhttp.open("GET","http://127.0.0.1:5000/",true)
+        xmlhttp.send()
       }
     </script>
   </head>
@@ -37,13 +46,14 @@
 </html>
 ```
 
+- 后端
+  
 ```py
-# 后端代码
 from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/'， methods=['GET'， 'POST'])
+@app.route('/',methods=['GET','POST'])
 def hello_world():
     return 'HELLO'
 
@@ -79,7 +89,7 @@ from flask_cors import cross_origin
 
 app = Flask(__name__)
 
-@app.route('/'， methods=['GET'， 'POST'])
+@app.route('/',methods=['GET','POST'])
 @cross_origin()
 def hello_world():
     return 'HELLO'

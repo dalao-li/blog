@@ -3,19 +3,92 @@
  * @Version: 1.0
  * @Author: DaLao
  * @Email: dalao_li@163.com
- * @Date: 2021-07-13 08:46:53
+ * @Date: 2021-03-18 16:29:32
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-06 21:07:01
+ * @LastEditTime: 2022-01-01 01:45:06
 -->
 
-## GET
+## 控件
+
+```html
+<input type="text" id="name" />
+
+<button type="button" id="addBtn"></button>
+```
+
+- 获取控件
+
+```js
+document.getElementById("id")
+```
+
+- 获取值
+
+```js
+document.getElementById("id").value();
+
+// div
+document.getElementById("id").innerHTML
+```
+
+- 事件
+
+```js
+const addBtn = document.getElementById("addBtn");
+
+addBtn.addEventListener("click"， ()=>{
+    ...
+})
+```
+
+- 匿名函数
+
+```js
+()=>
+```
+
+## 弹窗
+
+- 提示框回调
+
+```js
+alert()
+```
+
+- 确认提示框
+ 
+```js
+const msg = "内容？\n\n请确认！"
+
+// 确认按钮
+if (confirm(msg)){
+    
+}else{
+    
+}
+```
+
+- 输入提示框
+
+```js
+const value = prompt("Input Text"，"Default Text")
+
+if (value != null && value != ""){
+    alert(value)
+}
+```
+
+
+## HTTP
+
+- GET
 
 ```js
 function get(url , callback) {
     const XMLHttpRequest = require("xhr2")
     const httpRequest = new XMLHttpRequest()
 
-    httpRequest.open("GET", url, true)
+    httpRequest.open("GET" , url , true)
     httpRequest.send()
     httpRequest.onreadystatechange = () => {
         if (httpRequest.readyState == 4 && httpRequest.status == 200) {
@@ -29,14 +102,14 @@ function get(url , callback) {
 
 ![](https://cdn.hurra.ltd/img/20211113203754.png)
 
-## POST
+- POST
 
 ```js
 function post(url , data , callback){
     const XMLHttpRequest = require("xhr2")
     const httpRequest = new XMLHttpRequest()
 
-    httpRequest.open('POST', url, true)
+    httpRequest.open('POST' , url , true)
     httpRequest.setRequestHeader("Content-type","application/json")
     // 转为JSON字符串
     httpRequest.send(JSON.stringify(data))

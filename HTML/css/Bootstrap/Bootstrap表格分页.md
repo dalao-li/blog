@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-07 00:50:19
+ * @LastEditTime: 2022-01-01 01:47:13
 -->
 ## 效果
 
@@ -71,8 +71,8 @@
   <script>
     // 实现表格分页
     $("#demoTable").bootstrapTable({
-      // 点击行事件，element为被点击行的tr元素对象
-      onClickRow: function (row， $element) {
+      // 点击行事件,element为被点击行的tr元素对象
+      onClickRow: function (row, $element) {
         $element.each(function () {
           // 获取所有td的值
           const tds = $(this).find("td");
@@ -82,19 +82,19 @@
           const sex = tds.eq(3).text();
           ...
         });
-      }，
+      },
       // 首页页码
-      pageNumber: 1，
+      pageNumber: 1,
       // 是否显示分页条
-      pagination: true，
+      pagination: true,
       // 一页显示的行数
-      pageSize: 5，
+      pageSize: 5,
       // 是否开启分页条无限循环
-      paginationLoop: false，
+      paginationLoop: false,
       // 选择每页显示多少行
-      pageList: [5， 10， 20]，
+      pageList: [5, 10, 20],
       // 启用关键字搜索框
-      search: true，
+      search: true,
     });
   </script>
 </html>
