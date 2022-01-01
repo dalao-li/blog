@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-09 00:06:17
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-29 00:03:47
+ * @LastEditTime: 2022-01-02 05:48:45
 -->
 
 ## --link 互联
@@ -63,7 +63,7 @@ docker exec -it ubuntu apt-get update
 docker exec -it ubuntu apt-get install -y mysql-client
 ```
 
-登录 mysql 服务
+- 登录 mysql 服务
 
 ```sh
 # -h 主机地址
