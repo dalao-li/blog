@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-07 16:06:16
+ * @LastEditTime: 2022-01-02 21:03:27
 -->
 
 ## Navicat 连接
@@ -23,12 +23,13 @@
 import pymssql
 
 conn = pymssql.connect(
-    host=IP:端口，
-    user="sa"，
-    password=密码，
-    database=数据库，
-    charset='utf8'
+    host = IP:端口，
+    user = "sa"，
+    password = 密码，
+    database = 数据库，
+    charset = 'utf8'
 )
+
 # 使用cursor()方法获取操作游标
 cursor = conn.cursor()
 

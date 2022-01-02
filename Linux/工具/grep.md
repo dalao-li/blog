@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-20 20:16:43
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-29 03:53:29
+ * @LastEditTime: 2022-01-02 21:18:26
 -->
 
 ## grep
@@ -61,16 +61,21 @@ grep -E '模式1|模式2' filepath
 
 ## 非查询
 
+- 去除包含grep的进程行，避免影响最终数据的正确性
+
 ```sh
-# 去除包含grep的进程行，避免影响最终数据的正确性
 grep -v 模式 文件路径
 ```
 
 - 查询VLC进程信息
   
 ```sh
+# grep -v grep 避免grep本身影响结果
 ps -aux | grep vlc | grep -v grep
 ```
+![](https://cdn.hurra.ltd/img/20220102211819.png)
+
+![](https://cdn.hurra.ltd/img/20220102211849.png)
 
 ## 正则
 

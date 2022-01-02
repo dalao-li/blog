@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 23:48:41
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-05 18:37:30
+ * @LastEditTime: 2022-01-02 21:02:38
 -->
 
 ## 搭建
@@ -27,22 +27,24 @@ docker run -itd \
 
 ## 命令行交互
 
+- 进入SQLSercer
+
 ```sh
-# 进入容器
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Dalao@13546!"
 ```
 
+- 显示所有数据库
 
 ```sql
-# 显示所有数据库
 SELECT Name FROM Master..SysDatabases ORDER BY Name
 GO
 ```
 
 ![](https://cdn.hurra.ltd/img/20201012110513.png)
 
+- 显示表
+
 ```sql
-# 显示表
 SELECT * FROM 表名
 GO
 ```

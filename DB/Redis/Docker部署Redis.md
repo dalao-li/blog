@@ -5,17 +5,21 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 23:46:06
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-27 14:18:44
+ * @LastEditTime: 2022-01-02 20:32:29
 -->
 
+## Redis
+
+- GUI软件
 ```sh
-# GUI管理软件
 sudo snap install redis-desktop-manager
 ```
 
-## 允许远程访问
+## Docker部署
 
-新建redis.conf
+- 允许远程访问
+
+新建redis.conf文件
 
 ```sh
 # Turn off protection mode 
@@ -25,7 +29,7 @@ protected-mode no
 requirepass 123456   
 ```
 
-拉取容器
+- 拉取容器
 
 ```sh
 # 使用刚才创建的redis.conf
@@ -36,7 +40,9 @@ docker run -itd \
     redis 
     
 # docker run -itd -p 6379:6379 -v $PWD/redis.conf:/etc/redis/redis.conf --name redis-server redis 
+```
+- 连接
 
-# 连接
+```sh
 docker exec -it redis-test redis-cli
 ```

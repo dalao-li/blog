@@ -3,24 +3,27 @@
  * @Version: 1.0
  * @Author: DaLao
  * @Email: dalao_li@163.com
- * @Date: 2021-01-16 17:59:34
+ * @Date: 2022-01-02 21:05:18
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-02 03:14:24
+ * @LastEditTime: 2022-01-02 21:07:31
 -->
-
-
-## 重命名
-
-```sh
-docker tag 镜像ID 仓库:标签
-```
 
 ## 删除
 
-```sh
-# 删除所有
-docker rm $(docker ps -aq)
+- 强制删除
 
-# 停用删除
+```sh
+docker rm -f 容器ID
+```
+
+- 删除所有容器
+
+```sh
+docker rm $(docker ps -aq)
+```
+
+- 先停用删除
+
+```sh
 docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
 ```
