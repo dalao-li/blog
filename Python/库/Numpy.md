@@ -12,7 +12,7 @@
 ## 创建 ndarray
 
 ```py
-numpy.array(object , dtype = None , copy = True , order = None , subok = False , ndmin = 0)
+numpy.array(object, dtype = None, copy = True, order = None, subok = False, ndmin = 0)
 ```
 
 | 名称   | 描述                                                    |
@@ -30,7 +30,7 @@ numpy.array(object , dtype = None , copy = True , order = None , subok = False ,
 ```py
 import numpy as np
 
-a = np.array([1 , 2 , 3 , 4 , 5 , 6])
+a = np.array([1, 2, 3, 4, 5, 6])
 
 # [1 2 3 4 5 6]
 print(a)
@@ -41,7 +41,7 @@ print(a)
 ```py
 import numpy as np
 
-a = np.array([[1 , 2 , 3] , [4 , 5 , 6]])
+a = np.array([[1, 2, 3], [4, 5, 6]])
 
 # [[1 2 3] 
 # [4 5 6]]
@@ -53,7 +53,7 @@ print(a)
 ```py
 import numpy as np
 
-a = np.array([1 , 2 , 3 , 4 , 5] , ndmin = 2)
+a = np.array([1, 2, 3, 4, 5], ndmin = 2)
 
 # [[1 2 3 4 5]]
 print (a)
@@ -64,7 +64,7 @@ print (a)
 ```py
 import numpy as np
 
-a = np.array([1 , 2 , 3] , dtype = complex)
+a = np.array([1, 2, 3], dtype = complex)
 
 # [1.+0.j 2.+0.j 3.+0.j]
 print (a)

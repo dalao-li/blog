@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-25 01:09:09
+ * @LastEditTime: 2022-01-03 21:35:15
 -->
 
 ## 安装 OpenCV
@@ -16,7 +16,7 @@ pip install opencv-python
 
 ## 修改 numpy 版本
 
-Windows 只能安装 numpy 1.19.3,若直接使用 pip install 安装的是 1.19.4 版本,因此在安装时需要指定版本
+Windows 只能安装 numpy 1.19.3，若直接使用 pip install 安装的是 1.19.4 版本，因此在安装时需要指定版本
 
 ```py
 pip uninstall numpy
@@ -107,7 +107,7 @@ if __name__ == '__main__':
             for x, y, w, h in faces:
                 # 参数:要绘制的目标图像,矩形的第一个顶点,矩形对角线上的另一个顶点,线条颜色,线条宽度
                 cv.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                print(x,y,x + w, y + h)
+                print(x, y, x + w, y + h)
 
         cv.imshow("result", frame)
         if cv.waitKey(1) & 0xFF == ord('q'):  # 按q键退出

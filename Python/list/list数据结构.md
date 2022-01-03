@@ -5,20 +5,28 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-04 01:52:56
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-25 01:19:19
+ * @LastEditTime: 2022-01-03 20:20:15
 -->
 
 ## 栈
 
 ```py
 stack = [3, 4, 5]
+```
 
-# 入栈，stack = [3,4,5,6]
+- 入栈
+
+```py
+# [3,4,5,6]
 stack.append(6)
+```
 
-# 出栈，stack = [3,4,5]
+- 出栈
+
+```py
+# [3,4,5]
 stack.pop()
 
-# 出栈，stack = [3,4]
+# [3,4]
 stack.pop()
 ```

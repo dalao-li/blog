@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-26 23:14:11
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-28 20:24:24
+ * @LastEditTime: 2022-01-03 11:34:03
 -->
 
 
@@ -61,16 +61,25 @@ ethtool支持获取每个slave的速率
 
 ## bond6 适配器适应性负载均衡
 
-在5的tlb基础上增加了rlb(接收负载均衡receive load balance).不需要任何switch(交换机)的支持.接收负载均衡是通过ARP协商实现的.
-特点：该模式包含了balance-tlb模式，同时加上针对IPV4流量的接收负载均衡(receive load balance， rlb)，而且不需要任何switch(交换机)的支持.接收负载均衡是通过ARP协商实现的.bonding驱动截获本机发送的ARP应答，并把源硬件地址改写为bond中某个slave的唯一硬件地址，从而使得不同的对端使用不同的硬件地址进行通信.
-来自服务器端的接收流量也会被均衡.当本机发送ARP请求时，bonding驱动把对端的IP信息从ARP包中复制并保存下来.当ARP应答从对端到达 时，bonding驱动把它的硬件地址提取出来，并发起一个ARP应答给bond中的某个slave.
-使用ARP协商进行负载均衡的一个问题是：每次广播 ARP请求时都会使用bond的硬件地址，因此对端学习到这个硬件地址后，接收流量将会全部流向当前的slave.这个问题可以通过给所有的对端发送更新 (ARP应答)来解决，应答中包含他们独一无二的硬件地址，从而导致流量重新分布.
+在5的tlb基础上增加了rlb(接收负载均衡receive load balance).不需要任何switch(交换机)的支持.接收负载均衡是通过ARP协商实现的  
+特点：该模式包含了balance-tlb模式，同时加上针对IPV4流量的接收负载均衡(receive load balance， rlb)，而且不需要任何switch(交换机)的支持.接收负载均衡是通过ARP协商实现的.bonding驱动截获本机发送的ARP应答，并把源硬件地址改写为bond中某个slave的唯一硬件地址，从而使得不同的对端使用不同的硬件地址进行通信  
+
+来自服务器端的接收流量也会被均衡.当本机发送ARP请求时，bonding驱动把对端的IP信息从ARP包中复制并保存下来.当ARP应答从对端到达 时，bonding驱动把它的硬件地址提取出来，并发起一个ARP应答给bond中的某个slave  
+
+使用ARP协商进行负载均衡的一个问题是：每次广播 ARP请求时都会使用bond的硬件地址，因此对端学习到这个硬件地址后，接收流量将会全部流向当前的slave.这个问题可以通过给所有的对端发送更新 (ARP应答)来解决，应答中包含他们独一无二的硬件地址，从而导致流量重新分布
+
 当新的slave加入到bond中时，或者某个未激活的slave重新 激活时，接收流量也要重新分布.接收的负载被顺序地分布(round robin)在bond中最高速的slave上
-当某个链路被重新接上，或者一个新的slave加入到bond中，接收流量在所有当前激活的slave中全部重新分配，通过使用指定的MAC地址给每个 client发起ARP应答.下面介绍的updelay参数必须被设置为某个大于等于switch(交换机)转发延时的值，从而保证发往对端的ARP应答 不会被switch(交换机)阻截.
-必要条件：
-条件1：ethtool支持获取每个slave的速率；
+当某个链路被重新接上，或者一个新的slave加入到bond中，接收流量在所有当前激活的slave中全部重新分配，通过使用指定的MAC地址给每个 client发起ARP应答.下面介绍的updelay参数必须被设置为某个大于等于switch(交换机)转发延时的值，从而保证发往对端的ARP应答 不会被switch(交换机)阻截
+
+- 必要条件：
+
+条件1：ethtool支持获取每个slave的速率
+
 条件2：底层驱动支持设置某个设备的硬件地址，从而使得总是有个slave(curr_active_slave)使用bond的硬件地址，同时保证每个bond 中的slave都有一个唯一的硬件地址.如果curr_active_slave出故障，它的硬件地址将会被新选出来的 curr_active_slave接管
-其实mod=6与mod=0的区别：mod=6，先把eth0流量占满，再占eth1，….ethX；而mod=0的话，会发现2个口的流量都很稳定，基本一样的带宽.而mod=6，会发现第一个口流量很高，第2个口只占了小部分流量.
+
+- mod=6与mod=0的区别
+
+mod=6，先把eth0流量占满，再占eth1，….ethX；而mod=0的话，会发现2个口的流量都很稳定，基本一样的带宽.而mod=6，会发现第一个口流量很高，第2个口只占了小部分流量.
 
  
 

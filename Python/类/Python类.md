@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-26 00:10:00
+ * @LastEditTime: 2022-01-03 21:32:38
 -->
 
 ## 定义
@@ -36,7 +36,7 @@ class Person:
 
     # set方法
     @name.setter
-        def name(self , value):
+        def name(self, value):
             if not isinstance(value, str):
                 raise TypeError('Expected a string')
             self._name = value
@@ -46,7 +46,7 @@ class Person:
 
 ```py
 class A(object):
-    def __init__(self， name， age):
+    def __init__(self, name, age):
         self.name = name
         self.age = age
 
@@ -61,6 +61,6 @@ print(a.__dict__)
 ```py
 class Person:
     # _obj为字典
-    def __init__(self，_obj):
+    def __init__(self, _obj):
         self.__dict__.update(_obj)
 ```
