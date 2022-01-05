@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-22 13:17:11
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-10 23:09:18
+ * @LastEditTime: 2022-01-06 00:52:58
 -->
 
 ## 部署Registry
@@ -16,8 +16,10 @@ docker run -itd \
     -v /usr/local/registry:/var/lib/registry
     --name my_registry
     registry
+```
 
-# docker run -itd -p 15000:15000 -v /usr/local/registry:/var/lib/registry --name my_registry registry
+```sh
+docker run -itd -p 15000:15000 -v /usr/local/registry:/var/lib/registry --name my_registry registry
 ```
 
 ```sh

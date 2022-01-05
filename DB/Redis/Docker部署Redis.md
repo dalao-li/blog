@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 23:46:06
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-02 20:32:29
+ * @LastEditTime: 2022-01-06 00:48:20
 -->
 
 ## Redis
@@ -38,9 +38,12 @@ docker run -itd \
     -v $PWD/redis.conf:/etc/redis/redis.conf \
     --name redis-test \
     redis 
-    
-# docker run -itd -p 6379:6379 -v $PWD/redis.conf:/etc/redis/redis.conf --name redis-server redis 
 ```
+
+```sh
+docker run -itd -p 6379:6379 -v $PWD/redis.conf:/etc/redis/redis.conf --name redis-server redis 
+```
+
 - 连接
 
 ```sh

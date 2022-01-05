@@ -5,36 +5,50 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-27 13:55:08
+ * @LastEditTime: 2022-01-05 22:10:09
 -->
 
-## 映射目录
+## Docker部署
 
 ```sh
 docker run -itd \
     --name=mysql \
+    # 映射端口
     -p 3306:3306 \
+    # 挂载目录
     -v $PWD/mysql:/var/lib/mysql \
-    -e MYSQL_ROOT_PASSWORD=123  mysql:5.7
-
-# docker run -itd --name=mysql -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123  mysql:5.7
+    # 建立普通用户dalao
+    -e MYSQL_USER=dalao
+    # 设置dalao用户密码
+    -e MYSQL_PASSWORD=456
+    # 设置root用户密码
+    -e MYSQL_ROOT_PASSWORD=123 \
+    mysql:5.7
 ```
+
+```sh
+docker run -itd --name=mysql -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123  mysql:5.7
+```
+
 
 ## 远程连接
 
-```sh
-# 进入容器登录
-mysql -u root -p
+- 登录
 
-# 允许远程登录
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '密码';
+```sh
+mysql -u 用户名 -p
+```
+- 允许远程登录
+
+```sh
+GRANT ALL PRIVILEGES ON *.* TO '用户名'@'%' IDENTIFIED BY '密码';
 
 flush privileges;
 ```
 
 ![](https://cdn.hurra.ltd/img/20211227135258.png)
 
-目录映射
+目录映射到宿主机下
 
 ![](https://cdn.hurra.ltd/img/20211227135502.png)
 
@@ -58,6 +72,8 @@ table_definition_cache=400
 
 table_open_cache=256
 EOF
+
+service mysql restart
 ```
 
 

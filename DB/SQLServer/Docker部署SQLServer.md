@@ -5,10 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 23:48:41
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-02 21:02:38
+ * @LastEditTime: 2022-01-06 00:48:48
 -->
 
 ## 搭建
+
 ```sh
 docker run -itd \
     -e "ACCEPT_EULA=Y" \
@@ -16,9 +17,12 @@ docker run -itd \
     -p 1433:1433  \
     --name sqlserver2019 \
     registry.cn-hangzhou.aliyuncs.com/vex/sqlserver:v1
-
-# docker run -itd -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Dalao@13546!" -p 1433:1433  --name sqlserver2019 registry.cn-hangzhou.aliyuncs.com/vex/sqlserver:v1
 ```
+
+```sh
+docker run -itd -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Dalao@13546!" -p 1433:1433 --name sqlserver2019 registry.cn-hangzhou.aliyuncs.com/vex/sqlserver:v1
+```
+
 | 值           | 属性   |
 | ------------ | ------ |
 | SA           | 用户名 |

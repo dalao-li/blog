@@ -5,16 +5,16 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-11 11:44:56
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-05 02:27:05
+ * @LastEditTime: 2022-01-05 15:20:03
 -->
 
 ## inode
 
-### 扇区(sector)
+- 扇区(sector)
 
 硬盘的最小存储单位是扇区，每个扇区储存512字节(0.5KB)
 
-### 块(block)
+- 块(block)
 
 OS读取硬盘时为提高效率，会一次性连续读取多个扇区，即一个块(block)
 
