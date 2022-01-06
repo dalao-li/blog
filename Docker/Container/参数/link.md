@@ -5,14 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-09 00:06:17
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-02 05:48:45
+ * @LastEditTime: 2022-01-06 15:34:39
 -->
 
-## --link 互联
+## link 
 
-```sh
-docker pull busybox
-```
+添加链接到另一个容器
+
+## 互联
 
 建立box_1
 

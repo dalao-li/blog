@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-09 00:07:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-06 00:54:36
+ * @LastEditTime: 2022-01-06 15:33:52
 -->
 
 ## 目录挂载
@@ -19,7 +19,7 @@
 将本地/src/webapp挂载到容器/usr/share/nginx/
 
 ```sh
-docker run -itd -P \
+docker run -itd \
     --name web \
     --mount type=bind,source=/src/webapp,target=/usr/share/nginx/html \
     nginx:alpine
@@ -28,10 +28,7 @@ docker run -itd -P \
 挂载主机目录的默认权限是`读写`，用户也可以通过增加 `readonly` 指定为只读
 
 ```sh
-docker run -itd -P \
-    --name web \
-    --mount type=bind,source=/src/webapp,target=/usr/share/nginx/html,readonly \
-    nginx:alpine
+--mount type=bind,source=/src/webapp,target=/usr/share/nginx/html,readonly
 ```
 
 ## 参数区别

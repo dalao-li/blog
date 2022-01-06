@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-03 21:35:15
+ * @LastEditTime: 2022-01-07 02:02:57
 -->
 
 ## 安装 OpenCV
@@ -14,7 +14,7 @@
 pip install opencv-python
 ```
 
-## 修改 numpy 版本
+- 修改 numpy 版本
 
 Windows 只能安装 numpy 1.19.3，若直接使用 pip install 安装的是 1.19.4 版本，因此在安装时需要指定版本
 
@@ -37,6 +37,7 @@ cv.namedWindow("input image", cv.WINDOW_AUTOSIZE)
 cv.imshow("input image", gray)
 
 cv.waitKey(0)
+
 # 作用是能正常关闭绘图窗口
 cv.destroyAllWindows()
 ```
