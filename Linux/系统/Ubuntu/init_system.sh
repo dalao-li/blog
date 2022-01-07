@@ -74,7 +74,7 @@ install_node(){
 # 安装代理
 set_proxy(){
     
-    url="https://service-33p4qzr4-1256078775.gz.apigw.tencentcs.com/link/M3rJNhAKrmF29zkx?clash=1"
+    url="https://sub1nx2pwn2y.esub0000.top/link/QRkGWUYz9JBNaslw?clash=1"
     
     path=".config/clash/config.yaml"
     
@@ -90,6 +90,10 @@ set_proxy(){
         dreamacro/clash 
 
     # https://clash.razord.top/ 
+
+    # https://alpha-b-a.expcloud.me/user
+
+    # https://www.woccloud.io/
 }
 
 

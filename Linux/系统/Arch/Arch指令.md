@@ -5,25 +5,32 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-30 02:11:04
+ * @LastEditTime: 2022-01-08 06:21:00
 -->
 
-## 更新源
+## 换源
+
+- 添加国内源
+
+/etc/pacman.d/mirrorlist
 
 ```sh
-sudo bash -c "cat >> /etc/pacman.conf" <<EOF
+## aliyun
+Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
+```
+
+- 中文社区仓库
+
+/etc/pacman.conf
+
+```sh
 [archlinuxcn]
-Server=https://mirrors.ustc.edu.cn/archlinuxcn/$arch
-EOF
+
+SigLevel = Optional TrustAll
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 
-安装archlinuxcn-keyring 包以导入 GPG key
-
-```sh
-sudo pacman -S archlinuxcn-keyring
-```
-
-同步更新
+- 更新
 
 ```sh
 sudo pacman -Syyu
@@ -41,7 +48,7 @@ rm /var/lib/pacman/db.lck
 sudo pacman -S yay
 ```
 
-配置yay的aur源
+- 配置yay的aur源
 
 ```sh
 yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
@@ -51,7 +58,7 @@ yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
 
 ```sh
 
-yaourt -S debtap
+yay -S debtap
 
 sudo debtap -u
 
@@ -60,3 +67,67 @@ sudo debtap xxxxxx.deb
 
 sudo pacman -U xxxxxxz.zst
 ```
+
+## 中文输入法
+
+- 安装软件
+
+```sh
+sudo pacman -S --noconfirm fcitx5 fcitx5-qt fcitx5-gtk fcitx5-qt4 fcitx5-chinese-addons fcitx5-configtool fcitx5-material-color fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki
+```
+
+sudo vim /etc/profile
+
+```sh
+export XIM="fcitx"
+
+export XIM_PROGRAM="fcitx"
+ 
+export XMODIFIERS="@im=fcitx"
+ 
+export GTK_IM_MODULE="fcitx"
+
+export QT_IM_MODULE="fcitx"
+```
+
+sudo vim ~/.xinitrc
+
+```sh
+export LC_CTYPE=zh_CN.UTF-8
+```
+
+重启
+
+##  默认文件管理器
+
+[参考](https://blog.csdn.net/qq_32337527/article/details/81778732)
+
+- 查看当前文件管理器
+
+```sh
+xdg-mime query default inode/directory   
+```
+
+- 恢复默认文件管理器
+
+```sh
+xdg-mime default org.gnome.Nautilus.desktop inode/directory
+```
+
+## 软件
+
+- 安装
+
+`yay -S`
+
+```sh
+yay -S microsoft-edge-stable
+
+yay -S visual-studio-code-bin
+
+yay -S flameshot
+```
+
+```
+yay -R
+``
