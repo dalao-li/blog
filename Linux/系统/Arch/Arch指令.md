@@ -5,23 +5,27 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-08 06:21:00
+ * @LastEditTime: 2022-01-09 19:34:27
 -->
 
 ## 换源
 
 - 添加国内源
 
-/etc/pacman.d/mirrorlist
+```sh
+sudo gedit /etc/pacman.d/mirrorlist
+```
 
 ```sh
-## aliyun
+# 添加到所有源的开头
 Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```
 
 - 中文社区仓库
 
-/etc/pacman.conf
+```sh
+sudo gedit /etc/pacman.conf
+```
 
 ```sh
 [archlinuxcn]
@@ -30,13 +34,19 @@ SigLevel = Optional TrustAll
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 
-- 更新
+## 更新
 
 ```sh
 sudo pacman -Syyu
 ```
 
-- 若更新失败
+- 清除无用的包
+
+```sh
+sudo pacman -R $(pacman -Qdtq)
+```
+
+- 更新失败解决
 
 ```sh
 rm /var/lib/pacman/db.lck
@@ -48,7 +58,7 @@ rm /var/lib/pacman/db.lck
 sudo pacman -S yay
 ```
 
-- 配置yay的aur源
+- 配置aur源
 
 ```sh
 yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
@@ -57,7 +67,6 @@ yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
 ## 安装deb
 
 ```sh
-
 yay -S debtap
 
 sudo debtap -u
@@ -70,27 +79,29 @@ sudo pacman -U xxxxxxz.zst
 
 ## 中文输入法
 
-- 安装软件
+- 安装fcitx
 
 ```sh
 sudo pacman -S --noconfirm fcitx5 fcitx5-qt fcitx5-gtk fcitx5-qt4 fcitx5-chinese-addons fcitx5-configtool fcitx5-material-color fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki
 ```
 
-sudo vim /etc/profile
+- 配置
+
+```sh
+sudo gedit /etc/profile
+```
 
 ```sh
 export XIM="fcitx"
-
 export XIM_PROGRAM="fcitx"
- 
 export XMODIFIERS="@im=fcitx"
- 
 export GTK_IM_MODULE="fcitx"
-
 export QT_IM_MODULE="fcitx"
 ```
 
-sudo vim ~/.xinitrc
+```sh
+sudo gedit ~/.xinitrc
+```
 
 ```sh
 export LC_CTYPE=zh_CN.UTF-8
@@ -98,9 +109,7 @@ export LC_CTYPE=zh_CN.UTF-8
 
 重启
 
-##  默认文件管理器
-
-[参考](https://blog.csdn.net/qq_32337527/article/details/81778732)
+##  文件管理器
 
 - 查看当前文件管理器
 
@@ -108,7 +117,11 @@ export LC_CTYPE=zh_CN.UTF-8
 xdg-mime query default inode/directory   
 ```
 
+![](https://cdn.hurra.ltd/img/20220109184225.png)
+
 - 恢复默认文件管理器
+
+安装Vscode后，文件管理其会被修改为Vscode，可重新设置
 
 ```sh
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
@@ -126,8 +139,26 @@ yay -S microsoft-edge-stable
 yay -S visual-studio-code-bin
 
 yay -S flameshot
+
+yay -S balena-etcher
 ```
 
+- 卸载
+
 ```
-yay -R
-``
+yay -Rns
+```
+
+## Vscode终端乱码
+
+vscode 设置中添加
+
+```sh
+"terminal.integrated.fontFamily": "NotoSansMono Nerd Font"
+```
+
+## gedit
+
+```sh
+sudo pacman -Syyu libvoikko hspell nuspell hunspell aspell
+```

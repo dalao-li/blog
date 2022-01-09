@@ -5,11 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-07 23:27:49
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-16 12:56:27
+ * @LastEditTime: 2022-01-09 14:50:30
 -->
 
+- 文件位置
+
 ```sh
-# 文件位置
 /etc/sysconfig/network-scripts
 ```
 

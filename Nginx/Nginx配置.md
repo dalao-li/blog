@@ -5,21 +5,26 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-06 20:05:41
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-13 19:45:16
+ * @LastEditTime: 2022-01-09 19:41:15
 -->
-
-```sh
-# docker容器中 nginx.conf 位置
-/etc/nginx/nginx.conf
-
-docker run -itd -v $PWD/conf:/etc/nginx --net="host" nginx
-```
 
 ## 安装
 
-```sh
-sudo apt install nginx
+- docker容器中 nginx.conf 位置
 
+```sh
+/etc/nginx/nginx.conf
+```
+
+- Docker部署
+
+```sh
+docker run -itd -v $PWD/conf:/etc/nginx --net="host" nginx
+```
+
+## 命令
+
+```sh
 sudo systemctl status nginx
 
 sudo systemctl start nginx
@@ -87,7 +92,7 @@ location / {
 
 ## 问题
 
-$Windows$下可使用`host.docker.internal`指代宿主机的$localhost$ 地址
+Windows下可使用`host.docker.internal`指代宿主机的$localhost$ 地址
 
-$Linux$下可使用`--net="host"`参数
+Linux下可使用`--net="host"`参数
 

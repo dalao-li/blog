@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-20 20:16:43
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-02 21:18:26
+ * @LastEditTime: 2022-01-09 14:36:37
 -->
 
 ## grep
@@ -16,21 +16,21 @@ grep -[参数]
 
 | 参数 | 说明                                   |
 | ---- | -------------------------------------- |
-| c    | 只输出匹配行的计数                     |
-| i    | 匹配内容不区分大小写                   |
-| h    | 查询多文件时不显示文件名               |
-| l    | 查询多文件时只输出包含匹配字符的文件名 |
-| n    | 显示匹配行及行号                       |
-| s    | 不显示不存在或无匹配文本的错误信息     |
-| v    | 显示不包含匹配文本的所有行             |
+| `c`  | 只输出匹配行的计数                     |
+| `i`  | 匹配内容不区分大小写                   |
+| `h`  | 查询多文件时不显示文件名               |
+| `l`  | 查询多文件时只输出包含匹配字符的文件名 |
+| `n`  | 显示匹配行及行号                       |
+| `s`  | 不显示不存在或无匹配文本的错误信息     |
+| `v`  | 显示不包含匹配文本的所有行             |
 
 ## 单查询
 
 ```sh
-grep 模式 文件路径
+grep 模式 匹配项
 ```
 
-- 查询3月10日16点30时间段内的ssh登录情况
+查询3月10日16点30时间段内的ssh登录情况
 
 ```sh 
 grep -n 'Mar 10 16:3' /var/log/secure
@@ -40,10 +40,10 @@ grep -n 'Mar 10 16:3' /var/log/secure
 ## 与查询
 
 ```sh
-grep '模式1' 文件路径 | grep '模式2'
+grep '模式1' 匹配项 | grep '模式2'
 ```
 
-- 查询3月10日16点30时间段内的ssh登录成功的情况
+查询3月10日16点30时间段内的ssh登录成功的情况
 
 ```sh
 grep 'Mar 10 16:3' /var/log/secure | grep Accepted
@@ -54,23 +54,22 @@ grep 'Mar 10 16:3' /var/log/secure | grep Accepted
 ## 或查询
 
 ```sh
-grep '模式1|模式2' filepath 或
+grep '模式1|模式2' 匹配项 或
 
-grep -E '模式1|模式2' filepath
+grep -E '模式1|模式2' 匹配项
 ```
 
 ## 非查询
 
-- 去除包含grep的进程行，避免影响最终数据的正确性
+- 去除包含模式1的进程行，避免影响最终数据的正确性
 
 ```sh
-grep -v 模式 文件路径
+grep -v 模式1 匹配项
 ```
 
-- 查询VLC进程信息
+查询VLC进程信息时排除grep本身影响
   
 ```sh
-# grep -v grep 避免grep本身影响结果
 ps -aux | grep vlc | grep -v grep
 ```
 ![](https://cdn.hurra.ltd/img/20220102211819.png)
@@ -82,13 +81,13 @@ ps -aux | grep vlc | grep -v grep
 - 查看以pattern开头的行
   
 ```sh
-grep ^pattern filepath
+grep ^pattern 匹配项
 ```
 
 - 查找以pattern结尾的行
   
 ```sh
-grep pattern$ filepath
+grep pattern$ 匹配项
 ```
 
 查找/root/test.txt文件中含有human的句子
@@ -98,8 +97,9 @@ grep human /root/test.txt
 ```
 ![](https://cdn.hurra.ltd/img/20210310151418.png)
 
+查找/root/test.txt文件中以The开头的句子
+
 ```sh
-# 例，查找/root/test.txt文件中以The开头的句子
 grep ^The /root/test.txt
 ```
 ![](https://cdn.hurra.ltd/img/20210310151535.png)

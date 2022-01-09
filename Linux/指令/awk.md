@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-10 11:23:08
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-29 03:50:56
+ * @LastEditTime: 2022-01-09 11:48:17
 -->
 
 ## awk
@@ -16,7 +16,7 @@
 | grep | 文本查找 |
 | sed  | 文本编辑 |
 
-`awk`将文件逐行读入，以空格为默认分隔符将每行切片，再对切开的部分进行各种分析处理
+`awk` 将文件逐行读入，以空格为默认分隔符将每行切片，再对切开的部分进行各种分析处理
 
 ```sh
 awk [参数] '{pattern action}' {文件名}
@@ -33,5 +33,4 @@ awk [参数] '{pattern action}' {文件名}
 last -n 5 | awk '{print $1}'
 ```
 
-![](https://cdn.hurra.ltd/img/20211229035123.png)
-
+![](https://cdn.hurra.ltd/img/20220109114810.png)

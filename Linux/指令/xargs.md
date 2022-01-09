@@ -5,12 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-16 23:24:23
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-02 21:10:28
+ * @LastEditTime: 2022-01-09 11:45:16
 -->
 
 ## xargs
 
-`xargs`前命令的标准输出作为后命令的参数
+`xargs` 将前面命令的标准输出作为后个命令的参数
 
 管道符 `|` 是将前个命令的标准输出作为后个命令的标准输入
 
@@ -22,7 +22,7 @@
 xargs 命令
 ```
 
-- 示例
+示例
 
 ```sh
 echo "hello world" | xargs echo
