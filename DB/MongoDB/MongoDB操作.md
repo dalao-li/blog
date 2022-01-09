@@ -1,6 +1,6 @@
 ## 部署
 
-- 创建容器,--auth需要密码才能访问容器服务
+- 创建容器，`--auth` 需要密码才能访问容器服务
   
 ```sh
 docker run -itd --name mongo -p 27017:27017 mongo --auth 
@@ -8,7 +8,7 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 docker exec -it mongo mongo admin
 ```
 
-- 创建一个名为 admin,密码为 123456 的用户
+- 创建一个名为 admin，密码为 123456 的用户
 
 ```sh
 db.createUser({ user:'admin',pwd:'123456',roles:[{ role:'userAdminAnyDatabase',db:'admin'},"readWriteAnyDatabase"]})

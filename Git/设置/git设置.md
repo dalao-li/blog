@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 17:59:27
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-15 21:21:20
+ * @LastEditTime: 2022-01-10 00:38:48
 -->
 
 ## Git 命令流程
@@ -32,11 +32,11 @@ git config --global core.quotepath false
 ## 建立公钥
 
 ```sh
-# 这里可以设置不同公钥名来表示不同公钥
 ssh-keygen -t rsa -C "邮箱"
 ```
 
 公钥位置`.ssh/id_rsa.pub`
+
 
 ## .git文件
 

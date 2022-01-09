@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-29 21:33:45
+ * @LastEditTime: 2022-01-09 20:54:52
 -->
 
 ## 连接
@@ -14,12 +14,13 @@
 ssh 用户名@IP地址 (-p 端口号)
 ```
 
-```sh
-# 端口号默认为20
+端口号默认为20
+
+```sh 
 ssh dalao@192.168.1.1
 ```
 
-## 清除主机密钥
+- 清除主机密钥
 
 ```sh
 ssh-keygen -R [远程主机IP]
@@ -29,12 +30,12 @@ ssh-keygen -R [远程主机IP]
 
 - 方法1，手动复制
 
-把本地主机`id_rsa.pub` 复制到远程主机.ssh/authorized_keys里
+把本地主机`id_rsa.pub` 复制到远程主机`.ssh/authorized_keys`里
 
 - 方法2，命令复制
 
 ```sh
-ssh-copy-id -i ~/.ssh/id_rsa.pub 远程用户@远程主机IP
+ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
 ```
 
 ![](https://cdn.hurra.ltd/img/20211229213337.png)

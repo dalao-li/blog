@@ -5,13 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-29 22:21:45
+ * @LastEditTime: 2022-01-10 01:04:57
 -->
 
-## Django 操作数据库
+## Django 操作MySQL
+
+建立一个应用 app
 
 ```py
-# 建立一个应用 app
 python3 manage.py startapp app
 ```
 
@@ -40,10 +41,9 @@ DATABASES = {
 
 ## 建表
 
-
+编辑 app/models.py
 
 ```py
-# 编辑 app/models.py
 from django.db import models
 
 # 学生表
@@ -89,9 +89,9 @@ class Stu(models.Model):
 | choices      | 选择框标签，值为一个二维的二元元组;第一个元素表示数据库内的真实值，第二个表示页面上的显示内容               |
 
 
-```py
-# 建表后执行
+建表后执行
 
+```py
 # 为改动创建迁移记录
 python manage.py makemigrations
 
@@ -229,4 +229,25 @@ Stu.objects.filter(num='A-123').delete()
 ![](https://cdn.hurra.ltd/img/20200803004753.png)
 
 
+## 连接Redis
 
+修改settings.py文件
+
+```sh
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache"，
+        "LOCATION": "redis://[IP]:6379/0"，
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"，
+            "CONNECTION_POOL_KWARGS": {
+                # 最大连接数
+                "max_connections": 10，
+                # 以字符串的形式写入Redis，为False的话写入字节类型
+                "decode_responses": True
+            }，
+            "PASSWORD": "[密码]"
+        }
+    }
+}
+```

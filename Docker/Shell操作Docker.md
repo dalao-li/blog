@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-15 10:21:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-02 22:43:26
+ * @LastEditTime: 2022-01-10 00:35:09
 -->
 
 
@@ -22,6 +22,7 @@ $(docker ps -aqf "name=容器名")
 | a    | 即使容器没运行也能获取 |
 | q    | 仅输出容器ID           |
 | f    | filter                 |
+
 
 ## 判断容器是否存在
 

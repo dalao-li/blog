@@ -5,13 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-28 12:17:39
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-28 12:33:17
+ * @LastEditTime: 2022-01-09 21:37:30
 -->
 
 ## memset
 
+- 复制字符 c(一个无符号字符)到参数 str 所指向字符串的前 n 个字符
+
 ```c
-// 复制字符 c(一个无符号字符)到参数 str 所指向字符串的前 n 个字符
 void *memset(void *str, int c, size_t n)
 ```
 | 参数 | 含义                   |
@@ -20,9 +21,10 @@ void *memset(void *str, int c, size_t n)
 | c    | 要被设置的值           |
 | n    | 要被设置为该值的字符数 |
 
+示例，给数组a赋值0
+
 ```c
 int a[10];
 
-// 给数组a赋值0
-memest(a,0,sizeof(a));
+memest(a, 0, sizeof(a));
 ```

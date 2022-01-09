@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-25 12:04:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-03 20:16:05
+ * @LastEditTime: 2022-01-10 00:52:57
 -->
 
 ## sorted
@@ -80,7 +80,7 @@ sorted(s, key = lambda x : x[1])
 
 ```py
 class Stu:
-    def __init__(self, name, grade, age):
+    def __init__(self, name: str, grade: str, age: int):
         self.name = name
         self.grade = grade
         self.age = age

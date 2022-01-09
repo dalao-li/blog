@@ -5,14 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-03 21:32:38
+ * @LastEditTime: 2022-01-10 00:49:15
 -->
 
 ## 定义
 
 ```py
 class Stu:
-    def __init__(self ， num ， name ， age):
+    def __init__(self, num, name, age):
         self.num = num
         self.name = name
         self.age = age

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-29 22:21:45
+ * @LastEditTime: 2022-01-10 01:31:48
 -->
 
  
@@ -14,7 +14,7 @@
 访问网站的本质即为访问对应的 html 文件，后在由浏览器等对其进行渲染，最终展示出页面
 
 
-## 任务一
+## 静态读取
 
 访问http://127.0.0.1:8000/app/index，读取index.html，显示内容
 
@@ -29,15 +29,15 @@
 ```py
 TEMPLATES = [
   {
-    ......
+    ...
     'DIRS': [
-        os.path.join(BASE_DIR， 'templates')，
+        os.path.join(BASE_DIR, 'templates'),
 
         # 新建的模板目录
-        os.path.join(BASE_DIR， 'app/templates')
-    ]，
-    ......
-  }，
+        os.path.join(BASE_DIR, 'app/templates')
+    ],
+    ...
+  },
 ]
 ```
 
@@ -66,7 +66,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return render(request， 'index.html')
+    return render(request, 'index.html')
 ```
 
 - 绑定子路由
@@ -81,7 +81,7 @@ from app import views
 
 urlpatterns = [
     # 将函数绑定至对应路由
-    path('index/'， views.index)
+    path('index/', views.index)
 ]
 ```
 
@@ -96,12 +96,10 @@ from django.contrib import admin
 from django.urls import path，include
 
 urlpatterns = [
-    ......
-
+    ...
     # 注册app应用的路由
-    path('app/'，include('app.urls'))
-
-    ......
+    path('app/', include('app.urls'))
+    ...
 ]
 ```
 
@@ -111,7 +109,8 @@ urlpatterns = [
 
 ![](https://cdn.hurra.ltd/img/20200803193631.png)
 
-## 任务二
+
+## 读取数据库
 
 访问http://127.0.0.1:8000/app/db，在网页上显示数据库中所有元素信息
 
@@ -151,7 +150,7 @@ def db(request):
     # 获取数据中全部信息
     stu_list = [i for i in Stu.objects.all()]
 
-    return render(request，'db.html'，{'data':stu_list})
+    return render(request, 'db.html', {'data' : stu_list})
 
 ```
 
@@ -163,7 +162,7 @@ def db(request):
 urlpatterns = [
     .....
 
-    path('db/'， views.db)
+    path('db/', views.db)
 ]
 ```
 

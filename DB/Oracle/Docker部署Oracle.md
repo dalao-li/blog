@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-06 00:46:49
+ * @LastEditTime: 2022-01-10 00:32:55
 -->
 
 ## Docker部署Oracle
@@ -13,8 +13,8 @@
 ```sh
 docker run -itd \
     --name=orace \
-    -p 8080:8080 \
-    -p 1521:1521 truevoly/oracle-12c
+    -p 8080:8080 -p 1521:1521 \
+    truevoly/oracle-12c
 ```
 
 ```sh

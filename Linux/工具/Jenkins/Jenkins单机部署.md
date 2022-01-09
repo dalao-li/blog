@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-09 10:48:54
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-13 02:20:18
+ * @LastEditTime: 2022-01-09 20:52:33
 -->
 
 
@@ -13,18 +13,22 @@
 
 ## Linux安装
 
+- 安装jdk1.8
+
 ```sh
-# 安装jdk1.8
 yum -y install java-1.8.0-openjdk* 
+```
 
-# 安装Jenkins
+- 安装Jenkins
+  
+```sh
 sudo wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/war/2.284/jenkins.war
+```
 
-# 运行
+```sh
 java -jar -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION=true  jenkins.war --httpPort=8080
 ```
 
-![](https://cdn.hurra.ltd/img/20210317144540.png)
 
 ![](https://cdn.hurra.ltd/img/20210309093313.png)
 
@@ -35,22 +39,28 @@ java -jar -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PRO
 
 ## Windows安装
 
+- 用管理员身份启动cmd，进入jenkins安装根目录
+
 ```sh
-# 用管理员身份启动cmd，进入jenkins安装根目录
 C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins
 ```
 
+- 启动命令
+  
 ```sh
-# 启动命令
 net start jenkins
+```
 
-# 关闭命令
+- 关闭命令
+
+```sh
 net stop jenkins
 ```
 
 ## Docker部署
+
 ```sh
-docker run -u root -itd \
+docker run -itd -u root \
   -p 8080:8080 -p 50000:50000 \
   -v /var/jenkins_home:/var/jenkins_home \
   -v /var/run/docker.sock:/var/run/docker.sock \

@@ -167,9 +167,9 @@ from django.urls import path
 import app.views
 
 urlpatterns = [
-    path('admin/'， admin.site.urls)，
+    path('admin/', admin.site.urls),
     # 将hello()函数绑定路由
-    path('hello/'， app.views.hello)
+    path('hello/', app.views.hello)
 ]
 ```
 

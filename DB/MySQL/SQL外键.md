@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-07 16:15:37
+ * @LastEditTime: 2022-01-10 00:32:30
 -->
 
 ## SQL外键
@@ -54,6 +54,7 @@ CREATE TABLE `Score`  (
 
 
 Stu 表
+
 | s_id          | s_name |
 | ------------- | ------ |
 | 2017-XAB-3653 | 李五句 |
@@ -67,8 +68,9 @@ Course 表
 | AV-275455 | 量子力学 |
 | AV-999900 | 流体力学 |
 
+向 Score 表中插入李五句的量子力学成绩 97 分
+
 ```sql
-# 向 Score 表中插入李五句的量子力学成绩 97 分
 INSERT INTO Score (s_id，c_id，score) VALUES ('2017-XAB-3653'，'AV-275455'，97);
 ```
 

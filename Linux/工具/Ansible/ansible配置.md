@@ -5,17 +5,17 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-08 09:36:50
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-06 13:19:51
+ * @LastEditTime: 2022-01-09 20:28:27
 -->
 
 
 ## 概念
 
-$Ansible$是一个配置管理和应用部署工具.
+Ansible是一个配置管理和应用部署工具.
 
-$Ansible$可以去对服务器上($1-N$台)的一些系统应用进行配置管理，如更改部分参数，安装软件应用等，本质是在多设备按情况(判断循环)指定每台设备要执行的命令
+Ansible可以去对服务器上($1-N$台)的一些系统应用进行配置管理，如更改部分参数，安装软件应用等，本质是在多设备按情况(判断循环)指定每台设备要执行的命令
 
-## 安装
+- 安装
 
 ```sh
 # 新增 epel-release 第三方套件来源，安装Ansible
@@ -25,6 +25,8 @@ yum install -y epel-release ansible
 ```
 
 ## 测试
+
+- 容器控制
 
 建立两个容器server1，server2，并用ansible对其进行控制
 
@@ -64,14 +66,15 @@ server2 ansible_ssh_host=172.17.0.3 ansible_ssh_port=22 ansible_ssh_pass=docker
 | ansible_ssh_port | SSH port  |
 | ansible_ssh_pass | SSH密码   |
 
+控制所有受控主机输出
+
 ```sh
-# 控制所有受控主机输出
 ansible all -m command -a 'echo Hello World!'
 ```
 
 ![](https://cdn.hurra.ltd/img/20210308100822.png)
 
-## 批量SSH免密
+- 批量SSH免密
 
 通过$Ansible$批量给多台远程主机设置SSH免密
 
@@ -120,7 +123,7 @@ host_key_checking = True
 将宿主机的`id_ras.pub`文件拷贝到远程主机的`authorized_key`中，注意此处远程登录的用户名为docker，本地为root用户
 
 ```sh
-ansible all -m authorized_key -a "user=远程用户名 key='{{ lookup('file'，'本地id_rsa.pub路径') }}'" -k
+ansible all -m authorized_key -a "user=docker key='{{ lookup('file'，'.ssh/id_ras.pub') }}'" -k
 ```
 
 输入宿主机的SSH密码

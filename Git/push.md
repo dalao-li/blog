@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-25 23:07:05
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-25 20:48:38
+ * @LastEditTime: 2022-01-10 00:39:57
 -->
 
 ## push
@@ -39,22 +39,23 @@ git remote -v
 git remote rm [origin name]
 ```
 
-## 添加远程地址
-
-```sh
-git remote add [origin name] [origin url]
-```
 ## 删除远程地址
 
 ```sh
 git remote set-url --del origin [origin url]
 ```
 
-## 添加多个远程地址
+## 添加远程地址
+
+```sh
+git remote add [origin name] [origin url]
+```
+
+- 添加多个远程地址
 
 在使用git时,可将库同时push到多个托管远端
 
-- 方法1，命令行
+1）方法1，命令行
   
 ```sh
 # 添加首个远程地址
@@ -67,7 +68,7 @@ git remote set-url --add origin [origin url]
 ![](https://cdn.hurra.ltd/img/20211225204827.png)
 
 
-- 方法2，配置.git/config
+2）方法2，配置.git/config
 
 ![](https://cdn.hurra.ltd/img/20211214220953.png) 
 

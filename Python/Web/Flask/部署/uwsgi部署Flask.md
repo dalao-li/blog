@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-28 20:37:23
+ * @LastEditTime: 2022-01-10 01:34:08
 -->
 
 ## uwsgi操作
@@ -31,10 +31,9 @@ uwsgi --http :8080 --plugin python --wsgi-file test.py
 
 ## 文件
 
-- app.py
+app.py
 
 ```py
-# app.py
 from flask import Flask
 app = Flask(__name__)
 
@@ -46,7 +45,7 @@ if __name__ == '__main__':
 	app.run()
 ```
 
-- config.ini
+config.ini
 
 ```ini
 [uwsgi]
@@ -72,7 +71,7 @@ threads = 8
 buffer-size = 32768
 ```
 
-- Dockerfile
+Dockerfile
 
 ```sh
 # 所采用的基础镜像
@@ -94,7 +93,7 @@ COPY . .
 CMD ["uwsgi"，"config.ini"]
 ```
 
-- 构建镜像
+构建镜像
 
 ```sh
 docker build -t uwsgi_flask:v1 .

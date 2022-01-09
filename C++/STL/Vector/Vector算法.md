@@ -5,13 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 21:05:31
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-24 22:48:35
+ * @LastEditTime: 2022-01-10 00:27:27
 -->
 
 ## 数值排序
   
 ```c
-sort(v.begin() , v.end());
+sort(v.begin(), v.end());
 ```
 
 ## 对象排序
@@ -67,9 +67,9 @@ int main() {
 
 ```c
 // 迭代器指向最大值
-vector<T>::iterator it = max_element(v.begin(),v.end());
+vector<T>::iterator it = max_element(v.begin(), v.end());
 
-vector<T>::iterator it = min_element(v.begin(),v.end());
+vector<T>::iterator it = min_element(v.begin(), v.end());
 
 // 下标
 index = v.begin() - it;

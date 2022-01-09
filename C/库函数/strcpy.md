@@ -5,14 +5,15 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-28 12:45:28
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-28 12:47:25
+ * @LastEditTime: 2022-01-09 21:38:33
 -->
 
 
 ## strcpy
 
+-  把 src 所指向的字符串复制到 dest
+
 ```c
-// 把 src 所指向的字符串复制到 dest
 char *strcpy(char *dest, const char *src)
 ```
 

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-03 13:54:04
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-29 22:52:06
+ * @LastEditTime: 2022-01-10 00:55:51
 -->
 
 ## 项目
@@ -19,8 +19,9 @@ python manage.py runserver 0.0.0.0:8000
 
 ## uwsgi
   
+config.ini
+
 ```ini
-# config.ini
 [uwsgi]
 
 socket = 127.0.0.1:8000

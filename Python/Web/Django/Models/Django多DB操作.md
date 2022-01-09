@@ -5,15 +5,17 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 16:49:59
  * @LastEditors: DaLao
- * @LastEditTime: 2021-04-07 01:37:48
+ * @LastEditTime: 2022-01-10 00:58:46
 -->
 
+## 多DB
 
 建立Django项目，在建立两个应用app1与app2
 
-## 修改配置文件
+
 
 修改settings.py文件中的`DATABASES`配置，此处以连接sqlite，mysql数据为例
+
 ```py
 DATABASES = {
     # 默认数据库
@@ -39,6 +41,7 @@ DATABASES = {
         }
     }
 ```
+
 ## 数据库路由方法类
 
 与settings.py同级目录下建立database_router.py文件
@@ -117,4 +120,4 @@ DATABASE_APPS_MAPPING = {
     'app1':'default'，
     'app2': 'test_mysql'，
 }
-```
+``` 

@@ -5,32 +5,35 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-08 10:40:15
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-06 03:49:08
+ * @LastEditTime: 2022-01-09 20:25:11
 -->
 
 ## 限定主机变更
 
-- $limit$参数限定
+- limit参数限定
 
 ```sh
 ansible 分组 -m command -a "指令" --limit "主机IP"
-
-# 只对web组中192.168.1.2主机操作
-# ansible web -m command -a "systemctl status sshd" --limit "192.168.100.20"
 ```
 
-- $IP$限定
+- IP限定
 
 ```sh
 ansible 主机IP -m command -a "指令"
-
-# 只对192.168.100.0网段主机操作
 ```
 
 - 网段限定
 
 ```sh
-ansible 192.168.100.* -m command -a "systemctl status httpd"
+ansible xxx.xxx.xxx.* -m command -a "systemctl status httpd"
+```
+
+只对web组中192.168.1.2主机操作
+
+```sh
+ansible web -m command -a "systemctl status sshd" --limit "192.168.1.2"
+
+ansible web "192.168.1.2" -m command -a "systemctl status sshd"
 ```
 
 ## 查看所有主机

@@ -5,15 +5,15 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-23 15:07:51
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-27 16:41:10
+ * @LastEditTime: 2022-01-10 00:22:50
  */
 
 #include <iostream>     
 #include <functional>   
 
 struct IsOdd : public std::unary_function<int,bool> {
-	bool operator() (int number) {
-		return number & 1;
+	bool operator() (int n) {
+		return n & 1;
 	}
 
 };
