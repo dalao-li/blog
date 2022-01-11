@@ -5,10 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-09 00:07:41
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-02 03:17:33
+ * @LastEditTime: 2022-01-12 03:33:54
 -->
 
-## 文件拷贝
+## cp
+
+用于宿主机与容器内文件拷贝
 
 - 宿主机 ==> 容器
 
