@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-20 20:16:43
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-09 14:36:37
+ * @LastEditTime: 2022-01-11 06:30:27
 -->
 
 ## grep
@@ -24,6 +24,7 @@ grep -[参数]
 | `s`  | 不显示不存在或无匹配文本的错误信息     |
 | `v`  | 显示不包含匹配文本的所有行             |
 
+
 ## 单查询
 
 ```sh
@@ -36,6 +37,7 @@ grep 模式 匹配项
 grep -n 'Mar 10 16:3' /var/log/secure
 ```
 ![](https://cdn.hurra.ltd/img/20210310173920.png)
+
 
 ## 与查询
 
@@ -51,6 +53,7 @@ grep 'Mar 10 16:3' /var/log/secure | grep Accepted
 
 ![](https://cdn.hurra.ltd/img/20210310175209.png)
 
+
 ## 或查询
 
 ```sh
@@ -58,6 +61,7 @@ grep '模式1|模式2' 匹配项 或
 
 grep -E '模式1|模式2' 匹配项
 ```
+
 
 ## 非查询
 
@@ -75,6 +79,7 @@ ps -aux | grep vlc | grep -v grep
 ![](https://cdn.hurra.ltd/img/20220102211819.png)
 
 ![](https://cdn.hurra.ltd/img/20220102211849.png)
+
 
 ## 正则
 

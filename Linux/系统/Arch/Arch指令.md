@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-09 19:34:27
+ * @LastEditTime: 2022-01-10 19:21:16
 -->
 
 ## 换源
@@ -52,6 +52,12 @@ sudo pacman -R $(pacman -Qdtq)
 rm /var/lib/pacman/db.lck
 ```
 
+- 依赖错误解决，使用 -dd跳过所有检测
+
+```sh
+sudo pacman -Syudd
+```
+
 ## yay
 
 ```sh
@@ -88,7 +94,7 @@ sudo pacman -S --noconfirm fcitx5 fcitx5-qt fcitx5-gtk fcitx5-qt4 fcitx5-chinese
 - 配置
 
 ```sh
-sudo gedit /etc/profile
+sudo vim /etc/profile
 ```
 
 ```sh
@@ -100,7 +106,7 @@ export QT_IM_MODULE="fcitx"
 ```
 
 ```sh
-sudo gedit ~/.xinitrc
+sudo vim ~/.xinitrc
 ```
 
 ```sh
@@ -119,9 +125,9 @@ xdg-mime query default inode/directory
 
 ![](https://cdn.hurra.ltd/img/20220109184225.png)
 
-- 恢复默认文件管理器
+- 设置默认文件管理器
 
-安装Vscode后，文件管理其会被修改为Vscode，可重新设置
+安装Vscode后，文件管理器会被修改为Vscode，可用以下命令重新设置
 
 ```sh
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
@@ -131,7 +137,9 @@ xdg-mime default org.gnome.Nautilus.desktop inode/directory
 
 - 安装
 
-`yay -S`
+```sh
+yay -S
+```
 
 ```sh
 yay -S microsoft-edge-stable
@@ -140,7 +148,7 @@ yay -S visual-studio-code-bin
 
 yay -S flameshot
 
-yay -S balena-etcher
+yay -S etcher
 ```
 
 - 卸载
@@ -161,4 +169,12 @@ vscode 设置中添加
 
 ```sh
 sudo pacman -Syyu libvoikko hspell nuspell hunspell aspell
+```
+
+## anaconda
+
+```sh
+echo "export PATH=$HOME/anaconda3/bin:$PATH">>~/.bashrc
+
+source ~/.bashrc
 ```

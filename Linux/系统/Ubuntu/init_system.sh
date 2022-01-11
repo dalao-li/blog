@@ -7,7 +7,7 @@
  # @Email: dalao_li@163.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: DaLao
- # @LastEditTime: 2022-01-02 21:23:05
+ # @LastEditTime: 2022-01-10 02:17:56
 ### 
 
 # 设置flameshot快捷键
@@ -73,8 +73,7 @@ install_node(){
 
 # 安装代理
 set_proxy(){
-    
-    url="https://sub1nx2pwn2y.esub0000.top/link/QRkGWUYz9JBNaslw?clash=1"
+    url="https://service-33p4qzr4-1256078775.gz.apigw.tencentcs.com/link/905nAdJlOb1QYJZU?clash=1"
     
     path=".config/clash/config.yaml"
     
@@ -87,8 +86,7 @@ set_proxy(){
         --mount type=bind,source="${HOME}/${path}",target="/root/${path}",readonly \
         --restart=unless-stopped \
         --name=clash_test \
-        dreamacro/clash 
-
+        dreamacro/clash:v1.8.0 
     # https://clash.razord.top/ 
 
     # https://alpha-b-a.expcloud.me/user

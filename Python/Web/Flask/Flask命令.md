@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-09-24 20:37:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-06 23:24:55
+ * @LastEditTime: 2022-01-11 00:49:59
 -->
 
 
@@ -23,9 +23,31 @@ flask run --host=0.0.0.0 --port=8080
 ## Vscode 运行
 
 ```sh
-ps -aux | grep flask | grep -v grep | awk {'print $2'} | xargs kill -9
-
 source venv/bin/activate
 
 python -m flask run
+
+ps -aux | grep flask | grep -v grep | awk {'print $2'} | xargs kill -9
+```
+
+## 建立脚本
+
+```sh
+#!/bin/bash
+
+name=${1}
+
+mkdir $name
+
+mkdir $name/static
+
+mkdir $name/templates
+
+python -m virtualenv $name/venv
+
+source $name/venv/bin/activate
+
+pip install flask
+
+touch app.py
 ```

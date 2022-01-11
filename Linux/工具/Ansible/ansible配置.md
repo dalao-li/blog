@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-08 09:36:50
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-09 20:28:27
+ * @LastEditTime: 2022-01-11 06:25:24
 -->
 
 
@@ -76,7 +76,7 @@ ansible all -m command -a 'echo Hello World!'
 
 - 批量SSH免密
 
-通过$Ansible$批量给多台远程主机设置SSH免密
+通过Ansible批量给多台远程主机设置SSH免密
 
 | 主机     | IP             | 远程登录用户 |
 | -------- | -------------- | ------------ |

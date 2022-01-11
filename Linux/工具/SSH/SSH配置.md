@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-09 20:54:52
+ * @LastEditTime: 2022-01-11 06:24:34
 -->
 
 ## 连接
@@ -14,7 +14,7 @@
 ssh 用户名@IP地址 (-p 端口号)
 ```
 
-端口号默认为20
+连接192.168.1.1的dalao用户，端口号默认为20
 
 ```sh 
 ssh dalao@192.168.1.1
@@ -26,11 +26,12 @@ ssh dalao@192.168.1.1
 ssh-keygen -R [远程主机IP]
 ``` 
 
+
 ## 免密
 
 - 方法1，手动复制
 
-把本地主机`id_rsa.pub` 复制到远程主机`.ssh/authorized_keys`里
+将本地主机`id_rsa.pub` 复制到远程主机`.ssh/authorized_keys`里
 
 - 方法2，命令复制
 
@@ -40,9 +41,11 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
 
 ![](https://cdn.hurra.ltd/img/20211229213337.png)
 
+
 ## .ssh目录
 
 在根目录(/root/或者/home/用户名)下生成 .ssh目录
+
 ```sh
 ssh-keygen -t rsa
 ```
@@ -56,14 +59,13 @@ ssh-keygen -t rsa
 | id_rsa.pub      | 本机公钥文件             |
 | know_hosts      | 存储已认证主机的host key |
 
-known_hosts通过Client和Server的双向认证，以避免中间人(man-in-the-middle attack)攻击
-
-Client向Server发起连接时，Server不仅要验证Client的合法性，Client也会通过known_hosts中的host key来验证Server的身份
-
 
 ## 配置文件
 
+```sh
 /etc/ssh/sshd_condfig
+```
+
 
 ```sh
 # 允许密钥登录
