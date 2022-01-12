@@ -5,8 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-13 20:57:00
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-18 23:16:13
+ * @LastEditTime: 2022-01-13 01:33:38
 -->
+
+## KMP
 
 ```c
 // 获得next数组

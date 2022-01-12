@@ -8,7 +8,9 @@
  * @LastEditTime: 2022-01-10 00:49:15
 -->
 
-## 定义
+## 类
+
+### 定义
 
 ```py
 class Stu:
@@ -22,7 +24,7 @@ self代表类的实例，而非类
 
 类的方法与普通的函数的区别为它们必须有一个额外的首参数名称self
 
-## 方法
+### 方法
 
 ```py
 class Person:
@@ -42,7 +44,7 @@ class Person:
             self._name = value
 ```
 
-## 获值
+### 获值
 
 ```py
 class A(object):
@@ -56,11 +58,35 @@ a = A('lili'， 23)
 print(a.__dict__)
 ```
 
-## 赋值
+### 赋值
 
 ```py
 class Person:
     # _obj为字典
     def __init__(self, _obj):
         self.__dict__.update(_obj)
+```
+
+## 继承
+
+```py
+class People:
+    def __init__(self, name: str, age: str)-> None:
+        self.name = name
+        self.age = age
+
+    def speak(self):
+        print(self.name, self.age)
+```
+
+- 继承类
+
+```py
+class Student(People):
+    def __init__(self, name: str, age:str, num: str)-> None:
+        People.__init__(self, name, age)
+        self.num = num
+    
+    def speak(self):
+        print(self.name, self.age, self.num)
 ```

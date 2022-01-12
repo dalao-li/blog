@@ -3,10 +3,58 @@
  * @Version: 1.0
  * @Author: DaLao
  * @Email: dalao_li@163.com
- * @Date: 2021-12-25 12:04:59
+ * @Date: 2021-12-04 01:28:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:52:57
+ * @LastEditTime: 2022-01-13 01:48:21
 -->
+
+## List函数
+
+- 添加
+
+`append()` 列表末尾添加新值                                                  
+
+`extend()` 末尾追加另一个序列中的多个值 
+
+```py
+a = [1, 2, 3]
+
+# [1,2,3,4]
+a.append(4)
+
+# [1, 2, 3, 4, 5, 6, 7]
+a.extend([5, 6, 7])
+```
+
+- 统计元素在列表中出现次数
+
+`count()`
+
+```py
+a = [1, 1, 2, 3]
+
+# 2
+a.count(1)                                
+```
+
+- 删除
+
+`pop([index])` 删除列表中index下标元素，index为空时删除末尾元素
+
+```py
+a = [1, 2, 3, 4]
+
+# 4
+a.pop()
+
+# 2
+a.pop(1)
+```
+
+- 处理 
+
+`reverse()` 反向列表元素
+
 
 ## sorted
 
@@ -24,17 +72,19 @@ sorted函数将按列表升序进行排序，返回新list对象，原list保持
 
 - sort 与 sorted 区别
 
-sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作
+sort 应用于 list，sorted 可对所有可迭代的对象进行排序
 
-sort 方法返回的是对已经存在的列表进行操作，sorted 方法返回的是一个新的 list
+sort 方法仅操作列表，sorted 方法返回的新的 list
 
-## 默认情况
+### 默认情况
 
 ```py
 a = [3, 4, 5, 2, 1]
 
+x = sorted(a)
+
 # [1, 2, 3, 4, 5]
-sorted(a)
+print(x)
 ```
 
 - 降序排序
@@ -46,7 +96,7 @@ sorted(a)
 sorted(a, reverse = True)
 ```
 
-## 规则排序
+### 规则排序
 
 若按照某个规则排序，需指定参数key，key是一个函数对象
 
@@ -62,7 +112,7 @@ sorted(c, key = len)
 len是内建函数，sorted函数在排序的时候会用len去获取每个字符串的长度来排序
 
 
-## 复杂排序
+### 复杂排序
 
 如由元组构成的列表，若要按照元组中第二个元素排序，可用lambda定义匿名函数
 
@@ -73,6 +123,7 @@ s = [('zhang' , 'A') , ('li' , 'D') , ('wang' , 'C')]
 sorted(s, key = lambda x : x[1])
 ```
 这里将按照字母A-C-D的顺序排列
+
 
 ## 类排序
 
@@ -96,6 +147,7 @@ s = [Stu('john', 'A', 15),Stu('jane', 'B', 12),Stu('dave', 'B', 13)]
 # [('jane', 'B', 12), ('dave', 'B', 13), ('john', 'A', 15)]
 sorted(s, key = lambda t : t.age)
 ```
+
 - attrgetter
 
 ```py
@@ -103,7 +155,7 @@ sorted(s, key = attrgetter('age'))
 ```
 
 
-## 多字段来排序
+### 多字段来排序
 
 sorted也可以根据多个字段来排序，例如要先根据age排序，若age相同则根据grade排序
 
@@ -114,7 +166,7 @@ sorted(s, key = lambda t : (t.age, t.grade))
 sorted(s, key = attrgetter('age', 'grade')
 ```
 
-## 不可比较
+### 不可比较
 
 前面碰到的排序场景都是建立在两个元素可以互相比较的前提下，例如数值按大小比较，字母按顺序比较
 
@@ -145,4 +197,5 @@ def cmp(x1 , x2):
 # [1.5, 2, '2', 2.5, '2.5']
 sorted(nums, key=functools.cmp_to_key(cmp))
 ```
+
 
