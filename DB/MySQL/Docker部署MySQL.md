@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-11 22:12:33
+ * @LastEditTime: 2022-01-12 19:28:59
 -->
 
 ## Docker部署
@@ -18,16 +18,16 @@ docker run -itd \
     # 挂载目录
     -v $PWD/mysql:/var/lib/mysql \
     # 建立普通用户dalao
-    -e MYSQL_USER=dalao
+    -e MYSQL_USER=dalao \
     # 设置dalao用户密码
-    -e MYSQL_PASSWORD=456
+    -e MYSQL_PASSWORD=456 \
     # 设置root用户密码
     -e MYSQL_ROOT_PASSWORD=123 \
-    mysql:5.7 bash
+    mysql:5.7
 ```
 
 ```sh
-docker run -itd --name=mysql -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123  mysql:5.7 bash
+docker run -itd --name=mysql -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123  mysql:5.7
 ```
 
 
@@ -41,7 +41,7 @@ mysql -u 用户名 -p
 - 允许远程登录
 
 ```sh
-GRANT ALL PRIVILEGES ON *.* TO '用户名'@'%' IDENTIFIED BY '密码';
+grant all privileges on *.* to '用户名'@'%' identified by '密码';
 
 flush privileges;
 ```
@@ -51,6 +51,7 @@ flush privileges;
 目录映射到宿主机下
 
 ![](https://cdn.hurra.ltd/img/20211227135502.png)
+
 
 ## 常见问题
 

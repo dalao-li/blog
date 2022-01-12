@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-15 10:21:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:35:09
+ * @LastEditTime: 2022-01-12 20:00:49
 -->
 
 
@@ -31,7 +31,7 @@ docker images | grep "容器名" &> /dev/null
 
 # 若不存在
 if $? -ne 0;then
-    ....
+    ...
 fi
 ```
 

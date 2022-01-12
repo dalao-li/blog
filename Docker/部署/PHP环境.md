@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-15 23:20:46
+ * @LastEditTime: 2022-01-12 19:58:22
 -->
 
 ## 拉取镜像
@@ -21,11 +21,11 @@ docker pull nginx
 
 新建文件夹，用来映射网站根目录、Nginx 配置文件与日志文件
 
-```docker
+```sh
 mkdir -p ~/nginx/www ~/nginx/logs ~/nginx/conf
 ```
 
-进入/nginx/www，新建 index.php，内容为
+进入/nginx/www，新建 index.php
 
 ```php
 <?php
@@ -67,8 +67,11 @@ docker run -itd \
     --name demo_php \
     -v ~/nginx/www:/www \
     php:7.1.30-fpm
+    
 # docker run -itd --name demo_php -v ~/nginx/www:/www php:7.1.30-fpm
+```
 
+```sh
 # Nginx 容器
 docker run -itd \
     -p 80:80 \
@@ -76,6 +79,7 @@ docker run -itd \
     -v ~/nginx/conf:/etc/nginx/conf.d \
     --link demo_php:php \
     nginx
+
 # docker run -itd -p 80:80 -v ~/nginx/www:/usr/share/nginx/html -v ~/nginx/conf:/etc/nginx/conf.d --link demo_php:php nginx
 ```
 

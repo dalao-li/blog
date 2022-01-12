@@ -5,16 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-06 00:37:02
+ * @LastEditTime: 2022-01-12 08:34:29
 -->
 
 ## 用户
-
-- 登录MySQL
-
-```sql
-mysql -u 用户名 -p
-```
 
 - 创建用户 
 

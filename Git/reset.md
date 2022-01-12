@@ -5,14 +5,9 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:16:56
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-07 16:49:48
+ * @LastEditTime: 2022-01-12 08:30:23
 -->
 
-修改 new.txt 文件内容，并 commit
-
-![](https://cdn.hurra.ltd/img/20200717232121.png)
-
-![](https://cdn.hurra.ltd/img/20200717232223.png)
 
 ## 硬回退
 
@@ -22,9 +17,6 @@
 git reset --hard HEAD^
 ```
 
-![](https://cdn.hurra.ltd/img/20200717233342.png)
-
-![](https://cdn.hurra.ltd/img/20200717233417.png)
 
 ## 软回退
 
@@ -34,15 +26,6 @@ git reset --hard HEAD^
 git reset --soft HEAD^
 ```
 
-![](https://cdn.hurra.ltd/img/20200717233725.png)
-
-可发现commit已经撤回
-
-![](https://cdn.hurra.ltd/img/20200717233745.png)
-
-并且改动的代码未变
-
-![](https://cdn.hurra.ltd/img/20200717233820.png)
 
 ## 回退到某次提交
 

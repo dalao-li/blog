@@ -5,12 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-25 23:07:05
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:39:57
+ * @LastEditTime: 2022-01-12 08:27:50
 -->
 
 ## push
 
-从将本地的分支版本上传到远程并合并
+`push` 将本地的分支版本上传到远程并合并
 
 ```sh
 git push 远程主机名 本地分支名:远程分支名
@@ -19,33 +19,35 @@ git push 远程主机名 本地分支名:远程分支名
 - 上传本地分支到远程分支
 
 ```sh
-git checkout -b 分支
-
 # 建立本地到上游(远端)仓的链接，这样代码才能提交上去
 git branch --set-upstream-to=origin/分支
 
 git push origin 分支
 ```
 
-## 查看远程仓库
+## Registry
+
+- 查看远程仓库
 
 ```sh
 git remote -v
 ```
 
-## 删除远程仓库
+- 删除远程仓库
 
 ```sh
 git remote rm [origin name]
 ```
 
-## 删除远程地址
+## 远程地址
+
+- 删除远程地址
 
 ```sh
 git remote set-url --del origin [origin url]
 ```
 
-## 添加远程地址
+- 添加远程地址
 
 ```sh
 git remote add [origin name] [origin url]
@@ -64,9 +66,6 @@ git remote add origin
 # 添加第二个地址
 git remote set-url --add origin [origin url]
 ```
-
-![](https://cdn.hurra.ltd/img/20211225204827.png)
-
 
 2）方法2，配置.git/config
 

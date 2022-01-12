@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 01:44:11
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 04:54:05
+ * @LastEditTime: 2022-01-12 08:41:53
 -->
 
 ## 语法
@@ -56,9 +56,10 @@ docker exec -it box
 
 - `--env-file=[]` 从指定文件读入环境变量
 
+
 ## --mount
 
-`--mount` 挂载本地目录到容器中,若本地目录(必须是绝对路径)不存在会报错
+`--mount` 挂载本地目录到容器中，若本地目录(必须是绝对路径)不存在会报错
 
 ```sh
 --mount type=bind,source=[本地路径],target=[容器路径](权限)
@@ -79,7 +80,8 @@ docker run -itd \
 --mount type=bind,source=/src/app,target=/root/app,readonly
 ```
 
-- `-v` 若本地目录不存在，会自动创建此文件夹
+- `-v` 若本地目录不存在，会自动创建文件夹
+
 
 ## --net
 
@@ -114,8 +116,6 @@ docker exec -it ubuntu_test bash -c 'apt-get update && apt-get install -y mysql-
 ```sh
 mysql -h db -u root -p123
 ```
-
-![](https://cdn.hurra.ltd/img/20211228235758.png)
 
 
 ## 问题

@@ -5,11 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 04:30:33
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 04:38:46
+ * @LastEditTime: 2022-01-12 18:30:19
 -->
 
 
-## 语法
+## exec
+
+让容器执行命令
 
 ```
 docker exec [参数] 镜像ID 命令
@@ -39,7 +41,9 @@ docker exec -id box mkdir test
 
 - 执行多条指令
 
-`sh -c '命令1 && 命令2'`
+```sh
+docker exec 容器ID  sh -c '命令1 && 命令2'
+```
 
 ubuntu安装mysql-clinet
 

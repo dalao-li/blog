@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:02:13
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-09 00:00:26
+ * @LastEditTime: 2022-01-12 08:13:04
 -->
 
 ## 查看
@@ -14,12 +14,7 @@
 git status
 ```
 
-![](https://cdn.hurra.ltd/img/20200717225623.png)
-
-![](https://cdn.hurra.ltd/img/20200717225752.png)
-
-
-![](https://cdn.hurra.ltd/img/20200717225908.png)
+![](https://cdn.hurra.ltd/img/20220112080241.png)
 
 
 ## 添加到暂存区
@@ -28,28 +23,32 @@ git status
 git add .
 ```
 
-`.` 指所有文件，add后也可具体指定文件
+`.` 指所有文件，也可具体指定文件，此处添加main.cpp文件
 
-![](https://cdn.hurra.ltd/img/20200717230210.png)
+- 撤回暂存区文件
 
 ```sh
-# 撤回暂存区所有文件
-git reset HEAD
-
-# 撤回暂存区指定的文件
-git reset HEAD 文件名
+# 默认所有文件，可指定文件
+git reset HEAD 
 ```
 
-![](https://cdn.hurra.ltd/img/20200717231751.png)
+![](https://cdn.hurra.ltd/img/20220112080614.png)
 
 ## 提交
 
+- 将暂存区里的改动给提交到本地的版本库
+
 ```sh
-# 将暂存区里的改动给提交到本地的版本库
+# 使用编辑器添加注释
+git commit
+
+# 直接添加注释
 git commit -m "提交的注释信息"
 ```
 
-![](https://cdn.hurra.ltd/img/20200717230921.png)
+![](https://cdn.hurra.ltd/img/20220112081127.png)
+
+- 修改提交
 
 ```sh
 # 修改最近一次 commit
@@ -65,4 +64,4 @@ git rebase -i HEAD~3
 git log
 ```
 
-![](https://cdn.hurra.ltd/img/20200717232555.png)
+![](https://cdn.hurra.ltd/img/20220112081301.png)

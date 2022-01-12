@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-11 06:24:34
+ * @LastEditTime: 2022-01-12 20:03:08
 -->
 
 ## 连接
@@ -76,4 +76,47 @@ PubkeyAuthentication yes
 
 # 禁止密码登录
 PasswordAuthentication no
+```
+
+## 监控
+
+/etc/ssh/目录下新建sshrc文件
+
+```sh
+#!/bin/bash
+
+# 获取登录者的用户名
+user=${USER}
+
+# 获取登录者的IP地址
+ip=${SSH_CLIENT%% *}
+
+# 获取登录的时间
+time=${date +%F%t%k:%M}
+
+# 服务器的IP地址
+server=${ifconfig wlp2s0 | sed -n '2p' | awk '{print $2}'}
+
+echo ${user} ${ip} ${time} ${server}
+```
+
+## Web工具
+
+[Github 地址](https://github.com/huashengdun/webssh)
+
+
+```sh
+pip3 install webssh
+```
+
+- 直接运行wssh，使用默认8888端口
+
+```sh
+wssh
+```
+
+- 绑定IP地址和端口启动
+
+```sh
+wssh --address='IP地址' --port=端口
 ```

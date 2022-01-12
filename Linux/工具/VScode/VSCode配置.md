@@ -3,12 +3,29 @@
  * @Version: 1.0
  * @Author: DaLao
  * @Email: dalao_li@163.com
- * @Date: 2021-12-15 21:10:23
+ * @Date: 2021-10-12 23:24:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-09 20:56:58
+ * @LastEditTime: 2022-01-12 20:03:39
 -->
 
-## 查找
+## 以root权限运行
+
+```sh
+sudo code --user-data-dir="~/.vscode-root"
+```
+
+## 选中内容高亮
+
+```sh
+"workbench.colorCustomizations": {
+    "editor.selectionHighlightBackground": "#8ee267",
+    "editor.selectionHighlightBorder": "#8ee267"  
+}
+```
+
+## 快捷键
+
+### 查找
 
 | 功能             | 快捷键                                            |
 | ---------------- | ------------------------------------------------- |
@@ -41,7 +58,7 @@ highlight-icemode
 | 查看函数调用 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd>+ <kbd>C</kbd> |
 
 
-## 跳转
+### 跳转
 
 | 功能                        | 快捷键                                                               |
 | --------------------------- | -------------------------------------------------------------------- |
@@ -51,7 +68,7 @@ highlight-icemode
 | 跳转到当前文件开头/结尾     | <kbd>Ctrl</kbd> + <kbd>Home</kbd> / <kbd>Ctrl</kbd> + <kbd>End</kbd> |
 
 
-## 显示
+### 显示
 
 | 功能                 | 快捷键                                                                                                |
 | -------------------- | ----------------------------------------------------------------------------------------------------- |
@@ -61,7 +78,7 @@ highlight-icemode
 | 新建/关闭文件        | <kbd>Ctrl</kbd> + <kbd>N</kbd> / <kbd>Ctrl</kbd> + <kbd>W</kbd>                                       |
 | 重新打开关闭的编辑器 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>                                                     |
 
-## 编辑
+### 编辑
 
 | 功能                 | 快捷键                                                                                       |
 | -------------------- | -------------------------------------------------------------------------------------------- |
@@ -74,4 +91,3 @@ highlight-icemode
 | 当前行上/下移        | <kbd>Alt</kbd> + <kbd>↑</kbd> / <kbd>Alt</kbd> + <kbd>↓</kbd>                                |
 | 删除当前行           | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd>                                            |
 | 切换行注释           | <kbd>Ctrl</kbd> + <kbd>/</kbd>                                                               |
-

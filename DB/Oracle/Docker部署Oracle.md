@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:32:55
+ * @LastEditTime: 2022-01-12 19:30:01
 -->
 
 ## Docker部署Oracle
@@ -29,7 +29,7 @@ docker run -itd --name=orace -p 8080:8080 -p 1521:1521 truevoly/oracle-12c
 sqlplus sys as sysdba
 ```
 
-输入 sys 用户的默认密码 oracle
+sys 用户的默认密码 oracle
 
 - 查看表空间
 

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-20 20:16:43
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-28 22:56:35
+ * @LastEditTime: 2022-01-12 19:32:57
 -->
 
 ## 搭建
@@ -21,7 +21,7 @@ docker pull gitlab/gitlab-ce
 gitlab_dir=/srv/gitlab
 
 # 主机IP
-ip=.......
+ip=...
 
 # 建立服务器配置，日志，数据目录
 for i in config logs data;do 
@@ -38,7 +38,7 @@ docker run -itd \
     gitlab/gitlab-ce:latest
 ```
 
-修改gitlab配置文件/srv/gitlab/config/gitlab.rb
+修改配置文件/srv/gitlab/config/gitlab.rb
 
 ```sh
 # 改SSH端口为10080，以便不和宿主机22端口冲突
@@ -48,10 +48,9 @@ gitlab_rails['gitlab_shell_ssh_port'] = 10080
 external_url 'http://192.168.162.106'
 ```
 
-进入Gitlab容器，重启Gitlab服务
+重新应用gitlab的配置
 
 ```sh
-# 重新应用gitlab的配置
 docker exec -it gitlab gitlab-ctl reconfigure
 ```
 

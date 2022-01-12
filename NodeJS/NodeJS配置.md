@@ -31,9 +31,14 @@ sudo pacman -S nodejs npm
 ## 换源
 
 ```sh
-sudo npm config set registry https://registry.npm.taobao.org
+npm config set registry http://mirrors.cloud.tencent.com/npm/
+```
 
-source ~/.bashrc
+- 验证
+
+```sh
+# 如果返回http://mirrors.cloud.tencent.com/npm/，说明镜像配置成功
+npm config get registry
 ```
 
 ## 卸载

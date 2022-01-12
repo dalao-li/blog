@@ -5,8 +5,16 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:20:22
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-07 02:17:21
+ * @LastEditTime: 2022-01-12 08:19:01
 -->
+
+## 初始化
+
+```sh
+git init
+```
+
+![](https://cdn.hurra.ltd/img/20220112075837.png)
 
 ## 查看
 
@@ -18,7 +26,7 @@ git branch -a
 git branch
 ```
 
-![](https://cdn.hurra.ltd/img/20200718111415.png)
+![](https://cdn.hurra.ltd/img/20220112081438.png)
 
 ## 建立
 
@@ -26,7 +34,8 @@ git branch
 git branch 分支名
 ```
 
-![](https://cdn.hurra.ltd/img/20200718111645.png)
+![](https://cdn.hurra.ltd/img/20220112081747.png)
+
 
 ## 切换
 
@@ -38,7 +47,8 @@ git checkout 分支名
 git checkout -b 分支名
 ```
 
-![](https://cdn.hurra.ltd/img/20200718112028.png)
+![](https://cdn.hurra.ltd/img/20220112081849.png)
+
 
 ## 删除
 
@@ -46,11 +56,11 @@ git checkout -b 分支名
 git branch -d 分支名
 ```
 
-![](https://cdn.hurra.ltd/img/20200718112414.png)
 
 ## 合并
 
+- 合并A分支到当前分支
+
 ```sh
-# 合并某分支到当前分支
-git merge 某分支
+git merge A分支
 ```

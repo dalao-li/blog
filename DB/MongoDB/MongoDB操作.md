@@ -1,6 +1,8 @@
 ## 部署
 
-- 创建容器，`--auth` 需要密码才能访问容器服务
+- 创建容器
+
+`--auth` 需要密码才能访问容器服务
   
 ```sh
 docker run -itd --name mongo -p 27017:27017 mongo --auth 
@@ -8,102 +10,93 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 docker exec -it mongo mongo admin
 ```
 
-- 创建一个名为 admin，密码为 123456 的用户
+![](https://cdn.hurra.ltd/img/20220112183733.png)
+
+- 创建用户
+
+创建一个名为 admin，密码为 123456 的用户
 
 ```sh
 db.createUser({ user:'admin',pwd:'123456',roles:[{ role:'userAdminAnyDatabase',db:'admin'},"readWriteAnyDatabase"]})
 ```
 
+![](https://cdn.hurra.ltd/img/20220112183857.png)
+
 - 连接
 
 ```sh
-db.auth('admin', '123456')
+db.auth('admin','123456')
 ```
 
-![](https://cdn.hurra.ltd/img/20201014175200.png)
+![](https://cdn.hurra.ltd/img/20220112184110.png)
 
+## 命令
 
-## 创建DB
+### 数据库
 
 ```sh
-use 数据库名
+use 数据库
 ```
 
-创建 test 数据库
+创建 test 数据库，这里暂不会显示，因为其中还未插入数据
 
-![](https://cdn.hurra.ltd/img/20201014142358.png)
-
-这里暂不会显示新建的数据库,因为其中还未插入数据
+![](https://cdn.hurra.ltd/img/20220112184225.png)
 
 
-## 创建集合
+### 集合
 
 ```sh
-db.createCollection("集合名")
+db.createCollection("集合")
 ```
 
 创建 stu 集合
 
-![](https://cdn.hurra.ltd/img/20201014171656.png)
+![](https://cdn.hurra.ltd/img/20220112184407.png)
 
 
-## 增加
-
-- 单条插入
+### 增加
 
 ```sh
-db.collect_name.insert(JSON数据)
+db.[集合].insert(JSON数据1,JSON数据2...)
 ```
 
-向 stu 集合中插入数据
+向stu集合插入两条数据
 
-![](https://cdn.hurra.ltd/img/20201014174718.png)
-
-- 多条插入
-
-```sh
-db.collect_name.insert(JSON数据1,JSON数据2,JSON数据3.....)
+```
+db.stu.insert([{name:"Ling",age:20},{name:"Wang",age:22}])
 ```
 
-![](https://cdn.hurra.ltd/img/20201014175739.png)
+![](https://cdn.hurra.ltd/img/20220112184807.png)
 
-## 查询
+### 查询
 
 - 全部查询
 
-显示集合内所有文档
+`db.[集合].find()`
 
-```sh
-db.[collect_name].find()
-```
+- 格式化显示集合内所有文档
 
-例，显示 stu 集合内所有数据
+`db.[集合].find().pretty()`
 
-![](https://cdn.hurra.ltd/img/20201014174834.png)
-
-格式化显示集合内所有文档
-
-```sh
-db.[collect_name].find().pretty()
-```
-
-![](https://cdn.hurra.ltd/img/20201014180104.png)
+![](https://cdn.hurra.ltd/img/20220112185029.png)
 
 - 条件查询
 
+`db.[集合].find({key:value}).pretty()`
+
+查询 stu 集合中 name 为 Ling 的文档
+
 ```sh
-db.[collec_name].find({key:value}).pretty()
+db.stu.find({name:"Ling"}).pretty()
 ```
 
-例，查询 stu 集合中 name 为 LILI 的文档
+查询年龄大于等于 21 的文档
 
-![](https://cdn.hurra.ltd/img/20201014190333.png)
+```sh
+db.stu.find({age:{$gte:21}}).pretty()
+```
 
-例，查询年龄大于等于 19 的文档
-
-![](https://cdn.hurra.ltd/img/20201014191820.png)
-
-条件查询语言表
+条件查询表
 
 | 操作       | 格式                 |
 | ---------- | -------------------- |
@@ -114,27 +107,131 @@ db.[collec_name].find({key:value}).pretty()
 | 大于或等于 | {key:{`$gte`:value}} |
 | 不等于     | {key:{`$ne`:value}}  |
 
-## 改
 
-- 修改文档
+### 修改
+
+`db.[集合].update({key1:value},{$set:{key2:new_value}})`
+
+将 name 为 Ling 的文档中 age 值改为 30
+
 
 ```sh
-db.[collect_name].update({key1:value},{$set:{key2:new_value}})
+db.stu.update({name:"Ling"},{$set:{age:30}})
 ```
-
-例，将 name 为 LILI 的文档中 age 值改为 22
-
-![](https://cdn.hurra.ltd/img/20201014195214.png)
+![](https://cdn.hurra.ltd/img/20220112185815.png)
 
 
-## 删
+### 删除
+
+`db.[集合].remove({key:value})`
+
+删除 name=Ling 的文档
 
 ```sh
-db.[collect_name].remove({key:value})
+db.stu.remove({name:"Ling"})
 ```
 
-删除 name=LILI 的文档
+## Python交互
 
-![](https://cdn.hurra.ltd/img/20201014204226.png)
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2021-01-16 17:59:35
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-01-12 19:27:23
+-->
+
+### 连接
+
+`pymongo.MongoClient("mongodb://用户名:密码@IP:端口/")`
+
+```py
+import pymongo
+
+client = pymongo.MongoClient("mongodb://admin:123456@192.168.1.36:27017/")
+
+dbs = client.list_database_names()
+
+# ['admin', 'config', 'local', 'test']
+print(dbs)
+```
+
+
+### 获取集合
+
+```py
+# 获取test数据库中所有集合
+collects = client['test'].list_collection_names()
+
+# ['stu']
+print(collects)
+```
+
+
+### 获取文档
+
+```py
+# 获取test数据库的stu集合
+collect = client['test']['stu']
+
+# 遍历集合输出文档
+for i in collect.find():
+    print(i)
+
+# {'_id': ObjectId('61deb1b9e67fb54f984ccf8f'), 'name': 'Ling', 'age': 30.0}
+# {'_id': ObjectId('61deb1b9e67fb54f984ccf90'), 'name': 'Wang', 'age': 22.0}
+```
+
+- 按条件获取
+
+`集合.find(key:value)`
+
+```py
+collect = client['test']['stu']
+
+# 获取 name 为 Ling 的人员信息
+data = collect.find({"name":"Ling"})[0]
+
+# {'_id': ObjectId('61deb1b9e67fb54f984ccf8f'), 'name': 'Ling', 'age': 30.0}
+print(data)
+```
+
+
+### 插入文档
+
+- 单条插入
+
+`insert_one(JSON数据)`
+
+- 多条插入
+
+`insert_many(JSON数据1,JSON数据2...)`
+
+```py
+...
+collect = client['test']['stu']
+
+collect.insert_one({"name":"new_name","age":19})
+
+collect.insert_many([
+    {"name":"new_name2","age"，20},
+    {"name":"new_name3","age":19},
+    {"name":"new_name4","age":19}
+])
+
+for i in collect.find():
+    print(i)
+
+# {'_id': ObjectId('61deb1b9e67fb54f984ccf8f'), 'name': 'Ling', 'age': 30.0}
+# {'_id': ObjectId('61deb1b9e67fb54f984ccf90'), 'name': 'Wang', 'age': 22.0}
+# {'_id': ObjectId('61deb97e09f80dafa132ce8c'), 'name': 'new_name', 'age': 19}
+# {'_id': ObjectId('61deb97e09f80dafa132ce8d'), 'name': 'new_name2', 'age': 20}
+# {'_id': ObjectId('61deb97e09f80dafa132ce8e'), 'name': 'new_name3', 'age': 19}
+# {'_id': ObjectId('61deb97e09f80dafa132ce8f'), 'name': 'new_name4', 'age': 19}
+```
+
+
 
 
