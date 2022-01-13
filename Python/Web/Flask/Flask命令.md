@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-09-24 20:37:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-11 00:49:59
+ * @LastEditTime: 2022-01-14 01:07:51
 -->
 
 
@@ -27,7 +27,7 @@ source venv/bin/activate
 
 python -m flask run
 
-ps -aux | grep flask | grep -v grep | awk {'print $2'} | xargs kill -9
+ps -aux | grep flask | grep -v grep | awk {'print $2'} | xargs kill -9 && python -m flask run
 ```
 
 ## 建立脚本

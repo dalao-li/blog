@@ -5,16 +5,16 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-13 20:43:00
+ * @LastEditTime: 2022-01-14 01:11:43
 -->
 
 ## HTTP请求
 
 ```js
-$.get(URL，callback)
+$.get(URL,callback)
 
 
-$.post(URL，data，callback)
+$.post(URL,data,callback)
 ```
 
 ## 封装 Ajax
@@ -26,24 +26,24 @@ $.post(URL，data，callback)
 | parm     | 发送的数据 |
 | callback | 回调函数   |
 
-```javascript
-//发送ajax请求
-function sendAjax(type， url， param， callback) {
+```js
+// 发送ajax请求
+function sendAjax(type,url,param,callback) {
   $.ajax({
-    async: false，
-    ache: false，
-    type: type，
-    url: url，
+    async: false,
+    ache: false,
+    type: type,
+    url: url,
     //将发送的数据转换为JSON字符串
-    data: JSON.stringify(param)，
+    data: JSON.stringify(param),
     //服务端返回数据的格式
-    dataType: "json"，
+    dataType: "json",
     success: function (data) {
       callback(data.result);
-    }，
+    },
     error: function () {
       //失败处理
-    }，
+    },
   });
 }
 ```
@@ -72,7 +72,7 @@ function login_callback(value) {
 
 ```js
 // 登录函数
-function userLogin(name， pwd) {
+function userLogin(name,pwd) {
   if (name === "") {
     alert("请输入用户名");
     return;
@@ -81,8 +81,8 @@ function userLogin(name， pwd) {
     alert("请输入密码");
     return;
   }
-  const data = {status: 1，name: name，pwd: pwd，};
+  const data = {status: 1,name: name,pwd: pwd,};
 
-  sendAjax("POST"， "/api"， data， login_callback);
+  sendAjax("POST","/api",data,login_callback);
 }
 ```

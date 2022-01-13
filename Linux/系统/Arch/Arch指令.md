@@ -5,10 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 19:21:16
+ * @LastEditTime: 2022-01-14 06:11:31
 -->
 
-## 换源
+## 配置
+
+### 换源
 
 - 添加国内源
 
@@ -16,8 +18,9 @@
 sudo gedit /etc/pacman.d/mirrorlist
 ```
 
+添加到所有源的开头
+
 ```sh
-# 添加到所有源的开头
 Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```
 
@@ -34,7 +37,7 @@ SigLevel = Optional TrustAll
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 
-## 更新
+### 更新
 
 ```sh
 sudo pacman -Syyu
@@ -58,7 +61,42 @@ rm /var/lib/pacman/db.lck
 sudo pacman -Syudd
 ```
 
-## yay
+###  文件管理器
+
+- 查看当前文件管理器
+
+```sh
+xdg-mime query default inode/directory   
+```
+
+![](https://cdn.hurra.ltd/img/20220109184225.png)
+
+- 设置默认文件管理器
+
+安装Vscode后，文件管理器会被修改为Vscode，可用以下命令重新设置
+
+```sh
+xdg-mime default org.gnome.Nautilus.desktop inode/directory
+```
+
+### Vscode终端乱码
+
+vscode 设置中添加
+
+```sh
+"terminal.integrated.fontFamily": "NotoSansMono Nerd Font"
+```
+
+### gedit
+
+```sh
+sudo pacman -Syyu libvoikko hspell nuspell hunspell aspell
+```
+
+## 软件
+
+
+### yay
 
 ```sh
 sudo pacman -S yay
@@ -70,7 +108,29 @@ sudo pacman -S yay
 yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
 ```
 
-## 安装deb
+- 安装
+
+```sh
+yay -S
+```
+
+```sh
+yay -S microsoft-edge-stable
+
+yay -S visual-studio-code-bin
+
+yay -S flameshot
+
+yay -S etcher
+```
+
+- 卸载
+
+```
+yay -Rns
+```
+
+### 安装deb
 
 ```sh
 yay -S debtap
@@ -83,7 +143,8 @@ sudo debtap xxxxxx.deb
 sudo pacman -U xxxxxxz.zst
 ```
 
-## 中文输入法
+
+### 中文输入法
 
 - 安装fcitx
 
@@ -115,63 +176,8 @@ export LC_CTYPE=zh_CN.UTF-8
 
 重启
 
-##  文件管理器
 
-- 查看当前文件管理器
-
-```sh
-xdg-mime query default inode/directory   
-```
-
-![](https://cdn.hurra.ltd/img/20220109184225.png)
-
-- 设置默认文件管理器
-
-安装Vscode后，文件管理器会被修改为Vscode，可用以下命令重新设置
-
-```sh
-xdg-mime default org.gnome.Nautilus.desktop inode/directory
-```
-
-## 软件
-
-- 安装
-
-```sh
-yay -S
-```
-
-```sh
-yay -S microsoft-edge-stable
-
-yay -S visual-studio-code-bin
-
-yay -S flameshot
-
-yay -S etcher
-```
-
-- 卸载
-
-```
-yay -Rns
-```
-
-## Vscode终端乱码
-
-vscode 设置中添加
-
-```sh
-"terminal.integrated.fontFamily": "NotoSansMono Nerd Font"
-```
-
-## gedit
-
-```sh
-sudo pacman -Syyu libvoikko hspell nuspell hunspell aspell
-```
-
-## anaconda
+### anaconda
 
 ```sh
 echo "export PATH=$HOME/anaconda3/bin:$PATH">>~/.bashrc

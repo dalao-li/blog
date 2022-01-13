@@ -5,10 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 20:03:08
+ * @LastEditTime: 2022-01-14 05:16:34
 -->
 
-## 连接
+## SSH 
+
+### 连接
 
 ```sh
 ssh 用户名@IP地址 (-p 端口号)
@@ -27,7 +29,7 @@ ssh-keygen -R [远程主机IP]
 ``` 
 
 
-## 免密
+### 免密
 
 - 方法1，手动复制
 
@@ -42,7 +44,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
 ![](https://cdn.hurra.ltd/img/20211229213337.png)
 
 
-## .ssh目录
+### .ssh目录
 
 在根目录(/root/或者/home/用户名)下生成 .ssh目录
 
@@ -78,7 +80,7 @@ PubkeyAuthentication yes
 PasswordAuthentication no
 ```
 
-## 监控
+### 监控
 
 /etc/ssh/目录下新建sshrc文件
 
@@ -100,7 +102,7 @@ server=${ifconfig wlp2s0 | sed -n '2p' | awk '{print $2}'}
 echo ${user} ${ip} ${time} ${server}
 ```
 
-## Web工具
+### Web工具
 
 [Github 地址](https://github.com/huashengdun/webssh)
 
