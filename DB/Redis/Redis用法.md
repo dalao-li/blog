@@ -5,10 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-24 15:25:28
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-06 15:04:38
+ * @LastEditTime: 2022-01-13 12:32:08
 -->
 
-## Readis命令
+## Readis
+
+### 命令
 
 - 建立键
   
@@ -40,7 +42,7 @@ EXPIRE key seconds
 TTL key
 ```
 
-## 安全操作
+### 安全操作
 
 - 设置密码
 
@@ -54,7 +56,7 @@ CONFIG set requirepass "密码"
 CONFIG get requirepass
 ```
 
-## Docker部署
+### Docker部署
 
 - 允许远程访问
 

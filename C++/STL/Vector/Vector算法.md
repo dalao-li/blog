@@ -5,16 +5,19 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 21:05:31
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:27:27
+ * @LastEditTime: 2022-01-13 12:26:26
 -->
 
-## 数值排序
+## Vector算法
+
+
+### 数值排序
   
 ```c
-sort(v.begin(), v.end());
+sort(v.begin() , v.end());
 ```
 
-## 对象排序
+### 对象排序
 
 ```c++
 #include <iostream>
@@ -57,20 +60,35 @@ int main() {
 }
 ```
 
-## 获取最值下标
+### 获取最值下标
+
+引用头文件
 
 ```c
-// 引用头文件
 #include <functional>
 #include <algorithm>
 ```
 
 ```c
 // 迭代器指向最大值
-vector<T>::iterator it = max_element(v.begin(), v.end());
+vector<T>::iterator it = max_element(v.begin() , v.end());
 
-vector<T>::iterator it = min_element(v.begin(), v.end());
+vector<T>::iterator it = min_element(v.begin() , v.end());
+```
 
-// 下标
+- 下标
+```
 index = v.begin() - it;
+```
+
+## 累加
+
+```c
+accumulate(v.begin(), v.end(), 0, plus<T>())
+```
+
+## 累乘
+
+```c
+accumulate(v.begin(), v.end(), 1, multiplies<T>())
 ```

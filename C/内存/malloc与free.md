@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-15 22:02:32
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-14 00:01:18
+ * @LastEditTime: 2022-01-13 11:22:48
 -->
 
 ## malloc函数
@@ -64,7 +64,7 @@ int main(void){
 	for(int i = 0 ; i<4;i++){
 		p[i] = i;
 	}
-    printf("%d"，p[1]);
+    printf("%d", p[1]);
     
     free(p);
     p = NULL;

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-27 16:54:15
+ * @LastEditTime: 2022-01-13 12:24:10
  */
  
 #include <iostream>
@@ -32,9 +32,10 @@ int main() {
 		}
 	}
 
-
-	for (i = 0; i < (counter-1); i++)  
-		cout << t[i] << " ";  //0 1 5 6 7 8 9
+	for (i = 0; i < (counter-1); i++){
+		//0 1 5 6 7 8 9
+		cout << t[i] << " ";  
+	}
 
 	return 0;
 }

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:32:30
+ * @LastEditTime: 2022-01-13 12:31:28
 -->
 
 ## SQL外键
@@ -18,7 +18,7 @@
   
 - `FOREIGN KEY` 约束用于预防破坏表之间连接的动作，能防止非法数据插入外键列
 
-## 实例
+### 实例
 
 ```sql
 CREATE TABLE `Stu`  (

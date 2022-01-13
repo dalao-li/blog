@@ -5,22 +5,22 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-15 21:12:13
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 08:24:05
+ * @LastEditTime: 2022-01-13 12:56:20
 -->
 
 ## pull
 
 `git pull` 是将远程主机的最新内容拉下来后直接合并，可能会产生冲突，需手动解决.
 
-```sh
-git pull 远程主机名 远程分支名:本地分支名
-```
+`git pull 远程主机名 远程分支名:本地分支名`
 
 若远程分支是与当前分支合并，则冒号后部分可省略
 
 ```
 git pull origin master
 ```
+
+### 过程分解
 
 `git pull`的过程可分解为
 

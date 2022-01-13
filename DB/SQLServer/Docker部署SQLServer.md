@@ -5,10 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 23:48:41
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 19:31:11
+ * @LastEditTime: 2022-01-13 12:32:41
 -->
 
-## Docker部署
+## SQLServer
+
+### Docker部署
 
 ```sh
 docker run -itd \
@@ -29,7 +31,7 @@ docker run -itd -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Dalao@13546!" -p 1433:1433 --
 | Dalao@13546! | 密码   |
 
 
-## 命令
+### 命令
 
 - 进入SQLSercer
 
@@ -58,7 +60,7 @@ GO
 别忘记输入`GO`，那样才会执行命令(反人类的SQLServer)
 
 
-## Python 交互
+### Python 交互
 
 - Navicat 连接
 

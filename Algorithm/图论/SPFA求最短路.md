@@ -1,16 +1,18 @@
-## SPFA求最短路
+## SPFA
 
 ![](https://cdn.hurra.ltd/img/20211128154729.png)
+
+求$A$到其他点的最短路
 
 ### 理论
 
 建立一个队列，存入开始节点，队列不为空时
 
-$1$. 取出队头节点 $X$，并且$X$ 出队  
+$1$) 取出队头节点 $X$，并出队  
 
-$2$. 遍历与 $X$ 相通的节点 $Y$，若 $X$ 到 $Y$ 的距离可缩小(松弛)且 $Y$ 不在队列中，则将 $Y$ 入队，继续操作 2
+$2$) 遍历与 $X$ 相通的节点 $Y$，若 $X$ 到 $Y$ 的距离可缩小(松弛)，且 $Y$ 不在队列中，将 $Y$ 入队，继续操作 $2$
  
-$3$. 若队列为空则结束
+$3$) 若队列为空则结束
 
 
 ### 过程
@@ -86,12 +88,15 @@ $3$. 若队列为空则结束
 #include <cstring>
 #include <queue>
 #include <vector>
+
 const int SIZE = 5;
 const int MAXV = 10000;
 using namespace std;
 
 typedef struct E {
-	char sp;char ep;int w;
+	char sp;
+	char ep;
+	int w;
 	E() {}
 	E(char s， char e， int w) : sp(s)， ep(e)， w(w) {}
 } E;
@@ -115,35 +120,32 @@ int getIndex(char n) {
 // 求s到其他点间的最短路
 void SPFA(char s) {
 	queue<char> q;
-	//开始时将点s到其他点的距离设为$∞$
 	memset(path， MAXV， sizeof(path));
 	memset(in， 0， sizeof(in));
 	int index = getIndex(s);
-	// 点s自己到自己的最短路为0
+	// 点s自己的最短路为0
 	path[index] = 0;
 	q.push(s);
 	in[index] = 1;
 	while (!q.empty()) {
-		char x = q.front();
-		int x_index = getIndex(x);
+		char a = q.front();
+		int x = getIndex(a);
 		q.pop();
-		in[x_index] = 0;
-		// 遍历所有与x所连通的节点，进行松弛操作
+		in[x] = 0;
+		// 遍历所有与a所连通的节点，进行松弛操作
 		for (int i = 0; i < edge.size(); i++) {
-			// 若某个边的起点是x
-			if (edge[i].sp == x) {
-				// cout<<edge[i].sp<<" "<<edge[i].ep<<endl;
-				// 获取该边的终点
-				char end = edge[i].ep;
-				int end_index = getIndex(end);
+			// 若某个边的起点是a
+			if (edge[i].sp == a) {
+				// 获取该边的终点e
+				char e = edge[i].ep;
+				int end = getIndex(e);
 				// 若从点S经过点X到点end的距离比S直接到end的距离短，则可进行松弛操作
-				if (path[x_index] + edge[i].w < path[end_index]) {
+				if (path[x] + edge[i].w < path[end]) {
 					// 从点S到点end的距离更新为点S到X的距离与X到end的距离之和
-					path[end_index] = edge[i].w + path[x_index];
-					// cout<<"path["<<end<<"] = "<<path[end_index]<<endl;
-					if (!in[end_index]) {
-						q.push(end);
-						in[end_index] = 1;
+					path[end] = edge[i].w + path[x];
+					if (!in[end]) {
+						q.push(e);
+						in[end] = 1;
 					}
 				}
 			}
@@ -154,19 +156,19 @@ void SPFA(char s) {
 
 int main() {
 	E e[6];
-	e[0] = E('A'，'B'，13);
-	e[1] = E('A'，'E'，70);
-	e[2] = E('B'，'D'，4);
-	e[3] = E('B'，'C'，28);
-	e[4] = E('C'，'D'，23);
-	e[5] = E('C'，'E'，15);
+	e[0] = E('A','B',13);
+	e[1] = E('A','E',70);
+	e[2] = E('B','D',4);
+	e[3] = E('B','C',28);
+	e[4] = E('C','D',23);
+	e[5] = E('C','E',15);
 	for(int i = 0 ; i< 6; i++) {
 		edge.push_back(e[i]);
 	}
 	char s = 'A';
 	SPFA(s);
 	for(int i = 0 ; i<5;i++){
-		cout<<"p["<<node[i]<<"] = "<<path[i]<<endl;
+		cout << "p[" << node[i] << "] = " << path[i] << endl;
 	}
 	return 0;
 }

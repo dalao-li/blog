@@ -5,79 +5,80 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-07-16 22:43:26
  * @LastEditors: DaLao
- * @LastEditTime: 2021-09-15 23:39:04
+ * @LastEditTime: 2022-01-13 12:19:24
 -->
-## 头文件
+
+## deque
+
+- 头文件
 
 ```c++
 #include<deque>
 ```
 
 
-## 插入
+### 插入
 
-- 头部插入 `push_front`
+- `push_front` 头部插入 
 
-- 尾部插入 `push_back()`
+- `push_back()` 尾部插入 
 
-- 插入元素 elem 到 pos 位置 `iterator insert(pos，elem)`
+- `iterator insert(p , e)` 插入元素 e 到 p 位置 
 
-## 删除
 
-- 删除头部的元素 `pop_front()`
+### 删除
+
+- `pop_front()` 删除头部的元素 
   
-- 删除尾部的元素 `pop_back()`
+- `pop_back()` 删除尾部的元素 
 
-- 删除 pos 位置上元素 `iterator erase( iterator pos )`
+- `iterator erase(iterator p)` 删除 p 位置上元素 
 
-## 查找
 
-- 返回位置 pos 上的元素 `reference at( size_type pos )`
+### 查找
+
+- `reference at(size_type p)` 返回位置 p 上的元素 
   
-- 返回头部元素 `front()`
+- `front()` 返回头部元素
 
-- 返回尾部元素 `back()`
+- `back()`返回尾部元素 
 
-## 实例
+
+### 实例
 
 ```c
 #include<iostream>
 #include<deque>
 using namespace std;
 
-//定义一个双向队列
 deque<int> q;
 
-deque<int>::iterator it;
-
 int main() {
-	q = {1，2，3，4，5};
+	q = {1 , 2 , 3 , 4 , 5};
 
-	cout<<q.front()<<endl;
+	// 1
+	cout << q.front() << endl;
 
-	cout<<q.back()<<endl;
+	// 5
+	cout << q.back() << endl;
 
-	cout<<q.at(3)<<endl;
+	// 4
+	cout << q.at(3) << endl;
 
-	cout<<q[3]<<endl;
+	// 4
+	cout << q[3] << endl;
 
-	q.insert(q.begin()+2，666);
+	// 插入在2位置666
+	q.insert(q.begin()+2 , 666);
 
-	for(int i = 0 ，size = q.size(); i<size;i++){
-		cout<<q[i]<<" ";
-	}
-	cout<<endl;
+	// 删除1位置元素
+	q.erase(q.begin() + 1);
 
-	q.erase(q.begin()+1);
-
-	for(it = q.begin();it!=q.end();it++){
-		cout<<*it<<" ";
+	for(deque<int>::iterator it = q.begin(); it!=q.end(); it++){
+		cout << *it << " ";
 	}
 }
 ```
 
-![](https://cdn.hurra.ltd/img/20200905113424.png)
-
----
 
 

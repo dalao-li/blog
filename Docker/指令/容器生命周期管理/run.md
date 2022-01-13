@@ -5,16 +5,16 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 01:44:11
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 08:41:53
+ * @LastEditTime: 2022-01-13 12:36:18
 -->
 
-## 语法
+## run
 
 ```
 docker run [参数] 镜像ID (命令)
 ```
 
-## -itd
+### -itd
 
 - `-i` 以交互模式运行容器
   
@@ -23,7 +23,7 @@ docker run [参数] 镜像ID (命令)
 - `-d` 后台运行容器，并返回容器ID
 
 
-## -p
+### -p
 
 `-p 主机端口:容器端口` 指定端口映射
 
@@ -35,7 +35,8 @@ docker run [参数] 镜像ID (命令)
 
 - `--expose=[]` 开放一个端口或一组端口
 
-## -e
+
+### -e
 
 `-e 变量=值` 给容器设置环境变量
 
@@ -57,7 +58,7 @@ docker exec -it box
 - `--env-file=[]` 从指定文件读入环境变量
 
 
-## --mount
+### --mount
 
 `--mount` 挂载本地目录到容器中，若本地目录(必须是绝对路径)不存在会报错
 
@@ -83,14 +84,14 @@ docker run -itd \
 - `-v` 若本地目录不存在，会自动创建文件夹
 
 
-## --net
+### --net
 
-`--net="bridge"` 指定容器的网络连接类型
+`--net="bridge"` 指定容器网络连接类型
 
 支持 bridge，host，none，container四种类型
 
 
-## --link 
+### --link 
 
 `--link=[]` 添加链接到另一个容器
 
@@ -118,7 +119,7 @@ mysql -h db -u root -p123
 ```
 
 
-## 问题
+### 问题
 
 - 执行命令后容器停止
 

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 19:30:01
+ * @LastEditTime: 2022-01-13 12:31:45
 -->
 
 ## Docker部署Oracle
@@ -21,7 +21,7 @@ docker run -itd \
 docker run -itd --name=orace -p 8080:8080 -p 1521:1521 truevoly/oracle-12c
 ```
 
-## 命令
+### 命令
 
 - 进入Oracle
 

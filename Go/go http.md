@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-10 23:04:07
+ * @LastEditTime: 2022-01-13 14:40:49
 -->
 
 ## Web Hello World
@@ -19,11 +19,11 @@ import (
 )
 
 func main() {
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprint(w, "Hello, World!")
+    http.HandleFunc("/" , func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprint(w , "Hello, World!")
     })
     fmt.Println("Please Visit -  http://localhost:8888/")
-    http.ListenAndServe(":8888", nil)
+    http.ListenAndServe(":8888" , nil)
 }
 ```
 
@@ -47,7 +47,7 @@ func main() {
 }
 
 func printHello(i int) {
-	fmt.Printf("Hello World from goroutine %d!\n"， i)
+	fmt.Printf("Hello World from goroutine %d!\n",i)
 }
 ```
 

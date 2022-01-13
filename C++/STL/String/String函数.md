@@ -3,10 +3,36 @@
  * @Version: 1.0
  * @Author: DaLao
  * @Email: dalao_li@163.com
- * @Date: 2021-11-27 20:32:33
+ * @Date: 2022-01-13 12:21:39
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:26:15
+ * @LastEditTime: 2022-01-13 12:21:39
 -->
+
+
+## String STL函数
+
+### find
+
+```c++
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	int sum=0;
+	string s1, s2;
+	cin >> s1 >> s2;
+	for(int i = 0; i < s1.size(); i++){
+		if(s1.find(s2, i) != string::npos){
+			sum++;
+		}
+	}
+	cout<<sum<<endl;
+	return 0;
+}
+```
+
+### erase
 
 ```c++
 #include<iostream>

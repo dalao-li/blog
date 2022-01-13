@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 04:30:33
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 18:30:19
+ * @LastEditTime: 2022-01-13 12:34:51
 -->
 
 
@@ -17,7 +17,7 @@
 docker exec [参数] 镜像ID 命令
 ```
 
-## -itd
+### -itd
 
 - `-i` 即使没有附加也保持STDIN 打开
 
@@ -26,7 +26,7 @@ docker exec [参数] 镜像ID 命令
 - `-d` 分离模式: 在后台运行
 
 
-## 命令
+### 命令
 
 - 执行单条指令
 

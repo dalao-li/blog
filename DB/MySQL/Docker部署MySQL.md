@@ -5,10 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 19:28:59
+ * @LastEditTime: 2022-01-13 12:29:20
 -->
 
-## Docker部署
+## Docker部署MySQL
 
 ```sh
 docker run -itd \
@@ -31,7 +31,7 @@ docker run -itd --name=mysql -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_
 ```
 
 
-## 远程连接
+### 远程连接
 
 - 登录
 
@@ -53,7 +53,7 @@ flush privileges;
 ![](https://cdn.hurra.ltd/img/20211227135502.png)
 
 
-## 常见问题
+### 常见问题
 
 - 中文乱码
 

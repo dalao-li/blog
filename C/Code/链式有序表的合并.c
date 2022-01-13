@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-09-24 20:37:24
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-13 20:52:56
+ * @LastEditTime: 2022-01-13 11:50:39
  */
 
 #include <stdio.h>
@@ -17,7 +17,7 @@ typedef struct Lnode
 	struct Lnode *next;
 } Lnode， *Linklist;
 
-//初始化
+// 初始化
 Linklist initList(Linklist &head)
 {
 	head = (Linklist)malloc(sizeof(Lnode));
@@ -25,7 +25,7 @@ Linklist initList(Linklist &head)
 	return head;
 }
 
-//后插法建立链表
+// 后插法建立链表
 Linklist inputList(Linklist &head， int n)
 {
 	head->next = NULL;
@@ -49,28 +49,28 @@ void mergeList(Linklist &head1， Linklist &head2， Linklist &head3)
 	p2 = head2->next;
 	head3 = head1;
 	p3 = head3;
-	//两个表均为到末尾，则依次摘取
+	// 两个表均为到末尾，则依次摘取
 	while (p1 && p2)
 	{
-		//说明该摘取第一条链上的点
+		// 说明该摘取第一条链上的点
 		if (p1->data <= p2->data)
 		{
-			//将这个节点与head3连接上
+			// 将这个节点与head3连接上
 			p3->next = p1;
-			//p3指向p1，为下一次连接做准备
+			// p3指向p1，为下一次连接做准备
 			p3 = p1;
 			p1 = p1->next;
 		}
 		else
 		{
-			//将这个节点与head3连接上
+			// 将这个节点与head3连接上
 			p3->next = p2;
-			//p3指向p1，为下一次连接做准备
+			// p3指向p1，为下一次连接做准备
 			p3 = p2;
 			p2 = p2->next;
 		}
 	}
-	//将非空表的剩余部分与head3相连
+	// 将非空表的剩余部分与head3相连
 	p3->next = p1 ? p1 : p2;
 	free(head2);
 }

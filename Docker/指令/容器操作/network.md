@@ -5,22 +5,18 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 08:45:48
+ * @LastEditTime: 2022-01-13 12:42:02
 -->
 
 ## 网络
 
 - 查看当前可使用网络
   
-```docker
-docker network ls
-```
+`docker network ls`
 
 - 创建网络
 
-```sh
-docker network create -d 类型 网络名
-```
+`docker network create -d [类型] [网络名]`
 
 创建一个 docker 网络，命名为my_bridge
 

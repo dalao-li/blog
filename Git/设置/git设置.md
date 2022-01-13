@@ -5,15 +5,15 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 17:59:27
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:38:48
+ * @LastEditTime: 2022-01-13 12:46:57
 -->
 
-## Git 命令流程
+## Git 设置
 
 ![](https://cdn.hurra.ltd/img/20200720231600.png)
 
 
-## 设置
+### 设置
 
 ```sh
 # 配置用户名
@@ -29,7 +29,7 @@ git config --global core.editor "code -w"
 git config --global core.quotepath false
 ```
 
-## 建立公钥
+### 建立公钥
 
 ```sh
 ssh-keygen -t rsa -C "邮箱"
@@ -38,7 +38,7 @@ ssh-keygen -t rsa -C "邮箱"
 公钥位置`.ssh/id_rsa.pub`
 
 
-## .git文件
+### .git文件
 
 ```sh
 git gc --prune=now

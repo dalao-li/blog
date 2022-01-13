@@ -5,19 +5,19 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 17:13:31
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 08:59:41
+ * @LastEditTime: 2022-01-13 12:39:13
 -->
 
-## COPY
+## Dockerfile
 
-```sh
-COPY [源路径] [目标路径]
-```
+### COPY
+
+`COPY [源路径] [目标路径]`
 
 COPY 指令将从构建上下文目录中 源路径 的文件/目录复制到新的一层的镜像内的 目标路径 位置
 
 
-## ADD
+### ADD
 
 复制文件
 
@@ -26,10 +26,9 @@ COPY 指令将从构建上下文目录中 源路径 的文件/目录复制到新
 如果 源路径 为一个 tar 压缩文件的话，压缩格式为 gzip, bzip2 以及 xz 的情况下，ADD 指令将会自动解压缩这个压缩文件到 目标路径 去
 
 
-## CMD
+### CMD
 
 - shell格式
-
 
 `CMD [命令]`
 
@@ -39,7 +38,6 @@ CMD python3 manage.py runserver 0.0.0.0:8000
 
 - exec格式
   
-
 `CMD ["可执行文件" , "参数1" , "参数2", ...`
 
 

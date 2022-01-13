@@ -5,11 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 20:40:55
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:26:59
+ * @LastEditTime: 2022-01-13 12:24:47
 -->
 
+## Vector
 
-## 初始化
+### 初始化
 
 ```c
 vector<T> v;
@@ -21,7 +22,7 @@ vector<T> v;
 vector<vector<T> > v;
 ```
 
-## 增加
+### 增加
 
 - 尾部插入
 
@@ -29,7 +30,7 @@ vector<vector<T> > v;
 v.push_back(value);
 ```
 
-## 删除
+### 删除
 
 - 删除x, y之间的元素
 
@@ -41,7 +42,8 @@ v.earse(v.begin() + x, v.end() - y);
 ```c
 v.clear();
 ```
-## 遍历
+
+### 遍历
 
 ```c
 for(vector<T>::iterator it = v.begin(); it != v.end(); ++it) {
@@ -49,7 +51,7 @@ for(vector<T>::iterator it = v.begin(); it != v.end(); ++it) {
 }
 ```
 
-## 翻转
+### 翻转
 
 ```c
 reverse(v.begin(), v.end());

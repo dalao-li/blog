@@ -5,10 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 08:34:29
+ * @LastEditTime: 2022-01-13 12:30:02
 -->
 
-## 用户
+## MySQL 授权
+
+### 用户
 
 - 创建用户 
 
@@ -36,7 +38,7 @@ select host,user,authentication_string from mysql.user;
 
 ![](https://cdn.hurra.ltd/img/20200516001919.png)
 
-## 授权
+### 授权
 
 - 查看所有用户权限
 

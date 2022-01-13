@@ -1,4 +1,6 @@
-## 部署
+## MongDB
+
+### 部署
 
 - 创建容器
 
@@ -29,6 +31,7 @@ db.auth('admin','123456')
 ```
 
 ![](https://cdn.hurra.ltd/img/20220112184110.png)
+
 
 ## 命令
 
@@ -133,15 +136,6 @@ db.stu.remove({name:"Ling"})
 
 ## Python交互
 
-<!--
- * @Description: 
- * @Version: 1.0
- * @Author: DaLao
- * @Email: dalao_li@163.com
- * @Date: 2021-01-16 17:59:35
- * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 19:27:23
--->
 
 ### 连接
 

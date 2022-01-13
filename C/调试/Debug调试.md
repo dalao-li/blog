@@ -5,17 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-22 23:16:23
  * @LastEditors: DaLao
- * @LastEditTime: 2021-09-25 00:56:27
+ * @LastEditTime: 2022-01-13 10:55:05
 -->
 
-```c
-/*
-	Name: test.c 
-	Author: DaLao
-	Date: 2021/02/22 22:57
-	Description: Debug Test
-*/
+## Debug
 
+```c
 #include<stdio.h>
 
 int main(void){
@@ -28,7 +23,7 @@ int main(void){
 } 
 ```
 
-## DEV C++
+### DEV C++
 
 ![](https://cdn.hurra.ltd/img/20210222232125.png)
 
@@ -42,6 +37,3 @@ int main(void){
 
 
 ![](https://cdn.hurra.ltd/img/20210222232340.png)
-
-
-## gcc
