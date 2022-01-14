@@ -5,16 +5,15 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:57:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:58:32
+ * @LastEditTime: 2022-01-14 08:29:32
 -->
 
-### remote
+## remote
 
 ### 删除远程地址
 
-
-
 `git remote set-url --del origin [远程 URL]`
+
 
 ### 添加远程地址
 
@@ -23,9 +22,9 @@
 
 ### 添加多个远程地址
 
-在使用git时,可将库同时push到多个托管远端
+在使用git时,可将库同时push到多个托管远端，通过添加第二个地址
 
-- 方法1，添加第二个地址
+- 方法1
   
 `git remote set-url --add origin [远程 URL]`
 

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 06:11:31
+ * @LastEditTime: 2022-01-14 08:31:55
 -->
 
 ## 配置
@@ -115,13 +115,7 @@ yay -S
 ```
 
 ```sh
-yay -S microsoft-edge-stable
-
-yay -S visual-studio-code-bin
-
-yay -S flameshot
-
-yay -S etcher
+yay -S --noconfirm microsoft-edge-stable visual-studio-code-bin flameshot grub-customizer
 ```
 
 - 卸载
