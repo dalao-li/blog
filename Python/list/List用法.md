@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-04 01:28:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 05:43:36
+ * @LastEditTime: 2022-01-14 16:39:04
 -->
 
 ## List
@@ -20,7 +20,7 @@
 
 `[[z for i in range(x)] for j in range(y)]`
 
-建立3*3二维数组，初始值0
+建立$3*3$二维数组，初始值0
 
 ```py
 a = [[0 for i in range(3)] for j in range(3)]

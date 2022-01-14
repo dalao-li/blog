@@ -5,15 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-20 20:16:43
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-07 00:54:24
+ * @LastEditTime: 2022-01-14 16:37:45
 -->
 ## 描述
 
 ![](https://cdn.hurra.ltd/img/20200829232106.png)
 
 当前为每行增加了一个 checkbox 控件，希望其动态生成"checkout+序号"的 id，方便后期对选择的行进行操作
-
-## 修改
 
 ```html
 <td>
