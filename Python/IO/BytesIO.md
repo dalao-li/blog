@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-14 16:29:38
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 16:33:26
+ * @LastEditTime: 2022-01-15 19:48:03
 -->
 
 ## BytesIO
@@ -20,4 +20,11 @@ f.write('中文'.encode('utf-8'))
 
 # b'\xe4\xb8\xad\xe6\x96\x87'
 print(f.getvalue())
+```
+
+
+```
+f= <FileStorage: '涉农股专家公示名录.xlsx' ('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')>
+
+type f=  <class 'werkzeug.datastructures.FileStorage'>
 ```

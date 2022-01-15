@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-14 05:43:48
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 05:43:49
+ * @LastEditTime: 2022-01-15 06:54:37
 -->
 
 ## sorted
@@ -106,6 +106,7 @@ sorted(s, key = lambda t : t.age)
 sorted(s, key = attrgetter('age'))
 ```
 
+
 ### 多字段来排序
 
 sorted也可以根据多个字段来排序，例如要先根据age排序，若age相同则根据grade排序
@@ -116,6 +117,7 @@ sorted(s, key = lambda t : (t.age, t.grade))
 
 sorted(s, key = attrgetter('age', 'grade')
 ```
+
 
 ### 不可比较
 
