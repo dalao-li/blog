@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-09-24 20:37:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 01:07:51
+ * @LastEditTime: 2022-01-16 13:36:00
 -->
 
 
@@ -17,17 +17,17 @@ flask run
 - 指定地址端口
   
 ```py
-flask run --host=0.0.0.0 --port=8080
+flask run --host=0.0.0.0 --port=5000
 ```
 
-## Vscode 运行
+## shell 运行
 
 ```sh
 source venv/bin/activate
 
-python -m flask run
+python -m flask run --host=0.0.0.0 --port=5000
 
-ps -aux | grep flask | grep -v grep | awk {'print $2'} | xargs kill -9 && python -m flask run
+ps -aux | grep flask | grep -v grep | awk {'print $2'} | xargs kill -9 && python -m flask run --host=0.0.0.0 --port=500
 ```
 
 ## 建立脚本

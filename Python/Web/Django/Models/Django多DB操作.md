@@ -5,14 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 16:49:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:58:46
+ * @LastEditTime: 2022-01-16 15:02:59
 -->
 
 ## 多DB
 
 建立Django项目，在建立两个应用app1与app2
-
-
 
 修改settings.py文件中的`DATABASES`配置，此处以连接sqlite，mysql数据为例
 

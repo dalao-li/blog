@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 21:43:48
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:58:04
+ * @LastEditTime: 2022-01-16 15:02:38
 -->
 
 ## Django Manager
@@ -26,7 +26,7 @@ User.objects.filter(name = name)
 ...
 ```
 
-若想在操作过程中执行其他操作，则显得异常麻烦，因此可以自定义管理器
+若想在操作过程中执行其他操作，显得异常麻烦，因此可以自定义管理器
 
 ```py
 class UserManager(models.Manager):

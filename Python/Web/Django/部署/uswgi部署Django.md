@@ -5,10 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-03 13:54:04
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:55:51
+ * @LastEditTime: 2022-01-16 15:01:57
 -->
 
-## 项目
+## Django部署
+
+### 项目
 
 ```sh
 # 建立项目mysite
@@ -17,7 +19,7 @@ django-admin.py startproject mysite
 python manage.py runserver 0.0.0.0:8000
 ```
 
-## uwsgi
+### uwsgi
   
 config.ini
 
@@ -39,7 +41,7 @@ threads = 8
 buffer-size = 32768
 ```
 
-## nginx
+### nginx
 
 ```sh
 server {

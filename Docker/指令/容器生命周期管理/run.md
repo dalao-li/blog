@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 01:44:11
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:36:18
+ * @LastEditTime: 2022-01-16 13:30:35
 -->
 
 ## run
@@ -30,7 +30,7 @@ docker run [参数] 镜像ID (命令)
 将本机7890端口映射到容器80端口
 
 ```sh
--p 7890:80
+docker run -itd -p 7890:80 nginx
 ```
 
 - `--expose=[]` 开放一个端口或一组端口
@@ -43,15 +43,13 @@ docker run [参数] 镜像ID (命令)
 设置MySQL容器中root用户密码为123
 
 ```sh
--e MYSQL_ROOT_PASSWORD=123
+docker run -itd -e MYSQL_ROOT_PASSWORD=123 mysql:5.6
 ```
 
 给busybox容器设置环境变量STR_VEN=abcdefg
 
 ```
 docker run -itd --name=box -e STR_VEN=abcdefg busybox
-
-docker exec -it box 
 ```
 ![](https://cdn.hurra.ltd/img/20220112045036.png)
 
@@ -62,17 +60,12 @@ docker exec -it box
 
 `--mount` 挂载本地目录到容器中，若本地目录(必须是绝对路径)不存在会报错
 
-```sh
---mount type=bind,source=[本地路径],target=[容器路径](权限)
-```
+`--mount type=bind,source=[本地路径],target=[容器路径](权限)`
 
 将本地/src/app挂载到容器/root/app
 
 ```sh
-docker run -itd \
-    --name web \
-    --mount type=bind,source=/src/app,target=/root/app \
-    nginx:alpine
+docker run -itd --mount type=bind,source=/src/app,target=/root/app nginx:alpine
 ```
 
 挂载主机目录的默认权限是`读写`，可增加 `readonly` 指定为只读
@@ -112,9 +105,7 @@ docker run -itd \
     ubuntu:18.04 \
 
 docker exec -it ubuntu_test bash -c 'apt-get update && apt-get install -y mysql-client'
-```
 
-```sh
 mysql -h db -u root -p123
 ```
 
@@ -129,10 +120,10 @@ docke run -itd --name=box busybox mkdir test
 
 此处本意为run时创建test目录，实际发现执行命令后即容器停止运行
 
-原因为基于Docker原理，当run时执行的命令结束时，容器也会停止允许
+原因为基于Docker原理，当run时执行的命令结束时，容器也会停止
 
+运行下面命令是，run执行sh解释权，容器会在后台一直运行
 ```
 docker run -itd --name=box busybox sh
 ```
 
-此时run时执行sh解释权，容器会在后台一直运行

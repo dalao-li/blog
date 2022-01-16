@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-23 15:07:52
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-01 17:22:22
+ * @LastEditTime: 2022-01-16 15:00:29
 -->
 ## 问题
 
@@ -22,7 +22,7 @@
       function loadXMLDoc() {
         var xmlhttp;
         if (window.XMLHttpRequest) {
-          //  IE7+,Firefox,Chrome,Opera,Safari 浏览器执行代码
+          // IE7+,Firefox,Chrome,Opera,Safari 浏览器执行代码
           xmlhttp = new XMLHttpRequest()
         } else {
           // IE6,IE5 浏览器执行代码
@@ -34,7 +34,7 @@
             alert(v)
           }
         };
-        xmlhttp.open("GET","http://127.0.0.1:5000/",true)
+        xmlhttp.open("GET", "http://127.0.0.1:5000/",true)
         xmlhttp.send()
       }
     </script>

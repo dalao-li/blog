@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 04:30:33
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:34:51
+ * @LastEditTime: 2022-01-16 12:56:36
 -->
 
 
@@ -35,15 +35,13 @@ busybox容器创建目录
 ```sh
 docker run -itd --name=box busybox 
 
-docker exec -id box mkdir test
+docker exec -it box mkdir test
 ```
 ![](https://cdn.hurra.ltd/img/20220112043735.png)
 
 - 执行多条指令
 
-```sh
-docker exec 容器ID  sh -c '命令1 && 命令2'
-```
+`docker exec 容器ID  sh -c '命令1 && 命令2'`
 
 ubuntu安装mysql-clinet
 

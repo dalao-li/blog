@@ -101,11 +101,10 @@ while True:
 s.close()
 ```
 
-测试
-
 ![](https://cdn.hurra.ltd/img/20210112224715.png)
 
 ![](https://cdn.hurra.ltd/img/20210112224731.png)
+
 
 ## 多线程 server 端
 

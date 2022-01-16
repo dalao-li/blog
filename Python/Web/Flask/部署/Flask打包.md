@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-30 22:01:01
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-30 22:35:24
+ * @LastEditTime: 2022-01-16 14:54:42
 -->
 
 [Python-web Flask框架项目打包成exe文件](https://www.cxyzjd.com/article/qq_42370335/114276385)  
@@ -19,6 +19,7 @@ pyinstaller -F -i --add-data="./static;./static" --add-data="./templates;./templ
 ```
 
 dist 目录下会生成可执行文件
+
 
 ## 方法二
 

@@ -1,6 +1,7 @@
 ## 创建项目
 
 ![](https://cdn.hurra.ltd/img/20200801113226.png)
+
 创建名为 demo 的 Django 项目
 项目目录
 
