@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 08:39:20
+ * @LastEditTime: 2022-01-17 02:20:15
 -->
 
 ## 配置
@@ -116,7 +116,7 @@ yay -S
 ```
 
 ```sh
-yay -S --noconfirm microsoft-edge-stable visual-studio-code-bin flameshot grub-customizer vlc
+yay -S --noconfirm visual-studio-code-bin flameshot grub-customizer vlc
 ```
 
 - 卸载

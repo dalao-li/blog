@@ -5,10 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-08 00:03:57
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-08 21:56:30
+ * @LastEditTime: 2022-01-17 02:04:47
 -->
 
-## 安装
+## NodeJS
+
+### 安装
 
 - Ubuntu
 
@@ -28,7 +30,7 @@ sudo ln -s /opt/node-v16.13.1-linux-x64/bin/node /usr/local/bin/node
 sudo pacman -S nodejs npm
 ```
 
-## 换源
+### 换源
 
 ```sh
 npm config set registry http://mirrors.cloud.tencent.com/npm/
@@ -41,7 +43,7 @@ npm config set registry http://mirrors.cloud.tencent.com/npm/
 npm config get registry
 ```
 
-## 卸载
+### 卸载
 
 - Ubuntu
 

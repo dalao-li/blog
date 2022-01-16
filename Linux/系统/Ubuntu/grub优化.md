@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-17 00:11:16
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-29 03:47:35
+ * @LastEditTime: 2022-01-17 04:03:34
 -->
 
 ## GRUB
@@ -41,8 +41,6 @@ GRUB_THEME="/主题包路径/theme.txt"
 ```sh
 sudo update-grub
 ```
-
-
 
 
 
