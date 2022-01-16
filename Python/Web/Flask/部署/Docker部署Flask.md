@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-19 00:00:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-16 14:59:59
+ * @LastEditTime: 2022-01-17 04:33:05
 -->
 
 ## Docker部署Flask
@@ -30,6 +30,7 @@ RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ Flask
 
 CMD flask run --host=0.0.0.0 --port=5000
 ```
+
 
 ### uwsgi部署
 

@@ -7,7 +7,7 @@
  # @Email: dalao_li@163.com
  # @Date: 2022-01-17 02:05:53
  # @LastEditors: DaLao
- # @LastEditTime: 2022-01-17 02:25:41
+ # @LastEditTime: 2022-01-17 04:13:07
 ### 
 
 update(){
@@ -21,6 +21,12 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 EOF
 
     sudo pacman -Syudd
+
+    git config --global user.name "dalao"
+    git config --global user.email "dalao_li@163.com"
+    git config --global core.editor "code -w"
+    # 防止中文乱码
+    git config --global core.quotepath false
 }
 
 
