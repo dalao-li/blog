@@ -7,7 +7,7 @@
  # @Email: dalao_li@163.com
  # @Date: 2022-01-17 02:05:53
  # @LastEditors: DaLao
- # @LastEditTime: 2022-01-17 04:13:07
+ # @LastEditTime: 2022-01-20 09:30:26
 ### 
 
 update(){
@@ -66,7 +66,7 @@ EOF
 }
 
 set_node(){
-    sudo pacman -S nodejs npm
+    sudo yay -S nodejs npm
 
     npm config set registry http://mirrors.cloud.tencent.com/npm/
 }
@@ -99,7 +99,6 @@ set_python(){
     echo "export PATH=$HOME/anaconda3/bin:$PATH">>~/.bashrc
 
     source ~/.bashrc
-
 }
 
 

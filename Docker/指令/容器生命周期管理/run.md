@@ -5,12 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 01:44:11
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-16 13:30:35
+ * @LastEditTime: 2022-01-21 21:59:06
 -->
 
 ## run
 
-```
+```sh
 docker run [参数] 镜像ID (命令)
 ```
 

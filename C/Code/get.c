@@ -54,23 +54,23 @@ void get() {
     sprintf(str,"%lu",strlen(str2));
     memset(str1,0,4096);
     // 使用的是GET方法，http 协议版本字段，用是的http/1.1 版本
-    strcat(str1,"GET /html/html_editors.html HTTP/1.1\n");
+    strcat(str1, "GET /html/html_editors.html HTTP/1.1\n");
     // 定义了目标所在的主机
-    strcat(str1,"Host: www.phpxuexi.net\n");
+    strcat(str1, "Host: www.phpxuexi.net\n");
     // 表明请求的数据类型
-    strcat(str1,"Content-Type: text/html\n");
+    strcat(str1, "Content-Type: text/html\n");
     // 表明请求实体的长度
-    strcat(str1,"Content-Length: ");
-    strcat(str1,str);
-    strcat(str1,"\n\n");
-    strcat(str1,str2);
-    strcat(str1,"\r\n\r\n");
+    strcat(str1, "Content-Length: ");
+    strcat(str1, str);
+    strcat(str1, "\n\n");
+    strcat(str1, str2);
+    strcat(str1, "\r\n\r\n");
     // 拼接头部结束
     printf("%s\n",str1);
     // 判断请求是否发送成功
     int ret = write(socket_fd,str1,strlen(str1));
     if (!ret) {
-        printf("发送失败！错误代码是%d，错误信息是'%s'\n",errno,strerror(errno));
+        printf("发送失败!错误代码是%d，错误信息是'%s'\n",errno,strerror(errno));
         return;
     }
     printf("消息发送成功，共发送了%d个字节！\n\n",ret);
@@ -96,7 +96,7 @@ void get() {
         // 若小于0说明线程被终止
         if (h < 0) {
             close(socket_fd);
-            printf("在读取数据报文时SELECT检测到异常，该异常导致线程终止！\n");
+            printf("在读取数据报文时SELECT检测到异常，该异常导致线程终止!\n");
             return;
         }
         // 清空buf数组
@@ -104,7 +104,7 @@ void get() {
         // 若从远端读取不到数据则终止
         if (read(socket_fd,buf,4095) == 0) {
             close(socket_fd);
-            printf("读取数据报文时发现远端关闭，该线程终止！\n");
+            printf("读取数据报文时发现远端关闭，该线程终止!\n");
             return;
         }
         printf("%s\n",buf);

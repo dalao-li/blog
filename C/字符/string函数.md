@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-27 20:45:27
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 10:58:42
+ * @LastEditTime: 2022-01-21 22:06:40
 -->
 
 ## string函数
@@ -59,7 +59,7 @@ char b[4] = "ABC";
 strcpy(a,b);
 
 // ABC
-printf("%s\n",a);
+printf("%s\n", a);
 ```
 
 

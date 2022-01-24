@@ -98,12 +98,12 @@ typedef struct E {
 	char ep;
 	int w;
 	E() {}
-	E(char s， char e， int w) : sp(s)， ep(e)， w(w) {}
+	E(char s,char e, int w) : sp(s), ep(e), w(w) {}
 } E;
 
 vector<E> edge;
 
-char node[5] = {'A'，'B'，'C'，'D'，'E'};
+char node[5] = {'A','B', 'C', 'D', 'E'};
 
 int path[SIZE];
 
@@ -120,8 +120,8 @@ int getIndex(char n) {
 // 求s到其他点间的最短路
 void SPFA(char s) {
 	queue<char> q;
-	memset(path， MAXV， sizeof(path));
-	memset(in， 0， sizeof(in));
+	memset(path, MAXV, sizeof(path));
+	memset(in, 0, sizeof(in));
 	int index = getIndex(s);
 	// 点s自己的最短路为0
 	path[index] = 0;
@@ -132,14 +132,14 @@ void SPFA(char s) {
 		int x = getIndex(a);
 		q.pop();
 		in[x] = 0;
-		// 遍历所有与a所连通的节点，进行松弛操作
+		// 遍历所有与a所连通的节点, 进行松弛操作
 		for (int i = 0; i < edge.size(); i++) {
 			// 若某个边的起点是a
 			if (edge[i].sp == a) {
 				// 获取该边的终点e
 				char e = edge[i].ep;
 				int end = getIndex(e);
-				// 若从点S经过点X到点end的距离比S直接到end的距离短，则可进行松弛操作
+				// 若从点S经过点X到点end的距离比S直接到end的距离短, 则可进行松弛操作
 				if (path[x] + edge[i].w < path[end]) {
 					// 从点S到点end的距离更新为点S到X的距离与X到end的距离之和
 					path[end] = edge[i].w + path[x];
