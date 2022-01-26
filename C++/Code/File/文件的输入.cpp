@@ -5,17 +5,17 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-15 00:25:41
+ * @LastEditTime: 2022-01-26 22:50:00
  */
 #include<iostream>
 #include<fstream>
 using namespace std;
 int main()
 {
-	int n，*p;
+	int n , *p;
 	cin>>n;
 	p=new int[n];
-	ofstream outfile("file.txt"，ios::out);
+	ofstream outfile("file.txt" , ios::out);
 	if(!outfile){
 		cerr<<"open error!"<<endl;
 		exit(1);

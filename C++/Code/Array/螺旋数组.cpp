@@ -5,7 +5,7 @@
 using namespace std;
 int main() {
 	int a[N][N];
-	int i，j，k=0，m;
+	int i , j , k=0 , m;
 	for(m=0; m<=(N+1)/2; m++) {
 		for(j=m; j<N-m; j++) {
 			if(k==N*N) {
@@ -34,7 +34,7 @@ int main() {
 	}
 	for(i=0; i<N; i++) {
 		for(j=0; j<N; j++) {
-			printf("%5d "，a[i][j]);
+			printf("%5d " , a[i][j]);
 		}
 		cout<<endl;
 	}

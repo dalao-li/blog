@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-28 13:00:18
+ * @LastEditTime: 2022-01-26 22:51:27
  */
 #include<stdio.h>
 #include<stdlib.h>
@@ -25,7 +25,7 @@ void initialize(DouStack &S) {
 	S.bot[1]=S.top[1]=S.m;
 }
 
-bool isStackEmpty(DouStack &S，int num) {
+bool isStackEmpty(DouStack &S , int num) {
 	if(num==0&&S.top[num]==-1) {
 		return true;
 	} else if(num==1&&S.top[num]==S.m) {
@@ -41,8 +41,8 @@ bool isStackFull(DouStack &S) {
 	return false;
 }
 
-void push(DouStack &S，int num，int &e) {
-	if(isStackEmpty(S，num)) {
+void push(DouStack &S , int num , int &e) {
+	if(isStackEmpty(S , num)) {
 		return ;
 	}
 	int index = S.top[num];
@@ -54,8 +54,8 @@ void push(DouStack &S，int num，int &e) {
 	S.V[index]=e;
 }
 
-int pop(DouStack &S，int num) {
-	if(isStackEmpty(S，num)) {
+int pop(DouStack &S , int num) {
+	if(isStackEmpty(S , num)) {
 		return -1;
 	}
 	int index = S.top[num];

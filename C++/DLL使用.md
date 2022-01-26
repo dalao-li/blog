@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-20 11:26:41
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:02:44
+ * @LastEditTime: 2022-01-26 22:51:59
 -->
 ## DLL
 
@@ -24,7 +24,7 @@ VS2019 选择创建动态链接库(DLL)项目
 // 添加要在此处预编译的标头
 #include "framework.h"
 
-DLLEXPORT int add(int a， int b);
+DLLEXPORT int add(int a, int b);
 
 DLLEXPORT void hello();
 
@@ -35,7 +35,7 @@ DLLEXPORT void hello();
 
 - windows 下需要使用\_\_declspec(dllexport)的声明来说明这个函数是动态库导出  
 
-- extern "C"声明避免编译器对函数名称进行 name mangling，这对于使用 C++来编写 DLL/SO 是必须的
+- extern "C"声明避免编译器对函数名称进行 name mangling,这对于使用 C++来编写 DLL/SO 是必须的
 
 ```c
 // pch.cpp

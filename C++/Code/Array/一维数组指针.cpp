@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:37
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-27 20:39:03
+ * @LastEditTime: 2022-01-26 22:50:31
  */
  
 #include<iostream>
@@ -26,7 +26,7 @@ int main()
 
 void inputArray(int (*p)[10])
 {
-	int i，j，k=0;
+	int i , j , k=0;
 	for(i=0;i<10;i++){
 		for(j=0;j<10;j++){
 			*(*(p+i)+j)=k++;
@@ -36,10 +36,10 @@ void inputArray(int (*p)[10])
 
 void outputArray(int (*p)[10])
 {
-	int i，j，k=0;
+	int i , j , k=0;
 	for(i=0;i<10;i++){
 		for(j=0;j<10;j++){
-			printf("%5d"，*(*(p+i)+j));
+			printf("%5d" , *(*(p+i)+j));
 			Sleep(1000);
 		}
 		cout<<endl;
