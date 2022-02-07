@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-17 01:47:56
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-17 01:55:07
+ * @LastEditTime: 2022-02-07 18:47:58
 -->
 
 
@@ -17,7 +17,7 @@
 
 - 修改PKGBUILD
 
-修改PKGBUILD中的source为本地地址，此处需为http地址(可用python -m http.server)
+修改PKGBUILD中的source为本地地址，此处需为http地址(可用`python -m http.server`)
 
 原内容
 
@@ -25,10 +25,10 @@
 source=("microsoft-edge-stable_${pkgver}-${pkgrel}_amd64.deb::https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_${pkgver}-${pkgrel}_amd64.deb")
 ```
 
-或者替换为其他URL值也可
+替换为其他URL
 
 ```sh
-source=("microsoft-edge-stable_${pkgver}-${pkgrel}_amd64.deb:::http://localhost:8000/microsoft-edge-stable_96.0.1054.62-1_amd64.deb")
+source=("microsoft-edge-stable_${pkgver}-${pkgrel}_amd64.deb::http://localhost:8000/microsoft-edge-stable_96.0.1054.62-1_amd64.deb")
 ```
 
 - 修改sha256sums
@@ -37,7 +37,9 @@ source=("microsoft-edge-stable_${pkgver}-${pkgrel}_amd64.deb:::http://localhost:
 
 - 编译
 
-`makepkg`
+```sh
+makepkg
+```
 
 - 安装
 

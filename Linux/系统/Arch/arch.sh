@@ -7,7 +7,7 @@
  # @Email: dalao_li@163.com
  # @Date: 2022-01-17 02:05:53
  # @LastEditors: DaLao
- # @LastEditTime: 2022-01-20 09:30:26
+ # @LastEditTime: 2022-02-07 18:44:28
 ### 
 
 update(){
@@ -96,7 +96,7 @@ set_python(){
 
     pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-    echo "export PATH=$HOME/anaconda3/bin:$PATH">>~/.bashrc
+    echo "export PATH=${HOME}/anaconda3/bin:${PATH}">>~/.bashrc
 
     source ~/.bashrc
 }

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-19 00:00:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-17 04:33:05
+ * @LastEditTime: 2022-02-06 23:23:18
 -->
 
 ## Docker部署Flask
@@ -15,7 +15,6 @@
 
 
 ```sh
-# 所采用的基础镜像
 FROM python:3.7-slim-buster
 
 LABEL version="v1" description="Docker deploy Flask" by="Dalao"
@@ -34,15 +33,14 @@ CMD flask run --host=0.0.0.0 --port=5000
 
 ### uwsgi部署
 
-- uwsgi命令
-
-test.py
 
 ```py 
 def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/html')])
     return [b"Hello World"]
 ```
+
+uwsgi命令
 
 ```py
 # --plugin python 是告诉 uWSGI 在使用 python 插件
@@ -51,8 +49,6 @@ uwsgi --http :8080 --plugin python --wsgi-file test.py
 
 ![](https://cdn.hurra.ltd/img/20200711123744.png)
 
-
-- 部署
 
 app.py
 
@@ -113,7 +109,6 @@ COPY . .
 CMD uwsgi config.ini
 ```
 
-构建
 
 ```sh
 docker build -t uwsgi_flask:v1 .

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-17 02:20:15
+ * @LastEditTime: 2022-02-07 18:46:50
 -->
 
 ## 配置
@@ -25,7 +25,7 @@ sudo gedit /etc/pacman.d/mirrorlist
 Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```
 
-- 中文社区仓库
+- 设置中文社区仓库
 
 ```sh
 sudo gedit /etc/pacman.conf
@@ -62,6 +62,7 @@ rm /var/lib/pacman/db.lck
 sudo pacman -Syudd
 ```
 
+
 ###  文件管理器
 
 - 查看当前文件管理器
@@ -94,6 +95,7 @@ vscode 设置中添加
 sudo pacman -Syyu libvoikko hspell nuspell hunspell aspell
 ```
 
+
 ## 软件
 
 
@@ -111,9 +113,6 @@ yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
 
 - 安装
 
-```sh
-yay -S
-```
 
 ```sh
 yay -S --noconfirm visual-studio-code-bin flameshot grub-customizer vlc
@@ -172,7 +171,7 @@ export LC_CTYPE=zh_CN.UTF-8
 重启
 
 
-### anaconda
+### Anaconda
 
 ```sh
 echo "export PATH=$HOME/anaconda3/bin:$PATH">>~/.bashrc
