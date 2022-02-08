@@ -35,4 +35,23 @@ if $? -ne 0;then
 fi
 ```
 
+## 备份还原
 
+```sh
+docker images | awk '{print $1}' > images.txt
+# macos command
+# sed -i '' '1d' images.txt
+sed -i '1d' images.txt
+while read -r line ; do
+  file=${line//\//_}.tar
+  if [ ! -f "$file" ]; then
+    docker save "$line" > "$file"
+    echo "docker saved $file"
+  fi
+done < images.txt
+cat > load.sh << EOF
+while read -r line ; do
+    docker load < "\${line//\//_}".tar
+done < images.txt
+EOF
+```
