@@ -1,3 +1,13 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2022-02-08 20:42:19
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-02-08 21:38:28
+-->
+
 ## DOM Nodes
 
 ### DOM节点
@@ -6,15 +16,11 @@ HTML 文档中的所有内容都是节点
 
 - 整个文档是一个`文档节点`
 
-- 每个 HTML 元素是`元素节点`
-
-例如\<html>，\<head>，<title>等
+- 每个 HTML 元素是`元素节点`，例如\<html>，\<head>，\<title> 等
 
 - HTML 元素内的文本是`文本节点`
 
-- 每个 HTML 属性是`属性节点`
-
-例如<a>中的属性href
+- 每个 HTML 属性是`属性节点`，例如<a>中的属性href
   
 - 注释是`注释节点`
 
@@ -33,8 +39,8 @@ const b = document.getElementById("submitBtn")
 
 - removeChild(node) 删除子节点(元素)
 
-- createAttribute()	创建属性节点
-    
+- createAttribute() 创建属性节点
+
 - createElement() 创建元素节点
 
 - createTextNode() 创建文本节点

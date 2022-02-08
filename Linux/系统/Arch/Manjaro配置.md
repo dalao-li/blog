@@ -5,8 +5,9 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-07 18:46:50
+ * @LastEditTime: 2022-02-08 21:21:01
 -->
+
 
 ## 配置
 
@@ -56,7 +57,7 @@ sudo pacman -R $(pacman -Qdtq)
 rm /var/lib/pacman/db.lck
 ```
 
-- 依赖错误解决，使用 -dd跳过所有检测
+- 依赖错误解决，使用 `-dd`跳过所有检测
 
 ```sh
 sudo pacman -Syudd
@@ -80,6 +81,7 @@ xdg-mime query default inode/directory
 ```sh
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
 ```
+
 
 ### Vscode终端乱码
 
