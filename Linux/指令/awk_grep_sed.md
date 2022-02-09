@@ -11,7 +11,7 @@
 
 ## awk
 
-`awk` 文本分析
+文本分析
 
 将文件逐行读入，以空格为默认分隔符将每行切片，再对切开的部分进行各种分析处理
 
@@ -23,7 +23,7 @@
 | action  | 在找到匹配内容时执行的命令             |
 | {}      | 用于根据特定的模式对一系列指令进行分组 |
 
--  查看登录的用户名
+查看登录的用户名
   
 ```sh
 last -n 5 | awk '{print $1}'
@@ -34,7 +34,7 @@ last -n 5 | awk '{print $1}'
 
 ## grep
 
-`grep` 文本查找
+文本查找
 
 > `grep -[参数]`
 
@@ -80,9 +80,7 @@ grep 'Mar 10 16:3' /var/log/secure | grep Accepted
 
 - 非查询
 
-> `grep -v 模式1 匹配项`
-
-去除包含模式1的进程行，避免影响最终数据的正确性
+> `grep -v 模式1 匹配项`  去除包含模式1的进程行，避免影响最终数据的正确性
 
 查询VLC进程信息时排除grep本身影响
   
@@ -96,19 +94,16 @@ ps -aux | grep vlc | grep -v grep
 
 ### 正则
 
-- 查看以pattern开头的行
-  
-> `grep ^pattern 匹配项`
+- 查看以pattern开头的行  `grep ^pattern 匹配项`
 
-- 查找以pattern结尾的行
-  
-> `grep pattern$ 匹配项`
+- 查找以pattern结尾的行  `grep pattern$ 匹配项`
 
 查找/root/test.txt文件中含有human的句子
   
 ```sh
 grep human /root/test.txt
 ```
+
 ![](https://cdn.hurra.ltd/img/20210310151418.png)
 
 查找/root/test.txt文件中以The开头的句子
@@ -121,15 +116,12 @@ grep ^The /root/test.txt
 
 ## sed
 
-`sed` 文本编辑
+文本编辑
 
-> `sed -参数 '起始范围，结束范围  操作' 文件`
+> `sed -参数 '起始范围,结束范围  操作' 文件`
 
-打印file.txt 1-5行
-  
-```sh
-sed -n '1，5 p' file.txt
-```
+
+### 参数
 
 | 参数         | 含义                                        |
 | ------------ | ------------------------------------------- |
@@ -140,7 +132,7 @@ sed -n '1，5 p' file.txt
 | 范围          | 含义                          |
 | ------------- | ----------------------------- |
 | 5             | 选择第5行，若为空则选择所有行 |
-| 2，5 或 2，+3 | 选择2到5行，共4行             |
+| 2,5 或 2,+3 | 选择2到5行，共4行             |
 | 1~2           | 选择奇数行                    |
 | 2~2           | 选择偶数行                    |
 | 2,$           | 从第2行到文件结尾             |
@@ -155,21 +147,27 @@ sed -n '1，5 p' file.txt
 若字符串中带有路径符号 `/` ，可以用 `#` 分隔
 
 
+### 输出
+
+打印file.txt 1-5行
+  
+```sh
+sed -n '1,5 p' file.txt
+```
+
+
+### 添加
+
+- 第一行前添加字符串  `sed -i '1i内容' 文件路径`
+
+- 最后一行`行前`添加字符串  `sed -i '$i内容' 文件路径`
+
+- 最后一行`行后`添加字符串  `sed -i '$a内容' 文件路径`
+
+
 ### 替换
 
-- 第一行前添加字符串
-
-> `sed -i '1i添加的内容' 文件路径`
-
-- 最后一行`行前`添加字符串
-
-> `sed -i '$i添加的内容' 文件路径`
-
-- 最后一行`行后`添加字符串
-
-> `sed -i '$a添加的内容' 文件路径`
-
-Ubuntu换源，修改/etc/apt/sources.list
+例，Ubuntu换源，修改/etc/apt/sources.list
 
 ```sh
 sed -i 's#security.ubuntu.com#mirrors.aliyun.com#g' /etc/apt/sources.list
