@@ -10,13 +10,12 @@
 
 ## test
 
-`test` 命令用于检查某个条件是否成立
+检查某个条件是否成立
+
 
 ### 数值测试
 
-```sh
-test 数据1 [参数] 数据2
-```
+> `test 数据1 [参数] 数据2`
 
 | 参数  | 说明           |
 | ----- | -------------- |
@@ -33,9 +32,9 @@ n1=100
 n2=100
 
 if test ${n1} -eq ${n2};then
-    ...
+    echo "n1 n2 相等"
 else
-    ...
+    echo "n1 n2 不相等"
 fi
 ```
 
@@ -55,9 +54,9 @@ n1="aaa"
 n2="bbb"
 
 if test ${n1} = ${n2};then
-    ...
+    echo "n1 n2 相等"
 else
-    ...
+    echo "n1 n2 不相等"
 fi
 ```
 
@@ -79,9 +78,9 @@ test [参数] 文件名
 
 ```sh
 if test -e ./bash;then
-    ...
+    echo "./bash文件存在"
 else
-    ...
+    echo "./bash文件不存在"
 fi
 ```
 
@@ -99,7 +98,7 @@ n2=20
 n3=10
 
 if test ${n1} -ge ${n2} -o ${n1} -eq ${n3};then
-    ...
+    echo "n1 大于等于 n2 或等于n3"
 else
     ...
 fi
