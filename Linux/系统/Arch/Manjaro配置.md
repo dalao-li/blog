@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-08 21:21:01
+ * @LastEditTime: 2022-02-11 23:04:17
 -->
 
 
@@ -38,6 +38,7 @@ sudo gedit /etc/pacman.conf
 SigLevel = Optional TrustAll
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
+
 
 ### 更新
 
