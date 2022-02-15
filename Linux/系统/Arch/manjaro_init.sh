@@ -7,10 +7,10 @@
  # @Email: dalao_li@163.com
  # @Date: 2022-01-17 02:05:53
  # @LastEditors: DaLao
- # @LastEditTime: 2022-02-07 18:44:28
+ # @LastEditTime: 2022-02-14 19:59:03
 ### 
 
-update(){
+init(){
     sudo sed -i '1iServer = http://mirrors.aliyun.com/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
 
     sudo bash -c cat >> /etc/pacman.conf << EOF
@@ -54,15 +54,20 @@ set_yay(){
 
 
 set_docker(){
-    yay -S docker
+    yay -S --noconfirm docker
 
-    sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo newgrp docker 
+    sudo groupadd docker
+
+    sudo usermod -aG docker ${USER}
+    
+    sudo newgrp docker 
 
     sudo bash -c "cat > /etc/docker/daemon.json" <<EOF
 {
     "registry-mirrors":["https://997nddro.mirror.aliyuncs.com"]
 }
 EOF
+    sudo systemctl start docker
 }
 
 set_node(){
@@ -87,7 +92,6 @@ set_proxy(){
         --name=clash_test \
         dreamacro/clash:v1.8.0 
     # https://clash.razord.top/ 
-    # https://alpha-b-a.expcloud.me/user
     # https://www.woccloud.io/
 }
 

@@ -7,7 +7,7 @@
  # @Email: dalao_li@163.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: DaLao
- # @LastEditTime: 2022-01-10 02:17:56
+ # @LastEditTime: 2022-02-14 01:13:05
 ### 
 
 # 设置flameshot快捷键
@@ -88,9 +88,6 @@ set_proxy(){
         --name=clash_test \
         dreamacro/clash:v1.8.0 
     # https://clash.razord.top/ 
-
-    # https://alpha-b-a.expcloud.me/user
-
     # https://www.woccloud.io/
 }
 

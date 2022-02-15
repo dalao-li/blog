@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-16 12:46:09
  * @LastEditors: DaLao
- * @LastEditTime: 2021-12-29 21:22:15
+ * @LastEditTime: 2022-02-14 00:56:33
 -->
 
 ## 更新源
@@ -28,7 +28,7 @@ sudo wget 'https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tar.xz'
 sudo tar -xvf Python-3.8.0.tar.xz -C /usr/bin
 
 # 检测依赖;定位Python安装位置
-cd  /usr/bin/Python-3.8.0/
+cd /usr/bin/Python-3.8.0/
 
 ./configure --prefix=/usr/bin/python3
 
@@ -78,4 +78,17 @@ sudo systemctl restart docker
 sudo curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 
 sudo yum update -y && yum install epel-release -y
+```
+
+## 防火墙
+ 
+```sh
+# 查看状态
+systemctl status firewalld.service
+
+# 关闭
+systemctl stop firewalld.service
+
+# 永久关闭
+systemctl disable firewalld.service
 ```

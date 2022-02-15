@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-11 23:04:17
+ * @LastEditTime: 2022-02-14 20:44:09
 -->
 
 
@@ -101,6 +101,22 @@ sudo pacman -Syyu libvoikko hspell nuspell hunspell aspell
 
 ## 软件
 
+
+### VM
+
+```sh
+# 查看版本
+sudo uname -r 
+
+# 选择对应版本
+sudo pacman -S virtualbox
+
+yay -S virtualbox-ext-oracle
+```
+
+```sh
+sudo modprobe vboxdrv
+```
 
 ### yay
 
