@@ -15,18 +15,24 @@
 
 - 所有分支 
 
-`git branch -a`
+```sh
+git branch -a
+```
 
 - 当前使用分支
 
-`git branch`
+```sh
+git branch
+```
 
 ![](https://cdn.hurra.ltd/img/20220112081438.png)
 
 
 ### 建立
 
-`git branch 分支名`
+```
+git branch 分支名
+```
 
 ![](https://cdn.hurra.ltd/img/20220112081747.png)
 
@@ -35,21 +41,29 @@
 
 - 切换到分支
 
-`git checkout 分支名`
+```sh
+git checkout 分支名
+```
 
 - 创建新分支并切换到它
 
-`git checkout -b 分支名`
+```sh
+git checkout -b 分支名
+```
 
 ![](https://cdn.hurra.ltd/img/20220112081849.png)
 
 
 ## 删除
 
-`git branch -d 分支名`
+```sh
+git branch -d 分支名
+```
 
 ## 合并
 
 - 合并A分支到当前分支
 
-`git merge A分支`
+```sh
+git merge A分支
+```
