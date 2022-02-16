@@ -8,7 +8,59 @@
  * @LastEditTime: 2022-01-25 22:30:43
 -->
 
-## commit
+## 提交流程
+
+### init
+
+```sh
+# 新建代码仓库(当前目录)
+git init
+
+# 新建代码仓库(指定目录)
+git init 项目名
+```
+
+![](https://cdn.hurra.ltd/img/20220112075837.png)
+
+### status
+
+查看文件状态
+
+```sh
+git status
+```
+
+![](https://cdn.hurra.ltd/img/20220112080241.png)
+
+### add
+
+```sh
+# 添加所有文件到暂存区
+git add .
+```
+
+
+- 撤回暂存区文件
+
+默认所有文件，也可指定文件
+
+```sh
+git reset HEAD
+```
+
+![](https://cdn.hurra.ltd/img/20220112080614.png)
+
+### log
+
+提交记录
+
+```sh
+git log
+```
+
+![](https://cdn.hurra.ltd/img/20220112081301.png)
+
+### commit
 
 将暂存区里的改动给提交到本地的版本库
 
@@ -23,7 +75,7 @@ git commit -m "注释"`
 ![](https://cdn.hurra.ltd/img/20220112081127.png)
 
 
-## 参数 
+## commit参数 
 
 ### --amend
 
