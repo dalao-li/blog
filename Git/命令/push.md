@@ -5,19 +5,21 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-25 23:07:05
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:56:42
+ * @LastEditTime: 2022-02-16 20:26:19
 -->
 
 ## push
 
 `push` 将本地的分支版本上传到远程并合并
 
-`git push 远程主机名 本地分支名:远程分支名`
+```sh
+git push 远程主机名 本地分支名:远程分支名
+```
 
 - 上传本地分支到远程分支
 
 ```sh
-# 建立本地到上游(远端)仓的链接，这样代码才能提交上去
+# 建立本地到上游(远端)仓的链接，这样代码才能提交
 git branch --set-upstream-to=origin/分支
 
 git push origin 分支
@@ -34,7 +36,7 @@ git remote -v
 - 删除远程仓库
 
 ```sh
-git remote rm [origin name]
+git remote rm [远程分支名]
 ```
 
 

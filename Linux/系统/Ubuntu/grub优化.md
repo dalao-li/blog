@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-17 00:11:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-17 04:03:34
+ * @LastEditTime: 2022-02-15 23:13:22
 -->
 
 ## GRUB
@@ -16,6 +16,7 @@ $GRUB$可用于选择操作系统分区上的不同内核，也可用于向这�
 
 
 $Linux$常见的引导程序包括$LILO$、$GRUB$、$GRUB2$
+
 
 ## 多硬盘启动
 

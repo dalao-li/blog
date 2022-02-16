@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-17 01:47:56
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-07 18:47:58
+ * @LastEditTime: 2022-02-16 20:29:09
 -->
 
 
@@ -13,7 +13,9 @@
 
 - 下载配置文件
 
-`yay -G 包名`
+```sh
+yay -G 包名
+```
 
 - 修改PKGBUILD
 
@@ -45,4 +47,6 @@ makepkg
 
 生成xxx.pkg.tar.xz
 
-`sudo pacman -U xxx.pkg.tar.xz`
+```sh
+sudo pacman -U xxx.pkg.tar.xz
+```

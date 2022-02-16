@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-17 22:27:33
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 05:37:03
+ * @LastEditTime: 2022-02-16 23:30:55
 -->
 
 ## platform库
@@ -21,7 +21,7 @@ platform.system()
 - 获取操作系统名称及版本号
 
 ```py
-platform.platform()   
+platform.platform()
 ```
 
 ![](https://cdn.hurra.ltd/img/20211217223143.png)

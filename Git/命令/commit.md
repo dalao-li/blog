@@ -5,18 +5,22 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:02:13
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-25 22:30:43
+ * @LastEditTime: 2022-02-16 20:23:16
 -->
 
-## 提交流程
+## 提交
 
 ### init
 
-```sh
-# 新建代码仓库(当前目录)
-git init
+- 新建代码仓库(当前目录)
 
-# 新建代码仓库(指定目录)
+```sh
+git init
+```
+
+- 新建代码仓库(指定目录)
+  
+```sh
 git init 项目名
 ```
 
@@ -24,7 +28,7 @@ git init 项目名
 
 ### status
 
-查看文件状态
+- 查看文件状态
 
 ```sh
 git status
@@ -34,17 +38,16 @@ git status
 
 ### add
 
+- 添加所有文件到暂存区
+
 ```sh
-# 添加所有文件到暂存区
 git add .
 ```
 
-
 - 撤回暂存区文件
 
-默认所有文件，也可指定文件
-
 ```sh
+# 默认所有文件，也可指定文件
 git reset HEAD
 ```
 
@@ -64,11 +67,15 @@ git log
 
 将暂存区里的改动给提交到本地的版本库
 
-```sh
-# 使用编辑器添加注释
-git commit
+- 使用编辑器添加注释
 
-# 直接添加注释 
+```sh
+git commit
+```
+
+- 直接添加注释
+
+```sh
 git commit -m "注释"`
 ```
 
@@ -79,7 +86,7 @@ git commit -m "注释"`
 
 ### --amend
 
-修改最近一次 commit 
+- 修改最近一次 commit
 
 ```sh
 git commit --amend
@@ -93,7 +100,7 @@ git push --force-with-lease
 
 ### rebase
 
-- 修改倒数第三条commit 
+- 修改倒数第三条commit
 
 ```sh
 git rebase -i HEAD~3

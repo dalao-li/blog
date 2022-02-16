@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:16:56
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 13:00:27
+ * @LastEditTime: 2022-02-16 20:28:08
 -->
 
 ## reset
@@ -14,15 +14,21 @@
 
 回到上一次提交，不管改动的代码，删除工作空间改动代码，撤销commit，撤销`git add .`
 
-`git reset --hard HEAD^`
+```sh
+git reset --hard HEAD^
+```
 
 ### 软回退
 
 回到上一次提交，改动的代码不变，不删除工作空间改动代码，撤销commit，不撤销`git add .`
 
-`git reset --soft HEAD^`
+```sh
+git reset --soft HEAD^
+```
 
 
 ### 回退到某次提交
 
-`git reset --[soft/hard] [commit id]`
+```sh
+git reset --[soft/hard] [commit id]
+```

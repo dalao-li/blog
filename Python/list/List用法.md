@@ -5,14 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-04 01:28:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-15 07:19:09
+ * @LastEditTime: 2022-02-16 20:32:06
 -->
 
 ## List
 
 ### 初始化
 
-- 建立 
+- 建立
 
 `a = []`
 

@@ -5,28 +5,36 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:57:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 08:29:32
+ * @LastEditTime: 2022-02-16 20:26:48
 -->
 
 ## remote
 
-### 删除远程地址
-
-`git remote set-url --del origin [远程 URL]`
+远程地址
 
 
-### 添加远程地址
+### 删除
+
+```sh
+git remote set-url --del origin [远程 URL]
+```
 
 
-`git remote add [远程用户名] [远程 URL]`
+### 添加
 
-### 添加多个远程地址
+```sh
+git remote add [远程用户名] [远程 URL]
+```
+
+### 添加多个
 
 在使用git时,可将库同时push到多个托管远端，通过添加第二个地址
 
 - 方法1
-  
-`git remote set-url --add origin [远程 URL]`
+- 
+```sh
+git remote set-url --add origin [远程 URL]
+```
 
 - 方法2，配置.git/config
 

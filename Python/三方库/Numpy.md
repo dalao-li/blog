@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 05:36:37
+ * @LastEditTime: 2022-02-16 22:13:39
 -->
 
 ## Numpy
@@ -43,7 +43,7 @@ import numpy as np
 
 a = np.array([[1, 2, 3], [4, 5, 6]])
 
-# [[1 2 3] 
+# [[1 2 3]
 # [4 5 6]]
 print(a)
 ```
