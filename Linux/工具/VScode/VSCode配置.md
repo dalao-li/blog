@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-12 23:24:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 20:03:39
+ * @LastEditTime: 2022-02-18 20:58:26
 -->
 
 ## 以root权限运行
@@ -77,6 +77,7 @@ highlight-icemode
 | 新建/关闭窗口        | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> / <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> |
 | 新建/关闭文件        | <kbd>Ctrl</kbd> + <kbd>N</kbd> / <kbd>Ctrl</kbd> + <kbd>W</kbd>                                       |
 | 重新打开关闭的编辑器 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>                                                     |
+
 
 ### 编辑
 

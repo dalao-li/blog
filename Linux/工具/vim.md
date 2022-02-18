@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-11 23:55:20
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-13 02:18:01
+ * @LastEditTime: 2022-02-18 20:58:41
 -->
 
 ## 打开到指定行
@@ -19,7 +19,7 @@ vim 文件名 + [行号]
 - 文件内操作
 
 ```sh
-# 跳转末尾  
+# 跳转末尾
 Shift + G
 
 # 到指定行

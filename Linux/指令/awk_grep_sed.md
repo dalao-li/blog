@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-10 11:23:08
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-11 22:57:11
+ * @LastEditTime: 2022-02-17 23:42:27
 -->
 
 
@@ -15,7 +15,9 @@
 
 将文件逐行读入，以空格为默认分隔符将每行切片，再对切开的部分进行各种分析处理
 
-> `awk [参数] '{pattern action}' {文件名}`
+```sh
+awk [参数] '{pattern action}' {文件名}
+```
 
 | 参数    | 含义                                   |
 | ------- | -------------------------------------- |
@@ -51,7 +53,9 @@ last -n 5 | awk '{print $1}'
 
 - 单查询
 
-> `grep 模式 匹配项`
+```sh
+grep 模式 匹配项
+```
 
 查询3月10日16点30时间段内的ssh登录情况
 
@@ -63,7 +67,9 @@ grep -n 'Mar 10 16:3' /var/log/secure
 
 -  与查询
 
-> `grep '模式1' 匹配项 | grep '模式2'`
+```sh
+grep '模式1' 匹配项 | grep '模式2'
+```
 
 查询3月10日16点30时间段内的ssh登录成功的情况
 
@@ -76,11 +82,18 @@ grep 'Mar 10 16:3' /var/log/secure | grep Accepted
 
 - 或查询
 
-> `grep '模式1|模式2' 匹配项` 或 `grep -E '模式1|模式2' 匹配项`
+```sh
+grep '模式1|模式2' 匹配项 或 grep -E '模式1|模式2' 匹配项
+```
 
 - 非查询
 
-> `grep -v 模式1 匹配项`  去除包含模式1的进程行，避免影响最终数据的正确性
+去除包含模式1的进程行，避免影响最终数据的正确性
+
+```sh
+grep -v 模式1 匹配项
+```
+
 
 查询VLC进程信息时排除grep本身影响
   
@@ -94,9 +107,17 @@ ps -aux | grep vlc | grep -v grep
 
 ### 正则
 
-- 查看以pattern开头的行  `grep ^pattern 匹配项`
+- 查看以pattern开头的行
 
-- 查找以pattern结尾的行  `grep pattern$ 匹配项`
+```sh
+grep ^pattern 匹配项
+```
+
+- 查找以pattern结尾的行
+
+```sh
+grep pattern$ 匹配项
+```
 
 查找/root/test.txt文件中含有human的句子
   
@@ -171,6 +192,7 @@ sed -i '1i内容' 文件路径
 ```sh
 sed -i '$i内容' 文件路径
 ```
+
 - 最后一行`行后`添加字符串
 
 ```sh

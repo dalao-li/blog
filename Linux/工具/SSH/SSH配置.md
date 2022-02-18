@@ -5,10 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 05:16:34
+ * @LastEditTime: 2022-02-18 20:57:48
 -->
 
-## SSH 
+## SSH
 
 ### 连接
 
@@ -33,7 +33,7 @@ ssh-keygen -R [远程主机IP]
 
 - 方法1，手动复制
 
-将本地主机`id_rsa.pub` 复制到远程主机`.ssh/authorized_keys`里
+将本地`id_rsa.pub` 复制到远程主机`.ssh/authorized_keys`里
 
 - 方法2，命令复制
 
@@ -43,6 +43,8 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
 
 ![](https://cdn.hurra.ltd/img/20211229213337.png)
 
+
+## 配置
 
 ### .ssh目录
 
@@ -62,7 +64,7 @@ ssh-keygen -t rsa
 | know_hosts      | 存储已认证主机的host key |
 
 
-## 配置文件
+### 配置文件
 
 ```sh
 /etc/ssh/sshd_condfig

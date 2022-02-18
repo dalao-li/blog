@@ -5,13 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-08 09:36:50
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-12 20:01:58
+ * @LastEditTime: 2022-02-18 20:53:02
 -->
 
 
 ## Ansible概念
 
-Ansible是一个配置管理和应用部署工具.
+Ansible是一个配置管理和应用部署工具
 
 Ansible可以去对服务器上($1-N$台)的一些系统应用进行配置管理，如更改部分参数，安装软件应用等，本质是在多设备按情况(判断循环)指定每台设备要执行的命令
 
