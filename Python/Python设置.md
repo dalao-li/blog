@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-19 23:44:15
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 01:44:40
+ * @LastEditTime: 2022-02-19 22:00:29
 -->
 
 ## 换源
@@ -18,4 +18,6 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 ## requestment
 
-`pip freeze > requirements.txt`
+```sh
+pip freeze > requirements.txt
+```

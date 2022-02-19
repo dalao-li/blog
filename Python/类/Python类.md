@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 00:49:15
+ * @LastEditTime: 2022-02-19 21:25:41
 -->
 
 ## 类
@@ -23,6 +23,7 @@ class Stu:
 self代表类的实例，而非类
 
 类的方法与普通的函数的区别为它们必须有一个额外的首参数名称self
+
 
 ### 方法
 
@@ -43,6 +44,7 @@ class Person:
                 raise TypeError('Expected a string')
             self._name = value
 ```
+
 
 ### 获值
 
@@ -67,7 +69,8 @@ class Person:
         self.__dict__.update(_obj)
 ```
 
-## 继承
+
+### 继承
 
 ```py
 class People:

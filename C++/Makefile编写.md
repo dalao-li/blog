@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-11 23:58:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:27:15
+ * @LastEditTime: 2022-02-19 21:49:37
 -->
 
 ## Makefile
@@ -35,7 +35,7 @@ int main(){
 #include"hellomake.h"
 
 void hello(){
-    printf("Hello, makefiles!\n");
+    printf("Hello , makefiles!\n");
     return;
 }
 ```
@@ -47,6 +47,7 @@ void hello(){
 ```sh
 gcc -o hellomake hellomake.c hellofunc.c -I.
 ```
+
 ![](https://cdn.hurra.ltd/img/20211112220904.png)
 
 

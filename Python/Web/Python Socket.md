@@ -115,41 +115,40 @@ server_address = ('127.0.0.1', 31500)
 
 class SocketServer:
 
-	def __init__(self):
+    def __init__(self):
         # 建立一个tcp/ip scoket
-		sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
          # 绑定端口号
-		sock.bind(server_address)
+        sock.bind(server_address)
         # 监听
-		sock.listen(128)
-		self.sock = sock
+        sock.listen(128)
+        self.sock = sock
 
-	def start_server(self):
-		while True:
-			print('开始等待多个客户端过来')
-			conn,address = self.sock.accept()
-			print('客户 %s 过来了',%address)
-			t = threading.Thread(target=self.client_recv,args=(conn,address))
-			t.start()
+    def start_server(self):
+        while True:
+            print('开始等待多个客户端过来')
+            conn,address = self.sock.accept()
+            print('客户 %s 过来了',%address)
+            t = threading.Thread(target=self.client_recv,args=(conn,address))
+            t.start()
 
-	def client_recv(self,client,addr):
-		while True:
+    def client_recv(self,client,addr):
+        while True:
             # 获取到客户端的数据
-			data = client.recv(1024)
-			if not data or data.decode() == 'bye':
-				# 如果没有发送过来数据就代表客户端close了,或者发过来bye代表连接要断开
-				print('服务结束', addr)
+            data = client.recv(1024)
+            if not data or data.decode() == 'bye':
+                # 如果没有发送过来数据就代表客户端close了,或者发过来bye代表连接要断开
+                print('服务结束', addr)
                 # 断开连接,为下一个服务
-				client.close()
-				break
-			else:
-				print('%s 发送 %s',  %(addr,data.decode()))
-				msg = '统一回复,人不在'
-				client.send(msg.encode())
+                client.close()
+                break
+            else:
+                print('%s 发送 %s',  %(addr,data.decode()))
+                msg = '统一回复,人不在'
+                client.send(msg.encode())
 
 if __name__ == '__main__':
+    t = SocketServer()
 
-	t = SocketServer()
-
-	t.start_server()
+    t.start_server()
 ```

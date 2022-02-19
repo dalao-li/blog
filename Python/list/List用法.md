@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-04 01:28:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-16 20:32:06
+ * @LastEditTime: 2022-02-19 21:57:41
 -->
 
 ## List
@@ -14,11 +14,15 @@
 
 - 建立
 
-`a = []`
+```
+a = []
+```
 
 - 建立 $x*y$ 大小的数组，初始值为 $z$
 
-`[[z for i in range(x)] for j in range(y)]`
+```py
+[[z for i in range(x)] for j in range(y)]
+```
 
 建立$3*3$二维数组，初始值0
 
@@ -41,7 +45,7 @@ print(a)
 
 - 添加
 
-`append()` 列表末尾添加新值                                                 
+`append()` 列表末尾添加新值
 
 `extend()` 末尾追加另一个序列中的多个值 
 
@@ -63,7 +67,7 @@ a.extend([5, 6, 7])
 a = [1, 1, 2, 3]
 
 # 2
-a.count(1)                                
+a.count(1)
 ```
 
 - 删除

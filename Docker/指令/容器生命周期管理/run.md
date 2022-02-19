@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 01:44:11
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-21 21:59:06
+ * @LastEditTime: 2022-02-19 21:38:45
 -->
 
 ## run
@@ -14,13 +14,11 @@
 docker run [参数] 镜像ID (命令)
 ```
 
-### -itd
-
-- `-i` 以交互模式运行容器
-  
-- `-t` 为容器重新分配一个伪输入终端
-  
-- `-d` 后台运行容器，并返回容器ID
+| 参数 | 含义                         |
+| ---- | ---------------------------- |
+| `-i` | 以交互模式运行容器           |
+| `-t` | 为容器重新分配一个伪输入终端 |
+| `-d` | 后台运行容器，并返回容器ID   |
 
 
 ### -p
@@ -60,7 +58,9 @@ docker run -itd --name=box -e STR_VEN=abcdefg busybox
 
 `--mount` 挂载本地目录到容器中，若本地目录(必须是绝对路径)不存在会报错
 
-`--mount type=bind,source=[本地路径],target=[容器路径](权限)`
+```sh
+--mount type=bind,source=[本地路径],target=[容器路径](权限)
+```
 
 将本地/src/app挂载到容器/root/app
 
@@ -115,7 +115,7 @@ mysql -h db -u root -p123
 - 执行命令后容器停止
 
 ```sh
-docke run -itd --name=box busybox mkdir test  
+docke run -itd --name=box busybox mkdir test
 ```
 
 此处本意为run时创建test目录，实际发现执行命令后即容器停止运行
@@ -123,6 +123,7 @@ docke run -itd --name=box busybox mkdir test
 原因为基于Docker原理，当run时执行的命令结束时，容器也会停止
 
 运行下面命令是，run执行sh解释权，容器会在后台一直运行
+
 ```
 docker run -itd --name=box busybox sh
 ```
