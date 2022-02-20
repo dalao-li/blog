@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:29:20
+ * @LastEditTime: 2022-02-20 13:40:16
 -->
 
 ## Docker部署MySQL
@@ -38,6 +38,7 @@ docker run -itd --name=mysql -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_
 ```sh
 mysql -u 用户名 -p
 ```
+
 - 允许远程登录
 
 ```sh

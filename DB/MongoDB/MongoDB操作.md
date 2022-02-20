@@ -46,6 +46,8 @@ use 数据库
 
 ### 集合
 
+- 创建集合
+
 ```sh
 db.createCollection("集合")
 ```
@@ -56,6 +58,8 @@ db.createCollection("集合")
 
 
 ### 增加
+
+- 插入数据
 
 ```sh
 db.[集合].insert(JSON数据1,JSON数据2...)
@@ -69,21 +73,28 @@ db.stu.insert([{name:"Ling",age:20},{name:"Wang",age:22}])
 
 ![](https://cdn.hurra.ltd/img/20220112184807.png)
 
+
 ### 查询
 
 - 全部查询
 
-`db.[集合].find()`
+```sh
+db.[集合].find()
+```
 
 - 格式化显示集合内所有文档
 
-`db.[集合].find().pretty()`
+```sh
+db.[集合].find().pretty()
+```
 
 ![](https://cdn.hurra.ltd/img/20220112185029.png)
 
 - 条件查询
 
-`db.[集合].find({key:value}).pretty()`
+```sh
+db.[集合].find({key:value}).pretty()
+```
 
 查询 stu 集合中 name 为 Ling 的文档
 
@@ -111,7 +122,9 @@ db.stu.find({age:{$gte:21}}).pretty()
 
 ### 修改
 
-`db.[集合].update({key1:value},{$set:{key2:new_value}})`
+```sh
+db.[集合].update({key1:value},{$set:{key2:new_value}})
+```
 
 将 name 为 Ling 的文档中 age 值改为 30
 
@@ -124,7 +137,9 @@ db.stu.update({name:"Ling"},{$set:{age:30}})
 
 ### 删除
 
-`db.[集合].remove({key:value})`
+```sh
+db.[集合].remove({key:value})
+```
 
 删除 name=Ling 的文档
 
@@ -137,7 +152,9 @@ db.stu.remove({name:"Ling"})
 
 ### 连接
 
-`pymongo.MongoClient("mongodb://用户名:密码@IP:端口/")`
+```sh
+pymongo.MongoClient("mongodb://用户名:密码@IP:端口/")
+```
 
 ```py
 import pymongo
@@ -178,7 +195,9 @@ for i in collect.find():
 
 - 按条件获取
 
-`集合.find(key:value)`
+```sh
+集合.find(key:value)
+```
 
 ```py
 collect = client['test']['stu']
@@ -195,11 +214,15 @@ print(data)
 
 - 单条插入
 
-`insert_one(JSON数据)`
+```py
+insert_one(JSON数据)
+```
 
 - 多条插入
 
-`insert_many(JSON数据1,JSON数据2...)`
+```py
+insert_many(JSON数据1,JSON数据2...)
+```
 
 ```py
 ...

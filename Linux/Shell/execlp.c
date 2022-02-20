@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-14 18:21:47
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-14 18:39:23
+ * @LastEditTime: 2022-02-20 17:35:17
  */
 #include<stdio.h>
 #include<sys/wait.h>
@@ -13,9 +13,9 @@
 #include<stdlib.h>
 #include<unistd.h>
 
-int main(void){
-    const int MAXLINE = 100;
+const int MAXLINE = 100;
 
+int main(void){
     char buf[MAXLINE];
     pid_t pid;
     int status;

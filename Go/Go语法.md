@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 13:04:04
+ * @LastEditTime: 2022-02-20 17:37:22
 -->
 
 ## 语法
@@ -53,4 +53,3 @@ func main() {
 
 ![](https://cdn.hurra.ltd/img/20210110230203.png)
 
-## 通道

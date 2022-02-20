@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:20:22
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 13:01:46
+ * @LastEditTime: 2022-02-20 17:37:48
 -->
 
 ## branch
@@ -13,7 +13,7 @@
 
 ### 查看
 
-- 所有分支 
+- 所有分支
 
 ```sh
 git branch -a

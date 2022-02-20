@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-16 23:24:23
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-17 23:44:06
+ * @LastEditTime: 2022-02-20 14:27:12
 -->
 
 ## xargs
@@ -21,7 +21,6 @@
 ```sh
 xargs 命令
 ```
-
 
 ```sh
 echo "hello world" | xargs echo

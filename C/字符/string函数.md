@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-27 20:45:27
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-21 22:06:40
+ * @LastEditTime: 2022-02-20 18:16:13
 -->
 
 ## string函数
@@ -29,7 +29,7 @@
 ### strcat
 
 - 把 src 所指向的字符串追加到 dest 所指向的字符串的结尾
-  
+
 ```c
 char *strcat(char *dest, const char *src)
 ```
@@ -76,10 +76,9 @@ void *memset(void *str, int c, size_t n)
 | c    | 要被设置的值           |
 | n    | 要被设置为该值的字符数 |
 
-示例，给数组a赋值0
-
 ```c
 int a[10];
 
+// 给数组a赋值0
 memest(a, 0, sizeof(a));
 ```

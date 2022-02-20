@@ -11,6 +11,7 @@ library.c 文件中已有默认代码
 <kbd>ctrl</kbd> + <kbd>F9</kbd> 编译,右侧生成了 libhello.dll 文件
 ![](https://cdn.hurra.ltd/img/20201028181058.png)
 
+
 ## 调用
 
 另建立一个项目 Demo，在其根目录下建立 lib 目录，将上一步生成的 dll 文件拷入
@@ -65,6 +66,7 @@ target_link_libraries(Demo libhello.dll)
 
 运行
 ![](https://cdn.hurra.ltd/img/20201028184425.png)
+
 
 ## 测试
 

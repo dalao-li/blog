@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-16 12:46:09
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-14 00:56:33
+ * @LastEditTime: 2022-02-20 14:22:48
 -->
 
 ## 更新源
@@ -33,7 +33,7 @@ cd /usr/bin/Python-3.8.0/
 ./configure --prefix=/usr/bin/python3
 
 # 编译安装
-sudo make && make install 
+sudo make && make install
 
 # 修改环境变量
 sudo sed -i "s#bin#bin:/usr/bin/python3/bin#g" ~/.bash_profile

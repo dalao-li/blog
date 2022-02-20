@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-15 10:21:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-11 23:45:43
+ * @LastEditTime: 2022-02-20 18:09:05
 -->
 
 
@@ -40,8 +40,6 @@ fi
 ```sh
 docker images | awk '{print $1}' > images.txt
 
-# macos command
-# sed -i '' '1d' images.txt
 sed -i '1d' images.txt
 
 while read -r line; do
@@ -51,10 +49,10 @@ while read -r line; do
     echo "docker saved $file"
   fi
 done < images.txt
+```
 
-cat > load.sh << EOF
-while read -r line ; do
+```sh
+while read -r line;do
     docker load < "\${line//\//_}".tar
 done < images.txt
-EOF
 ```

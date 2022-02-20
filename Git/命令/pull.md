@@ -5,12 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-15 21:12:13
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-16 20:26:02
+ * @LastEditTime: 2022-02-20 17:41:29
 -->
 
 ## pull
 
-`git pull` 是将远程主机的最新内容拉下来后直接合并，可能会产生冲突，需手动解决
+`git pull` 将远程主机的最新内容拉下来后直接合并，可能会产生冲突，需手动解决
 
 ```sh
 git pull 远程主机名 远程分支名:本地分支名
@@ -23,7 +23,9 @@ git pull origin master
 ```
 
 
-- `git pull`的过程可分解为
+### 原理
+
+`git pull`的过程可分解为
 
 从远程主机的分支拉取最新内容
  

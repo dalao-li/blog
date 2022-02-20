@@ -1,3 +1,12 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2022-02-13 19:00:24
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-02-20 18:07:33
+-->
 ## 工具
 
 - git
@@ -14,15 +23,31 @@ gerrit是一个建立在git版本控制基础之上，基于Web的代码审查�
 
 ## 管理流程
 
-1. repo init xxx初始化
+1. 初始化
 
-2. repo sync xxx同步要改动的项目
+```sh
+repo init xxx
+```
 
-3. 在该项目下面repo start xxx新建本地分支
+2. 同步要改动的项目
+
+```sh
+repo sync xxx
+```
+
+3. 新建本地分支
+
+```sh
+repo start 分支名
+```
 
 4. 做好改动以后git commit本地提交改动
 
-5. repo upload xxx将改动上传，等别人通过review
+5. 改动上传，等别人通过review
+
+```sh
+repo upload xxx
+```
 
 6. review如果有需要改动的地方，那本地改好后，git commit --amend来保存新的修改
 
@@ -50,7 +75,7 @@ repi sync [项目列表]
 
 
 参数
-|参数|含义|
-|--|--|
-|-$j$|开启多线程同步操作，加快sync命令执行速度|
-|-$c$|只同步指定的远程分支|
+| 参数 | 含义                             |
+| ---- | -------------------------------- |
+| `-j` | 开启多线程同步操作，加快执行速度 |
+| `-c` | 只同步指定的远程分支             |
