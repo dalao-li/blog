@@ -5,12 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-18 20:57:48
+ * @LastEditTime: 2022-02-21 20:57:28
 -->
 
 ## SSH
 
-### 连接
+### 命令
+
+- 连接
 
 ```sh
 ssh 用户名@IP地址 (-p 端口号)
@@ -31,11 +33,11 @@ ssh-keygen -R [远程主机IP]
 
 ### 免密
 
-- 方法1，手动复制
+- 手动复制
 
 将本地`id_rsa.pub` 复制到远程主机`.ssh/authorized_keys`里
 
-- 方法2，命令复制
+- 命令复制
 
 ```sh
 ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
@@ -44,7 +46,6 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
 ![](https://cdn.hurra.ltd/img/20211229213337.png)
 
 
-## 配置
 
 ### .ssh目录
 
