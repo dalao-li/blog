@@ -52,10 +52,17 @@ grep -[参数]
 | `v`  | 显示不包含匹配文本的所有行             |
 
 
-- 单查询
+### 单查询
+
+- 模糊匹配
 
 ```sh
 grep 模式 匹配项
+```
+
+```sh
+# 结果为abc abcd abcdef
+grep "abc"
 ```
 
 查询3月10日16点30时间段内的ssh登录情况
@@ -65,8 +72,18 @@ grep -n 'Mar 10 16:3' /var/log/secure
 ```
 ![](https://cdn.hurra.ltd/img/20210310173920.png)
 
+- 精确匹配
 
--  与查询
+```sh
+grep -w 匹配项
+```
+
+```sh
+# 结果为abc
+grep -w "abc"
+```
+
+###  与查询
 
 ```sh
 grep '模式1' 匹配项 | grep '模式2'
@@ -81,13 +98,15 @@ grep 'Mar 10 16:3' /var/log/secure | grep Accepted
 ![](https://cdn.hurra.ltd/img/20210310175209.png)
 
 
-- 或查询
+### 或查询
 
 ```sh
-grep '模式1|模式2' 匹配项 或 grep -E '模式1|模式2' 匹配项
+grep '模式1|模式2' 匹配项 或 
+
+grep -E '模式1|模式2' 匹配项
 ```
 
-- 非查询
+### 非查询
 
 去除包含模式1的进程行，避免影响最终数据的正确性
 
