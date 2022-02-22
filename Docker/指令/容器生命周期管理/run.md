@@ -8,17 +8,20 @@
  * @LastEditTime: 2022-02-19 21:38:45
 -->
 
+
 ## run
 
 ```sh
 docker run [参数] 镜像ID (命令)
 ```
 
+### -itd
+
 | 参数 | 含义                         |
 | ---- | ---------------------------- |
 | `-i` | 以交互模式运行容器           |
 | `-t` | 为容器重新分配一个伪输入终端 |
-| `-d` | 后台运行容器，并返回容器ID   |
+| `-d` | 后台运行并返回容器ID   |
 
 
 ### -p
@@ -31,7 +34,7 @@ docker run [参数] 镜像ID (命令)
 docker run -itd -p 7890:80 nginx
 ```
 
-- `--expose=[]` 开放一个端口或一组端口
+- `--expose=[]` 开放一个或一组端口
 
 
 ### -e
@@ -74,7 +77,7 @@ docker run -itd --mount type=bind,source=/src/app,target=/root/app nginx:alpine
 --mount type=bind,source=/src/app,target=/root/app,readonly
 ```
 
-- `-v` 若本地目录不存在，会自动创建文件夹
+- `-v` 挂载本地目录到容器中，若本地目录不存在，会自动创建文件夹
 
 
 ### --net
@@ -122,7 +125,7 @@ docke run -itd --name=box busybox mkdir test
 
 原因为基于Docker原理，当run时执行的命令结束时，容器也会停止
 
-运行下面命令是，run执行sh解释权，容器会在后台一直运行
+运行下面命令是run执行sh解释权，容器会在后台一直运行
 
 ```
 docker run -itd --name=box busybox sh
