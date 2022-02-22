@@ -8,13 +8,13 @@
  * @LastEditTime: 2022-01-13 11:22:48
 -->
 
-## malloc函数
-
-malloc 用于从堆中分配内存
+## malloc
 
 ```c
 void *malloc(size_t size);
 ```
+
+malloc 用于从堆中分配内存
 
 | 参数   | 说明                                                                                |
 | ------ | ----------------------------------------------------------------------------------- |
@@ -23,17 +23,17 @@ void *malloc(size_t size);
 
 分配内存时需注意，即使在程序关闭时系统会自动回收该手动申请的内存，也要进行手动的释放，以保证内存能够在不需要时返回至堆空间，使内存能够合理的分配使用
 
-## free 函数
-
-free用于从堆中释放内存，释放需将指针指向NULL，否则会出现野指针
+## free
 
 ```c
 void free(void *ptr);
 ```
 
+free用于从堆中释放内存，释放需将指针指向NULL，否则会出现野指针
+
 ```c
-#include <stdio.h>
-#include <malloc.h>
+#include<stdio.h>
+#include<malloc.h>
 
 int main(void){
     char *p1 = (char *)malloc(1);
@@ -49,9 +49,10 @@ int main(void){
     p2 = NULL;
 }
 ```
+
 ![](https://cdn.hurra.ltd/img/20211113234806.png)
 
-动态分配的内存位于堆区中，堆地址`向上增长`
+动态分配的内存位于堆区中，堆地址`向上增长
 
 ```c
 // 动态数组
