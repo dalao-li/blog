@@ -24,7 +24,7 @@ docker exec [参数] 镜像ID 命令
 | `-d` | 分离模式，在后台运行        |
 
 
-### 执行单条指令
+### 单指令
 
 ```sh
 docker exec [参数] 镜像ID 命令
@@ -40,10 +40,10 @@ docker exec -it box mkdir test
 ![](https://cdn.hurra.ltd/img/20220112043735.png)
 
 
-### 执行多条指令
+### 多指令
 
 ```sh
-docker exec 容器ID sh -c '命令1 && 命令2'
+docker exec 容器ID [shell解释器] -c '命令1 && 命令2'
 ```
 
 ubuntu安装mysql-clinet
