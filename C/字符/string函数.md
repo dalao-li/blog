@@ -23,7 +23,24 @@
 | `strlen(s1)`     | 返回s1 的长度。                                             |
 | `strcmp(s1, s2)` | 若 s1 == s2，值 0<br>若 s1<s2 值小于 0<br>若 s1>s2 值大于 0 |
 | `strchr(s1, ch)` | 返回一个指针，指向 ch在s1中首次出现位置                     |
-| `strstr(s1, s2)` | 返回一个指针，指向 s2在s1中首次出现的位置                   |
+
+
+### strstr
+
+- 查找 s2在s1中首次出现的位置，返回第一次出现s2的位置，若未找到则返回NULL
+
+```c
+char *strstr(const char *s1, const char *s2)
+```
+
+```
+const char haystack[20] = "RUNOOB";
+const char needle[10] = "NOOB";
+char *ret;
+
+// NOOB
+ret = strstr(haystack, needle);
+```
 
 
 ### strcat
@@ -37,12 +54,15 @@ char *strcat(char *dest, const char *src)
 ```c
 char src[50], dest[50];
  
-strcpy(src,"This is source");
-strcpy(dest,"This is destination");
+strcpy(src, "AAAA");
+strcpy(dest, "BBBB");
 
-// This is destinationThis is source
 strcat(dest,src);
+
+// BBBBAAAA
+printf("%s\n", dest);
 ```
+
 
 ### strcpy
 
