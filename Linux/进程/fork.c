@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-17 23:53:18
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-19 21:12:26
+ * @LastEditTime: 2022-02-23 18:54:40
  */
 
 #include<stdio.h>
@@ -29,7 +29,7 @@ int main(void){
     else{
         sleep(1);
     }
-    printf("pid = %ld, g_var = %d, var = %d\n", getpid(), g_var,var);
+    printf("father pid = %ld, pid = %ld, g_var = %d, var = %d\n", getppid(), getpid(), g_var,var);
     return 0;
 
 }

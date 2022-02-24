@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-27 20:45:27
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-20 18:16:13
+ * @LastEditTime: 2022-02-24 21:33:46
 -->
 
 ## string函数
@@ -33,7 +33,7 @@
 char *strstr(const char *s1, const char *s2)
 ```
 
-```
+```c
 const char haystack[20] = "RUNOOB";
 const char needle[10] = "NOOB";
 char *ret;
