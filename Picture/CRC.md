@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-03-06 23:43:42
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-07 00:04:49
+ * @LastEditTime: 2022-03-08 21:22:59
 -->
 
 https://bigjar.github.io/2018/04/09/%E9%9A%90%E8%97%8F%E5%9C%A8%E5%9B%BE%E7%89%87%E4%B8%AD%E7%9A%84%E5%AF%86%E9%92%A5/#%E4%BE%8B%E5%AD%90
@@ -27,7 +27,7 @@ https://its401.com/article/lucboll/96480410
 PNG图片中的CRC算法为CRC32。其多项式表示为0x04C11DB7或者0xEDB88320(反转)
 
 ```c
-unsigned int getCrc32(unsigned char* inStr, unsigned int len) {
+unsigned int getCrc32(unsigned char *inStr, unsigned int len) {
     unsigned int CRC32Table[256];
     unsigned int i,j;
     unsigned int CRC;
@@ -50,3 +50,31 @@ unsigned int getCrc32(unsigned char* inStr, unsigned int len) {
     return CRC;
 }
 ```
+
+### 读取图片
+
+
+```c
+#include<iostream>
+#include<fstream>
+
+using namespace std;
+
+int main(){
+    ifstream is("a.png" , ifstream::in | ios::binary);
+    is.seekg(0 , is.end);
+    int length = is.tellg();
+    is.seekg(0 , is.beg);
+    printf("length : %d\n" , length);
+    char *buffer = new char[length];
+    is.read(buffer , length);
+    for(int i = 0; i < length; i++){
+        printf("%x" , buffer[i]);
+    }
+    printf("\n\n%s\n" , buffer);
+    delete[] buffer;
+    return 0;
+}
+```
+
+https://blog.csdn.net/qq_24003917/article/details/107425216
