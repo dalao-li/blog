@@ -1,53 +1,46 @@
-/*
- * @Description: 
- * @Version: 1.0
- * @Author: DaLao
- * @Email: dalao_li@163.com
- * @Date: 2022-03-08 21:22:04
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-08 21:25:29
- */
-
 #include<iostream>
 #include<fstream>
 
 using namespace std;
 
-unsigned int getCrc32(unsigned char *s, unsigned int len) {
-    unsigned int CRC32Table[256];
-    unsigned int i,j;
-    unsigned int CRC;
-    for (i = 0; i < 256; i++) {
-        CRC = i;
-        for (j = 0; j < 8; j++) {
-            if (CRC & 1)
-                CRC = (CRC >> 1) ^ 0xEDB88320;
-            else
-                CRC >>= 1;
+unsigned int getcrc32(char *s, unsigned int len) {
+    unsigned int crc_table[256];
+    unsigned int crc;
+    for (unsigned int i = 0; i < 256; i++) {
+        crc = i;
+        for (unsigned int j = 0; j < 8; j++) {
+            if (crc & 1){
+                crc = (crc >> 1) ^ 0x04c11db7;
+            }
+            else{
+                crc >>= 1;
+            }
         }
-        CRC32Table[i] = CRC;
+        crc_table[i] = crc;
     }
-    CRC = 0xffffffff;
-    for (unsigned int m = 0; m < len; m++) {
-        CRC = (CRC >> 8) ^ CRC32Table[(CRC & 0xFF) ^ s[m]];
+    crc = 0xffffffff;
+    for (unsigned int k = 0; k < len; k++) {
+        unsigned int index = (crc ^ (unsigned char)s[k]) & 0xff;
+        crc = (crc >> 8) ^ crc_table[index];
     }
-    
-    CRC ^= 0xFFFFFFFF;
-    return CRC;
+    crc ^= 0xffffffff;
+    return crc;
 }
 
-int main(){
-    ifstream is("a.png" , ifstream::in | ios::binary);
+// Segmentation fault (core dumped)
+// Program terminated with signal SIGSEGV, Segmentation fault.
+int main(int argc , char *argv[]){
+    // 打开图片文件
+    ifstream is(argv[1] , ifstream::in | ios::binary);
     is.seekg(0 , is.end);
+    // 获取文件流指针位置，计算图片长度
     int length = is.tellg();
+    // 将文件流指针定位到流的开始
     is.seekg(0 , is.beg);
     printf("length : %d\n" , length);
     char *buffer = new char[length];
     is.read(buffer , length);
-    for(int i = 0; i < length; i++){
-        printf("%x" , buffer[i]);
-    }
-    printf("\n\n%s\n" , buffer);
+    printf("\n--- %x \n",getcrc32(buffer,length));
     delete[] buffer;
     return 0;
 }
