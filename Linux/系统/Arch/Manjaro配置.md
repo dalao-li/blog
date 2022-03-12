@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-14 20:44:09
+ * @LastEditTime: 2022-03-11 23:54:38
 -->
 
 
@@ -142,6 +142,7 @@ yay -S --noconfirm visual-studio-code-bin flameshot grub-customizer vlc
 ```
 yay -Rns
 ```
+
 
 ### 安装deb
 

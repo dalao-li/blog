@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-21 18:34:00
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-21 18:43:49
+ * @LastEditTime: 2022-03-11 23:57:30
 -->
 
 ## grep
@@ -105,7 +105,7 @@ grep pattern$
 ```
 
 查找/root/test.txt文件中含有human的句子
-  
+
 ```sh
 grep human /root/test.txt
 ```

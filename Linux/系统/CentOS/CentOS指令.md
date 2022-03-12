@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-16 12:46:09
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-20 14:22:48
+ * @LastEditTime: 2022-03-11 23:54:55
 -->
 
 ## 更新源
@@ -17,6 +17,7 @@ sudo curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Ce
 
 sudo yum clean all && yum makecache &&  yum -y update
 ```
+
 
 ## 配置Python
 
@@ -41,6 +42,7 @@ sudo sed -i "s#bin#bin:/usr/bin/python3/bin#g" ~/.bash_profile
 # 执行以下命令使对配置的修改生效
 sudo source ~/.bash_profile
 ```
+
 
 ## 安装Docker
 
@@ -79,6 +81,7 @@ sudo curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.re
 
 sudo yum update -y && yum install epel-release -y
 ```
+
 
 ## 防火墙
  
