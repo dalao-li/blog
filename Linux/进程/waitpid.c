@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-23 21:44:57
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-23 22:07:20
+ * @LastEditTime: 2022-03-15 21:45:58
  */
 
 #include<stdio.h>
@@ -17,6 +17,7 @@ int main(void){
     pid_t pid = fork();
     if(pid == 0){
         printf("a");
+        // 刷新缓冲区
         fflush(stdout);
     }
     else{

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-19 21:25:41
+ * @LastEditTime: 2022-03-15 22:07:57
 -->
 
 ## 类
@@ -59,6 +59,7 @@ a = A('lili'， 23)
 # {'name': 'lili'， 'age': 23}
 print(a.__dict__)
 ```
+
 
 ### 赋值
 

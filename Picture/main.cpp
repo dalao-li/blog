@@ -1,3 +1,12 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2022-03-10 22:20:04
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-03-14 21:42:43
+ */
 #include<iostream>
 #include<fstream>
 
@@ -62,9 +71,9 @@ int main(int argc , char *argv[]){
     char *buffer = new char[length];
     // 从输入流中提取n个字符，存数组中
     is.read(buffer , length);
-    //unsigned int crc32 = g_crc32(buffer , length);
+    unsigned int c = g_crc32(buffer , length);
     unsigned int crc32 = get_crc32(buffer , length);
-    printf("crc32 = %x \n" , crc32);
+    printf("crc32 = %x \nc = %x\n" , crc32,c);
     
     delete[] buffer;
     is.close();

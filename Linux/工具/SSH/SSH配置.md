@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-21 20:57:28
+ * @LastEditTime: 2022-03-15 21:51:56
 -->
 
 ## SSH
@@ -44,7 +44,6 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
 ```
 
 ![](https://cdn.hurra.ltd/img/20211229213337.png)
-
 
 
 ### .ssh目录

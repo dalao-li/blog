@@ -5,11 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-08 10:45:40
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-19 21:43:23
+ * @LastEditTime: 2022-03-15 22:03:25
  */
 
 #include<iostream>
 using namespace std;
+
 class Complex {
 	private:
 		double real;
@@ -33,17 +34,17 @@ ostream & operator << (ostream &ouput , Complex &c) {
 }
 
 Complex::operator +(Complex &c) {
-	return Complex(this->real+c.real , this->imag+c.imag);
+	return Complex(this->real + c.real , this->imag + c.imag);
 }
 
 Complex::operator -(Complex &c) {
-	return Complex(this->real-c.real , this->imag-c.imag);
+	return Complex(this->real - c.real , this->imag - c.imag);
 }
 
 Complex::operator +(Complex &c) {
-	return Complex(this->real+c.real , this->imag+c.imag);
+	return Complex(this->real + c.real , this->imag + c.imag);
 }
 
 Complex::operator +(Complex &c) {
-	return Complex(this->real+c.real , this->imag+c.imag);
+	return Complex(this->real + c.real , this->imag + c.imag);
 }

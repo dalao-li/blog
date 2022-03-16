@@ -5,11 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-26 22:50:00
+ * @LastEditTime: 2022-03-15 22:04:24
  */
+
 #include<iostream>
 #include<fstream>
 using namespace std;
+
 int main()
 {
 	int n , *p;

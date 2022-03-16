@@ -7,7 +7,7 @@
  # @Email: dalao_li@163.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: DaLao
- # @LastEditTime: 2022-02-14 01:13:05
+ # @LastEditTime: 2022-03-14 22:49:50
 ### 
 
 # 设置flameshot快捷键
@@ -119,6 +119,7 @@ set_jetbrains_ide(){
     name=${3}
     
     sudo tar -xvf ${DISK_PATH}/Ubuntu/Jetbrains/${1} -C /usr/local/bin
+    
     sudo mv /usr/local/bin/${2} /usr/local/bin/${name}
 
     path="/usr/local/bin/${name}/bin/${name}"

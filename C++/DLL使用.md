@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-20 11:26:41
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-26 22:51:59
+ * @LastEditTime: 2022-03-15 22:05:25
 -->
 ## DLL
 
@@ -44,7 +44,7 @@ DLLEXPORT void hello();
 
 using namespace std;
 
-int add(int a,int b) {
+int add(int a , int b) {
 	return a + b;
 }
 
@@ -82,7 +82,6 @@ pdll.hello()
 
 
 ### dll 与 lib的区别
-
 
 - lib 是编译时调用，dll 是运行时调用
 

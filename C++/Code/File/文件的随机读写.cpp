@@ -1,6 +1,16 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2022-02-13 19:00:24
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-03-15 22:04:43
+ */
 #include<bits/stdc++.h>
 #define SIZE 3
 using namespace std;
+
 struct Stu {
 	char name[20];
 	long num;
