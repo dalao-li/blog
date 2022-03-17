@@ -5,10 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-24 15:25:28
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:32:08
+ * @LastEditTime: 2022-03-17 21:39:34
 -->
 
 ## Readis
+
 
 ### 命令
 
@@ -77,7 +78,7 @@ docker run -itd \
     -p 6379:6379 \
     -v $PWD/redis.conf:/etc/redis/redis.conf \
     --name redis-test \
-    redis 
+    redis
 ```
 
 ```sh

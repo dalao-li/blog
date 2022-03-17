@@ -5,12 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 17:59:27
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:46:57
+ * @LastEditTime: 2022-03-18 00:02:18
 -->
 
 ## Git 设置
 
-![](https://cdn.hurra.ltd/img/20200720231600.png)
+![](https://cdn.hurra.ltd/img/2022-3-17-0002.svg)
+
+![](https://cdn.hurra.ltd/img/2022-3-17-2310.svg)
 
 
 ### 设置

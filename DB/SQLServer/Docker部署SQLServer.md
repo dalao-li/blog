@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 23:48:41
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:32:41
+ * @LastEditTime: 2022-03-17 21:40:56
 -->
 
 ## SQLServer
@@ -51,7 +51,7 @@ GO
 - 显示表
 
 ```sql
-SELECT * FROM 表名
+SELECT * FROM [表名]
 GO
 ```
 
@@ -66,7 +66,7 @@ GO
 
 ![](https://cdn.hurra.ltd/img/20201012105710.png)
 
-注意:反人类的SQLServer的主机地址需写为: `ip，端口`，注意是`逗号`
+注意:反人类的SQLServer的主机地址需写为: `ip,端口`，注意是`逗号`
 
 ![](https://cdn.hurra.ltd/img/20201012130100.png)
 
@@ -74,10 +74,10 @@ GO
 import pymssql
 
 conn = pymssql.connect(
-    host = IP:端口，
-    user = "sa"，
-    password = 密码，
-    database = 数据库，
+    host = IP:端口,
+    user = "sa",
+    password = 密码,
+    database = 数据库,
     charset = 'utf8'
 )
 
@@ -90,9 +90,8 @@ try:
     # 执行SQL语句
     cursor.execute(sql)
     results = cursor.fetchall()
-    # print(results)
 except:
-    # print(results)
+    ....
 
 # 关闭数据库连接
 conn.close()

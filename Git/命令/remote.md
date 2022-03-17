@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:57:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-20 17:42:33
+ * @LastEditTime: 2022-03-17 21:42:48
 -->
 
 ## remote
@@ -34,6 +34,6 @@ git remote set-url --add origin [远程 URL]
 
 或配置.git/config
 
-![](https://cdn.hurra.ltd/img/20211214220953.png) 
+![](https://cdn.hurra.ltd/img/20211214220953.png)
 
 此时`git push origin master` 就可一次性`push`到多个库

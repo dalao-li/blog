@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:20:22
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-20 17:37:48
+ * @LastEditTime: 2022-03-18 00:11:12
 -->
 
 ## branch
@@ -34,8 +34,6 @@ git branch
 git branch 分支名
 ```
 
-![](https://cdn.hurra.ltd/img/20220112081747.png)
-
 
 ### 切换
 
@@ -54,13 +52,13 @@ git checkout -b 分支名
 ![](https://cdn.hurra.ltd/img/20220112081849.png)
 
 
-## 删除
+### 删除
 
 ```sh
 git branch -d 分支名
 ```
 
-## 合并
+### 合并
 
 - 合并A分支到当前分支
 

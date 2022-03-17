@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-20 18:02:38
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-20 18:02:39
+ * @LastEditTime: 2022-03-17 22:25:00
 -->
 
 ## init
@@ -24,7 +24,8 @@ git init 项目名
 
 ![](https://cdn.hurra.ltd/img/20220112075837.png)
 
-## status
+
+### status
 
 - 查看文件状态
 
@@ -34,24 +35,7 @@ git status
 
 ![](https://cdn.hurra.ltd/img/20220112080241.png)
 
-## add
-
-- 添加所有文件到暂存区
-
-```sh
-git add .
-```
-
-- 撤回暂存区文件
-
-```sh
-# 默认所有文件，也可指定文件
-git reset HEAD
-```
-
-![](https://cdn.hurra.ltd/img/20220112080614.png)
-
-## log
+### log
 
 提交记录
 

@@ -5,14 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:30:02
+ * @LastEditTime: 2022-03-17 21:38:34
 -->
 
 ## MySQL 授权
 
 ### 用户
 
-- 创建用户 
+- 创建用户
 
 ```sql
 create user '用户名'@'host' identified by '密码';
@@ -37,6 +37,7 @@ select host,user,authentication_string from mysql.user;
 
 
 ![](https://cdn.hurra.ltd/img/20200516001919.png)
+
 
 ### 授权
 
@@ -111,7 +112,7 @@ grant select,create on *.* to 'test_4'@'%';
 
 使用 test_4 登录，尝试创建数据库 test_db
 
-```sql 
+```sql
 create database test_db;
 ```
 

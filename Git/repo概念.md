@@ -5,17 +5,17 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-20 18:07:33
+ * @LastEditTime: 2022-03-17 21:48:04
 -->
 ## 工具
 
 - git
 
-版本管理库，在$git$库中没有中心服务器的概念，真正的分布式
+版本管理库，在git库中没有中心服务器的概念，真正的分布式
 
 - repo
 
-$repo$就是多个$git$库的管理工具。如果是多个git库同时管理，可以使用repo，当然使用gerrit$，就必须用$repo$
+repo就是多个git库的管理工具。如果是多个git库同时管理，可以使用repo，当然使用gerrit，就必须用repo
 
 - gerrit
 
@@ -49,11 +49,11 @@ repo start 分支名
 repo upload xxx
 ```
 
-6. review如果有需要改动的地方，那本地改好后，git commit --amend来保存新的修改
+6. review如果有需要改动的地方，那本地改好后，`git commit --amend`来保存新的修改
 
 7. repo upload 将新的改动上传
 
-重复5-7步，直到$review$通过，然后$merge$改动，完毕
+重复5-7步，直到review通过，然后merge改动，完毕
 
 
 ## Repo指令

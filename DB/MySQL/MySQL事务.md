@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:30:15
+ * @LastEditTime: 2022-03-17 21:38:02
 -->
 
 ## 事务
@@ -17,7 +17,7 @@
 
 - 原子性  Atomic
 
-一个事务中的全部操作，要么全部都完成，要么全部不完成.事务在执行过程中发生错误，会被回滚($rollback$)到事务开始前的状态
+一个事务中的全部操作，要么全部都完成，要么全部不完成.事务在执行过程中发生错误，会被回滚(rollback)到事务开始前的状态
 
 - 一致性Consistency 
 
@@ -61,7 +61,7 @@ CREATE TABLE "info" (
 ```
 
 - 开始事务
-  
+
 ```sql
 BEGIN;
 
@@ -75,7 +75,7 @@ COMMIT;
 
 
 - 回滚事务
-  
+
 ```sql
 BEGIN;
 
