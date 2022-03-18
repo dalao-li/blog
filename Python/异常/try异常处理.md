@@ -6,7 +6,7 @@
  * @QQ: 1061299112
  * @Date: 2021-01-25 22:06:50
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-16 13:46:07
+ * @LastEditTime: 2022-03-18 22:24:40
 -->
 
 ## 异常
@@ -25,7 +25,7 @@ finally:
 ```
 
 ```py
-def judge(s: str)-> bool:
+def judge(s : str)-> bool:
     if len(s) > 5:
         throw 
 

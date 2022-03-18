@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-22 23:42:03
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-16 15:03:48
+ * @LastEditTime: 2022-03-18 22:38:57
 -->
 
 ## MongoEngine
@@ -34,6 +34,7 @@ class User(Document):
 user = User.objects.filter(name='Wang').first().to_json(ensure_ascii=False)
 ```
 
+
 ### 增加
 
 ```py
@@ -48,6 +49,7 @@ scores.append(Score(name='C++'，score=90))
 
 User.objects.filter(name='Wang').first().update(scores=scores)
 ```
+
 
 ### 修改
 

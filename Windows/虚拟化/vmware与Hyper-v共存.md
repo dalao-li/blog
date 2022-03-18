@@ -7,6 +7,8 @@
  * @LastEditors: DaLao
  * @LastEditTime: 2021-11-14 14:16:28
 -->
+
+
 ## 问题
 
 在Vmware中创建虚拟机的时候，Vmware提示
@@ -20,6 +22,7 @@ VMware Workstation和Hyper-V不兼容.
 ## 原因
 
 两者都是基于 $CPU$ 等底层硬件的 $Hypervisor$ 机制来实现的，而他们必须独占管理 $Hypervisor$，因此不能在一台电脑中同时运行
+
 
 ## 解决方案
 

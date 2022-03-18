@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-15 21:12:13
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-17 23:51:17
+ * @LastEditTime: 2022-03-18 22:12:10
 -->
 
 ## fetch
@@ -48,7 +48,7 @@ git pull 远程主机名 远程分支名:本地分支名
 git pull origin master
 ```
 
-### 原理
+- 原理
 
 `git pull`的过程可分解为
 

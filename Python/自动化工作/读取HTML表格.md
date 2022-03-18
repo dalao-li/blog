@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-28 20:34:49
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-28 22:07:24
+ * @LastEditTime: 2022-03-18 22:25:19
 -->
 
 ### 读取网页中表格
@@ -18,6 +18,7 @@ url='http://www.kuaidaili.com/free/'
 # [0]：表示第一个table，多个table需要指定，如果不指定默认第一个
 df = pd.read_html(url)[0] 
 ```
+
 
 ### 下载表格
 

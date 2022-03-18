@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-25 23:07:05
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-17 21:42:38
+ * @LastEditTime: 2022-03-18 22:00:55
 -->
 
 ## push
@@ -26,19 +26,6 @@ git push origin 分支
 ```
 
 
-### Registry
-
-- 查看远程仓库
-
-```sh
-git remote -v
-```
-
-- 删除远程仓库
-
-```sh
-git remote rm [远程分支名]
-```
 
 
 

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 01:14:30
+ * @LastEditTime: 2022-03-18 22:40:11
 -->
 
 ## 关键字
@@ -40,6 +40,7 @@ urlpatterns = [
 
 ![](https://cdn.hurra.ltd/img/20200903091232.png)
 
+
 - 多关键字
 
 views.py文件
@@ -61,6 +62,7 @@ urlpatterns = [
 ```
 
 前面的 w+传给 v1，后面的 w+传给 v2此时可以匹配`127.0.0.1:8000/dis/<字符1>/<字符2>`这类 url，并且字符 1 将传给 dis 函数的 v1 参数;字符 2 将传给 dis 函数的 v2 参数
+
 
 ## 反射
 
@@ -92,9 +94,9 @@ def goodbye_world(request):
 ![](https://cdn.hurra.ltd/img/20200903103754.png)
 
 
-##  删除模板中硬编码的URLs
+##  删除硬编码URL
 
-硬编码即href里的“/polls/”部分:
+硬编码即href里的“/polls/”部分
 
 ```html
 <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>

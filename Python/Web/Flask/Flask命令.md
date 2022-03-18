@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-09-24 20:37:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-16 13:36:00
+ * @LastEditTime: 2022-03-18 22:42:48
 -->
 
 
@@ -20,6 +20,7 @@ flask run
 flask run --host=0.0.0.0 --port=5000
 ```
 
+
 ## shell 运行
 
 ```sh
@@ -29,6 +30,7 @@ python -m flask run --host=0.0.0.0 --port=5000
 
 ps -aux | grep flask | grep -v grep | awk {'print $2'} | xargs kill -9 && python -m flask run --host=0.0.0.0 --port=500
 ```
+
 
 ## 建立脚本
 

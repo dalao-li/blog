@@ -6,8 +6,11 @@
  * @QQ: 1061299112
  * @Date: 2021-01-25 19:58:42
  * @LastEditors: DaLao
- * @LastEditTime: 2021-09-30 21:48:21
+ * @LastEditTime: 2022-03-18 22:44:22
 -->
+
+## MBR->GPT
+
 
 ```sh
 # 查询所有磁盘

@@ -5,10 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-08 00:03:57
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-17 02:04:47
+ * @LastEditTime: 2022-03-18 22:14:52
 -->
 
 ## NodeJS
+
 
 ### 安装
 
@@ -30,6 +31,7 @@ sudo ln -s /opt/node-v16.13.1-linux-x64/bin/node /usr/local/bin/node
 sudo pacman -S nodejs npm
 ```
 
+
 ### 换源
 
 ```sh
@@ -42,6 +44,7 @@ npm config set registry http://mirrors.cloud.tencent.com/npm/
 # 如果返回http://mirrors.cloud.tencent.com/npm/，说明镜像配置成功
 npm config get registry
 ```
+
 
 ### 卸载
 

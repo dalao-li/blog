@@ -6,10 +6,15 @@
 项目目录
 
 - init: 一个空文件，声明所在目录的包为一个 Python 包
+
 - settings: 管理项目的配置信息
+
 - urls: 声明请求 url 的映射关系
+
 - wsgi: python 程序和 web 服务器的通信协议
+
 - manage: 一个命令行工具，用来和 Django 项目进行交互
+
 
 ## 创建应用
 
@@ -23,14 +28,15 @@ python manage.py startapp app
 应用目录结构:
 
 - admin:app 应用后台管理配置文件
-  
+
 - apps:app 应用的配置文件
-  
+
 - models:数据模块，用于设计数据库等
-  
+
 - tests:编写测试脚本
-  
+
 - views:视图层，直接和浏览器进行交互
+
 
 ## 应用注册
 
@@ -145,6 +151,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 ```
 
+
 ## 视图
 
 编辑app/view.py文件
@@ -157,6 +164,7 @@ from django.shortcuts import render
 def hello(request):
     return HttpResponse('Hello World')
 ```
+
 
 ## 路由
 
@@ -173,6 +181,7 @@ urlpatterns = [
     path('hello/', app.views.hello)
 ]
 ```
+
 
 ## 测试
 

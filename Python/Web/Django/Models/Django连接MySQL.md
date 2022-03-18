@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-16 15:03:17
+ * @LastEditTime: 2022-03-18 22:38:16
 -->
 
 ## Django 操作MySQL
@@ -38,6 +38,7 @@ DATABASES = {
     }
 }
 ```
+
 
 ## 建表
 
@@ -77,6 +78,7 @@ class Stu(models.Model):
 | DateTimeField | 日期时间类型, Python datetime.datetime()实例.多了小时、分和秒的显示, 例如 2020-08-05 23:08                                      |
 | FileField     | 上传文件类型                                                                                                                    |
 | ImageField    | 图像类型                                                                                                                        |
+
 
 ### 字段参数
 

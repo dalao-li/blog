@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-14 05:43:48
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-15 06:54:37
+ * @LastEditTime: 2022-03-18 22:31:36
 -->
 
 ## sorted
@@ -13,6 +13,7 @@
 ```py
 sorted(iterable, cmp=None, key=None, reverse=False)
 ```
+
 sorted函数将按列表升序进行排序，返回新list对象，原list保持不变
 
 | 参数     | 含义                                                   |
@@ -26,7 +27,8 @@ sorted函数将按列表升序进行排序，返回新list对象，原list保持
 
 sort 应用于 list，sorted 可对所有可迭代的对象进行排序
 
-sort 方法仅操作列表，sorted 方法返回的`新list`
+sort 方法仅操作列表，sorted 方法返回的新list
+
 
 ### 默认情况
 
@@ -107,7 +109,7 @@ sorted(s, key = attrgetter('age'))
 ```
 
 
-### 多字段来排序
+### 多字段排序
 
 sorted也可以根据多个字段来排序，例如要先根据age排序，若age相同则根据grade排序
 
