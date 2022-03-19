@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2021-11-28 15:09:02
+ * @LastEditTime: 2022-03-18 23:42:15
  */
 
 #include<stdio.h>
@@ -16,7 +16,7 @@ typedef struct Tree {
 	char data;
 	Tree *leftSon;
 	Tree *rightSon;
-} Tree，*TreeList;
+} Tree,*TreeList;
 
 // 树的初始化
 TreeList initTree(TreeList root) {
@@ -35,7 +35,7 @@ TreeList initTree(TreeList root) {
 TreeList creatTree(TreeList &root) {
 
 	char elem;
-	scanf("%c"，&elem);
+	scanf("%c",&elem);
 	if(elem!='#') {
 		root = (TreeList)malloc(sizeof(Tree));
 		root->data = elem;
@@ -50,7 +50,7 @@ void inOrderTree(TreeList &root) {
 	if(root!=NULL) {
 
 		inOrderTree(root->leftSon);
-		printf("%c "，root->data);
+		printf("%c ",root->data);
 		inOrderTree(root->rightSon);
 	}
 }
@@ -77,18 +77,18 @@ int sumOfNode(TreeList &root) {
 
 // 计算树的深度
 int deepOfTree(TreeList &root) {
-	return max(deepOfTree(root->leftSon)，deepOfTree(root->rightSon))+1;
+	return max(deepOfTree(root->leftSon),deepOfTree(root->rightSon))+1;
 }
 
 
 // 统计各个叶子到根节点的距离
-void  distanceFromRoot(TreeList &root，int sum) {
+void  distanceFromRoot(TreeList &root,int sum) {
 	if(root->leftSon==NULL&&root->rightSon==NULL) {
 		std::cout<<sum;
 		sum=0;
 	} else {
-		distanceFromRoot(root->leftSon，sum+1);
-		distanceFromRoot(root->rightSon，sum+1);
+		distanceFromRoot(root->leftSon,sum+1);
+		distanceFromRoot(root->rightSon,sum+1);
 	}
 }
 
@@ -99,9 +99,9 @@ int main() {
 	creatTree(root);
 	inOrderTree(root);
 	printf("\n");
-	printf("树叶总个数为:%d\n"，sumOfLeaves(root));
-	distanceFromRoot(root，0);
-	printf("节点总个数为:%d\n"，sumOfNode(root));
-	printf("树的深度为:%d\n"，deepOfTree(root));
+	printf("树叶总个数为:%d\n",sumOfLeaves(root));
+	distanceFromRoot(root,0);
+	printf("节点总个数为:%d\n",sumOfNode(root));
+	printf("树的深度为:%d\n",deepOfTree(root));
 	return 0;
 }

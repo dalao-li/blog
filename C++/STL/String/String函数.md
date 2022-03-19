@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:21:39
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:21:39
+ * @LastEditTime: 2022-03-19 15:36:05
 -->
 
 
@@ -42,7 +42,7 @@ int main(){
 	string str = " 123 456237";
 	int index = 3;
 	int length = 1;
-	for(int i = 0 ; i< str.size();i++){
+	for(int i = 0; i< str.size(); i++){
 		if()
 	} 
 	str.erase(index，length);

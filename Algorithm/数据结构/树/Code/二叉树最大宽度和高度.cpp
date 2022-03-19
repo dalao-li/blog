@@ -14,15 +14,15 @@ int n;
 int depth=1;
 int wide=1;
 
-void dfs(int i，int deep) {
+void dfs(int i,int deep) {
 	Leaf[i].dep=deep;
 	if(Leaf[i].left==0&&Leaf[i].right==0) {
 		depth=depth>deep?depth:deep;
 	} else {
 		if(Leaf[i].left!=0) {
-			dfs(Leaf[i].left，deep+1);
+			dfs(Leaf[i].left,deep+1);
 		} else if(Leaf[i].right!=0) {
-			dfs(Leaf[i].right，deep+1);
+			dfs(Leaf[i].right,deep+1);
 		}
 	}
 }
@@ -31,7 +31,7 @@ queue<Lnode> q;
 void bfs(int i) {
 
 	q.push(Leaf[i]);
-	int d=0，a=1;
+	int d=0,a=1;
 
 	while(!q.empty()) {
 		Lnode L=q.front();
@@ -60,7 +60,7 @@ int main() {
 		cin>>Leaf[i].left>>Leaf[i].right;
 
 	}
-	dfs(1，depth);
+	dfs(1,depth);
 	for(int i=1; i<=n; i++) {
 		cout<<Leaf[i].dep<<endl;
 	}

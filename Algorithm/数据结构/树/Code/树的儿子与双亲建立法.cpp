@@ -1,3 +1,12 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2022-02-13 19:00:24
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-03-18 23:41:58
+ */
 #include<stdio.h>
 #include<iostream>
 #include<stdlib.h>
@@ -9,7 +18,7 @@ typedef struct Tree {
 	int parent;
 	int leftSon;
 	int rightSon;
-} Tree，*TreeList;
+} Tree,*TreeList;
 
 //树的初始化
 TreeList initTree(TreeList root) {
@@ -53,19 +62,19 @@ TreeList creatTree(TreeList &root) {
 }
 
 //LDR        D B E A C
-void inOrderTree(TreeList &root，int n) {
+void inOrderTree(TreeList &root,int n) {
 	if(root[n].leftSon==-1&&root[n].rightSon==-1){
 		return; 
 	}
 	else{
-		inOrderTree(root，root[n].leftSon);
+		inOrderTree(root,root[n].leftSon);
 		cout<<root[n].data<<" ";
-		inOrderTree(root，root[n].rightSon);
+		inOrderTree(root,root[n].rightSon);
 	}
 }
 
 int main(){
 	TreeList root;
 	root = creatTree( root);
-	inOrderTree(root，4);
+	inOrderTree(root,4);
 }
