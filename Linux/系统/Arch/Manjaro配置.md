@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-11 23:54:38
+ * @LastEditTime: 2022-03-22 23:48:15
 -->
 
 
@@ -197,4 +197,13 @@ export LC_CTYPE=zh_CN.UTF-8
 echo "export PATH=$HOME/anaconda3/bin:$PATH">>~/.bashrc
 
 source ~/.bashrc
+```
+
+
+### 向日葵
+
+```sh
+yay -Sy sunloginclient
+
+systemctl start runsunloginclient.service
 ```
