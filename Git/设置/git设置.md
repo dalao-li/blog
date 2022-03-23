@@ -8,10 +8,7 @@
  * @LastEditTime: 2022-03-18 22:10:12
 -->
 
-## Git
-
-![](https://cdn.hurra.ltd/img/2022-3-17-2310.svg)
-
+## Git设置
 
 ### 设置
 

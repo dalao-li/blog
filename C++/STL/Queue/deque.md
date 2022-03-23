@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-07-16 22:43:26
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:19:24
+ * @LastEditTime: 2022-03-23 21:10:04
 -->
 
 ## deque
@@ -19,29 +19,65 @@
 
 ### 插入
 
-- `push_front` 头部插入 
+- 头部插入
 
-- `push_back()` 尾部插入 
+```c
+push_front()
+```
 
-- `iterator insert(p , e)` 插入元素 e 到 p 位置 
+- 尾部插入
+
+```c
+push_back()
+```
+
+- 插入元素 e 到 p 位置
+
+```c
+iterator insert(p , e)
+```
 
 
 ### 删除
 
-- `pop_front()` 删除头部的元素 
-  
-- `pop_back()` 删除尾部的元素 
+- 删除头部的元素
 
-- `iterator erase(iterator p)` 删除 p 位置上元素 
+```c
+pop_front()
+```
+
+- 删除尾部的元素
+
+```c
+pop_back()
+```
+
+- 删除 p 位置上元素
+
+```c
+iterator erase(iterator p)
+```
 
 
 ### 查找
 
-- `reference at(size_type p)` 返回位置 p 上的元素 
-  
-- `front()` 返回头部元素
+- 返回位置 p 上的元素
 
-- `back()`返回尾部元素 
+```c
+reference at(size_type p)
+```
+
+- 返回头部元素
+
+```c
+front()
+```
+
+- 返回尾部元素
+
+```c
+back()
+```
 
 
 ### 实例
@@ -49,6 +85,7 @@
 ```c
 #include<iostream>
 #include<deque>
+
 using namespace std;
 
 deque<int> q;

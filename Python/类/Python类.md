@@ -5,12 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-15 22:07:57
+ * @LastEditTime: 2022-03-23 22:56:18
 -->
 
-## 类
+## 一、类
 
-### 定义
+### 1.1 定义
 
 ```py
 class Stu:
@@ -25,7 +25,7 @@ self代表类的实例，而非类
 类的方法与普通的函数的区别为它们必须有一个额外的首参数名称self
 
 
-### 方法
+### 1.2 方法
 
 ```py
 class Person:
@@ -46,7 +46,9 @@ class Person:
 ```
 
 
-### 获值
+### 1.3 操作
+
+- 获值
 
 ```py
 class A(object):
@@ -60,8 +62,7 @@ a = A('lili'， 23)
 print(a.__dict__)
 ```
 
-
-### 赋值
+- 赋值
 
 ```py
 class Person:
@@ -71,7 +72,9 @@ class Person:
 ```
 
 
-### 继承
+### 1.4 继承
+
+- 继承类
 
 ```py
 class People:
@@ -82,8 +85,6 @@ class People:
     def speak(self):
         print(self.name, self.age)
 ```
-
-- 继承类
 
 ```py
 class Student(People):

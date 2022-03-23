@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 20:40:55
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 12:24:47
+ * @LastEditTime: 2022-03-23 20:59:10
 -->
 
 ## Vector
@@ -27,6 +27,8 @@ vector<vector<T> > v;
 - 尾部插入
 
 ```c
+vector<T> v;
+
 v.push_back(value);
 ```
 
@@ -35,8 +37,11 @@ v.push_back(value);
 - 删除x, y之间的元素
 
 ```c
-v.earse(v.begin() + x, v.end() - y);
+vector<T> v;
+
+v.earse(v.begin() + x , v.end() - y);
 ```
+
 - 清空
 
 ```c
@@ -46,14 +51,18 @@ v.clear();
 ### 遍历
 
 ```c
+vector<T> v;
+
 for(vector<T>::iterator it = v.begin(); it != v.end(); ++it) {
-	// *it
+    // *it
 }
 ```
 
 ### 翻转
 
 ```c
-reverse(v.begin(), v.end());
+vector<T> v;
+
+reverse(v.begin() , v.end());
 ```
 
