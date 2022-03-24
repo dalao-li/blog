@@ -5,13 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:20:22
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-18 22:04:09
+ * @LastEditTime: 2022-03-24 23:29:25
 -->
 
 ## branch
 
 
-### 查看
+### 1.1 查看
 
 - 所有分支
 
@@ -28,14 +28,14 @@ git branch
 ![](https://cdn.hurra.ltd/img/20220112081438.png)
 
 
-### 建立
+### 1.2 建立
 
 ```
 git branch 分支名
 ```
 
 
-### 切换
+### 1.3 切换
 
 - 切换到分支
 
@@ -50,14 +50,14 @@ git checkout -b 分支名
 ```
 
 
-### 删除
+### 1.4 删除
 
 ```sh
 git branch -d 分支名
 ```
 
 
-### 合并
+### 1.5 合并
 
 - 合并A分支到当前分支
 

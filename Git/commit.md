@@ -5,15 +5,16 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:02:13
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-23 20:42:22
+ * @LastEditTime: 2022-03-24 23:33:14
 -->
 
+## git 提交
 
 ![](https://cdn.hurra.ltd/img/git.svg)
 
 ![](https://cdn.hurra.ltd/img/2022-3-17-2310.svg)
 
-## init
+## 一、init
 
 - 新建代码仓库(当前目录)
 
@@ -37,7 +38,7 @@ git status
 ```
 
 
-## add
+## 二、add
 
 - 添加所有文件到暂存区
 
@@ -55,7 +56,7 @@ git reset HEAD
 ![](https://cdn.hurra.ltd/img/20220112080614.png)
 
 
-## commit
+## 三、commit
 
 ![](https://cdn.hurra.ltd/img/2022-3-18-2158.svg)
 
@@ -89,3 +90,19 @@ git push --force-with-lease
 ```
 
 
+## 五、push
+
+`push` 将本地的分支版本上传到远程并合并
+
+```sh
+git push 远程主机名 本地分支名:远程分支名
+```
+
+- 上传本地分支到远程分支
+
+```sh
+# 建立本地到上游(远端)仓的链接，这样代码才能提交
+git branch --set-upstream-to=origin/分支
+
+git push origin 分支
+```
