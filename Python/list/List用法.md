@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-04 01:28:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-23 23:01:50
+ * @LastEditTime: 2022-03-25 22:09:35
 -->
 
 ## 一、List使用
@@ -101,9 +101,9 @@ a = [1, 2, 3, 4, 5, 6, 7]
 # [3, 4, 5]
 print(s[2:5])
 ```
- 
+
 - `[start:]`
-  
+
 截取索引范围 `[start,末尾]`
 
 ```py
