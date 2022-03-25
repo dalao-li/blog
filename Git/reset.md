@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-03-24 23:33:20
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-24 23:33:21
+ * @LastEditTime: 2022-03-25 20:35:32
 -->
 
 
@@ -24,11 +24,10 @@ git reset -i HEAD~3
 
 ### --mixed(默认)
 
-`不删除`工作空间改动代码，撤销`commit`，并且撤销`git add .`
+`不删除`工作空间改动代码，撤销`commit`，并撤销`git add .`
 
 ```sh
-# 效果一样
-git reset --mixed HEAD^
+git reset --mixed HEAD^ 或
 
 git reset HEAD^
 ```
