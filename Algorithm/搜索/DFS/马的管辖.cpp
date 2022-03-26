@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2021-01-26 10:45:21
+ * @LastEditTime: 2022-03-27 00:35:44
  */
 
 #include <cstdio>
@@ -13,10 +13,12 @@
 #include <cstring>
 using namespace std;
 //马走日
-int dir[8][2] = {{-2， -1}， {-1， 2}， {2， 1}， {-1， -2}， {-2， 1}， {1， 2}， {2， -1}， {1， -2}};
+int dir[8][2] = {{-2 , -1} , {-1 ,2} , {2 ,1} , {-1 , -2} , {-2 , 1} , {1 , 2} , {2 , -1} , {1 , -2}};
 //蹩了马脚
-int vis[8][2] = {{-1， 0}， {0， 1}， {1， 0}， {0， -1}， {-1， 0}， {0， 1}， {1， 0}， {0， -1}};
-int n = 5， m = 5;
+int vis[8][2] = {{-1 , 0} , {0 , 1} , {1 , 0} , {0 , -1} , {-1 , 0} , {0 , 1} , {1 , 0} , {0 , -1}};
+
+int n = 5;
+int m = 5;
 int map[5][5];
 //最小方案数
 int MINV = 0x7fffffff;
@@ -24,7 +26,7 @@ int MINV = 0x7fffffff;
 int fun(int t)
 {
 	//每种方案之前要清0
-	memset(map， 0， sizeof(map));
+	memset(map ,0 ,sizeof(map));
 	//马的个数
 	int cnt = 0;
 	//马放的位置
@@ -98,7 +100,7 @@ int fun(int t)
 int main()
 {
 	int ans[26];
-	memset(ans， 0， sizeof(ans));
+	memset(ans ,0 ,sizeof(ans));
 	for (int i = 0; i < (1 << 25); i++)
 	{
 		int t = fun(i);
@@ -112,7 +114,7 @@ int main()
 	{
 		if (ans[i])
 		{
-			printf("%d\n%d\n"， i， ans[i]);
+			printf("%d\n%d\n" , i ,ans[i]);
 			return 0;
 		}
 	}

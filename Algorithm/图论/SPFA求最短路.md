@@ -4,6 +4,7 @@
 
 求$A$到其他点的最短路
 
+
 ### 理论
 
 建立一个队列，存入开始节点，队列不为空时
@@ -94,83 +95,83 @@ const int MAXV = 10000;
 using namespace std;
 
 typedef struct E {
-	char sp;
-	char ep;
-	int w;
-	E() {}
-	E(char s,char e, int w) : sp(s), ep(e), w(w) {}
+    char sp;
+    char ep;
+    int w;
+    E() {}
+    E(char s,char e, int w) : sp(s) , ep(e) , w(w) {}
 } E;
 
 vector<E> edge;
 
-char node[5] = {'A','B', 'C', 'D', 'E'};
+char node[5] = {'A' , 'B' , 'C' , 'D' , 'E'};
 
 int path[SIZE];
 
 int in[SIZE];
 
 int getIndex(char n) {
-	for(int i = 0 ; i<5; i++) {
-		if(node[i] == n) {
-			return i;
-		}
-	}
+    for(int i = 0; i < 5; i++) {
+        if(node[i] == n) {
+            return i;
+        }
+    }
 }
 
 // 求s到其他点间的最短路
 void SPFA(char s) {
-	queue<char> q;
-	memset(path, MAXV, sizeof(path));
-	memset(in, 0, sizeof(in));
-	int index = getIndex(s);
-	// 点s自己的最短路为0
-	path[index] = 0;
-	q.push(s);
-	in[index] = 1;
-	while (!q.empty()) {
-		char a = q.front();
-		int x = getIndex(a);
-		q.pop();
-		in[x] = 0;
-		// 遍历所有与a所连通的节点, 进行松弛操作
-		for (int i = 0; i < edge.size(); i++) {
-			// 若某个边的起点是a
-			if (edge[i].sp == a) {
-				// 获取该边的终点e
-				char e = edge[i].ep;
-				int end = getIndex(e);
-				// 若从点S经过点X到点end的距离比S直接到end的距离短, 则可进行松弛操作
-				if (path[x] + edge[i].w < path[end]) {
-					// 从点S到点end的距离更新为点S到X的距离与X到end的距离之和
-					path[end] = edge[i].w + path[x];
-					if (!in[end]) {
-						q.push(e);
-						in[end] = 1;
-					}
-				}
-			}
-		}
-	}
+    queue<char> q;
+    memset(path, MAXV, sizeof(path));
+    memset(in, 0, sizeof(in));
+    int index = getIndex(s);
+    // 点s自己的最短路为0
+    path[index] = 0;
+    q.push(s);
+    in[index] = 1;
+    while (!q.empty()) {
+        char a = q.front();
+        int x = getIndex(a);
+        q.pop();
+        in[x] = 0;
+        // 遍历所有与a所连通的节点, 进行松弛操作
+        for (int i = 0; i < edge.size(); i++) {
+            // 若某个边的起点是a
+            if (edge[i].sp == a) {
+                // 获取该边的终点e
+                char e = edge[i].ep;
+                int end = getIndex(e);
+                // 若从点S经过点X到点end的距离比S直接到end的距离短, 则可进行松弛操作
+                if (path[x] + edge[i].w < path[end]) {
+                    // 从点S到点end的距离更新为点S到X的距离与X到end的距离之和
+                    path[end] = edge[i].w + path[x];
+                    if (!in[end]) {
+                        q.push(e);
+                        in[end] = 1;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
 int main() {
-	E e[6];
-	e[0] = E('A','B',13);
-	e[1] = E('A','E',70);
-	e[2] = E('B','D',4);
-	e[3] = E('B','C',28);
-	e[4] = E('C','D',23);
-	e[5] = E('C','E',15);
-	for(int i = 0 ; i< 6; i++) {
-		edge.push_back(e[i]);
-	}
-	char s = 'A';
-	SPFA(s);
-	for(int i = 0 ; i<5;i++){
-		cout << "p[" << node[i] << "] = " << path[i] << endl;
-	}
-	return 0;
+    E e[6];
+    e[0] = E('A','B',13);
+    e[1] = E('A','E',70);
+    e[2] = E('B','D',4);
+    e[3] = E('B','C',28);
+    e[4] = E('C','D',23);
+    e[5] = E('C','E',15);
+    for(int i = 0; i < 6; i++) {
+        edge.push_back(e[i]);
+    }
+    char s = 'A';
+    SPFA(s);
+    for(int i = 0 ; i<5;i++){
+        cout << "p[" << node[i] << "] = " << path[i] << endl;
+    }
+    return 0;
 }
 ```
 
