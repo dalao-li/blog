@@ -3,11 +3,31 @@
  * @Version: 1.0
  * @Author: DaLao
  * @Email: dalao_li@163.com
- * @Date: 2021-04-20 20:16:43
+ * @Date: 2022-01-14 16:34:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-14 16:37:45
+ * @LastEditTime: 2022-03-27 22:54:00
 -->
-## 描述
+
+## 获取控件ID
+
+```html
+<button type="button" class="btn btn-success" id="{{ i.id }}" onclick=download()>下载</button>
+```
+
+点击按钮获取控件的ID
+
+```js
+function download(){
+    const id = event.target.id
+    $.get('/del/' + id , function () {
+            location.reload()
+            alert("删除成功")
+    })
+}
+```
+
+
+## 动态ID
 
 ![](https://cdn.hurra.ltd/img/20200829232106.png)
 
@@ -27,5 +47,3 @@
 此处为 jinja 模板，其他如 JSP 等等与此大同小异
 
 ![](https://cdn.hurra.ltd/img/20200829232740.png)
-
-

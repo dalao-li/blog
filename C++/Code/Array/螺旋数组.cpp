@@ -1,8 +1,18 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2022-02-13 19:00:24
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-03-27 22:46:34
+ */
 #include<iostream>
 #include<cstdio>
 #include<windows.h>
 #define N 5
 using namespace std;
+
 int main() {
 	int a[N][N];
 	int i , j , k=0 , m;

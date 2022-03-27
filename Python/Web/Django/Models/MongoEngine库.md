@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-22 23:42:03
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-18 22:38:57
+ * @LastEditTime: 2022-03-27 23:13:11
 -->
 
 ## MongoEngine
@@ -13,14 +13,14 @@
 ```py
 from mongoengine import *
 
-connect('admin'， host='localhost'， port=27017，username='admin'，password='123456')
+connect('admin', host='localhost', port=27017,username='admin',password='123456')
 
 class Score(EmbeddedDocument):
-    name = StringField(required=True， max_length=200)
+    name = StringField(required=True, max_length=200)
     score = IntField(required=True)
 
 class User(Document):
-    name = StringField(required=True， max_length=200)
+    name = StringField(required=True, max_length=200)
     age = IntField(required=True)
     scores = ListField(EmbeddedDocumentField(Score))
     meta ={
@@ -45,7 +45,7 @@ scores = User.objects.filter(name='Wang').first().scores
 
 scores = list(scores)
 
-scores.append(Score(name='C++'，score=90))
+scores.append(Score(name='C++',score=90))
 
 User.objects.filter(name='Wang').first().update(scores=scores)
 ```

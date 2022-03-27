@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-10 01:31:48
+ * @LastEditTime: 2022-03-27 23:15:09
 -->
 
  
@@ -14,7 +14,7 @@
 访问网站的本质即为访问对应的 html 文件，后在由浏览器等对其进行渲染，最终展示出页面
 
 
-## 静态读取
+### 静态读取
 
 访问http://127.0.0.1:8000/app/index，读取index.html，显示内容
 
@@ -110,7 +110,7 @@ urlpatterns = [
 ![](https://cdn.hurra.ltd/img/20200803193631.png)
 
 
-## 读取数据库
+### 读取数据库
 
 访问http://127.0.0.1:8000/app/db，在网页上显示数据库中所有元素信息
 

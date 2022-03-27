@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-03-01 21:46:15
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-08 21:23:16
+ * @LastEditTime: 2022-03-27 23:05:57
 -->
 
 ## PNG
@@ -100,6 +100,7 @@ JPEG，PNG,GIF,BMP等图片都具有不同的图像标识符号，判读一个�
 
 - 可选数据块：MIDP可以支持下列辅助数据块，然而，这却不是必须的
 
+
 ### 例
 
 - 00 00 00 0d 说明IHDR头块长为13
@@ -119,60 +120,3 @@ JPEG，PNG,GIF,BMP等图片都具有不同的图像标识符号，判读一个�
 00 非隔行扫描
 
 - ae 5c b5 55 CRC校验
-
-CRC代码
-
-```java
-import java.util.zip.CRC32;
-
-public class CrcTest {
-
-    
-    public static void main(String[] args) {
-            
-         byte[] checkData = new byte[]{0x49,0x48,0x44,0x52,0x00,0x00,0x00, 0x08,0x00,0x00,0x00, 0x08,0x04,0x03,0x00,0x00,0x00};
-         CRC32 crc32 = new CRC32();  
-         crc32.update(checkData);
-         long value = crc32.getValue();
-         
-         byte[] intToBytes = longToBytes(value);
-         String bytesToHexString = bytesToHexString(intToBytes);
-         System.out.println(bytesToHexString);
-         
-    }
-    
-    public static byte[] longToBytes(long value)   
-    {   
-        byte[] src = new byte[4];  
-        src[0] = (byte) ((value>>24) & 0xFF);  
-        src[1] = (byte) ((value>>16)& 0xFF);  
-        src[2] = (byte) ((value>>8)&0xFF);    
-        src[3] = (byte) (value & 0xFF);       
-        return src;  
-    } 
-     //将字节数组按16进制输出
-        public static String bytesToHexString(byte[] src){
-            
-            StringBuilder stringBuilder = new StringBuilder("");
-            if (src == null || src.length <= 0) {
-                return null;
-            }
-            for (int i = 0; i < src.length; i++)
-            {
-                int v = src[i] & 0xFF;
-                String hv = Integer.toHexString(v);
-
-                if (stringBuilder.length() != 0) {
-                    stringBuilder.append(",");
-                }
-                if (hv.length() < 2) {
-                    stringBuilder.append(0);
-                }
-                stringBuilder.append(hv);
-            }
-            return stringBuilder.toString();
-        }
-
-}
-
-```

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 21:43:48
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-16 15:02:38
+ * @LastEditTime: 2022-03-27 23:18:45
 -->
 
 ## Django Manager
@@ -26,7 +26,7 @@ User.objects.filter(name = name)
 ...
 ```
 
-若想在操作过程中执行其他操作，显得异常麻烦，因此可以自定义管理器
+若想在操作过程中执行其他操作显得异常麻烦，因此可以自定义管理器
 
 ```py
 class UserManager(models.Manager):
@@ -46,15 +46,16 @@ class UserManager(models.Manager):
         ...
         return self.filter(name = name).exists()
 
+
 class User(models.Model):
-    name = models.CharField(max_length=10)
-    pwd = models.CharField(max_length=300)
+    name = models.CharField(max_length = 10)
+    pwd = models.CharField(max_length = 300)
     
     # 赋值objects
     objects = UserManager()
 ```
 
-这样,对User类的相关操作可简化为
+对User类的相关操作可简化为
 
 ```py
 User.objects.add_user(name, pwd)

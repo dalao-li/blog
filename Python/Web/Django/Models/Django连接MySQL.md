@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-18 22:38:16
+ * @LastEditTime: 2022-03-27 23:16:10
 -->
 
 ## Django 操作MySQL
@@ -40,7 +40,7 @@ DATABASES = {
 ```
 
 
-## 建表
+### 建表
 
 编辑 app/models.py
 
@@ -65,6 +65,7 @@ class Stu(models.Model):
         sex = '男' if self.sex == 'M' else '女'
         return '学号:%s  姓名:%s  年龄:%s 性别:%s' % (self.num,  self.name,  self.age, sex)
 ```
+
 
 ### 字段
 
@@ -108,7 +109,7 @@ python manage.py migrate
 ![](https://cdn.hurra.ltd/img/20200802233105.png)
 
 
-## 管理
+### 管理
 
 Django 自带后台管理页面, 使用前需创建管理员用户
 
@@ -142,7 +143,8 @@ admin.site.register(Stu)
 
 ![](https://cdn.hurra.ltd/img/20200802213738.png)
 
-## 新增
+
+### 新增
 
 可视化, 直接使用 Django 管理页面新增数据
 ![](https://cdn.hurra.ltd/img/20200802223956.png)
@@ -170,7 +172,8 @@ s = Stu.objects.create(num='D-123', name='阿强', age=19, sex='M')
 
 ![](https://cdn.hurra.ltd/img/20200802235230.png)
 
-##  查询
+
+###  查询
 
 - 获取所有对象
 
@@ -207,7 +210,8 @@ Stu.objects.filter(num='B-456').exists()
 
 ![](https://cdn.hurra.ltd/img/20200803004453.png)
 
-## 修改
+
+### 修改
 
 ![](https://cdn.hurra.ltd/img/20200803002039.png)
 
@@ -220,7 +224,8 @@ Stu.objects.filter(sex='M').update(age=18)
 
 ![](https://cdn.hurra.ltd/img/20200803004052.png)
 
-## 删除
+
+### 删除
 
 ```py
 # 删除学号为 A-123 的同学信息
@@ -231,25 +236,3 @@ Stu.objects.filter(num='A-123').delete()
 ![](https://cdn.hurra.ltd/img/20200803004753.png)
 
 
-## 连接Redis
-
-修改settings.py文件
-
-```sh
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache", 
-        "LOCATION": "redis://[IP]:6379/0", 
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient", 
-            "CONNECTION_POOL_KWARGS": {
-                # 最大连接数
-                "max_connections": 10, 
-                # 以字符串的形式写入Redis, 为False的话写入字节类型
-                "decode_responses": True
-            }, 
-            "PASSWORD": "[密码]"
-        }
-    }
-}
-```

@@ -5,10 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-18 16:29:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-01 01:45:06
+ * @LastEditTime: 2022-03-27 23:00:24
 -->
 
-## 控件
+## JS用法
+
+
+### 控件
 
 ```html
 <input type="text" id="name" />
@@ -47,7 +50,8 @@ addBtn.addEventListener("click"， ()=>{
 ()=>
 ```
 
-## 弹窗
+
+### 弹窗
 
 - 提示框回调
 
@@ -64,7 +68,7 @@ const msg = "内容？\n\n请确认！"
 if (confirm(msg)){
     
 }else{
-    
+
 }
 ```
 
@@ -79,7 +83,7 @@ if (value != null && value != ""){
 ```
 
 
-## HTTP
+### HTTP
 
 - GET
 

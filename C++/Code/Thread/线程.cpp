@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:38
  * @LastEditors: DaLao
- * @LastEditTime: 2021-02-20 20:48:40
+ * @LastEditTime: 2022-03-27 22:47:17
  */
  
 #include<iostream>
@@ -56,7 +56,7 @@ void playThread02()
         if(second<10){
     	    cout<<0; 
 	    } 
-        cout<<second<<flush;	  
+        cout<<second<<flush;
     }  
     cout<<endl<<"--------------Time out!-------------"<<endl;
 	cout<<endl<<"--------------Game over!------------"<<endl;  

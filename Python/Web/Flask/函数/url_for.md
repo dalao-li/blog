@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-01 17:20:15
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-18 22:42:26
+ * @LastEditTime: 2022-03-27 23:22:53
 -->
 
 ## url_for
@@ -19,6 +19,7 @@
 
 <script src="{{ url_for('static',filename='jquery.min.js') }}"></script>
 ```
+
 
 ### 动态路由
 

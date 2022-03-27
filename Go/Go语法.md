@@ -5,10 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-20 17:37:22
+ * @LastEditTime: 2022-03-27 22:51:57
 -->
 
 ## 语法
+
 
 ### 数组与切片
 
@@ -18,19 +19,20 @@ package main
 import "fmt"
 
 func main() {
-	var a []int
+    var a []int
     b := []int{2 , 3 , 4}
 
-	// 单个添加
+    // 单个添加
     a = append(a , 1)
 
-	// 添加数组
-	a = append(a , b...)
-	for _ , v := range a {
-		fmt.Println(v)
-	}
+    // 添加数组
+    a = append(a , b...)
+    for _ , v := range a {
+        fmt.Println(v)
+    }
 }
 ```
+
 
 ### 排序
 
@@ -38,16 +40,16 @@ func main() {
 package main
 
 import (
-	"fmt"
-	"sort"
+    "fmt"
+    "sort"
 )
 
 func main() {
-	a := []int{3 , 4 , 5 , 1 , 2}
-	sort.Ints(a)
-	for _ , v := range a {
-		fmt.Println(v)
-	}
+    a := []int{3 , 4 , 5 , 1 , 2}
+    sort.Ints(a)
+    for _ , v := range a {
+        fmt.Println(v)
+    }
 }
 ```
 

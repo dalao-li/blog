@@ -1,7 +1,7 @@
 ## MongoDB
 
 
-### 部署
+## 部署
 
 - 创建容器
   
@@ -147,6 +147,7 @@ db.[集合].remove({key:value})
 ```sh
 db.stu.remove({name:"Ling"})
 ```
+
 
 ## Python交互
 

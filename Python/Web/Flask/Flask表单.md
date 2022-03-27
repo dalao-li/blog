@@ -13,6 +13,8 @@
 
 
 ### 表单
+
+
 ```html
 <form action="{{ url_for('main_page')}}" method='POST'>
     <input type="text" class="form-control" id="name" name="name" required />
@@ -30,6 +32,7 @@
 
 
 ### 后端
+
 
 ```py
 @app.route('/main', methods=['GET','POST'])

@@ -1,6 +1,17 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2022-02-13 19:00:24
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-03-27 23:10:52
+-->
+
 ## 完整代码
 
 > https://github.com/Dalao-Li/WebNotepad-Django.git
+
 
 ## 运行结果
 
@@ -16,10 +27,11 @@
 
 ![](https://cdn.hurra.ltd/img/20200816225928.png)
 
+
 ## 涉及技术
 
-> - CSS : BootStrap4 ， Font Awesome，
-> - JS : JQuery ， SweetAlery2
+> - CSS : BootStrap4 , Font Awesome,
+> - JS : JQuery , SweetAlery2
 > - Web 框架 : Django
 > - 数据库 : Sqlite3
 
@@ -46,15 +58,16 @@
 
 - 编辑记事
 
-对进行中的记事，当点击对应行时会弹出修改页面，用户可对其进行修改
+对进行中的记事,当点击对应行时会弹出修改页面,用户可对其进行修改
 
-对进行中记事可进行的操作为 : 修改，标记完成，删除
+对进行中记事可进行的操作为 : 修改,标记完成,删除
 
 对已完成记事可进行的操作为 : 删除
 
 2. 回收站
 
 显示所有已经删除的记事
+
 
 ### 数据库
 
@@ -72,6 +85,7 @@ note
 | s_time | 开始时间       | 必须比结束时间早                                                                                           |
 | e_time | 结束时间       | 必须比开始时间晚                                                                                           |
 | status | 该记事状态     | U(underway): 进行中<br>F(finish) : 已完成<br>D(deleted) : 已删除 <br> O(Overtime):已超时<br>P(Plan):未开始 |
+
 
 ## 具体实现
 
@@ -99,9 +113,9 @@ python manage.py startapp app
 
 ![](https://cdn.hurra.ltd/img/20200805182830.png)
 
-在 app 目录下新建 static 与 templates 目录，用于存放静态文件和模板文件
+在 app 目录下新建 static 与 templates 目录,用于存放静态文件和模板文件
 
----
+
 
 ### 前端
 
@@ -342,19 +356,19 @@ app/templates 目录下新建 main.html 文件
                 $('#names').val(row[1])
                 $('#texts').val(row[2])
             }
-        }，
+        },
         //是否显示分页条
-        pagination: true，
+        pagination: true,
         //首页页码
-        pageNumber: 1，
+        pageNumber: 1,
         //一页显示的行数
-        pageSize: 10，
-        //是否开启分页条无限循环，最后一页时点击下一页是否转到第一页
-        paginationLoop: false，
-        //选择每页显示多少行，数据过少时可能会没有效果
-        pageList: [10， 20]，
+        pageSize: 10,
+        //是否开启分页条无限循环,最后一页时点击下一页是否转到第一页
+        paginationLoop: false,
+        //选择每页显示多少行,数据过少时可能会没有效果
+        pageList: [10, 20],
         //启用关键字搜索框
-        search: true，
+        search: true,
     })
 
     $('#addNoteButton').click(function () {
@@ -369,22 +383,22 @@ app/templates 目录下新建 main.html 文件
 app/static 目录下新建 api.js 文件
 
 ```js
-function sendAjax(param， url， callback) {
+function sendAjax(param, url, callback) {
   $.ajax({
-    async: false，
-    ache: false，
-    type: "POST"，
-    url: url，
+    async: false,
+    ache: false,
+    type: "POST",
+    url: url,
     //JSON对象转化JSON字符串
-    data: JSON.stringify(param)，
+    data: JSON.stringify(param),
     //服务器返回的数据类型
-    dataType: "json"，
+    dataType: "json",
     success: function (data) {
       callback(data.result);
-    }，
+    },
     error: function (data) {
       //错误处理
-    }，
+    },
   });
 }
 
@@ -393,7 +407,7 @@ function addNote() {
   //表单是否存在空值
   var isNull = false;
   var t = $("#newNoteForm").serializeArray();
-  $.each(t， function () {
+  $.each(t, function () {
     if (this.value === "") {
       isNull = true;
       addCallback(0);
@@ -406,17 +420,17 @@ function addNote() {
   if (isNull) {
     return;
   }
-  sendAjax(d， "/app/add/"， function (value) {
+  sendAjax(d, "/app/add/", function (value) {
     if (value === 1) {
       swal(
-        { title: "添加成功"， text: ""， type: "success"， timer: 2000 }，
+        { title: "添加成功", text: "", type: "success", timer: 2000 },
         function () {
           location.href = "/app/";
         }
       );
     }
     if (value === 0) {
-      swal("填写内容不能为空"， "请重写填写"， "error");
+      swal("填写内容不能为空", "请重写填写", "error");
     }
   });
 }
@@ -424,39 +438,39 @@ function addNote() {
 function delNote(n_id) {
   swal(
     {
-      title: "确定要删除该记事吗？"，
-      text: "删除不可恢复"，
-      type: "warning"，
-      showCancelButton: true，
-      confirmButtonColor: "#DD6B55"，
-      confirmButtonText: "确认"，
-      cancelButtonText: "取消"，
-      closeOnConfirm: false，
-      closeOnCancel: false，
-    }，
+      title: "确定要删除该记事吗？",
+      text: "删除不可恢复",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "确认",
+      cancelButtonText: "取消",
+      closeOnConfirm: false,
+      closeOnCancel: false,
+    },
     function (isConfirm) {
       if (!isConfirm) {
         swal({
-          title: "已取消"，
-          text: "您取消了删除操作！"，
-          type: "warning"，
+          title: "已取消",
+          text: "您取消了删除操作！",
+          type: "warning",
         });
         return;
       }
       var data = {
-        n_id: n_id，
+        n_id: n_id,
       };
-      sendAjax(data， "/app/del/"， function (value) {
+      sendAjax(data, "/app/del/", function (value) {
         if (value === 1) {
           swal(
-            { title: "删除成功"， text: ""， type: "success"， timer: 2000 }，
+            { title: "删除成功", text: "", type: "success", timer: 2000 },
             function () {
               location.reload();
             }
           );
         }
         if (value === -1) {
-          swal("删除失败"， "请重试"， "error");
+          swal("删除失败", "请重试", "error");
         }
       });
     }
@@ -465,20 +479,20 @@ function delNote(n_id) {
 
 function finishNote(n_id) {
   var data = {
-    n_id: n_id，
-    status: "F"，
+    n_id: n_id,
+    status: "F",
   };
-  sendAjax(data， "/app/change/"， function (value) {
+  sendAjax(data, "/app/change/", function (value) {
     if (value === 1) {
       swal(
-        { title: "记事已完成"， text: ""， type: "success"， timer: 2000 }，
+        { title: "记事已完成", text: "", type: "success", timer: 2000 },
         function () {
           location.reload();
         }
       );
     }
     if (value === -1) {
-      swal("网络异常"， "请重试"， "error");
+      swal("网络异常", "请重试", "error");
     }
   });
 }
@@ -488,7 +502,7 @@ function modifyNote() {
   //表单是否存在空值
   var isNull = false;
   var t = $("#modifyNoteForm").serializeArray();
-  $.each(t， function () {
+  $.each(t, function () {
     if (this.value === "") {
       isNull = true;
       addCallback(0);
@@ -501,22 +515,22 @@ function modifyNote() {
   if (isNull) {
     return;
   }
-  sendAjax(d， "/app/add/"， function (value) {
+  sendAjax(d, "/app/add/", function (value) {
     if (value === 1) {
       swal(
         {
-          title: "修改成功"，
-          text: ""，
-          type: "success"，
-          timer: 2000，
-        }，
+          title: "修改成功",
+          text: "",
+          type: "success",
+          timer: 2000,
+        },
         function () {
           location.href = "/app/";
         }
       );
     }
     if (value === 0) {
-      swal("填写内容不能为空"， "请重写填写"， "error");
+      swal("填写内容不能为空", "请重写填写", "error");
     }
   });
 }
@@ -536,16 +550,16 @@ from django.db import models
 
 class Note(models.Model):
     choices = (
-        ('U'， 'Underway')，
-        ('F'， 'Finish')，
-        ('D'， 'Deleted')
+        ('U', 'Underway'),
+        ('F', 'Finish'),
+        ('D', 'Deleted')
     )
 
-    name = models.CharField(verbose_name='标题'， help_text='请输入记事标题'， max_length=5)
-    text = models.TextField(verbose_name='内容'， help_text='请输入记事内容'， max_length=20)
-    s_time = models.DateTimeField(verbose_name='开始时间'， help_text='请选择开始时间')
-    e_time = models.DateTimeField(verbose_name='结束时间'， help_text='请选择结束时间')
-    status = models.CharField(verbose_name='状态'， help_text='请选择状态'， default='U'， choices=choices， max_length=1)
+    name = models.CharField(verbose_name='标题', help_text='请输入记事标题', max_length=5)
+    text = models.TextField(verbose_name='内容', help_text='请输入记事内容', max_length=20)
+    s_time = models.DateTimeField(verbose_name='开始时间', help_text='请选择开始时间')
+    e_time = models.DateTimeField(verbose_name='结束时间', help_text='请选择结束时间')
+    status = models.CharField(verbose_name='状态', help_text='请选择状态', default='U', choices=choices, max_length=1)
 ```
 
 编辑完成后终端执行:
@@ -567,7 +581,7 @@ python manage.py migrate
 ```py
 import json
 
-from django.shortcuts import render， HttpResponse
+from django.shortcuts import render, HttpResponse
 from app.models import Note
 
 
@@ -577,21 +591,21 @@ from app.models import Note
 def main_page(request):
     # 获取所有未被删除的文章
     notes = [i for i in Note.objects.exclude(status='D')]
-    return render(request， 'main.html'， {'note': notes})
+    return render(request, 'main.html', {'note': notes})
 
 
 
 def add_note(request):
     data = json.loads(request.body)
-    name， text， s_time， e_time = data.values()
-    Note.objects.create(name=name， text=text， s_time=s_time， e_time=e_time， status='U')
+    name, text, s_time, e_time = data.values()
+    Note.objects.create(name=name, text=text, s_time=s_time, e_time=e_time, status='U')
     return HttpResponse(json.dumps({'result': 1}))
 
 
 def modify_note(request):
     data = json.loads(request.body)
-    n_id， name， text， s_time， e_time = data.values()
-    Note.objects.filter(id=n_id).update(name=name， text=text，s_time=s_time， e_time=e_time)
+    n_id, name, text, s_time, e_time = data.values()
+    Note.objects.filter(id=n_id).update(name=name, text=text,s_time=s_time, e_time=e_time)
     return HttpResponse(json.dumps({'result': 1}))
 
 
@@ -605,9 +619,9 @@ def del_note(request):
 
 def change_note_status(request):
     data = json.loads(request.body)
-    n_id， status = data.values()
+    n_id, status = data.values()
     Note.objects.filter(id=n_id).update(status=status)
-    if Note.objects.filter(id=n_id， status=status).exists():
+    if Note.objects.filter(id=n_id, status=status).exists():
         return HttpResponse(json.dumps({'result': 1}))
     return HttpResponse(json.dumps({'result': -1}))
 
@@ -623,15 +637,15 @@ from app import views
 
 urlpatterns = [
     # 将函数绑定至对应路由
-    path(''， views.main_page)，
+    path('', views.main_page),
 
-    path('add/'，views.add_note)，
+    path('add/',views.add_note),
 
-    path('del/'，views.del_note)，
+    path('del/',views.del_note),
 
-    path('modify/'，views.modify_note)，
+    path('modify/',views.modify_note),
 
-    path('change/'，views.change_note_status)
+    path('change/',views.change_note_status)
 
 
 ]
@@ -641,11 +655,11 @@ urlpatterns = [
 
 ```py
 from django.contrib import admin
-from django.urls import path， include
+from django.urls import path, include
 
 urlpatterns = [
-    path('admin/'， admin.site.urls)，
-    path('app/'， include('app.urls'))
+    path('admin/', admin.site.urls),
+    path('app/', include('app.urls'))
 ]
 
 ```

@@ -1,15 +1,14 @@
+
 ## 效果
 
 ![](https://cdn.hurra.ltd/img/20200524194114.png)
 ![](https://cdn.hurra.ltd/img/20200524194134.png)
-
 
 - nav-link active 即默认选择的选项卡
 
 - href 后跟选项卡对应页面的 id
 
 - data-toggle="tab" 用以绑定触发事件，即点击不同选项卡时切换页面
-
 
 ## 全部代码
 
@@ -18,7 +17,10 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -37,7 +39,9 @@
       <nav class="navbar nav-tabs" role="navigation">
         <ul class="nav nav-tabs">
           <li class="nav-item ">
-            <a class="nav-link active" href="#tab_login" data-toggle="tab">登录</a>
+            <a class="nav-link active" href="#tab_login" data-toggle="tab"
+              >登录</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#tab_register" data-toggle="tab">注册</a>
@@ -58,7 +62,8 @@
                 <span class="input-group-text">用户名</span>
               </div>
               <label for="id"></label>
-              <input type="text"
+              <input
+                type="text"
                 class="form-control"
                 id="name"
                 name="name"
@@ -165,5 +170,3 @@
   </body>
 </html>
 ```
-
-
