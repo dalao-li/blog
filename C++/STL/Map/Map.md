@@ -5,35 +5,37 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-18 16:22:55
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-23 21:10:35
+ * @LastEditTime: 2022-03-27 11:11:56
 -->
 
 ## Map
 
+
 ### 定义
 
 ```c
-template <class T, class V>
+template <class T , class V>
 
-map<T, V> m;
+map<T , V> m;
 
-// 迭代器
-map<T, V>::iterator it;
+map<T , V>::iterator it;
 ```
 
 ### 添加
 
 ```c
-insert(make_pair(key, value))
+insert(make_pair(key , value))
 
 m[key] = value
 ```
+
 
 ### 取值
 
 ```c
 m[key]
 ```
+
 
 ### 查询
 

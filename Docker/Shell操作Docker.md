@@ -5,11 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-15 10:21:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-20 18:09:05
+ * @LastEditTime: 2022-03-27 11:19:50
 -->
 
+## Shell
 
-## 获取容器ID
+
+### 获取容器ID
 
 ```sh
 $(docker ps | grep "容器名" | awk '{print $1}') 或
@@ -24,7 +26,7 @@ $(docker ps -aqf "name=容器名")
 | f    | filter                 |
 
 
-## 判断容器是否存在
+### 判断容器是否存在
 
 ```sh
 docker images | grep "容器名" &> /dev/null
@@ -35,7 +37,7 @@ if $? -ne 0;then
 fi
 ```
 
-## 备份还原
+### 备份还原
 
 ```sh
 docker images | awk '{print $1}' > images.txt

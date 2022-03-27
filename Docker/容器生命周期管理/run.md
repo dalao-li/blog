@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 01:44:11
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-19 21:38:45
+ * @LastEditTime: 2022-03-27 11:18:35
 -->
 
 
@@ -15,13 +15,14 @@
 docker run [参数] 镜像ID (命令)
 ```
 
+
 ### -itd
 
 | 参数 | 含义                         |
 | ---- | ---------------------------- |
 | `-i` | 以交互模式运行容器           |
 | `-t` | 为容器重新分配一个伪输入终端 |
-| `-d` | 后台运行并返回容器ID   |
+| `-d` | 后台运行并返回容器ID         |
 
 
 ### -p
@@ -59,7 +60,9 @@ docker run -itd --name=box -e STR_VEN=abcdefg busybox
 
 ### --mount
 
-`--mount` 挂载本地目录到容器中，若本地目录(必须是绝对路径)不存在会报错
+`--mount` 挂载本地目录到容器中
+
+若本地目录(必须是绝对路径)不存在会报错
 
 ```sh
 --mount type=bind,source=[本地路径],target=[容器路径](权限)
@@ -89,7 +92,7 @@ docker run -itd --mount type=bind,source=/src/app,target=/root/app nginx:alpine
 
 ### --link 
 
-`--link=[]` 添加链接到另一个容器
+`--link=[]` 链接到另一个容器
 
 从 Ubuntu 容器中访问 MySQL容器中的mysql服务
 

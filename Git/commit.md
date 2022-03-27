@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:02:13
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-24 23:33:14
+ * @LastEditTime: 2022-03-27 11:20:04
 -->
 
 ## git 提交
@@ -13,6 +13,7 @@
 ![](https://cdn.hurra.ltd/img/git.svg)
 
 ![](https://cdn.hurra.ltd/img/2022-3-17-2310.svg)
+
 
 ## 一、init
 
@@ -22,8 +23,9 @@
 git init
 ```
 
+
 - 新建代码仓库(指定目录)
-  
+
 ```sh
 git init 项目名
 ```
@@ -67,6 +69,7 @@ git reset HEAD
 ```sh
 git commit
 ```
+
 
 - 直接添加注释
 

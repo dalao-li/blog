@@ -5,16 +5,19 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-12 23:24:59
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-18 20:58:26
+ * @LastEditTime: 2022-03-27 11:23:45
 -->
 
-## 以root权限运行
+## 配置
+
+### 以root权限运行
 
 ```sh
 sudo code --user-data-dir="~/.vscode-root"
 ```
 
-## 选中内容高亮
+
+### 选中内容高亮
 
 ```sh
 "workbench.colorCustomizations": {
@@ -22,6 +25,7 @@ sudo code --user-data-dir="~/.vscode-root"
     "editor.selectionHighlightBorder": "#8ee267"  
 }
 ```
+
 
 ## 快捷键
 

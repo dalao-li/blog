@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:21:39
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-23 21:07:13
+ * @LastEditTime: 2022-03-27 11:12:40
 -->
 
 
@@ -31,7 +31,7 @@ getline(cin , str);
 
 int main()
 {
-	int sum=0;
+	int sum = 0;
 	std::string s1, s2;
 	cin >> s1 >> s2;
 	for(int i = 0; i < s1.size(); i++){
