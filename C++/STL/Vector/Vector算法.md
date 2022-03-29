@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 21:05:31
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-23 20:58:30
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-03-29 22:40:02
 -->
 
 ## Vector算法
@@ -62,7 +62,7 @@ int main() {
 #include <functional>
 #include <algorithm>
 
-......
+...
 
 // 迭代器指向最大值
 vector<T>::iterator it = max_element(v.begin() , v.end());
