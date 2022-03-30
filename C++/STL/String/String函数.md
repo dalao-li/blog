@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:21:39
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 11:12:40
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-03-30 22:03:41
 -->
 
 
@@ -44,6 +44,7 @@ int main()
 }
 ```
 
+
 ### erase
 
 ```c++
@@ -54,8 +55,7 @@ int main(){
 	std::string str = " 123 456237";
 	int index = 3;
 	int length = 1;
-	// 
-	std::str.erase(index，length);
+	std::str.erase(index , length);
 	cout << str << endl;
 	return 0;
 }

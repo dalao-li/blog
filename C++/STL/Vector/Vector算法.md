@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 21:05:31
  * @LastEditors: dalao
- * @LastEditTime: 2022-03-29 22:40:02
+ * @LastEditTime: 2022-03-30 22:04:08
 -->
 
 ## Vector算法
@@ -76,11 +76,11 @@ vector<T>::iterator index = v.begin() - it;
 - 累加
 
 ```c
-accumulate(v.begin() , v.end(), 0, plus<T>())
+accumulate(v.begin() , v.end() , 0, plus<T>())
 ```
 
 - 累乘
 
 ```c
-accumulate(v.begin() , v.end(), 1, multiplies<T>())
+accumulate(v.begin() , v.end(), 1 , multiplies<T>())
 ```
