@@ -4,12 +4,11 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 16:49:59
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:17:07
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 22:54:33
 -->
 
 ## Django多数据库
-
 
 
 ### 设置

@@ -4,13 +4,13 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:16:10
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 22:54:51
 -->
 
 ## Django 操作MySQL
 
-建立一个应用 app
+建立应用 app
 
 ```py
 python3 manage.py startapp app

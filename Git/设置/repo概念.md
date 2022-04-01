@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-18 22:12:19
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 21:54:56
 -->
 
 
@@ -22,6 +22,7 @@ repo就是多个git库的管理工具。如果是多个git库同时管理，可�
 - gerrit
 
 gerrit是一个建立在git版本控制基础之上，基于Web的代码审查工具
+
 
 ## 管理流程
 

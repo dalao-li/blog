@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:02:13
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 11:20:04
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 21:53:40
 -->
 
 ## git 提交
@@ -15,7 +15,7 @@
 ![](https://cdn.hurra.ltd/img/2022-3-17-2310.svg)
 
 
-## 一、init
+### 1.1 init
 
 - 新建代码仓库(当前目录)
 
@@ -40,7 +40,7 @@ git status
 ```
 
 
-## 二、add
+### 1.2 add
 
 - 添加所有文件到暂存区
 
@@ -58,7 +58,7 @@ git reset HEAD
 ![](https://cdn.hurra.ltd/img/20220112080614.png)
 
 
-## 三、commit
+### 1.3 commit
 
 ![](https://cdn.hurra.ltd/img/2022-3-18-2158.svg)
 
@@ -93,7 +93,7 @@ git push --force-with-lease
 ```
 
 
-## 五、push
+### 1.4 push
 
 `push` 将本地的分支版本上传到远程并合并
 

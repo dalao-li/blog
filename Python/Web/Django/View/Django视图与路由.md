@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:15:09
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 23:07:59
 -->
 
  
@@ -110,7 +110,7 @@ urlpatterns = [
 ![](https://cdn.hurra.ltd/img/20200803193631.png)
 
 
-### 读取数据库
+### 读取数据
 
 访问http://127.0.0.1:8000/app/db，在网页上显示数据库中所有元素信息
 
@@ -144,14 +144,13 @@ urlpatterns = [
 编辑 app/views.py，增加
 
 ```py
-.....
+...
 
 def db(request):
     # 获取数据中全部信息
     stu_list = [i for i in Stu.objects.all()]
 
     return render(request, 'db.html', {'data' : stu_list})
-
 ```
 
 - 添加路由
@@ -160,7 +159,7 @@ def db(request):
 
 ```py
 urlpatterns = [
-    .....
+    ...
 
     path('db/', views.db)
 ]

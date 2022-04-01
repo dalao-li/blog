@@ -4,20 +4,23 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-02-03 13:54:04
- * @LastEditors: DaLao
- * @LastEditTime: 2022-01-16 15:01:57
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 22:53:25
 -->
 
 ## Django部署
 
-### 项目
+
+### 建立
+
+建立项目mysite
 
 ```sh
-# 建立项目mysite
 django-admin.py startproject mysite
 
 python manage.py runserver 0.0.0.0:8000
 ```
+
 
 ### uwsgi
   
@@ -51,13 +54,13 @@ server {
         include  uwsgi_params;
         
         # 必须和 uwsgi中的设置一致
-        uwsgi_pass  127.0.0.1:8000;              
+        uwsgi_pass  127.0.0.1:8000;
         
         # 入口文件，即wsgi.py相对于项目根目录的位置，“.”相当于一层目录
-        uwsgi_param UWSGI_SCRIPT /mysite/mysite.wsgi;  
+        uwsgi_param UWSGI_SCRIPT /mysite/mysite.wsgi;
         
         # 项目根目录
-        uwsgi_param UWSGI_CHDIR /mysite;       
+        uwsgi_param UWSGI_CHDIR /mysite;
         index  index.html index.htm;
         client_max_body_size 35m;
     }

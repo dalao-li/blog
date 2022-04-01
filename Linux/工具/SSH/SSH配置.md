@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 11:23:18
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 22:05:46
 -->
 
-## SSH
+## 1 SSH
 
 
-### 命令
+### 1.1 命令
 
 - 连接
 
@@ -32,11 +32,12 @@ ssh-keygen -R [远程主机IP]
 ``` 
 
 
-### 免密
+### 1.2 免密
 
 - 手动复制
 
 将本地`id_rsa.pub` 复制到远程主机`.ssh/authorized_keys`里
+
 
 - 命令复制
 
@@ -47,7 +48,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
 ![](https://cdn.hurra.ltd/img/20211229213337.png)
 
 
-### .ssh目录
+### 1.3 .ssh目录
 
 在根目录(/root/或者/home/用户名)下生成 .ssh目录
 
@@ -65,7 +66,7 @@ ssh-keygen -t rsa
 | know_hosts      | 存储已认证主机的host key |
 
 
-### 配置文件
+### 1.4 配置文件
 
 ```sh
 /etc/ssh/sshd_condfig
@@ -83,7 +84,8 @@ PubkeyAuthentication yes
 PasswordAuthentication no
 ```
 
-### 监控
+
+### 1.5 监控
 
 /etc/ssh/目录下新建sshrc文件
 
@@ -105,7 +107,8 @@ server=${ifconfig wlp2s0 | sed -n '2p' | awk '{print $2}'}
 echo ${user} ${ip} ${time} ${server}
 ```
 
-### Web工具
+
+### 1.6 Web工具
 
 [Github 地址](https://github.com/huashengdun/webssh)
 

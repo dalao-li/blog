@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-06-13 20:32:36
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-22 23:48:15
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 22:39:26
 -->
 
 
@@ -91,6 +91,7 @@ vscode 设置中添加
 ```sh
 "terminal.integrated.fontFamily": "NotoSansMono Nerd Font"
 ```
+
 
 ### gedit
 

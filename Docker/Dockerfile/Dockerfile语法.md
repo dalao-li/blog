@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 17:13:31
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:27:32
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 21:56:14
 -->
 
 ## Dockerfile
@@ -28,7 +28,7 @@ COPY 指令将从构建上下文目录中 源路径 的文件/目录复制到新
 ADD [源路径] [目标路径]
 ```
 
-如果 源路径 为一个 tar 压缩文件的话，压缩格式为 gzip, bzip2 以及 xz 的情况下，ADD 指令将会自动解压缩这个压缩文件到 目标路径 去
+如果源路径为一个 tar 压缩文件的话，压缩格式为 gzip, bzip2 以及 xz 的情况下，ADD 指令将会自动解压缩这个压缩文件到目标路径去
 
 
 ### CMD

@@ -4,11 +4,11 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-12-07 00:19:50
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:04:43
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 23:17:12
 -->
 
-## 一、安装Hexo
+## 1 安装Hexo
 
 
 ### 1.1 修改npm源
@@ -115,7 +115,7 @@ sudo npm install hexo-deployer-git --save
 hexo g && hexo d
 ```
 
-## 二、问题
+## 2 问题
 
 ### 2.1 Math渲染
 

@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-23 14:51:38
- * @LastEditors: DaLao
- * @LastEditTime: 2021-12-28 00:06:44
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 22:38:59
 -->
 
 ## 本地进程通信
@@ -20,7 +20,6 @@
 
 ## 网络中进程通信
 
-问题:
 
 - 如何标识一台主机，即怎样确定我们将要通信的进程是在那一台主机上运行
   

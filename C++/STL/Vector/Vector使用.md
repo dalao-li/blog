@@ -5,12 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 20:40:55
  * @LastEditors: dalao
- * @LastEditTime: 2022-03-29 22:36:09
+ * @LastEditTime: 2022-04-01 21:04:38
 -->
 
-## Vector
+## 1 Vector
 
-### 初始化
+### 1.1 初始化
 
 ```c
 vector<T> v;
@@ -25,12 +25,14 @@ vector<vector<T> > v;
 ```
 
 
-### 增加
+### 1.2 增加
 
 - 尾部插入
 
 ```c
 vector<T> v;
+
+T value;
 
 v.push_back(value);
 ```
@@ -43,7 +45,35 @@ vector<T> v;
 v.insert(v.begin() + index , value);
 ```
 
-### 删除
+
+### 1.3 遍历
+
+- 迭代器访问
+
+```c
+vector<T> v;
+
+for(vector<T>::iterator it = v.begin(); it != v.end(); it++) {
+    // *it
+}
+
+for(auto it = v.begin(); it != v.end(); it++) {
+
+}
+```
+
+- 下标访问
+
+```c
+vector<T> v;
+
+for(int i = 0; i < v.size(); i++){
+    // v[i]
+}
+```
+
+
+### 1.4 删除
 
 - 删除x, y之间的元素
 
@@ -76,18 +106,7 @@ v.clear();
 ```
 
 
-### 遍历
-
-```c
-vector<T> v;
-
-for(vector<T>::iterator it = v.begin(); it != v.end(); ++it) {
-    // *it
-}
-```
-
-
-### 翻转
+### 1.5 翻转
 
 ```c
 vector<T> v;
@@ -95,3 +114,77 @@ vector<T> v;
 reverse(v.begin() , v.end());
 ```
 
+
+## 2 Vector算法
+
+
+### 2.1 排序
+
+- 数字排序
+
+```c
+vector<T> v;
+
+sort(v.begin() , v.end());
+```
+
+- 对象排序
+
+```c++
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+class Stu {
+    public:
+        string getName() {
+            return name;
+        }
+    private:
+        string name;
+};
+
+
+bool cmp(Stu a , Stu b) {
+    return a.getName() < b.getName();
+}
+
+sort(stu.begin() , stu.end() , cmp);
+```
+
+
+### 2.2 数学计算
+
+- 最值
+
+```c
+#include <functional>
+#include <algorithm>
+
+...
+
+// 迭代器指向最大值
+vector<T>::iterator it = max_element(v.begin() , v.end());
+
+vector<T>::iterator it = min_element(v.begin() , v.end());
+
+// 下标
+vector<T>::iterator index = v.begin() - it;
+```
+
+
+- 累加
+
+```c
+accumulate(v.begin() , v.end() , 0, plus<T>())
+```
+
+
+- 累乘
+
+```c
+accumulate(v.begin() , v.end(), 1 , multiplies<T>())
+```

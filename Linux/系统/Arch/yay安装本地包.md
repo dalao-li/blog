@@ -4,12 +4,13 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-17 01:47:56
- * @LastEditors: DaLao
- * @LastEditTime: 2022-02-16 20:29:09
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 22:39:54
 -->
 
 
 ## yay 安装本地包
+
 
 - 下载配置文件
 
@@ -36,6 +37,7 @@ source=("microsoft-edge-stable_${pkgver}-${pkgrel}_amd64.deb::http://localhost:8
 - 修改sha256sums
 
 修改sha256sums与本地文件或网络文件一致
+
 
 - 编译
 

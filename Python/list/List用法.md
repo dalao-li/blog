@@ -4,11 +4,11 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-12-04 01:28:59
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:10:20
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 22:52:07
 -->
 
-## 一、List使用
+## 1 List
 
 
 ### 1.1 初始化
@@ -126,7 +126,7 @@ print(a[:5])
 ```
 
 
-## 二、sorted
+## 2 sorted
 
 ```py
 sorted(iterable, cmp=None, key=None, reverse=False)
@@ -167,6 +167,7 @@ print(x)
 # [5, 4, 3, 2, 1]
 sorted(a, reverse = True)
 ```
+
 
 ### 2.2 规则排序
 
@@ -272,7 +273,7 @@ sorted(nums, key=functools.cmp_to_key(cmp))
 ```
 
 
-## 三、数据结构
+## 3 数据结构
 
 ### 3.1 栈
 

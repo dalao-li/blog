@@ -4,11 +4,12 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:57:16
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-25 20:22:02
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-01 21:54:15
 -->
 
 ## remote
+
 
 ### 仓库
 
@@ -17,7 +18,6 @@
 ```sh
 git remote -v
 ```
-
 
 
 ### 删除
