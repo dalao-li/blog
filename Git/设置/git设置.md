@@ -10,6 +10,7 @@
 
 ## Git设置
 
+
 ### 设置
 
 ```sh
@@ -26,6 +27,8 @@ git config --global core.editor "code -w"
 git config --global core.quotepath false
 ```
 
+
+
 ### 建立公钥
 
 ```sh
@@ -33,6 +36,7 @@ ssh-keygen -t rsa -C "邮箱"
 ```
 
 公钥位置`.ssh/id_rsa.pub`
+
 
 
 ### .git文件

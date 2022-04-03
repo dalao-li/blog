@@ -5,13 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-04 01:28:59
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:52:07
+ * @LastEditTime: 2022-04-03 21:54:19
 -->
 
 ## 1 List
 
 
 ### 1.1 初始化
+
 
 - 建立一维list
 
@@ -71,6 +72,7 @@ a = [1, 1, 2, 3]
 a.count(1)
 ```
 
+
 - 删除
 
 `pop([index])` 删除index下标元素，index为空时删除末尾元素
@@ -103,6 +105,7 @@ a = [1, 2, 3, 4, 5, 6, 7]
 print(s[2:5])
 ```
 
+
 - `[start:]`
 
 截取索引范围 `[start,末尾]`
@@ -113,6 +116,7 @@ a = [1, 2, 3, 4, 5, 6, 7]
 # [4, 5, 6, 7]
 print(a[3:])
 ```
+
 
 - `[:end]`
 
@@ -185,6 +189,7 @@ sorted(c, key = len)
 len是内建函数，sorted函数在排序的时候会用len去获取每个字符串的长度来排序
 
 
+
 ### 2.3 复杂排序
 
 如由元组构成的列表，若要按照元组中第二个元素排序，可用lambda定义匿名函数
@@ -196,6 +201,7 @@ s = [('zhang' , 'A') , ('li' , 'D') , ('wang' , 'C')]
 sorted(s, key = lambda x : x[1])
 ```
 这里将按照字母A-C-D的顺序排列
+
 
 
 ### 2.4 类排序
@@ -220,6 +226,7 @@ s = [Stu('john', 'A', 15),Stu('jane', 'B', 12),Stu('dave', 'B', 13)]
 # [('jane', 'B', 12), ('dave', 'B', 13), ('john', 'A', 15)]
 sorted(s, key = lambda t : t.age)
 ```
+
 
 - attrgetter
 
@@ -275,6 +282,7 @@ sorted(nums, key=functools.cmp_to_key(cmp))
 
 ## 3 数据结构
 
+
 ### 3.1 栈
 
 ```py
@@ -287,6 +295,7 @@ stack = [3, 4, 5]
 # [3,4,5,6]
 stack.append(6)
 ```
+
 
 - 出栈
 

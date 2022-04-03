@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-08-19 00:00:59
- * @LastEditors: DaLao
- * @LastEditTime: 2022-02-06 23:23:18
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-03 22:37:40
 -->
 
 ## Docker部署Flask
@@ -13,8 +13,9 @@
 
 ### 单例部署
 
+- Dockerfile
 
-```sh
+```docker
 FROM python:3.7-slim-buster
 
 LABEL version="v1" description="Docker deploy Flask" by="Dalao"
@@ -31,40 +32,42 @@ CMD flask run --host=0.0.0.0 --port=5000
 ```
 
 
+### supervisor部署
+
+- flask.conf
+
+```
+[supervisord]
+nodaemon=true
+
+[program:flask]
+directory=/usr/src/app
+command=flask run --host=0.0.0.0 --port=5000
+user=root
+autostart=true
+autorestart=true
+```
+
+- Dockerfile
+
+```docker
+FROM python:3.7-alpine
+
+WORKDIR /usr/src/app
+
+COPY flask.conf /etc/supervisord.conf
+
+COPY . .
+
+RUN pip install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple/  --trusted-host pypi.tuna.tsinghua.edu.cn -r requirements.txt
+
+CMD supervisord -c /etc/supervisord.conf
+```
+
+
 ### uwsgi部署
 
-
-```py 
-def application(env, start_response):
-    start_response('200 OK', [('Content-Type', 'text/html')])
-    return [b"Hello World"]
-```
-
-uwsgi命令
-
-```py
-# --plugin python 是告诉 uWSGI 在使用 python 插件
-uwsgi --http :8080 --plugin python --wsgi-file test.py
-```
-
-![](https://cdn.hurra.ltd/img/20200711123744.png)
-
-
-app.py
-
-```py
-from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello():
-    return 'hello world ! '
-
-if __name__ == '__main__':
-	app.run()
-```
-
-config.ini
+- config.ini
 
 ```ini
 [uwsgi]
@@ -90,37 +93,28 @@ threads = 8
 buffer-size = 32768
 ```
 
-Dockerfile
+- Dockerfile
 
-```sh
+```docker
 FROM python:3.7-slim-buster
 
 LABEL version="v1" description="Docker deploy Flask" by="Dalao"
 
 WORKDIR /usr/flask/app
 
-# 在镜像容器中执行命令
 RUN pip install flask uwsgi -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
-# 将主机中目录内容拷贝到镜像目录下
 COPY . .
 
-# 容器启动时执行指令，每个Dockerfile只能有一条CMD命令
 CMD uwsgi config.ini
 ```
 
 
-```sh
-docker build -t uwsgi_flask:v1 .
+### Nginx代理
 
-docker run -itd -p 5000:5000 --name uswgi_test uwsgi_flask
-```
-
-
-- Nginx代理
+- nginx.conf
 
 ```c
-// 修改nginx.conf
 http {
     server {
         listen 80;

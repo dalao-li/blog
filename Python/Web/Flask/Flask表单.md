@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-17 06:34:26
- * @LastEditors: DaLao
- * @LastEditTime: 2022-01-17 06:48:30
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-03 22:41:19
 -->
 
 
@@ -42,12 +42,9 @@ def main_page():
     if request.method == 'POST':
         # 获取表单值
         name = request.form.get("name")
-
         time = request.form.get("time")
-
         identify= request.form.get("identify")
-
         # 转为dict
         data = request.form.to_dict()
-        return render_template('main.html',data=data)
+        return render_template('main.html', data=data)
 ```

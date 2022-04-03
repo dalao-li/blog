@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:21:54
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-03 22:11:30
 -->
 
 ## Django入门
@@ -16,7 +16,6 @@
 ![](https://cdn.hurra.ltd/img/20200801113226.png)
 
 创建名为 demo 的 Django 项目
-项目目录
 
 - init: 一个空文件,声明所在目录的包为一个 Python 包
 
@@ -29,10 +28,12 @@
 - manage: 一个命令行工具,用来和 Django 项目进行交互
 
 
+
 ### 创建应用
 
+创建名为 app 的应用
+
 ```py
-# 创建名为 app 的应用
 python manage.py startapp app
 ```
 

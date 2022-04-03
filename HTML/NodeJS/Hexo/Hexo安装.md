@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-07 00:19:50
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 23:17:12
+ * @LastEditTime: 2022-04-03 20:41:30
 -->
 
 ## 1 安装Hexo
@@ -39,6 +39,7 @@ sudo npm install hexo-wordcount --save
 ![](https://cdn.hurra.ltd/img/20211207224409.png)
 
 
+
 ### 1.3 启动
 
 - 生成静态网站
@@ -61,6 +62,7 @@ hexo g && hexo s
 ![](https://cdn.hurra.ltd/img/20211207231203.png)
 
 
+
 ### 1.4 修改主题
 
 ```sh
@@ -70,6 +72,7 @@ git clone https://github.com/liuyib/hexo-theme-stun.git themes/stun
 # 安装依赖 hexo-renderer-pug
 sudo npm install --save hexo-renderer-pug
 ```
+
 
 
 ### 1.5 建立文章
@@ -90,6 +93,7 @@ hexo new page --path about/hello "Hello World"
 创建 source/about/hello.md 文件，同时 Front Matter 中的 title 为 "Hello World"
 
 ![](https://cdn.hurra.ltd/img/20211207234206.png)
+
 
 
 ### 1.6 远程推送
@@ -115,7 +119,10 @@ sudo npm install hexo-deployer-git --save
 hexo g && hexo d
 ```
 
+
+
 ## 2 问题
+
 
 ### 2.1 Math渲染
 
@@ -160,6 +167,8 @@ math:
 mathjax: true
 --
 ```
+
+
 
 ### 2.2 综合问题
 

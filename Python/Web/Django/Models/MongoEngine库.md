@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-04-22 23:42:03
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:13:11
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-03 21:56:44
 -->
 
 ## MongoEngine
@@ -27,6 +27,7 @@ class User(Document):
         'collection': 'user'
     }
 ```
+
 
 ### 转JSON
 

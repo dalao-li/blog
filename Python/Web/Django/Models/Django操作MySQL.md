@@ -5,10 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:54:51
+ * @LastEditTime: 2022-04-03 22:07:29
 -->
 
 ## Django 操作MySQL
+
 
 建立应用 app
 
@@ -49,7 +50,7 @@ from django.db import models
 
 # 学生表
 class Stu(models.Model):
-    choices=(('M',  '男'), ('W',  '女')), 
+    choices=(('M',  '男'), ('W',  '女')),
     num = models.CharField(primary_key=True, verbose_name='学号', help_text='请输入学号', max_length=5)
     name = models.CharField(verbose_name='姓名', help_text='请输入姓名', max_length=5)
     age = models.IntegerField(verbose_name='年龄', help_text='请输入年龄')
@@ -92,8 +93,6 @@ class Stu(models.Model):
 | choices      | 选择框标签, 值为一个二维的二元元组;第一个元素表示数据库内的真实值, 第二个表示页面上的显示内容               |
 
 
-建表后执行
-
 ```py
 # 为改动创建迁移记录
 python manage.py makemigrations
@@ -110,6 +109,7 @@ python manage.py migrate
 
 
 ### 管理
+
 
 Django 自带后台管理页面, 使用前需创建管理员用户
 
@@ -139,14 +139,16 @@ from .models import Stu
 admin.site.register(Stu)
 ```
 
-刷新
 
 ![](https://cdn.hurra.ltd/img/20200802213738.png)
 
 
+
 ### 新增
 
+
 可视化, 直接使用 Django 管理页面新增数据
+
 ![](https://cdn.hurra.ltd/img/20200802223956.png)
 
 ![](https://cdn.hurra.ltd/img/20200802224031.png)
@@ -154,18 +156,16 @@ admin.site.register(Stu)
 由于之前设定了 ordering = ['age'], 故添加的数据会按从小到大的顺序排列
 
 
-在命令行执行
+命令行执行
 
 ```py
-s = Stu(num='D-123', name='阿强', age=19, sex='M')
+s = Stu(num='D-123', name='强', age=19, sex='M')
 
 s.save()
-```
 
-上述代码等同于
+或
 
-```py
-s = Stu.objects.create(num='D-123', name='阿强', age=19, sex='M')
+s = Stu.objects.create(num='D-123', name='强', age=19, sex='M')
 ```
 
 ![](https://cdn.hurra.ltd/img/20200802235206.png)
@@ -173,7 +173,8 @@ s = Stu.objects.create(num='D-123', name='阿强', age=19, sex='M')
 ![](https://cdn.hurra.ltd/img/20200802235230.png)
 
 
-###  查询
+
+### 查询
 
 - 获取所有对象
 
@@ -233,6 +234,7 @@ Stu.objects.filter(num='A-123').delete()
 ```
 
 ![](https://cdn.hurra.ltd/img/20200803004719.png)
+
 ![](https://cdn.hurra.ltd/img/20200803004753.png)
 
 

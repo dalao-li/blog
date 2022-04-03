@@ -39,7 +39,7 @@ python manage.py startapp app
 python manage.py makemigrations
 
 # 将操作同步到数据库
-python manage.py migrate  
+python manage.py migrate
 ```
 - 同步到多个数据库
 

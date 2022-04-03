@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:02:13
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 21:53:40
+ * @LastEditTime: 2022-04-03 20:43:57
 -->
 
 ## git 提交
@@ -13,6 +13,7 @@
 ![](https://cdn.hurra.ltd/img/git.svg)
 
 ![](https://cdn.hurra.ltd/img/2022-3-17-2310.svg)
+
 
 
 ### 1.1 init
@@ -58,6 +59,7 @@ git reset HEAD
 ![](https://cdn.hurra.ltd/img/20220112080614.png)
 
 
+
 ### 1.3 commit
 
 ![](https://cdn.hurra.ltd/img/2022-3-18-2158.svg)
@@ -91,6 +93,7 @@ git commit --amend
 ```sh
 git push --force-with-lease
 ```
+
 
 
 ### 1.4 push
