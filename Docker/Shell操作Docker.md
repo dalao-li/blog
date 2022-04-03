@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-15 10:21:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:28:35
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-03 13:08:17
 -->
 
 ## Shell
@@ -46,11 +46,11 @@ docker images | awk '{print $1}' > images.txt
 sed -i '1d' images.txt
 
 while read -r line; do
-  file=${line//\//_}.tar
-  if [ ! -f "$file" ]; then
-    docker save "$line" > "$file"
-    echo "docker saved $file"
-  fi
+    file=${line//\//_}.tar
+    if [ ! -f "$file" ]; then
+        docker save "$line" > "$file"
+        echo "docker saved $file"
+    fi
 done < images.txt
 ```
 

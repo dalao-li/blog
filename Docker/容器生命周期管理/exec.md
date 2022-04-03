@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 04:30:33
- * @LastEditors: DaLao
- * @LastEditTime: 2022-02-19 21:36:09
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-03 19:54:15
 -->
 
 
@@ -24,6 +24,7 @@ docker exec [参数] 镜像ID 命令
 | `-d` | 分离模式，在后台运行        |
 
 
+
 ### 单指令
 
 ```sh
@@ -38,6 +39,7 @@ docker run -itd --name=box busybox
 docker exec -it box mkdir test
 ```
 ![](https://cdn.hurra.ltd/img/20220112043735.png)
+
 
 
 ### 多指令

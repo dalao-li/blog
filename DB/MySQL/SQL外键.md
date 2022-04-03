@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: DaLao
- * @LastEditTime: 2022-02-19 21:42:22
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-03 19:49:22
 -->
 
 ## SQL外键
@@ -13,9 +13,9 @@
 外键是另一表的主键，可重复，可为空，用于数据约束
 
 - 一个表中的 `FOREIGN KEY`(外键) 指向另一个表中的 `PRIMARY KEY`(主键)
-  
+
 - `FOREIGN KEY`(外键)必须是其指向的那个表中的值之一
-  
+
 - `FOREIGN KEY` 约束用于预防破坏表之间连接的动作，能防止非法数据插入外键列
 
 
@@ -52,7 +52,6 @@ CREATE TABLE `Score`  (
 ```
 
 若向 Score 表中插入一行数据，其中 Score.s_id，Score.c_id 值必须存在于 Stu 表与Course 表中，否则会报错
-
 
 Stu 表
 

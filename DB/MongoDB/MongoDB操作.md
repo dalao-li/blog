@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:01:12
+ * @LastEditTime: 2022-04-03 13:08:47
 -->
 
 
@@ -45,6 +45,7 @@ db.auth('admin','123456')
 ```
 
 ![](https://cdn.hurra.ltd/img/20220112184110.png)
+
 
 
 ## 2 命令
@@ -163,6 +164,7 @@ db.[集合].remove({key:value})
 ```sh
 db.stu.remove({name:"Ling"})
 ```
+
 
 
 ## 3 Python交互

@@ -4,11 +4,12 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 23:48:41
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-17 21:40:56
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-03 19:52:33
 -->
 
 ## SQLServer
+
 
 ### Docker部署
 
@@ -39,6 +40,7 @@ docker run -itd -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Dalao@13546!" -p 1433:1433 --
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Dalao@13546!"
 ```
 
+
 - 显示所有数据库
 
 ```sql
@@ -47,6 +49,7 @@ GO
 ```
 
 ![](https://cdn.hurra.ltd/img/20201012110513.png)
+
 
 - 显示表
 
@@ -58,6 +61,7 @@ GO
 ![](https://cdn.hurra.ltd/img/20201012130931.png)
 
 别忘记输入`GO`，那样才会执行命令(反人类的SQLServer)
+
 
 
 ### Python 交互
@@ -91,7 +95,7 @@ try:
     cursor.execute(sql)
     results = cursor.fetchall()
 except:
-    ....
+    ...
 
 # 关闭数据库连接
 conn.close()

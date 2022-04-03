@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:02:09
+ * @LastEditTime: 2022-04-03 13:11:10
 -->
 
 ## Docker部署MySQL
@@ -16,13 +16,11 @@
 ```sh
 docker run -itd \
     --name=mysql \
-    # 映射端口
     -p 3306:3306 \
-    # 挂载目录
     -v $PWD/mysql:/var/lib/mysql \
-    # 建立普通用户dalao
+    # 建立普通用户
     -e MYSQL_USER=dalao \
-    # 设置dalao用户密码
+    # 设置用户密码
     -e MYSQL_PASSWORD=456 \
     # 设置root用户密码
     -e MYSQL_ROOT_PASSWORD=123 \
@@ -59,6 +57,7 @@ flush privileges;
 
 ### 常见问题
 
+
 - 中文乱码
 
 ```sh
@@ -66,6 +65,7 @@ echo "character-set-server=utf8" >> /etc/mysql/mysql.conf.d/mysqld.cnf
 
 service mysql restart
 ```
+
 
 - 降低占用内存
 
@@ -80,7 +80,3 @@ EOF
 
 service mysql restart
 ```
-
-
-
-

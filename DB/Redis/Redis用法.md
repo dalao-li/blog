@@ -4,8 +4,8 @@
  * @Autor: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-24 15:25:28
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-17 21:39:34
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-03 19:51:14
 -->
 
 ## Readis
@@ -19,11 +19,13 @@
 SET key redis
 ```
 
+
 - 删除键
   
 ```sh
 DEL key
 ```
+
 
 - 检查给定key是否存在
 
@@ -31,17 +33,20 @@ DEL key
 EXISTS key
 ```
 
+
 - 以秒为给定key设置过期时间
 
 ```sh
 EXPIRE key seconds
 ```
 
+
 - 以秒返回给定key的剩余生存时间
 
 ```sh
 TTL key
 ```
+
 
 ### 安全操作
 
@@ -51,11 +56,13 @@ TTL key
 CONFIG set requirepass "密码"
 ```
 
+
 - 查看密码
 
 ```sh
 CONFIG get requirepass
 ```
+
 
 ### Docker部署
 
@@ -68,8 +75,9 @@ CONFIG get requirepass
 protected-mode no  
 
 # password
-requirepass 123456   
+requirepass 123456
 ```
+
 
 - 拉取容器
 
@@ -85,13 +93,15 @@ docker run -itd \
 docker run -itd -p 6379:6379 -v $PWD/redis.conf:/etc/redis/redis.conf --name redis-server redis 
 ```
 
+
 - 连接
 
 ```sh
 docker exec -it redis-test redis-cli
 ```
 
-- GUI软件
+
+### GUI软件
 
 ```sh
 sudo snap install redis-desktop-manager

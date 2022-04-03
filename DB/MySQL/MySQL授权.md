@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:02:47
+ * @LastEditTime: 2022-04-03 19:48:36
 -->
 
 ## MySQL 授权
@@ -38,6 +38,7 @@ select host,user,authentication_string from mysql.user;
 
 
 ![](https://cdn.hurra.ltd/img/20200516001919.png)
+
 
 
 ### 授权
