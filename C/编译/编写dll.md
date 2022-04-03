@@ -4,11 +4,11 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:29:38
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-04 02:01:36
 -->
 
-## 编写
+### 编写
 
 建立一个 C Library 项目 hello
 
@@ -22,7 +22,7 @@ library.c 文件中已有默认代码
 ![](https://cdn.hurra.ltd/img/20201028181058.png)
 
 
-## 调用
+### 调用
 
 另建立一个项目 Demo，在其根目录下建立 lib 目录，将上一步生成的 dll 文件拷入
 ![](https://cdn.hurra.ltd/img/20201028182033.png)
@@ -78,7 +78,7 @@ target_link_libraries(Demo libhello.dll)
 ![](https://cdn.hurra.ltd/img/20201028184425.png)
 
 
-## 测试
+### 测试
 
 新建 C Library 项目 num
 
