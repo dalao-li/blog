@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-08 20:42:19
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:03:27
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-05 00:47:26
 -->
 
 ## DOM Nodes
@@ -40,25 +40,31 @@ const b = document.getElementById("submitBtn")
 
 插入新的子节点(元素)
 
+
 - removeChild(node)
 
 删除子节点(元素)
+
 
 - createAttribute()
 
 创建属性节点
 
+
 - createElement()
 
 创建元素节点
+
 
 - createTextNode()
 
 创建文本节点
 
+
 - getAttribute()
 
 返回指定的属性值
+
 
 - setAttribute()
 

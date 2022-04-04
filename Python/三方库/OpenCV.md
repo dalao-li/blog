@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
- * @LastEditors: DaLao
- * @LastEditTime: 2022-01-07 02:02:57
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-05 01:01:24
 -->
 
 ## 安装 OpenCV
@@ -23,6 +23,7 @@ pip uninstall numpy
 
 pip install numpy==1.19.3
 ```
+
 
 ## 读取图像显示
 

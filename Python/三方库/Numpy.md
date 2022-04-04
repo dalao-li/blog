@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 21:51:57
+ * @LastEditTime: 2022-04-05 01:01:19
 -->
 
 ## Numpy
@@ -25,6 +25,7 @@ numpy.array(object, dtype = None, copy = True, order = None, subok = False, ndmi
 | order  | 创建数组的样式,C 为行方向,F 为列方向,A 为任意方向(默认) |
 | subok  | 默认返回一个与基类类型一致的                            | 数组 |
 | ndmin  | 指定生成数组的最小维度                                  |
+
 
 - 单维度
 
