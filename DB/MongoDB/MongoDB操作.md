@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 13:08:47
+ * @LastEditTime: 2022-04-04 11:08:56
 -->
 
 
@@ -13,7 +13,7 @@
 
 
 ### 1.1 创建容器
-  
+
 ```sh
 docker run -itd --name mongo -p 27017:27017 mongo --auth 
 
@@ -92,6 +92,7 @@ db.stu.insert([{name:"Ling",age:20},{name:"Wang",age:22}])
 ![](https://cdn.hurra.ltd/img/20220112184807.png)
 
 
+
 ### 2.4 查询
 
 - 全部查询
@@ -127,7 +128,6 @@ db.stu.find({name:"Ling"}).pretty()
 db.stu.find({age:{$gte:21}}).pretty()
 ```
 
-条件查询表
 
 | 操作       | 格式                 |
 | ---------- | -------------------- |
