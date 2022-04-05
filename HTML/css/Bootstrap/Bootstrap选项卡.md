@@ -1,7 +1,17 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: dalao
+ * @Email: dalao_li@163.com
+ * @Date: 2022-02-13 19:00:24
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-05 22:03:10
+-->
 
-## 效果
+### 效果
 
 ![](https://cdn.hurra.ltd/img/20200524194114.png)
+
 ![](https://cdn.hurra.ltd/img/20200524194134.png)
 
 - nav-link active 即默认选择的选项卡
@@ -10,7 +20,8 @@
 
 - data-toggle="tab" 用以绑定触发事件，即点击不同选项卡时切换页面
 
-## 全部代码
+
+### 全部代码
 
 ```html
 <!DOCTYPE html>

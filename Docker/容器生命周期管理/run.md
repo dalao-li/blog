@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 01:44:11
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 19:56:22
+ * @LastEditTime: 2022-04-05 21:29:43
 -->
 
 
@@ -30,13 +30,16 @@ docker run [参数] 镜像ID (命令)
 
 `-p 主机端口:容器端口` 指定端口映射
 
-将本机7890端口映射到容器80端口
+- 将本机7890端口映射到容器80端口
 
 ```sh
 docker run -itd -p 7890:80 nginx
 ```
 
-- `--expose=[]` 开放一个或一组端口
+
+#### 1.2.1 --expose=[]
+
+`--expose=[]` 开放一个或一组端口
 
 
 
@@ -44,32 +47,35 @@ docker run -itd -p 7890:80 nginx
 
 `-e 变量=值` 给容器设置环境变量
 
-设置MySQL容器中root用户密码为123
+- 设置MySQL容器中root用户密码为123
 
 ```sh
 docker run -itd -e MYSQL_ROOT_PASSWORD=123 mysql:5.6
 ```
 
-给busybox容器设置环境变量STR_VEN=abcdefg
+- 给busybox容器设置环境变量STR_VEN=abcdefg
 
 ```
 docker run -itd --name=box -e STR_VEN=abcdefg busybox
 ```
 ![](https://cdn.hurra.ltd/img/20220112045036.png)
 
-- `--env-file=[]` 从指定文件读入环境变量
+
+#### 1.3.1 --env-file=[]
+
+`--env-file=[]` 从指定文件读入环境变量
 
 
 
 ### 1.4 --mount
 
-`--mount` 挂载本地目录(必须是绝对路径)到容器中，若不存在会报错
+`--mount` 挂载本地目录(必须是绝对路径)到容器中，若目录不存在会报错
 
 ```sh
 --mount type=bind,source=[本地路径],target=[容器路径](权限)
 ```
 
-将本地/src/app挂载到容器/root/app
+- 将本地/src/app挂载到容器/root/app
 
 ```sh
 docker run -itd --mount type=bind,source=/src/app,target=/root/app nginx:alpine
@@ -107,7 +113,7 @@ docker run -itd --mount type=bind,source=/src/app,target=/root/app nginx:alpine
 
 `--link=[]` 链接到另一个容器
 
-从 Ubuntu 容器中访问 MySQL容器中的mysql服务
+- 从 Ubuntu 容器中访问 MySQL容器中的mysql服务
 
 ```sh
 docker run -itd \

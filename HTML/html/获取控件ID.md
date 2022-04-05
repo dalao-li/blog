@@ -4,11 +4,11 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-14 16:34:34
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 22:54:00
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-05 22:03:43
 -->
 
-## 获取控件ID
+### 获取控件ID
 
 ```html
 <button type="button" class="btn btn-success" id="{{ i.id }}" onclick=download()>下载</button>
@@ -27,7 +27,7 @@ function download(){
 ```
 
 
-## 动态ID
+### 动态ID
 
 ![](https://cdn.hurra.ltd/img/20200829232106.png)
 

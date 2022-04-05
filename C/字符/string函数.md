@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-11-27 20:45:27
- * @LastEditors: DaLao
- * @LastEditTime: 2022-02-24 21:33:46
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-05 22:52:46
 -->
 
 ## string函数
@@ -88,7 +88,7 @@ printf("%s\n", a);
 - 复制字符 c(一个无符号字符)到参数 str 所指向字符串的前 n 个字符
 
 ```c
-void *memset(void *str, int c, size_t n)
+void *memset(void *str , int c , size_t n)
 ```
 | 参数 | 含义                   |
 | ---- | ---------------------- |

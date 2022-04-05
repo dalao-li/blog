@@ -5,11 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 00:48:50
+ * @LastEditTime: 2022-04-05 22:17:26
 -->
 
 
-## 安装
+### Vue 安装
 
 ```sh
 # vue换源
@@ -28,14 +28,14 @@ npm i element-ui -S
 
 ```js
 this.axios.get("http://127.0.0.1:5000/test").then((response) =>{
-  const r = response.data;
-  console.log(r.result);
+    const r = response.data;
+    console.log(r.result);
 });
 
 this.axios.post("http://127.0.0.1:5000/login" , {
-    name: this.param.username,
-    pwd: this.param.password,
-  }).then((response) => {
+        name: this.param.username,
+        pwd: this.param.password,
+    }).then((response) => {
     const r = response.data;
     console.log(r.result);
 });
@@ -50,37 +50,36 @@ this.axios.post("http://127.0.0.1:5000/login" , {
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
-    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+        <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+        <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    </head>
 
-  <body>
-    <div id="app">
-      <h1>GET请求获取数据</h1>
-      <div v-for="i in info">{{ i.name }} , {{i.age}}</div>
-    </div>
-    <script type="text/javascript">
-      new Vue({
-        el: "#app",
-        data() {
-          return {
-            info: null，
-          };
-        },
-        mounted() {
-          axios
-            .get("http://127.0.0.1:5000/getApi")
-            .then((response) => (this.info = response.data))
-            .catch(function (error) {
-              console.log(error);
-            });
-        },
-      });
-    </script>
-  </body>
+    <body>
+        <div id="app">
+            <h1>GET请求获取数据</h1>
+            <div v-for="i in info">{{ i.name }} , {{i.age}}</div>
+        </div>
+        <script type="text/javascript">
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                    info: null，
+                };
+            },
+            mounted() {
+                axios.get("http://127.0.0.1:5000/getApi")
+                    .then((response) => (this.info = response.data))
+                    .catch(function (error) {
+                    console.log(error);
+                });
+            },
+        });
+        </script>
+    </body>
 </html>
 ```
 
@@ -104,44 +103,44 @@ data = [
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
-  <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
 </head>
 
 <body>
-  <div id="app">
-    <h1>POST请求获取数据</h1>
-    输入用户名
-    <input type="text" name="name" id="name" v-model="name"></input>
-    <br>
-    <button @click="submitName">提交</button>
-  </div>
+    <div id="app">
+        <h1>POST请求获取数据</h1>
+        输入用户名
+        <input type="text" name="name" id="name" v-model="name">
+        <br>
+        <button @click="submitName">提交</button>
+    </div>
     
-  <script type="text/javascript">
-    const data = {'name': document.getElementById('name').value}
-    var vm = new Vue({
-      el: '#app'，
-      data() {
-        return {
-          name: '',
-          info: ''
-        }
-      }，
-      methods: {
-        submitName() {
-          axios
-            .post('http://127.0.0.1:5000/postApi' , {'name': this.name})
-            .then(function (response) {
-              this.info = response.data
-              alert(JSON.stringify(this.info))})
-            .catch(function (error) {
-              console.log(error)
-            })
-        },
-      }
-    })
+    <script type="text/javascript">
+        const data = {'name': document.getElementById('name').value}
+        var vm = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    name: '',
+                    info: ''
+                }
+            },
+            methods: {
+                submitName() {
+                axios
+                    .post('http://127.0.0.1:5000/postApi' , {'name': this.name})
+                    .then(function (response) {
+                        this.info = response.data
+                        alert(JSON.stringify(this.info))})
+                    .catch(function (error) {
+                        console.log(error)
+                    })
+                },
+            }
+        })
     </script>
 </body>
 
@@ -152,7 +151,6 @@ data = [
 @app.route('/postApi' , methods=['POST'])
 def post_api():
     data = json.loads(request.get_data())
-    print(data)
     return json.dumps(data)
 ```
 

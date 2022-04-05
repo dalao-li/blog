@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-01 01:39:36
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 22:59:22
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-05 22:04:21
 -->
 
 ## JS语法
@@ -19,6 +19,7 @@
 <button type="button" id="addBtn"></button>
 ```
 
+
 - 获取控件
 
 jQuery 利用$("#id")获取的是一个[object Object]
@@ -29,11 +30,13 @@ $("#id")[0] 或
 $("#id").get(0)
 ```
 
+
 - 获取值
 
 ```js
 $("#id").val();
 ```
+
 
 - 事件
 
@@ -42,6 +45,7 @@ $("#addBtn").click(functon(){
     ...
 })
 ```
+
 
 - 匿名函数
 
@@ -67,6 +71,7 @@ $.post(URL,data,callback)
 | url      | 发送的 url |
 | parm     | 发送的数据 |
 | callback | 回调函数   |
+
 
 ```js
 // 发送ajax请求

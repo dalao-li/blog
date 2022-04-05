@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-18 16:29:32
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:00:24
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-05 22:04:42
 -->
 
 ## JS用法
@@ -25,6 +25,7 @@
 document.getElementById("id")
 ```
 
+
 - 获取值
 
 ```js
@@ -33,6 +34,7 @@ document.getElementById("id").value();
 // div
 document.getElementById("id").innerHTML
 ```
+
 
 - 事件
 
@@ -59,6 +61,7 @@ addBtn.addEventListener("click"， ()=>{
 alert()
 ```
 
+
 - 确认提示框
  
 ```js
@@ -71,6 +74,7 @@ if (confirm(msg)){
 
 }
 ```
+
 
 - 输入提示框
 
