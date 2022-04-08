@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-18 16:22:55
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 21:35:11
+ * @LastEditTime: 2022-04-08 21:19:03
 -->
 
 ## 1 Map
@@ -23,7 +23,9 @@ map<T , V>::iterator it;
 ### 1.2 添加
 
 ```c
-insert(make_pair(key , value))
+map<T , V> m;
+
+m.insert(make_pair(key , value))
 
 m[key] = value
 ```

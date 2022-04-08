@@ -169,11 +169,11 @@ void SPFA(char s) {
 int main() {
     Edge e[6];
     e[0] = Edge('A','B',13);
-    e[1] = Edge('A','Edge',70);
+    e[1] = Edge('A','E',70);
     e[2] = Edge('B','D',4);
     e[3] = Edge('B','C',28);
     e[4] = Edge('C','D',23);
-    e[5] = Edge('C','Edge',15);
+    e[5] = Edge('C','E',15);
     for(int i = 0; i < 6; i++) {
         edge.push_back(e[i]);
     }

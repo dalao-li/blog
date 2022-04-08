@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 00:10:43
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-08 22:51:08
  */
 #include<stdio.h>
 #include<iostream>
@@ -21,7 +21,7 @@ typedef struct Tree {
 } Tree , *TreeList;
 
 // 树的初始化
-TreeList initTree(TreeList root) {
+TreeList initTree(TreeList &root) {
     root->leftSon = -1;
     root->rightSon = -1;
     return root;

@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 00:17:50
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-08 22:46:14
  */
 
 #include<stdio.h>
@@ -46,9 +46,9 @@ TreeList creatTree(TreeList &root) {
 
 // LDR        D B E A C
 void inOrderTree(TreeList &root) {
-	if(root == NULL) {
-		return;
-	}
+    if(root == NULL) {
+        return;
+    }
     inOrderTree(root->leftSon);
     printf("%c " , root->data);
     inOrderTree(root->rightSon);
