@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 22:07:29
+ * @LastEditTime: 2022-04-10 01:04:01
 -->
 
 ## Django 操作MySQL
@@ -184,6 +184,7 @@ stu_list = Stu.objects.all()
 
 ![](https://cdn.hurra.ltd/img/20200802235655.png)
 
+
 - 过滤查询
 
 ```py
@@ -193,6 +194,7 @@ stu = Stu.objects.filter(sex='M')
 
 ![](https://cdn.hurra.ltd/img/20200803001551.png)
 
+
 - 单一查询
 
 ```py
@@ -201,6 +203,7 @@ stu = Stu.objects.get(num='A-123')
 ```
 
 ![](https://cdn.hurra.ltd/img/20200803001831.png)
+
 
 - 查询是否存在
 

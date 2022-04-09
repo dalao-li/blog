@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 23:07:59
+ * @LastEditTime: 2022-04-10 01:04:55
 -->
 
  
@@ -46,13 +46,13 @@ TEMPLATES = [
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
 </html>
 ```
 

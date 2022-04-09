@@ -4,12 +4,14 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-24 17:08:04
- * @LastEditors: DaLao
- * @LastEditTime: 2022-01-03 11:35:06
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-09 23:40:02
 -->
 
 
-## 概念
+## DHCP
+
+### 协议
 
 动态主机配置协议($Dynamic$ $Host$ $Configuration$ $Protocol$)是使用$UDP$协议工作的局域网网络协议
 
@@ -20,7 +22,8 @@
 
 - 为内部网络用户接受$IP$租约
 
-## DHCP服务器
+
+### DHCP服务器
 
 专门承载和运行DHCP服务，帮助管理IP的专用服务器
 
@@ -40,7 +43,8 @@
 
 利用DHCP服务器，我们可以灵活的利用手工分配、自动分配及动态分配3种分配方式，为DHCP客户机分配TCP/IP地址，从而做到更为方便的管理和维护DHCP客户机，同时也可以有效解决IP不够用的问题
 
-## 配置DHCP主机
+
+### 配置DHCP主机
 
 新建VMnet10网卡
 

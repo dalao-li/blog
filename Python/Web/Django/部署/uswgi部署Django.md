@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-03 13:54:04
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:53:25
+ * @LastEditTime: 2022-04-10 01:01:29
 -->
 
 ## Django部署
@@ -23,8 +23,6 @@ python manage.py runserver 0.0.0.0:8000
 
 
 ### uwsgi
-  
-config.ini
 
 ```ini
 [uwsgi]
@@ -43,6 +41,8 @@ threads = 8
 # 设置用于uwsgi包解析的内部缓存区大小为64k.默认是4k
 buffer-size = 32768
 ```
+
+
 
 ### nginx
 

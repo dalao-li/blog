@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:05:46
+ * @LastEditTime: 2022-04-09 22:10:43
 -->
 
 ## 1 SSH
@@ -24,6 +24,7 @@ ssh 用户名@IP地址 (-p 端口号)
 ```sh 
 ssh dalao@192.168.1.1
 ```
+
 
 - 清除主机密钥
 

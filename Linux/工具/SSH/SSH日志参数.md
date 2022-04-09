@@ -4,36 +4,58 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-10 10:19:22
- * @LastEditors: DaLao
- * @LastEditTime: 2022-01-09 20:55:46
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-09 23:37:32
 -->
 
-## 连接参数
+## SSH连接参数
+
+
+### SSH版本
 
 ```sh
-# SSH版本
 OpenSSH_7.4p1， OpenSSL 1.0.2k-fips  26 Jan 2017
+```
 
-# 读取本地主机ssh_config文件
+
+### 读取本地主机ssh_config文件
+
+```sh
 debug1: Reading configuration data /etc/ssh/ssh_config
 
 debug1: /etc/ssh/ssh_config line 58: Applying options for *
+```
 
-#尝试链接远程主机 
+
+### 尝试链接远程主机 
+
+```sh
 debug1: Connecting to 192.168.43.96 [192.168.43.96] port 22.
+```
 
-# 链接成功建立
+
+### 链接成功建立
+
+```sh
 debug1: Connection established.
 debug1: permanently_set_uid: 0/0
 debug1: identity file /root/.ssh/id_ed25519-cert type -1
 debug1: Enabling compatibility mode for protocol 2.0
 debug1: Local version string SSH-2.0-OpenSSH_7.4
+```
 
-# 远程控制版本
+
+### 远程控制版本
+
+```sh
 debug1: Remote protocol version 2.0， remote software version OpenSSH_7.4
 debug1: match: OpenSSH_7.4 pat OpenSSH* compat 0x04000000
+```
 
-# 验证远程主机的IP 端口与登录用户
+
+### 验证远程主机的IP 端口与登录用户
+
+```sh
 debug1: Authenticating to 192.168.43.96:22 as 'root'
 
 # 发送
@@ -50,8 +72,12 @@ debug1: kex: curve25519-sha256 need=64 dh_need=64
 debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
 debug1: Server host key: ecdsa-sha2-nistp256 SHA256:lsEahI9aF7pwetF/JFWve4GvvsepzuYPc24/r2qxLZ8
 debug1: Host '192.168.43.96' is known and matches the ECDSA host key.
+```
 
-# 在远程主机的known_hosts文件中查找密钥
+
+### 在远程主机的known_hosts文件中查找密钥
+
+```sh
 debug1: Found key in /root/.ssh/known_hosts:7
 debug1: rekey after 134217728 blocks
 debug1: SSH2_MSG_NEWKEYS sent
@@ -93,7 +119,9 @@ debug1: Sending env LANG = zh_CN.UTF-8
 # 上一次登录信息
 Last login: Thu Mar 11 17:51:04 2021 from 192.168.43.231
 ```
-## 日志
+
+
+## SSH登陆日志
 
 很多Linux的新发行版已经不再使用，改为使用rsyslog，配置目录/etc/rsyslog.d
 

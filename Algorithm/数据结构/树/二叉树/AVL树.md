@@ -21,13 +21,13 @@
 
 ```c
 template <class T>
-struct AVLNode{
+struct AVLNode {
     T value;
     AVLNode<T> *leftSon;
     AVLNode<T> *rightSon;
     int height;
 
-    AVLNode(T value，AVLNode<T> *leftSon , AVLNode<T> *rightSon , int height){
+    AVLNode(T value , AVLNode<T> *leftSon , AVLNode<T> *rightSon , int height){
         this->value = value;
         this->leftSon = leftSon;
         this->rightSon = rightSon;
@@ -42,20 +42,20 @@ struct AVLNode{
 ```c
 // 获取某节点的高度
 template <class T>
-int getHeight(AVLNode<T> *root){
-    if(root == nullptr){
+int getHeight(AVLNode<T> *&node) {
+    if(node == nullptr) {
         return 0;
     }
-    return root->height;
+    return node->height;
 }
 
 // 获取节点的平衡因子
 template <class T>
-int getBalanceFactor(AVLNode<T> *root){
-    if(root == nullptr){
+int getBalanceFactor(AVLNode<T> *&node) {
+    if(node == nullptr) {
         return 0;
     }
-    return getHeight(root->leftSon) - getHeight(root->rightSon);
+    return getHeight(node->leftSon) - getHeight(node->rightSon);
 }
 ```
 
@@ -65,14 +65,14 @@ int getBalanceFactor(AVLNode<T> *root){
 ```c
 // 判断是否平衡
 template <class T>
-bool isBalance(AVLNode<T> *root){
-    if(root == nullptr){
+bool isBalance(AVLNode<T> *node) {
+    if(node == nullptr){
         return true;
     }
-    if(abs(getBalanceFactor(root)) > 1){
+    if(abs(getBalanceFactor(node)) > 1) {
         return false;
     }
-    return isBalance(root->leftSon) && isBalance(root->rightSon);
+    return isBalance(node->leftSon) && isBalance(node->rightSon);
 }
 ```
 
@@ -92,7 +92,7 @@ bool isBalance(AVLNode<T> *root){
 ```c
 // 左旋，root为最小失衡子树的根节点
 template <class T>
-AVLNode<T> *leftRotation(AVLNode<T> *root){
+AVLNode<T> *leftRotation(AVLNode<T> *root) {
     AVLNode<T> *p = root->rightSon;
     root->rightSon = p->leftSon;
     p->leftSon = root;
@@ -114,7 +114,7 @@ AVLNode<T> *leftRotation(AVLNode<T> *root){
 
 ```c
 template <class T>
-AVLNode<T>* rightRotation(AVLNode<T>* root){
+AVLNode<T>* rightRotation(AVLNode<T> *&root) {
     AVLNode<T> *p = root->leftSon;
     root->leftSon = p->rightSon;
     p->rightSon = root;
@@ -131,7 +131,7 @@ AVLNode<T>* rightRotation(AVLNode<T>* root){
 
 ```c
 template <class T>
-AVLNode<T>* rightLeftRotation(AVLNode<T> *root){
+AVLNode<T>* rightLeftRotation(AVLNode<T> *&root) {
     root->rightSon = rightRotation(root->rightSon);
     return leftRotation(root);
 }
@@ -148,7 +148,7 @@ AVLNode<T>* rightLeftRotation(AVLNode<T> *root){
 
 ```c
 template <class T>
-AVLNode<T>* leftRightRotation(AVLNode<T> *root){
+AVLNode<T>* leftRightRotation(AVLNode<T> *&root) {
     root->leftSon = leftRotation(root->leftSon);
     return rightRotation(root);
 }

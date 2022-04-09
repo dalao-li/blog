@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-22 23:42:03
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 21:56:44
+ * @LastEditTime: 2022-04-10 01:04:19
 -->
 
 ## MongoEngine
@@ -46,7 +46,7 @@ scores = User.objects.filter(name='Wang').first().scores
 
 scores = list(scores)
 
-scores.append(Score(name='C++',score=90))
+scores.append(Score(name='C++', score=90))
 
 User.objects.filter(name='Wang').first().update(scores=scores)
 ```

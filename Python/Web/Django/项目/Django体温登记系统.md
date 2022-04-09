@@ -5,10 +5,8 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 21:55:37
+ * @LastEditTime: 2022-04-10 01:03:15
 -->
-
-> github 地址 : `https://github.com/Dalao-Li/RegisterSystem-Django.git`
 
 
 ## 技术

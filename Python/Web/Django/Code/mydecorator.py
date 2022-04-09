@@ -4,8 +4,8 @@ Version: 1.0
 Author: DaLao
 Email: dalao_li@163.com
 Date: 2021-12-23 15:07:52
-LastEditors: DaLao
-LastEditTime: 2022-01-01 21:29:10
+LastEditors: dalao
+LastEditTime: 2022-04-10 01:02:25
 '''
 import json
 from django.shortcuts import HttpResponse
@@ -13,18 +13,17 @@ from django.shortcuts import HttpResponse
 
 # 适用于 包装 返回 HttpResponse 的外层函数
 def httpTry(f):
-  def x(*args, **kwargs):
-    resdata = ""
-    res = {}
-    try:
-      resdata = f(*args, **kwargs)
-    except Exception as e:
-      res["code"] = "-1"
-      res["message"] = str(e)
-      resdata = HttpResponse(json.dumps(res, ensure_ascii=False))
-    return resdata
-
-  return x
+    def x(*args, **kwargs):
+        resdata = ""
+        res = {}
+        try:
+            resdata = f(*args, **kwargs)
+        except Exception as e:
+            res["code"] = "-1"
+            res["message"] = str(e)
+        resdata = HttpResponse(json.dumps(res, ensure_ascii=False))
+        return resdata
+    return x
 
 
 # 包装不需要返回数据,只需要执行结果的请求

@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:10:52
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-10 01:02:51
 -->
 
 ## 完整代码
@@ -574,6 +574,7 @@ python manage.py migrate
 ```
 
 ![](https://cdn.hurra.ltd/img/20200809154710.png)
+
 
 ### 视图函数
 
