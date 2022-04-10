@@ -5,16 +5,17 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:50:51
+ * @LastEditTime: 2022-04-10 14:56:29
 -->
 
 ## 1 类
+
 
 ### 1.1 定义
 
 ```py
 class Stu:
-    def __init__(self , num , name , age):
+    def __init__(self, num: str, name: str, age: str):
         self.num = num
         self.name = name
         self.age = age
@@ -29,7 +30,7 @@ self代表类的实例，而非类
 
 ```py
 class Person:
-    def __init__(self , name):
+    def __init__(self, name: str):
         self.name = name
 
     # get方法
@@ -51,15 +52,15 @@ class Person:
 - 获值
 
 ```py
-class A(object):
-    def __init__(self , name , age):
+class Person(object):
+    def __init__(self, name: str, age: str):
         self.name = name
         self.age = age
 
-a = A('lili'， 23)
+p = Person('lili', 23)
 
-# {'name': 'lili'， 'age': 23}
-print(a.__dict__)
+# {'name': 'lili', 'age': 23}
+print(p.__dict__)
 ```
 
 - 赋值
@@ -67,7 +68,7 @@ print(a.__dict__)
 ```py
 class Person:
     # _obj为字典
-    def __init__(self , _obj):
+    def __init__(self, _obj):
         self.__dict__.update(_obj)
 ```
 
@@ -78,7 +79,7 @@ class Person:
 
 ```py
 class People:
-    def __init__(self , name: str , age: str)-> None:
+    def __init__(self, name: str, age: str)-> None:
         self.name = name
         self.age = age
 

@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-02-22 23:16:23
- * @LastEditors: DaLao
- * @LastEditTime: 2022-01-13 10:55:05
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-10 15:21:59
 -->
 
 ## Debug
@@ -13,11 +13,11 @@
 ```c
 #include<stdio.h>
 
-int main(void){
+int main(void) {
 	int sum = 0;
-	for(int i = 0;i<10;i++){
+	for(int i = 0; i < 10; i++) {
 		sum += i;
-		printf("%d\n"，sum);
+		printf("%d\n" , sum);
 	}
 	return 0;
 } 

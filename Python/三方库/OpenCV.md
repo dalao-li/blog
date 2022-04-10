@@ -5,10 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 01:01:24
+ * @LastEditTime: 2022-04-10 14:42:58
 -->
 
-## 安装 OpenCV
+## OpenCV
+
+### 安装 OpenCV
 
 ```py
 pip install opencv-python
@@ -25,7 +27,7 @@ pip install numpy==1.19.3
 ```
 
 
-## 读取图像显示
+### 读取图像显示
 
 ```py
 import cv2 as cv
@@ -43,7 +45,8 @@ cv.waitKey(0)
 cv.destroyAllWindows()
 ```
 
-## 图片人脸识别
+
+### 图片人脸识别
 
 ```py
 import cv2 as cv
@@ -82,7 +85,8 @@ if __name__ == '__main__':
 
 ```
 
-## 视频人脸识别
+
+### 视频人脸识别
 
 ```py
 import cv2 as cv
