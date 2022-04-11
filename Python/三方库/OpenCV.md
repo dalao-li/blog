@@ -5,10 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-10 14:42:58
+ * @LastEditTime: 2022-04-11 21:05:23
 -->
 
 ## OpenCV
+
 
 ### 安装 OpenCV
 
@@ -27,15 +28,18 @@ pip install numpy==1.19.3
 ```
 
 
-### 读取图像显示
+
+### 显示图像
 
 ```py
 import cv2 as cv
 import numpy as np
 
-img = cv.imread("图片路径")
+image = cv.imread("图片路径")
+
 # 灰度化处理
-gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
+
 cv.namedWindow("input image", cv.WINDOW_AUTOSIZE)
 cv.imshow("input image", gray)
 
@@ -44,6 +48,7 @@ cv.waitKey(0)
 # 作用是能正常关闭绘图窗口
 cv.destroyAllWindows()
 ```
+
 
 
 ### 图片人脸识别
@@ -57,21 +62,23 @@ eye_detector_path = "venv\\Lib\\site-packages\\cv2\\data\\haarcascade_eye.xml"
 face_detector_path = "venv\\Lib\\site-packages\\cv2\\data\\haarcascade_frontalcatface.xml"
 
 def face_detect_demo():
-    # 把图片变成灰度图片,因为人脸的特征需要在灰度图像中查找
+    # 图片变成灰度图片,因为人脸的特征需要在灰度图像中查找
     gray = cv.cvtColor(src, cv.COLOR_BGR2GRAY)
+    
     # 通过级联检测器 cv.CascadeClassifier,加载特征数据
     face_detector = cv.CascadeClassifier(face_detector_path)
+    
     # 在尺度空间对图片进行人脸检测,
     # 第一个参数是哪个图片,
     # 第二个参数是向上或向下的尺度变化,是原来尺度的1.02倍,
     # 第三个参数是在相邻的几个人脸检测矩形框内出现就认定成人脸,
     # 这里是在相邻的5个人脸检测框内出现,如果图片比较模糊的话建议降低一点
     faces = face_detector.detectMultiScale(gray, 1.02, 5)
+    
     # 绘制结果图
     for x, y, w, h in faces:
         # 参数:要绘制的目标图像,矩形的第一个顶点,矩形对角线上的另一个顶点,线条颜色,线条宽度
         cv.rectangle(src, (x, y), (x + w, y + h), (0, 0, 255), 2)
-        # 输出结果图
         cv.imshow("result", src)
 
 if __name__ == '__main__':
@@ -79,10 +86,11 @@ if __name__ == '__main__':
     cv.namedWindow("input image", cv.WINDOW_AUTOSIZE)
     cv.imshow("input image", src)
     cv.namedWindow("result", cv.WINDOW_AUTOSIZE)
+    
     face_detect_demo()
+    
     cv.waitKey(0)
     cv.destroyAllWindows()
-
 ```
 
 
@@ -104,6 +112,7 @@ if __name__ == '__main__':
     while (True):
         check, frame = cap.read()
         gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
+        
         # 在尺度空间对图片进行人脸检测
         # 第一个参数是图片
         # 第二个参数是向上或向下的尺度变化,是原来尺度的1.2倍

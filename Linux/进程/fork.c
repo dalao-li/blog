@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-17 23:53:18
- * @LastEditors: DaLao
- * @LastEditTime: 2022-02-23 18:54:40
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-11 23:06:10
  */
 
 #include<stdio.h>
@@ -17,11 +17,8 @@ int g_var = 6;
 int main(void){
     int var = 88;
     pid_t pid = fork();
-    if(pid < 0){
-        perror("fork error");
-    }
-    // 子进程，修改值
-    else if(pid == 0){
+    // 子进程修改值
+    if(pid == 0){
         g_var++;
         var++;
     }
