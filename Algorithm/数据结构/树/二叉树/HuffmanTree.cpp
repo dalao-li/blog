@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-04-13 22:13:16
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-13 22:28:31
+ * @LastEditTime: 2022-04-14 23:02:25
  */
 
 #include<iostream>
@@ -14,6 +14,7 @@ using namespace std;
 
 // 用以进行哈夫曼编码
 int code[20];
+
 // 用以保存哈夫曼编码
 string huffman[6];
 
@@ -24,12 +25,13 @@ typedef struct Tree {
     T data;
     Tree *leftChild;
     Tree *rightChild;
-    Tree(T data) {
+    Tree(T data , Tree *left , Tree *right) {
         this->data = data;
-        this->leftChild = NULL;
-        this->rightChild = NULL:
+        this->leftChild = left;
+        this->rightChild = right:
     }
 } Tree , *TreeList;
+
 
 // 建哈夫曼树,返回根节点
 template<class T>
@@ -37,14 +39,14 @@ TreeList createTree(vector<T> &v) {
     // 建立指针数组用来保存节点信息
     vector<TreeList> leaves;
     for (int i = 0; i < v.size(); i++) {
-        leaves.push_back(Tree(v[i]))
+        leaves.push_back(Tree(v[i] , NULL , NULL))
     }
-    // 建立一个节点作为哈夫曼树的根节点
     TreeList root = NULL;
     // 建立哈夫曼树 
     for (int i = 1; i < v.size(); i++) {
         // min1表示最小权值的树根结点的下标,min2为次小权值节点的下标
-        int min1 = -1, min2;
+        int min1 = -1;
+        int min2;
         // 初始化min1与min2 
         for (int j = 0; j < v.size(); j++) {
             if (leaves[j] != NULL && min1 == -1) {
@@ -67,11 +69,11 @@ TreeList createTree(vector<T> &v) {
                 }
             }
         }
+        // 建立一个节点作为哈夫曼树的根节点
         // 用最小权值树和次小权值树建立一棵新树,root指向树根结点
-        root = new Tree;
-        root->data = leaves[min1]->data + leaves[min2]->data;
-        root->leftChild = leaves[min1];
-        root->rightChild = leaves[min2];
+        T data = leaves[min1]->data + leaves[min2]->data;
+        root = new Tree(data , leaves[min1] , leaves[min2]);
+        
         // 将指向新树的指针赋给leaves指针数组中min1位置
         leaves[min1] = root;
         // min2位置为空

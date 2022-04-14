@@ -5,10 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-04 02:01:36
+ * @LastEditTime: 2022-04-15 00:21:22
 -->
 
 ### 编写
+
 
 建立一个 C Library 项目 hello
 
@@ -20,6 +21,7 @@ library.c 文件中已有默认代码
 
 <kbd>ctrl</kbd> + <kbd>F9</kbd> 编译,右侧生成了 libhello.dll 文件
 ![](https://cdn.hurra.ltd/img/20201028181058.png)
+
 
 
 ### 调用
@@ -78,6 +80,7 @@ target_link_libraries(Demo libhello.dll)
 ![](https://cdn.hurra.ltd/img/20201028184425.png)
 
 
+
 ### 测试
 
 新建 C Library 项目 num
@@ -90,7 +93,7 @@ library.c 文件中写入
 #include <stdio.h>
 #include <stdbool.h>
 
-int add(int a， int b) {
+int add(int a , int b) {
     return a + b;
 }
 

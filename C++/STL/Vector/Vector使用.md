@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 20:40:55
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 21:04:38
+ * @LastEditTime: 2022-04-15 00:15:48
 -->
 
 ## 1 Vector
@@ -23,6 +23,7 @@ vector<int> v = {1, 2 , 3 , 4 , 5};
 ```c
 vector<vector<T> > v;
 ```
+
 
 
 ### 1.2 增加
@@ -44,6 +45,7 @@ vector<T> v;
 
 v.insert(v.begin() + index , value);
 ```
+
 
 
 ### 1.3 遍历
@@ -73,6 +75,7 @@ for(int i = 0; i < v.size(); i++){
 ```
 
 
+
 ### 1.4 删除
 
 - 删除x, y之间的元素
@@ -83,6 +86,7 @@ vector<T> v;
 v.earse(v.begin() + x , v.end() - y);
 ```
 
+
 - 删除末尾元素
 
 ```c
@@ -91,6 +95,7 @@ vector<T> v;
 v.pop_back();
 ```
 
+
 - 删除index + 1位置元素
 
 ```c
@@ -98,6 +103,7 @@ vector<T> v;
 
 v.erase(v.begin() + index)
 ```
+
 
 - 清空
 
@@ -115,10 +121,12 @@ reverse(v.begin() , v.end());
 ```
 
 
+
 ## 2 Vector算法
 
 
 ### 2.1 排序
+
 
 - 数字排序
 
@@ -127,6 +135,7 @@ vector<T> v;
 
 sort(v.begin() , v.end());
 ```
+
 
 - 对象排序
 
@@ -154,6 +163,7 @@ bool cmp(Stu a , Stu b) {
 
 sort(stu.begin() , stu.end() , cmp);
 ```
+
 
 
 ### 2.2 数学计算

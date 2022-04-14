@@ -1,12 +1,17 @@
 ## AVL
 
-- 树中任意结点的平衡因子(`左子树高度 - 右子树高度`)绝对值不超过 1
+
+### 性质
+
+- 树中任意结点的平衡因子(左子树高度 - 右子树高度)绝对值不超过 1
 
 - 树中的每个左子树和右子树都是 AVL 树
 
 - AVL 树是特殊的二叉搜索树
 
-- AVL 树的旋转操作是指在平衡因子大于 $1$ 时，会通过旋转来调整树的结构，以重新满足平衡因子不超过$1$
+- AVL 树的旋转操作
+
+    在平衡因子大于 $1$ 时，会通过旋转来调整树的结构，以重新满足平衡因子不超过$1$
 
 ![](https://cdn.hurra.ltd/img/2022-3-26-2311.svg)
 
@@ -21,7 +26,7 @@
 
 ```c
 template <class T>
-struct AVLNode {
+typedef struct AVLNode {
     T value;
     AVLNode<T> *leftSon;
     AVLNode<T> *rightSon;
@@ -33,25 +38,29 @@ struct AVLNode {
         this->rightSon = rightSon;
         this->height = height;
     }
-};
+} AVLNode , AVLNodeList;
 ```
 
 
 ### 获取节点信息
 
+- 获取某节点的高度
+
 ```c
-// 获取某节点的高度
 template <class T>
-int getHeight(AVLNode<T> *&node) {
+int getHeight(AVLNode<T> *node) {
     if(node == nullptr) {
         return 0;
     }
     return node->height;
 }
+```
 
-// 获取节点的平衡因子
+- 获取节点的平衡因子
+
+```c
 template <class T>
-int getBalanceFactor(AVLNode<T> *&node) {
+int getBalanceFactor(AVLNode<T> *node) {
     if(node == nullptr) {
         return 0;
     }
