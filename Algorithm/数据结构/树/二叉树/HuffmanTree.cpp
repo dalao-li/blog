@@ -5,41 +5,38 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-04-13 22:13:16
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-14 23:02:25
+ * @LastEditTime: 2022-04-15 12:28:11
  */
 
 #include<iostream>
 #include<vector>
-using namespace std;
 
 // 用以进行哈夫曼编码
 int code[20];
 
 // 用以保存哈夫曼编码
-string huffman[6];
+std::string huffman[6];
 
-
-template<class T>
 typedef struct Tree {
     //节点的权值 
-    T data;
+    int data;
     Tree *leftChild;
     Tree *rightChild;
-    Tree(T data , Tree *left , Tree *right) {
+    Tree(int data , Tree *left , Tree *right) {
         this->data = data;
         this->leftChild = left;
-        this->rightChild = right:
+        this->rightChild = right;
     }
-} Tree , *TreeList;
+}Tree , *TreeList;
 
 
 // 建哈夫曼树,返回根节点
-template<class T>
-TreeList createTree(vector<T> &v) {
+TreeList createTree(std::vector<int> &v) {
     // 建立指针数组用来保存节点信息
-    vector<TreeList> leaves;
+    std::vector<TreeList> leaves;
     for (int i = 0; i < v.size(); i++) {
-        leaves.push_back(Tree(v[i] , NULL , NULL))
+        Tree t = new Tree(v[i] , NULL , NULL);
+        leaves.push_back(t);
     }
     TreeList root = NULL;
     // 建立哈夫曼树 
@@ -58,8 +55,9 @@ TreeList createTree(vector<T> &v) {
                 break;
             }
         }
+        
         // 找出最小值和次小值节点的下标
-        for (int j = min2; j < LENGTH; j++) {
+        for (int j = min2; j < v.size(); j++) {
             if (leaves[j] != NULL) {
                 if (leaves[j]->data < leaves[min1]->data) {
                     min2 = min1;
@@ -71,7 +69,7 @@ TreeList createTree(vector<T> &v) {
         }
         // 建立一个节点作为哈夫曼树的根节点
         // 用最小权值树和次小权值树建立一棵新树,root指向树根结点
-        T data = leaves[min1]->data + leaves[min2]->data;
+        int data = leaves[min1]->data + leaves[min2]->data;
         root = new Tree(data , leaves[min1] , leaves[min2]);
         
         // 将指向新树的指针赋给leaves指针数组中min1位置
@@ -83,8 +81,7 @@ TreeList createTree(vector<T> &v) {
 }
 
 // 根据权值获取下标
-template<class T>
-int getIndex(vecotr<T> v , int weight){
+int getIndex(std::vector<int> v , int weight){
     for(int i = 0; i < v.size(); i++){
         if(v[i] == weight){
             return i;
@@ -94,8 +91,7 @@ int getIndex(vecotr<T> v , int weight){
 } 
 
 // 递归进行哈夫曼树编码,len是当前树的层数
-template<class T>
-void huffmanCoding(TreeList &root , int len , vector<T> &v) {
+void huffmanCoding(TreeList &root , int len , std::vector<int> &v) {
     if (root == NULL) {
         return;
     }
@@ -113,6 +109,7 @@ void huffmanCoding(TreeList &root , int len , vector<T> &v) {
         // 左侧分支都记为零
         code[len] = 0;
         huffmanCoding(root->leftChild , len + 1 , v);
+
         // 右侧分支都记为一
         code[len] = 1;
         huffmanCoding(root->rightChild , len + 1 , v);
@@ -120,14 +117,14 @@ void huffmanCoding(TreeList &root , int len , vector<T> &v) {
 }
 
 int main(void) {
-    vector<int> v = {12 , 24 , 35 , 67 , 46 , 55}; 
+    std::vector<int> v = {12 , 24 , 35 , 67 , 46 , 55}; 
 
-    vector<char> c = {'A' , 'B' , 'C' , 'D' , 'E' , 'F'};
+    std::vector<char> c = {'A' , 'B' , 'C' , 'D' , 'E' , 'F'};
 
-    TreeList root = createTree(arr);
+    TreeList root = createTree(v);
     huffmanCoding(root , 0 , v);
     for (int i = 0; i < v.size(); i++) {
-        cout << c[i] << "的哈夫曼编码是 : " << huffman[i] << endl;
+        std::cout << c[i] << "的哈夫曼编码是 : " << huffman[i] << std::endl;
     }
     return 0;
 }

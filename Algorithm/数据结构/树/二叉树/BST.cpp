@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-04-08 22:47:18
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-10 00:23:08
+ * @LastEditTime: 2022-04-15 07:57:51
  */
 
 #include<iostream>
@@ -19,28 +19,28 @@ struct BSTNode {
     T value;
     BSTNode<T> *leftSon;
     BSTNode<T> *rightSon;
-    BSTNode(T value,BSTNode<T> *leftSon , BSTNode<T> *rightSon) {
+    BSTNode(T value , BSTNode<T> *leftSon , BSTNode<T> *rightSon) {
         this->value = value;
         this->leftSon = leftSon;
         this->rightSon = rightSon;
     }
-};
+}; 
 
 // 查找
 template<class T>
 BSTNode<T> *searchBST(BSTNode<T> *&root , T value) {
-    if(root == nullptr) {
-        return nullptr;
+    while(root) {
+        if(root->value == value) {
+            return root;
+        }
+        if(root->value > value) {
+            root = root->leftSon;
+        }
+        if(root->value < value) {
+            root = root->rightSon;
+        }
     }
-    if(root->value == value) {
-        return root;
-    }
-    if(root->value > value) {
-        return searchBST(root->leftSon , value);
-    }
-    if(root->value < value) {
-        return searchBST(root->rightSon , value);
-    }
+    return nullptr;
 }
 
 
@@ -153,17 +153,17 @@ int main(int argv , char *argc[]) {
     cout << endl;
 
     // 插入值
-    // int newNode = 35;
-    // cout << "插入新值:" << newNode << endl;
-    // root = insertBST(root,newNode);
-    // cout << "插入新值后二叉排序树的中序遍历结果: ";
-    // outputBST(root);
-    // cout << endl;
+    int newNode = 35;
+    cout << "插入新值:" << newNode << endl;
+    root = insertBST(root , newNode);
+    cout << "插入新值后二叉排序树的中序遍历结果: ";
+    outputBST(root);
+    cout << endl;
 
     // 删除值
     int delNode = 11;
     cout << "删除值:" << delNode << endl;
-    deleteBST(root,delNode);
+    deleteBST(root , delNode);
     cout << "删除值后二叉排序树的中序遍历结果: ";
     outputBST(root);
     cout << endl;

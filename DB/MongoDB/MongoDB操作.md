@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-04 11:08:56
+ * @LastEditTime: 2022-04-15 14:30:16
 -->
 
 
@@ -23,6 +23,7 @@ docker exec -it mongo mongo admin
 ![](https://cdn.hurra.ltd/img/20220112183733.png)
 
 
+
 ### 1.2 创建用户
 
 创建一个名为 admin，密码为 123456 的用户
@@ -32,6 +33,7 @@ db.createUser({ user:'admin',pwd:'123456',roles:[{ role:'userAdminAnyDatabase',d
 ```
 
 ![](https://cdn.hurra.ltd/img/20220112183857.png)
+
 
 
 ### 1.3 连接
