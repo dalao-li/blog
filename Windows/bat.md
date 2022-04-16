@@ -4,14 +4,15 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-10-26 22:19:58
- * @LastEditors: DaLao
- * @LastEditTime: 2021-10-27 22:18:11
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-16 20:09:33
 -->
 
 ## bat指令
 
 
 ### 注释
+
 
 ```bat
 REM 注释内容
@@ -20,7 +21,9 @@ REM 注释内容
 ```
 
 
+
 ### 系统变量
+
 
 ```bat
 REM 获取当前目录
@@ -40,7 +43,9 @@ REM 获取上一命令执行结果码
 ```
 
 
+
 ### echo
+
 
 ```bat
 REM 1. 输出提示信息
@@ -57,7 +62,9 @@ REM 2. @echo将关闭该命令回显,即执行时不会显示该命令
 ```
 
 
+
 ### goto 和 :
+
 
 ```bat
 REM 建立index标号
@@ -68,7 +75,9 @@ goto index
 ```
 
 
+
 ### 文件
+
 
 ```bat
 REM 复制文件

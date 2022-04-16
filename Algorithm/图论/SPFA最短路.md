@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-14 23:52:32
+ * @LastEditTime: 2022-04-16 15:44:20
 -->
 
 
@@ -99,3 +99,76 @@ $3)$ 若队列为空则结束
 |        | A   | B    | C    | D    | Edge |
 | ------ | --- | ---- | ---- | ---- | ---- |
 | $p[i]$ | `0` | `13` | `41` | `17` | `56` |
+
+
+```c++
+const int SIZE = 5;
+const int MAXV = 10000;
+
+typedef struct Edge {
+    char start_node;
+    char end_node;
+    int weight;
+    Edge() {}
+    Edge(char s, char e , int w) : start_node(s) , end_node(e) , weight(w) {}
+} Edge;
+
+vector<Edge> edge;
+
+char node[5] = {'A' , 'B' , 'C' , 'D' , 'E'};
+
+int path[SIZE];
+
+int in[SIZE];
+
+int getIndex(char n) {
+    for(int i = 0; i < 5; i++) {
+        if(node[i] == n) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+// 求s到其他点间的最短路
+void SPFA(char s) {
+    char start_node;
+    int start;
+    char end_node;
+    int end;
+    queue<char> q;
+    
+    memset(path, MAXV, sizeof(path));
+    memset(in, 0, sizeof(in));
+    int index = getIndex(s);
+    // 点s自己的最短路为0
+    path[index] = 0;
+    q.push(s);
+    in[index] = 1;
+    
+    while (!q.empty()) {
+        start_node = q.front();
+        start = getIndex(start_node);
+        q.pop();
+        in[start] = 0;
+        // 遍历所有与a所连通的节点, 进行松弛操作
+        for (int i = 0; i < edge.size(); i++) {
+            if(start_node != edge[i].start_node) {
+                continue;
+            }
+            // 某个边的起点是a,获取该边的终点e
+            end_node = edge[i].end_node;
+            end = getIndex(end_node);
+            // 若从点S经过点X到点end的距离比S直接到end的距离短, 则可进行松弛操作
+            if (path[start] + edge[i].weight < path[end]) {
+                // 从点S到点end的距离更新为点S到X的距离与X到end的距离之和
+                path[end] = edge[i].weight + path[start];
+                if (!in[end]) {
+                    q.push(end_node);
+                    in[end] = 1;
+                }
+            }
+        }
+    }
+}
+```
