@@ -14,25 +14,25 @@
 using namespace std;
 
 void output1() {
-	for (int i = 0; i < 4; i++) {
-		//
-	}
+    for (int i = 0; i < 4; i++) {
+        //
+    }
 }
 
 void output2() {
-	for (int i = 0; i < 4; i++) {
-		//
-	}
+    for (int i = 0; i < 4; i++) {
+        //
+    }
 }
 
 int main() {
 
-	thread t1(output1);
-	thread t2(output2);
+    thread t1(output1);
+    thread t2(output2);
 
-	t1.detach();
-	Sleep(1000);
-	t2.detach();
-	Sleep(1000);
-	return 0;
+    t1.detach();
+    Sleep(1000);
+    t2.detach();
+    Sleep(1000);
+    return 0;
 }

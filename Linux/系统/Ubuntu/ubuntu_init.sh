@@ -6,8 +6,8 @@
  # @Author: DaLao
  # @Email: dalao_li@163.com
  # @Date: 2021-07-10 13:27:20
- # @LastEditors: DaLao
- # @LastEditTime: 2022-03-14 22:49:50
+ # @LastEditors: dalao
+ # @LastEditTime: 2022-04-16 11:24:18
 ### 
 
 # 设置flameshot快捷键
@@ -15,6 +15,7 @@
 
 
 DISK_PATH="/media/${USER}/disk_my/"
+
 
 # 系统初始化配置 
 init_system(){
@@ -30,6 +31,7 @@ init_system(){
     # 防止中文乱码
     git config --global core.quotepath false
 }
+
 
 # 安装docker
 install_docker(){
@@ -57,6 +59,7 @@ EOF
     set_proxy &
 }
 
+
 install_node(){
     sudo wget https://nodejs.org/dist/v16.13.1/node-v16.13.1-linux-x64.tar.xz
 
@@ -70,6 +73,7 @@ install_node(){
 
     source ~/.bashrc
 }
+
 
 # 安装代理
 set_proxy(){
@@ -114,6 +118,7 @@ EOF
     done
 }
 
+
 # 在放置jetbrains包的目录下执行，安装jetbrains
 set_jetbrains_ide(){
     name=${3}
@@ -140,7 +145,8 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 EOF
 
-} 
+}
+
 
 # 安装jetbrains
 install_jetbrains_ide(){
@@ -155,6 +161,7 @@ install_jetbrains_ide(){
     done
     wait
 }
+
 
 install_anaconda(){
     sudo sh ${DISK_PATH}/Ubuntu/App/Anaconda3-2020.11-Linux-x86_64.sh
@@ -173,12 +180,14 @@ install_anaconda(){
     pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 }
 
+
 # 安装虚拟机
 install_vm(){
     sudo apt-get install -y build-essential linux-headers-$(uname -r)
 
     sudo sh ${DISK_PATH}/Ubuntu/App/VMware-Workstation-Full-16.1.1-17801498.x86_64.bundle
 }
+
 
 install_deb(){
     deb=("microsoft-edge-stable_96.0.1054.62-1_amd64" "XMind-2020-for-Linux-amd-64bit-10.3.1-202101132117.deb" )
@@ -187,18 +196,3 @@ install_deb(){
         sudo dpkg -i ${DISK_PATH}/Ubuntu/App/${deb[j]}
     done
 }
-
-# init_system
-
-# install_docker
-
-# install_jetbrains_ide 
-
-install_appimage  
-
-#install_deb
-
-#install_vm
-
-#install_anaconda
-

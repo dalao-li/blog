@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 19:49:22
+ * @LastEditTime: 2022-04-16 11:00:56
 -->
 
 ## SQL外键
@@ -17,6 +17,7 @@
 - `FOREIGN KEY`(外键)必须是其指向的那个表中的值之一
 
 - `FOREIGN KEY` 约束用于预防破坏表之间连接的动作，能防止非法数据插入外键列
+
 
 
 ### 实例

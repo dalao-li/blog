@@ -17,7 +17,29 @@ GRUB可用于选择操作系统分区上的不同内核，也可用于向这些�
 Linux常见的引导程序包括LILO、GRUB、GRUB2
 
 
-### 多硬盘启动
+### 双系统修复
+
+```sh
+sudo gedit /etc/default/grub
+```
+
+修改内容如下
+
+```sh
+GRUB_TIMEOUT_STYLE="false"
+```
+
+- 更新
+
+```sh
+sudo grub-mkconfig -o /boot/grub/grub.cfg  
+```
+
+
+### Ubuntu
+
+
+#### 多硬盘启动
 
 ```sh
 # 安装 grub-customizer

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 19:47:56
+ * @LastEditTime: 2022-04-16 01:11:13
 -->
 
 ## 1 MySQL事务
@@ -28,6 +28,7 @@
 
 在事务开始之前和事务结束以后，数据库的完整性没有被破坏，表示写入的资料必须完全符合所有的预设规则，这包含资料的精确度、串联性以及后续数据库可以自发性地完成预定的工作
 
+
 #### 1.1.3 隔离性 Isolation
 
 隔离性可以防止多个事务并发执行时，由于交叉执行而导致对数据进行读写和修改产生不一致的情况
@@ -35,11 +36,11 @@
 事务隔离分为不同级别，包括，
 
 - 读未提交(Read uncommitted)
-  
+
 - 读提交(Read committed)
-  
+
 - 可重复读(Repeatable read)
-  
+
 - 串行化(Serializable)
 
 - 持久性(Durability)

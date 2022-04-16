@@ -18,6 +18,7 @@ tail -n 行数 日志名
 tail -n +行数 日志名
 ```
 
+
 ## head
 
 ```sh

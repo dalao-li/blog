@@ -5,10 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-16 12:46:09
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:41:06
+ * @LastEditTime: 2022-04-16 11:23:29
 -->
 
 ## CentOS系统
+
 
 
 ### 更新源
@@ -20,6 +21,7 @@ sudo curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Ce
 
 sudo yum clean all && yum makecache &&  yum -y update
 ```
+
 
 
 ### 配置Python
@@ -45,6 +47,7 @@ sudo sed -i "s#bin#bin:/usr/bin/python3/bin#g" ~/.bash_profile
 # 执行以下命令使对配置的修改生效
 sudo source ~/.bash_profile
 ```
+
 
 
 ### 安装Docker
@@ -86,6 +89,7 @@ sudo yum update -y && yum install epel-release -y
 ```
 
 
+
 ### 防火墙
  
 ```sh
@@ -98,6 +102,7 @@ systemctl stop firewalld.service
 # 永久关闭
 systemctl disable firewalld.service
 ```
+
 
 
 ### 网卡

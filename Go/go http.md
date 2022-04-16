@@ -39,19 +39,19 @@ func main() {
 package main
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 )
 
 func main() {
-	for i := 0; i < 5; i++ {
-		go printHello(i)
-	}
-	time.Sleep(time.Millisecond)
+    for i := 0; i < 5; i++ {
+        go printHello(i)
+    }
+    time.Sleep(time.Millisecond)
 }
 
 func printHello(i int) {
-	fmt.Printf("Hello World from goroutine %d!\n",i)
+    fmt.Printf("Hello World from goroutine %d!\n",i)
 }
 ```
 

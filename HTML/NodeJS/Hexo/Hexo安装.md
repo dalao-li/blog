@@ -81,11 +81,11 @@ sudo npm install --save hexo-renderer-pug
 hexo new [layout] <title>
 ```
 
-| 参数 | 描述                                                 |
-| ---- | ---------------------------------------------------- |
-| -p   | --path	自定义新文章的路径                            |
-| -r   | --replace	如果存在同名文章，将其替换                 |
-| -s   | --slug	文章的 Slug，作为新文章的文件名和发布后的 URL |
+| 参数 | 描述                                                    |
+| ---- | ------------------------------------------------------- |
+| -p   | --path    自定义新文章的路径                            |
+| -r   | --replace    如果存在同名文章，将其替换                 |
+| -s   | --slug    文章的 Slug，作为新文章的文件名和发布后的 URL |
 
 ```sh
 hexo new page --path about/hello "Hello World"

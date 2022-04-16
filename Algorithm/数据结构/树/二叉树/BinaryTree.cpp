@@ -63,7 +63,7 @@ void bfs(int i) {
 }
 
 int main() {
-	int n;
+    int n;
     cin >> n;
     for(int i = 1; i <= n; i++) {
         cin >> Leaf[i].left >> Leaf[i].right;

@@ -91,29 +91,29 @@ using namespace std;
 deque<int> q;
 
 int main() {
-	q = {1 , 2 , 3 , 4 , 5};
+    q = {1 , 2 , 3 , 4 , 5};
 
-	// 1
-	cout << q.front() << endl;
+    // 1
+    cout << q.front() << endl;
 
-	// 5
-	cout << q.back() << endl;
+    // 5
+    cout << q.back() << endl;
 
-	// 4
-	cout << q.at(3) << endl;
+    // 4
+    cout << q.at(3) << endl;
 
-	// 4
-	cout << q[3] << endl;
+    // 4
+    cout << q[3] << endl;
 
-	// 插入在2位置666
-	q.insert(q.begin()+2 , 666);
+    // 插入在2位置666
+    q.insert(q.begin()+2 , 666);
 
-	// 删除1位置元素
-	q.erase(q.begin() + 1);
+    // 删除1位置元素
+    q.erase(q.begin() + 1);
 
-	for(deque<int>::iterator it = q.begin(); it!=q.end(); it++){
-		cout << *it << " ";
-	}
+    for(deque<int>::iterator it = q.begin(); it!=q.end(); it++){
+        cout << *it << " ";
+    }
 }
 ```
 

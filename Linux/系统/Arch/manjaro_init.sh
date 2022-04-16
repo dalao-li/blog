@@ -6,8 +6,8 @@
  # @Author: DaLao
  # @Email: dalao_li@163.com
  # @Date: 2022-01-17 02:05:53
- # @LastEditors: DaLao
- # @LastEditTime: 2022-02-14 19:59:03
+ # @LastEditors: dalao
+ # @LastEditTime: 2022-04-16 11:22:32
 ### 
 
 init(){
@@ -44,6 +44,7 @@ EOF
     sudo echo "export LC_CTYPE=zh_CN.UTF-8" >> ~/.xinitrc
 }
 
+
 set_yay(){
     sudo pacman -S yay
 
@@ -70,11 +71,13 @@ EOF
     sudo systemctl start docker
 }
 
+
 set_node(){
     sudo yay -S nodejs npm
 
     npm config set registry http://mirrors.cloud.tencent.com/npm/
 }
+
 
 set_proxy(){
     url="https://service-33p4qzr4-1256078775.gz.apigw.tencentcs.com/link/905nAdJlOb1QYJZU?clash=1"
@@ -94,6 +97,7 @@ set_proxy(){
     # https://clash.razord.top/ 
     # https://www.woccloud.io/
 }
+
 
 set_python(){
     pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U

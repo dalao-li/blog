@@ -5,25 +5,28 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-22 23:16:23
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-10 15:21:59
+ * @LastEditTime: 2022-04-16 13:42:10
 -->
 
 ## Debug
+
 
 ```c
 #include<stdio.h>
 
 int main(void) {
-	int sum = 0;
-	for(int i = 0; i < 10; i++) {
-		sum += i;
-		printf("%d\n" , sum);
-	}
-	return 0;
+    int sum = 0;
+    for(int i = 0; i < 10; i++) {
+        sum += i;
+        printf("%d\n" , sum);
+    }
+    return 0;
 } 
 ```
 
+
 ### DEV C++
+
 
 ![](https://cdn.hurra.ltd/img/20210222232125.png)
 
