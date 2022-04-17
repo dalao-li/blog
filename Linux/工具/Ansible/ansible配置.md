@@ -4,18 +4,22 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-08 09:36:50
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 11:21:07
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-17 09:31:56
 -->
 
 
-## Ansible概念
+## Ansible
+
+
+### 概念
+
 
 Ansible是一个配置管理和应用部署工具，可以对服务器上($1-N$台)的系统应用进行配置管理，如更改部分参数，安装软件应用等
 
 Ansible本质是在多设备按情况(判断循环)指定每台设备要执行的命令
 
-- 安装
+### 安装
 
 ```sh
 # 新增 epel-release 第三方套件来源，安装Ansible
@@ -24,7 +28,10 @@ yum install -y epel-release ansible
 # 配置文件/etc/ansible/ansible.cfg
 ```
 
-- 容器控制
+
+
+### 容器控制
+
 
 建立两个容器server1，server2，并用ansible对其进行控制
 
@@ -32,7 +39,7 @@ yum install -y epel-release ansible
 docker run -itd --name server1 -P chusiang/ansible-managed-node:ubuntu-14.04
 ```
 
-修改/etc/ansible/ansible.cfg文件
+- 修改/etc/ansible/ansible.cfg文件
 
 ```ini
 [defaults]
@@ -47,7 +54,8 @@ remote_user = docker
 host_key_checking = False
 ```
 
-修改/etc/ansible/hosts
+
+- 修改/etc/ansible/hosts
 
 ```sh
 # [分组，组名]
@@ -71,6 +79,7 @@ ansible all -m command -a 'echo Hello World!'
 ```
 
 ![](https://cdn.hurra.ltd/img/20210308100822.png)
+
 
 - 批量SSH免密
 
@@ -133,9 +142,12 @@ ansible all -m authorized_key -a "user=docker key='{{ lookup('file'，'.ssh/id_r
 ![](https://cdn.hurra.ltd/img/20210310100850.png)
 
 
-## Ansible命令
+
+## 命令
+
 
 ### 限定主机变更
+
 
 - limit参数限定
 
@@ -143,11 +155,13 @@ ansible all -m authorized_key -a "user=docker key='{{ lookup('file'，'.ssh/id_r
 ansible 分组 -m command -a "指令" --limit "主机IP"
 ```
 
+
 - IP限定
 
 ```sh
 ansible 主机IP -m command -a "指令"
 ```
+
 
 - 网段限定
 
@@ -163,17 +177,20 @@ ansible web -m command -a "systemctl status sshd" --limit "192.168.1.2"
 ansible web "192.168.1.2" -m command -a "systemctl status sshd"
 ```
 
+
 ### 查看所有主机
 
 ```sh
 ansible all --list-hosts
 ```
 
+
 ### Ping
 
 ```sh
 ansible 主机名/all -m ping
 ```
+
 
 ### copy模块
 
@@ -182,12 +199,14 @@ ansible 主机名/all -m ping
 ansible all -m copy -a 'src=/root/init.hs dest=/tem/'
 ```
 
+
 ### file模块
 
 ```sh
 # 更改被控节点上init.sh的权限为755，属主和属组为root
 ansible all -m file -a "dest=/tem/init.sh mode=755 owner=root group=root"
 ```
+
 
 ### cron模块
 
@@ -196,12 +215,14 @@ ansible all -m file -a "dest=/tem/init.sh mode=755 owner=root group=root"
 ansible all -m cron -a 'name="custom job" minute=*/3 hour=* day=* month=* weekday=* job="/usr/sbin/ntpdate 172.16.254.139"'
 ```
 
-## group模块
+
+### group模块
 
 ```sh
 # 在所有节点上创建一个组名为nolinux，gid为2014的组
 ansible all -m group -a 'gid=2014 name=nolinux'
 ```
+
 
 ### user模块
 
@@ -209,6 +230,7 @@ ansible all -m group -a 'gid=2014 name=nolinux'
 # 在指定节点上创建一个用户名为nolinux，组为nolinux的用户
 ansible all -m user -a 'name=nolinux groups=nolinux state=present'
 ```
+
 
 ### yum模块
 
@@ -218,12 +240,14 @@ ansible all -m user -a 'name=nolinux groups=nolinux state=present'
 ansible all -m yum -a "state=present name=httpd"
 ```
 
+
 ### service模块
 
 ```sh
 # 启动指定节点上的 puppet 服务，并让其开机自启动
 ansible all -m service -a 'name=puppet state=restarted enabled=yes'
 ```
+
 
 ### script模块
 
@@ -232,6 +256,7 @@ ansible all -m service -a 'name=puppet state=restarted enabled=yes'
 ansible all -m script -a '/root/a.sh'
 ```
 
+
 ### command模块
 
 ```sh
@@ -239,12 +264,14 @@ ansible all -m script -a '/root/a.sh'
 ansible all -m command -a 'hostname'
 ```
 
+
 ### raw模块
 
 ```sh
 # 在all节点上运行hostname命令
 ansible all -m raw-a 'hostname|tee'
 ```
+
 
 ### get_url模块
 

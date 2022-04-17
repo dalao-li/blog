@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-14 18:21:47
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-23 22:44:13
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-17 09:28:17
  */
 
 #include<stdio.h>
@@ -30,11 +30,11 @@ int main(void){
             exit(127);
         }
         if(pid == 0){
-            execlp(buf, buf, (char *)0);
-            printf("can not execute :%s",buf);
+            execlp(buf , buf , (char *)0);
+            printf("can not execute :%s\n" , buf);
             exit(127);
         }
-        pid = waitpid(pid, &status, 0);
+        pid = waitpid(pid , &status , 0);
         if(pid < 0){
             printf("waitpid error");
         }

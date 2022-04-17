@@ -5,13 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-09 22:10:43
+ * @LastEditTime: 2022-04-17 09:34:56
 -->
 
 ## 1 SSH
 
 
 ### 1.1 命令
+
 
 - 连接
 
@@ -35,6 +36,7 @@ ssh-keygen -R [远程主机IP]
 
 ### 1.2 免密
 
+
 - 手动复制
 
 将本地`id_rsa.pub` 复制到远程主机`.ssh/authorized_keys`里
@@ -49,7 +51,9 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
 ![](https://cdn.hurra.ltd/img/20211229213337.png)
 
 
+
 ### 1.3 .ssh目录
+
 
 在根目录(/root/或者/home/用户名)下生成 .ssh目录
 
@@ -67,12 +71,13 @@ ssh-keygen -t rsa
 | know_hosts      | 存储已认证主机的host key |
 
 
+
 ### 1.4 配置文件
+
 
 ```sh
 /etc/ssh/sshd_condfig
 ```
-
 
 ```sh
 # 允许密钥登录
@@ -86,7 +91,9 @@ PasswordAuthentication no
 ```
 
 
+
 ### 1.5 监控
+
 
 /etc/ssh/目录下新建sshrc文件
 
@@ -109,7 +116,9 @@ echo ${user} ${ip} ${time} ${server}
 ```
 
 
+
 ### 1.6 Web工具
+
 
 [Github 地址](https://github.com/huashengdun/webssh)
 
@@ -123,6 +132,7 @@ pip3 install webssh
 ```sh
 wssh
 ```
+
 
 - 绑定IP地址和端口启动
 
