@@ -5,13 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:57:16
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 21:54:15
+ * @LastEditTime: 2022-04-18 20:05:02
 -->
 
 ## remote
 
 
 ### 仓库
+
 
 - 查看远程仓库
 
@@ -21,6 +22,7 @@ git remote -v
 
 
 ### 删除
+
 
 - 删除远程仓库
 
@@ -34,6 +36,7 @@ git remote set-url --del origin [远程 URL]
 
 
 ### 添加
+
 
 ```sh
 git remote add [远程用户名] [远程 URL]

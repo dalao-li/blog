@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-03-27 21:36:47
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-08 22:54:01
+ * @LastEditTime: 2022-04-18 18:44:29
 -->
 
 ## shared_ptr
@@ -21,14 +21,7 @@ std::shared_ptr<T> p;
 ```
 
 
-- 构建 shared_ptr 智能指针，指向一块10 个 int 类型数据的堆内存空间
-
-```c
-std::shared_ptr<int> p(new int(10));
-```
-
-
-- std::make_shared<T>初始化
+- std::make_shared<T>初始化，指向一块10 个 int 类型数据的堆内存空间
 
 ```c
 std::shared_ptr<int> p = std::make_shared<int>(10);

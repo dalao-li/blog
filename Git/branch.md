@@ -5,13 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:20:22
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 20:43:45
+ * @LastEditTime: 2022-04-18 20:04:15
 -->
 
 ## 1 branch
 
 
 ### 1.1 查看
+
 
 - 所有分支
 
@@ -31,12 +32,15 @@ git branch
 
 ### 1.2 建立
 
+
 ```
 git branch 分支名
 ```
 
 
+
 ### 1.3 切换
+
 
 - 切换到分支
 
@@ -51,14 +55,18 @@ git checkout -b 分支名
 ```
 
 
+
 ### 1.4 删除
+
 
 ```sh
 git branch -d 分支名
 ```
 
 
+
 ### 1.5 合并
+
 
 - 合并A分支到当前分支
 

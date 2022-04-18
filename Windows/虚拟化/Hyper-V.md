@@ -4,13 +4,15 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-02-07 14:02:02
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-25 22:21:09
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-18 19:59:01
 -->
 
 ## Hyper-v
 
+
 ### 嵌套虚拟化
+
 
 请确保虚拟机为关闭状态
   
@@ -37,6 +39,7 @@ Set-VMProcessor -ExposeVirtualizationExtensions $true -VMName 虚拟机名
 ![](https://cdn.hurra.ltd/img/20210207140853.png)
 
 
+
 ### Vmware于Hyper共存
 
 
@@ -48,18 +51,18 @@ VMware Workstation和Hyper-V不兼容.
 请先从系统中移除Hyper-V角色，然后再运行VMware Workstation
 ```
 
-
 两者都是基于 $CPU$ 等底层硬件的 $Hypervisor$ 机制来实现的，而他们必须独占管理 $Hypervisor$，因此不能在一台电脑中同时运行
 
 
 - 关闭Hyper-v
-  
+
 ```sh
 bcdedit /set hypervisorlaunchtype off
 ```
 
+
 - 开启Hyper-v
-  
+
 ```sh
 bcdedit /set hypervisorlaunchtype auto
 ```

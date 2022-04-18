@@ -5,13 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 16:49:59
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:54:33
+ * @LastEditTime: 2022-04-18 19:47:43
 -->
 
-## Django多数据库
+## Django连接多数据库
 
 
 ### 设置
+
 
 建立Django项目,在建立两个应用app1与app2
 
@@ -133,7 +134,10 @@ class DatabaseAppsRouter(object):
         return None
 ```
 
+
+
 ### 增加数据路由表与规则方法
+
 
 settings.py文件中添加内容,此处项目名为demo
 ```py

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-10 01:04:01
+ * @LastEditTime: 2022-04-18 19:47:12
 -->
 
 ## Django 操作MySQL
@@ -43,6 +43,7 @@ DATABASES = {
 
 ### 建表
 
+
 编辑 app/models.py
 
 ```py
@@ -70,6 +71,7 @@ class Stu(models.Model):
 
 ### 字段
 
+
 | 类型          | 说明                                                                                                                            |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | AutoField     | 一个自动增加的整数类型字段.通常不需要自己编写, Django 会自动添加自增字段:id = models.AutoField(primary_key=True), 从 1 开始计数 |
@@ -83,6 +85,7 @@ class Stu(models.Model):
 
 
 ### 字段参数
+
 
 | 类型         | 说明                                                                                                        |
 | ------------ | ----------------------------------------------------------------------------------------------------------- |
@@ -176,6 +179,7 @@ s = Stu.objects.create(num='D-123', name='强', age=19, sex='M')
 
 ### 查询
 
+
 - 获取所有对象
 
 ```py
@@ -217,6 +221,7 @@ Stu.objects.filter(num='B-456').exists()
 
 ### 修改
 
+
 ![](https://cdn.hurra.ltd/img/20200803002039.png)
 
 ```py
@@ -229,7 +234,9 @@ Stu.objects.filter(sex='M').update(age=18)
 ![](https://cdn.hurra.ltd/img/20200803004052.png)
 
 
+
 ### 删除
+
 
 ```py
 # 删除学号为 A-123 的同学信息
@@ -239,5 +246,3 @@ Stu.objects.filter(num='A-123').delete()
 ![](https://cdn.hurra.ltd/img/20200803004719.png)
 
 ![](https://cdn.hurra.ltd/img/20200803004753.png)
-
-

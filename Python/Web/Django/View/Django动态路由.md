@@ -4,14 +4,15 @@
  * @Autor: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:14:33
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-18 19:48:37
 -->
 
 ## 动态路由
 
 
 ### 关键字
+
 
 - 单关键字
   
@@ -67,7 +68,9 @@ urlpatterns = [
 前面的 w+传给 v1，后面的 w+传给 v2此时可以匹配`127.0.0.1:8000/dis/<字符1>/<字符2>`这类 url，并且字符 1 将传给 dis 函数的 v1 参数;字符 2 将传给 dis 函数的 v2 参数
 
 
+
 ### 反射
+
 
 反射，通过输入的函数名调用函数
 
@@ -97,7 +100,9 @@ def goodbye_world(request):
 ![](https://cdn.hurra.ltd/img/20200903103754.png)
 
 
+
 ###  删除硬编码URL
+
 
 硬编码即href里的“/polls/”部分
 
@@ -121,5 +126,3 @@ path('<int:question_id>/', views.detail, name='detail'),
 # 添加新的单词'specifics'
 path('specifics/<int:question_id>/', views.detail, name='detail'),
 ```
-
-

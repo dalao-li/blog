@@ -4,8 +4,8 @@ Version: 1.0
 Author: DaLao
 Email: dalao_li@163.com
 Date: 2021-09-24 20:37:24
-LastEditors: DaLao
-LastEditTime: 2021-11-28 20:59:03
+LastEditors: dalao
+LastEditTime: 2022-04-18 10:34:22
 '''
 
 import datetime
@@ -81,4 +81,4 @@ class CompanyEmail():
 
 
 if __name__ == "__main__":
-    CompanyEmail().send_mail("6382", "734449600@qq.com")
+    CompanyEmail().send_mail("6382", "邮箱")

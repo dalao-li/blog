@@ -4,15 +4,17 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-20 11:26:41
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 11:05:20
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-18 20:01:24
 -->
 
 
 ## DLL
 
 
+
 ### 编写
+
 
 VS2019 选择创建动态链接库(DLL)项目
 
@@ -56,7 +58,10 @@ void hello() {
 }
 ```
 
+
+
 ### 编译
+
 
 ![](https://cdn.hurra.ltd/img/20210120113257.png)
 
@@ -67,7 +72,9 @@ X64 将编译为 64 为的 dll
 ![](https://cdn.hurra.ltd/img/20210120113457.png)
 
 
+
 ### Python 调用
+
 
 ```py
 from ctypes import *
@@ -84,7 +91,9 @@ pdll.hello()
 ![](https://cdn.hurra.ltd/img/20210120113618.png)
 
 
+
 ### dll 与 lib的区别
+
 
 - lib 是编译时调用，dll 是运行时调用
 

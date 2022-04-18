@@ -5,13 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-19 00:00:59
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 22:37:40
+ * @LastEditTime: 2022-04-18 19:50:18
 -->
 
 ## Docker部署Flask
 
 
 ### 单例部署
+
 
 - Dockerfile
 
@@ -33,6 +34,7 @@ CMD flask run --host=0.0.0.0 --port=5000
 
 
 ### supervisor部署
+
 
 - flask.conf
 
@@ -66,6 +68,7 @@ CMD supervisord -c /etc/supervisord.conf
 
 
 ### uwsgi部署
+
 
 - config.ini
 
@@ -111,6 +114,7 @@ CMD uwsgi config.ini
 
 
 ### Nginx代理
+
 
 - nginx.conf
 

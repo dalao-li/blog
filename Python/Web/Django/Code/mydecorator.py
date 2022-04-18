@@ -5,7 +5,7 @@ Author: DaLao
 Email: dalao_li@163.com
 Date: 2021-12-23 15:07:52
 LastEditors: dalao
-LastEditTime: 2022-04-10 01:02:25
+LastEditTime: 2022-04-18 10:34:01
 '''
 import json
 from django.shortcuts import HttpResponse
@@ -28,27 +28,25 @@ def httpTry(f):
 
 # 包装不需要返回数据,只需要执行结果的请求
 def httpRes(f):
-  def x(*args, **kwargs):
-    res = {"code": "0", "message": "", "data": {}}
-    try:
-      f(*args, **kwargs)
-    except Exception as e:
-      res["code"] = "-1"
-      res["message"] = str(e)
-    return HttpResponse(json.dumps(res, ensure_ascii=False))
-
-  return x
+    def x(*args, **kwargs):
+        res = {"code": "0", "message": "", "data": {}}
+        try:
+            f(*args, **kwargs)
+        except Exception as e:
+            res["code"] = "-1"
+            res["message"] = str(e)
+        return HttpResponse(json.dumps(res, ensure_ascii=False))
+    return x
 
 
 # 包装需要请求数据内容的函数 data
 def httpData(f):
-  def x(*args, **kwargs):
-    res = {"code": "0", "message": "", "data": {}}
-    try:
-      res["data"] = f(*args, **kwargs)
-    except Exception as e:
-      res["code"] = "-1"
-      res["message"] = str(e)
-    return HttpResponse(json.dumps(res, ensure_ascii=False))
-
-  return x
+    def x(*args, **kwargs):
+        res = {"code": "0", "message": "", "data": {}}
+        try:
+            res["data"] = f(*args, **kwargs)
+        except Exception as e:
+            res["code"] = "-1"
+            res["message"] = str(e)
+        return HttpResponse(json.dumps(res, ensure_ascii=False))
+    return x

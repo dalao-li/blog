@@ -5,13 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-10 14:56:29
+ * @LastEditTime: 2022-04-18 10:06:06
 -->
 
 ## 1 类
 
 
 ### 1.1 定义
+
 
 ```py
 class Stu:
@@ -26,7 +27,9 @@ self代表类的实例，而非类
 类的方法与普通的函数的区别为它们必须有一个额外的首参数名称self
 
 
+
 ### 1.2 方法
+
 
 ```py
 class Person:
@@ -47,9 +50,12 @@ class Person:
 ```
 
 
+
 ### 1.3 操作
 
+
 - 获值
+
 
 ```py
 class Person(object):
@@ -63,7 +69,9 @@ p = Person('lili', 23)
 print(p.__dict__)
 ```
 
+
 - 赋值
+
 
 ```py
 class Person:
@@ -73,7 +81,9 @@ class Person:
 ```
 
 
+
 ### 1.4 继承
+
 
 - 继承类
 

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 20:42:54
+ * @LastEditTime: 2022-04-18 20:03:45
 -->
 
 
@@ -26,7 +26,7 @@ gerrit是一个建立在git版本控制基础之上，基于Web的代码审查�
 
 
 
-## 管理流程
+### 管理流程
 
 1. 初始化
 

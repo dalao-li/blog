@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-03-24 23:33:20
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-25 20:35:32
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-18 20:05:12
 -->
 
 
@@ -22,7 +22,10 @@ git reset --[soft/hard] [commit id]
 git reset -i HEAD~3
 ```
 
+
+
 ### --mixed(默认)
+
 
 `不删除`工作空间改动代码，撤销`commit`，并撤销`git add .`
 
@@ -33,7 +36,9 @@ git reset HEAD^
 ```
 
 
+
 ### --soft
+
 
 `不删除`工作空间改动代码，撤销`commit`，不撤销`git add .` 
 
@@ -42,7 +47,9 @@ git reset --soft HEAD^
 ```
 
 
+
 ### --hard
+
 
 `删除`工作空间改动代码，撤销`commit`，撤销`git add .`
 

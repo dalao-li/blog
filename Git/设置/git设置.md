@@ -4,14 +4,15 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 17:59:27
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-18 22:10:12
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-18 20:05:23
 -->
 
 ## Git设置
 
 
 ### 设置
+
 
 ```sh
 # 配置用户名
@@ -40,6 +41,7 @@ ssh-keygen -t rsa -C "邮箱"
 
 
 ### .git文件
+
 
 ```sh
 git gc --prune=now

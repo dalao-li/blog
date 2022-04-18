@@ -5,16 +5,19 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-10 01:04:55
+ * @LastEditTime: 2022-04-18 19:48:50
 -->
 
  
 ## Django 路由与视图
 
+
 访问网站的本质即为访问对应的 html 文件，后在由浏览器等对其进行渲染，最终展示出页面
 
 
+
 ### 静态读取
+
 
 访问http://127.0.0.1:8000/app/index，读取index.html，显示内容
 
@@ -28,16 +31,16 @@
 
 ```py
 TEMPLATES = [
-  {
-    ...
-    'DIRS': [
-        os.path.join(BASE_DIR, 'templates'),
+    {
+        ...
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
 
-        # 新建的模板目录
-        os.path.join(BASE_DIR, 'app/templates')
-    ],
-    ...
-  },
+            # 新建的模板目录
+            os.path.join(BASE_DIR, 'app/templates')
+        ],
+        ...
+    },
 ]
 ```
 
@@ -110,7 +113,9 @@ urlpatterns = [
 ![](https://cdn.hurra.ltd/img/20200803193631.png)
 
 
+
 ### 读取数据
+
 
 访问http://127.0.0.1:8000/app/db，在网页上显示数据库中所有元素信息
 
@@ -119,21 +124,21 @@ urlpatterns = [
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-  </head>
-  <body>
-    {% for i in data %}
-    <h1>学号 : {{ i.num }}</h1>
-    <h2>姓名 : {{ i.name }}</h2>
-    <h2>年龄 : {{ i.age }}</h2>
-    {% if i.sex == 'M' %}
-    <h2>性别 : 男</h2>
-    {% elif i.sex == 'W' %}
-    <h2>性别 : 男</h2>
-    {% endif %} {% endfor %}
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+        {% for i in data %}
+        <h1>学号 : {{ i.num }}</h1>
+        <h2>姓名 : {{ i.name }}</h2>
+        <h2>年龄 : {{ i.age }}</h2>
+        {% if i.sex == 'M' %}
+        <h2>性别 : 男</h2>
+        {% elif i.sex == 'W' %}
+        <h2>性别 : 男</h2>
+        {% endif %} {% endfor %}
+    </body>
 </html>
 ```
 
@@ -168,5 +173,3 @@ urlpatterns = [
 运行项目，访问http://127.0.0.1:8000/app/db
 
 ![](https://cdn.hurra.ltd/img/20200803222027.png)
-
-

@@ -5,10 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 21:43:48
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 23:06:37
+ * @LastEditTime: 2022-04-18 19:46:21
 -->
 
 ## Django Manager
+
+
+### Models
 
 ```py
 class User(models.Model):
@@ -26,7 +29,7 @@ User.objects.filter(name = name)
 ...
 ```
 
-若想在操作过程中执行其他操作显得异常麻烦，因此可以自定义管理器
+若在操作过程中执行其他操作显得异常麻烦，因此可以自定义管理器
 
 ```py
 class UserManager(models.Manager):
@@ -64,7 +67,8 @@ User.objects.find_name(name)
 ```
 
 
-## DRF
+### DRF
+
 
 models.py
 

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:02:13
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 23:27:05
+ * @LastEditTime: 2022-04-18 20:04:25
 -->
 
 ## git 提交
@@ -18,6 +18,7 @@
 
 
 ### 1.1 init
+
 
 - 新建代码仓库(当前目录)
 
@@ -42,7 +43,9 @@ git status
 ```
 
 
+
 ### 1.2 add
+
 
 - 添加所有文件到暂存区
 
@@ -62,6 +65,7 @@ git reset HEAD
 
 
 ### 1.3 commit
+
 
 ![](https://cdn.hurra.ltd/img/2022-3-18-2158.svg)
 
@@ -96,7 +100,9 @@ git push --force-with-lease
 ```
 
 
+
 ### 1.4 push
+
 
 `push` 将本地的分支版本上传到远程并合并
 

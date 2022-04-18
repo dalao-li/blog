@@ -4,11 +4,12 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-14 16:29:38
- * @LastEditors: DaLao
- * @LastEditTime: 2022-01-15 19:48:03
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-18 10:17:39
 -->
 
 ## BytesIO
+
 
 BytesIO实现了在内存中读写bytes
 

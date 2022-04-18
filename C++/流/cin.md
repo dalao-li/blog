@@ -5,17 +5,21 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-03-30 21:57:16
  * @LastEditors: dalao
- * @LastEditTime: 2022-03-30 21:58:19
+ * @LastEditTime: 2022-04-18 20:00:12
 -->
 
 
 ## cin
 
+
 ```c
 std::cin
 ```
 
+
+
 ### 回车结束输入
+
 
 ```c
 vector<T> v;

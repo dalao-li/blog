@@ -5,11 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-10 01:03:15
+ * @LastEditTime: 2022-04-18 19:45:02
 -->
 
+## Django体温登记系统
 
-## 技术
+
+### 技术
+
 
 ```sh
 CSS : Bootstrap
@@ -19,7 +22,9 @@ Web 框架 : Django
 数据库 : Sqlite3
 ```
 
-## 初始化
+
+### 初始化
+
 
 - 建立 Django 项目
 
@@ -48,7 +53,10 @@ python manage.py startapp app
 
 ![](https://cdn.hurra.ltd/img/20200805182830.png)
 
-## 数据库设计
+
+
+### 数据库设计
+
 
 - 表设计
 
@@ -84,6 +92,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+
 - 创建管理员用户
 
 ```py
@@ -94,7 +103,10 @@ python manage.py createsuperuser
 
 ![](https://cdn.hurra.ltd/img/20200802153640.png)
 
-## 视图 
+
+
+### 视图 
+
 
 在 app 目录下新建 templates 文件夹
 
@@ -227,142 +239,131 @@ python manage.py createsuperuser
 </html>
 ```
 
-## JS
+
+### JS
+
 
 app 目录下新建 static 目录,存放静态文件
 
-app/static/js 目录下新建 api.js:
+app/static/js 目录下新建 api.js
 
 ```js
 function sendAjax(param, url, callback) {
-  $.ajax({
-    async: false,
-    ache: false,
-    type: "POST",
-    url: url,
-    //JSON对象转化JSON字符串
-    data: JSON.stringify(param),
-    //服务器返回的数据类型
-    dataType: "json",
-    //清除浏览器缓存
-    beforeSend: function (xmlHttp) {
-      xmlHttp.setRequestHeader("If-Modified-Since", "0");
-      xmlHttp.setRequestHeader("Cache-Control", "no-cache");
-    },
-    success: function (data) {
-      callback(data.result);
-    },
-    error: function (data) {
-      //错误处理
-    },
-  });
+    $.ajax({
+        async: false,
+        ache: false,
+        type: "POST",
+        url: url,
+        // JSON对象转化JSON字符串
+        data: JSON.stringify(param),
+        // 服务器返回的数据类型
+        dataType: "json",
+        // 清除浏览器缓存
+        beforeSend: function (xmlHttp) {
+            xmlHttp.setRequestHeader("If-Modified-Since", "0");
+            xmlHttp.setRequestHeader("Cache-Control", "no-cache");
+        },
+        success: function (data) {
+            callback(data.result);
+        },
+        error: function (data) {
+        // 错误处理
+        },
+    });
 }
 
 function addRecord() {
-  var data = {
-    num: $("#num").val(),
-    name: $("#name").val(),
-    tem: $("#tem").val(),
-    date: $("#date").val(),
-  };
-  //判断非空
-  for (var k in data) {
-    if (data[k] === "") {
-      return;
+    const data = {
+        num: $("#num").val(),
+        name: $("#name").val(),
+        tem: $("#tem").val(),
+        date: $("#date").val(),
+    };
+    // 判断非空
+    for (const k in data) {
+        if (data[k] === "") {
+            return;
+        }
     }
-  }
-  sendAjax(data, "/app/add/", addCallback);
+    sendAjax(data, "/app/add/", addCallback);
 }
 
 function addCallback(value) {
-  if (value === 1) {
-    swal(
-      {
-        title: "提交成功",
-        text: "",
-        type: "success",
-        timer: 2000,
-      },
-      function () {
-        location.reload();
-      }
-    );
-  }
-  if (value === 0) {
-    swal("上交失败", "请重试", "error");
-  }
-  if (value === -1) {
-    swal(
-      {
-        title: "该学生体温已提交",
-        text: "请勿重复提交",
-        type: "warning",
-      },
-      function () {
-        $("#recordForm")[0].reset();
-      }
-    );
-  }
+    if (value === 1) {
+        swal({
+            title: "提交成功",
+            text: "",
+            type: "success",
+            timer: 2000,
+        }, function () {
+            location.reload();
+        });
+    }
+    if (value === 0) {
+        swal("上交失败", "请重试", "error");
+    }
+    if (value === -1) {
+        swal({
+            title: "该学生体温已提交",
+            text: "请勿重复提交",
+            type: "warning",
+        }, function () {
+            $("#recordForm")[0].reset();
+        });
+    }
 }
 
 function delRecord(id) {
-  swal(
-    {
-      title: "您确定要删除该记录吗",
-      text: "删除后将无法恢复,请谨慎操作！",
-      type: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#DD6B55",
-      confirmButtonText: "确认",
-      cancelButtonText: "取消",
-      closeOnConfirm: false,
-      closeOnCancel: false,
-    },
-    function (isConfirm) {
-      if (isConfirm) {
-        var data = { num: id };
-        sendAjax(data, "/app/del/", delCallback);
-      } else {
-        swal({
-          title: "已取消",
-          text: "您取消了删除操作！",
-          type: "warning",
-        });
-      }
-    }
-  );
+    swal({
+       title: "您确定要删除该记录吗",
+       text: "删除后将无法恢复,请谨慎操作！",
+       type: "warning",
+       showCancelButton: true,
+       confirmButtonColor: "#DD6B55",
+       confirmButtonText: "确认",
+       cancelButtonText: "取消",
+       closeOnConfirm: false,
+       closeOnCancel: false,
+    }, function (isConfirm) {
+        if (isConfirm) {
+            var data = { num: id };
+            sendAjax(data, "/app/del/", delCallback);
+        } else {
+            swal({
+                title: "已取消",
+                text: "您取消了删除操作！",
+                type: "warning",
+            });
+        }
+    });
 }
 
 function delCallback(value) {
-  if (value === 1) {
-    swal(
-      {
-        title: "删除成功",
-        text: "",
-        type: "success",
-        timer: 2000,
-      },
-      function () {
-        location.reload();
-      }
-    );
-    return;
-  }
-  if (value === -1) {
-    swal("删除失败", "请重试", "error");
-  }
+    if (value === 1) {
+        swal({
+            title: "删除成功",
+            text: "",
+            type: "success",
+            timer: 2000,
+        }, function () {
+            location.reload();
+        });
+        return;
+    }
+    if (value === -1) {
+        swal("删除失败", "请重试", "error");
+    }
 }
 ```
 
-项目最终结构
 
 ![](https://cdn.hurra.ltd/img/20200805190123.png)
 
-`完整代码请访问博主的Github`
 
-## 视图函数
+### 视图函数
 
-编辑 app/views.py 文件:
+
+编辑 app/views.py 文件
 
 ```py
 import json
@@ -399,7 +400,9 @@ def del_record(request):
 
 ```
 
-## 绑定路由
+
+### 绑定路由
+
 
 在 app 目录下新建 urls.py 文件:
 
@@ -415,7 +418,6 @@ urlpatterns = [
 
     path('del/', views.del_record)
 ]
-
 ```
 
 编辑主目录下的 urls.py 文件:
@@ -436,11 +438,15 @@ urlpatterns = [
 
 ![](https://cdn.hurra.ltd/img/20200806160425.png)
 
-## 部署
+
+
+### 部署
+
 
 本项目采用 Docker + Gunicorn 方式进行部署
 
 - 部署后可能会出现无法访问静态文件的情况,因此编辑主目录下 urls.py文件,新增:
+
 
 ```py
 from django.contrib import admin
@@ -449,7 +455,7 @@ from django.urls import path,include
 # 新增
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-......
+...
 
 # 新增
 urlpatterns += staticfiles_urlpatterns()
@@ -470,6 +476,7 @@ bind = "0.0.0.0:8000"
 # 超时
 timeout = 30
 ```
+
 
 - 生成项目依赖文件
 
@@ -495,29 +502,20 @@ zope.interface==5.1.0
 - 编写 Dockerfile
 
 ```docker
-#所采用的基础镜像
-FROM python:3.7
+FROM python:3.7-alpine
 
-# 为镜像添加标签
 LABEL version="v1" description="Docker deploy Django" by="Dalao"
 
-#程序的运行目录
 WORKDIR /usr/django
 
-#导入库依赖文件
 COPY requirements.txt ./
 
-#安装库
 RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
-# 复制项目文件
 COPY . .
 
-# 容器启动时执行指令,每个Dockerfile只能有一条CMD命令
 CMD ["gunicorn", "demo.wsgi", "-c", "gunicorn_config.py"]
 ```
-
-将文件夹上传至服务器
 
 
 ```shell
@@ -533,7 +531,3 @@ docker run -itd -p 80:8000 --name django_test mydemo
 ```
 
 ![](https://cdn.hurra.ltd/img/20200806190407.png)
-
----
-
-

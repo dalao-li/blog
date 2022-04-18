@@ -5,13 +5,14 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-03 13:54:04
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-10 01:01:29
+ * @LastEditTime: 2022-04-18 10:33:02
 -->
 
 ## Django部署
 
 
 ### 建立
+
 
 建立项目mysite
 
@@ -22,7 +23,10 @@ python manage.py runserver 0.0.0.0:8000
 ```
 
 
+
 ### uwsgi
+
+config.ini
 
 ```ini
 [uwsgi]
@@ -43,8 +47,8 @@ buffer-size = 32768
 ```
 
 
-
 ### nginx
+
 
 ```sh
 server {

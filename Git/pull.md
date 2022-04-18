@@ -4,11 +4,12 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-12-15 21:12:13
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-18 22:12:10
+ * @LastEditors: dalao
+ * @LastEditTime: 2022-04-18 20:04:46
 -->
 
 ## fetch
+
 
 `git fetch` 将远程的最新内容拉到本地，用户在检查了以后决定是否合并到本地分支中
 
@@ -34,7 +35,9 @@ git log -p FETCH_HEAD
 可以通过这些信息来判断是否产生冲突，以确定是否将更新merge到当前分支
 
 
+
 ## pull
+
 
 `git pull` 将远程主机的最新内容拉下来后直接合并，可能会产生冲突，需手动解决
 
