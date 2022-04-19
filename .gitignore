@@ -5,6 +5,7 @@
 tempCodeRunnerFile.c
 # Prerequisites
 *.d
+*.txt
 
 # Compiled Object files
 *.slo

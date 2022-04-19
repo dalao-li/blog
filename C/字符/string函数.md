@@ -5,10 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-27 20:45:27
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 22:52:46
+ * @LastEditTime: 2022-04-19 22:38:14
 -->
 
 ## string函数
+
 
 - 头文件
 
@@ -16,7 +17,10 @@
 #include<string.h>
 ```
 
+
+
 ### 函数
+
 
 | 函数             | 说明                                                        |
 | ---------------- | ----------------------------------------------------------- |
@@ -25,7 +29,9 @@
 | `strchr(s1, ch)` | 返回一个指针，指向 ch在s1中首次出现位置                     |
 
 
+
 ### strstr
+
 
 - 查找 s2在s1中首次出现的位置，返回第一次出现s2的位置，若未找到则返回NULL
 
@@ -43,7 +49,9 @@ ret = strstr(haystack, needle);
 ```
 
 
+
 ### strcat
+
 
 - 把 src 所指向的字符串追加到 dest 所指向的字符串的结尾
 
@@ -53,7 +61,7 @@ char *strcat(char *dest, const char *src)
 
 ```c
 char src[50], dest[50];
- 
+
 strcpy(src, "AAAA");
 strcpy(dest, "BBBB");
 
@@ -64,9 +72,11 @@ printf("%s\n", dest);
 ```
 
 
+
 ### strcpy
 
--  把 src 所指向的字符串复制到 dest
+
+- 把 src 所指向的字符串复制到 dest
 
 ```c
 char *strcpy(char *dest, const char *src)
@@ -83,7 +93,9 @@ printf("%s\n", a);
 ```
 
 
+
 ### memset
+
 
 - 复制字符 c(一个无符号字符)到参数 str 所指向字符串的前 n 个字符
 

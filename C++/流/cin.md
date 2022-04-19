@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-03-30 21:57:16
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 20:00:12
+ * @LastEditTime: 2022-04-19 22:01:40
 -->
 
 
@@ -16,6 +16,11 @@
 std::cin
 ```
 
+```c
+int n;
+
+std::cin >> n;
+```
 
 
 ### 回车结束输入
@@ -23,11 +28,13 @@ std::cin
 
 ```c
 vector<T> v;
+
 T value;
 
-while (cin >> value){
+while (cin >> value) {
     v.push_back(value);
     if (cin.get() == '\n')
         break;
     }
+}
 ```
