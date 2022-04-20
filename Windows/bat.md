@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-26 22:19:58
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-16 20:09:33
+ * @LastEditTime: 2022-04-20 21:38:29
 -->
 
 ## bat指令
@@ -27,16 +27,16 @@ REM 注释内容
 
 ```bat
 REM 获取当前目录
-%CD%  
+%CD%
 
 REM 获取命令搜索路径
-%PATH%  
+%PATH%
 
 REM 获取当前时间
-%TIME%  
+%TIME%
 
 REM 获取当前日期
-%DATE%  
+%DATE%
 
 REM 获取上一命令执行结果码
 %ERRORLEVEL% 

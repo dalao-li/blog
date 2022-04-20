@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-07 18:56:32
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 19:58:15
+ * @LastEditTime: 2022-04-20 21:37:57
 -->
 
 ## Hypervisor
@@ -35,7 +35,7 @@ Hypervisor是一种在虚拟环境中的“元”操作系统
 
 - 虚拟机监视器作为主操作系统
 
-- 运行效率高  
+- 运行效率高
 
 
 ![](https://cdn.hurra.ltd/img/20210207190941.png)
