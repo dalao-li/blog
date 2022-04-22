@@ -13,6 +13,7 @@
 
 ### 安装
 
+
 - Ubuntu
 
 ```sh
@@ -42,7 +43,10 @@ go env -w GO111MODULE=on
 go env -w  GOPROXY=https://goproxy.cn,direct
 ```
 
+
+
 ### 清理缓存
+
 
 ```sh
 go clean --modcache
