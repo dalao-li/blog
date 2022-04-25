@@ -14,7 +14,7 @@
 ### 读取 BIOS
 
 
-按下电源按钮后，计算机首先读取一块存储有基本输入输出系統(Basic Input/Output System)即 $BIOS$ 程序的 ROM 芯片
+按下电源按钮后，计算机首先读取一块存储有基本输入输出系統($Basic Input/Output System$)即 $BIOS$ 程序的 $ROM$ 芯片
 
 
 
