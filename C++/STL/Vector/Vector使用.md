@@ -10,18 +10,43 @@
 
 ## 1 Vector
 
+
 ### 1.1 初始化
 
-```c
-vector<T> v;
 
-vector<int> v = {1, 2 , 3 , 4 , 5};
+- 赋值
+
+```c
+std::vector<T> v;
+
+std::vector<int> v = {1, 2 , 3 , 4 , 5};
 ```
 
-- 二维Vector
+
+- 拷贝
 
 ```c
-vector<vector<T> > v;
+std::vector<T> v(count , value);
+
+std::vector<int> v(10 , 0);
+```
+
+
+#### 预处理
+
+若知道需保存数据数量，可使用reserve提前申请，避免多次动态申请内存消耗时间
+
+```c
+std::vector<T> v;
+
+v.reserve(size);
+```
+
+
+#### 二维Vector
+
+```c
+std::vector<vector<T> > v;
 ```
 
 

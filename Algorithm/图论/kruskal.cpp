@@ -4,8 +4,8 @@
  * @Author: dalao
  * @Email: dalao_li@163.com
  * @Date: 2022-04-08 20:34:38
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-08 21:02:37
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-04-28 23:16:11
  */
 
 #include <iostream>
@@ -83,15 +83,14 @@ class Graph {
             return sum;
         }
         // 图中所有边
-        vector<Edge> edges;
+        std::vector<Edge> edges;
         int p[MAXZ];
 };
 
 int main(void) {
-    vector<Edge> v = {
-        Edge(1,6,1) , Edge(1,5,16) , Edge(5,6,33) , 
-        Edge(6,2,11) , Edge(6,4,14) , Edge(2,4,5) , 
-        Edge(1,2,17) , Edge(5,4,4) , Edge(2,3,6) , Edge(3,4,10)
+    std::vector<Edge> v = {
+        Edge(1,6,1) , Edge(1,5,16) , Edge(5,6,33) , Edge(6,2,11) , Edge(6,4,14) , 
+        Edge(2,4,5) , Edge(1,2,17) , Edge(5,4,4) , Edge(2,3,6) , Edge(3,4,10)
     };
 
     Graph g;

@@ -19,6 +19,8 @@ Ansible是一个配置管理和应用部署工具，可以对服务器上($1-N$�
 
 Ansible本质是在多设备按情况(判断循环)指定每台设备要执行的命令
 
+
+
 ### 安装
 
 ```sh
@@ -143,7 +145,7 @@ ansible all -m authorized_key -a "user=docker key='{{ lookup('file'，'.ssh/id_r
 
 
 
-## 命令
+## Ansible 命令
 
 
 ### 限定主机变更

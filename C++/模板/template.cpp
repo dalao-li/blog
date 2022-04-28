@@ -4,14 +4,13 @@
  * @Author: dalao
  * @Email: dalao_li@163.com
  * @Date: 2022-04-18 18:45:30
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 18:58:07
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-04-28 23:12:42
  */
 
 
 #include<iostream>
 #include<vector>
-using namespace std;
 
 template <class T>
 T add(T a , T b){
@@ -39,7 +38,7 @@ void display(Node<T> *&head , std::vector<T> &v) {
     }
     Node<T> *p = head->next;
     while(p) {
-        cout << p->data << " ";
+        std::cout << p->data << " ";
         p = p->next;
     }
     printf("\n");
@@ -61,16 +60,16 @@ class Composer {
 
 template<class T>
 void Composer<T>::display() {
-    cout << (x > y ? x : y) << " " << (x < y ? x : y) << endl;
+    std::cout << (x > y ? x : y) << " " << (x < y ? x : y) << std::endl;
 }
 
 
 int main(void){
-    cout << add<int>(1 , 2) << endl;
+    std::cout << add<int>(1 , 2) << std::endl;
 
-    cout << add(2.4 , 3.5) << endl;
+    std::cout << add(2.4 , 3.5) << std::endl;
 
-    cout << add<string>("I am" , "a student.") << endl;
+    std::cout << add<std::string>("I am" , "a student.") << std::endl;
 
 
     std::vector<int> v1 = {1 , 2 , 3 , 4 , 5};
@@ -83,7 +82,7 @@ int main(void){
 
     Node<double> *p2 = new Node<double>;
 
-    Node<string> *p3 = new Node<string>;
+    Node<std::string> *p3 = new Node<std::string>;
 
     // 1 2 3 4 5
     display<int>(p1 , v1);
@@ -92,7 +91,7 @@ int main(void){
     display<double>(p2 , v2);
     
     // a b c d e
-    display<string>(p3 , v3);
+    display<std::string>(p3 , v3);
 
 
     Composer<int> cmp1(3, 7);
