@@ -4,13 +4,15 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-09 10:48:54
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-17 09:33:31
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-04-29 23:28:38
 -->
 
 ## Jenkins
 
+
 ![](https://cdn.hurra.ltd/img/20210308111903.png)
+
 
 
 ### Linux安装

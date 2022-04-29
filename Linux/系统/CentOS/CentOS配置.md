@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-10-16 12:46:09
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-16 11:23:29
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-04-29 23:36:10
 -->
 
 ## CentOS系统
@@ -13,6 +13,7 @@
 
 
 ### 更新源
+
 
 ```sh
 sudo rm -rf /etc/yum.repos.d/*
@@ -25,6 +26,7 @@ sudo yum clean all && yum makecache &&  yum -y update
 
 
 ### 配置Python
+
 
 ```sh
 sudo yum install -y gcc zlib* libffi-devel wget
@@ -51,6 +53,7 @@ sudo source ~/.bash_profile
 
 
 ### 安装Docker
+
 
 ```sh
 sudo yum remove -y docker docker-common docker-selinux docker-engine
@@ -91,7 +94,8 @@ sudo yum update -y && yum install epel-release -y
 
 
 ### 防火墙
- 
+
+
 ```sh
 # 查看状态
 systemctl status firewalld.service
@@ -106,6 +110,7 @@ systemctl disable firewalld.service
 
 
 ### 网卡
+
 
 - 文件位置
 

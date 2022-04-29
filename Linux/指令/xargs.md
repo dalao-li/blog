@@ -5,10 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-16 23:24:23
  * @LastEditors: DaLao
- * @LastEditTime: 2022-02-20 14:27:12
+ * @LastEditTime: 2022-04-29 23:40:05
 -->
 
 ## xargs
+
 
 `xargs` 将前面命令的标准输出作为后个命令的参数
 

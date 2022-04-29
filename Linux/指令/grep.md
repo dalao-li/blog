@@ -4,11 +4,12 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-21 18:34:00
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:48:01
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-04-29 23:39:32
 -->
 
 ## 1 grep
+
 
 文本查找
 
@@ -28,7 +29,9 @@ grep -[参数] 匹配项
 | `-w` | 精确匹配                               |
 
 
+
 ### 1.1 单查询
+
 
 - 模糊匹配
 
@@ -53,7 +56,9 @@ grep -w "abc"
 ```
 
 
+
 ### 1.2 与查询
+
 
 ```sh
 grep '模式1' 匹配项 | grep '模式2'
@@ -68,14 +73,18 @@ grep 'Mar 10 16:3' /var/log/secure | grep Accepted
 ![](https://cdn.hurra.ltd/img/20210310175209.png)
 
 
+
 ### 1.3 或查询
+
 
 ```sh
 grep '模式1|模式2' 匹配项 或 grep -E '模式1|模式2' 匹配项
 ```
 
 
+
 ### 1.4 非查询
+
 
 去除包含模式1的进程行，避免影响最终数据的正确性
 
@@ -93,7 +102,9 @@ ps -aux | grep vlc | grep -v grep
 ![](https://cdn.hurra.ltd/img/20220221184345.png)
 
 
+
 ### 1.5 正则
+
 
 - 查看以pattern开头的行
 

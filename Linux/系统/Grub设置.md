@@ -4,11 +4,12 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-08-17 00:11:16
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:44:23
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-04-29 23:38:17
 -->
 
 ## GRUB
+
 
 GRUB(GRand unified bootloader)是多操作系统启动程序，用来引导不同系统，如Windows、Linux
 
@@ -17,7 +18,9 @@ GRUB可用于选择操作系统分区上的不同内核，也可用于向这些�
 Linux常见的引导程序包括LILO、GRUB、GRUB2
 
 
+
 ### 双系统修复
+
 
 ```sh
 sudo gedit /etc/default/grub
@@ -36,10 +39,12 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 
+
 ### Ubuntu
 
 
 #### 多硬盘启动
+
 
 ```sh
 # 安装 grub-customizer
@@ -49,7 +54,9 @@ sudo apt-get install -y grub-customizer
 ![](https://cdn.hurra.ltd/img/20210817002414.png)
 
 
+
 ### 美化引导页面
+
 
 下载主题包，编辑/etc/default/grub添加
 

@@ -5,17 +5,20 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-02 02:39:19
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-02 21:26:30
+ * @LastEditTime: 2022-04-29 23:29:46
 -->
 
 
 ## Wine
 
+
 ```sh
 sudo apt-get install -y wine64
 ```
 
-## 配置页面
+
+### 配置页面
+
 
 ```sh
 winecfg

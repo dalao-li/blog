@@ -4,12 +4,13 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-08 09:36:50
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-17 09:31:56
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-04-29 23:27:49
 -->
 
 
 ## Ansible
+
 
 
 ### 概念
@@ -20,8 +21,7 @@ Ansible是一个配置管理和应用部署工具，可以对服务器上($1-N$�
 Ansible本质是在多设备按情况(判断循环)指定每台设备要执行的命令
 
 
-
-### 安装
+- 安装
 
 ```sh
 # 新增 epel-release 第三方套件来源，安装Ansible
@@ -146,6 +146,7 @@ ansible all -m authorized_key -a "user=docker key='{{ lookup('file'，'.ssh/id_r
 
 
 ## Ansible 命令
+
 
 
 ### 限定主机变更

@@ -5,14 +5,15 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-04-08 20:34:38
  * @LastEditors: DaLao
- * @LastEditTime: 2022-04-28 23:16:11
+ * @LastEditTime: 2022-04-29 23:22:11
  */
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include<iostream>
+#include<vector>
+#include<algorithm>
 
 const int MAXZ = 10005;
+
 const int n = 6;
 
 // 边
@@ -89,7 +90,7 @@ class Graph {
 
 int main(void) {
     std::vector<Edge> v = {
-        Edge(1,6,1) , Edge(1,5,16) , Edge(5,6,33) , Edge(6,2,11) , Edge(6,4,14) , 
+        Edge(1,6,1) , Edge(1,5,16) , Edge(5,6,33) , Edge(6,2,11) , Edge(6,4,14) ,
         Edge(2,4,5) , Edge(1,2,17) , Edge(5,4,4) , Edge(2,3,6) , Edge(3,4,10)
     };
 
