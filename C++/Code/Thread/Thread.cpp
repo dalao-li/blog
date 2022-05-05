@@ -4,24 +4,27 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 23:25:49
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-01 00:23:30
  */
-#include <iostream>
-#include <thread>
-#include <windows.h>
+#include<iostream>
+#include<thread>
+#include<ctime>
+
 
 using namespace std;
 
 void output1() {
+    printf("ouput1\n");
     for (int i = 0; i < 4; i++) {
-        //
+        printf("%d\n" , i);
     }
 }
 
 void output2() {
+    printf("ouput2\n");
     for (int i = 0; i < 4; i++) {
-        //
+        printf("%d\n" , i);
     }
 }
 
@@ -31,8 +34,8 @@ int main() {
     thread t2(output2);
 
     t1.detach();
-    Sleep(1000);
+    sleep(1000);
     t2.detach();
-    Sleep(1000);
+    sleep(1000);
     return 0;
 }
