@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 20:40:55
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 16:42:22
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-05 23:37:36
 -->
 
 ## 1 Vector
@@ -14,7 +14,7 @@
 ### 1.1 初始化
 
 
-- 赋值
+#### 赋值
 
 ```c
 std::vector<T> v;
@@ -23,18 +23,19 @@ std::vector<int> v = {1, 2 , 3 , 4 , 5};
 ```
 
 
-- 拷贝
+#### 拷贝
 
 ```c
 std::vector<T> v(count , value);
 
+// 初始化10个0
 std::vector<int> v(10 , 0);
 ```
 
 
 #### 预处理
 
-若知道需保存数据数量，可使用reserve提前申请，避免多次动态申请内存消耗时间
+若知道需保存数据数量size，可用reserve提前申请，避免多次动态申请内存消耗时间
 
 ```c
 std::vector<T> v;
@@ -53,21 +54,24 @@ std::vector<vector<T> > v;
 
 ### 1.2 增加
 
-- 尾部插入
+
+#### 尾部插入
 
 ```c
-vector<T> v;
+std::vector<T> v;
 
 T value;
 
 v.push_back(value);
 ```
 
-- 在index位置插入value
+
+#### 指定位置插入
 
 ```c
-vector<T> v;
+std::vector<T> v;
 
+// 在index位置插入value
 v.insert(v.begin() + index , value);
 ```
 
@@ -75,10 +79,11 @@ v.insert(v.begin() + index , value);
 
 ### 1.3 遍历
 
-- 迭代器访问
+
+#### 迭代器访问
 
 ```c
-vector<T> v;
+std::vector<T> v;
 
 for(vector<T>::iterator it = v.begin(); it != v.end(); it++) {
     // *it
@@ -89,10 +94,11 @@ for(auto it = v.begin(); it != v.end(); it++) {
 }
 ```
 
-- 下标访问
+
+#### 下标访问
 
 ```c
-vector<T> v;
+std::vector<T> v;
 
 for(int i = 0; i < v.size(); i++){
     // v[i]
@@ -106,7 +112,7 @@ for(int i = 0; i < v.size(); i++){
 - 删除x, y之间的元素
 
 ```c
-vector<T> v;
+std::vector<T> v;
 
 v.earse(v.begin() + x , v.end() - y);
 ```
@@ -115,7 +121,7 @@ v.earse(v.begin() + x , v.end() - y);
 - 删除末尾元素
 
 ```c
-vector<T> v;
+std::vector<T> v;
 
 v.pop_back();
 ```
@@ -124,7 +130,7 @@ v.pop_back();
 - 删除index + 1位置元素
 
 ```c
-vector<T> v;
+std::vector<T> v;
 
 v.erase(v.begin() + index)
 ```
@@ -133,6 +139,8 @@ v.erase(v.begin() + index)
 - 清空
 
 ```c
+std::vector<T> v;
+
 v.clear();
 ```
 
@@ -140,7 +148,7 @@ v.clear();
 ### 1.5 翻转
 
 ```c
-vector<T> v;
+std::vector<T> v;
 
 reverse(v.begin() , v.end());
 ```
@@ -153,16 +161,16 @@ reverse(v.begin() , v.end());
 ### 2.1 排序
 
 
-- 数字排序
+#### 数字排序
 
 ```c
-vector<T> v;
+std::vector<T> v;
 
 sort(v.begin() , v.end());
 ```
 
 
-- 对象排序
+#### 对象排序
 
 ```c++
 #include <iostream>
@@ -181,10 +189,12 @@ class Stu {
         string name;
 };
 
-
+// 按姓名排序
 bool cmp(Stu a , Stu b) {
     return a.getName() < b.getName();
 }
+
+std::vector<Stu> stu;
 
 sort(stu.begin() , stu.end() , cmp);
 ```
@@ -193,9 +203,10 @@ sort(stu.begin() , stu.end() , cmp);
 
 ### 2.2 数学计算
 
-- 最值
 
-```c
+#### 最值
+
+```c++
 #include <functional>
 #include <algorithm>
 
@@ -211,15 +222,15 @@ vector<T>::iterator index = v.begin() - it;
 ```
 
 
-- 累加
+#### 累加
 
-```c
+```c++
 accumulate(v.begin() , v.end() , 0, plus<T>())
 ```
 
 
-- 累乘
+#### 累乘
 
-```c
+```c++
 accumulate(v.begin() , v.end(), 1 , multiplies<T>())
 ```
