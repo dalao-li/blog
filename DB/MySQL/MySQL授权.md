@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 19:48:36
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-06 23:20:51
 -->
 
 ## MySQL 授权
@@ -13,7 +13,8 @@
 
 ### 用户
 
-- 创建用户
+
+#### 创建用户
 
 ```sql
 create user '用户名'@'host' identified by '密码';
@@ -28,7 +29,8 @@ create user '用户名'@'host' identified by '密码';
 create user 'dalao'@'%' identified by '123456'
 ```
 
-- 查看用户
+
+#### 查看用户
 
 ```sql
 select host,user,authentication_string from mysql.user;
@@ -43,19 +45,23 @@ select host,user,authentication_string from mysql.user;
 
 ### 授权
 
-- 查看所有用户权限
+
+
+#### 查看所有用户权限
 
 ```sql
 show grants;
 ```
 
-- 查看指定用户权限
+
+#### 查看指定用户权限
 
 ```sql
 show grants for'用户名'@'%';
 ```
 
-- 授权
+
+#### 授权
 
 授权操作只有root用户才有权限操作
 

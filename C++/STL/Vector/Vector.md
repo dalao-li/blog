@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 20:40:55
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-05 23:37:36
+ * @LastEditTime: 2022-05-06 20:50:59
 -->
 
 ## 1 Vector
@@ -19,7 +19,7 @@
 ```c
 std::vector<T> v;
 
-std::vector<int> v = {1, 2 , 3 , 4 , 5};
+std::vector<int> v = {1 , 2 , 3 , 4 , 5};
 ```
 
 
@@ -59,8 +59,6 @@ std::vector<vector<T> > v;
 
 ```c
 std::vector<T> v;
-
-T value;
 
 v.push_back(value);
 ```
@@ -118,7 +116,7 @@ v.earse(v.begin() + x , v.end() - y);
 ```
 
 
-- 删除末尾元素
+#### 删除末尾元素
 
 ```c
 std::vector<T> v;
@@ -127,7 +125,7 @@ v.pop_back();
 ```
 
 
-- 删除index + 1位置元素
+#### 删除index + 1位置元素
 
 ```c
 std::vector<T> v;
@@ -136,7 +134,7 @@ v.erase(v.begin() + index)
 ```
 
 
-- 清空
+#### 清空
 
 ```c
 std::vector<T> v;

@@ -4,15 +4,17 @@
  * @Author: dalao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-15 14:30:16
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-06 23:29:39
 -->
 
 
 ## 1 MongoDB 部署
 
 
+
 ### 1.1 创建容器
+
 
 ```sh
 docker run -itd --name mongo -p 27017:27017 mongo --auth 
@@ -26,6 +28,7 @@ docker exec -it mongo mongo admin
 
 ### 1.2 创建用户
 
+
 创建一个名为 admin，密码为 123456 的用户
 
 ```sh
@@ -37,6 +40,7 @@ db.createUser({ user:'admin',pwd:'123456',roles:[{ role:'userAdminAnyDatabase',d
 
 
 ### 1.3 连接
+
 
 ```sh
 db.auth(用户名,密码)
@@ -55,37 +59,43 @@ db.auth('admin','123456')
 
 ### 2.1 数据库
 
+
 ```sh
 use 数据库
 ```
 
-创建 test 数据库，这里暂不会显示，因为其中还未插入数据
+- 创建 test 数据库
+
+这里暂不会显示，因为其中还未插入数据
 
 ![](https://cdn.hurra.ltd/img/20220112184225.png)
 
 
 ### 2.2 集合
 
-- 创建集合
+
+#### 创建集合
 
 ```sh
 db.createCollection("集合")
 ```
 
-创建 stu 集合
+- 创建 stu 集合
 
 ![](https://cdn.hurra.ltd/img/20220112184407.png)
 
 
+
 ### 2.3 增加
 
-- 插入数据
+
+#### 插入数据
 
 ```sh
 db.[集合].insert(JSON数据1,JSON数据2...)
 ```
 
-向stu集合插入两条数据
+- 向stu集合插入两条数据
 
 ```
 db.stu.insert([{name:"Ling",age:20},{name:"Wang",age:22}])
@@ -97,13 +107,15 @@ db.stu.insert([{name:"Ling",age:20},{name:"Wang",age:22}])
 
 ### 2.4 查询
 
-- 全部查询
+
+#### 全部查询
 
 ```sh
 db.[集合].find()
 ```
 
-- 格式化显示集合内所有文档
+
+#### 格式化显示集合内所有文档
 
 ```sh
 db.[集合].find().pretty()
@@ -112,19 +124,20 @@ db.[集合].find().pretty()
 ![](https://cdn.hurra.ltd/img/20220112185029.png)
 
 
-- 条件查询
+#### 条件查询
 
 ```sh
 db.[集合].find({key:value}).pretty()
 ```
 
-查询 stu 集合中 name 为 Ling 的文档
+- 查询 stu 集合中 name 为 Ling 的文档
 
 ```sh
 db.stu.find({name:"Ling"}).pretty()
 ```
 
-查询年龄大于等于 21 的文档
+
+- 查询年龄大于等于 21 的文档
 
 ```sh
 db.stu.find({age:{$gte:21}}).pretty()
@@ -133,12 +146,13 @@ db.stu.find({age:{$gte:21}}).pretty()
 
 | 操作       | 格式                 |
 | ---------- | -------------------- |
-| 等于       | {key:value}          |
-| 小于       | {key:{`$lt`:value}}  |
-| 小于或等于 | {key:{`$lte`:value}} |
-| 大于       | {key:{`$gt`:value}}  |
-| 大于或等于 | {key:{`$gte`:value}} |
-| 不等于     | {key:{`$ne`:value}}  |
+| 等于       | `{key:value}`        |
+| 小于       | `{key:{$lt:value}}`  |
+| 小于或等于 | `{key:{$lte:value}}` |
+| 大于       | `{key:{$gt:value}}`  |
+| 大于或等于 | `{key:{$gte:value}}` |
+| 不等于     | `{key:{$ne:value}}`  |
+
 
 
 ### 2.5 修改
@@ -147,12 +161,13 @@ db.stu.find({age:{$gte:21}}).pretty()
 db.[集合].update({key1:value},{$set:{key2:new_value}})
 ```
 
-将 name 为 Ling 的文档中 age 值改为 30
+- 将 name 为 Ling 的文档中 age 值改为 30
 
 ```sh
 db.stu.update({name:"Ling"},{$set:{age:30}})
 ```
 ![](https://cdn.hurra.ltd/img/20220112185815.png)
+
 
 
 ### 2.6 删除
@@ -161,7 +176,7 @@ db.stu.update({name:"Ling"},{$set:{age:30}})
 db.[集合].remove({key:value})
 ```
 
-删除 name=Ling 的文档
+- 删除 name=Ling 的文档
 
 ```sh
 db.stu.remove({name:"Ling"})
@@ -173,6 +188,7 @@ db.stu.remove({name:"Ling"})
 
 
 ### 3.1 连接
+
 
 ```sh
 pymongo.MongoClient("mongodb://用户名:密码@IP:端口/")
@@ -192,6 +208,7 @@ print(dbs)
 
 ### 3.2 获取集合
 
+
 ```py
 # 获取test数据库中所有集合
 collects = client['test'].list_collection_names()
@@ -202,6 +219,7 @@ print(collects)
 
 
 ### 3.3 获取文档
+
 
 ```py
 # 获取test数据库的stu集合
@@ -215,7 +233,8 @@ for i in collect.find():
 # {'_id': ObjectId('61deb1b9e67fb54f984ccf90'), 'name': 'Wang', 'age': 22.0}
 ```
 
-- 按条件获取
+
+#### 按条件获取
 
 ```sh
 集合.find(key:value)
@@ -234,13 +253,15 @@ print(data)
 
 ### 3.4 插入文档
 
-- 单条插入
+
+#### 单条插入
 
 ```py
 insert_one(JSON数据)
 ```
 
-- 多条插入
+
+#### 多条插入
 
 ```py
 insert_many(JSON数据1,JSON数据2...)
@@ -268,7 +289,3 @@ for i in collect.find():
 # {'_id': ObjectId('61deb97e09f80dafa132ce8e'), 'name': 'new_name3', 'age': 19}
 # {'_id': ObjectId('61deb97e09f80dafa132ce8f'), 'name': 'new_name4', 'age': 19}
 ```
-
-
-
-

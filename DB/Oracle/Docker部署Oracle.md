@@ -4,45 +4,48 @@
  * @Autor: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-16 11:01:04
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-06 23:19:31
 -->
 
 ## Docker部署Oracle
 
 
-### Docker指令
 
-```sh
+### 命令
+
+
+#### Docker指令
+
+```docker
 docker run -itd \
     --name=orace \
     -p 8080:8080 -p 1521:1521 \
     truevoly/oracle-12c
 ```
 
-```sh
+```docker
 docker run -itd --name=orace -p 8080:8080 -p 1521:1521 truevoly/oracle-12c
 ```
 
 
-### 命令
+#### 进入Oracle
 
-
-- 进入Oracle，sys 用户的默认密码 oracle
+sys 用户的默认密码 oracle
 
 ```sh
 sqlplus sys as sysdba
 ```
 
 
-- 查看表空间
+#### 查看表空间
 
 ```sql
 select tablespace_name from dba_tablespaces;
 ```
 
 
-- 查看表空间路径
+#### 查看表空间路径
 
 ```sql
 select * from dba_data_files;
@@ -65,5 +68,3 @@ CREATE USER user_test IDENTIFIED BY 123 ACCOUNT UNLOCK DEFAULT TABLESPACE space_
 ```sql
 GRANT CONNECT,RESOURCE,DBA TO user_test;
 ```
-
-

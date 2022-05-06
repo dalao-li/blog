@@ -4,14 +4,15 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-02-04 23:48:41
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 19:52:33
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-06 23:33:54
 -->
 
 ## SQLServer
 
 
 ### Docker部署
+
 
 ```sh
 docker run -itd \
@@ -34,14 +35,15 @@ docker run -itd -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Dalao@13546!" -p 1433:1433 --
 
 ### 命令
 
-- 进入SQLSercer
+
+#### 进入SQLSercer
 
 ```sh
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Dalao@13546!"
 ```
 
 
-- 显示所有数据库
+#### 显示所有数据库
 
 ```sql
 SELECT Name FROM Master..SysDatabases ORDER BY Name
@@ -51,7 +53,7 @@ GO
 ![](https://cdn.hurra.ltd/img/20201012110513.png)
 
 
-- 显示表
+#### 显示表
 
 ```sql
 SELECT * FROM [表名]
@@ -66,7 +68,8 @@ GO
 
 ### Python 交互
 
-- Navicat 连接
+
+#### Navicat 连接
 
 ![](https://cdn.hurra.ltd/img/20201012105710.png)
 

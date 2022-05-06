@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:21:39
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-15 00:15:16
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-06 20:52:51
 -->
 
 
@@ -32,13 +32,13 @@ getline(cin , str);
 int main() {
     int sum = 0;
     std::string s1, s2;
-    cin >> s1 >> s2;
+    std::cin >> s1 >> s2;
     for(int i = 0; i < s1.size(); i++){
-        if(s1.find(s2 , i) != string::npos){
+        if(s1.find(s2 , i) != std::string::npos){
             sum++;
         }
     }
-    cout << sum << endl;
+    std::cout << sum << std::endl;
     return 0;
 }
 ```
@@ -55,7 +55,7 @@ int main() {
     int index = 3;
     int length = 1;
     std::str.erase(index , length);
-    cout << str << endl;
+    std::cout << str << std::endl;
     return 0;
 }
 ```
