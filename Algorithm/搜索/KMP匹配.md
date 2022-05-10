@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-11-13 20:57:00
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-04 01:04:20
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-10 22:44:11
 -->
 
 ## KMP
@@ -31,9 +31,9 @@ void setNext(string str， int next[]){
     }
 }
 
-//字符串匹配，返回值是p串在s串中首次匹配到的位置
+// 字符串匹配，返回值是p串在s串中首次匹配到的位置
 int kmp(string &s , string &p , int next[]) {
-    //i表示s字符串匹配到的位置
+    // i表示s字符串匹配到的位置
     int i = 0;
     // j表示p字符串匹配到的位置
     int j = 0;

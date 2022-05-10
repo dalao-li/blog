@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 20:40:55
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-06 20:50:59
+ * @LastEditTime: 2022-05-09 22:04:51
 -->
 
 ## 1 Vector
@@ -35,7 +35,7 @@ std::vector<int> v(10 , 0);
 
 #### 预处理
 
-若知道需保存数据数量size，可用reserve提前申请，避免多次动态申请内存消耗时间
+若知道需保存数据量size，可用reserve提前申请，避免多次动态申请内存消耗时间
 
 ```c
 std::vector<T> v;
@@ -78,6 +78,7 @@ v.insert(v.begin() + index , value);
 ### 1.3 遍历
 
 
+
 #### 迭代器访问
 
 ```c
@@ -88,9 +89,10 @@ for(vector<T>::iterator it = v.begin(); it != v.end(); it++) {
 }
 
 for(auto it = v.begin(); it != v.end(); it++) {
-
+    // *it
 }
 ```
+
 
 
 #### 下标访问
@@ -98,7 +100,7 @@ for(auto it = v.begin(); it != v.end(); it++) {
 ```c
 std::vector<T> v;
 
-for(int i = 0; i < v.size(); i++){
+for(unsigned int i = 0; i < v.size(); i++){
     // v[i]
 }
 ```

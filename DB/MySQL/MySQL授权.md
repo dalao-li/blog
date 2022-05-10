@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-06 23:20:51
+ * @LastEditTime: 2022-05-09 21:23:39
 -->
 
 ## MySQL 授权
@@ -24,6 +24,8 @@ create user '用户名'@'host' identified by '密码';
 | localhost | 本地登录用户     |
 | ip        | 允许某个 ip 登录 |
 | %         | 允许所有 ip 登录 |
+
+- 创建用户dalao，密码123456
 
 ```sql
 create user 'dalao'@'%' identified by '123456'
@@ -47,14 +49,16 @@ select host,user,authentication_string from mysql.user;
 
 
 
-#### 查看所有用户权限
+#### 查看
+
+- 查看所有用户权限
 
 ```sql
 show grants;
 ```
 
 
-#### 查看指定用户权限
+- 查看指定用户权限
 
 ```sql
 show grants for'用户名'@'%';
@@ -63,7 +67,7 @@ show grants for'用户名'@'%';
 
 #### 授权
 
-授权操作只有root用户才有权限操作
+- 授权操作只有root用户才有权限操作
 
 ```sql
 grant all privileges on *.* to '用户名'@'%' identified by '密码';

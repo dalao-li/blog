@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-06 23:20:20
+ * @LastEditTime: 2022-05-09 21:22:07
 -->
 
 ## 1 MySQL事务
@@ -14,6 +14,7 @@
 事务处理可以用来维护数据库的完整性，保证 SQL 语句要么全执行，要么全不执行
 
 事务用来管理 `INSERT`，`UPDATE`，`DELETE` 语句，只有使用 Innodb 数据库引擎的数据库或表才支持事务
+
 
 
 ### 1.1 特性
