@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-02-22 23:16:23
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-16 13:42:10
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-15 22:39:57
 -->
 
 ## Debug
@@ -16,10 +16,12 @@
 
 int main(void) {
     int sum = 0;
+
     for(int i = 0; i < 10; i++) {
         sum += i;
         printf("%d\n" , sum);
     }
+
     return 0;
 } 
 ```

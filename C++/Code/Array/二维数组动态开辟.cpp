@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-16 13:40:41
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-15 21:48:44
  */
 
 #include<iostream>
@@ -16,25 +16,29 @@ const int m = 10;
 int main() {
     cin >> n >> m;
     int **a = new int *[m];
+
     for(int i = 0; i < n; i++){
         a[i] = new int[n];
     }
+
     for(int i = 0;i < n;i++){
         for(int j = 0; j < m; j++){
             cin >> a[i][j];
         }
     }
+
     for(int i = 0; i < n; i++){
         for(int j = 0; j < m; j++){
-            cout << a[i][j] << " ";
+            cout << a[i][j] << "  ";
         }
         cout << endl;
     }
- 
-    for(int i = 0; i < n; i++){  
-        delete a[i];  
-    }  
-    delete []a;  
+
+    for(int i = 0; i < n; i++){
+        delete a[i];
+    }
+    
+    delete []a;
 
     return 0;
 }

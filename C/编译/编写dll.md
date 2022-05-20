@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-19 22:18:38
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-15 22:36:53
 -->
 
 ### 编写
@@ -77,7 +77,6 @@ target_link_libraries(Demo libhello.dll)
 
 ![](https://cdn.hurra.ltd/img/20201028184033.png)
 
-运行
 ![](https://cdn.hurra.ltd/img/20201028184425.png)
 
 
@@ -90,10 +89,10 @@ target_link_libraries(Demo libhello.dll)
 library.c 文件中写入
 
 ```c
-#include "library.h"
+#include"library.h"
 
-#include <stdio.h>
-#include <stdbool.h>
+#include<stdio.h>
+#include<stdbool.h>
 
 int add(int a , int b) {
     return a + b;
@@ -139,10 +138,11 @@ int main() {
     hello();
     printf("%d\n"，add(3，4));
     
-    int y1 = 2004;
-    if(isLeapYear(y1)){
-        printf("%d2004year is lead year\n"，y1);
+    int y = 2004;
+    if(isLeapYear(y)){
+        printf("%d2004year is lead year\n"，y);
     }
+
     return 0;
 }
 ```

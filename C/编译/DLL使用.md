@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-20 11:26:41
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-19 22:21:52
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-15 22:38:46
 -->
 
 
@@ -47,14 +47,12 @@ DLLEXPORT void hello();
 #include "pch.h"
 #include<iostream>
 
-using namespace std;
-
 int add(int a , int b) {
     return a + b;
 }
 
 void hello() {
-    cout << "Hello World" << endl;
+    std::cout << "Hello World" << std::endl;
 }
 ```
 
