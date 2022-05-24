@@ -4,8 +4,8 @@
  * @Author: dalao
  * @Email: dalao_li@163.com
  * @Date: 2022-03-30 21:57:16
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-19 22:01:40
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-23 21:53:57
 -->
 
 
@@ -31,9 +31,9 @@ vector<T> v;
 
 T value;
 
-while (cin >> value) {
+while (std::cin >> value) {
     v.push_back(value);
-    if (cin.get() == '\n')
+    if (std::cin.get() == '\n')
         break;
     }
 }

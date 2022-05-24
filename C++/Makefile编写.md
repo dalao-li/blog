@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-11-11 23:58:36
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 20:00:46
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-23 21:52:07
 -->
 
 ## Makefile
@@ -21,9 +21,10 @@ void hello();
 ```
 
 - hellomake.c
-  
+
 ```c
-#include"hellomake.h"
+#include "hellomake.h"
+
 int main(){
     hello();
     return 0;
@@ -31,10 +32,10 @@ int main(){
 ```
 
 - hellofunc.c
-  
+
 ```c
-#include<stdio.h>
-#include"hellomake.h"
+#include <stdio.h>
+#include "hellomake.h"
 
 void hello(){
     printf("Hello , makefiles!\n");
