@@ -4,14 +4,15 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-08 15:24:45
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 21:48:53
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-27 22:24:49
 -->
 
 ## selenium
 
 
 ### 下载 chromedriver
+
 
 下载与谷歌浏览器版本对应的chromedriver.exe并放在谷歌浏览器的安装目录与Python安装目录下
 
@@ -41,6 +42,7 @@ inputs.submit()
 ![](https://cdn.hurra.ltd/img/20210308152746.png)
 
 
+
 ### 元素定位
 
 ```py
@@ -64,7 +66,7 @@ find_element_by_css_selector()
 
 ### 浏览器操作
 
-- 控制浏览器大小  
+- 控制浏览器大小
 
 ```py
 browser = webdriver.Chrome()

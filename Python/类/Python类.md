@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 10:06:06
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-27 22:21:10
 -->
 
 ## 1 类
@@ -16,7 +16,7 @@
 
 ```py
 class Stu:
-    def __init__(self, num: str, name: str, age: str):
+    def __init__(self, num: str, name: str, age: str)-> None:
         self.num = num
         self.name = name
         self.age = age
@@ -33,17 +33,17 @@ self代表类的实例，而非类
 
 ```py
 class Person:
-    def __init__(self, name: str):
+    def __init__(self, name: str)-> None:
         self.name = name
 
     # get方法
     @property
-    def name(self):
+    def name(self)-> None:
         return self._name
 
     # set方法
     @name.setter
-        def name(self, value):
+        def name(self, value)-> None:
             if not isinstance(value , str):
                 raise TypeError('Expected a string')
             self._name = value
@@ -59,7 +59,7 @@ class Person:
 
 ```py
 class Person(object):
-    def __init__(self, name: str, age: str):
+    def __init__(self, name: str, age: str)-> None:
         self.name = name
         self.age = age
 
@@ -76,7 +76,7 @@ print(p.__dict__)
 ```py
 class Person:
     # _obj为字典
-    def __init__(self, _obj):
+    def __init__(self, _obj)-> None:
         self.__dict__.update(_obj)
 ```
 
@@ -93,7 +93,7 @@ class People:
         self.name = name
         self.age = age
 
-    def speak(self):
+    def speak(self)-> None:
         print(self.name , self.age)
 ```
 
@@ -103,6 +103,6 @@ class Student(People):
         People.__init__(self , name, age)
         self.num = num
     
-    def speak(self):
+    def speak(self)-> None:
         print(self.name , self.age , self.num)
 ```

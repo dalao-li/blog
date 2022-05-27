@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-08 09:36:50
  * @LastEditors: DaLao
- * @LastEditTime: 2022-04-29 23:27:49
+ * @LastEditTime: 2022-05-27 22:30:12
 -->
 
 
@@ -94,7 +94,7 @@ ansible all -m command -a 'echo Hello World!'
 | Server_2 | 172.17.0.3     | docker       |
 | Server_3 | 172.17.0.4     | docker       |
 
- 
+
 宿主机修改/etc/ansible/host
 
 ```ini

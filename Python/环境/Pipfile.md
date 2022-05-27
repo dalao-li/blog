@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 10:04:26
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-27 22:19:43
 -->
 
 
@@ -14,11 +14,12 @@
 
 - Pipfile 文件是 `TOML格式`而不是 requirements.txt 这样的纯文本.
 
+- 一个项目对应一个 Pipfile，支持开发环境与正式环境区分
 
-- 一个项目对应一个 Pipfile，支持开发环境与正式环境区分.默认提供 default 和 development 区分
-
+    默认提供 default 和 development 区分
 
 - 提供版本锁支持，存为 Pipfile.lock
+
 
 ```sh
 # 创建
@@ -102,9 +103,7 @@ Pipenv 使用--dev 标志区分两个环境. 加 --dev 表示包括 Pipfile dev-
 
 - 安装包记录是在[dev-packages] 部分，或是[packages] 部分
 
-
 - 在安装时指定`--dev`参数，则安装全部的模块
-
 
 - 若安装时不定指定`--dev` 参数，只会安装`[packages]` 下面的模块
 

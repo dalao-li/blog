@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-09 10:48:54
  * @LastEditors: DaLao
- * @LastEditTime: 2022-04-29 23:28:38
+ * @LastEditTime: 2022-05-27 22:30:31
 -->
 
 ## Jenkins
@@ -25,7 +25,7 @@ yum -y install java-1.8.0-openjdk*
 ```
 
 - 安装Jenkins
-  
+
 ```sh
 sudo wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/war/2.284/jenkins.war
 ```

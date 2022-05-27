@@ -23,7 +23,7 @@ git config --global user.email "邮箱"
 
 # 配置编辑器
 git config --global core.editor "code -w"
-    
+
 # 防止中文乱码
 git config --global core.quotepath false
 ```

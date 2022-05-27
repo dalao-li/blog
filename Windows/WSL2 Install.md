@@ -4,9 +4,11 @@
  * @Autor: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 19:59:52
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-05-27 22:27:24
 -->
+
+## WSL2
 
 
 ### 启用 Linux 子系统
