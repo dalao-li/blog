@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-27 22:21:10
+ * @LastEditTime: 2022-06-09 22:26:32
 -->
 
 ## 1 类
@@ -16,10 +16,10 @@
 
 ```py
 class Stu:
-    def __init__(self, num: str, name: str, age: str)-> None:
-        self.num = num
-        self.name = name
-        self.age = age
+    def __init__(self, num: str, name: str, age: str)->None:
+        self._num = num
+        self._name = name
+        self._age = age
 ```
 
 self代表类的实例，而非类
@@ -33,8 +33,8 @@ self代表类的实例，而非类
 
 ```py
 class Person:
-    def __init__(self, name: str)-> None:
-        self.name = name
+    def __init__(self, name: str)->None:
+        self._name = name
 
     # get方法
     @property
@@ -43,8 +43,8 @@ class Person:
 
     # set方法
     @name.setter
-        def name(self, value)-> None:
-            if not isinstance(value , str):
+        def name(self, value)->None:
+            if not isinstance(value, str):
                 raise TypeError('Expected a string')
             self._name = value
 ```
@@ -55,7 +55,6 @@ class Person:
 
 
 - 获值
-
 
 ```py
 class Person(object):
@@ -71,7 +70,6 @@ print(p.__dict__)
 
 
 - 赋值
-
 
 ```py
 class Person:
@@ -89,20 +87,20 @@ class Person:
 
 ```py
 class People:
-    def __init__(self, name: str, age: str)-> None:
-        self.name = name
-        self.age = age
+    def __init__(self, name: str, age: str)->None:
+        self._name = name
+        self._age = age
 
     def speak(self)-> None:
-        print(self.name , self.age)
+        print(self._name, self._age)
 ```
 
 ```py
 class Student(People):
-    def __init__(self , name: str , age:str , num: str)-> None:
-        People.__init__(self , name, age)
-        self.num = num
-    
-    def speak(self)-> None:
-        print(self.name , self.age , self.num)
+    def __init__(self, name: str, age:str, num: str)->None:
+        People.__init__(self, name, age)
+        self._num = num
+
+    def speak(self)->None:
+        print(self._name, self._age, self._num)
 ```
