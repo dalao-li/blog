@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-15 10:21:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-06-17 22:49:23
+ * @LastEditTime: 2022-06-24 23:15:23
 -->
 
 ## Shell Docker
@@ -29,7 +29,9 @@ $(docker ps -aqf "name=容器名")
 ### 判断容器是否存在
 
 ```sh
-docker images | grep "容器名" &> /dev/null
+name=""
+
+docker images | grep ${name} &> /dev/null
 
 # 若不存在
 if $? -ne 0;then
@@ -41,6 +43,7 @@ fi
 ### 备份还原
 
 ```sh
+# 备份
 docker images | awk '{print $1}' > images.txt
 
 sed -i '1d' images.txt
