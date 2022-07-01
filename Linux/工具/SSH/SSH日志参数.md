@@ -4,21 +4,24 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-10 10:19:22
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-09 23:37:32
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-01 22:29:52
 -->
 
-## SSH连接参数
+## SSH信息
 
 
-### SSH版本
+### SSH连接参数
+
+
+#### SSH版本
 
 ```sh
 OpenSSH_7.4p1， OpenSSL 1.0.2k-fips  26 Jan 2017
 ```
 
 
-### 读取本地主机ssh_config文件
+#### 读取本地主机ssh_config文件
 
 ```sh
 debug1: Reading configuration data /etc/ssh/ssh_config
@@ -27,14 +30,14 @@ debug1: /etc/ssh/ssh_config line 58: Applying options for *
 ```
 
 
-### 尝试链接远程主机 
+#### 尝试链接远程主机 
 
 ```sh
 debug1: Connecting to 192.168.43.96 [192.168.43.96] port 22.
 ```
 
 
-### 链接成功建立
+#### 链接成功建立
 
 ```sh
 debug1: Connection established.
@@ -45,7 +48,7 @@ debug1: Local version string SSH-2.0-OpenSSH_7.4
 ```
 
 
-### 远程控制版本
+#### 远程控制版本
 
 ```sh
 debug1: Remote protocol version 2.0， remote software version OpenSSH_7.4
@@ -53,7 +56,7 @@ debug1: match: OpenSSH_7.4 pat OpenSSH* compat 0x04000000
 ```
 
 
-### 验证远程主机的IP 端口与登录用户
+#### 验证远程主机的IP 端口与登录用户
 
 ```sh
 debug1: Authenticating to 192.168.43.96:22 as 'root'
@@ -75,7 +78,7 @@ debug1: Host '192.168.43.96' is known and matches the ECDSA host key.
 ```
 
 
-### 在远程主机的known_hosts文件中查找密钥
+#### 在远程主机的known_hosts文件中查找密钥
 
 ```sh
 debug1: Found key in /root/.ssh/known_hosts:7
@@ -121,7 +124,7 @@ Last login: Thu Mar 11 17:51:04 2021 from 192.168.43.231
 ```
 
 
-## SSH登陆日志
+### SSH登陆日志
 
 很多Linux的新发行版已经不再使用，改为使用rsyslog，配置目录/etc/rsyslog.d
 
@@ -145,7 +148,7 @@ Mar 10 10:51:44 localhost sshd[10616] pam_unix(sshd:session) session opened for 
 | 详细信息         | session opened for user root by (uid=0) |
      
 
-- 登录
+#### 登录
 
 ```sh
 Mar 10 10:51:44 localhost sshd[10616]: Accepted publickey for root from 192.168.43.231 port 52131 ssh2: RSA SHA256:D2xE2Ju/pNEVJBTGjYCb+kZb+TwclJjxsQFJcfTCnZ4
@@ -153,7 +156,7 @@ Mar 10 10:51:44 localhost sshd[10616]: Accepted publickey for root from 192.168.
 Mar 10 10:51:44 localhost sshd[10616]: pam_unix(sshd:session): session opened for user root by (uid=0)
 ```
 
-- 登出
+#### 登出
 
 ```ini
 Mar 10 10:52:12 localhost sshd[10616]: Received disconnect from 192.168.43.231 port 52131:11: disconnected by user
@@ -163,19 +166,19 @@ Mar 10 10:52:12 localhost sshd[10616]: Disconnected from 192.168.43.231 port 521
 Mar 10 10:52:12 localhost sshd[10616]: pam_unix(sshd:session): session closed for user root
 ```
 
-- 切换用户
+#### 切换用户
 
 ```ini
 Mar 10 10:53:56 localhost su: pam_unix(su:session): session opened for user dalao by (uid=0)
 ```
 
-- 提示输入密码时取消
+#### 提示输入密码时取消
 
 ```ini
 Mar 10 10:53:56 localhost sshd[19046]: Received disconnect from 192.168.43.231: 13: The user canceled authentication.
 ```
 
-- 密码输入错误
+#### 密码输入错误
 
 ```ini
 Aug  8 02:33:28 imzcy sshd[19125]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.217.10  user=root
@@ -183,7 +186,7 @@ Aug  8 02:33:28 imzcy sshd[19125]: pam_unix(sshd:auth): authentication failure; 
 Aug  8 02:33:31 imzcy sshd[19125]: Failed password for root from 192.168.217.10 port 57994 ssh2
 ```
 
-- 密码错误次数太多
+#### 密码错误次数太多
 
 ```ini
 Aug  8 02:33:28 imzcy sshd[19125]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.217.10  user=root

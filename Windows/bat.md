@@ -4,14 +4,17 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-10-26 22:19:58
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-20 21:38:29
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-01 22:39:06
 -->
 
-## bat指令
+## bat
 
 
-### 注释
+### 指令
+
+
+#### 注释
 
 
 ```bat
@@ -22,7 +25,7 @@ REM 注释内容
 
 
 
-### 系统变量
+#### 系统变量
 
 
 ```bat
@@ -44,7 +47,7 @@ REM 获取上一命令执行结果码
 
 
 
-### echo
+#### echo
 
 
 ```bat
@@ -63,7 +66,9 @@ REM 2. @echo将关闭该命令回显,即执行时不会显示该命令
 
 
 
-### goto 和 :
+#### 跳转
+
+goto 和 :
 
 
 ```bat
@@ -76,7 +81,7 @@ goto index
 
 
 
-### 文件
+#### 文件
 
 
 ```bat

@@ -6,8 +6,8 @@
  # @Author: DaLao
  # @Email: dalao_li@163.com
  # @Date: 2021-07-10 13:27:20
- # @LastEditors: dalao
- # @LastEditTime: 2022-04-16 11:24:18
+ # @LastEditors: DaLao
+ # @LastEditTime: 2022-06-30 00:15:17
 ### 
 
 # 设置flameshot快捷键
@@ -41,7 +41,7 @@ install_docker(){
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
 
     sudo add-apt-repository "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu $(lsb_release -cs) stable" 
-    
+
     sudo apt-get update -y && sudo apt-get install docker-ce -y
 
     # 添加docker用户组，将登陆用户加入到docker用户组中
@@ -90,7 +90,7 @@ set_proxy(){
         --mount type=bind,source="${HOME}/${path}",target="/root/${path}",readonly \
         --restart=unless-stopped \
         --name=clash_test \
-        dreamacro/clash:v1.8.0 
+        dreamacro/clash:v1.8.0
     # https://clash.razord.top/ 
     # https://www.woccloud.io/
 }

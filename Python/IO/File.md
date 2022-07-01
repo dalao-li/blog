@@ -4,33 +4,22 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-09-24 20:37:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 10:17:06
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-02 00:26:54
 -->
 
 ## 文件
 
 
-- 路径错误问题
-
-Windows路径中 `\` 会被视作转义字符，导致路径错误
-
-若文件路径为`C:\Users\XXX\Desktop\x.txt`，需改为
-
-
-```sh
-r'C:\Users\XXX\Desktop\x.txt' 或
-
-'C:\\Users\XXX\Desktop\\x.txt' 或
-
-'C:/Users/XXX/Desktop/x.txt'
-```
+### 
 
 
 ### 创建
 
 
 ```py
+path = ""
+
 f = open(path, 'w', encoding = 'utf-8')
 if os.path.exists(path):
     f.close()
@@ -62,7 +51,7 @@ def touch_tmp_file(request):
 ```py
 with open(path, 'w', encoding = 'utf-8') as f:
     f.write(data)
-f.close()   
+f.close()
 ```
 
 ![](https://cdn.hurra.ltd/img/20211225132548.png)
@@ -125,7 +114,9 @@ def del_file(path: str):
 
 
 
-### 显示文件
+### 显示
+
+#### 显示文件
 
 
 ```py
@@ -141,7 +132,7 @@ def display_all_files(folder_path):
 
 
 
-### 递归显示
+#### 递归显示
 
 
 ```py
@@ -151,4 +142,23 @@ def display_all_folders(folder_path):
         # 如果该对象是文件夹
         if os.path.isdir(path):
             display_all_files(path)
+```
+
+
+### 问题
+
+
+#### 路径错误
+
+Windows路径中 `\` 会被视作转义字符，导致路径错误
+
+若文件路径为`C:\Users\XXX\Desktop\x.txt`，需改为
+
+
+```sh
+r'C:\Users\XXX\Desktop\x.txt' 或
+
+'C:\\Users\XXX\Desktop\\x.txt' 或
+
+'C:/Users/XXX/Desktop/x.txt'
 ```

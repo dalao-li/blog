@@ -4,14 +4,16 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-03 00:55:15
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-17 09:37:20
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-01 22:36:23
 -->
 
 ## wget
 
 
-### 下载到指定目录
+### 下载
+
+#### 下载到指定目录
 
 
 ```sh
@@ -20,7 +22,7 @@ wget -P 路径 URL
 ```
 
 
-### 下载到指定目录指定文件名
+#### 下载到指定目录指定文件名
 
 
 ```sh

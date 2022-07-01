@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-08 09:36:50
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-27 22:30:12
+ * @LastEditTime: 2022-07-01 22:33:17
 -->
 
 
@@ -21,7 +21,7 @@ Ansible是一个配置管理和应用部署工具，可以对服务器上($1-N$�
 Ansible本质是在多设备按情况(判断循环)指定每台设备要执行的命令
 
 
-- 安装
+#### 安装
 
 ```sh
 # 新增 epel-release 第三方套件来源，安装Ansible

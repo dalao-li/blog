@@ -5,10 +5,15 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-04-06 20:05:41
  * @LastEditors: DaLao
- * @LastEditTime: 2022-04-29 23:29:00
+ * @LastEditTime: 2022-07-01 22:32:21
 -->
 
-### 安装
+## Nginx
+
+
+### 配置
+
+#### 安装
 
 
 - docker容器中 nginx.conf 位置
@@ -24,7 +29,7 @@ docker run -itd -v $PWD/conf:/etc/nginx --net="host" nginx
 ```
 
 
-### 命令
+#### 命令
 
 
 ```sh
@@ -38,7 +43,7 @@ sudo systemctl reload nginx
 ```
 
 
-### IP 代理
+#### IP 代理
 
 
 ```sh
@@ -54,7 +59,7 @@ server{
 ```
 
 
-### 页面代理
+#### 页面代理
 
 
 ```ini
@@ -80,7 +85,7 @@ nginx -s reload
 
 
 
-### 跨域
+#### 跨域
 
 
 只需在Nginx的配置文件中配置以下参数
@@ -100,10 +105,29 @@ location / {
 ```
 
 
-### 问题
+#### 问题
 
 
 Windows下可使用`host.docker.internal`指代宿主机的$localhost$ 地址
 
 Linux下可使用`--net="host"`参数
 
+
+### 实例
+
+
+#### 搭建图床
+
+编辑/etc/nginx/nginx.conf
+
+```sh
+server {
+    location ~ .*\.(gif|jpg|jpeg|png|jfif)$ {
+        # 图片存放路径 
+        root         
+        autoindex    on
+    location / {
+        ...
+    }
+}
+```

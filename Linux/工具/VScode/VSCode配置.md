@@ -4,14 +4,17 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-10-12 23:24:59
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-17 09:35:54
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-01 22:33:34
 -->
 
-## 配置
+## VSCode
 
 
-### 以root权限运行
+### 设置
+
+
+#### 以root权限运行
 
 
 ```sh
@@ -19,7 +22,7 @@ sudo code --user-data-dir="~/.vscode-root"
 ```
 
 
-### 选中内容高亮
+#### 选中内容高亮
 
 
 ```sh
@@ -30,11 +33,10 @@ sudo code --user-data-dir="~/.vscode-root"
 ```
 
 
+### 快捷键
 
-## 快捷键
 
-
-### 查找
+#### 查找
 
 
 | 功能             | 快捷键                                            |
@@ -68,7 +70,7 @@ highlight-icemode
 | 查看函数调用 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd>+ <kbd>C</kbd> |
 
 
-### 跳转
+#### 跳转
 
 
 | 功能                        | 快捷键                                                               |
@@ -79,7 +81,7 @@ highlight-icemode
 | 跳转到当前文件开头/结尾     | <kbd>Ctrl</kbd> + <kbd>Home</kbd> / <kbd>Ctrl</kbd> + <kbd>End</kbd> |
 
 
-### 显示
+#### 显示
 
 
 | 功能                 | 快捷键                                                                                                |
@@ -91,7 +93,7 @@ highlight-icemode
 | 重新打开关闭的编辑器 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>                                                     |
 
 
-### 编辑
+#### 编辑
 
 
 | 功能                 | 快捷键                                                                                       |

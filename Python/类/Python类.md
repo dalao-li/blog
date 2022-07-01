@@ -5,10 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-06-09 22:26:32
+ * @LastEditTime: 2022-07-01 22:41:04
 -->
 
-## 1 类
+## 类
 
 
 ### 1.1 定义
@@ -54,7 +54,7 @@ class Person:
 ### 1.3 操作
 
 
-- 获值
+#### 获值
 
 ```py
 class Person(object):
@@ -69,7 +69,7 @@ print(p.__dict__)
 ```
 
 
-- 赋值
+#### 赋值
 
 ```py
 class Person:
@@ -83,7 +83,7 @@ class Person:
 ### 1.4 继承
 
 
-- 继承类
+#### 继承类
 
 ```py
 class People:

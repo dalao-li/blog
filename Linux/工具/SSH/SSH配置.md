@@ -4,17 +4,17 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-14 13:31:07
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-17 09:34:56
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-01 22:29:00
 -->
 
-## 1 SSH
+## SSH
 
 
-### 1.1 命令
+### 1. 命令
 
 
-- 连接
+#### 1.1 连接
 
 ```sh
 ssh 用户名@IP地址 (-p 端口号)
@@ -27,14 +27,14 @@ ssh dalao@192.168.1.1
 ```
 
 
-- 清除主机密钥
+#### 1.2 清除密钥
 
 ```sh
 ssh-keygen -R [远程主机IP]
 ``` 
 
 
-### 1.2 免密
+#### 1.3 免密
 
 
 - 手动复制
@@ -52,7 +52,9 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
 
 
 
-### 1.3 .ssh目录
+### 2 SSH配置
+
+#### 2.1 .ssh目录
 
 
 在根目录(/root/或者/home/用户名)下生成 .ssh目录
@@ -72,7 +74,7 @@ ssh-keygen -t rsa
 
 
 
-### 1.4 配置文件
+#### 2.2 配置文件
 
 
 ```sh
@@ -92,7 +94,9 @@ PasswordAuthentication no
 
 
 
-### 1.5 监控
+### 3 SSH工具
+
+#### 3.1 获取登录信息
 
 
 /etc/ssh/目录下新建sshrc文件
@@ -117,7 +121,7 @@ echo ${user} ${ip} ${time} ${server}
 
 
 
-### 1.6 Web工具
+#### 3.2 Web工具
 
 
 [Github 地址](https://github.com/huashengdun/webssh)

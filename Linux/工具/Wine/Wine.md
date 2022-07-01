@@ -3,18 +3,49 @@
  * @Version: 1.0
  * @Author: DaLao
  * @Email: dalao_li@163.com
- * @Date: 2022-01-02 21:24:40
+ * @Date: 2022-01-02 02:39:19
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-02 21:35:16
+ * @LastEditTime: 2022-07-01 22:35:38
 -->
 
 
+## Wine
+
+
+
+### 配置
+
+
+#### 安装
+
+```sh
+sudo apt-get install -y wine64
+```
+
+
+#### 配置页面
+
+
+```sh
+winecfg
+```
+
+#### Docker搭建
+
+启动前额外输入
 
 ```sh
 xhost +
 ```
 
-## Docker
+
+### PVS
+
+```sh
+xhost +
+```
+
+#### Docker
 
 ```sh
 docker run -itd \

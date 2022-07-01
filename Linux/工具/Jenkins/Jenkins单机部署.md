@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-09 10:48:54
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-27 22:30:31
+ * @LastEditTime: 2022-07-01 22:32:55
 -->
 
 ## Jenkins
@@ -14,8 +14,10 @@
 ![](https://cdn.hurra.ltd/img/20210308111903.png)
 
 
+### 安装
 
-### Linux安装
+
+#### Linux安装
 
 
 - 安装jdk1.8
@@ -43,7 +45,7 @@ java -jar -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PRO
 
 
 
-### Windows安装
+#### Windows安装
 
 
 - 用管理员身份启动cmd，进入jenkins安装根目录

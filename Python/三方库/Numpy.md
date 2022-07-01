@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-27 22:25:37
+ * @LastEditTime: 2022-07-01 22:41:56
 -->
 
 ## Numpy
@@ -27,7 +27,7 @@ numpy.array(object, dtype = None, copy = True, order = None, subok = False, ndmi
 | ndmin  | 指定生成数组的最小维度                                  |
 
 
-- 单维度
+#### 单维度
 
 ```py
 import numpy as np
@@ -38,7 +38,8 @@ a = np.array([1, 2, 3, 4, 5, 6])
 print(a)
 ```
 
-- 多维度
+
+#### 多维度
 
 ```py
 import numpy as np
@@ -50,7 +51,8 @@ a = np.array([[1, 2, 3], [4, 5, 6]])
 print(a)
 ```
 
-- 最小维度
+
+#### 最小维度
 
 ```py
 import numpy as np
@@ -61,7 +63,8 @@ a = np.array([1, 2, 3, 4, 5], ndmin = 2)
 print (a)
 ```
 
-- dtype 参数
+
+#### dtype 参数
 
 ```py
 import numpy as np
