@@ -4,8 +4,8 @@
  * @Autor: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 19:45:02
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 00:43:07
 -->
 
 ## Django体温登记系统
@@ -76,7 +76,7 @@ from django.db import models
 
 class Reocrd(models.Model):
     num = models.CharField(verbose_name='学号', max_length=8)
-    name = models.CharField(verbose_name='姓名',max_length=5)
+    name = models.CharField(verbose_name='姓名', max_length=5)
     temperature = models.FloatField(verbose_name='体温')
     date = models.DateTimeField(verbose_name='日期')
 

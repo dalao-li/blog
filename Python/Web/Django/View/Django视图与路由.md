@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 19:48:50
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 00:48:24
 -->
 
  
@@ -15,8 +15,10 @@
 访问网站的本质即为访问对应的 html 文件,后在由浏览器等对其进行渲染,最终展示出页面
 
 
+### 视图
 
-### 静态读取
+
+#### 静态读取
 
 
 访问http://127.0.0.1:8000/app/index,读取index.html,显示内容
@@ -61,7 +63,7 @@ TEMPLATES = [
 
 - 编写视图函数
 
-编辑app/views.py 文件
+app/views.py 文件
 
 ```py
 from django.shortcuts import render
@@ -71,6 +73,7 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 ```
+
 
 - 绑定子路由
 
@@ -114,7 +117,7 @@ urlpatterns = [
 
 
 
-### 读取数据
+#### 读取数据
 
 
 访问http://127.0.0.1:8000/app/db,在网页上显示数据库中所有元素信息

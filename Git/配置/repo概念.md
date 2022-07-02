@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 20:03:45
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 01:10:53
 -->
 
 
@@ -84,6 +84,7 @@ repi sync [项目列表]
 
 
 参数
+
 | 参数 | 含义                            |
 | ---- | ------------------------------- |
 | `-j` | 开启多线程同步操作,加快执行速度 |

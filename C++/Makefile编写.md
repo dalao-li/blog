@@ -150,7 +150,7 @@ hellomake: $(OBJ)
 
 同时定义了宏,用于包含想要包含的库,还包含了一个规则用于清理source和obj文件夹,需使用make clean
 
-.PHONY规则可以让make不去改动任何名为clean的文件（如果有的话）
+.PHONY规则可以让make不去改动任何名为clean的文件(如果有的话)
 
 ```makefile
 IDIR = ../include

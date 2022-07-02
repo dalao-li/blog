@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-08-19 00:00:59
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 19:50:18
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 00:52:49
 -->
 
-## Docker部署Flask
+## 部署Flask
 
 
-### 单例部署
+### Docker单例部署
 
 
 - Dockerfile
@@ -38,7 +38,7 @@ CMD flask run --host=0.0.0.0 --port=5000
 
 - flask.conf
 
-```
+```sh
 [supervisord]
 nodaemon=true
 

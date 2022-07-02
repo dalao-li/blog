@@ -4,18 +4,18 @@
  * @Autor: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 19:48:37
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 00:46:56
 -->
 
-## 动态路由
+## Django动态路由
 
 
-### 关键字
+### 关键字实现
 
 
-- 单关键字
-  
+#### 单关键字
+
 views.py文件
 
 ```py
@@ -45,7 +45,8 @@ urlpatterns = [
 ![](https://cdn.hurra.ltd/img/20200903091232.png)
 
 
-- 多关键字
+
+#### 多关键字
 
 views.py文件
 
@@ -69,10 +70,12 @@ urlpatterns = [
 
 
 
-### 反射
+### 反射实现
 
 
-反射,通过输入的函数名调用函数
+反射, 通过输入的函数名调用函数
+
+urls.py文件
 
 ```py
 urlpatterns = [
@@ -95,7 +98,7 @@ def goodbye_world(request):
     return HttpResponse('GOODBYE WORLD')
 ```
 
-此时输入`http:127.0.0.1:8000/dis/hello_world`时,会自动调用 hello_world()函数
+访问`http:127.0.0.1:8000/dis/hello_world`,会自动调用 hello_world()
 
 ![](https://cdn.hurra.ltd/img/20200903103754.png)
 

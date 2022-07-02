@@ -4,16 +4,19 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 10:20:52
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 00:42:09
 -->
 
-## 完整代码
+## Django网页笔记本
+
+
+### 完整代码
 
 > https://github.com/Dalao-Li/WebNotepad-Django.git
 
 
-## 运行结果
+### 运行结果
 
 ![](https://cdn.hurra.ltd/img/20200809153325.png)
 
@@ -28,7 +31,7 @@
 ![](https://cdn.hurra.ltd/img/20200816225928.png)
 
 
-## 涉及技术
+### 涉及技术
 
 > - CSS : BootStrap4 , Font Awesome,
 > - JS : JQuery , SweetAlery2
@@ -36,10 +39,10 @@
 > - 数据库 : Sqlite3
 
 
-## 概要设计
+### 概要设计
 
 
-### 前端
+#### 前端
 
 显示设计
 
@@ -70,7 +73,7 @@
 显示所有已经删除的记事
 
 
-### 数据库
+#### 数据库
 
 sqlite3
 
@@ -88,10 +91,11 @@ note
 | status | 该记事状态     | U(underway): 进行中<br>F(finish) : 已完成<br>D(deleted) : 已删除 <br> O(Overtime):已超时<br>P(Plan):未开始 |
 
 
-## 具体实现
+### 具体实现
 
 
-### 初始化项目
+#### 初始化项目
+
 
 建立项目
 
@@ -119,7 +123,7 @@ python manage.py startapp app
 
 
 
-### 前端
+#### 前端
 
 app/templates 目录下新建 main.html 文件
 
@@ -538,9 +542,11 @@ function modifyNote() {
 }
 ```
 
-## 后端
 
-### 数据库
+### 后端
+
+
+#### 数据库
 
 编辑 app/models.py 文件
 
@@ -577,7 +583,7 @@ python manage.py migrate
 ![](https://cdn.hurra.ltd/img/20200809154710.png)
 
 
-### 视图函数
+#### 视图函数
 
 编辑 app/views.py
 
@@ -627,10 +633,10 @@ def change_note_status(request):
     if Note.objects.filter(id=n_id, status=status).exists():
         return HttpResponse(json.dumps({'result': 1}))
     return HttpResponse(json.dumps({'result': -1}))
-
 ```
 
-### 绑定路由
+
+#### 绑定路由
 
 在 app 目录下新建 urls.py文件
 
@@ -664,6 +670,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('app/', include('app.urls'))
 ]
-
 ```
-

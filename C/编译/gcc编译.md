@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-05-21 23:09:51
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-21 23:49:21
+ * @LastEditTime: 2022-07-03 01:21:29
 -->
 
 ## GCC
@@ -49,3 +49,7 @@ Hello World
 #### -static
 
 禁用动态库,避免依赖问题,但编译出程序较大
+
+```c
+gcc -static main.c -o main
+```

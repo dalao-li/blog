@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-12-30 22:01:01
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 19:50:23
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 00:55:23
 -->
 
 [Python-web Flask框架项目打包成exe文件](https://www.cxyzjd.com/article/qq_42370335/114276385)  
@@ -13,7 +13,7 @@
 [Flask项目能打包为单个exe文件运行？掌握原理后居然如此简单！](https://bbs.huaweicloud.com/blogs/210229)
 
 
-## 方法一
+### 方法一
 
 
 ```sh
@@ -24,7 +24,7 @@ dist 目录下会生成可执行文件
 
 
 
-## 方法二
+### 方法二
 
 
 - 安装
@@ -43,11 +43,13 @@ pyinstaller -F app.py
 
 将static 与templates 目录复制到dist目录下
 
+
 - 修改.spec
 
 ```sh
 datas=[('./static','static'),('./templates','templates')],
 ```
+
 
 - 打包
 

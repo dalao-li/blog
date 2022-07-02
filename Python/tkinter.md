@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-23 23:03:16
+ * @LastEditTime: 2022-07-03 01:05:30
 -->
 
 ## tkinter
@@ -31,9 +31,11 @@ class Application(Frame):
         self.downButton.place(x = 100, y = 80, width = 100, height = 50)
 
 
-app = Application()
 
-app.master.title('')
+if __name__ == '__main__':
+    app = Application()
 
-app.mainloop()
+    app.master.title('')
+
+    app.mainloop()
 ```

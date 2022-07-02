@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-09-24 20:37:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 19:57:58
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 00:58:00
 -->
 
 
@@ -29,7 +29,12 @@ flask run --host=0.0.0.0 --port=5000
 source venv/bin/activate
 
 python -m flask run --host=0.0.0.0 --port=5000
+```
 
+
+#### 终止进程
+
+```sh
 ps -aux | grep flask | grep -v grep | awk {'print $2'} | xargs kill -9 && python -m flask run --host=0.0.0.0 --port=500
 ```
 

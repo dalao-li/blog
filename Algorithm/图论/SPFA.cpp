@@ -1,11 +1,11 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Author: dalao
  * @Email: dalao_li@163.com
  * @Date: 2022-04-13 22:33:00
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-14 23:55:17
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 01:42:42
  */
 
 #include <iostream>
@@ -18,25 +18,29 @@ const int MAXV = 10000;
 
 using namespace std;
 
-typedef struct Edge {
+typedef struct Edge
+{
     char start_node;
     char end_node;
     int weight;
     Edge() {}
-    Edge(char s, char e , int w) : start_node(s) , end_node(e) , weight(w) {}
+    Edge(char s, char e, int w) : start_node(s), end_node(e), weight(w) {}
 } Edge;
 
 vector<Edge> edge;
 
-char node[5] = {'A' , 'B' , 'C' , 'D' , 'E'};
+char node[5] = {'A', 'B', 'C', 'D', 'E'};
 
 int path[SIZE];
 
 int in[SIZE];
 
-int getIndex(char n) {
-    for(int i = 0; i < 5; i++) {
-        if(node[i] == n) {
+int getIndex(char n)
+{
+    for (int i = 0; i < 5; i++)
+    {
+        if (node[i] == n)
+        {
             return i;
         }
     }
@@ -44,13 +48,14 @@ int getIndex(char n) {
 }
 
 // 求s到其他点间的最短路
-void SPFA(char s) {
+void SPFA(char s)
+{
     char start_node;
     int start;
     char end_node;
     int end;
     queue<char> q;
-    
+
     memset(path, MAXV, sizeof(path));
     memset(in, 0, sizeof(in));
     int index = getIndex(s);
@@ -58,25 +63,30 @@ void SPFA(char s) {
     path[index] = 0;
     q.push(s);
     in[index] = 1;
-    
-    while (!q.empty()) {
+
+    while (!q.empty())
+    {
         start_node = q.front();
         start = getIndex(start_node);
         q.pop();
         in[start] = 0;
         // 遍历所有与a所连通的节点, 进行松弛操作
-        for (int i = 0; i < edge.size(); i++) {
-            if(start_node != edge[i].start_node) {
+        for (int i = 0; i < edge.size(); i++)
+        {
+            if (start_node != edge[i].start_node)
+            {
                 continue;
             }
             // 某个边的起点是a,获取该边的终点e
             end_node = edge[i].end_node;
             end = getIndex(end_node);
             // 若从点S经过点X到点end的距离比S直接到end的距离短, 则可进行松弛操作
-            if (path[start] + edge[i].weight < path[end]) {
+            if (path[start] + edge[i].weight < path[end])
+            {
                 // 从点S到点end的距离更新为点S到X的距离与X到end的距离之和
                 path[end] = edge[i].weight + path[start];
-                if (!in[end]) {
+                if (!in[end])
+                {
                     q.push(end_node);
                     in[end] = 1;
                 }
@@ -85,17 +95,19 @@ void SPFA(char s) {
     }
 }
 
+int main()
+{
+    Edge e[6] = {Edge('A', 'B', 13), Edge('A', 'E', 70), Edge('B', 'D', 4), Edge('B', 'C', 28), Edge('C', 'D', 23), Edge('C', 'E', 15)};
 
-int main() {
-    Edge e[6] = {Edge('A','B',13) , Edge('A','E',70) , Edge('B','D',4) , Edge('B','C',28) , Edge('C','D',23) , Edge('C','E',15)};
-
-    for(int i = 0; i < 6; i++) {
+    for (int i = 0; i < 6; i++)
+    {
         edge.push_back(e[i]);
     }
     char s = 'A';
 
     SPFA(s);
-    for(int i = 0 ; i < 5;i++){
+    for (int i = 0; i < 5; i++)
+    {
         std::cout << "p[" << node[i] << "] = " << path[i] << std::endl;
     }
     return 0;

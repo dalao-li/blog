@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 22:11:30
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 00:51:25
 -->
 
 ## Django入门
@@ -41,15 +41,15 @@ python manage.py startapp app
 
 应用目录结构:
 
-- admin:app 应用后台管理配置文件
+- admin: app 应用后台管理配置文件
 
-- apps:app 应用的配置文件
+- apps: app 应用的配置文件
 
-- models:数据模块,用于设计数据库等
+- models: 数据模块,用于设计数据库等
 
-- tests:编写测试脚本
+- tests: 编写测试脚本
 
-- views:视图层,直接和浏览器进行交互
+- views: 视图层,直接和浏览器进行交互
 
 
 ### 应用注册

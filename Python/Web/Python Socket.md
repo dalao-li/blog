@@ -1,12 +1,27 @@
-## TCP
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2021-12-01 20:37:22
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 01:01:50
+-->
 
-- 服务端 server
+## Socket
+
+
+### TCP
+
+
+#### 服务端 server
 
 ```py
 import socket
 
 # 服务端地址和端口
 server_address = ('127.0.0.1', 5005)
+
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # 绑定服务端地址和端口
@@ -26,11 +41,14 @@ while True:
     send = input('输入: ')
     conn.sendall(send.encode())
 
-conn.close()
-s.close()
+
+if __name__ == '__main__':
+    conn.close()
+    s.close()
 ```
 
-- 客户端 client
+
+#### 客户端 client
 
 ```py
 import socket
@@ -55,13 +73,16 @@ while True:
     data = s.recv(1024)
     print('[回复]', data.decode())
 
-s.close()
+
+if __name__ == '__main__':
+    s.close()
 ```
 
 
-## UDP
+### UDP
 
-- 服务端 server
+
+#### 服务端 server
 
 ```py
 import socket
@@ -80,10 +101,13 @@ while True:
     send = input('Input: ')
     # UDP 是无状态连接,所以每次连接都需要给出目的地址
     s.sendto(send.encode(), client_address)
-s.close()
+
+if __name__ == '__main__':
+    s.close()
 ```
 
-- 客户端 client
+
+#### 客户端 client
 
 ```py
 import socket
@@ -99,7 +123,10 @@ while True:
     # 返回数据和接入连接的(服务端)地址
     data, server_address = s.recvfrom(1024)
     print('[回复]', data.decode())
-s.close()
+
+
+if __name__ == '__main__':
+    s.close()
 ```
 
 ![](https://cdn.hurra.ltd/img/20210112224715.png)
@@ -107,7 +134,9 @@ s.close()
 ![](https://cdn.hurra.ltd/img/20210112224731.png)
 
 
-## 多线程 server 端
+
+### 多线程 server 端
+
 
 ```py
 import socket,threading
