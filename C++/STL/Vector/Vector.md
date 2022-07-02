@@ -35,7 +35,7 @@ std::vector<int> v(10 , 0);
 
 #### 预处理
 
-若知道需保存数据量size，可用reserve提前申请，避免多次动态申请内存消耗时间
+若知道需保存数据量size,可用reserve提前申请,避免多次动态申请内存消耗时间
 
 ```c
 std::vector<T> v;

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-01 20:37:22
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-27 22:26:39
+ * @LastEditTime: 2022-07-03 00:38:36
 -->
 
 
@@ -40,30 +40,38 @@ s[:5]
 ### 查找
 
 
-- 子串查找
+#### 子串查找
 
 ```py
-find(str, start, end)
+find(s, start, end)
 ```
 
-字符串里查找str，若存在返回首个索引，否则返回-1
-
-
-
-- 次数查找
+在字符串[start,end]范围里查找子串s,若存在返回首个索引,否则返回-1
 
 ```py
-conut(str, start, end)
+s = "abcdefg"
+
+x = s.find("cd", 0, -1)
+
+# 2
+print(x)
 ```
 
-返回字符串[start,end]范围内str出现的次数
+
+#### 次数查找
+
+```py
+conut(s, start, end)
+```
+
+返回字符串[start,end]范围内s出现的次数
 
 
 
 ### 过滤
 
 
-- 子符过滤
+#### 子符过滤
 
 ```py
 strip(str)

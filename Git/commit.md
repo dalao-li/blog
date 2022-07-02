@@ -56,7 +56,7 @@ git add .
 - 撤回暂存区文件
 
 ```sh
-# 默认所有文件，也可指定文件
+# 默认所有文件,也可指定文件
 git reset HEAD
 ```
 
@@ -93,7 +93,7 @@ git commit -m "注释"`
 git commit --amend
 ```
 
-若修改已经`push`到远程分支，则push时需加`--force-with-lease`参数
+若修改已经`push`到远程分支,则push时需加`--force-with-lease`参数
 
 ```sh
 git push --force-with-lease
@@ -113,7 +113,7 @@ git push 远程主机名 本地分支名:远程分支名
 - 上传本地分支到远程分支
 
 ```sh
-# 建立本地到上游(远端)仓的链接，这样代码才能提交
+# 建立本地到上游(远端)仓的链接,这样代码才能提交
 git branch --set-upstream-to=origin/分支
 
 git push origin 分支

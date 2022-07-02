@@ -23,7 +23,7 @@ PEP8 有建议 Python 模块中 import 的导入顺序
 
 ### isort 的作用
 
-可以自动将 Python 模块中的 import 进行排序，并自动按类型划分以满足上面说的 PEP8 规范
+可以自动将 Python 模块中的 import 进行排序,并自动按类型划分以满足上面说的 PEP8 规范
 
 属于同一个部分的 import 语句按字母顺序排列
 
@@ -40,7 +40,7 @@ pip install isort
 isort .
 ```
 
-- 查看修改建议，但不会修改文件
+- 查看修改建议,但不会修改文件
 
 ```py
 isort mypythonfile.py --diff

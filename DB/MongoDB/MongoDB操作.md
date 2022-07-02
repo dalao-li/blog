@@ -29,7 +29,7 @@ docker exec -it mongo mongo admin
 ### 1.2 创建用户
 
 
-创建一个名为 admin，密码为 123456 的用户
+创建一个名为 admin,密码为 123456 的用户
 
 ```sh
 db.createUser({ user:'admin',pwd:'123456',roles:[{ role:'userAdminAnyDatabase',db:'admin'},"readWriteAnyDatabase"]})
@@ -66,7 +66,7 @@ use 数据库
 
 - 创建 test 数据库
 
-这里暂不会显示，因为其中还未插入数据
+这里暂不会显示,因为其中还未插入数据
 
 ![](https://cdn.hurra.ltd/img/20220112184225.png)
 
@@ -274,7 +274,7 @@ collect = client['test']['stu']
 collect.insert_one({"name":"new_name","age":19})
 
 collect.insert_many([
-    {"name":"new_name2","age"，20},
+    {"name":"new_name2","age",20},
     {"name":"new_name3","age":19},
     {"name":"new_name4","age":19}
 ])

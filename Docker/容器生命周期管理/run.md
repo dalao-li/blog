@@ -80,7 +80,7 @@ docker run -itd --name=box -e STR_VEN=abcdefg busybox
 ### 1.4 --mount
 
 
-`--mount` 挂载本地目录(必须是绝对路径)到容器中，若目录不存在会报错
+`--mount` 挂载本地目录(必须是绝对路径)到容器中,若目录不存在会报错
 
 ```sh
 --mount type=bind,source=[本地路径],target=[容器路径](权限)
@@ -92,7 +92,7 @@ docker run -itd --name=box -e STR_VEN=abcdefg busybox
 docker run -itd --mount type=bind,source=/src/app,target=/root/app nginx:alpine
 ```
 
-挂载主机目录的默认权限是`读写`，可增加 `readonly` 指定为只读
+挂载主机目录的默认权限是`读写`,可增加 `readonly` 指定为只读
 
 ```sh
 --mount type=bind,source=/src/app,target=/root/app,readonly
@@ -103,7 +103,7 @@ docker run -itd --mount type=bind,source=/src/app,target=/root/app nginx:alpine
 ### 1.5 -v
 
 
-`-v` 挂载本地目录到容器中，若本地目录不存在，会自动创建文件夹
+`-v` 挂载本地目录到容器中,若本地目录不存在,会自动创建文件夹
 
 
 - 配置时区
@@ -119,7 +119,7 @@ docker run -itd --mount type=bind,source=/src/app,target=/root/app nginx:alpine
 
 `--net="bridge"` 指定容器网络连接类型
 
-支持 bridge，host，none，container四种类型
+支持 bridge,host,none,container四种类型
 
 
 
@@ -140,7 +140,7 @@ docker run -itd \
 ```sh
 docker run -itd \
     --name ubuntu_test
-    # 链接 MySQL 容器，db为别名
+    # 链接 MySQL 容器,db为别名
     --link mysql_server:db \
     ubuntu:18.04 \
 
@@ -159,11 +159,11 @@ mysql -h db -u root -p123
 docke run -itd --name=box busybox mkdir test
 ```
 
-此处本意为run时创建test目录，实际发现执行命令后即容器停止运行
+此处本意为run时创建test目录,实际发现执行命令后即容器停止运行
 
-原因为基于Docker原理，当run时执行的命令结束时，容器也会停止
+原因为基于Docker原理,当run时执行的命令结束时,容器也会停止
 
-运行下面命令是run执行sh解释权，容器会在后台一直运行
+运行下面命令是run执行sh解释权,容器会在后台一直运行
 
 ```
 docker run -itd --name=box busybox sh

@@ -41,7 +41,7 @@ document.getElementById("id").innerHTML
 ```js
 const addBtn = document.getElementById("addBtn");
 
-addBtn.addEventListener("click"， ()=>{
+addBtn.addEventListener("click", ()=>{
     ...
 })
 ```
@@ -79,7 +79,7 @@ if (confirm(msg)){
 - 输入提示框
 
 ```js
-const value = prompt("Input Text"，"Default Text")
+const value = prompt("Input Text","Default Text")
 
 if (value != null && value != ""){
     alert(value)

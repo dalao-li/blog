@@ -32,7 +32,7 @@ int main(void) {
 
 ![](https://cdn.hurra.ltd/img/20210222232125.png)
 
-- 编译，设置断点
+- 编译,设置断点
 
 - 开始调试
 

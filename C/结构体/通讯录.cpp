@@ -22,7 +22,7 @@ struct Info
     string address;
     string phone;
     string email;
-    /*score[0]到score[3]分别指代数学、英语、政治、专业课的成绩，sum_score表示总成绩*/
+    /*score[0]到score[3]分别指代数学、英语、政治、专业课的成绩,sum_score表示总成绩*/
     float score[4]; 
     float sum_score = 0;
     struct Info *next;
@@ -142,7 +142,7 @@ void ouput(struct Info mes[])
             cin >> number;
             if (number > N || number < 1)
             {
-                cout << "查无此人，错误！！！:" << endl;
+                cout << "查无此人,错误！！！:" << endl;
                 break;
             }
             cout << "第" << number << "位成员的学号为:    "
@@ -289,7 +289,7 @@ void query(struct Info mes[])
 {
     struct Info *p = mes;
     string num_or_name;
-    int colon , second_colon , third_colon , forth_colon , sign = 1 , i , k，
+    int colon , second_colon , third_colon , forth_colon , sign = 1 , i , k,
                                                        max_score[4] , max_sum;
     while (sign)
     {
@@ -462,7 +462,7 @@ void modify()
     int number , j , sign = 1 , k = 3;
     cout << "                                              " << endl;
     while (sign)
-    { //设置修改密码，三次错误直接结束程序
+    { //设置修改密码,三次错误直接结束程序
         cout << "请输入修改密码"
              << " ";
         cin >> key1;
@@ -470,7 +470,7 @@ void modify()
             break;
         else
         {
-            cout << "密码错误，你还可以输入" << k - 1 << "次";
+            cout << "密码错误,你还可以输入" << k - 1 << "次";
             k--;
             if (k == 0)
                 exit(0);

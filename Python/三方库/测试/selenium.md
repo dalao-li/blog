@@ -71,10 +71,10 @@ find_element_by_css_selector()
 ```py
 browser = webdriver.Chrome()
 
-browser.set_window_size(480， 800)
+browser.set_window_size(480, 800)
 ```
 
-- 浏览器后退，前进
+- 浏览器后退,前进
 
 ```py
 # 后退

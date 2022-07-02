@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-09-24 20:37:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-02 00:26:54
+ * @LastEditTime: 2022-07-02 22:46:16
 -->
 
 ## 文件
@@ -46,7 +46,10 @@ def touch_tmp_file(request):
 
 ### 修改
 
-- `'w'`写入，`'a'`追加
+
+#### 写入追加
+
+- `'w'`写入,`'a'`追加
 
 ```py
 with open(path, 'w', encoding = 'utf-8') as f:
@@ -57,7 +60,7 @@ f.close()
 ![](https://cdn.hurra.ltd/img/20211225132548.png)
 
 
-- 重命名
+#### 重命名
   
 ```py
 os.rename(old_path, new_path)
@@ -116,6 +119,7 @@ def del_file(path: str):
 
 ### 显示
 
+
 #### 显示文件
 
 
@@ -150,9 +154,9 @@ def display_all_folders(folder_path):
 
 #### 路径错误
 
-Windows路径中 `\` 会被视作转义字符，导致路径错误
+Windows路径中 `\` 会被视作转义字符,导致路径错误
 
-若文件路径为`C:\Users\XXX\Desktop\x.txt`，需改为
+若文件路径为`C:\Users\XXX\Desktop\x.txt`,需改为
 
 
 ```sh

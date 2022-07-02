@@ -19,7 +19,7 @@ class User(models.Model):
     pwd = models.CharField(max_length = 300)
 ```
 
-此时对数据库进行操作需通过，
+此时对数据库进行操作需通过,
 
 ```py
 User.objects.create(name = name, pwd = pwd)
@@ -29,7 +29,7 @@ User.objects.filter(name = name)
 ...
 ```
 
-若在操作过程中执行其他操作显得异常麻烦，因此可以自定义管理器
+若在操作过程中执行其他操作显得异常麻烦,因此可以自定义管理器
 
 ```py
 class UserManager(models.Manager):

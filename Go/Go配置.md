@@ -37,7 +37,7 @@ sudo pacman -S go
 go env -w GO111MODULE=on
 ```
 
-配置 GOPROXY 环境变量，七牛 CDN
+配置 GOPROXY 环境变量,七牛 CDN
 
 ```sh
 go env -w  GOPROXY=https://goproxy.cn,direct

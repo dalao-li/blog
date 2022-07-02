@@ -45,7 +45,7 @@ COPY [源路径] [目标路径]
 ADD [源路径] [目标路径]
 ```
 
-若源路径为tar压缩文件且压缩格式为 gzip，bzip2，xz，ADD 指令将会自动解压缩文件到目标路径
+若源路径为tar压缩文件且压缩格式为 gzip,bzip2,xz,ADD 指令将会自动解压缩文件到目标路径
 
 
 
@@ -71,6 +71,6 @@ CMD ["可执行文件" , "参数1" , "参数2", ...
 CMD ["python3","manage.py","runserver 0.0.0.0：8000"]
 ```
 
-`CMD` 在`docker run`时运行，Dockerfile中只能在末尾有一条CMD指令
+`CMD` 在`docker run`时运行,Dockerfile中只能在末尾有一条CMD指令
 
-`RUN` 在 `docker build`时运行，可出现若干此
+`RUN` 在 `docker build`时运行,可出现若干此

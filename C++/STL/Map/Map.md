@@ -66,7 +66,7 @@ for(map<T , V>::iterator it = m.begin(); it != m.end(); it++) {
 
 ### 1.5 查询
 
-查找 key 是否存在，若为 end()即不存在
+查找 key 是否存在,若为 end()即不存在
 
 ```c
 template <class T , class V>

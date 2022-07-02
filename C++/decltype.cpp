@@ -22,7 +22,7 @@ int main(void){
     const int r = n;
     Student stu;
 
-    // n 为 int 类型，a 被推导为 int 类型
+    // n 为 int 类型,a 被推导为 int 类型
     decltype(n) a = n;
     // r 为 const int 类型, b 被推导为 const int 类型
     decltype(r) b = n;

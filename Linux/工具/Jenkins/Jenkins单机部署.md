@@ -48,7 +48,7 @@ java -jar -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PRO
 #### Windows安装
 
 
-- 用管理员身份启动cmd，进入jenkins安装根目录
+- 用管理员身份启动cmd,进入jenkins安装根目录
 
 ```sh
 C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins
@@ -109,7 +109,7 @@ docker run -itd -u root \
 
 ![](https://cdn.hurra.ltd/img/20210309105442.png)
 
-选择立即构建，然后可以看到工作空间里的文件夹
+选择立即构建,然后可以看到工作空间里的文件夹
 
 ![](https://cdn.hurra.ltd/img/20210309105553.png)
 
@@ -117,7 +117,7 @@ docker run -itd -u root \
 
 ![](https://cdn.hurra.ltd/img/20210309105711.png)
 
-本地修改代码，push
+本地修改代码,push
 
 ![](https://cdn.hurra.ltd/img/20210309111504.png)
 

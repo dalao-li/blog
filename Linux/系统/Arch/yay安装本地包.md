@@ -20,7 +20,7 @@ yay -G 包名
 
 - 修改PKGBUILD
 
-修改PKGBUILD中的source为本地地址，此处需为http地址(可用`python -m http.server`)
+修改PKGBUILD中的source为本地地址,此处需为http地址(可用`python -m http.server`)
 
 原内容
 

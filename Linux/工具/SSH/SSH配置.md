@@ -20,7 +20,7 @@
 ssh 用户名@IP地址 (-p 端口号)
 ```
 
-连接192.168.1.1的dalao用户，端口号默认为20
+连接192.168.1.1的dalao用户,端口号默认为20
 
 ```sh 
 ssh dalao@192.168.1.1
@@ -131,7 +131,7 @@ echo ${user} ${ip} ${time} ${server}
 pip3 install webssh
 ```
 
-- 直接运行wssh，使用默认8888端口
+- 直接运行wssh,使用默认8888端口
 
 ```sh
 wssh

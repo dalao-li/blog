@@ -74,7 +74,7 @@ CMD supervisord -c /etc/supervisord.conf
 
 ```ini
 [uwsgi]
-# 启动主进程，来管理其他进程
+# 启动主进程,来管理其他进程
 master = true
 
 # 地址和端口号
@@ -83,7 +83,7 @@ http = :5000
 # app.py路径
 wsgi-file =  app.py
 
-# uwsgi指定的是application，而flask中是app
+# uwsgi指定的是application,而flask中是app
 callable = app
 
 # 开启的进程数量

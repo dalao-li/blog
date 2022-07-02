@@ -19,7 +19,7 @@
 views.py文件
 
 ```py
-def dis(request，value):
+def dis(request,value):
     return HttpResponse(value)
 ```
 
@@ -31,13 +31,13 @@ urlpatterns = [
 ]
 ```
 
-| 参数 | 含义                                       |
-| ---- | ------------------------------------------ |
-| `\w` | 匹配字母、数字、下划线，等价于[A-Za-z0-9_] |
-| `+`  | 匹配前面的子表达式一次或多次               |
-| `$`  | 表示结尾                                   |
+| 参数 | 含义                                      |
+| ---- | ----------------------------------------- |
+| `\w` | 匹配字母、数字、下划线,等价于[A-Za-z0-9_] |
+| `+`  | 匹配前面的子表达式一次或多次              |
+| `$`  | 表示结尾                                  |
 
-此时可匹配`127.0.0.1:8000/dis/<字符>`这类 url，并且<字符>部分的值将作为 dis 函数的第二个参数
+此时可匹配`127.0.0.1:8000/dis/<字符>`这类 url,并且<字符>部分的值将作为 dis 函数的第二个参数
 
 
 ![](https://cdn.hurra.ltd/img/20200903085713.png)
@@ -65,14 +65,14 @@ urlpatterns = [
 ]
 ```
 
-前面的 w+传给 v1，后面的 w+传给 v2此时可以匹配`127.0.0.1:8000/dis/<字符1>/<字符2>`这类 url，并且字符 1 将传给 dis 函数的 v1 参数;字符 2 将传给 dis 函数的 v2 参数
+前面的 w+传给 v1,后面的 w+传给 v2此时可以匹配`127.0.0.1:8000/dis/<字符1>/<字符2>`这类 url,并且字符 1 将传给 dis 函数的 v1 参数;字符 2 将传给 dis 函数的 v2 参数
 
 
 
 ### 反射
 
 
-反射，通过输入的函数名调用函数
+反射,通过输入的函数名调用函数
 
 ```py
 urlpatterns = [
@@ -95,7 +95,7 @@ def goodbye_world(request):
     return HttpResponse('GOODBYE WORLD')
 ```
 
-此时输入`http:127.0.0.1:8000/dis/hello_world`时，会自动调用 hello_world()函数
+此时输入`http:127.0.0.1:8000/dis/hello_world`时,会自动调用 hello_world()函数
 
 ![](https://cdn.hurra.ltd/img/20200903103754.png)
 
@@ -109,18 +109,18 @@ def goodbye_world(request):
 ```html
 <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
 ```
-它对于代码修改非常不利，前面给urls定义了一个name别名，可以用它来解决这个问题，具体代码如下:
+它对于代码修改非常不利,前面给urls定义了一个name别名,可以用它来解决这个问题,具体代码如下:
 
 ```html
 <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
 ```
-Django会在polls.urls文件中查找name='detail'的路由，具体的就是下面这行:
+Django会在polls.urls文件中查找name='detail'的路由,具体的就是下面这行:
 
 ```py
 path('<int:question_id>/', views.detail, name='detail'),
 ```
 
-如果想将polls的detail视图的URL更换为polls/specifics/12/，那么仅仅只需要在polls/urls.py文件中，将对应的正则表达式改成下面这样的就行，所有模板中对它的引用都会自动修改成新的链接
+如果想将polls的detail视图的URL更换为polls/specifics/12/,那么仅仅只需要在polls/urls.py文件中,将对应的正则表达式改成下面这样的就行,所有模板中对它的引用都会自动修改成新的链接
 
 ```py
 # 添加新的单词'specifics'

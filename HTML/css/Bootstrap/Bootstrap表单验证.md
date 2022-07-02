@@ -21,7 +21,7 @@
 
 ### head 部分
 
-注意依赖文件的路径需根据自己实际下载文件路径进行修改，网上教程中的代码无法直接使用往往就是因为依赖库没处理好
+注意依赖文件的路径需根据自己实际下载文件路径进行修改,网上教程中的代码无法直接使用往往就是因为依赖库没处理好
 
 ```html
 <head>
@@ -165,12 +165,12 @@
         $(document).ready(function () {
 
             //产生随机数
-            function randomNumber(min， max) {
+            function randomNumber(min, max) {
                 return Math.floor(Math.random() * (max - min + 1) + min);
             };
 
             //验证码
-            $('#captchaOperation').html([randomNumber(1， 50), '+', randomNumber(1， 50), '='].join(' '));
+            $('#captchaOperation').html([randomNumber(1, 50), '+', randomNumber(1, 50), '='].join(' '));
 
             $('#defaultForm').bootstrapValidator({
                 message: 'This value is not valid',
@@ -187,8 +187,8 @@
                                 message: '用户名不能为空'
                             },
                             stringLength: {
-                                min: 5，
-                                max: 15，
+                                min: 5,
+                                max: 15,
                                 message: '用户名的长度应在5-15位字符'
                             },
                             regexp: {
@@ -245,7 +245,7 @@
                         validators: {
                             callback: {
                                 message: '验证码错误',
-                                callback: function (value， validator) {
+                                callback: function (value, validator) {
                                     var items = $('#captchaOperation').html().split(' '),
                                         sum = parseInt(items[0]) + parseInt(items[2]);
                                     return value == sum;

@@ -10,7 +10,7 @@
 
 ## JSON
 
-JSON(JavaScript Object Notation) 是JavaScript原生格式，有对象和数组两种结构
+JSON(JavaScript Object Notation) 是JavaScript原生格式,有对象和数组两种结构
 
 
 ### JSON字符串

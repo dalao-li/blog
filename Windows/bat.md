@@ -75,7 +75,7 @@ goto 和 :
 REM 建立index标号
 :index
 
-REM 跳转到index标号处，注意标号需以字母开头
+REM 跳转到index标号处,注意标号需以字母开头
 goto index
 ```
 

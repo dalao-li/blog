@@ -24,7 +24,7 @@ int main() {
 
     printf("p指针的引用个数为: %d\np2指针的引用个数为: %u\n" , p.use_count(), p2.use_count());
 
-    // p指针指向空，则引用个数会自动归零
+    // p指针指向空,则引用个数会自动归零
     p = NULL;
     printf("p指针的引用个数为: %u\n" , p.use_count());
 }

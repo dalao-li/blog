@@ -87,7 +87,7 @@ void creatHashTable(HashTable hashUnit[], NameList unit[]) {
         hashUnit[i].count = 0;
     }
 
-    // 构建哈希表，遍历每一个姓名单元,将它们插入到哈希表上去
+    // 构建哈希表,遍历每一个姓名单元,将它们插入到哈希表上去
     for(int i = 0; i < NAME_MAX_NUM; i++) {
         // startAddress代表该姓名单元最初储存地址,其值为姓名单元的关键码keyword % m
         int startAddress = unit[i].keyword % M;

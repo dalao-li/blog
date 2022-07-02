@@ -23,7 +23,7 @@ def get_image(path):
     return send_from_directory('templates', path)
 ```
 
-图片路径为/templates/a.jpg，访问127.0.0.1:5000/a.jpg即返回静态文件
+图片路径为/templates/a.jpg,访问127.0.0.1:5000/a.jpg即返回静态文件
 
 ![](https://cdn.hurra.ltd/img/20211113191621.png)
 

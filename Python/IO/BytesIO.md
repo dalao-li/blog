@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-14 16:29:38
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 10:17:39
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 00:08:12
 -->
 
 ## BytesIO
@@ -20,11 +20,11 @@ f = BytesIO()
 f.write('中文'.encode('utf-8'))
 
 # b'\xe4\xb8\xad\xe6\x96\x87'
-print(f.getvalue())
+f.getvalue()
 ```
 
 
-```
+```py
 f= <FileStorage: '涉农股专家公示名录.xlsx' ('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')>
 
 type f=  <class 'werkzeug.datastructures.FileStorage'>

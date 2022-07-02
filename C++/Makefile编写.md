@@ -43,7 +43,7 @@ void hello(){
 }
 ```
 
-编译两个c文件，并且生成可执行文件hellomake
+编译两个c文件,并且生成可执行文件hellomake
 
 `-I` 告诉gcc从当前目录寻找头文件hellomake.h
 
@@ -67,7 +67,7 @@ hellomake: hellomake.c hellofunc.c
 
 make命令不带参数会默认执行makefile文件中的第一条规则
 
-通过将命令依赖的文件列表放在`:`之后的第一行，若其中的任何文件发生更改，make就会执行hellomake规则
+通过将命令依赖的文件列表放在`:`之后的第一行,若其中的任何文件发生更改,make就会执行hellomake规则
 
 
 
@@ -78,10 +78,10 @@ make命令不带参数会默认执行makefile文件中的第一条规则
 # 定义使用哪个编译器
 CC=gcc
 
-# 编译标志，告诉make如何编译
+# 编译标志,告诉make如何编译
 CFLAG=-I.
 
-# 将目标文件hellomake.o和hellofunc.o放入依赖列表，告知make首先编译.c文件得到目标文件，然后链接得到可执行文件hellomake
+# 将目标文件hellomake.o和hellofunc.o放入依赖列表,告知make首先编译.c文件得到目标文件,然后链接得到可执行文件hellomake
 hellomake:hellomake.o hellofunc.o
     $(CC) -o hellomake hellomake.o hellofunc.o
 ```
@@ -93,7 +93,7 @@ hellomake:hellomake.o hellofunc.o
 ### Makefile 3
 
 
-上个版本的makefile还忽略对头文件的依赖，若修改了hellomake.h文件，然后重新执行make，并不会重编头文件，需告诉make所有.c文件依赖哪些.h文件
+上个版本的makefile还忽略对头文件的依赖,若修改了hellomake.h文件,然后重新执行make,并不会重编头文件,需告诉make所有.c文件依赖哪些.h文件
 
 ```makefile
 CC=gcc
@@ -108,7 +108,7 @@ hellomake:hellomake.o hellofunc.o
     $(CC) -o hellomake hellomake.o hellofunc.o
 ```
 
-为产生.o文件，make需要使用CC常量定义的编译器编译.c文件
+为产生.o文件,make需要使用CC常量定义的编译器编译.c文件
 
 | 参数    | 含义                                  |
 | ------- | ------------------------------------- |
@@ -123,9 +123,9 @@ hellomake:hellomake.o hellofunc.o
 ### Makefile 4
 
 
-最后使用特殊宏`$@ $^`分别表示`:`左边和右边，进行简化
+最后使用特殊宏`$@ $^`分别表示`:`左边和右边,进行简化
 
-下例中，所有的头文件都应该作为DEPS宏的一部分
+下例中,所有的头文件都应该作为DEPS宏的一部分
 
 ```makefile
 CC=gcc
@@ -146,9 +146,9 @@ hellomake: $(OBJ)
 ### Makefile 5
 
 
-若想把头文件，源文件和其他库文件分别放在不同文件夹，并隐藏中间文件(目标文件)，则需在makefile定义include文件夹，lib文件夹路径，并且把目标文件放到项目src文件夹的子文件夹obj里面
+若想把头文件,源文件和其他库文件分别放在不同文件夹,并隐藏中间文件(目标文件),则需在makefile定义include文件夹,lib文件夹路径,并且把目标文件放到项目src文件夹的子文件夹obj里面
 
-同时定义了宏，用于包含想要包含的库，还包含了一个规则用于清理source和obj文件夹，需使用make clean
+同时定义了宏,用于包含想要包含的库,还包含了一个规则用于清理source和obj文件夹,需使用make clean
 
 .PHONY规则可以让make不去改动任何名为clean的文件（如果有的话）
 

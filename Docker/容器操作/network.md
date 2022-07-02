@@ -25,7 +25,7 @@ docker network ls
 docker network create -d [类型] [网络名]
 ```
 
-创建一个 docker 网络，命名为my_bridge
+创建一个 docker 网络,命名为my_bridge
 
 ```sh
 docker network create -d bridge my_bridge
@@ -36,7 +36,7 @@ docker network create -d bridge my_bridge
 
 - 同网络互联
 
-新建 box_3，使用 my_bridge 网络
+新建 box_3,使用 my_bridge 网络
 
 ```sh
 docker run -itd --name box_3 --network my_bridge busybox
