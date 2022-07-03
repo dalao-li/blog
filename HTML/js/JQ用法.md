@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-01 01:39:36
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 22:04:21
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 19:57:09
 -->
 
 ## JS语法
@@ -20,7 +20,7 @@
 ```
 
 
-- 获取控件
+#### 获取控件
 
 jQuery 利用$("#id")获取的是一个[object Object]
 
@@ -31,14 +31,14 @@ $("#id").get(0)
 ```
 
 
-- 获取值
+#### 获取值
 
 ```js
 $("#id").val();
 ```
 
 
-- 事件
+#### 事件
 
 ```js
 $("#addBtn").click(functon(){
@@ -47,7 +47,7 @@ $("#addBtn").click(functon(){
 ```
 
 
-- 匿名函数
+#### 匿名函数
 
 ```js
 function(){}
@@ -63,7 +63,7 @@ $.get(URL,callback)
 $.post(URL,data,callback)
 ```
 
-- 封装 Ajax
+#### 封装 Ajax
 
 | 参数     | 含义       |
 | -------- | ---------- |
@@ -75,7 +75,7 @@ $.post(URL,data,callback)
 
 ```js
 // 发送ajax请求
-function sendAjax(type,url,param,callback) {
+function sendAjax(type, url, param, callback) {
     $.ajax({
         async: false,
         ache: false,
@@ -86,7 +86,7 @@ function sendAjax(type,url,param,callback) {
         // 服务端返回数据的格式
         dataType: "json",
         success: function (data) {
-            callback(data.result);
+            callback(data.result)
         },
         error: function () {
         // 失败处理
@@ -107,18 +107,16 @@ function sendAjax(type,url,param,callback) {
 
 ```js
 function get_form_value() {
-  var d = {};
-  // serializeArray() 方法
-  // 通过序列化表单值来创建对象(name 和 value)的数组
-  const t = $("form").serializeArray();
-
-  // .each() 对 jQuery 对象进行迭代,为每个匹配元素执行函数
-  $.each(t , function () {
-    d[this.name] = this.value;
-  })
-    
-  // 转换为JSON字符串
-  return JSON.stringify(d);
+    var d = {};
+    // serializeArray() 方法
+    // 通过序列化表单值来创建对象(name 和 value)的数组
+    const t = $("form").serializeArray();
+    // .each() 对 jQuery 对象进行迭代,为每个匹配元素执行函数
+    $.each(t , function () {
+        d[this.name] = this.value;
+    })
+    // 转换为JSON字符串
+    return JSON.stringify(d);
 }
 ```
 

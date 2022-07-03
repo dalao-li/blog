@@ -4,9 +4,11 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 22:17:26
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 20:01:27
 -->
+
+## Vue
 
 
 ### Vue 安装
@@ -42,10 +44,10 @@ this.axios.post("http://127.0.0.1:5000/login" , {
 ```
 
 
-## HTTP
+### HTTP
 
 
-### GET 请求
+#### GET 请求
 
 ```html
 <!DOCTYPE html>
@@ -96,7 +98,7 @@ data = [
 ![](https://cdn.hurra.ltd/img/20200725123717.png)
 
 
-### POST 请求
+#### POST 请求
 
 ```html
 <!DOCTYPE html>

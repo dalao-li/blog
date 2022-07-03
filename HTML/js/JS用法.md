@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-03-18 16:29:32
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 22:04:42
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 20:00:01
 -->
 
 ## JS用法
@@ -19,14 +19,14 @@
 <button type="button" id="addBtn"></button>
 ```
 
-- 获取控件
+#### 获取控件
 
 ```js
 document.getElementById("id")
 ```
 
 
-- 获取值
+#### 获取值
 
 ```js
 document.getElementById("id").value();
@@ -36,7 +36,7 @@ document.getElementById("id").innerHTML
 ```
 
 
-- 事件
+#### 事件
 
 ```js
 const addBtn = document.getElementById("addBtn");
@@ -46,7 +46,7 @@ addBtn.addEventListener("click", ()=>{
 })
 ```
 
-- 匿名函数
+#### 匿名函数
 
 ```js
 ()=>
@@ -55,33 +55,34 @@ addBtn.addEventListener("click", ()=>{
 
 ### 弹窗
 
-- 提示框回调
+
+#### 提示框回调
 
 ```js
 alert()
 ```
 
 
-- 确认提示框
- 
+#### 确认提示框
+
 ```js
 const msg = "内容？\n\n请确认！"
 
 // 确认按钮
 if (confirm(msg)){
     
-}else{
+} else {
 
 }
 ```
 
 
-- 输入提示框
+#### 输入提示框
 
 ```js
-const value = prompt("Input Text","Default Text")
+const value = prompt("Input Text", "Default Text")
 
-if (value != null && value != ""){
+if (value != null && value != "") {
     alert(value)
 }
 ```
@@ -89,14 +90,15 @@ if (value != null && value != ""){
 
 ### HTTP
 
-- GET
+
+#### GET
 
 ```js
 function get(url , callback) {
     const XMLHttpRequest = require("xhr2")
     const httpRequest = new XMLHttpRequest()
 
-    httpRequest.open("GET" , url , true)
+    httpRequest.open("GET", url, true)
     httpRequest.send()
     httpRequest.onreadystatechange = () => {
         if (httpRequest.readyState == 4 && httpRequest.status == 200) {
@@ -110,14 +112,14 @@ function get(url , callback) {
 
 ![](https://cdn.hurra.ltd/img/20211113203754.png)
 
-- POST
+#### POST
 
 ```js
 function post(url , data , callback){
     const XMLHttpRequest = require("xhr2")
     const httpRequest = new XMLHttpRequest()
 
-    httpRequest.open('POST' , url , true)
+    httpRequest.open('POST', url, true)
     httpRequest.setRequestHeader("Content-type","application/json")
     // 转为JSON字符串
     httpRequest.send(JSON.stringify(data))

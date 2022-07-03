@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-08 09:36:50
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-01 22:33:17
+ * @LastEditTime: 2022-07-03 20:06:02
 -->
 
 
@@ -21,6 +21,9 @@ Ansible是一个配置管理和应用部署工具,可以对服务器上($1-N$台
 Ansible本质是在多设备按情况(判断循环)指定每台设备要执行的命令
 
 
+
+### 使用
+
 #### 安装
 
 ```sh
@@ -32,7 +35,7 @@ yum install -y epel-release ansible
 
 
 
-### 容器控制
+#### 容器控制
 
 
 建立两个容器server1,server2,并用ansible对其进行控制
@@ -145,11 +148,11 @@ ansible all -m authorized_key -a "user=docker key='{{ lookup('file','.ssh/id_ras
 
 
 
-## Ansible 命令
+### Ansible 命令
 
 
 
-### 限定主机变更
+#### 限定主机变更
 
 
 - limit参数限定
@@ -181,21 +184,21 @@ ansible web "192.168.1.2" -m command -a "systemctl status sshd"
 ```
 
 
-### 查看所有主机
+#### 查看所有主机
 
 ```sh
 ansible all --list-hosts
 ```
 
 
-### Ping
+#### Ping
 
 ```sh
 ansible 主机名/all -m ping
 ```
 
 
-### copy模块
+#### copy模块
 
 ```sh
 # 把主控端/root/目录的init.sh拷贝到到被控节点/tem/目录下
@@ -203,7 +206,7 @@ ansible all -m copy -a 'src=/root/init.hs dest=/tem/'
 ```
 
 
-### file模块
+#### file模块
 
 ```sh
 # 更改被控节点上init.sh的权限为755,属主和属组为root
@@ -211,7 +214,7 @@ ansible all -m file -a "dest=/tem/init.sh mode=755 owner=root group=root"
 ```
 
 
-### cron模块
+#### cron模块
 
 ```sh
 # 在指定节点上定义一个计划任务,每隔3分钟到主控端更新一次时间
@@ -219,7 +222,7 @@ ansible all -m cron -a 'name="custom job" minute=*/3 hour=* day=* month=* weekda
 ```
 
 
-### group模块
+#### group模块
 
 ```sh
 # 在所有节点上创建一个组名为nolinux,gid为2014的组
@@ -227,7 +230,7 @@ ansible all -m group -a 'gid=2014 name=nolinux'
 ```
 
 
-### user模块
+#### user模块
 
 ```sh
 # 在指定节点上创建一个用户名为nolinux,组为nolinux的用户
@@ -235,7 +238,7 @@ ansible all -m user -a 'name=nolinux groups=nolinux state=present'
 ```
 
 
-### yum模块
+#### yum模块
 
 在指定节点上安装 lrzsz 服务
 
@@ -244,7 +247,7 @@ ansible all -m yum -a "state=present name=httpd"
 ```
 
 
-### service模块
+#### service模块
 
 ```sh
 # 启动指定节点上的 puppet 服务,并让其开机自启动
@@ -252,7 +255,7 @@ ansible all -m service -a 'name=puppet state=restarted enabled=yes'
 ```
 
 
-### script模块
+#### script模块
 
 ```sh
 # 在指定节点上执行控制节点上的a.sh脚本
@@ -260,7 +263,7 @@ ansible all -m script -a '/root/a.sh'
 ```
 
 
-### command模块
+#### command模块
 
 ```sh
 # 在指定节点上运行hostname命令
@@ -268,7 +271,7 @@ ansible all -m command -a 'hostname'
 ```
 
 
-### raw模块
+#### raw模块
 
 ```sh
 # 在all节点上运行hostname命令
@@ -276,7 +279,7 @@ ansible all -m raw-a 'hostname|tee'
 ```
 
 
-### get_url模块
+#### get_url模块
 
 ```sh
 # 将http://10.1.1.116/favicon.ico文件下载到指定节点的/root/目录下

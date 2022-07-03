@@ -4,21 +4,23 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-12-07 00:19:50
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 20:41:30
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-03 20:02:00
 -->
 
-## 1 安装Hexo
+## Hexo
+
+### 安装Hexo
 
 
-### 1.1 修改npm源
+#### 修改npm源
 
 ```sh
 sudo npm install gitbook-cli -g --registry=http://registry.npm.taobao.org 
 ```
 
 
-### 1.2 安装
+#### 安装
 
 ```sh
 # 新建目录
@@ -40,15 +42,17 @@ sudo npm install hexo-wordcount --save
 
 
 
-### 1.3 启动
+### 启动
 
-- 生成静态网站
+
+#### 生成静态网站
 
 ```sh
 hexo g
 ```
 
-- 启动服务器
+
+#### 启动服务器
 
 ```sh
 hexo s
@@ -63,7 +67,7 @@ hexo g && hexo s
 
 
 
-### 1.4 修改主题
+### 修改主题
 
 ```sh
 # 根目录下执行
@@ -75,7 +79,7 @@ sudo npm install --save hexo-renderer-pug
 
 
 
-### 1.5 建立文章
+### 建立文章
 
 ```sh
 hexo new [layout] <title>
@@ -96,9 +100,9 @@ hexo new page --path about/hello "Hello World"
 
 
 
-### 1.6 远程推送
+### 远程推送
 
-- _config.yml修改
+#### _config.yml修改
   
 ```xml
 deploy:
@@ -107,7 +111,8 @@ deploy:
   branch: main
 ```
 
-- 推送插件
+
+#### 推送插件
 
 ```sh
 sudo npm install hexo-deployer-git --save
@@ -121,10 +126,10 @@ hexo g && hexo d
 
 
 
-## 2 问题
+### 问题
 
 
-### 2.1 Math渲染
+#### Math渲染
 
 - 更换Hexo的markdown渲染引擎
 
@@ -170,7 +175,7 @@ mathjax: true
 
 
 
-### 2.2 综合问题
+#### 综合问题
 
 - hexo not found 
 

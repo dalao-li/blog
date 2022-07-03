@@ -107,7 +107,7 @@ def goodbye_world(request):
 ###  删除硬编码URL
 
 
-硬编码即href里的“/polls/”部分
+硬编码即href里的"/polls/"部分
 
 ```html
 <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
