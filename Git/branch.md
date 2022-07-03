@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-17 18:20:22
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-26 21:28:11
+ * @LastEditTime: 2022-07-03 12:27:59
 -->
 
 ## 1 branch
@@ -42,13 +42,13 @@ git branch 分支名
 ### 1.3 切换
 
 
-- 切换到分支
+#### 切换到分支
 
 ```sh
 git checkout 分支名
 ```
 
-- 创建新分支并切换到它
+#### 创建新分支并切换
 
 ```sh
 git checkout -b 分支名
@@ -68,7 +68,7 @@ git branch -d 分支名
 ### 1.5 合并
 
 
-- 合并A分支到当前分支
+#### 合并A分支到当前分支
 
 ```sh
 git merge A分支
