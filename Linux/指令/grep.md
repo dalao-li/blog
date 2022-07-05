@@ -5,13 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-21 18:34:00
  * @LastEditors: DaLao
- * @LastEditTime: 2022-04-29 23:39:32
+ * @LastEditTime: 2022-07-05 22:12:01
 -->
 
-## 1 grep
+## grep
 
 
-文本查找
+### 文本查找
 
 ```sh
 grep -[参数] 匹配项
@@ -30,24 +30,29 @@ grep -[参数] 匹配项
 
 
 
-### 1.1 单查询
+### 单查询
 
 
-- 模糊匹配
+#### 模糊匹配
+
+
+含有匹配项的字段都会匹配
 
 ```sh
-grep 模式 匹配项
+grep (模式) [匹配项]
 ```
 
 ```sh
-# 结果为abc abcd abcdef
+# 匹配结果为abc abcd abcdef
 grep "abc"
 ```
 
-- 精确匹配
+
+#### 精确匹配
+
 
 ```sh
-grep -w 匹配项
+grep -w [匹配项]
 ```
 
 ```sh
@@ -57,14 +62,15 @@ grep -w "abc"
 
 
 
-### 1.2 与查询
+### 与查询
 
+在前一个查询的结果中继续查询
 
 ```sh
-grep '模式1' 匹配项 | grep '模式2'
+grep '模式1' [匹配项] | grep '模式2'
 ```
 
-查询3月10日16点30时间段内的ssh登录成功的情况
+- 查询3月10日16点30时间段内的ssh登录成功的情况
 
 ```sh
 grep 'Mar 10 16:3' /var/log/secure | grep Accepted
@@ -74,26 +80,28 @@ grep 'Mar 10 16:3' /var/log/secure | grep Accepted
 
 
 
-### 1.3 或查询
+### 或查询
 
 
 ```sh
-grep '模式1|模式2' 匹配项 或 grep -E '模式1|模式2' 匹配项
+grep '模式1|模式2' [匹配项] 或 
+
+grep -E '模式1|模式2' [匹配项]
 ```
 
 
 
-### 1.4 非查询
+### 非查询
 
 
 去除包含模式1的进程行,避免影响最终数据的正确性
 
 ```sh
-grep -v 模式1 匹配项
+grep -v 模式1 [匹配项]
 ```
 
 
-查询VLC进程信息时排除grep本身影响
+- 查询VLC进程信息时排除grep本身影响
   
 ```sh
 ps -aux | grep vlc | grep -v grep
@@ -103,22 +111,24 @@ ps -aux | grep vlc | grep -v grep
 
 
 
-### 1.5 正则
+### 正则
 
 
-- 查看以pattern开头的行
+#### 查看以pattern开头的行
 
 ```sh
 grep ^pattern
 ```
 
-- 查找以pattern结尾的行
+
+### 查找以pattern结尾的行
 
 ```sh
 grep pattern$
 ```
 
-查找/root/test.txt文件中含有human的句子
+
+- 查找/root/test.txt文件中含有human的句子
 
 ```sh
 grep human /root/test.txt
@@ -126,7 +136,8 @@ grep human /root/test.txt
 
 ![](https://cdn.hurra.ltd/img/20210310151418.png)
 
-查找/root/test.txt文件中以The开头的句子
+
+- 查找/root/test.txt文件中以The开头的句子
 
 ```sh
 grep ^The /root/test.txt

@@ -5,11 +5,33 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-01 20:37:22
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 00:38:36
+ * @LastEditTime: 2022-07-05 23:09:48
 -->
 
 
 ## 字符串
+
+
+### 定义
+
+```py
+s = "Hello World"
+```
+
+
+#### input
+
+Python input() 接受的输入数据均为字符串格式
+
+```py
+s = input()
+
+# Helle World
+print(s)
+
+# <class 'str'>
+print(type(s))
+```
 
 
 ### 切片
@@ -35,6 +57,25 @@ s[3:]
 s[:5]
 ```
 
+
+### 函数
+
+
+#### 分割
+
+```py
+split('字符')
+```
+
+```py
+s = "a b c"
+
+# ['a', 'b', 'c'] 
+s.split()
+
+# <class 'list'>
+type(s.split())
+```
 
 
 ### 查找

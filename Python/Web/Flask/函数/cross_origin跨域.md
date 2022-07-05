@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-12-23 15:07:52
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 22:38:27
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-05 23:39:10
 -->
 
 
@@ -18,11 +18,11 @@
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
     <meta charset="utf-8" />
     <script>
         function loadXMLDoc() {
-            var xmlhttp;
+            var xmlhttp
             if (window.XMLHttpRequest) {
                 // IE7+,Firefox,Chrome,Opera,Safari 浏览器执行代码
                 xmlhttp = new XMLHttpRequest()
@@ -32,19 +32,19 @@
             }
             xmlhttp.onreadystatechange = function () {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                const v = xmlhttp.responseText
-                alert(v)
+                    const v = xmlhttp.responseText
+                    alert(v)
+                }
             }
-            };
-            xmlhttp.open("GET", "http://127.0.0.1:5000/",true)
+            xmlhttp.open("GET", "http://127.0.0.1:5000/", true)
             xmlhttp.send()
         }
     </script>
-  </head>
+    </head>
 
-  <body>
-    <button type="button" onclick="loadXMLDoc()">获取内容</button>
-  </body>
+    <body>
+        <button type="button" onclick="loadXMLDoc()">获取内容</button>
+    </body>
 </html>
 ```
 

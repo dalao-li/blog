@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-03-11 11:44:56
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 20:12:41
+ * @LastEditTime: 2022-07-05 22:44:30
 -->
 
 ## inode
@@ -86,6 +86,7 @@ OS读取硬盘时为提高效率,会一次性连续读取多个扇区
 - 移动/重命名文件
 
 只会改变文件名,不影响inode号码
+
 
 - 文件操作
 

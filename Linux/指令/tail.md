@@ -5,10 +5,12 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-23 23:00:29
  * @LastEditors: DaLao
- * @LastEditTime: 2021-10-23 23:26:29
+ * @LastEditTime: 2022-07-05 22:41:26
 -->
 
-## tail
+## 查看
+
+### tail
 
 
 ```sh
@@ -21,7 +23,7 @@ tail -n +行数 日志名
 
 
 
-## head
+### head
 
 
 ```sh
