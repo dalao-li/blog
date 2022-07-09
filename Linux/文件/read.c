@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-04-07 22:58:19
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 18:36:07
+ * @LastEditTime: 2022-07-09 23:36:54
  */
 
 #include <stdio.h>
@@ -19,7 +19,6 @@ int main(void)
     int nwrite;
     // fd0(键盘)输入
     nread = read(STDIN_FILENO, buffer, 128);
-
     if (nread == -1)
     {
         write(STDERR_FILENO, "A read error has occurred\n", 26);

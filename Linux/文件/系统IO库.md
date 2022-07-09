@@ -5,12 +5,11 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-04-07 23:26:04
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 18:41:38
+ * @LastEditTime: 2022-07-09 23:38:44
 -->
 
 
 ## 系统调用
-
 
 
 ### write
@@ -19,7 +18,7 @@
 write把缓冲区buf的前nbytes个字节写入到与文件描述符fd关联的文件中,返回实际写入的字节数
 
 ```c
-size_t write(int fildes, const void *buf, size_t nbytes);
+size_t write(int fildes, const void *buf, size_t nbytes)
 ```
 
 | 状态       | 返回值           |
@@ -46,7 +45,7 @@ int main(void) {
 
 屏幕打印
 
-```c
+```sh
 Here is some data
 ```
 
@@ -58,7 +57,7 @@ Here is some data
 ```c
 #include<unistd.h>
 
-size_t read(int fildes, void *buf, size_t nbytes);
+size_t read(int fildes, void *buf, size_t nbytes)
 ```
 
 从文件描述符fildes相关联的文件里读入nbytes个字节的数据,并放到数据区buf中
@@ -93,6 +92,7 @@ int main(void) {
 ```
 
 键盘输入与屏幕输出
+
 ```sh
 Hello World!
 ```
@@ -113,7 +113,7 @@ int open(const char *path, int oflags, mode_t mode);
 
 创建新的文件描述符,调用成功后返回可以被read,write和其他系统调用那个使用的`文件描述符`
 
-- oflags参数
+#### oflags参数
 
 | 模式     | 说明         |
 | -------- | ------------ |
