@@ -49,7 +49,7 @@ sudo systemctl reload nginx
 ```sh
 server{
     listen 80;
-    # 配置服务名,若无特殊配置localhost即指代本机的127.0.0.1地址
+    # 配置服务名, 若无特殊配置localhost即指代本机的127.0.0.1地址
     server_name localhost;
     # 将:80端口转发到:5000
     location / {
@@ -65,7 +65,7 @@ server{
 ```ini
 server{
     listen 80;
-    # 配置服务名,若无特殊配置localhost,即指代本机的127.0.0.1
+    # 配置服务名, 若无特殊配置localhost, 即指代本机的127.0.0.1
     server_name localhost;
     location / {
         # 设置自定义文件的目录
@@ -81,7 +81,7 @@ server{
 nginx -s reload
 ```
 
-终端显示`signal process started`时表明修改成功,若有问题会提示错误
+终端显示`signal process started`时表明修改成功, 若有问题会提示错误
 
 
 
@@ -96,7 +96,7 @@ location / {
 
     add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS';
     
-    add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
+    add_header Access-Control-Allow-Headers 'DNT, X-Mx-ReqToken, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since, Cache-Control, Content-Type, Authorization';
 
     if ($request_method = 'OPTIONS') {
         return 204;

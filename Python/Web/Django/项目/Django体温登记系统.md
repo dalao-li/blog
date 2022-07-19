@@ -99,7 +99,7 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-输入用户名和密码,邮箱地址可选
+输入用户名和密码, 邮箱地址可选
 
 ![](https://cdn.hurra.ltd/img/20200802153640.png)
 
@@ -110,7 +110,7 @@ python manage.py createsuperuser
 
 在 app 目录下新建 templates 文件夹
 
-编辑 settings.py文件,找到 TEMPLATES,将新增模板的路径添加至 DIRS 项中:
+编辑 settings.py文件, 找到 TEMPLATES, 将新增模板的路径添加至 DIRS 项中:
 
 ![](https://cdn.hurra.ltd/img/20200805185510.png)
 
@@ -222,15 +222,15 @@ python manage.py createsuperuser
 <script>
     $('#recordTable').bootstrapTable({
         //是否显示分页条
-        pagination: true,
+        pagination: true, 
         //首页页码
-        pageNumber: 1,
+        pageNumber: 1, 
         //一页显示的行数
-        pageSize: 5,
-        //是否开启分页条无限循环,最后一页时点击下一页是否转到第一页
-        paginationLoop: false,
-        //选择每页显示多少行,数据过少时可能会没有效果
-        pageList: [5, 10, 20],
+        pageSize: 5, 
+        //是否开启分页条无限循环, 最后一页时点击下一页是否转到第一页
+        paginationLoop: false, 
+        //选择每页显示多少行, 数据过少时可能会没有效果
+        pageList: [5, 10, 20], 
         //启用关键字搜索框
         search: true
     })
@@ -243,41 +243,41 @@ python manage.py createsuperuser
 ### JS
 
 
-app 目录下新建 static 目录,存放静态文件
+app 目录下新建 static 目录, 存放静态文件
 
 app/static/js 目录下新建 api.js
 
 ```js
 function sendAjax(param, url, callback) {
     $.ajax({
-        async: false,
-        ache: false,
-        type: "POST",
-        url: url,
+        async: false, 
+        ache: false, 
+        type: "POST", 
+        url: url, 
         // JSON对象转化JSON字符串
-        data: JSON.stringify(param),
+        data: JSON.stringify(param), 
         // 服务器返回的数据类型
-        dataType: "json",
+        dataType: "json", 
         // 清除浏览器缓存
         beforeSend: function (xmlHttp) {
             xmlHttp.setRequestHeader("If-Modified-Since", "0");
             xmlHttp.setRequestHeader("Cache-Control", "no-cache");
-        },
+        }, 
         success: function (data) {
             callback(data.result);
-        },
+        }, 
         error: function (data) {
         // 错误处理
-        },
+        }, 
     });
 }
 
 function addRecord() {
     const data = {
-        num: $("#num").val(),
-        name: $("#name").val(),
-        tem: $("#tem").val(),
-        date: $("#date").val(),
+        num: $("#num").val(), 
+        name: $("#name").val(), 
+        tem: $("#tem").val(), 
+        date: $("#date").val(), 
     };
     // 判断非空
     for (const k in data) {
@@ -291,10 +291,10 @@ function addRecord() {
 function addCallback(value) {
     if (value === 1) {
         swal({
-            title: "提交成功",
-            text: "",
-            type: "success",
-            timer: 2000,
+            title: "提交成功", 
+            text: "", 
+            type: "success", 
+            timer: 2000, 
         }, function () {
             location.reload();
         });
@@ -304,9 +304,9 @@ function addCallback(value) {
     }
     if (value === -1) {
         swal({
-            title: "该学生体温已提交",
-            text: "请勿重复提交",
-            type: "warning",
+            title: "该学生体温已提交", 
+            text: "请勿重复提交", 
+            type: "warning", 
         }, function () {
             $("#recordForm")[0].reset();
         });
@@ -315,24 +315,24 @@ function addCallback(value) {
 
 function delRecord(id) {
     swal({
-       title: "您确定要删除该记录吗",
-       text: "删除后将无法恢复,请谨慎操作！",
-       type: "warning",
-       showCancelButton: true,
-       confirmButtonColor: "#DD6B55",
-       confirmButtonText: "确认",
-       cancelButtonText: "取消",
-       closeOnConfirm: false,
-       closeOnCancel: false,
+       title: "您确定要删除该记录吗", 
+       text: "删除后将无法恢复, 请谨慎操作！", 
+       type: "warning", 
+       showCancelButton: true, 
+       confirmButtonColor: "#DD6B55", 
+       confirmButtonText: "确认", 
+       cancelButtonText: "取消", 
+       closeOnConfirm: false, 
+       closeOnCancel: false, 
     }, function (isConfirm) {
         if (isConfirm) {
             var data = { num: id };
             sendAjax(data, "/app/del/", delCallback);
         } else {
             swal({
-                title: "已取消",
-                text: "您取消了删除操作！",
-                type: "warning",
+                title: "已取消", 
+                text: "您取消了删除操作！", 
+                type: "warning", 
             });
         }
     });
@@ -341,10 +341,10 @@ function delRecord(id) {
 function delCallback(value) {
     if (value === 1) {
         swal({
-            title: "删除成功",
-            text: "",
-            type: "success",
-            timer: 2000,
+            title: "删除成功", 
+            text: "", 
+            type: "success", 
+            timer: 2000, 
         }, function () {
             location.reload();
         });
@@ -412,9 +412,9 @@ from app import views
 
 urlpatterns = [
     # 将函数绑定至对应路由
-    path('', views.index),
+    path('', views.index), 
 
-    path('add/', views.add_record),
+    path('add/', views.add_record), 
 
     path('del/', views.del_record)
 ]
@@ -424,17 +424,17 @@ urlpatterns = [
 
 ```py
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
 
 urlpatterns = [
 
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), 
     # 注册应用app的路由
-    path('app/',include('app.urls'))
+    path('app/', include('app.urls'))
 ]
 ```
 
-运行项目,访问http://127.0.0.1/app/,查看
+运行项目, 访问http://127.0.0.1/app/, 查看
 
 ![](https://cdn.hurra.ltd/img/20200806160425.png)
 
@@ -445,12 +445,12 @@ urlpatterns = [
 
 本项目采用 Docker + Gunicorn 方式进行部署
 
-- 部署后可能会出现无法访问静态文件的情况,因此编辑主目录下 urls.py文件,新增:
+- 部署后可能会出现无法访问静态文件的情况, 因此编辑主目录下 urls.py文件, 新增:
 
 
 ```py
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
 
 # 新增
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -464,10 +464,10 @@ urlpatterns += staticfiles_urlpatterns()
 - 主目录下新建 gunicorn_config.py文件:
 
 ```py
-# 定义同时开启的处理请求的进程数量,根据网站流量适当调整
+# 定义同时开启的处理请求的进程数量, 根据网站流量适当调整
 workers = 5
 
-# 采用gevent库,支持异步处理请求,提高吞吐量
+# 采用gevent库, 支持异步处理请求, 提高吞吐量
 worker_class = "gevent"
 
 # 这里8000可以随便调整
@@ -524,7 +524,7 @@ docker build -t mydemo .
 
 ![](https://cdn.hurra.ltd/img/20200806185516.png)
 
-运行容器,查看结果
+运行容器, 查看结果
 
 ```shell
 docker run -itd -p 80:8000 --name django_test mydemo

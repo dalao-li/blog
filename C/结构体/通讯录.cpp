@@ -1,11 +1,11 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2018-04-15 09:09:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-01-26 22:49:05
+ * @LastEditTime: 2022-07-19 22:03:38
  */
 
 #include <iostream>
@@ -22,11 +22,11 @@ struct Info
     string address;
     string phone;
     string email;
-    /*score[0]到score[3]分别指代数学、英语、政治、专业课的成绩,sum_score表示总成绩*/
-    float score[4]; 
+    /*score[0]到score[3]分别指代数学、英语、政治、专业课的成绩, sum_score表示总成绩*/
+    float score[4];
     float sum_score = 0;
     struct Info *next;
-} mes[N]; 
+} mes[N];
 
 int main()
 {
@@ -34,7 +34,7 @@ int main()
     void ouput(struct Info mes[]);
     void query(struct Info mes[]);
     void modify();
-    struct Info mes[N] , *head , *p = mes;
+    struct Info mes[N], *head, *p = mes;
     while (1)
     {
         int first_colon;
@@ -80,7 +80,7 @@ int main()
 void input(struct Info mes[])
 {
     struct Info *p;
-    for (int i = 0 , p = mes; p < mes + N; p++ , i++)
+    for (int i = 0, p = mes; p < mes + N; p++, i++)
     {
         cout << "第" << i + 1 << "位成员:" << endl;
         cout << "请输入第" << i + 1 << "位成员的学号:";
@@ -113,16 +113,17 @@ void input(struct Info mes[])
 /*显示函数*/
 void ouput(struct Info mes[])
 {
-    int i , number , third_colon , forth_colon , sign = 1 , wign = 1;
-    struct Info *head , *p;
+    int i, number, third_colon, forth_colon, sign = 1, wign = 1;
+    struct Info *head, *p;
     p = mes;
     /*建立链表*/
     head = p; /*将第一个元素的地址放入头指针中*/
-    for (i = 0; i < N - 1;i++){ /*依次将后一个元素的地址放入前一个元素的next成员中*/
+    for (i = 0; i < N - 1; i++)
+    { /*依次将后一个元素的地址放入前一个元素的next成员中*/
         (p + i)->next = (p + i + 1);
     }
     (p + N - 1)->next = NULL; /*最后一个元素的next中放入NULL*/
-    cout << "                                                          "<< endl;
+    cout << "                                                          " << endl;
     while (sign)
     {
         cout << "--------------------------------------------------------------"
@@ -142,7 +143,7 @@ void ouput(struct Info mes[])
             cin >> number;
             if (number > N || number < 1)
             {
-                cout << "查无此人,错误！！！:" << endl;
+                cout << "查无此人, 错误！！！:" << endl;
                 break;
             }
             cout << "第" << number << "位成员的学号为:    "
@@ -219,7 +220,7 @@ void ouput(struct Info mes[])
                 switch (forth_colon)
                 {
                 case 1:
-                    for (i = 0 , p = mes; p < mes + N; p++ , i++)
+                    for (i = 0, p = mes; p < mes + N; p++, i++)
                     {
                         cout << "第" << i + 1 << "位成员的数学成绩为:"
                              << p->score[0] << "分" << endl;
@@ -229,16 +230,17 @@ void ouput(struct Info mes[])
                     }
                     break;
                 case 2:
-                    for (i = 0 , p = mes; p < mes + N; p++ , i++)
+                    for (i = 0, p = mes; p < mes + N; p++, i++)
                     {
                         cout << "第" << i + 1 << "位成员的英语成绩为:"
                              << p->score[1] << "分" << endl;
                         cout << "                                      "
-                                "            "<< endl;
+                                "            "
+                             << endl;
                     }
                     break;
                 case 3:
-                    for (i = 0 , p = mes; p < mes + N; p++ , i++)
+                    for (i = 0, p = mes; p < mes + N; p++, i++)
                     {
                         cout << "第" << i + 1 << "位成员的政治成绩为:"
                              << p->score[2] << "分" << endl;
@@ -248,7 +250,7 @@ void ouput(struct Info mes[])
                     }
                     break;
                 case 4:
-                    for (i = 0 , p = mes; p < mes + N; p++ , i++)
+                    for (i = 0, p = mes; p < mes + N; p++, i++)
                     {
                         cout << "第" << i + 1 << "位成员的专业成绩为:"
                              << p->score[3] << "分" << endl;
@@ -258,7 +260,7 @@ void ouput(struct Info mes[])
                     }
                     break;
                 case 5:
-                    for (i = 0 , p = mes; p < mes + N; p++ , i++)
+                    for (i = 0, p = mes; p < mes + N; p++, i++)
                     {
                         cout << "第" << i + 1 << "位成员的总成绩为:"
                              << p->score[4] << "分" << endl;
@@ -289,8 +291,8 @@ void query(struct Info mes[])
 {
     struct Info *p = mes;
     string num_or_name;
-    int colon , second_colon , third_colon , forth_colon , sign = 1 , i , k,
-                                                       max_score[4] , max_sum;
+    int colon, second_colon, third_colon, forth_colon, sign = 1, i, k,
+                                                       max_score[4], max_sum;
     while (sign)
     {
         cout << "二级目录  1.按学号或姓名查找 2.查询最大成绩  3.花名册  4.退出"
@@ -302,7 +304,7 @@ void query(struct Info mes[])
             cout << "请输入姓名或学号开始查找"
                  << " ";
             cin >> num_or_name;
-            for (i = 0; p < mes + N; p++ , i++)
+            for (i = 0; p < mes + N; p++, i++)
             {
                 if ((p->name == num_or_name) || (p->name == num_or_name))
                 {
@@ -356,7 +358,7 @@ void query(struct Info mes[])
                 switch (second_colon)
                 {
                 case 1:
-                    for (k = 0 , i = 1; i < N;
+                    for (k = 0, i = 1; i < N;
                          i++)
                     { /*找出数学的最大成绩*/
                         if ((p + i)->score[0] >= p->score[0])
@@ -371,7 +373,7 @@ void query(struct Info mes[])
                     cout << "                                 " << endl;
                     break;
                 case 2:
-                    for (k = 0 , i = 1; i < N;
+                    for (k = 0, i = 1; i < N;
                          i++)
                     { /*找出英语的最大成绩*/
                         if ((p + i)->score[1] >= max_score[1])
@@ -386,7 +388,7 @@ void query(struct Info mes[])
                     cout << "                                 " << endl;
                     break;
                 case 3:
-                    for (k = 0 , i = 1; i < N;
+                    for (k = 0, i = 1; i < N;
                          i++)
                     { /*找出政治的最大成绩*/
                         if ((p + i)->score[2] >= max_score[2])
@@ -401,7 +403,7 @@ void query(struct Info mes[])
                     cout << "                                 " << endl;
                     break;
                 case 4:
-                    for (k = 0 , i = 1; i < N;
+                    for (k = 0, i = 1; i < N;
                          i++)
                     { /*找出专业课的最大成绩*/
                         if ((p + i)->score[3] >= max_score[3])
@@ -416,7 +418,7 @@ void query(struct Info mes[])
                     cout << "                                 " << endl;
                     break;
                 case 5:
-                    for (k = 0 , i = 1; i < N;
+                    for (k = 0, i = 1; i < N;
                          i++)
                     { /*找出总成绩最大的人*/
                         if ((p + i)->sum_score >= max_sum)
@@ -439,7 +441,7 @@ void query(struct Info mes[])
             }
             break;
         case 3:
-            for (i = 0 , p = mes; p < mes + N; i++ , p++)
+            for (i = 0, p = mes; p < mes + N; i++, p++)
             {
                 cout << "第" << i + 1 << "位成员:" << p->name << endl;
             }
@@ -456,13 +458,13 @@ void query(struct Info mes[])
 /*修改信息函数*/
 void modify()
 {
-    string key1 , key = "123456"; //设置修改密码
+    string key1, key = "123456"; //设置修改密码
     struct Info *p;
     p = mes;
-    int number , j , sign = 1 , k = 3;
+    int number, j, sign = 1, k = 3;
     cout << "                                              " << endl;
     while (sign)
-    { //设置修改密码,三次错误直接结束程序
+    { //设置修改密码, 三次错误直接结束程序
         cout << "请输入修改密码"
              << " ";
         cin >> key1;
@@ -470,7 +472,7 @@ void modify()
             break;
         else
         {
-            cout << "密码错误,你还可以输入" << k - 1 << "次";
+            cout << "密码错误, 你还可以输入" << k - 1 << "次";
             k--;
             if (k == 0)
                 exit(0);

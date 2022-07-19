@@ -26,7 +26,7 @@ def httpTry(f):
     return x
 
 
-# 包装不需要返回数据,只需要执行结果的请求
+# 包装不需要返回数据, 只需要执行结果的请求
 def httpRes(f):
     def x(*args, **kwargs):
         res = {"code": "0", "message": "", "data": {}}

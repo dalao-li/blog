@@ -34,9 +34,9 @@ this.axios.get("http://127.0.0.1:5000/test").then((response) =>{
     console.log(r.result);
 });
 
-this.axios.post("http://127.0.0.1:5000/login" , {
-        name: this.param.username,
-        pwd: this.param.password,
+this.axios.post("http://127.0.0.1:5000/login", {
+        name: this.param.username, 
+        pwd: this.param.password, 
     }).then((response) => {
     const r = response.data;
     console.log(r.result);
@@ -62,23 +62,23 @@ this.axios.post("http://127.0.0.1:5000/login" , {
     <body>
         <div id="app">
             <h1>GET请求获取数据</h1>
-            <div v-for="i in info">{{ i.name }} , {{i.age}}</div>
+            <div v-for="i in info">{{ i.name }}, {{i.age}}</div>
         </div>
         <script type="text/javascript">
         new Vue({
-            el: "#app",
+            el: "#app", 
             data() {
                 return {
-                    info: null,
+                    info: null, 
                 };
-            },
+            }, 
             mounted() {
                 axios.get("http://127.0.0.1:5000/getApi")
                     .then((response) => (this.info = response.data))
                     .catch(function (error) {
                     console.log(error);
                 });
-            },
+            }, 
         });
         </script>
     </body>
@@ -89,9 +89,9 @@ this.axios.post("http://127.0.0.1:5000/login" , {
 
 ```json
 data = [
-  { name: "LI_LI",age: 18 },
-  { name: "WAN_MIN",age: 20 },
-  { name: "QIN_XI",age: 20 },
+  { name: "LI_LI", age: 18 }, 
+  { name: "WAN_MIN", age: 20 }, 
+  { name: "QIN_XI", age: 20 }, 
 ];
 ```
 
@@ -123,24 +123,24 @@ data = [
     <script type="text/javascript">
         const data = {'name': document.getElementById('name').value}
         var vm = new Vue({
-            el: '#app',
+            el: '#app', 
             data() {
                 return {
-                    name: '',
+                    name: '', 
                     info: ''
                 }
-            },
+            }, 
             methods: {
                 submitName() {
                 axios
-                    .post('http://127.0.0.1:5000/postApi' , {'name': this.name})
+                    .post('http://127.0.0.1:5000/postApi', {'name': this.name})
                     .then(function (response) {
                         this.info = response.data
                         alert(JSON.stringify(this.info))})
                     .catch(function (error) {
                         console.log(error)
                     })
-                },
+                }, 
             }
         })
     </script>
@@ -150,7 +150,7 @@ data = [
 ```
 
 ```py
-@app.route('/postApi' , methods=['POST'])
+@app.route('/postApi', methods=['POST'])
 def post_api():
     data = json.loads(request.get_data())
     return json.dumps(data)

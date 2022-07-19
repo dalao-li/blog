@@ -1,5 +1,5 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Author: dalao
  * @Email: dalao_li@163.com
@@ -8,23 +8,24 @@
  * @LastEditTime: 2022-06-27 23:42:06
  */
 
-#include<iostream>
-#include<memory>
+#include <iostream>
+#include <memory>
 
-int main() {
+int main()
+{
     // 创建空对象
     std::shared_ptr<int> p = std::make_shared<int>();
 
     *p = 96;
-    
-    printf("p指向的值为:%d\np指针的引用个数为: %u\n" , *p , p.use_count());
+
+    printf("p指向的值为:%d\np指针的引用个数为: %u\n", *p, p.use_count());
 
     // 创建shared_ptr 对象指向同一个指针
     std::shared_ptr<int> p2(p);
 
-    printf("p指针的引用个数为: %d\np2指针的引用个数为: %u\n" , p.use_count(), p2.use_count());
+    printf("p指针的引用个数为: %d\np2指针的引用个数为: %u\n", p.use_count(), p2.use_count());
 
-    // p指针指向空,则引用个数会自动归零
+    // p指针指向空, 则引用个数会自动归零
     p = NULL;
-    printf("p指针的引用个数为: %u\n" , p.use_count());
+    printf("p指针的引用个数为: %u\n", p.use_count());
 }

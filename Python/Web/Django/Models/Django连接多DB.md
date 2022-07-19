@@ -14,33 +14,33 @@
 ### 设置
 
 
-建立Django项目,在建立两个应用app1与app2
+建立Django项目, 在建立两个应用app1与app2
 
 修改settings.py文件中的`DATABASES`配置
 
-- 连接sqlite,mysql
+- 连接sqlite, mysql
 
 ```py
 DATABASES = {
     # 默认数据库
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
+        'ENGINE': 'django.db.backends.sqlite3', 
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), 
+    }, 
     # MySQL
     'test_mysql': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.mysql', 
         # 数据库名
-        'NAME': 'test_mysql',
-        'USER': 'root',
-        'PASSWORD': '123456',
+        'NAME': 'test_mysql', 
+        'USER': 'root', 
+        'PASSWORD': '123456', 
         # 数据库ip地址
-        'HOST': '123.56.233.200',
+        'HOST': '123.56.233.200', 
         # 访问端口
-        'PORT': 3306,
+        'PORT': 3306, 
         #设置mysql启用严格模式
         'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'", 
             'charset': 'utf8'
         }
     }
@@ -139,14 +139,14 @@ class DatabaseAppsRouter(object):
 ### 增加数据路由表与规则方法
 
 
-settings.py文件中添加内容,此处项目名为demo
+settings.py文件中添加内容, 此处项目名为demo
 ```py
 # 数据库路由规则方法
 DATABASE_ROUTERS = ['项目名.database_router.DatabaseAppsRouter']
 
 # 数据库路由表
 DATABASE_APPS_MAPPING = {
-    'app1':'default',
-    'app2': 'test_mysql',
+    'app1':'default', 
+    'app2': 'test_mysql', 
 }
 ``` 

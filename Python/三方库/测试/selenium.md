@@ -74,7 +74,7 @@ browser = webdriver.Chrome()
 browser.set_window_size(480, 800)
 ```
 
-- 浏览器后退,前进
+- 浏览器后退, 前进
 
 ```py
 # 后退
@@ -136,16 +136,16 @@ send_keys(Keys.ESCAPE)
 send_keys(Keys.ENTER) 
 
 # 全选(Ctrl+A)
-send_keys(Keys.CONTROL,'a') 
+send_keys(Keys.CONTROL, 'a') 
 
 # 复制(Ctrl+C)
-send_keys(Keys.CONTROL,'c') 
+send_keys(Keys.CONTROL, 'c') 
 
 # 剪切(Ctrl+X)
-send_keys(Keys.CONTROL,'x') 
+send_keys(Keys.CONTROL, 'x') 
 
 # 粘贴(Ctrl+V)
-send_keys(Keys.CONTROL,'v') 
+send_keys(Keys.CONTROL, 'v') 
 
 # 键盘 F1
 send_keys(Keys.F1) 

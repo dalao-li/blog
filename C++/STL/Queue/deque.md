@@ -34,7 +34,7 @@ push_back()
 - 插入元素 e 到 p 位置
 
 ```c
-iterator insert(p , e)
+iterator insert(p, e)
 ```
 
 
@@ -91,7 +91,7 @@ using namespace std;
 deque<int> q;
 
 int main() {
-    q = {1 , 2 , 3 , 4 , 5};
+    q = {1, 2, 3, 4, 5};
 
     // 1
     cout << q.front() << endl;
@@ -106,7 +106,7 @@ int main() {
     cout << q[3] << endl;
 
     // 插入在2位置666
-    q.insert(q.begin()+2 , 666);
+    q.insert(q.begin()+2, 666);
 
     // 删除1位置元素
     q.erase(q.begin() + 1);

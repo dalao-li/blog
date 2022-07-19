@@ -33,8 +33,8 @@
 
 ### 涉及技术
 
-> - CSS : BootStrap4 , Font Awesome,
-> - JS : JQuery , SweetAlery2
+> - CSS : BootStrap4, Font Awesome, 
+> - JS : JQuery, SweetAlery2
 > - Web 框架 : Django
 > - 数据库 : Sqlite3
 
@@ -62,9 +62,9 @@
 
 - 编辑记事
 
-对进行中的记事,当点击对应行时会弹出修改页面,用户可对其进行修改
+对进行中的记事, 当点击对应行时会弹出修改页面, 用户可对其进行修改
 
-对进行中记事可进行的操作为 : 修改,标记完成,删除
+对进行中记事可进行的操作为 : 修改, 标记完成, 删除
 
 对已完成记事可进行的操作为 : 删除
 
@@ -119,7 +119,7 @@ python manage.py startapp app
 
 ![](https://cdn.hurra.ltd/img/20200805182830.png)
 
-在 app 目录下新建 static 与 templates 目录,用于存放静态文件和模板文件
+在 app 目录下新建 static 与 templates 目录, 用于存放静态文件和模板文件
 
 
 
@@ -362,19 +362,19 @@ app/templates 目录下新建 main.html 文件
                 $('#names').val(row[1])
                 $('#texts').val(row[2])
             }
-        },
+        }, 
         //是否显示分页条
-        pagination: true,
+        pagination: true, 
         //首页页码
-        pageNumber: 1,
+        pageNumber: 1, 
         //一页显示的行数
-        pageSize: 10,
-        //是否开启分页条无限循环,最后一页时点击下一页是否转到第一页
-        paginationLoop: false,
-        //选择每页显示多少行,数据过少时可能会没有效果
-        pageList: [10, 20],
+        pageSize: 10, 
+        //是否开启分页条无限循环, 最后一页时点击下一页是否转到第一页
+        paginationLoop: false, 
+        //选择每页显示多少行, 数据过少时可能会没有效果
+        pageList: [10, 20], 
         //启用关键字搜索框
-        search: true,
+        search: true, 
     })
 
     $('#addNoteButton').click(function () {
@@ -391,20 +391,20 @@ app/static 目录下新建 api.js 文件
 ```js
 function sendAjax(param, url, callback) {
   $.ajax({
-    async: false,
-    ache: false,
-    type: "POST",
-    url: url,
+    async: false, 
+    ache: false, 
+    type: "POST", 
+    url: url, 
     //JSON对象转化JSON字符串
-    data: JSON.stringify(param),
+    data: JSON.stringify(param), 
     //服务器返回的数据类型
-    dataType: "json",
+    dataType: "json", 
     success: function (data) {
       callback(data.result);
-    },
+    }, 
     error: function (data) {
       //错误处理
-    },
+    }, 
   });
 }
 
@@ -429,7 +429,7 @@ function addNote() {
   sendAjax(d, "/app/add/", function (value) {
     if (value === 1) {
       swal(
-        { title: "添加成功", text: "", type: "success", timer: 2000 },
+        { title: "添加成功", text: "", type: "success", timer: 2000 }, 
         function () {
           location.href = "/app/";
         }
@@ -444,32 +444,32 @@ function addNote() {
 function delNote(n_id) {
   swal(
     {
-      title: "确定要删除该记事吗？",
-      text: "删除不可恢复",
-      type: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#DD6B55",
-      confirmButtonText: "确认",
-      cancelButtonText: "取消",
-      closeOnConfirm: false,
-      closeOnCancel: false,
-    },
+      title: "确定要删除该记事吗？", 
+      text: "删除不可恢复", 
+      type: "warning", 
+      showCancelButton: true, 
+      confirmButtonColor: "#DD6B55", 
+      confirmButtonText: "确认", 
+      cancelButtonText: "取消", 
+      closeOnConfirm: false, 
+      closeOnCancel: false, 
+    }, 
     function (isConfirm) {
       if (!isConfirm) {
         swal({
-          title: "已取消",
-          text: "您取消了删除操作！",
-          type: "warning",
+          title: "已取消", 
+          text: "您取消了删除操作！", 
+          type: "warning", 
         });
         return;
       }
       var data = {
-        n_id: n_id,
+        n_id: n_id, 
       };
       sendAjax(data, "/app/del/", function (value) {
         if (value === 1) {
           swal(
-            { title: "删除成功", text: "", type: "success", timer: 2000 },
+            { title: "删除成功", text: "", type: "success", timer: 2000 }, 
             function () {
               location.reload();
             }
@@ -485,13 +485,13 @@ function delNote(n_id) {
 
 function finishNote(n_id) {
   var data = {
-    n_id: n_id,
-    status: "F",
+    n_id: n_id, 
+    status: "F", 
   };
   sendAjax(data, "/app/change/", function (value) {
     if (value === 1) {
       swal(
-        { title: "记事已完成", text: "", type: "success", timer: 2000 },
+        { title: "记事已完成", text: "", type: "success", timer: 2000 }, 
         function () {
           location.reload();
         }
@@ -525,11 +525,11 @@ function modifyNote() {
     if (value === 1) {
       swal(
         {
-          title: "修改成功",
-          text: "",
-          type: "success",
-          timer: 2000,
-        },
+          title: "修改成功", 
+          text: "", 
+          type: "success", 
+          timer: 2000, 
+        }, 
         function () {
           location.href = "/app/";
         }
@@ -558,8 +558,8 @@ from django.db import models
 
 class Note(models.Model):
     choices = (
-        ('U', 'Underway'),
-        ('F', 'Finish'),
+        ('U', 'Underway'), 
+        ('F', 'Finish'), 
         ('D', 'Deleted')
     )
 
@@ -614,7 +614,7 @@ def add_note(request):
 def modify_note(request):
     data = json.loads(request.body)
     n_id, name, text, s_time, e_time = data.values()
-    Note.objects.filter(id=n_id).update(name=name, text=text,s_time=s_time, e_time=e_time)
+    Note.objects.filter(id=n_id).update(name=name, text=text, s_time=s_time, e_time=e_time)
     return HttpResponse(json.dumps({'result': 1}))
 
 
@@ -646,15 +646,15 @@ from app import views
 
 urlpatterns = [
     # 将函数绑定至对应路由
-    path('', views.main_page),
+    path('', views.main_page), 
 
-    path('add/',views.add_note),
+    path('add/', views.add_note), 
 
-    path('del/',views.del_note),
+    path('del/', views.del_note), 
 
-    path('modify/',views.modify_note),
+    path('modify/', views.modify_note), 
 
-    path('change/',views.change_note_status)
+    path('change/', views.change_note_status)
 
 
 ]
@@ -667,7 +667,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), 
     path('app/', include('app.urls'))
 ]
 ```

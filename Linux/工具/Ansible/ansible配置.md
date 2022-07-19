@@ -16,7 +16,7 @@
 ### 概念
 
 
-Ansible是一个配置管理和应用部署工具,可以对服务器上($1-N$台)的系统应用进行配置管理,如更改部分参数,安装软件应用等
+Ansible是一个配置管理和应用部署工具, 可以对服务器上($1-N$台)的系统应用进行配置管理, 如更改部分参数, 安装软件应用等
 
 Ansible本质是在多设备按情况(判断循环)指定每台设备要执行的命令
 
@@ -27,7 +27,7 @@ Ansible本质是在多设备按情况(判断循环)指定每台设备要执行�
 #### 安装
 
 ```sh
-# 新增 epel-release 第三方套件来源,安装Ansible
+# 新增 epel-release 第三方套件来源, 安装Ansible
 yum install -y epel-release ansible
 
 # 配置文件/etc/ansible/ansible.cfg
@@ -38,7 +38,7 @@ yum install -y epel-release ansible
 #### 容器控制
 
 
-建立两个容器server1,server2,并用ansible对其进行控制
+建立两个容器server1, server2, 并用ansible对其进行控制
 
 ```sh
 docker run -itd --name server1 -P chusiang/ansible-managed-node:ubuntu-14.04
@@ -63,7 +63,7 @@ host_key_checking = False
 - 修改/etc/ansible/hosts
 
 ```sh
-# [分组,组名]
+# [分组, 组名]
 [local]
 
 server1 ansible_ssh_host=172.17.0.2 ansible_ssh_port=22 ansible_ssh_pass=docker
@@ -132,10 +132,10 @@ host_key_checking = True
 
 ![](https://cdn.hurra.ltd/img/20210310120159.png)
 
-将宿主机的`id_ras.pub`文件拷贝到远程主机的`authorized_key`中,注意此处远程登录的用户名为docker,本地为root用户
+将宿主机的`id_ras.pub`文件拷贝到远程主机的`authorized_key`中, 注意此处远程登录的用户名为docker, 本地为root用户
 
 ```sh
-ansible all -m authorized_key -a "user=docker key='{{ lookup('file','.ssh/id_ras.pub') }}'" -k
+ansible all -m authorized_key -a "user=docker key='{{ lookup('file', '.ssh/id_ras.pub') }}'" -k
 ```
 
 输入宿主机的SSH密码
@@ -209,7 +209,7 @@ ansible all -m copy -a 'src=/root/init.hs dest=/tem/'
 #### file模块
 
 ```sh
-# 更改被控节点上init.sh的权限为755,属主和属组为root
+# 更改被控节点上init.sh的权限为755, 属主和属组为root
 ansible all -m file -a "dest=/tem/init.sh mode=755 owner=root group=root"
 ```
 
@@ -217,7 +217,7 @@ ansible all -m file -a "dest=/tem/init.sh mode=755 owner=root group=root"
 #### cron模块
 
 ```sh
-# 在指定节点上定义一个计划任务,每隔3分钟到主控端更新一次时间
+# 在指定节点上定义一个计划任务, 每隔3分钟到主控端更新一次时间
 ansible all -m cron -a 'name="custom job" minute=*/3 hour=* day=* month=* weekday=* job="/usr/sbin/ntpdate 172.16.254.139"'
 ```
 
@@ -225,7 +225,7 @@ ansible all -m cron -a 'name="custom job" minute=*/3 hour=* day=* month=* weekda
 #### group模块
 
 ```sh
-# 在所有节点上创建一个组名为nolinux,gid为2014的组
+# 在所有节点上创建一个组名为nolinux, gid为2014的组
 ansible all -m group -a 'gid=2014 name=nolinux'
 ```
 
@@ -233,7 +233,7 @@ ansible all -m group -a 'gid=2014 name=nolinux'
 #### user模块
 
 ```sh
-# 在指定节点上创建一个用户名为nolinux,组为nolinux的用户
+# 在指定节点上创建一个用户名为nolinux, 组为nolinux的用户
 ansible all -m user -a 'name=nolinux groups=nolinux state=present'
 ```
 
@@ -250,7 +250,7 @@ ansible all -m yum -a "state=present name=httpd"
 #### service模块
 
 ```sh
-# 启动指定节点上的 puppet 服务,并让其开机自启动
+# 启动指定节点上的 puppet 服务, 并让其开机自启动
 ansible all -m service -a 'name=puppet state=restarted enabled=yes'
 ```
 

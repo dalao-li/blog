@@ -54,7 +54,7 @@ REM 获取上一命令执行结果码
 REM 1. 输出提示信息
 echo 输出内容
 
-REM 2. @echo将关闭该命令回显,即执行时不会显示该命令
+REM 2. @echo将关闭该命令回显, 即执行时不会显示该命令
 @echo 输出内容
 ```
 
@@ -75,7 +75,7 @@ goto 和 :
 REM 建立index标号
 :index
 
-REM 跳转到index标号处,注意标号需以字母开头
+REM 跳转到index标号处, 注意标号需以字母开头
 goto index
 ```
 

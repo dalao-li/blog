@@ -14,17 +14,17 @@
 ### 返回静态文件
 
 ```js
-<link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 
 
-<script src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
 ```
 
 
 ### 动态路由
 
 ```html
-<a href="{{ url_for('test',name=1) }}">点击这里查看</a>
+<a href="{{ url_for('test', name=1) }}">点击这里查看</a>
 ```
 
 ```py

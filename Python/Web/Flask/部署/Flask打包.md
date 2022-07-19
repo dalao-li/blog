@@ -47,7 +47,7 @@ pyinstaller -F app.py
 - 修改.spec
 
 ```sh
-datas=[('./static','static'),('./templates','templates')],
+datas=[('./static', 'static'), ('./templates', 'templates')], 
 ```
 
 

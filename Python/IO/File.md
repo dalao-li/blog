@@ -49,7 +49,7 @@ def touch_tmp_file(request):
 
 #### 写入追加
 
-- `'w'`写入,`'a'`追加
+- `'w'`写入, `'a'`追加
 
 ```py
 with open(path, 'w', encoding = 'utf-8') as f:
@@ -100,7 +100,7 @@ def move_file(source_path: str, target_path: str):
     if not os.path.exists(path):
         os.makedirs(path)
     # 复制文件 shutil.copyfile() 
-    shutil.move(source_path ,  target_path)
+    shutil.move(source_path,  target_path)
 ```
 
 
@@ -154,9 +154,9 @@ def display_all_folders(folder_path):
 
 #### 路径错误
 
-Windows路径中 `\` 会被视作转义字符,导致路径错误
+Windows路径中 `\` 会被视作转义字符, 导致路径错误
 
-若文件路径为`C:\Users\XXX\Desktop\x.txt`,需改为
+若文件路径为`C:\Users\XXX\Desktop\x.txt`, 需改为
 
 
 ```sh

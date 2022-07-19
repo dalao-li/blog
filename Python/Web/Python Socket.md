@@ -99,7 +99,7 @@ while True:
     data, client_address = s.recvfrom(1024)
     # print(client_address + '[Received]:' + data.decode())
     send = input('Input: ')
-    # UDP 是无状态连接,所以每次连接都需要给出目的地址
+    # UDP 是无状态连接, 所以每次连接都需要给出目的地址
     s.sendto(send.encode(), client_address)
 
 if __name__ == '__main__':
@@ -139,7 +139,7 @@ if __name__ == '__main__':
 
 
 ```py
-import socket,threading
+import socket, threading
 
 server_address = ('127.0.0.1', 31500)
 
@@ -157,24 +157,24 @@ class SocketServer:
     def start_server(self):
         while True:
             print('开始等待多个客户端过来')
-            conn,address = self.sock.accept()
-            print('客户 %s 过来了',%address)
-            t = threading.Thread(target=self.client_recv,args=(conn,address))
+            conn, address = self.sock.accept()
+            print('客户 %s 过来了', %address)
+            t = threading.Thread(target=self.client_recv, args=(conn, address))
             t.start()
 
-    def client_recv(self,client,addr):
+    def client_recv(self, client, addr):
         while True:
             # 获取到客户端的数据
             data = client.recv(1024)
             if not data or data.decode() == 'bye':
-                # 如果没有发送过来数据就代表客户端close了,或者发过来bye代表连接要断开
+                # 如果没有发送过来数据就代表客户端close了, 或者发过来bye代表连接要断开
                 print('服务结束', addr)
-                # 断开连接,为下一个服务
+                # 断开连接, 为下一个服务
                 client.close()
                 break
             else:
-                print('%s 发送 %s',  %(addr,data.decode()))
-                msg = '统一回复,人不在'
+                print('%s 发送 %s',  %(addr, data.decode()))
+                msg = '统一回复, 人不在'
                 client.send(msg.encode())
 
 if __name__ == '__main__':

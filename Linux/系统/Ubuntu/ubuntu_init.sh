@@ -44,7 +44,7 @@ install_docker(){
 
     sudo apt-get update -y && sudo apt-get install docker-ce -y
 
-    # 添加docker用户组,将登陆用户加入到docker用户组中
+    # 添加docker用户组, 将登陆用户加入到docker用户组中
     sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo newgrp docker 
 
     su ${USER}
@@ -87,7 +87,7 @@ set_proxy(){
  
     sudo docker run -itd \
         -p 7890:7890 -p 7891:7891 -p 9090:9090 \
-        --mount type=bind,source="${HOME}/${path}",target="/root/${path}",readonly \
+        --mount type=bind, source="${HOME}/${path}", target="/root/${path}", readonly \
         --restart=unless-stopped \
         --name=clash_test \
         dreamacro/clash:v1.8.0
@@ -119,7 +119,7 @@ EOF
 }
 
 
-# 在放置jetbrains包的目录下执行,安装jetbrains
+# 在放置jetbrains包的目录下执行, 安装jetbrains
 set_jetbrains_ide(){
     name=${3}
     
@@ -138,7 +138,7 @@ Exec=sh ${path}.sh
 Icon=${path}.png
 StartupWMClass=jetbrains-${name}
 EOF
-    # 修改.sh文件,以使得能够正常输入中文
+    # 修改.sh文件, 以使得能够正常输入中文
     sudo bash -c "cat >> ${path}.sh" <<EOF
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx

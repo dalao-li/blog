@@ -19,7 +19,7 @@
 ```c
 std::string str;
 
-getline(cin , str);
+getline(cin, str);
 ```
 
 
@@ -34,7 +34,7 @@ int main() {
     std::string s1, s2;
     std::cin >> s1 >> s2;
     for(int i = 0; i < s1.size(); i++){
-        if(s1.find(s2 , i) != std::string::npos){
+        if(s1.find(s2, i) != std::string::npos){
             sum++;
         }
     }
@@ -54,7 +54,7 @@ int main() {
     std::string str = " 123 456237";
     int index = 3;
     int length = 1;
-    std::str.erase(index , length);
+    std::str.erase(index, length);
     std::cout << str << std::endl;
     return 0;
 }

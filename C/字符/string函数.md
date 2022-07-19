@@ -22,18 +22,18 @@
 ### 函数
 
 
-| 函数             | 说明                                                       |
-| ---------------- | ---------------------------------------------------------- |
-| `strlen(s1)`     | 返回s1 的长度。                                            |
-| `strcmp(s1, s2)` | 若 s1 == s2,值 0<br>若 s1<s2 值小于 0<br>若 s1>s2 值大于 0 |
-| `strchr(s1, ch)` | 返回一个指针,指向 ch在s1中首次出现位置                     |
+| 函数             | 说明                                                        |
+| ---------------- | ----------------------------------------------------------- |
+| `strlen(s1)`     | 返回s1 的长度。                                             |
+| `strcmp(s1, s2)` | 若 s1 == s2, 值 0<br>若 s1<s2 值小于 0<br>若 s1>s2 值大于 0 |
+| `strchr(s1, ch)` | 返回一个指针, 指向 ch在s1中首次出现位置                     |
 
 
 
 ### strstr
 
 
-- 查找 s2在s1中首次出现的位置,返回第一次出现s2的位置,若未找到则返回NULL
+- 查找 s2在s1中首次出现的位置, 返回第一次出现s2的位置, 若未找到则返回NULL
 
 ```c
 char *strstr(const char *s1, const char *s2)
@@ -65,7 +65,7 @@ char src[50], dest[50];
 strcpy(src, "AAAA");
 strcpy(dest, "BBBB");
 
-strcat(dest,src);
+strcat(dest, src);
 
 // BBBBAAAA
 printf("%s\n", dest);
@@ -86,7 +86,7 @@ char *strcpy(char *dest, const char *src)
 char a[7] = "abcdef";
 char b[4] = "ABC";
 
-strcpy(a,b);
+strcpy(a, b);
 
 // ABC
 printf("%s\n", a);
@@ -100,7 +100,7 @@ printf("%s\n", a);
 - 复制字符 c(一个无符号字符)到参数 str 所指向字符串的前 n 个字符
 
 ```c
-void *memset(void *str , int c , size_t n)
+void *memset(void *str, int c, size_t n)
 ```
 | 参数 | 含义                   |
 | ---- | ---------------------- |

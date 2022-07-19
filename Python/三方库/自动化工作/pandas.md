@@ -15,7 +15,7 @@ import pandas as pd
 
 url='http://www.kuaidaili.com/free/'
 
-# [0]：表示第一个table,多个table需要指定,如果不指定默认第一个
+# [0]：表示第一个table, 多个table需要指定, 如果不指定默认第一个
 df = pd.read_html(url)[0] 
 ```
 
@@ -27,7 +27,7 @@ import pandas as pd
 
 url='http://192.168.1.36:5000/data'
 
-# [0]：表示第一个table,多个table需要指定,如果不指定默认第一个
+# [0]：表示第一个table, 多个table需要指定, 如果不指定默认第一个
 
 df = pd.read_html(url, encoding='utf-8', header = 0)[0]
 df.to_excel('xian_tianqi.xlsx', index = False)

@@ -88,11 +88,11 @@ debug1: expecting SSH2_MSG_NEWKEYS
 debug1: SSH2_MSG_NEWKEYS received
 debug1: rekey after 134217728 blocks
 debug1: SSH2_MSG_EXT_INFO received
-debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256, rsa-sha2-512>
 debug1: SSH2_MSG_SERVICE_ACCEPT received
 
 
-debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password
+debug1: Authentications that can continue: publickey, gssapi-keyex, gssapi-with-mic, password
 debug1: Next authentication method: gssapi-keyex
 debug1: No valid Key exchange context
 debug1: Next authentication method: gssapi-with-mic
@@ -126,7 +126,7 @@ Last login: Thu Mar 11 17:51:04 2021 from 192.168.43.231
 
 ### SSH登陆日志
 
-很多Linux的新发行版已经不再使用,改为使用rsyslog,配置目录/etc/rsyslog.d
+很多Linux的新发行版已经不再使用, 改为使用rsyslog, 配置目录/etc/rsyslog.d
 
 ```sh
 /var/log/secure

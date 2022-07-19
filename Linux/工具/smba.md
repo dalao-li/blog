@@ -38,7 +38,7 @@ sudo chmod +x $HOME/share
 
 #### 修改配置
 
-- 修改smb.conf,末尾添加
+- 修改smb.conf, 末尾添加
 
 ```sh
 sudo vim /etc/samba/smb.conf

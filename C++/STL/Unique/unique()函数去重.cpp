@@ -1,5 +1,5 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Author: DaLao
  * @Email: dalao_li@163.com
@@ -12,21 +12,24 @@
 #include <algorithm>
 using namespace std;
 
-int main() {
-    int a[10] = { 0 , 7 , 7 , 6 , 1 , 1 , 5 , 5 , 8 , 9 };
-    int n = unique(a , a + 10) - a;
+int main()
+{
+    int a[10] = {0, 7, 7, 6, 1, 1, 5, 5, 8, 9};
+    int n = unique(a, a + 10) - a;
 
     // n==7
-    cout << n << endl;  
-    for(int i = 0; i < 10; i++){
+    cout << n << endl;
+    for (int i = 0; i < 10; i++)
+    {
         // 0 7 6 1 5 8 9 5 8 9
-        cout << a[i] << " ";  
+        cout << a[i] << " ";
     }
 
-    for(int i=0; i<n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         // 0 7 6 1 5 8 9
-        cout << a[i] << " ";      
+        cout << a[i] << " ";
     }
-    
+
     return 0;
 }

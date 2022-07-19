@@ -19,7 +19,7 @@ class User(models.Model):
     pwd = models.CharField(max_length = 300)
 ```
 
-此时对数据库进行操作需通过,
+此时对数据库进行操作需通过, 
 
 ```py
 User.objects.create(name = name, pwd = pwd)
@@ -29,7 +29,7 @@ User.objects.filter(name = name)
 ...
 ```
 
-若在操作过程中执行其他操作显得异常麻烦,因此可以自定义管理器
+若在操作过程中执行其他操作显得异常麻烦, 因此可以自定义管理器
 
 ```py
 class UserManager(models.Manager):
@@ -114,14 +114,14 @@ class UserDetail(generics.RetrieveUpdateDestroyAPIView):
 app/urls.py
 
 ```py
-from .views import UserList,UserDetail
+from .views import UserList, UserDetail
 from rest_framework.routers import DefaultRouter
 from django.urls import path
 
 # 路由列表
 urlpatterns = [
-    path("user/",UserList.as_view(),name="user_list"),
-    path("user/<str:pk>",UserDetail.as_view(),name="user_detail")
+    path("user/", UserList.as_view(), name="user_list"), 
+    path("user/<str:pk>", UserDetail.as_view(), name="user_detail")
 ]
 ```
 
@@ -142,7 +142,7 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('app/', include("app.urls")),
+    path('admin/', admin.site.urls), 
+    path('app/', include("app.urls")), 
 ]
 ```

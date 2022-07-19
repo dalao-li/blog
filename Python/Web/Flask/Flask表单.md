@@ -36,7 +36,7 @@
 
 
 ```py
-@app.route('/main', methods=['GET','POST'])
+@app.route('/main', methods=['GET', 'POST'])
 def main_page():
     if request.method == 'GET':
         return render_template('main.html')

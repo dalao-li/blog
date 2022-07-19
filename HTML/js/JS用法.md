@@ -94,7 +94,7 @@ if (value != null && value != "") {
 #### GET
 
 ```js
-function get(url , callback) {
+function get(url, callback) {
     const XMLHttpRequest = require("xhr2")
     const httpRequest = new XMLHttpRequest()
 
@@ -115,12 +115,12 @@ function get(url , callback) {
 #### POST
 
 ```js
-function post(url , data , callback){
+function post(url, data, callback){
     const XMLHttpRequest = require("xhr2")
     const httpRequest = new XMLHttpRequest()
 
     httpRequest.open('POST', url, true)
-    httpRequest.setRequestHeader("Content-type","application/json")
+    httpRequest.setRequestHeader("Content-type", "application/json")
     // 转为JSON字符串
     httpRequest.send(JSON.stringify(data))
     httpRequest.onreadystatechange = ()=> {

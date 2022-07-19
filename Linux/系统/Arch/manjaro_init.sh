@@ -90,7 +90,7 @@ set_proxy(){
  
     sudo docker run -itd \
         -p 7890:7890 -p 7891:7891 -p 9090:9090 \
-        --mount type=bind,source="${HOME}/${path}",target="/root/${path}",readonly \
+        --mount type=bind, source="${HOME}/${path}", target="/root/${path}", readonly \
         --restart=unless-stopped \
         --name=clash_test \
         dreamacro/clash:v1.8.0 

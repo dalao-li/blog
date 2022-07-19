@@ -21,14 +21,14 @@ import "fmt"
 
 func main() {
     var a []int
-    b := []int{2 , 3 , 4}
+    b := []int{2, 3, 4}
 
     // 单个添加
-    a = append(a , 1)
+    a = append(a, 1)
 
     // 添加数组
-    a = append(a , b...)
-    for _ , v := range a {
+    a = append(a, b...)
+    for _, v := range a {
         fmt.Println(v)
     }
 }
@@ -48,9 +48,9 @@ import (
 )
 
 func main() {
-    a := []int{3 , 4 , 5 , 1 , 2}
+    a := []int{3, 4, 5, 1, 2}
     sort.Ints(a)
-    for _ , v := range a {
+    for _, v := range a {
         fmt.Println(v)
     }
 }

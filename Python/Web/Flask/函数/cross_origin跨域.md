@@ -11,7 +11,7 @@
 
 ### 问题
 
-前端使用 XMLHttpRequest 发送 GET 请求时,后端 Flask已收到请求,但前端无法显示返回值
+前端使用 XMLHttpRequest 发送 GET 请求时, 后端 Flask已收到请求, 但前端无法显示返回值
 
 - 前端
   
@@ -24,10 +24,10 @@
         function loadXMLDoc() {
             var xmlhttp
             if (window.XMLHttpRequest) {
-                // IE7+,Firefox,Chrome,Opera,Safari 浏览器执行代码
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
                 xmlhttp = new XMLHttpRequest()
             } else {
-                // IE6,IE5 浏览器执行代码
+                // IE6, IE5 浏览器执行代码
                 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
             }
             xmlhttp.onreadystatechange = function () {
@@ -55,7 +55,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/', methods=['GET', 'POST'])
 def hello_world():
     return 'HELLO'
 
@@ -69,12 +69,12 @@ if __name__ == '__main__':
 
 ![](https://cdn.hurra.ltd/img/20200722234713.png)
 
-通过查询此为跨域问题,所以需设置Flask允许跨域
+通过查询此为跨域问题, 所以需设置Flask允许跨域
 
 
 ### 解决
 
-Flask 配 Cors 跨域,使用 flask-cors 包,并有两种方式
+Flask 配 Cors 跨域, 使用 flask-cors 包, 并有两种方式
 
 | 方式                 | 范围              | 特点                      |
 | -------------------- | ----------------- | ------------------------- |
@@ -92,7 +92,7 @@ from flask_cors import cross_origin
 
 app = Flask(__name__)
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/', methods=['GET', 'POST'])
 @cross_origin()
 def hello_world():
     return 'HELLO'

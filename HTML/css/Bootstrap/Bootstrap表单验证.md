@@ -21,7 +21,7 @@
 
 ### head 部分
 
-注意依赖文件的路径需根据自己实际下载文件路径进行修改,网上教程中的代码无法直接使用往往就是因为依赖库没处理好
+注意依赖文件的路径需根据自己实际下载文件路径进行修改, 网上教程中的代码无法直接使用往往就是因为依赖库没处理好
 
 ```html
 <head>
@@ -173,93 +173,93 @@
             $('#captchaOperation').html([randomNumber(1, 50), '+', randomNumber(1, 50), '='].join(' '));
 
             $('#defaultForm').bootstrapValidator({
-                message: 'This value is not valid',
+                message: 'This value is not valid', 
                 feedbackIcons: {
-                    valid: 'glyphicon glyphicon-ok',
-                    invalid: 'glyphicon glyphicon-remove',
+                    valid: 'glyphicon glyphicon-ok', 
+                    invalid: 'glyphicon glyphicon-remove', 
                     validating: 'glyphicon glyphicon-refresh'
-                },
+                }, 
                 fields: {
                     username: {
-                        message: 'The username is not valid',
+                        message: 'The username is not valid', 
                         validators: {
                             notEmpty: {
                                 message: '用户名不能为空'
-                            },
+                            }, 
                             stringLength: {
-                                min: 5,
-                                max: 15,
+                                min: 5, 
+                                max: 15, 
                                 message: '用户名的长度应在5-15位字符'
-                            },
+                            }, 
                             regexp: {
-                                regexp: /^[a-zA-Z0-9_\.]+$/,
+                                regexp: /^[a-zA-Z0-9_\.]+$/, 
                                 message: '用户名仅能由字母数字与下划线组成'
-                            },
+                            }, 
                             different: {
-                                field: 'password',
+                                field: 'password', 
                                 message: '用户名与密码不能相同'
                             }
                         }
-                    },
+                    }, 
                     email: {
                         validators: {
                             notEmpty: {
                                 message: '邮箱不能为空'
-                            },
+                            }, 
                             emailAddress: {
                                 message: '邮箱格式不正确'
                             }
                         }
-                    },
+                    }, 
                     password: {
                         validators: {
                             notEmpty: {
                                 message: '密码不能为空'
-                            },
+                            }, 
                             identical: {
-                                field: 'confirmPassword',
+                                field: 'confirmPassword', 
                                 message: '两次密码不相同'
-                            },
+                            }, 
                             different: {
-                                field: 'username',
+                                field: 'username', 
                                 message: '密码与用户名不能相同'
                             }
                         }
-                    },
+                    }, 
                     confirmPassword: {
                         validators: {
                             notEmpty: {
                                 message: '确认密码不能为空'
-                            },
+                            }, 
                             identical: {
-                                field: 'password',
+                                field: 'password', 
                                 message: '两次密码不相同'
-                            },
+                            }, 
                             different: {
-                                field: 'username',
+                                field: 'username', 
                                 message: '密码与用户名不能相同'
                             }
                         }
-                    },
+                    }, 
                     captcha: {
                         validators: {
                             callback: {
-                                message: '验证码错误',
+                                message: '验证码错误', 
                                 callback: function (value, validator) {
-                                    var items = $('#captchaOperation').html().split(' '),
+                                    var items = $('#captchaOperation').html().split(' '), 
                                         sum = parseInt(items[0]) + parseInt(items[2]);
                                     return value == sum;
                                 }
                             }
                         }
-                    },
+                    }, 
                     acceptTerms: {
                         validators: {
                             notEmpty: {
                                 message: '必须同意协议'
                             }
                         }
-                    },
+                    }, 
                 }
             });
 

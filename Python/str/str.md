@@ -37,11 +37,11 @@ print(type(s))
 ### 切片
 
 
-| 语法          | 范围         |
-| ------------- | ------------ |
-| $[start:end]$ | [start,end)  |
-| $[start:]$    | [start,末尾] |
-| $[:end]$      | [开头,end)   |
+| 语法          | 范围          |
+| ------------- | ------------- |
+| $[start:end]$ | [start, end)  |
+| $[start:]$    | [start, 末尾] |
+| $[:end]$      | [开头, end)   |
 
 
 ```py
@@ -87,7 +87,7 @@ type(s.split())
 find(s, start, end)
 ```
 
-在字符串[start,end]范围里查找子串s,若存在返回首个索引,否则返回-1
+在字符串[start, end]范围里查找子串s, 若存在返回首个索引, 否则返回-1
 
 ```py
 s = "abcdefg"
@@ -105,7 +105,7 @@ print(x)
 conut(s, start, end)
 ```
 
-返回字符串[start,end]范围内s出现的次数
+返回字符串[start, end]范围内s出现的次数
 
 
 
@@ -145,19 +145,19 @@ age = 21
 - %
 
 ```py
-s = "My name is %s , I am %d years old"%(name,age)
+s = "My name is %s, I am %d years old"%(name, age)
 ```
 
 - format
 
 ```py
-s = "My name is {0} , I am {1} years old".format(name,age)
+s = "My name is {0}, I am {1} years old".format(name, age)
 ```
 
 - dict
 
 ```py
-d = {'name':"Dalao" , 'age':21}
+d = {'name':"Dalao", 'age':21}
 
-s = "My name is %(name)s , I am %(age)d years old"%data
+s = "My name is %(name)s, I am %(age)d years old"%data
 ```

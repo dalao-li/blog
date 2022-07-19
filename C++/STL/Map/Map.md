@@ -14,23 +14,23 @@
 ### 1.1 定义
 
 ```c
-template <class T , class V>
-map<T , V> m;
+template <class T, class V>
+map<T, V> m;
 ```
 
 
 ### 1.2 添加
 
 ```c
-template <class T , class V>
-map<T , V> m;
+template <class T, class V>
+map<T, V> m;
 ```
 
 
 #### 插入
 
 ```c
-m.insert(make_pair(key , value))
+m.insert(make_pair(key, value))
 ```
 
 
@@ -44,8 +44,8 @@ m[key] = value
 ### 1.3 取值
 
 ```c
-template <class T , class V>
-map<T , V> m;
+template <class T, class V>
+map<T, V> m;
 
 m[key]
 ```
@@ -54,10 +54,10 @@ m[key]
 ### 1.4 遍历
 
 ```c++
-template <class T , class V>
-map<T , V> m;
+template <class T, class V>
+map<T, V> m;
 
-for(map<T , V>::iterator it = m.begin(); it != m.end(); it++) {
+for(map<T, V>::iterator it = m.begin(); it != m.end(); it++) {
     // key = it->first;
     // value = it->second;
 }
@@ -66,13 +66,13 @@ for(map<T , V>::iterator it = m.begin(); it != m.end(); it++) {
 
 ### 1.5 查询
 
-查找 key 是否存在,若为 end()即不存在
+查找 key 是否存在, 若为 end()即不存在
 
 ```c
-template <class T , class V>
-map<T , V> m;
+template <class T, class V>
+map<T, V> m;
 
-map<T , V>::iteraotr find(key)
+map<T, V>::iteraotr find(key)
 ```
 
 
@@ -81,8 +81,8 @@ map<T , V>::iteraotr find(key)
 删除键为 key 的键值对
 
 ```c
-template <class T , class V>
-map<T , V> m;
+template <class T, class V>
+map<T, V> m;
 
 m.erase(key)
 ```
@@ -95,7 +95,7 @@ m.erase(key)
 
 
 ```c
-pair<T , V> p;
+pair<T, V> p;
 
 p.first = key;
 p.second = value;
@@ -103,7 +103,7 @@ p.second = value;
 
 
 ```c
-pair<T , V> p;
+pair<T, V> p;
 
-p = make_pair(key , value);
+p = make_pair(key, value);
 ```

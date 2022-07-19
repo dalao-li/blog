@@ -42,7 +42,7 @@ python manage.py runserver [0.0.0.0:8000]
 #### 迁移
 
 ```sh
-# 终端执行,为改动创建迁移记录
+# 终端执行, 为改动创建迁移记录
 python manage.py makemigrations
 
 # 将操作同步到数据库

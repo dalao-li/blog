@@ -1,5 +1,5 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Author: dalao
  * @Email: dalao_li@163.com
@@ -8,50 +8,52 @@
  * @LastEditTime: 2022-05-24 23:06:46
  */
 
+#include <iostream>
+#include <string>
 
-#include<iostream>
-#include<string>
+class People
+{
+public:
+    People() {}
 
+    People(int age, std::string name)
+    {
+        this->m_age = age;
+        this->m_name = name;
+    }
 
-class People {
-    public:
-        People() {}
+    ~People() {}
 
-        People(int age , std::string name) {
-            this->m_age = age;
-            this->m_name = name;
-        }
+    virtual void display() = 0;
 
-        ~People() {}
-
-        virtual void display() = 0;
-
-    protected:
-        int m_age;
-        std::string m_name;
+protected:
+    int m_age;
+    std::string m_name;
 };
 
+class Student : public People
+{
+public:
+    Student() {}
 
-class Student : public People {
-    public:
-        Student() {}
+    Student(int age, std::string name, std::string num) : People(age, name)
+    {
+        this->m_num = num;
+    }
 
-        Student(int age , std::string name , std::string num) : People(age , name) {
-            this->m_num = num;
-        }
+    void display()
+    {
+        std::cout << "age:" << m_age << "\nname:" << m_name << "\nnum" << m_num << std::endl;
+    }
+    ~Student() {}
 
-        void display() {
-            std::cout << "age:" << m_age << "\nname:" << m_name << "\nnum" << m_num << std::endl;
-        }
-        ~Student() {}
-    
-    private:
-        std::string m_num;
-}; 
+private:
+    std::string m_num;
+};
 
-
-int main() {
-    Student stu = Student(20 , "LILI" , "100-AX");
+int main()
+{
+    Student stu = Student(20, "LILI", "100-AX");
     stu.display();
 
     return 0;

@@ -29,10 +29,10 @@ docker exec -it mongo mongo admin
 ### 1.2 创建用户
 
 
-创建一个名为 admin,密码为 123456 的用户
+创建一个名为 admin, 密码为 123456 的用户
 
 ```sh
-db.createUser({ user:'admin',pwd:'123456',roles:[{ role:'userAdminAnyDatabase',db:'admin'},"readWriteAnyDatabase"]})
+db.createUser({ user:'admin', pwd:'123456', roles:[{ role:'userAdminAnyDatabase', db:'admin'}, "readWriteAnyDatabase"]})
 ```
 
 ![](https://cdn.hurra.ltd/img/20220112183857.png)
@@ -43,11 +43,11 @@ db.createUser({ user:'admin',pwd:'123456',roles:[{ role:'userAdminAnyDatabase',d
 
 
 ```sh
-db.auth(用户名,密码)
+db.auth(用户名, 密码)
 ```
 
 ```sh
-db.auth('admin','123456')
+db.auth('admin', '123456')
 ```
 
 ![](https://cdn.hurra.ltd/img/20220112184110.png)
@@ -66,7 +66,7 @@ use 数据库
 
 - 创建 test 数据库
 
-这里暂不会显示,因为其中还未插入数据
+这里暂不会显示, 因为其中还未插入数据
 
 ![](https://cdn.hurra.ltd/img/20220112184225.png)
 
@@ -92,13 +92,13 @@ db.createCollection("集合")
 #### 插入数据
 
 ```sh
-db.[集合].insert(JSON数据1,JSON数据2...)
+db.[集合].insert(JSON数据1, JSON数据2...)
 ```
 
 - 向stu集合插入两条数据
 
 ```
-db.stu.insert([{name:"Ling",age:20},{name:"Wang",age:22}])
+db.stu.insert([{name:"Ling", age:20}, {name:"Wang", age:22}])
 ```
 
 ![](https://cdn.hurra.ltd/img/20220112184807.png)
@@ -158,13 +158,13 @@ db.stu.find({age:{$gte:21}}).pretty()
 ### 2.5 修改
 
 ```sh
-db.[集合].update({key1:value},{$set:{key2:new_value}})
+db.[集合].update({key1:value}, {$set:{key2:new_value}})
 ```
 
 - 将 name 为 Ling 的文档中 age 值改为 30
 
 ```sh
-db.stu.update({name:"Ling"},{$set:{age:30}})
+db.stu.update({name:"Ling"}, {$set:{age:30}})
 ```
 ![](https://cdn.hurra.ltd/img/20220112185815.png)
 
@@ -264,19 +264,19 @@ insert_one(JSON数据)
 #### 多条插入
 
 ```py
-insert_many(JSON数据1,JSON数据2...)
+insert_many(JSON数据1, JSON数据2...)
 ```
 
 ```py
 ...
 collect = client['test']['stu']
 
-collect.insert_one({"name":"new_name","age":19})
+collect.insert_one({"name":"new_name", "age":19})
 
 collect.insert_many([
-    {"name":"new_name2","age",20},
-    {"name":"new_name3","age":19},
-    {"name":"new_name4","age":19}
+    {"name":"new_name2", "age", 20}, 
+    {"name":"new_name3", "age":19}, 
+    {"name":"new_name4", "age":19}
 ])
 
 for i in collect.find():

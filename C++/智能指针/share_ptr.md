@@ -23,7 +23,7 @@ std::shared_ptr<T> p;
 
 - 赋值初始化
 
-std::make_shared<T>初始化,指向一块10 个 int 类型数据的堆内存空间
+std::make_shared<T>初始化, 指向一块10 个 int 类型数据的堆内存空间
 
 ```c
 std::shared_ptr<int> p = std::make_shared<int>(10);

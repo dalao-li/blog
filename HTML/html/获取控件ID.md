@@ -19,7 +19,7 @@
 ```js
 function download(){
     const id = event.target.id
-    $.get('/del/' + id , function () {
+    $.get('/del/' + id, function () {
             location.reload()
             alert("删除成功")
     })
@@ -31,7 +31,7 @@ function download(){
 
 ![](https://cdn.hurra.ltd/img/20200829232106.png)
 
-当前为每行增加了一个 checkbox 控件,希望其动态生成"checkout+序号"的 id,方便后期对选择的行进行操作
+当前为每行增加了一个 checkbox 控件, 希望其动态生成"checkout+序号"的 id, 方便后期对选择的行进行操作
 
 ```html
 <td>
@@ -44,6 +44,6 @@ function download(){
 </td>
 ```
 
-此处为 jinja 模板,其他如 JSP 等等与此大同小异
+此处为 jinja 模板, 其他如 JSP 等等与此大同小异
 
 ![](https://cdn.hurra.ltd/img/20200829232740.png)

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-04-08 22:47:18
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 01:40:35
+ * @LastEditTime: 2022-07-19 21:56:30
  */
 
 #include <iostream>
@@ -54,18 +54,18 @@ BSTNode<T> *searchBST(BSTNode<T> *&root, const T value)
 template <class T>
 BSTNode<T> *insertBST(BSTNode<T> *&root, const T value)
 {
-    //当前节点为空,说明是叶子节点,可以插入
+    // 当前节点为空,说明是叶子节点,可以插入
     if (root == nullptr)
     {
         root = new BSTNode<T>(value, nullptr, nullptr);
         return root;
     }
-    //值小于根结点时,插入根节点的左子树
+    // 值小于根结点时,插入根节点的左子树
     if (root->value > value)
     {
         root->leftSon = insertBST(root->leftSon, value);
     }
-    //值大于根结点时,插入根节点的右子树
+    // 值大于根结点时,插入根节点的右子树
     if (root->value < value)
     {
         root->rightSon = insertBST(root->rightSon, value);

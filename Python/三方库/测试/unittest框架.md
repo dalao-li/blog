@@ -11,45 +11,45 @@
 ## 单元测试
 
 
-单元测试是指,对软件中的最小可测试单元在与程序其他部分相隔离的情况下进行检查和验证的工作
+单元测试是指, 对软件中的最小可测试单元在与程序其他部分相隔离的情况下进行检查和验证的工作
 
-最小可测试单元通常是指函数或者类,一般是开发来做,按照测试阶段来分,为单元测试、集成测试、系统测试以及验收测试
+最小可测试单元通常是指函数或者类, 一般是开发来做, 按照测试阶段来分, 为单元测试、集成测试、系统测试以及验收测试
 
 
 ### unittest框架
 
 - test case
 
-测试用例,unittest中提供了一个基本类TestCase,可以用来创建新的测试用例
+测试用例, unittest中提供了一个基本类TestCase, 可以用来创建新的测试用例
 
-调用run()方法,会依次调用setUp方法、执行用例的方法、tearDown方法.
+调用run()方法, 会依次调用setUp方法、执行用例的方法、tearDown方法.
 
 - test fixure
 
-测试夹具,用于测试用例环境的搭建和销毁
+测试夹具, 用于测试用例环境的搭建和销毁
 
-用例测试前准备环境的搭建(SetUp前置条件),测试后环境的还原(TearDown后置条件),比如测试前需要登录获取token等就是测试用例需要的环境,运行完后执行下一个用例前需要还原环境
+用例测试前准备环境的搭建(SetUp前置条件), 测试后环境的还原(TearDown后置条件), 比如测试前需要登录获取token等就是测试用例需要的环境, 运行完后执行下一个用例前需要还原环境
 
 - test suite
 
-测试套件,用来把需要一起执行的测试用例集中放到一块执行,可以通过addTest()方法手动增加Test Case,也可以通过TestLoader自动添加Test Case,TestLoader在添加用例时会没有顺序
+测试套件, 用来把需要一起执行的测试用例集中放到一块执行, 可以通过addTest()方法手动增加Test Case, 也可以通过TestLoader自动添加Test Case, TestLoader在添加用例时会没有顺序
 
 - test runner
 
-执行测试用例,并返回测试用例的执行结果.它还可以用图形或者文本接口,把返回的测试结果更形象的展现出来,如:HTMLTestRunner
+执行测试用例, 并返回测试用例的执行结果.它还可以用图形或者文本接口, 把返回的测试结果更形象的展现出来, 如:HTMLTestRunner
 
 
 ### TestCase测试用例
 
-编写测试用例前,需建一个测试类继承unittest里的TestCase类,编写测试用例的步骤如下
+编写测试用例前, 需建一个测试类继承unittest里的TestCase类, 编写测试用例的步骤如下
 
 - 导入unittest模块
   
-- 创建一个测试类,并继承unittest.TestCase()
+- 创建一个测试类, 并继承unittest.TestCase()
   
-- 定义测试方法,方法名必须以test_开头
+- 定义测试方法, 方法名必须以test_开头
   
-- 调用unittest.main()方法来运行测试用例,unittest.main()方法会搜索该模块下所有以test开头的测试用例方法,并自动执行
+- 调用unittest.main()方法来运行测试用例, unittest.main()方法会搜索该模块下所有以test开头的测试用例方法, 并自动执行
 
 
 以注册功能为例
@@ -106,17 +106,17 @@ class TestRegister(unittest.TestCase):
     def test_register_success(self):
         # 测试数据
         data = ("mikitest", "miki123", "miki123")
-        # 把测试数据传到被测的代码,接收实际结果
+        # 把测试数据传到被测的代码, 接收实际结果
         result = register(*data)
         # 预期结果
         expected = {
-            "code": 1,
+            "code": 1, 
             "msg": "注册成功!"
         }
-        # 断言,预期和实际是否一致,一致即用例通过
+        # 断言, 预期和实际是否一致, 一致即用例通过
         self.assertEqual(expected, result)
 
-    # 注册失败,用户名为空
+    # 注册失败, 用户名为空
     def test_username_isnull(self):
         data = ("", "miki123", "miki123")
         result = register(*data)
@@ -126,18 +126,18 @@ class TestRegister(unittest.TestCase):
         }
         self.assertEqual(expected, result)
 
-    # 注册失败,用户名大于18位
+    # 注册失败, 用户名大于18位
     def test_username_lt6(self):
         data = ("mikitestmikitestmikitest", "miki123", "miki123")
         result = register(*data)
-        # 这条用例应该是不通过的,注册代码bug
+        # 这条用例应该是不通过的, 注册代码bug
         expected = {
             "code": 0, 
             "msg": "用户名和密码必须在6-18位之间！"
         }
         self.assertEqual(expected, result)
 
-    # 注册失败,两次密码不一致
+    # 注册失败, 两次密码不一致
     def test_passwd(self):
         data = ("miki123", "test123", "test321")
         result = register(*data)
@@ -148,7 +148,7 @@ class TestRegister(unittest.TestCase):
         self.assertEqual(expected, result)
 
 
-# 如果直接运行这个文件,需要使用unittest中的main函数来执行测试用例
+# 如果直接运行这个文件, 需要使用unittest中的main函数来执行测试用例
 if __name__ == '__main__':
     unittest.main()
 ```

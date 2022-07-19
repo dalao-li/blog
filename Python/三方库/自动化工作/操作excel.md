@@ -53,8 +53,8 @@ def download_excel():
     b = Workbook(fp, {'in_memory': True})
     s = b.add_worksheet('Sheet1')
     data = {
-        '事项名称: ': p.name,
-        '受理时间: ': p.time,
+        '事项名称: ': p.name, 
+        '受理时间: ': p.time, 
         # ....
     }
     # 写入标题
@@ -93,7 +93,7 @@ window.title('My Window')
 window.geometry('1500x900')
 
 e = tk.Entry(window, show = None, font=('Arial', 14), width = 50) 
-e.place(x = 20,y = 20)
+e.place(x = 20, y = 20)
 
 def download():
     url = e.get()
@@ -102,9 +102,9 @@ def download():
     df.to_excel(name + '.xlsx', index = False)
 
 b = tk.Button(window, text='下载', font=('Arial', 12), width = 10, height = 1, command=download)
-b.place(x = 20,y = 80)
+b.place(x = 20, y = 80)
 
 c = tk.Button(window, text='清空', font=('Arial', 12), width = 10, height = 1, command=e.select_clear())
-c.place(x = 250,y = 80)
+c.place(x = 250, y = 80)
 window.mainloop()
 ```

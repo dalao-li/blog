@@ -34,7 +34,7 @@ config.ini
 
 socket = 127.0.0.1:8000
 
-# 启动主进程,来管理其他进程
+# 启动主进程, 来管理其他进程
 master = true
 
 # 开启的进程数量
@@ -61,7 +61,7 @@ server {
         # 必须和 uwsgi中的设置一致
         uwsgi_pass  127.0.0.1:8000;
         
-        # 入口文件,即wsgi.py相对于项目根目录的位置,"."相当于一层目录
+        # 入口文件, 即wsgi.py相对于项目根目录的位置, "."相当于一层目录
         uwsgi_param UWSGI_SCRIPT /mysite/mysite.wsgi;
         
         # 项目根目录

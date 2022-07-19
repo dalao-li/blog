@@ -23,7 +23,7 @@ var (
 )
 
 func main() {
-    f , err = os.Create("文件名")
+    f, err = os.Create("文件名")
     if err != nil {
         log.Fatal(err)
     }

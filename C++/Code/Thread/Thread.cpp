@@ -1,5 +1,5 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Author: DaLao
  * @Email: dalao_li@163.com
@@ -7,28 +7,32 @@
  * @LastEditors: DaLao
  * @LastEditTime: 2022-05-01 00:23:30
  */
-#include<iostream>
-#include<thread>
-#include<ctime>
-
+#include <iostream>
+#include <thread>
+#include <ctime>
 
 using namespace std;
 
-void output1() {
+void output1()
+{
     printf("ouput1\n");
-    for (int i = 0; i < 4; i++) {
-        printf("%d\n" , i);
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%d\n", i);
     }
 }
 
-void output2() {
+void output2()
+{
     printf("ouput2\n");
-    for (int i = 0; i < 4; i++) {
-        printf("%d\n" , i);
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%d\n", i);
     }
 }
 
-int main() {
+int main()
+{
 
     thread t1(output1);
     thread t2(output2);

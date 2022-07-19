@@ -51,7 +51,7 @@ from django.db import models
 
 # 学生表
 class Stu(models.Model):
-    choices=(('M',  '男'), ('W',  '女')),
+    choices=(('M',  '男'), ('W',  '女')), 
     num = models.CharField(primary_key=True, verbose_name='学号', help_text='请输入学号', max_length=5)
     name = models.CharField(verbose_name='姓名', help_text='请输入姓名', max_length=5)
     age = models.IntegerField(verbose_name='年龄', help_text='请输入年龄')

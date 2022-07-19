@@ -27,7 +27,7 @@ sudo code --user-data-dir="~/.vscode-root"
 
 ```sh
 "workbench.colorCustomizations": {
-    "editor.selectionHighlightBackground": "#8ee267",
+    "editor.selectionHighlightBackground": "#8ee267", 
     "editor.selectionHighlightBorder": "#8ee267"  
 }
 ```
@@ -49,13 +49,13 @@ sudo code --user-data-dir="~/.vscode-root"
 - 高亮选中内容
 
 ```c
-// 方法一,安装插件
+// 方法一, 安装插件
 highlight-icemode
 
-// 方法二,settings.json增加
+// 方法二, settings.json增加
 "workbench.colorCustomizations": {
     // 背景颜色
-    "editor.selectionHighlightBackground": "#000000",
+    "editor.selectionHighlightBackground": "#000000", 
     // 边框颜色
     "editor.selectionHighlightBorder": "#ecd9d9"  
 }

@@ -5,17 +5,16 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 01:38:35
+ * @LastEditTime: 2022-07-19 21:57:33
  */
 
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h>
 
-template <class T>
 typedef struct Tree
 {
-    T data;
+    int data;
     Tree *leftSon;
     Tree *rightSon;
 } Tree, *TreeList;

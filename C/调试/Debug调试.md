@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-22 23:16:23
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-15 22:39:57
+ * @LastEditTime: 2022-07-19 22:03:05
 -->
 
 ## Debug
@@ -19,7 +19,7 @@ int main(void) {
 
     for(int i = 0; i < 10; i++) {
         sum += i;
-        printf("%d\n" , sum);
+        printf("%d\n", sum);
     }
 
     return 0;
@@ -32,7 +32,7 @@ int main(void) {
 
 ![](https://cdn.hurra.ltd/img/20210222232125.png)
 
-- 编译,设置断点
+- 编译, 设置断点
 
 - 开始调试
 

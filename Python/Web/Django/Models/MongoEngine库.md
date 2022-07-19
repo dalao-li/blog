@@ -16,7 +16,7 @@
 ```py
 from mongoengine import *
 
-connect('admin', host='localhost', port=27017,username='admin',password='123456')
+connect('admin', host='localhost', port=27017, username='admin', password='123456')
 
 class Score(EmbeddedDocument):
     name = StringField(required=True, max_length=200)

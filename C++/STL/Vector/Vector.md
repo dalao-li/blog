@@ -19,23 +19,23 @@
 ```c
 std::vector<T> v;
 
-std::vector<int> v = {1 , 2 , 3 , 4 , 5};
+std::vector<int> v = {1, 2, 3, 4, 5};
 ```
 
 
 #### 拷贝
 
 ```c
-std::vector<T> v(count , value);
+std::vector<T> v(count, value);
 
 // 初始化10个0
-std::vector<int> v(10 , 0);
+std::vector<int> v(10, 0);
 ```
 
 
 #### 预处理
 
-若知道需保存数据量size,可用reserve提前申请,避免多次动态申请内存消耗时间
+若知道需保存数据量size, 可用reserve提前申请, 避免多次动态申请内存消耗时间
 
 ```c
 std::vector<T> v;
@@ -70,7 +70,7 @@ v.push_back(value);
 std::vector<T> v;
 
 // 在index位置插入value
-v.insert(v.begin() + index , value);
+v.insert(v.begin() + index, value);
 ```
 
 
@@ -114,7 +114,7 @@ for(unsigned int i = 0; i < v.size(); i++){
 ```c
 std::vector<T> v;
 
-v.earse(v.begin() + x , v.end() - y);
+v.earse(v.begin() + x, v.end() - y);
 ```
 
 
@@ -150,7 +150,7 @@ v.clear();
 ```c
 std::vector<T> v;
 
-reverse(v.begin() , v.end());
+reverse(v.begin(), v.end());
 ```
 
 
@@ -166,7 +166,7 @@ reverse(v.begin() , v.end());
 ```c
 std::vector<T> v;
 
-sort(v.begin() , v.end());
+sort(v.begin(), v.end());
 ```
 
 
@@ -190,13 +190,13 @@ class Stu {
 };
 
 // 按姓名排序
-bool cmp(Stu a , Stu b) {
+bool cmp(Stu a, Stu b) {
     return a.getName() < b.getName();
 }
 
 std::vector<Stu> stu;
 
-sort(stu.begin() , stu.end() , cmp);
+sort(stu.begin(), stu.end(), cmp);
 ```
 
 
@@ -213,9 +213,9 @@ sort(stu.begin() , stu.end() , cmp);
 ...
 
 // 迭代器指向最大值
-vector<T>::iterator it = max_element(v.begin() , v.end());
+vector<T>::iterator it = max_element(v.begin(), v.end());
 
-vector<T>::iterator it = min_element(v.begin() , v.end());
+vector<T>::iterator it = min_element(v.begin(), v.end());
 
 // 下标
 vector<T>::iterator index = v.begin() - it;
@@ -225,12 +225,12 @@ vector<T>::iterator index = v.begin() - it;
 #### 累加
 
 ```c++
-accumulate(v.begin() , v.end() , 0, plus<T>())
+accumulate(v.begin(), v.end(), 0, plus<T>())
 ```
 
 
 #### 累乘
 
 ```c++
-accumulate(v.begin() , v.end(), 1 , multiplies<T>())
+accumulate(v.begin(), v.end(), 1, multiplies<T>())
 ```

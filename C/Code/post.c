@@ -26,7 +26,7 @@ void post()
     int socket_fd = socket(AF_INET, SOCK_STREAM, 0);
     if (!socket_fd)
     {
-        printf("创建网络连接失败,本线程即将终止---socket error!\n");
+        printf("创建网络连接失败, 本线程即将终止---socket error!\n");
         return;
     }
     struct sockaddr_in server_addr;
@@ -35,12 +35,12 @@ void post()
     server_addr.sin_port = htons(PORT);
     if (!inet_pton(AF_INET, IPSTR, &server_addr.sin_addr))
     {
-        printf("创建网络连接失败,本线程即将终止--inet_pton error!\n");
+        printf("创建网络连接失败, 本线程即将终止--inet_pton error!\n");
         return;
     }
     if (connect(socket_fd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0)
     {
-        printf("连接到服务器失败,connect error!\n");
+        printf("连接到服务器失败, connect error!\n");
         return;
     }
     printf("与远端建立了连接\n");
@@ -66,10 +66,10 @@ void post()
     int ret = write(socket_fd, str1, strlen(str1));
     if (!ret)
     {
-        printf("发送失败!错误代码是%d,错误信息是'%s'\n", errno, strerror(errno));
+        printf("发送失败!错误代码是%d, 错误信息是'%s'\n", errno, strerror(errno));
         return;
     }
-    printf("消息发送成功,共发送了%d个字节!\n\n", ret);
+    printf("消息发送成功, 共发送了%d个字节!\n\n", ret);
     // 描述符集t_set1
     fd_set t_set1;
     FD_ZERO(&t_set1);
@@ -84,17 +84,17 @@ void post()
         if (select(socket_fd + 1, &t_set1, NULL, NULL, &tv) == -1)
         {
             close(socket_fd);
-            printf("在读取数据报文时SELECT检测到异常,该异常导致线程终止！\n");
+            printf("在读取数据报文时SELECT检测到异常, 该异常导致线程终止！\n");
             return;
         }
-        // 判断描述符socket_fd是否在给定的描述符集t_set1中,通常配合select函数使用
+        // 判断描述符socket_fd是否在给定的描述符集t_set1中, 通常配合select函数使用
         if (FD_ISSET(socket_fd, &t_set1))
         {
             memset(buf, 0, 4096);
             if (read(socket_fd, buf, 4095) == 0)
             {
                 close(socket_fd);
-                printf("读取数据报文时发现远端关闭,该线程终止!\n");
+                printf("读取数据报文时发现远端关闭, 该线程终止!\n");
                 return;
             }
             printf("%s\n", buf);

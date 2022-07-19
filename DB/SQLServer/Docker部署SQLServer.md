@@ -62,7 +62,7 @@ GO
 
 ![](https://cdn.hurra.ltd/img/20201012130931.png)
 
-别忘记输入`GO`,那样才会执行命令(反人类的SQLServer)
+别忘记输入`GO`, 那样才会执行命令(反人类的SQLServer)
 
 
 
@@ -73,7 +73,7 @@ GO
 
 ![](https://cdn.hurra.ltd/img/20201012105710.png)
 
-注意:反人类的SQLServer的主机地址需写为: `ip,端口`,注意是`逗号`
+注意:反人类的SQLServer的主机地址需写为: `ip, 端口`, 注意是`逗号`
 
 ![](https://cdn.hurra.ltd/img/20201012130100.png)
 
@@ -81,10 +81,10 @@ GO
 import pymssql
 
 conn = pymssql.connect(
-    host = IP:端口,
-    user = "sa",
-    password = 密码,
-    database = 数据库,
+    host = IP:端口, 
+    user = "sa", 
+    password = 密码, 
+    database = 数据库, 
     charset = 'utf8'
 )
 

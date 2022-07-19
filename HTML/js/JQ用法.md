@@ -57,10 +57,10 @@ function(){}
 ### HTTP请求
 
 ```js
-$.get(URL,callback)
+$.get(URL, callback)
 
 
-$.post(URL,data,callback)
+$.post(URL, data, callback)
 ```
 
 #### 封装 Ajax
@@ -77,20 +77,20 @@ $.post(URL,data,callback)
 // 发送ajax请求
 function sendAjax(type, url, param, callback) {
     $.ajax({
-        async: false,
-        ache: false,
-        type: type,
-        url: url,
+        async: false, 
+        ache: false, 
+        type: type, 
+        url: url, 
         // 将发送的数据转换为JSON字符串
-        data: JSON.stringify(param),
+        data: JSON.stringify(param), 
         // 服务端返回数据的格式
-        dataType: "json",
+        dataType: "json", 
         success: function (data) {
             callback(data.result)
-        },
+        }, 
         error: function () {
         // 失败处理
-    },
+    }, 
   })
 }
 ```
@@ -111,8 +111,8 @@ function get_form_value() {
     // serializeArray() 方法
     // 通过序列化表单值来创建对象(name 和 value)的数组
     const t = $("form").serializeArray();
-    // .each() 对 jQuery 对象进行迭代,为每个匹配元素执行函数
-    $.each(t , function () {
+    // .each() 对 jQuery 对象进行迭代, 为每个匹配元素执行函数
+    $.each(t, function () {
         d[this.name] = this.value;
     })
     // 转换为JSON字符串

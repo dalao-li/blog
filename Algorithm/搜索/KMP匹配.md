@@ -25,14 +25,14 @@ void setNext(string str, int next[]){
             j++;
             next[i] = j;
         }else{
-            // 否则j指针回溯,回溯位置为next[j]
+            // 否则j指针回溯, 回溯位置为next[j]
             j = next[j];
         }
     }
 }
 
-// 字符串匹配,返回值是p串在s串中首次匹配到的位置
-int kmp(string &s , string &p , int next[]) {
+// 字符串匹配, 返回值是p串在s串中首次匹配到的位置
+int kmp(string &s, string &p, int next[]) {
     // i表示s字符串匹配到的位置
     int i = 0;
     // j表示p字符串匹配到的位置
@@ -42,7 +42,7 @@ int kmp(string &s , string &p , int next[]) {
         if (j == -1 || s[i] == p[j]) {
             i++;
             j++;
-            // 若已经将p匹配完,则跳出循环
+            // 若已经将p匹配完, 则跳出循环
             if (j == p.length()) {
                 break;
             }
