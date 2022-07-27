@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-19 23:44:15
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 01:04:17
+ * @LastEditTime: 2022-07-22 21:25:08
 -->
 
 ## Python设置
@@ -29,14 +29,15 @@ pip freeze > requirements.txt
 
 ### venv
 
-- 激活
+
+#### 激活
 
 ```sh
 source venv/bin/activate
 ```
 
 
-- 退出
+#### 退出
 
 ```sh
 deactivate

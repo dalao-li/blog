@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-07-03 15:31:25
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 16:02:03
+ * @LastEditTime: 2022-07-19 22:27:41
 -->
 
 ## samba
@@ -17,6 +17,7 @@
 ```sh
 sudo apt install samba -y
 ```
+
 
 ### 配置
 
@@ -38,11 +39,13 @@ sudo chmod +x $HOME/share
 
 #### 修改配置
 
-- 修改smb.conf, 末尾添加
+- 修改smb.conf
 
 ```sh
 sudo vim /etc/samba/smb.conf
 ```
+
+末尾添加
 
 ```sh
 [share]
@@ -125,6 +128,6 @@ smd://192.168.0.1/
 ### 映射
 
 
-- Windows
+#### Windows
 
 ![](https://cdn.hurra.ltd/img/20220703154339.png)

@@ -4,14 +4,44 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-21 22:58:26
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-07-27 23:27:27
 -->
 
-## 语法
+## 数组
 
 
-### 数组与切片
+### 声明
+
+```go
+var array[10] int32
+
+var array[5] float32
+```
+
+
+### 初始化
+
+- 长度固定
+
+```go
+var array = [5]int32 {1, 2, 3, 4, 5}
+
+array := [5]int32 {1, 2, 3, 4, 5}
+```
+
+- 长度不确定
+
+使用 `...` 代替数组的长度，编译器会根据元素个数自行推断数组的长度
+
+```go
+var array = [...]int32 {1, 2, 3, 4, 5}
+
+array := [...]int32 {1, 2, 3, 4, 5}
+```
+
+
+### 切片
 
 
 ```go
@@ -55,6 +85,3 @@ func main() {
     }
 }
 ```
-
-![](https://cdn.hurra.ltd/img/20210110230203.png)
-
