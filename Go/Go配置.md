@@ -5,10 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-10 22:42:49
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-27 21:57:23
+ * @LastEditTime: 2022-08-01 23:16:38
 -->
 
-## Go配置
+## Go
 
 
 ### 安装
@@ -33,6 +33,7 @@ sudo pacman -S go
 
 ### 配置
 
+
 #### 启用 Go Modules 功能
 
 ```sh
@@ -49,8 +50,7 @@ go env -w  GOPROXY=https://goproxy.cn,direct
 ```
 
 
-
-### 清理缓存
+#### 清理缓存
 
 
 ```sh

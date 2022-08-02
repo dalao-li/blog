@@ -4,12 +4,12 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2022-01-12 01:44:11
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 20:13:51
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-08-01 21:52:09
 -->
 
 
-## 1 run
+## run
 
 
 ```sh
@@ -18,7 +18,7 @@ docker run [参数] 镜像ID (命令)
 
 
 
-### 1.1 -itd
+### -itd
 
 
 | 参数 | 含义                         |
@@ -29,7 +29,7 @@ docker run [参数] 镜像ID (命令)
 
 
 
-### 1.2 -p
+### -p
 
 
 `-p 主机端口:容器端口` 指定端口映射
@@ -42,14 +42,14 @@ docker run -itd -p 7890:80 nginx
 
 
 
-#### 1.2.1 --expose=[]
+#### --expose=[]
 
 
 `--expose=[]` 开放一个或一组端口
 
 
 
-### 1.3 -e
+### -e
 
 
 `-e 变量=值` 给容器设置环境变量
@@ -70,14 +70,14 @@ docker run -itd --name=box -e STR_VEN=abcdefg busybox
 
 
 
-#### 1.3.1 --env-file=[]
+#### --env-file=[]
 
 
 `--env-file=[]` 从指定文件读入环境变量
 
 
 
-### 1.4 --mount
+### --mount
 
 
 `--mount` 挂载本地目录(必须是绝对路径)到容器中, 若目录不存在会报错
@@ -85,6 +85,7 @@ docker run -itd --name=box -e STR_VEN=abcdefg busybox
 ```sh
 --mount type=bind, source=[本地路径], target=[容器路径](权限)
 ```
+
 
 - 将本地/src/app挂载到容器/root/app
 
@@ -100,7 +101,7 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 
 
 
-### 1.5 -v
+### -v
 
 
 `-v` 挂载本地目录到容器中, 若本地目录不存在, 会自动创建文件夹
@@ -114,7 +115,7 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 
 
 
-### 1.6 --net
+### --net
 
 
 `--net="bridge"` 指定容器网络连接类型
@@ -123,7 +124,7 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 
 
 
-### 1.7 --link 
+### --link 
 
 
 `--link=[]` 链接到另一个容器
@@ -150,7 +151,7 @@ mysql -h db -u root -p123
 ```
 
 
-### 1.8 问题
+### 问题
 
 
 - 执行命令后容器停止

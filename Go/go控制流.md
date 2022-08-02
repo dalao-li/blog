@@ -1,0 +1,75 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: DaLao
+ * @Email: dalao_li@163.com
+ * @Date: 2022-08-01 23:29:53
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-08-01 23:39:16
+-->
+
+
+## 控制流
+
+
+### defer
+
+defer 语句会推迟函数（包括任何参数）的运行，直到包含 defer 语句的函数完成
+
+可以根据需要推迟任意多个函数。 defer 语句按逆序运行，先运行最后一个，最后运行第一个
+
+- 示例1
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    for i := 1; i <= 4; i++ {
+        defer fmt.Println("deferred", -i)
+        fmt.Println("regular", i)
+    }
+}
+```
+
+结果
+
+```go
+regular 1
+regular 2
+regular 3
+regular 4
+deferred -4
+deferred -3
+deferred -2
+deferred -1
+```
+
+- 示例2
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	defer fmt.Println("deferred", 100)
+
+	for i := 0; i < 4; i++ {
+		fmt.Println("regular", i)
+	}
+}
+```
+
+结果
+
+```go
+regular 0
+regular 1
+regular 2
+regular 3
+deferred 100
+```
