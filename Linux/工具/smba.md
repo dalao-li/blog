@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-07-03 15:31:25
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-19 22:27:41
+ * @LastEditTime: 2022-08-13 15:15:10
 -->
 
 ## samba
@@ -15,14 +15,14 @@
 
 
 ```sh
-sudo apt install samba -y
+sudo apt-get install samba -y
 ```
 
 
 ### 配置
 
 
-#### 共享目录
+#### 设置目录
 
 - 创建共享目录
 
@@ -54,53 +54,25 @@ sudo vim /etc/samba/smb.conf
 path = ${HOME}/share
 
 # 设置访问用户
-valid users = ${USER}
+valid users = samba
 
 # 设置读写权限
 writable = yes
 ```
-
-
-- shell脚本(可选)
-
-```sh
-set_samba() {
-    SHARE="share"
-
-    sudo apt install samba -y
-
-    sudo mkdir ${HOME}/${SHARE}
-
-    sudo chmod +x $HOME/${SHARE}
-
-    sudo bash -c cat >>/etc/samba/smb.conf <<EOF
-[${SHARE}]
-
-# 设置共享目录
-path = ${HOME}/${SHARE}
-
-# 设置访问用户
-valid users = ${USER}
-
-# 设置读写权限
-writable = yes
-EOF
-}
-```
-
 
 #### 设置用户
 
-- 创建smba用户(可选)
+- 创建smba用户 samba
 
 ```sh
-sudo useradd [smba用户]
+sudo useradd samba
 ```
 
-- 设置共享密码
+- 设置samba 用户共享密码
 
 ```sh
-sudo smbpasswd -a ${USER}
+# 当前用户
+sudo smbpasswd -a samba
 ```
 
 - 重启samba服务
@@ -110,15 +82,17 @@ sudo service smbd restart
 ```
 
 
-#### 测试
+### 测试
 
-- Linux访问
+
+#### Linux访问
 
 ```sh
 smd://192.168.0.1/
 ```
 
-- Windows访问
+
+#### Windows访问
 
 ```sh
 \\192.168.0.1\
@@ -131,3 +105,28 @@ smd://192.168.0.1/
 #### Windows
 
 ![](https://cdn.hurra.ltd/img/20220703154339.png)
+
+
+
+### Shell脚本
+
+```sh
+set_samba() {
+    SHARE_DIR="share"
+
+    sudo apt install samba -y
+
+    sudo mkdir ${HOME}/${SHARE_DIR}
+
+    sudo chmod +x $HOME/${SHARE_DIR}
+
+    sudo bash -c cat >>/etc/samba/smb.conf <<EOF
+[${SHARE_DIR}]
+
+path = ${HOME}/${SHARE_DIR}
+valid users = ${USER}
+writable = yes
+EOF
+
+}
+```
