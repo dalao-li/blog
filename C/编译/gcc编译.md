@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-05-21 23:09:51
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-19 22:02:53
+ * @LastEditTime: 2022-08-15 23:00:27
 -->
 
 ## GCC
@@ -16,11 +16,15 @@
 
 #### -o
 
+直接编译出可执行文件
+
 ```c
 gcc main.c -o main
 ```
 
 #### -D
+
+条件编译
 
 ```c++
 #include <stdio.h>

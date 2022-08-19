@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-07-03 15:31:25
  * @LastEditors: DaLao
- * @LastEditTime: 2022-08-13 15:15:10
+ * @LastEditTime: 2022-08-15 22:51:12
 -->
 
 ## samba
@@ -71,7 +71,6 @@ sudo useradd samba
 - 设置samba 用户共享密码
 
 ```sh
-# 当前用户
 sudo smbpasswd -a samba
 ```
 
