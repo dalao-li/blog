@@ -6,10 +6,11 @@
  * @QQ: 1061299112
  * @Date: 2021-01-25 22:06:50
  * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:09:56
+ * @LastEditTime: 2022-08-21 23:47:11
 -->
 
 ## 异常
+
 
 ### 格式
 
@@ -22,11 +23,4 @@ else:
     # 没有异常时执行
 finally:
     # 最终都会执行
-```
-
-```py
-def judge(s: str)-> bool:
-    if len(s) > 5:
-        throw 
-
 ```

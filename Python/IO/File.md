@@ -5,13 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-09-24 20:37:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-02 22:46:16
+ * @LastEditTime: 2022-08-21 23:51:13
 -->
 
 ## 文件
-
-
-### 
 
 
 ### 创建
@@ -124,7 +121,7 @@ def del_file(path: str):
 
 
 ```py
-def display_all_files(folder_path):
+def display_all_files(folder_path: str):
     for i in os.listdir(folder_path):
         path = os.path.join(folder_path, i)
         # 如果是文件则显示
@@ -140,7 +137,7 @@ def display_all_files(folder_path):
 
 
 ```py
-def display_all_folders(folder_path):
+def display_all_folders(folder_path: str):
     for i in os.listdir(folder_path):
         path = os.path.join(folder_path, i)
         # 如果该对象是文件夹

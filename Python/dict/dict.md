@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-02 23:02:30
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-01 22:52:39
+ * @LastEditTime: 2022-08-21 23:47:29
 -->
 
 ## 字典
@@ -14,11 +14,6 @@
 字典是另一种可变容器模型, 且可存储任意类型对象
 
 字典的每个键值以`:`分割, 每个键值对之间用`, `分割, 字典包括在花括号 {} 中
-
-
-```py
-
-```
 
 
 ### 访问
@@ -42,7 +37,7 @@ for k, v in d.items():
 
 # Name Zara
 # Age 7      
-C# lass First
+# lass First
 ```
 
 
@@ -79,6 +74,7 @@ del d['Age']
 # {'Name': 'Zara', 'Class': 'First'}
 print(d)
 ```
+
 
 #### 清空字典所有条目
 

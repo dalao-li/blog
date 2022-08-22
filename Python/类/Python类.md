@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 12:25:04
+ * @LastEditTime: 2022-08-21 23:44:26
 -->
 
 ## 类
@@ -30,7 +30,6 @@ self代表类的实例, 而非类
 
 ### 方法
 
-
 ```py
 class Person:
     def __init__(self, name: str)->None:
@@ -43,7 +42,7 @@ class Person:
 
     # set方法
     @name.setter
-        def name(self, value)->None:
+        def name(self, value: str)->None:
             if not isinstance(value, str):
                 raise TypeError('Expected a string')
             self._name = value
