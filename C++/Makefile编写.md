@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-11 23:58:36
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-23 21:52:07
+ * @LastEditTime: 2022-08-27 23:09:12
 -->
 
 ## Makefile
@@ -83,7 +83,13 @@ CFLAG=-I.
 
 # 将目标文件hellomake.o和hellofunc.o放入依赖列表, 告知make首先编译.c文件得到目标文件, 然后链接得到可执行文件hellomake
 hellomake:hellomake.o hellofunc.o
-    $(CC) -o hellomake hellomake.o hellofunc.o
+    $(CC) -o hellomake.o hellofunc.o hellomake
+
+hellomake.o:
+    $(CC) -c helllomake.c
+
+hellofunc.o:
+    $(CC) -c hellofunc.c
 ```
 
 ![](https://cdn.hurra.ltd/img/20211112225303.png)
@@ -105,7 +111,7 @@ DEPS = hellomake.h
 %.o:%.c $(DEPS)
     $(CC) -c -o $@ $<  $(CFLAG)
 hellomake:hellomake.o hellofunc.o
-    $(CC) -o hellomake hellomake.o hellofunc.o
+    $(CC) -o hellomake.o hellofunc.o hellomake 
 ```
 
 为产生.o文件, make需要使用CC常量定义的编译器编译.c文件
