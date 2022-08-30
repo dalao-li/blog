@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-03-30 21:57:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-23 21:53:57
+ * @LastEditTime: 2022-08-29 21:42:44
 -->
 
 
@@ -16,11 +16,6 @@
 std::cin
 ```
 
-```c
-int n;
-
-std::cin >> n;
-```
 
 
 ### 回车结束输入

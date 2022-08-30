@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-01-20 11:26:41
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-19 22:02:40
+ * @LastEditTime: 2022-08-31 00:27:02
 -->
 
 
@@ -20,7 +20,7 @@
 
 VS2019 选择创建动态链接库(DLL)项目
 
-```c
+```c++
 // pch.h 文件
 #ifndef PCH_H
 #define PCH_H

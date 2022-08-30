@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-08-22 23:06:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-08-23 23:24:56
+ * @LastEditTime: 2022-08-29 21:41:19
 -->
 
 ## ofstream
@@ -14,6 +14,7 @@
 
 
 ### 打开
+
 
 #### 打开方式
 
@@ -31,6 +32,7 @@ const std::string path = "main.txt";
 
 // 显式调用
 ofstream out;
+
 // 以追加方式为输出打开
 out.open(path,  ios::out|ios::app);
 
@@ -40,7 +42,6 @@ ofstream out(path, ios::out|ios::app);
 
 
 ### 写入
-
 
 
 #### 普通文件
@@ -76,7 +77,6 @@ ofstream out(path, ios::out|ios::app);
 
 // 将value的值写入4byte二进制文件中
 out.write((char *)&value, 4);
-
 ```
 
 
