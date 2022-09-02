@@ -5,20 +5,20 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-03-30 21:57:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-08-29 21:42:44
+ * @LastEditTime: 2022-09-02 21:20:43
 -->
 
+## iostream
 
-## cin
+
+### cin
 
 
 ```c
 std::cin
 ```
 
-
-
-### 回车结束输入
+- 回车结束输入
 
 
 ```c
@@ -33,3 +33,12 @@ while (std::cin >> value) {
     }
 }
 ```
+
+
+### cout
+
+
+### cerr
+
+
+### clog

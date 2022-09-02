@@ -5,18 +5,25 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-08-22 23:06:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-08-29 21:41:19
+ * @LastEditTime: 2022-09-02 21:23:17
 -->
 
-## ofstream
+## fstream
+
+
+### ifstream
+
+
+
+### ofstream
 
 输出文件流，用于创建文件并向文件写入信息
 
 
-### 打开
+#### 打开
 
 
-#### 打开方式
+- 打开方式
 
 | 定义        | 含义                         |
 | ----------- | ---------------------------- |
@@ -41,10 +48,10 @@ ofstream out(path, ios::out|ios::app);
 ```
 
 
-### 写入
+#### 写入
 
 
-#### 普通文件
+- 普通文件
 
 ```c
 <<
@@ -61,7 +68,7 @@ out << "Hello ";
 out << "World\n";
 ```
 
-#### 二进制文件
+- 二进制文件
 
 ```c
 write()
@@ -80,10 +87,9 @@ out.write((char *)&value, 4);
 ```
 
 
-### 关闭
+#### 关闭
 
-```c
-ofstream out(path, ios::out|ios::app);
-
-out.close();
 ```
+close()
+```
+

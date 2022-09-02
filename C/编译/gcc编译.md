@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-05-21 23:09:51
  * @LastEditors: DaLao
- * @LastEditTime: 2022-08-15 23:00:27
+ * @LastEditTime: 2022-09-03 00:14:31
 -->
 
 ## GCC
@@ -21,6 +21,7 @@
 ```c
 gcc main.c -o main
 ```
+
 
 #### -D
 
