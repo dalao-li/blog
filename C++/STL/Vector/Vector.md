@@ -5,13 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-11-15 20:40:55
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-09 22:04:51
+ * @LastEditTime: 2022-09-04 13:16:03
 -->
 
-## 1 Vector
+## Vector
 
 
-### 1.1 初始化
+### 初始化
 
 
 #### 赋值
@@ -52,7 +52,7 @@ std::vector<vector<T> > v;
 
 
 
-### 1.2 增加
+### 增加
 
 
 #### 尾部插入
@@ -74,9 +74,7 @@ v.insert(v.begin() + index, value);
 ```
 
 
-
-### 1.3 遍历
-
+### 遍历
 
 
 #### 迭代器访问
@@ -94,7 +92,6 @@ for(auto it = v.begin(); it != v.end(); it++) {
 ```
 
 
-
 #### 下标访问
 
 ```c
@@ -107,9 +104,10 @@ for(unsigned int i = 0; i < v.size(); i++){
 
 
 
-### 1.4 删除
+### 删除
 
-- 删除x, y之间的元素
+
+#### 删除x, y之间的元素
 
 ```c
 std::vector<T> v;
@@ -155,10 +153,10 @@ reverse(v.begin(), v.end());
 
 
 
-## 2 Vector算法
+## Vector算法
 
 
-### 2.1 排序
+### 排序
 
 
 #### 数字排序
@@ -166,7 +164,7 @@ reverse(v.begin(), v.end());
 ```c
 std::vector<T> v;
 
-sort(v.begin(), v.end());
+std::sort(v.begin(), v.end());
 ```
 
 
@@ -196,12 +194,12 @@ bool cmp(Stu a, Stu b) {
 
 std::vector<Stu> stu;
 
-sort(stu.begin(), stu.end(), cmp);
+std::sort(stu.begin(), stu.end(), cmp);
 ```
 
 
 
-### 2.2 数学计算
+### 数学计算
 
 
 #### 最值
@@ -213,12 +211,12 @@ sort(stu.begin(), stu.end(), cmp);
 ...
 
 // 迭代器指向最大值
-vector<T>::iterator it = max_element(v.begin(), v.end());
+std::vector<T>::iterator it = max_element(v.begin(), v.end());
 
-vector<T>::iterator it = min_element(v.begin(), v.end());
+std::vector<T>::iterator it = min_element(v.begin(), v.end());
 
 // 下标
-vector<T>::iterator index = v.begin() - it;
+std::vector<T>::iterator index = v.begin() - it;
 ```
 
 

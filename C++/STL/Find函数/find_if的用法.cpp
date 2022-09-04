@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-12-23 15:07:51
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 21:17:46
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-09-04 04:52:56
  */
 
 #include <iostream>
@@ -48,7 +48,7 @@ int main()
     // 查找到了
     if (it != v.end())
     {
-        std::cout << *it->name << " " << *it->score << std::endl;
+        std::cout << it->name << " " << it->score << std::endl;
     }
     return 0;
 }

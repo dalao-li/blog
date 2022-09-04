@@ -5,14 +5,27 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:21:39
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-06 20:52:51
+ * @LastEditTime: 2022-09-04 13:12:41
 -->
 
 
-## String 函数
+## String
 
 
-### getline
+### c_str
+
+```c
+const char*c_str() const
+```
+
+c_str()函数返回一个指向正规C字符串的指针常量, 内容与本string串相同
+
+
+
+### 函数
+
+
+#### getline
 
 输入一行可含空格的str
 
@@ -23,7 +36,7 @@ getline(cin, str);
 ```
 
 
-### find
+#### find
 
 ```c++
 #include<iostream>
@@ -44,7 +57,7 @@ int main() {
 ```
 
 
-### erase
+#### erase
 
 ```c++
 #include<iostream>

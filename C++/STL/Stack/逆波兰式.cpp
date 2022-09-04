@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 21:39:34
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-09-04 13:09:41
  */
 #include <iostream>
 #include <stack>
@@ -17,7 +17,8 @@ int main()
     stack<char> s;
     stack<double> e;
     string str;
-    getline(cin, str) for (int i = str.size() - 1; i >= 0; i--)
+    getline(cin, str);
+    for (int i = str.size() - 1; i >= 0; i--)
     {
         if (str[i] > '0' && str[i] <= '9')
         {

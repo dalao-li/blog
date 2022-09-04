@@ -5,57 +5,58 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-08-18 16:22:55
  * @LastEditors: DaLao
- * @LastEditTime: 2022-05-06 20:55:55
+ * @LastEditTime: 2022-09-04 13:08:19
 -->
 
-## 1 Map
+## Map
 
 
-### 1.1 定义
-
-```c
-template <class T, class V>
-map<T, V> m;
-```
-
-
-### 1.2 添加
+### 定义
 
 ```c
 template <class T, class V>
-map<T, V> m;
+std::map<T, V> m;
 ```
+
+
+### 添加
 
 
 #### 插入
 
 ```c
+template <class T, class V>
+map<T, V> m;
+
 m.insert(make_pair(key, value))
 ```
 
 
 #### 直接添加
 
+template <class T, class V>
+std::map<T, V> m;
+
 ```c
 m[key] = value
 ```
 
 
-### 1.3 取值
+### 取值
 
 ```c
 template <class T, class V>
-map<T, V> m;
+std::map<T, V> m;
 
 m[key]
 ```
 
 
-### 1.4 遍历
+### 遍历
 
 ```c++
 template <class T, class V>
-map<T, V> m;
+std::map<T, V> m;
 
 for(map<T, V>::iterator it = m.begin(); it != m.end(); it++) {
     // key = it->first;
@@ -64,15 +65,17 @@ for(map<T, V>::iterator it = m.begin(); it != m.end(); it++) {
 ```
 
 
-### 1.5 查询
+### 查询
 
-查找 key 是否存在, 若为 end()即不存在
+查找 key 是否存在, 若iterator 指向end() 即不存在
 
 ```c
 template <class T, class V>
-map<T, V> m;
+std::map<T, V> m;
 
-map<T, V>::iteraotr find(key)
+std::map<T, V>::iteraotr it;
+
+it.find(key)
 ```
 
 
@@ -82,16 +85,16 @@ map<T, V>::iteraotr find(key)
 
 ```c
 template <class T, class V>
-map<T, V> m;
+std::map<T, V> m;
 
 m.erase(key)
 ```
 
 
-## 2 pair
+## pair
 
 
-### 2.1 初始化
+### 初始化
 
 
 ```c
