@@ -4,8 +4,8 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-26 11:01:43
- * @LastEditors: DaLao
- * @LastEditTime: 2022-09-11 22:18:53
+ * @LastEditors: daLao
+ * @LastEditTime: 2022-09-11 23:43:13
 -->
 
 ## 多线程
@@ -21,7 +21,8 @@ Python的线程是真正的Posix Thread, 而不是模拟出来的线程
 ```py
 import time
 
-from threading import Thread, current_thread as ct
+from threading import Thread
+from threading import current_thread as ct
 
 # 新线程执行的代码
 def loop():
@@ -35,9 +36,10 @@ def loop():
 
 print('线程 %s 运行中...' % ct.name)
 
-# 函数传入并创建Thread实例启动线程
-# 子线程命名LoopThread, 不起名字Python就自动给线程命名为Thread-1, Thread-2...
-# 名字仅仅在打印时显示, 没有其他意义
+
+# 子线程命名LoopThread
+# 不起名字Python就自动给线程命名为Thread-1, Thread-2...
+# 名字没有其他意义, 仅仅在打印时显示, 
 t = Thread(target=loop, name='LoopThread')
 
 # 开始执行
@@ -52,7 +54,7 @@ print('线程 %s 结束.' % ct.name)
 
 任何进程默认就会启动一个主线程, 主线程又可以启动新的线程
 
-Python的threading模块current_thread()函数, 它永远返回当前线程的实例  
+threading模块current_thread()函数, 永远返回当前线程的实例
 
 主线程实例的名叫MainThread
 
