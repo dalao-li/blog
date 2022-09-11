@@ -2,10 +2,10 @@
  * @Description: 
  * @Version: 1.0
  * @Author: DaLao
- * @Email: dalao_li@163.com
+ * @Email: dalao@xxx.com
  * @Date: 2021-10-26 22:19:58
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-01 22:39:06
+ * @LastEditTime: 2022-09-11 22:48:35
 -->
 
 ## bat
@@ -51,10 +51,10 @@ REM 获取上一命令执行结果码
 
 
 ```bat
-REM 1. 输出提示信息
+REM 输出提示信息
 echo 输出内容
 
-REM 2. @echo将关闭该命令回显, 即执行时不会显示该命令
+REM @echo将关闭该命令回显, 即执行时不会显示该命令
 @echo 输出内容
 ```
 

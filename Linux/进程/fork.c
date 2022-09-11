@@ -2,12 +2,13 @@
  * @Description:
  * @Version: 1.0
  * @Author: DaLao
- * @Email: dalao_li@163.com
+ * @Email: dalao@xxx.com
  * @Date: 2022-02-17 23:53:18
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-11 23:06:10
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-09-11 22:47:59
  */
 
+// only run Linux
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -17,6 +18,7 @@ int g_var = 6;
 int main(void)
 {
     int var = 88;
+
     pid_t pid = fork();
     // 子进程修改值
     if (pid == 0)

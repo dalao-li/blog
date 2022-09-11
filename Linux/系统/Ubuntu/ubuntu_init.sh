@@ -4,7 +4,7 @@
  # @Description: 
  # @Version: 1.0
  # @Author: DaLao
- # @Email: dalao_li@163.com
+ # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: DaLao
  # @LastEditTime: 2022-06-30 00:15:17
@@ -26,7 +26,7 @@ init_system(){
     sudo apt-get install -y vlc flameshot vim git wget grub-customizer gnome-shell gnome-tweak-tool python3-pip xclip
     
     git config --global user.name "dalao"
-    git config --global user.email "dalao_li@163.com"
+    git config --global user.email "dalao@xxx.com"
     git config --global core.editor "code -w"
     # 防止中文乱码
     git config --global core.quotepath false

@@ -4,7 +4,7 @@
  # @Description: 
  # @Version: 1.0
  # @Author: DaLao
- # @Email: dalao_li@163.com
+ # @Email: dalao@xxx.com
  # @Date: 2022-01-17 02:05:53
  # @LastEditors: dalao
  # @LastEditTime: 2022-04-16 11:22:32
@@ -23,7 +23,7 @@ EOF
     sudo pacman -Syudd
 
     git config --global user.name "dalao"
-    git config --global user.email "dalao_li@163.com"
+    git config --global user.email "dalao@xxx.com"
     git config --global core.editor "code -w"
     # 防止中文乱码
     git config --global core.quotepath false
