@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-12-23 15:07:51
  * @LastEditors: DaLao
- * @LastEditTime: 2022-09-04 04:52:56
+ * @LastEditTime: 2022-09-11 22:00:21
  */
 
 #include <iostream>
@@ -30,6 +30,7 @@ private:
 
 public:
     explicit StuAdapter(string name) : name(name) {}
+
     bool operator()(const Stu &s)
     {
         return s.name == name;
@@ -44,6 +45,7 @@ int main()
     v.push_back(Stu("wangqian", 89.3));
 
     string str = "wangqian";
+
     vector<Stu>::iterator it = find_if(v.begin(), v.end(), StuAdapter(str));
     // 查找到了
     if (it != v.end())

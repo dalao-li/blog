@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-04-19 19:05:47
  * @LastEditors: DaLao
- * @LastEditTime: 2022-09-04 13:16:43
+ * @LastEditTime: 2022-09-11 22:10:35
  */
 
 #include <iostream>
@@ -26,8 +26,10 @@ int main(void)
 
     // n 为 int 类型, a 被推导为 int 类型
     decltype(n) a = n;
+
     // r 为 const int 类型, b 被推导为 const int 类型
     decltype(r) b = n;
+
     // c为string类型
     decltype(stu.name) c = stu.name;
 

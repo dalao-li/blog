@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-01-13 12:21:39
  * @LastEditors: DaLao
- * @LastEditTime: 2022-09-04 13:12:41
+ * @LastEditTime: 2022-09-11 22:05:17
 -->
 
 
@@ -15,10 +15,10 @@
 ### c_str
 
 ```c
-const char*c_str() const
+const char* c_str() const
 ```
 
-c_str()函数返回一个指向正规C字符串的指针常量, 内容与本string串相同
+返回一个指向正规C字符串的指针常量, 内容与本string串相同
 
 
 
@@ -32,7 +32,7 @@ c_str()函数返回一个指向正规C字符串的指针常量, 内容与本stri
 ```c
 std::string str;
 
-getline(cin, str);
+getline(std::cin, str);
 ```
 
 
@@ -45,12 +45,15 @@ getline(cin, str);
 int main() {
     int sum = 0;
     std::string s1, s2;
+
     std::cin >> s1 >> s2;
+
     for(int i = 0; i < s1.size(); i++){
         if(s1.find(s2, i) != std::string::npos){
             sum++;
         }
     }
+
     std::cout << sum << std::endl;
     return 0;
 }
@@ -65,9 +68,12 @@ int main() {
 
 int main() {
     std::string str = " 123 456237";
+
     int index = 3;
     int length = 1;
+
     std::str.erase(index, length);
+
     std::cout << str << std::endl;
     return 0;
 }

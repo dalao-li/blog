@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-08-22 23:06:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-09-02 21:23:17
+ * @LastEditTime: 2022-09-11 21:53:59
 -->
 
 ## fstream
@@ -13,7 +13,7 @@
 
 ### ifstream
 
-
+输入文件流
 
 ### ofstream
 

@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-03-27 21:36:47
  * @LastEditors: DaLao
- * @LastEditTime: 2022-06-27 23:04:49
+ * @LastEditTime: 2022-09-11 21:59:48
 -->
 
 ## shared_ptr
@@ -14,14 +14,14 @@
 ### 初始化
 
 
-- 构造出空智能指针
+#### 构造出空智能指针
 
 ```c
 std::shared_ptr<T> p;
 ```
 
 
-- 赋值初始化
+#### 赋值初始化
 
 std::make_shared<T>初始化, 指向一块10 个 int 类型数据的堆内存空间
 
@@ -32,7 +32,8 @@ std::shared_ptr<int> p = std::make_shared<int>(10);
 
 ### 引用
 
-- 查看指针引用个数
+
+#### 查看引用个数
 
 ```c
 std::shared_ptr<int> p = std::make_shared<int>();

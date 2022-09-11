@@ -4,8 +4,8 @@
  * @Author: dalao
  * @Email: dalao_li@163.com
  * @Date: 2022-04-18 16:55:09
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 17:24:52
+ * @LastEditors: DaLao
+ * @LastEditTime: 2022-09-11 22:10:03
  */
 
 #include <iostream>
@@ -20,7 +20,9 @@ int main(void)
 
     for (int i = 0; i < v.size(); i++)
     {
-        printf("%d ", v[i]);
+        std::cout << std::dec << v[i] << " ";
     }
+    std::cout << std::endl;
+
     return 0;
 }

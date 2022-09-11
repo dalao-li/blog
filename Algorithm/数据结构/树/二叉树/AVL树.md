@@ -42,14 +42,14 @@ typedef struct AVLNode {
 ```
 
 
-### 获取节点信息
+### 节点信息
 
 
-#### 获取某节点的高度
+#### 获取节点高度
 
 ```c
 template <class T>
-int getHeight(AVLNode<T> *node) {
+int get_height(AVLNode<T> *node) {
     if(node == nullptr) {
         return 0;
     }
@@ -58,32 +58,33 @@ int getHeight(AVLNode<T> *node) {
 ```
 
 
-#### 获取节点的平衡因子
+#### 获取节点平衡因子
 
 ```c
 template <class T>
-int getBalanceFactor(AVLNode<T> *node) {
+int get_balance_factor(AVLNode<T> *node) {
     if(node == nullptr) {
         return 0;
     }
-    return getHeight(node->leftSon) - getHeight(node->rightSon);
+    return get_height(node->leftSon) - get_height(node->rightSon);
 }
 ```
 
 
-### 判断
+#### 判断
 
 ```c
 // 判断是否平衡
 template <class T>
-bool isBalance(AVLNode<T> *node) {
+bool is_balance(AVLNode<T> *node) {
     if(node == nullptr){
         return true;
     }
-    if(abs(getBalanceFactor(node)) > 1) {
+
+    if(abs(get_balance_factor(node)) > 1) {
         return false;
     }
-    return isBalance(node->leftSon) && isBalance(node->rightSon);
+    return is_balance(node->leftSon) && is_balance(node->rightSon);
 }
 ```
 
@@ -94,6 +95,7 @@ bool isBalance(AVLNode<T> *node) {
 
 - 旋转围绕最小失衡子树的根节点进行
 
+
 ![](https://cdn.hurra.ltd/img/2022-3-26-2325.svg)
 
 原本平衡的$AVL$树插入节点$7$后导致不平衡
@@ -103,13 +105,15 @@ bool isBalance(AVLNode<T> *node) {
 ```c
 // 左旋, root为最小失衡子树的根节点
 template <class T>
-AVLNode<T> *leftRotation(AVLNode<T> *root) {
+AVLNode<T> *left_rotation(AVLNode<T> *root) {
     AVLNode<T> *p = root->rightSon;
+
     root->rightSon = p->leftSon;
     p->leftSon = root;
+
     // 改变指向后, 更新结点对应的高度
-    root->height = max(getHeight(root->leftSon), getHeight(root->rightSon)) + 1;
-    p->height = max(getHeight(p->leftSon), getHeight(p->rightSon))+1;
+    root->height = max(get_height(root->leftSon), get_height(root->rightSon)) + 1;
+    p->height = max(get_height(p->leftSon), get_height(p->rightSon))+1;
     return p;
 }
 ```
@@ -125,12 +129,14 @@ AVLNode<T> *leftRotation(AVLNode<T> *root) {
 
 ```c
 template <class T>
-AVLNode<T>* rightRotation(AVLNode<T> *&root) {
+AVLNode<T>* right_rotation(AVLNode<T> *&root) {
     AVLNode<T> *p = root->leftSon;
+
     root->leftSon = p->rightSon;
     p->rightSon = root;
-    root->height = max(getHeight(root->leftSon), getHeight(root->rightSon)) + 1;
-    p->height = max(getHeight(p->leftSon), getHeight(p->rightSon)) + 1;
+
+    root->height = max(get_height(root->leftSon), get_height(root->rightSon)) + 1;
+    p->height = max(get_height(p->leftSon), get_height(p->rightSon)) + 1;
     return p;
 }
 ```
@@ -142,9 +148,9 @@ AVLNode<T>* rightRotation(AVLNode<T> *&root) {
 
 ```c
 template <class T>
-AVLNode<T>* rightLeftRotation(AVLNode<T> *&root) {
-    root->rightSon = rightRotation(root->rightSon);
-    return leftRotation(root);
+AVLNode<T>* right_left_rotation(AVLNode<T> *&root) {
+    root->rightSon = right_rotation(root->rightSon);
+    return left_rotation(root);
 }
 ```
 
@@ -159,9 +165,9 @@ AVLNode<T>* rightLeftRotation(AVLNode<T> *&root) {
 
 ```c
 template <class T>
-AVLNode<T>* leftRightRotation(AVLNode<T> *&root) {
-    root->leftSon = leftRotation(root->leftSon);
-    return rightRotation(root);
+AVLNode<T>* left_right_rotation(AVLNode<T> *&root) {
+    root->leftSon = left_rotation(root->leftSon);
+    return right_rotation(root);
 }
 ```
 

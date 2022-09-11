@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-03-30 21:57:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-09-02 21:20:43
+ * @LastEditTime: 2022-09-11 21:52:47
 -->
 
 ## iostream
@@ -13,6 +13,7 @@
 
 ### cin
 
+输入流
 
 ```c
 std::cin
@@ -37,8 +38,19 @@ while (std::cin >> value) {
 
 ### cout
 
+输出流
+
+```c
+std::cout
+```
 
 ### cerr
 
+错误输出
+
+
+cerr不经过缓冲而直接输出,一般用于迅速输出出错信息,是标准错误
 
 ### clog
+
+日志输出

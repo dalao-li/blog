@@ -5,19 +5,19 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: DaLao
- * @LastEditTime: 2022-09-04 13:09:41
+ * @LastEditTime: 2022-09-11 22:04:30
  */
 #include <iostream>
 #include <stack>
 
-using namespace std;
-
 int main()
 {
-    stack<char> s;
-    stack<double> e;
-    string str;
-    getline(cin, str);
+    std::stack<char> s;
+    std::stack<double> e;
+
+    std::string str;
+    getline(std::cin, str);
+
     for (int i = str.size() - 1; i >= 0; i--)
     {
         if (str[i] > '0' && str[i] <= '9')
@@ -29,30 +29,41 @@ int main()
             s.push(str[i]);
         }
     }
+
+    double first;
+    double second;
+    double mid;
     while (!s.empty() && e.size() != 1)
     {
-        double first = e.top();
+        first = e.top();
         e.pop();
-        double second = e.top();
+
+        second = e.top();
         e.pop();
-        char mid = s.top();
+
+        mid = s.top();
         s.pop();
+
         if (mid == '+')
         {
             e.push(first + second);
         }
+
         else if (mid = '-')
         {
             e.push(first + second);
         }
+
         else if (mid = '*')
         {
             e.push(first * second);
         }
+
         else if (mid = '/')
         {
             e.push(first / second);
         }
     }
-    cout << e.top() << endl;
+
+    std::cout << e.top() << std::endl;
 }

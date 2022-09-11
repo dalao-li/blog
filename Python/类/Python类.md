@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: DaLao
- * @LastEditTime: 2022-08-21 23:44:26
+ * @LastEditTime: 2022-09-11 22:21:40
 -->
 
 ## 类
@@ -42,10 +42,10 @@ class Person:
 
     # set方法
     @name.setter
-        def name(self, value: str)->None:
-            if not isinstance(value, str):
-                raise TypeError('Expected a string')
-            self._name = value
+    def name(self, value: str)->None:
+        if not isinstance(value, str):
+            raise TypeError('Expected a string')
+        self._name = value
 ```
 
 
@@ -79,7 +79,7 @@ class Person:
 
 
 
-### 1.4 继承
+### 继承
 
 
 #### 继承类
@@ -96,7 +96,7 @@ class People:
 
 ```py
 class Student(People):
-    def __init__(self, name: str, age:str, num: str)->None:
+    def __init__(self, name: str, age: str, num: str)->None:
         People.__init__(self, name, age)
         self._num = num
 

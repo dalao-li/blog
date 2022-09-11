@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-18 22:44:17
+ * @LastEditTime: 2022-09-11 18:18:36
 -->
 
 
@@ -19,7 +19,7 @@
 
 
 
-### 1.1 理论
+### 理论
 
 
 建立一个队列, 存入开始节点, 队列不为空时, 
@@ -32,7 +32,7 @@ $3)$ 若队列为空则结束
 
 
 
-### 1.2 过程
+### 过程
 
 
 $1)$ 求 $A$ 节点到其余节点的最短路, 设定 $p[i]$为 $A$ 到 $i$ 节点的路径
@@ -104,6 +104,9 @@ $7)$ 队头 $E$ 出队, 对以 $E$ 为起点的边进行松弛
 | $p[i]$ | `0` | `13` | `41` | `17` | `56` |
 
 
+
+### 代码
+
 ```c++
 const int SIZE = 5;
 const int MAXV = 10000;
@@ -135,40 +138,49 @@ int getIndex(char n) {
 
 // 求s到其他点间的最短路
 void SPFA(char s) {
-    char start_node;
-    int start;
-    char end_node;
-    int end;
     queue<char> q;
     
     memset(path, MAXV, sizeof(path));
     memset(in, 0, sizeof(in));
+
     int index = getIndex(s);
     // 点s自己的最短路为0
     path[index] = 0;
+
     q.push(s);
+
     in[index] = 1;
     
+    char start_node;
+    int start_index;
+
+    char end_node;
+    int end_index;
+
     while (!q.empty()) {
         start_node = q.front();
-        start = getIndex(start_node);
+        start_index = getIndex(start_node);
+
         q.pop();
-        in[start] = 0;
+
+        in[start_index] = 0;
         // 遍历所有与a所连通的节点, 进行松弛操作
         for (int i = 0; i < edge.size(); i++) {
             if(start_node != edge[i].start_node) {
                 continue;
             }
+
             // 某个边的起点是a, 获取该边的终点e
             end_node = edge[i].end_node;
-            end = getIndex(end_node);
+            end_index = getIndex(end_node);
+
             // 若从点S经过点X到点end的距离比S直接到end的距离短, 则可进行松弛操作
-            if (path[start] + edge[i].weight < path[end]) {
+            if (path[start_index] + edge[i].weight < path[end_index]) {
                 // 从点S到点end的距离更新为点S到X的距离与X到end的距离之和
-                path[end] = edge[i].weight + path[start];
-                if (!in[end]) {
+                path[end_index] = edge[i].weight + path[start_index];
+                if (!in[end_index]) {
                     q.push(end_node);
-                    in[end] = 1;
+                    in[end_index] = 1;
                 }
             }
         }

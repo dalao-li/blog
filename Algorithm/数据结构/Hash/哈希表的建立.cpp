@@ -5,27 +5,24 @@
  * @Email: dalao_li@163.com
  * @Date: 2022-04-04 22:12:44
  * @LastEditors: DaLao
- * @LastEditTime: 2022-07-19 21:59:11
+ * @LastEditTime: 2022-09-11 17:59:25
  */
 
 #include <iostream>
-#include <malloc.h>
 
 // 哈希表表长
-const int TABLE_LENGTH = 50
+const int TABLE_LENGTH = 50;
 
-    // 人名最大个数
-    const int NAME_MAX_NUM = 30
+// 人名最大个数
+const int NAME_MAX_NUM = 30;
 
-    // 除数
-    const int M = 47
-
-    using namespace std;
+// 除数
+const int M = 47;
 
 typedef struct
 {
     // 用户的名字
-    string name;
+    std::string name;
     // 该名字所对应的关键字
     int keyword;
 } NameList;
@@ -37,7 +34,7 @@ typedef struct
     int count;
 } HashTable;
 
-void initNameList(NameList unit[])
+void init(NameList unit[])
 {
     unit[0].name = "Addison";
     unit[1].name = "Albert";
@@ -69,6 +66,7 @@ void initNameList(NameList unit[])
     unit[27].name = "Jesse";
     unit[28].name = "Isaac";
     unit[29].name = "Harrison";
+
     for (int i = 0; i < NAME_MAX_NUM; i++)
     {
         // sum代表该人名字各字符的ASCLL码值之和
@@ -83,14 +81,14 @@ void initNameList(NameList unit[])
 }
 
 // 建立哈希表, m为散列函数中的被除数
-void creatHashTable(HashTable hashUnit[], NameList unit[])
+void create(HashTable hash_unit[], NameList unit[])
 {
     // 哈希表初始化
     for (int i = 0; i < TABLE_LENGTH; i++)
     {
-        hashUnit[i].unit.name = "";
-        hashUnit[i].unit.keyword = 0;
-        hashUnit[i].count = 0;
+        hash_unit[i].unit.name = "";
+        hash_unit[i].unit.keyword = 0;
+        hash_unit[i].count = 0;
     }
 
     // 构建哈希表, 遍历每一个姓名单元, 将它们插入到哈希表上去
@@ -101,14 +99,14 @@ void creatHashTable(HashTable hashUnit[], NameList unit[])
         // endAddress代表其最终储存地址, 初始时两地址相等
         int endAddress = startAddress;
         // 如果哈希表上该最初地址上的查找次数为0, 说明该位置并未插入关键码
-        if (hashUnit[startAddress].count == 0)
+        if (hash_unit[startAddress].count == 0)
         {
             // 将该姓名单元的关键码插入哈希表
-            hashUnit[startAddress].unit.keyword = unit[i].keyword;
+            hash_unit[startAddress].unit.keyword = unit[i].keyword;
             // 更新哈希表上该位置的姓名
-            hashUnit[startAddress].unit.name = unit[i].name;
+            hash_unit[startAddress].unit.name = unit[i].name;
             // 该关键码的查找次数为1
-            hashUnit[startAddress].count = 1;
+            hash_unit[startAddress].count = 1;
         }
         // 否则说明发生了"冲突"
         else
@@ -120,47 +118,54 @@ void creatHashTable(HashTable hashUnit[], NameList unit[])
             {
                 endAddress = (endAddress + 1) % TABLE_LENGTH;
                 sum++;
-            } while (hashUnit[endAddress].unit.keyword != 0);
+            } while (hash_unit[endAddress].unit.keyword != 0);
             // 找到插入位置之后, 更新哈希表上的关键字名字
-            hashUnit[endAddress].unit.keyword = unit[i].keyword;
-            hashUnit[endAddress].unit.name = unit[i].name;
+            hash_unit[endAddress].unit.keyword = unit[i].keyword;
+            hash_unit[endAddress].unit.name = unit[i].name;
             // 更新查找次数
-            hashUnit[endAddress].count = sum + 1;
+            hash_unit[endAddress].count = sum + 1;
         }
     }
 }
 
 // 计算ASL值
-double ASLValue(HashTable hashUnit[])
+double ASLValue(HashTable hash_unit[])
 {
     double sum = 0;
     for (int i = 0; i < TABLE_LENGTH; i++)
     {
         // 累加查找次数不为0的项
-        if (hashUnit[i].count != 0)
+        if (hash_unit[i].count != 0)
         {
-            sum += hashUnit[i].count;
+            sum += hash_unit[i].count;
         }
     }
     return sum / NAME_MAX_NUM;
 }
 
-void disPlay(HashTable hashUnit[])
+void print(HashTable hash_unit[])
 {
-    printf("序号\t关键字\t搜索次数\tH(key)\t姓名\n");
+    std::cout << "序号\t关键字\t搜索次数\tH(key)\t姓名" << std::endl;
     for (int i = 0; i < TABLE_LENGTH; i++)
     {
-        cout << i << "\t" << hashUnit[i].unit.keyword << "\t\t" << hashUnit[i].count << "\t\t"
-             << (hashUnit[i].unit.keyword) % M << "\t\t" << hashUnit[i].unit.name << endl;
+        std::cout << i << "\t";
+        std::cout << hash_unit[i].unit.keyword << "\t\t";
+        std::cout << hash_unit[i].count << "\t\t";
+        std::cout << (hash_unit[i].unit.keyword) % M << "\t\t";
+        std::cout << hash_unit[i].unit.name << std::endl;
     }
 }
 
 int main()
 {
-    HashTable hashUnit[TABLE_LENGTH];
+    HashTable hash_unit[TABLE_LENGTH];
     NameList unit[30];
-    initNameList(unit);
-    creatHashTable(hashUnit, unit);
-    disPlay(hashUnit);
-    std::cout << ASLValue(hashUnit) << std::endl;
+
+    init(unit);
+
+    create(hash_unit, unit);
+
+    print(hash_unit);
+
+    std::cout << ASLValue(hash_unit) << std::endl;
 }
