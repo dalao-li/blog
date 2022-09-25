@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-08-19 23:44:15
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-22 21:25:08
+ * @LastEditors: daLao
+ * @LastEditTime: 2022-09-22 22:20:14
 -->
 
 ## Python设置
@@ -14,9 +14,11 @@
 ### 换源
 
 ```sh
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+python -m pip install  -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com --upgrade pip
+```
 
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```sh
+pip config set global.index-url http://mirrors.aliyun.com/pypi/simple
 ```
 
 
@@ -27,7 +29,7 @@ pip freeze > requirements.txt
 ```
 
 
-### venv
+### 虚拟环境
 
 
 #### 激活
