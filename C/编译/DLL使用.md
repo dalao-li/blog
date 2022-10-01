@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-20 11:26:41
- * @LastEditors: DaLao
- * @LastEditTime: 2022-08-31 00:27:02
+ * @LastEditors: daLao
+ * @LastEditTime: 2022-10-01 22:45:44
 -->
 
 
@@ -65,9 +65,7 @@ void hello() {
 
 ![](https://cdn.hurra.ltd/img/20210120113257.png)
 
-X86 将编译为 32 位的 dll
-
-X64 将编译为 64 为的 dll
+X86 将编译为 32 位的 dll, X64 将编译为 64 为的 dll
 
 ![](https://cdn.hurra.ltd/img/20210120113457.png)
 
