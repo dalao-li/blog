@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-11-11 23:58:36
- * @LastEditors: DaLao
- * @LastEditTime: 2022-08-27 23:09:12
+ * @LastEditors: daLao
+ * @LastEditTime: 2022-10-02 01:53:16
 -->
 
 ## Makefile
@@ -135,14 +135,17 @@ hellomake:hellomake.o hellofunc.o
 
 ```makefile
 CC=gcc
+
 CFLAG=-I.
+
 DEPS=hellomake.h
 
 # 所有目标文件.o作为OBJ宏的一部分
 OBJ=hellomake.o hellofunc.o
 
 %.o:%.c $(DEPS)
-    $(CC) -c -o $@ $<  $(CFLAG)
+    $(CC) -c -o $@ $< $(CFLAG)
+
 hellomake: $(OBJ)
     $(CC) -o $@ $^ $(CFLAG)
 ```
@@ -158,12 +161,15 @@ hellomake: $(OBJ)
 
 .PHONY规则可以让make不去改动任何名为clean的文件(如果有的话)
 
-```makefile
-IDIR = ../include
+```ini
 CC=gcc
+
+IDIR = ../include
+
 CFLAGS=-I$(IDIR)
 
 ODIR=obj
+
 LDIR=../lib
 
 LIBS=-lm
@@ -176,9 +182,12 @@ OBJ = $(pathsubst %, $(ODIR)/%, $(_OBJ))
 
 $(ODIR)/%.o:%.c $(DEPS)
     $(CC -c -o $@ $< $(CFLAGS
+
 hellomake:$(OBJS)
     $(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+
 .PHONY:clean
+
 clean:
     rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
 ```

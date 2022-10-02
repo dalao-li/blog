@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-20 11:26:41
  * @LastEditors: daLao
- * @LastEditTime: 2022-10-01 22:45:44
+ * @LastEditTime: 2022-10-02 01:50:34
 -->
 
 
@@ -59,7 +59,6 @@ void hello() {
 ```
 
 
-
 #### 编译
 
 
@@ -86,6 +85,7 @@ library.c 文件中已有默认代码
 ![](https://cdn.hurra.ltd/img/20201028181141.png)
 
 <kbd>ctrl</kbd> + <kbd>F9</kbd> 编译, 右侧生成了 libhello.dll 文件
+
 ![](https://cdn.hurra.ltd/img/20201028181058.png)
 
 
@@ -94,6 +94,7 @@ library.c 文件中已有默认代码
 
 
 另建立一个项目 Demo, 在其根目录下建立 lib 目录, 将上一步生成的 dll 文件拷入
+
 ![](https://cdn.hurra.ltd/img/20201028182033.png)
 
 main.cpp 内写入代码
