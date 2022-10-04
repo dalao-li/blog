@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-20 11:26:41
  * @LastEditors: daLao
- * @LastEditTime: 2022-10-02 01:50:34
+ * @LastEditTime: 2022-10-03 20:52:49
 -->
 
 
@@ -97,7 +97,7 @@ library.c 文件中已有默认代码
 
 ![](https://cdn.hurra.ltd/img/20201028182033.png)
 
-main.cpp 内写入代码
+main.cpp 内写入
 
 ```c
 #include <iostream>
@@ -179,7 +179,7 @@ bool isLeapYear(unsigned int y) {
 target_link_libraries(Demo libnum.dll)
 ```
 
-修改 main.cpp 文件
+修改 main.cpp
 
 ```c++
 #include <iostream>

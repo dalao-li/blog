@@ -4,9 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-08-14 01:23:03
- * @LastEditors: DaLao
- * @LastEditTime: 2022-08-21 23:02:20
+ * @LastEditors: daLao
+ * @LastEditTime: 2022-10-03 23:54:14
 -->
+
+
 ## FILE
 
 
@@ -48,6 +50,6 @@ FILE结构是间接地操作系统的文件控制块(FCB)来实现对文件的�
 #### fopen
 
 ```c++
-// 打开文件，读文件到内存，返回文件信息结构指针
+// 打开文件.读文件到内存.返回文件信息结构指针
 FILE *fopen(char *file, char *open_mode)
 ```
