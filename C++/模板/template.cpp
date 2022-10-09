@@ -11,20 +11,20 @@
 #include <iostream>
 #include <vector>
 
-template <class T>
+template <typename T>
 T add(T a, T b)
 {
     return a + b;
 }
 
-template <class T>
+template <typename T>
 struct Node
 {
     T data;
     Node<T> *next;
 };
 
-template <class T>
+template <typename T>
 void display(Node<T> *&head, std::vector<T> &v)
 {
     Node<T> *tail = head;
@@ -47,7 +47,7 @@ void display(Node<T> *&head, std::vector<T> &v)
     printf("\n");
 }
 
-template <class T>
+template <typename T>
 class Composer
 {
 public:
@@ -63,7 +63,7 @@ private:
     T y;
 };
 
-template <class T>
+template <typename T>
 void Composer<T>::display()
 {
     std::cout << (x > y ? x : y) << " " << (x < y ? x : y) << std::endl;
@@ -109,5 +109,6 @@ int main(void)
     Composer<char> cmp3('a', 'A');
 
     cmp3.display();
+
     return 0;
 }

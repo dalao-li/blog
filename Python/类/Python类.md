@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-02-01 12:29:16
- * @LastEditors: DaLao
- * @LastEditTime: 2022-09-11 22:21:40
+ * @LastEditors: daLao
+ * @LastEditTime: 2022-10-09 22:23:21
 -->
 
 ## 类
@@ -16,7 +16,7 @@
 
 ```py
 class Stu:
-    def __init__(self, num: str, name: str, age: str)->None:
+    def __init__(self, num: str, name: str, age: str) -> None:
         self._num = num
         self._name = name
         self._age = age
@@ -32,17 +32,17 @@ self代表类的实例, 而非类
 
 ```py
 class Person:
-    def __init__(self, name: str)->None:
+    def __init__(self, name: str) -> None:
         self._name = name
 
     # get方法
     @property
-    def name(self)-> None:
+    def name(self) -> None:
         return self._name
 
     # set方法
     @name.setter
-    def name(self, value: str)->None:
+    def name(self, value: str) -> None:
         if not isinstance(value, str):
             raise TypeError('Expected a string')
         self._name = value
@@ -57,7 +57,7 @@ class Person:
 
 ```py
 class Person(object):
-    def __init__(self, name: str, age: str)-> None:
+    def __init__(self, name: str, age: str) -> None:
         self.name = name
         self.age = age
 
@@ -73,33 +73,6 @@ print(p.__dict__)
 ```py
 class Person:
     # _obj为字典
-    def __init__(self, _obj)-> None:
+    def __init__(self, _obj) -> None:
         self.__dict__.update(_obj)
-```
-
-
-
-### 继承
-
-
-#### 继承类
-
-```py
-class People:
-    def __init__(self, name: str, age: str)->None:
-        self._name = name
-        self._age = age
-
-    def speak(self)-> None:
-        print(self._name, self._age)
-```
-
-```py
-class Student(People):
-    def __init__(self, name: str, age: str, num: str)->None:
-        People.__init__(self, name, age)
-        self._num = num
-
-    def speak(self)->None:
-        print(self._name, self._age, self._num)
 ```
