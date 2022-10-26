@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-02-01 12:29:16
  * @LastEditors: daLao
- * @LastEditTime: 2022-10-09 22:23:21
+ * @LastEditTime: 2022-10-21 18:39:43
 -->
 
 ## 类
@@ -73,6 +73,6 @@ print(p.__dict__)
 ```py
 class Person:
     # _obj为字典
-    def __init__(self, _obj) -> None:
+    def __init__(self, _obj: dict) -> None:
         self.__dict__.update(_obj)
 ```
