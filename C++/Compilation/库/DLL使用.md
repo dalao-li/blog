@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-20 11:26:41
  * @LastEditors: daLao
- * @LastEditTime: 2022-10-03 20:52:49
+ * @LastEditTime: 2022-12-01 00:04:09
 -->
 
 
@@ -140,6 +140,7 @@ add_executable(Demo main.cpp)
 # 新增;指目标链接的dll文件
 target_link_libraries(Demo libhello.dll)
 ```
+
 编辑 Configurations, 设置 Environment variables, 值为 lib 目录的绝对路径
 
 ![](https://cdn.hurra.ltd/img/20201028184033.png)

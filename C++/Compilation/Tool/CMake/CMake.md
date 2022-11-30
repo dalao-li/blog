@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-10-16 23:03:11
  * @LastEditors: daLao
- * @LastEditTime: 2022-10-16 23:04:34
+ * @LastEditTime: 2022-11-30 22:56:47
 -->
 
 ## Cmake
@@ -46,6 +46,8 @@ add_executable(Main Main.cpp)
 
 
 #### 生成Makefile
+
+- Windows 环境
 
 ```c
 cmake -G "Unix Makefiles" ..
