@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-12 01:44:11
- * @LastEditors: DaLao
- * @LastEditTime: 2022-08-01 21:52:09
+ * @LastEditors: daLao
+ * @LastEditTime: 2022-12-12 23:49:07
 -->
 
 
@@ -17,9 +17,7 @@ docker run [参数] 镜像ID (命令)
 ```
 
 
-
 ### -itd
-
 
 | 参数 | 含义                         |
 | ---- | ---------------------------- |
@@ -31,7 +29,6 @@ docker run [参数] 镜像ID (命令)
 
 ### -p
 
-
 `-p 主机端口:容器端口` 指定端口映射
 
 - 将本机7890端口映射到容器80端口
@@ -40,17 +37,13 @@ docker run [参数] 镜像ID (命令)
 docker run -itd -p 7890:80 nginx
 ```
 
-
-
 #### --expose=[]
-
 
 `--expose=[]` 开放一个或一组端口
 
 
 
 ### -e
-
 
 `-e 变量=值` 给容器设置环境变量
 
@@ -69,23 +62,18 @@ docker run -itd --name=box -e STR_VEN=abcdefg busybox
 ![](https://cdn.hurra.ltd/img/20220112045036.png)
 
 
-
 #### --env-file=[]
-
 
 `--env-file=[]` 从指定文件读入环境变量
 
 
-
 ### --mount
-
 
 `--mount` 挂载本地目录(必须是绝对路径)到容器中, 若目录不存在会报错
 
 ```sh
 --mount type=bind, source=[本地路径], target=[容器路径](权限)
 ```
-
 
 - 将本地/src/app挂载到容器/root/app
 
@@ -100,9 +88,7 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 ```
 
 
-
 ### -v
-
 
 `-v` 挂载本地目录到容器中, 若本地目录不存在, 会自动创建文件夹
 
@@ -114,18 +100,14 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 ```
 
 
-
 ### --net
-
 
 `--net="bridge"` 指定容器网络连接类型
 
 支持 bridge, host, none, container四种类型
 
 
-
-### --link 
-
+### --link
 
 `--link=[]` 链接到另一个容器
 

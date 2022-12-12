@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-11-30 23:00:31
  * @LastEditors: daLao
- * @LastEditTime: 2022-11-30 23:59:22
+ * @LastEditTime: 2022-12-12 23:57:50
 -->
 
 [CMAKE手册](https://www.zybuluo.com/khan-lau/note/254724)
@@ -29,7 +29,6 @@ cmake_minimum_required(VERSION 3.10)
 ```
 
 
-
 #### project
 
 设置项目名与版本
@@ -37,8 +36,6 @@ cmake_minimum_required(VERSION 3.10)
 ```sh
 project(Test VERSION 1.0)
 ```
-
-
 
 
 #### set
@@ -58,11 +55,7 @@ set(CMAKE_CXX_STANDARD 11)
 ```
 
 
-
-
-
 ### 添加
-
 
 #### include_directories
 
@@ -71,9 +64,6 @@ set(CMAKE_CXX_STANDARD 11)
 ```sh
 include_directories([AFTER|BEFORE] [SYSTEM] dir1 dir2 ...)
 ```
-
-
-
 
 
 #### add_library
@@ -88,11 +78,11 @@ add_library(<name> [STATIC | SHARED | MODULE] [EXCLUDE_FROM_ALL] source1 source2
 
 待构建的库文件的实际文件名根据对应平台的命名约定来构造（比如lib<name>.a或者<name>.lib）
 
-STATIC 库是目标文件的归档文件，在链接其它目标的时候使用
+`STATIC` 库是目标文件的归档文件，在链接其它目标的时候使用
 
-SHARED 库会被动态链接，在运行时被加载
+`SHARED` 库会被动态链接，在运行时被加载
 
-MODULE 库是不会被链接到其它目标中的插件，但是可能会在运行时使用dlopen-系列的函数动态链接
+`MODULE` 库是不会被链接到其它目标中的插件，但是可能会在运行时使用dlopen-系列的函数动态链接
 
 
 #### add_subdirectory
