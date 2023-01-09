@@ -16,7 +16,6 @@
 docker run [参数] 镜像ID (命令)
 ```
 
-
 ### -itd
 
 | 参数 | 含义                         |
@@ -25,11 +24,13 @@ docker run [参数] 镜像ID (命令)
 | `-t` | 为容器重新分配一个伪输入终端 |
 | `-d` | 后台运行并返回容器ID         |
 
-
-
 ### -p
 
-`-p 主机端口:容器端口` 指定端口映射
+指定端口映射
+
+````sh
+-p 主机端口:容器端口
+````
 
 - 将本机7890端口映射到容器80端口
 
@@ -39,13 +40,15 @@ docker run -itd -p 7890:80 nginx
 
 #### --expose=[]
 
-`--expose=[]` 开放一个或一组端口
-
-
+开放一个或一组端口
 
 ### -e
 
-`-e 变量=值` 给容器设置环境变量
+给容器设置环境变量
+
+```sh
+-e [变量]=<值>
+```
 
 - 设置MySQL容器中root用户密码为123
 
@@ -64,12 +67,11 @@ docker run -itd --name=box -e STR_VEN=abcdefg busybox
 
 #### --env-file=[]
 
-`--env-file=[]` 从指定文件读入环境变量
-
+从指定文件读入环境变量
 
 ### --mount
 
-`--mount` 挂载本地目录(必须是绝对路径)到容器中, 若目录不存在会报错
+挂载本地目录(必须是绝对路径)到容器中, 若目录不存在会报错
 
 ```sh
 --mount type=bind, source=[本地路径], target=[容器路径](权限)
@@ -90,7 +92,7 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 
 ### -v
 
-`-v` 挂载本地目录到容器中, 若本地目录不存在, 会自动创建文件夹
+挂载本地目录到容器中, 若本地目录不存在, 会自动创建文件夹
 
 
 - 配置时区
@@ -102,14 +104,22 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 
 ### --net
 
-`--net="bridge"` 指定容器网络连接类型
+指定容器网络连接类型
+
+```sh
+--net="类型"
+```
 
 支持 bridge, host, none, container四种类型
 
 
 ### --link
 
-`--link=[]` 链接到另一个容器
+链接到另一个容器
+
+```sh
+--link=[]
+```
 
 - 从 Ubuntu 容器中访问 MySQL容器中的mysql服务
 
@@ -148,6 +158,6 @@ docke run -itd --name=box busybox mkdir test
 
 运行下面命令是run执行sh解释权, 容器会在后台一直运行
 
-```
+```sh
 docker run -itd --name=box busybox sh
 ```

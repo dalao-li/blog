@@ -13,7 +13,7 @@
 
 容器执行命令
 
-```sh
+```shell
 docker exec [参数] 镜像ID 命令
 ```
 
@@ -23,15 +23,13 @@ docker exec [参数] 镜像ID 命令
 | `-t` | 分配一个伪终端              |
 | `-d` | 分离模式, 在后台运行        |
 
-
-
 ### 单指令
 
 ```sh
 docker exec [参数] 镜像ID 命令
 ```
 
-busybox容器创建目录
+- busybox容器创建目录
 
 ```sh
 docker run -itd --name=box busybox 
@@ -48,7 +46,7 @@ docker exec -it box mkdir test
 docker exec 容器ID [shell解释器] -c '命令1 && 命令2'
 ```
 
-ubuntu安装mysql-clinet
+- ubuntu安装mysql-clinet
 
 ```sh
 docker run -itd --name=ubuntu_test ubuntu:18.04

@@ -10,20 +10,19 @@
 
 ## rm
 
-
-- 强制删除
+### 强制删除
 
 ```sh
 docker rm -f 容器ID
 ```
 
-- 删除所有容器
+### 删除所有容器
 
 ```sh
 docker rm $(docker ps -aq)
 ```
 
-- 先停用删除
+### 先停用删除
 
 ```sh
 docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
