@@ -1,4 +1,7 @@
+
+
 <!--
+
  * @Description: 
  * @Version: 1.0
  * @Author: DaLao
@@ -9,6 +12,19 @@
 -->
 
 ## Shell Docker
+
+### 删除none镜像与异常容器
+
+```sh
+docker rmi -f  `docker images | grep '<none>' | awk '{print $3}'` 
+```
+
+
+
+```sh
+docker rm `{docker ps -a | grep Exited | awk '{print $1}'`
+```
+
 
 
 ### 获取容器ID
@@ -39,11 +55,11 @@ if $? -ne 0;then
 fi
 ```
 
-
 ### 备份还原
 
+- 备份
+
 ```sh
-# 备份
 docker images | awk '{print $1}' > images.txt
 
 sed -i '1d' images.txt
@@ -57,8 +73,11 @@ while read -r line; do
 done < images.txt
 ```
 
-```sh
+- 还原
+
+```
 while read -r line;do
     docker load < "\${line//\//_}".tar
 done < images.txt
 ```
+

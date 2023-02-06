@@ -70,6 +70,6 @@ CMD ["python3", "manage.py", "runserver 0.0.0.0：8000"]
 
 #### 区别
 
-`CMD` 在`docker run`时运行, Dockerfile中只能在末尾有一条CMD指令
+`CMD` 在`docker run`时运行, Dockerfile中只能在末尾有**一条**CMD指令
 
-`RUN` 在 `docker build`时运行, 可出现若干此
+`RUN` 在 `docker build`时运行, 可出现若干次
