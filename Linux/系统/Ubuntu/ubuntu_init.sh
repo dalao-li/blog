@@ -6,8 +6,8 @@
  # @Author: DaLao
  # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
- # @LastEditors: DaLao
- # @LastEditTime: 2022-06-30 00:15:17
+ # @LastEditors: Li Yuanhao
+ # @LastEditTime: 2023-02-07 00:52:18
 ### 
 
 # 设置flameshot快捷键
@@ -77,7 +77,7 @@ install_node(){
 
 # 安装代理
 set_proxy(){
-    url="https://service-33p4qzr4-1256078775.gz.apigw.tencentcs.com/link/905nAdJlOb1QYJZU?clash=1"
+    url="https://rss.biteb-sub.com/link/Wm3Nd5ZrQTJwDGbH?"
     
     path=".config/clash/config.yaml"
     
@@ -86,7 +86,9 @@ set_proxy(){
     sudo wget ${url} -O "${HOME}/${path}"
  
     sudo docker run -itd \
-        -p 7890:7890 -p 7891:7891 -p 9090:9090 \
+        -p 7890:7890 \
+        -p 7891:7891 \
+        -p 9090:9090 \
         --mount type=bind, source="${HOME}/${path}", target="/root/${path}", readonly \
         --restart=unless-stopped \
         --name=clash_test \
