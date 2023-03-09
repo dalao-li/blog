@@ -4,19 +4,20 @@
  * @Author: daLao
  * @Email: dalao@xxx.com
  * @Date: 2022-11-30 23:00:31
- * @LastEditors: daLao
- * @LastEditTime: 2022-12-12 23:57:50
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-09 12:32:51
 -->
 
 [CMAKE手册](https://www.zybuluo.com/khan-lau/note/254724)
 
-## CMakeLists.txt
+# CMakeLists.txt
+
+[用CMake构建工程时 cmake -G "Unix Makefiles" 的使用](https://blog.csdn.net/yangjia_cheng/article/details/111408753)
+
+## 设置
 
 
-### 设置
-
-
-#### cmake_minimum_required
+### cmake_minimum_required
 
 设置一个工程所需要的最低CMake版本
 
@@ -29,7 +30,7 @@ cmake_minimum_required(VERSION 3.10)
 ```
 
 
-#### project
+### project
 
 设置项目名与版本
 
@@ -38,7 +39,7 @@ project(Test VERSION 1.0)
 ```
 
 
-#### set
+### set
 
 将一个CMAKE变量设置为给定值
 
@@ -55,9 +56,9 @@ set(CMAKE_CXX_STANDARD 11)
 ```
 
 
-### 添加
+## 添加
 
-#### include_directories
+### include_directories
 
 为构建树添加包含路径
 
@@ -66,7 +67,7 @@ include_directories([AFTER|BEFORE] [SYSTEM] dir1 dir2 ...)
 ```
 
 
-#### add_library
+### add_library
 
 添加一个名为<name>的库文件，该库文件将会根据调用的命令里列出的源文件来创建
 
@@ -85,7 +86,7 @@ add_library(<name> [STATIC | SHARED | MODULE] [EXCLUDE_FROM_ALL] source1 source2
 `MODULE` 库是不会被链接到其它目标中的插件，但是可能会在运行时使用dlopen-系列的函数动态链接
 
 
-#### add_subdirectory
+### add_subdirectory
 
 为构建添加一个子路径
 
@@ -100,10 +101,10 @@ binary_dir选项指定了输出文件的路径, 如果是相对路径, 会被解
 如果没有指定binary_dir，binary_dir的值将会是没有做任何相对路径展开的source_dir
 
 
-### 生成
+## 生成
 
 
-#### add_executable
+### add_executable
 
 ```sh
 add_executable(可执行文件名 源文件)

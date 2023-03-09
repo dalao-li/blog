@@ -4,8 +4,8 @@
  * @Author: daLao
  * @Email: dalao@xxx.com
  * @Date: 2022-11-19 22:04:55
- * @LastEditors: daLao
- * @LastEditTime: 2022-11-19 22:06:17
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-02 23:44:46
  */
 
 #include <iostream>
@@ -30,7 +30,7 @@ int main(void )
             for (int i = 1; i < 10; ++i)
             {
                 // 模拟实际生产过程
-                std::this_thread ::sleep_for(std::chrono::milliseconds(10));
+                std::this_thread::sleep_for(std::chrono::milliseconds(10));
                 std::cout << "producing " << i << std::endl;
 
                 std::unique_lock<std::mutex> lock(mtx);
