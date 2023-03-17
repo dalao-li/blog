@@ -4,19 +4,19 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-12 01:44:11
- * @LastEditors: daLao
- * @LastEditTime: 2022-12-12 23:49:07
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-18 00:42:10
 -->
 
 
-## run
+# run
 
 
 ```sh
 docker run [参数] 镜像ID (命令)
 ```
 
-### -itd
+## -itd
 
 | 参数 | 含义                         |
 | ---- | ---------------------------- |
@@ -24,7 +24,7 @@ docker run [参数] 镜像ID (命令)
 | `-t` | 为容器重新分配一个伪输入终端 |
 | `-d` | 后台运行并返回容器ID         |
 
-### -p
+## -p
 
 指定端口映射
 
@@ -38,26 +38,26 @@ docker run [参数] 镜像ID (命令)
 docker run -itd -p 7890:80 nginx
 ```
 
-#### --expose=[]
+### --expose=[]
 
 开放一个或一组端口
 
-### -e
 
-给容器设置环境变量
+## -e
+
+设置容器环境变量
 
 ```sh
 -e [变量]=<值>
 ```
 
-- 设置MySQL容器中root用户密码为123
+- 设置root用户密码为123
 
 ```sh
 docker run -itd -e MYSQL_ROOT_PASSWORD=123 mysql:5.6
 ```
 
-
-- 给busybox容器设置环境变量STR_VEN=abcdefg
+- 设置环境变量STR_VEN=abcdefg
 
 ```
 docker run -itd --name=box -e STR_VEN=abcdefg busybox
@@ -65,11 +65,11 @@ docker run -itd --name=box -e STR_VEN=abcdefg busybox
 ![](https://cdn.hurra.ltd/img/20220112045036.png)
 
 
-#### --env-file=[]
+### --env-file=[]
 
 从指定文件读入环境变量
 
-### --mount
+## --mount
 
 挂载本地目录(必须是绝对路径)到容器中, 若目录不存在会报错
 
@@ -90,7 +90,7 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 ```
 
 
-### -v
+## -v
 
 挂载本地目录到容器中, 若本地目录不存在, 会自动创建文件夹
 
@@ -102,7 +102,7 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 ```
 
 
-### --net
+## --net
 
 指定容器网络连接类型
 
@@ -113,7 +113,7 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 支持 bridge, host, none, container四种类型
 
 
-### --link
+## --link
 
 链接到另一个容器
 
@@ -143,7 +143,7 @@ mysql -h db -u root -p123
 ```
 
 
-### 问题
+## 问题
 
 
 - 执行命令后容器停止

@@ -4,14 +4,14 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: DaLao
- * @LastEditTime: 2022-05-15 21:49:35
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-18 00:31:52
 -->
 
-## Docker部署MySQL
+# Docker部署MySQL
 
 
-### Docker指令
+## 指令
 
 
 ```sh
@@ -33,18 +33,16 @@ docker run -itd --name=mysql -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_
 ```
 
 
-### 远程连接
+## 远程连接
 
 
-
-#### 登录
+### 登录
 
 ```sql
 mysql -u 用户名 -p
 ```
 
-
-#### 允许远程登录
+### 允许远程登录
 
 ```sql
 grant all privileges on *.* to '用户名'@'%' identified by '密码';
@@ -59,12 +57,10 @@ flush privileges;
 ![](https://cdn.hurra.ltd/img/20211227135502.png)
 
 
-
-### 常见问题
-
+## 常见问题
 
 
-#### 中文乱码
+### 中文乱码
 
 ```sh
 echo "character-set-server=utf8" >> /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -73,8 +69,7 @@ service mysql restart
 ```
 
 
-
-#### 降低占用内存
+### 降低占用内存
 
 ```sh
 cat >> /etc/mysql/mysql.conf.d/mysqld.cnf <<EOF

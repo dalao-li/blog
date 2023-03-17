@@ -28,7 +28,7 @@ void get()
     // 处理网络通信地址的结构体sockaddr_in
     struct sockaddr_in server_addr;
     // 初始化sockaddr_in结构体
-    // bzero()函数：将内存(字符串)前n个字节清零
+    // bzero()函数: 将内存(字符串)前n个字节清零
     bzero(&server_addr, sizeof(server_addr));
     // 设置地址家族
     server_addr.sin_family = AF_INET;

@@ -65,7 +65,7 @@ CMD ["可执行文件", "参数1", "参数2", ...
 - 执行Python指令
 
 ```sh
-CMD ["python3", "manage.py", "runserver 0.0.0.0：8000"]
+CMD ["python3", "manage.py", "runserver 0.0.0.0: 8000"]
 ```
 
 #### 区别

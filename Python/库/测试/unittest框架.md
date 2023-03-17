@@ -83,7 +83,7 @@ def register(name, pwd1, pwd2):
             "code": 1, 
             "msg": "注册成功"
         }
-    else：
+    else: 
         return {
             "code": 0, 
             "msg": "用户名和密码必须在6-18位之间"

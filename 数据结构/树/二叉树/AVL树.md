@@ -1,7 +1,17 @@
-## AVL
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: DaLao
+ * @Email: dalao@xxx.com
+ * @Date: 2021-01-16 17:59:35
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-18 00:14:15
+-->
+
+# AVL
 
 
-### 性质
+## 性质
 
 - 树中任意结点的平衡因子(左子树高度 - 右子树高度)绝对值不超过 1
 
@@ -21,6 +31,7 @@
 
 该树为$AVL$树
 
+## 实现
 
 ### 节点定义
 

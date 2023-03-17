@@ -4,12 +4,12 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-12 04:30:33
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-03 19:54:15
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-18 00:42:41
 -->
 
 
-## exec
+# exec
 
 容器执行命令
 
@@ -23,7 +23,8 @@ docker exec [参数] 镜像ID 命令
 | `-t` | 分配一个伪终端              |
 | `-d` | 分离模式, 在后台运行        |
 
-### 单指令
+
+## 单指令
 
 ```sh
 docker exec [参数] 镜像ID 命令
@@ -40,7 +41,7 @@ docker exec -it box mkdir test
 
 
 
-### 多指令
+## 多指令
 
 ```sh
 docker exec 容器ID [shell解释器] -c '命令1 && 命令2'

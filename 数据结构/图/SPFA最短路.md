@@ -4,12 +4,12 @@
  * @Author: dalao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-09-11 18:18:36
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-18 00:18:38
 -->
 
 
-## SPFA
+# SPFA
 
 
 ![](https://cdn.hurra.ltd/img/2022-4-4-0152.svg)
@@ -19,7 +19,7 @@
 
 
 
-### 理论
+## 理论
 
 
 建立一个队列, 存入开始节点, 队列不为空时, 
@@ -32,7 +32,7 @@ $3)$ 若队列为空则结束
 
 
 
-### 过程
+## 过程
 
 
 $1)$ 求 $A$ 节点到其余节点的最短路, 设定 $p[i]$为 $A$ 到 $i$ 节点的路径
@@ -105,7 +105,7 @@ $7)$ 队头 $E$ 出队, 对以 $E$ 为起点的边进行松弛
 
 
 
-### 代码
+## 实现
 
 ```c++
 const int SIZE = 5;

@@ -30,7 +30,7 @@ auto 根据 = 右边的初始值 value 推导出变量的类型, 要求变量必
 
 decltype 根据 exp 表达式推导出变量的类型, 跟 = 右边的 value 没有关系, 不要求变量必须初始化
 
-decltype 可以写成下面的形式：
+decltype 可以写成下面的形式: 
 
 
 ### exp 注意事项
@@ -155,7 +155,7 @@ decltype(func_cint_rr()) y = 0;
 参数exp 中调用函数时需要带上括号和参数, 但这仅仅是形式, 并不会真的去执行函数代码
 
 
-- 参数exp 是左值, 或者被( )包围：
+- 参数exp 是左值, 或者被( )包围: 
 
 
 ```c++
@@ -240,7 +240,7 @@ int main()
 
 原因就在于, T::iterator并不能包括所有的迭代器类型, 当 T 是一个 const 容器时, 应当使用 const_iterator
 
-有了 C++11 的 decltype 关键字, 就可以直接这样写：
+有了 C++11 的 decltype 关键字, 就可以直接这样写: 
 
 ```c++
 template <typename T>

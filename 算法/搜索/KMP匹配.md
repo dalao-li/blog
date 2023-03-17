@@ -4,11 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-11-13 20:57:00
- * @LastEditors: DaLao
- * @LastEditTime: 2022-05-10 22:44:11
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-18 00:03:45
 -->
 
-## KMP
+TODO
+
+# KMP
 
 ```c
 // 获得next数组

@@ -4,17 +4,13 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 01:19:49
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-18 00:34:18
 -->
 
-## Docker部署Oracle
+# Docker部署Oracle
 
-
-### 命令
-
-
-#### Docker指令
+## Docker指令
 
 ```docker
 docker run -itd \
@@ -27,8 +23,9 @@ docker run -itd \
 docker run -itd --name=orace -p 8080:8080 -p 1521:1521 truevoly/oracle-12c
 ```
 
+## Oracle指令
 
-#### 进入Oracle
+### 进入Oracle
 
 sys 用户的默认密码 oracle
 
@@ -37,14 +34,14 @@ sqlplus sys as sysdba
 ```
 
 
-#### 查看表空间
+### 查看表空间
 
 ```sql
 select tablespace_name from dba_tablespaces;
 ```
 
 
-#### 查看表空间路径
+### 查看表空间路径
 
 ```sql
 select * from dba_data_files;

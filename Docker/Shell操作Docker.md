@@ -7,19 +7,21 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-15 10:21:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-06-24 23:15:23
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-18 00:43:45
 -->
 
-## Shell Docker
+# Shell Docker
 
-### 删除none镜像与异常容器
+## 删除
+
+### 删除none镜像
 
 ```sh
 docker rmi -f  `docker images | grep '<none>' | awk '{print $3}'` 
 ```
 
-
+### 删除异常容器
 
 ```sh
 docker rm `{docker ps -a | grep Exited | awk '{print $1}'`
@@ -42,7 +44,7 @@ $(docker ps -aqf "name=容器名")
 | f    | filter                 |
 
 
-### 判断容器是否存在
+## 判断容器是否存在
 
 ```sh
 name=""
@@ -55,9 +57,9 @@ if $? -ne 0;then
 fi
 ```
 
-### 备份还原
+## 备份还原
 
-- 备份
+### 备份
 
 ```sh
 docker images | awk '{print $1}' > images.txt
@@ -73,7 +75,7 @@ while read -r line; do
 done < images.txt
 ```
 
-- 还原
+### 还原
 
 ```
 while read -r line;do

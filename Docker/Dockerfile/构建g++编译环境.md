@@ -8,15 +8,17 @@
  * @LastEditTime: 2023-02-07 00:22:38
 -->
 
-## 选择镜像
+# 搭建g++编译环境
+
+## 镜像
 
 ```c
 alpine:latest
 ```
 
-### 示例
+## 示例
 
-#### 源文件
+### 源文件
 
 - c++
 
@@ -51,7 +53,7 @@ RUN g++ -static Main.cpp -o Main
 ```
 
 
-#### 编译
+### 编译
 
 ```
 docker build -t gpp:v1 .
@@ -61,7 +63,7 @@ docker build -t gpp:v1 .
 
 
 
-#### 运行
+### 运行
 
 ![](https://cdn.hurra.ltd/img/20230207002122.png)
 

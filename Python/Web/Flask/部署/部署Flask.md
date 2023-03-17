@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-08-19 00:00:59
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 00:52:49
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-18 00:47:16
 -->
 
 ## 部署Flask
@@ -16,7 +16,7 @@
 
 - Dockerfile
 
-```docker
+```go
 FROM python:3.7-slim-buster
 
 LABEL version="v1" description="Docker deploy Flask" by="Dalao"

@@ -4,16 +4,17 @@
  * @Author: dalao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-05-06 23:29:39
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-18 00:31:39
 -->
 
 
-## 1 MongoDB 部署
+# MongoDB 部署
 
 
+## 创建
 
-### 1.1 创建容器
+### 创建容器
 
 
 ```sh
@@ -25,8 +26,7 @@ docker exec -it mongo mongo admin
 ![](https://cdn.hurra.ltd/img/20220112183733.png)
 
 
-
-### 1.2 创建用户
+### 创建用户
 
 
 创建一个名为 admin, 密码为 123456 的用户
@@ -39,7 +39,7 @@ db.createUser({ user:'admin', pwd:'123456', roles:[{ role:'userAdminAnyDatabase'
 
 
 
-### 1.3 连接
+## 连接
 
 
 ```sh
@@ -54,10 +54,10 @@ db.auth('admin', '123456')
 
 
 
-## 2 命令
+## 命令
 
 
-### 2.1 数据库
+### 数据库
 
 
 ```sh
@@ -71,7 +71,7 @@ use 数据库
 ![](https://cdn.hurra.ltd/img/20220112184225.png)
 
 
-### 2.2 集合
+### 集合
 
 
 #### 创建集合
@@ -86,7 +86,7 @@ db.createCollection("集合")
 
 
 
-### 2.3 增加
+### 增加
 
 
 #### 插入数据
@@ -105,7 +105,7 @@ db.stu.insert([{name:"Ling", age:20}, {name:"Wang", age:22}])
 
 
 
-### 2.4 查询
+### 查询
 
 
 #### 全部查询
@@ -155,7 +155,7 @@ db.stu.find({age:{$gte:21}}).pretty()
 
 
 
-### 2.5 修改
+### 修改
 
 ```sh
 db.[集合].update({key1:value}, {$set:{key2:new_value}})
@@ -170,7 +170,7 @@ db.stu.update({name:"Ling"}, {$set:{age:30}})
 
 
 
-### 2.6 删除
+### 删除
 
 ```sh
 db.[集合].remove({key:value})
@@ -184,10 +184,10 @@ db.stu.remove({name:"Ling"})
 
 
 
-## 3 Python交互
+## Python交互
 
 
-### 3.1 连接
+### 连接
 
 
 ```sh
@@ -206,7 +206,7 @@ print(dbs)
 ```
 
 
-### 3.2 获取集合
+### 获取集合
 
 
 ```py
@@ -218,7 +218,7 @@ print(collects)
 ```
 
 
-### 3.3 获取文档
+### 获取文档
 
 
 ```py
@@ -251,7 +251,7 @@ print(data)
 ```
 
 
-### 3.4 插入文档
+### 插入文档
 
 
 #### 单条插入

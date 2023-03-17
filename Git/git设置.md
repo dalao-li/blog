@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-17 17:59:27
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 19:51:38
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-03-17 23:30:42
 -->
 
-## Git设置
+# Git设置
 
 
-### 设置
+## 配置
 
 
 ```sh
@@ -30,7 +30,7 @@ git config --global core.quotepath false
 
 
 
-### 创建公钥
+## 创建公钥
 
 ```sh
 ssh-keygen -t rsa -C "邮箱"
@@ -40,7 +40,7 @@ ssh-keygen -t rsa -C "邮箱"
 
 
 
-### .git设置
+## .git设置
 
 
 ```sh
