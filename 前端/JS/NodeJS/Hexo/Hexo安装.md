@@ -4,23 +4,23 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-07 00:19:50
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 20:02:00
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:02:22
 -->
 
-## Hexo
+# Hexo
 
-### 安装Hexo
+## 安装
 
 
-#### 修改npm源
+### 修改npm源
 
 ```sh
 sudo npm install gitbook-cli -g --registry=http://registry.npm.taobao.org 
 ```
 
 
-#### 安装
+### 安装
 
 ```sh
 # 新建目录
@@ -42,17 +42,17 @@ sudo npm install hexo-wordcount --save
 
 
 
-### 启动
+## 启动
 
 
-#### 生成静态网站
+### 生成静态网站
 
 ```sh
 hexo g
 ```
 
 
-#### 启动服务器
+### 启动服务器
 
 ```sh
 hexo s
@@ -126,10 +126,10 @@ hexo g && hexo d
 
 
 
-### 问题
+## 问题
 
 
-#### Math渲染
+### Math渲染
 
 - 更换Hexo的markdown渲染引擎
 
@@ -174,8 +174,7 @@ mathjax: true
 ```
 
 
-
-#### 综合问题
+### 综合问题
 
 - hexo not found 
 

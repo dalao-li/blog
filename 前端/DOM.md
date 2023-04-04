@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-08 20:42:19
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 00:47:26
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:05:15
 -->
 
-## DOM Nodes
+# DOM Nodes
 
 
-### DOM节点
+## 节点
 
 HTML 文档中的所有内容都是节点
 
@@ -26,7 +26,7 @@ HTML 文档中的所有内容都是节点
 - 注释是`注释节点`
 
 
-### DOM方法
+## 方法
 
 - getElementById() 返回带有指定 ID 的元素
 
@@ -71,7 +71,7 @@ const b = document.getElementById("submitBtn")
 把指定属性设置或修改为指定的值
 
 
-### DOM属性
+## 属性
 
 - innerHTML
 

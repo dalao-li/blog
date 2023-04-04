@@ -4,11 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-14 16:34:34
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 22:03:43
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:00:23
 -->
 
-### 获取控件ID
+# 获取控件ID
 
 ```html
 <button type="button" class="btn btn-success" id="{{ i.id }}" onclick=download()>下载</button>

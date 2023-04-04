@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-08 00:03:57
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 20:03:16
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:03:01
 -->
 
-## NodeJS
+# NodeJS
 
 
-### 安装
+## 安装
 
 - Ubuntu
 
@@ -32,7 +32,7 @@ sudo pacman -S nodejs npm
 ```
 
 
-### 换源
+## 换源
 
 ```sh
 npm config set registry http://mirrors.cloud.tencent.com/npm/
@@ -46,7 +46,7 @@ npm config get registry
 ```
 
 
-### 卸载
+## 卸载
 
 - Ubuntu
 

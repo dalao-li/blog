@@ -4,11 +4,13 @@
  * @Author: dalao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 22:03:10
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:01:55
 -->
 
-### 效果
+# Bootstrap选项卡
+
+## 效果
 
 ![](https://cdn.hurra.ltd/img/20200524194114.png)
 
@@ -21,7 +23,7 @@
 - data-toggle="tab" 用以绑定触发事件, 即点击不同选项卡时切换页面
 
 
-### 全部代码
+## 代码
 
 ```html
 <!DOCTYPE html>

@@ -4,11 +4,14 @@
  * @Author: dalao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 22:02:07
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:01:03
 -->
 
-### 效果
+# Bootstrap表单
+
+
+## 效果
 
 ![](https://cdn.hurra.ltd/img/20200526231712.png)
 ![](https://cdn.hurra.ltd/img/20200526231734.png)
@@ -19,7 +22,7 @@
 ![](https://cdn.hurra.ltd/img/20200526233425.png)
 
 
-### head 部分
+## head 部分
 
 注意依赖文件的路径需根据自己实际下载文件路径进行修改, 网上教程中的代码无法直接使用往往就是因为依赖库没处理好
 
@@ -158,7 +161,7 @@
 </body>
 ```
 
-### JS 部分
+## JS 部分
 
 ```javascript
 <script type="text/javascript">

@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-18 16:29:32
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 20:00:01
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:03:56
 -->
 
-## JS用法
+# JS用法
 
 
-### 控件
+## 控件
 
 ```html
 <input type="text" id="name" />
@@ -19,14 +19,14 @@
 <button type="button" id="addBtn"></button>
 ```
 
-#### 获取控件
+### 获取控件
 
 ```js
 document.getElementById("id")
 ```
 
 
-#### 获取值
+### 获取值
 
 ```js
 document.getElementById("id").value();
@@ -36,7 +36,7 @@ document.getElementById("id").innerHTML
 ```
 
 
-#### 事件
+## 事件
 
 ```js
 const addBtn = document.getElementById("addBtn");
@@ -46,24 +46,24 @@ addBtn.addEventListener("click", ()=>{
 })
 ```
 
-#### 匿名函数
+### 匿名函数
 
 ```js
 ()=>
 ```
 
 
-### 弹窗
+## 弹窗
 
 
-#### 提示框回调
+### 提示框回调
 
 ```js
 alert()
 ```
 
 
-#### 确认提示框
+### 确认提示框
 
 ```js
 const msg = "内容？\n\n请确认！"
@@ -77,7 +77,7 @@ if (confirm(msg)){
 ```
 
 
-#### 输入提示框
+### 输入提示框
 
 ```js
 const value = prompt("Input Text", "Default Text")
@@ -88,10 +88,10 @@ if (value != null && value != "") {
 ```
 
 
-### HTTP
+## HTTP
 
 
-#### GET
+### GET
 
 ```js
 function get(url, callback) {
@@ -112,7 +112,8 @@ function get(url, callback) {
 
 ![](https://cdn.hurra.ltd/img/20211113203754.png)
 
-#### POST
+
+### POST
 
 ```js
 function post(url, data, callback){

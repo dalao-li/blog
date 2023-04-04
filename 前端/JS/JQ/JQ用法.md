@@ -4,14 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-01 01:39:36
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 19:57:09
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:03:13
 -->
 
-## JS语法
-
-
-### 控件
+# JS语法
 
 ```html
 <input type="text" id="name" />
@@ -19,8 +16,7 @@
 <button type="button" id="addBtn"></button>
 ```
 
-
-#### 获取控件
+## 获取控件
 
 jQuery 利用$("#id")获取的是一个[object Object]
 
@@ -31,14 +27,14 @@ $("#id").get(0)
 ```
 
 
-#### 获取值
+## 获取值
 
 ```js
 $("#id").val();
 ```
 
 
-#### 事件
+## 事件
 
 ```js
 $("#addBtn").click(functon(){
@@ -47,14 +43,14 @@ $("#addBtn").click(functon(){
 ```
 
 
-#### 匿名函数
+### 匿名函数
 
 ```js
 function(){}
 ```
 
 
-### HTTP请求
+## HTTP请求
 
 ```js
 $.get(URL, callback)
@@ -95,7 +91,7 @@ function sendAjax(type, url, param, callback) {
 }
 ```
 
-### JQ获取表格值
+## 获取表格值
 
 ```html
 <form method="post" action="" id="form">

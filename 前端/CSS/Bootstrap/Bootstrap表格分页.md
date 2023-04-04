@@ -4,11 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-10-06 13:11:32
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-05 22:02:46
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:01:37
 -->
 
-### 效果
+# Bootstrap表格分页
+
+## 效果
 
 ![](https://cdn.hurra.ltd/img/20200708224302.png)
 
@@ -25,7 +27,7 @@
 <center>点击表格后显示被点击行的信息</center>
 
 
-### 前端
+## 前端
 
 ```html
 <!DOCTYPE html>
