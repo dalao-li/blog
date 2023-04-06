@@ -4,15 +4,15 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-24 17:08:04
- * @LastEditors: DaLao
- * @LastEditTime: 2022-05-27 22:53:30
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 16:30:28
 -->
 
 
-## DHCP
+# DHCP
 
 
-### 协议
+## 协议
 
 
 动态主机配置协议($Dynamic$ $Host$ $Configuration$ $Protocol$)是使用$UDP$协议工作的局域网网络协议
@@ -25,7 +25,7 @@
 
 
 
-### DHCP服务器
+## DHCP服务器
 
 
 专门承载和运行DHCP服务, 帮助管理IP的专用服务器
@@ -54,7 +54,7 @@
 
 
 
-### 配置DHCP主机
+## 配置DHCP主机
 
 
 新建VMnet10网卡

@@ -4,15 +4,15 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-02-07 14:02:02
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-01 22:38:29
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:23:28
 -->
 
 
-## Hypervisor
+# Hypervisor
 
 
-### 概念
+## 概念
 
 
 虚拟机监视器(virtual machine monitor, VMM), 是用来建立与执行虚拟机器的软件、固件或硬件
@@ -31,7 +31,7 @@ Hypervisor不但协调着这些硬件资源的访问, 也同时在各个虚拟�
 
 
 
-### 原生或裸机hypervisor
+## 原生或裸机hypervisor
 
 
 虚拟机管理程序直接运行在宿主机的硬件上来控制硬件和管理客操作系统
@@ -46,7 +46,7 @@ Hypervisor不但协调着这些硬件资源的访问, 也同时在各个虚拟�
 ![](https://cdn.hurra.ltd/img/20210207190941.png)
 
 
-### 寄居或托管hypervisor
+## 寄居或托管hypervisor
 
 
 虚拟机管理程序运行在传统的操作系统上, 就像其他计算机程序那样运行

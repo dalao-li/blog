@@ -4,18 +4,20 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-07-06 20:08:07
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-06 20:17:59
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-05 02:23:42
 -->
 
+# Winodws设置
 
-### 设置Host
+## 设置Host
 
 ```sh
 C:\Windows\System32\drivers\etc\host
 ```
 
-### 关闭window defener
+
+## 关闭window defener
 
 
 ```sh
@@ -23,7 +25,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v "Di
 ```
 
 
-### MBR->GPT
+## MBR->GPT
 
 
 ```sh
