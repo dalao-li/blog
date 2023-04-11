@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-07-15 11:40:19
- * @LastEditors: DaLao
- * @LastEditTime: 2022-04-29 23:36:48
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-09 00:15:55
 -->
 
-## Ubuntu设置
+# Ubuntu设置
 
 
-### 重启
+## 重启
 
 
 $Ubuntu$出现什么状况, 千万不要强制重启
@@ -28,7 +28,7 @@ $Ubuntu$出现什么状况, 千万不要强制重启
 
 
 
-### 关闭root密码
+## 关闭root密码
 
 
 ```sh
@@ -44,11 +44,7 @@ dalao ALL=(ALL) NOPASSWD:ALL
 ```
 
 
-
-### 更新源
-
-
-- Ubuntu
+## 更新源
 
 同步sources.list 和sources.list.d 中列出软件源索引
 
@@ -63,15 +59,14 @@ apt-get upgrade
 ```
 
 
-
-### 插件
+## 插件
 
 
 ![](https://cdn.hurra.ltd/img/20210814015815.png)
 
 
 
-### 转换目录语言
+## 转换目录语言
 
 
 ```sh
@@ -84,7 +79,7 @@ export LANG=zh_CN
 
 
 
-### 程序包缓存文件已损坏
+## 程序包缓存文件已损坏
 
 
 ```sh
@@ -93,7 +88,7 @@ sudo rm -rf /var/lib/apt/lists/*
 
 
 
-### 转换rpm到deb
+## 转换rpm到deb
 
 
 ```sh
@@ -106,7 +101,7 @@ sudo dpkg -i [package].deb
 
 
 
-### sougou输入法
+## sougou输入法
 
 
 - 隐藏搜狗输入法配置栏
@@ -117,7 +112,7 @@ sudo sed -i 's#StatusAppearance=.*#StatusAppearance=0#' ${HOME}/.config/sogoupin
 
 
 
-### 消除双图标
+## 消除双图标
 
 
 ```sh
@@ -135,8 +130,7 @@ StartupWMClass=XXXXXX
 ```
 
 
-
-### 卸载
+## 卸载软件
 
 
 ```sh
@@ -145,7 +139,6 @@ dpkg -l *软件相关字段*
 
 sudo apt-get --purge remove 包名
 ```
-
 
 
 ### VM
@@ -168,7 +161,6 @@ sudo apt-get install build-essential linux-headers-$(uname -r)
 ```sh
 sudo vmware-installer -u vmware-workstation
 ```
-
 
 
 ### 快捷指令

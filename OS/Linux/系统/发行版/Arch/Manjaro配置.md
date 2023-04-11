@@ -4,15 +4,15 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-06-13 20:32:36
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-01 22:39:26
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-09 00:15:15
 -->
 
 
-## 配置
+# Manjaro配置
 
 
-### 换源
+## 换源
 
 
 - 添加国内源
@@ -41,7 +41,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 
 
-### 更新
+## 更新
 
 ```sh
 sudo pacman -Syyu
@@ -66,7 +66,7 @@ sudo pacman -Syudd
 ```
 
 
-###  文件管理器
+##  文件管理器
 
 - 查看当前文件管理器
 
@@ -84,6 +84,7 @@ xdg-mime query default inode/directory
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
 ```
 
+## 问题
 
 ### Vscode终端乱码
 

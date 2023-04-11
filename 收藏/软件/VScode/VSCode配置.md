@@ -8,13 +8,22 @@
  * @LastEditTime: 2022-07-01 22:33:34
 -->
 
-## VSCode
+# VSCode
+
+## 下载
+
+```sh
+进入vscode官方网站，点击download下载
+
+复制下载地址，将地址中的/stable前换成vscode.cdn.azure.cn
+```
 
 
-### 设置
+
+## 设置
 
 
-#### 以root权限运行
+### 以root权限运行
 
 
 ```sh
@@ -22,7 +31,7 @@ sudo code --user-data-dir="~/.vscode-root"
 ```
 
 
-#### 选中内容高亮
+### 选中内容高亮
 
 
 ```sh
@@ -33,10 +42,10 @@ sudo code --user-data-dir="~/.vscode-root"
 ```
 
 
-### 快捷键
+## 快捷键
 
 
-#### 查找
+### 查找
 
 
 | 功能             | 快捷键                                            |
@@ -70,7 +79,7 @@ highlight-icemode
 | 查看函数调用 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd>+ <kbd>C</kbd> |
 
 
-#### 跳转
+### 跳转
 
 
 | 功能                        | 快捷键                                                               |
@@ -81,7 +90,7 @@ highlight-icemode
 | 跳转到当前文件开头/结尾     | <kbd>Ctrl</kbd> + <kbd>Home</kbd> / <kbd>Ctrl</kbd> + <kbd>End</kbd> |
 
 
-#### 显示
+### 显示
 
 
 | 功能                 | 快捷键                                                                                                |
@@ -93,7 +102,7 @@ highlight-icemode
 | 重新打开关闭的编辑器 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>                                                     |
 
 
-#### 编辑
+### 编辑
 
 
 | 功能                 | 快捷键                                                                                       |

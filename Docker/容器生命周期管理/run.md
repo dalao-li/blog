@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-01-12 01:44:11
  * @LastEditors: Li Yuanhao
- * @LastEditTime: 2023-03-18 00:42:10
+ * @LastEditTime: 2023-04-09 00:27:50
 -->
 
 
@@ -23,6 +23,7 @@ docker run [参数] 镜像ID (命令)
 | `-i` | 以交互模式运行容器           |
 | `-t` | 为容器重新分配一个伪输入终端 |
 | `-d` | 后台运行并返回容器ID         |
+
 
 ## -p
 

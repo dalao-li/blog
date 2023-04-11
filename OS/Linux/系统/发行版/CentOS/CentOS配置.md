@@ -4,12 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-10-16 12:46:09
- * @LastEditors: DaLao
- * @LastEditTime: 2022-04-29 23:36:10
+ * @LastEditors: Li Yuanhao
+ * @LastEditTime: 2023-04-09 00:24:42
 -->
 
-## CentOS系统
-
+# CentOS系统
 
 
 ### 更新源
@@ -24,8 +23,7 @@ sudo yum clean all && yum makecache &&  yum -y update
 ```
 
 
-
-### 配置Python
+## 配置Python
 
 
 ```sh
@@ -51,8 +49,7 @@ sudo source ~/.bash_profile
 ```
 
 
-
-### 安装Docker
+## 安装Docker
 
 
 ```sh
@@ -92,8 +89,7 @@ sudo yum update -y && yum install epel-release -y
 ```
 
 
-
-### 防火墙
+## 防火墙
 
 
 ```sh
@@ -108,8 +104,7 @@ systemctl disable firewalld.service
 ```
 
 
-
-### 网卡
+## 网卡
 
 
 - 文件位置
