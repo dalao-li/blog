@@ -4,7 +4,7 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: Li Yuanhao
+ * @LastEditors: dalao
  * @LastEditTime: 2023-03-18 00:32:25
 -->
 
@@ -67,7 +67,7 @@ CREATE TABLE "info" (
 ```
 
 
-### 事务开始
+### 开始
 
 ```sql
 BEGIN;
@@ -81,7 +81,7 @@ COMMIT;
 ![](https://cdn.hurra.ltd/img/20200712233125.png)
 
 
-### 回滚事务
+### 回滚
 
 ```sql
 BEGIN;

@@ -4,11 +4,12 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: Li Yuanhao
- * @LastEditTime: 2023-03-18 00:34:18
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-13 17:59:58
 -->
 
 # Docker部署Oracle
+
 
 ## Docker指令
 
@@ -24,6 +25,7 @@ docker run -itd --name=orace -p 8080:8080 -p 1521:1521 truevoly/oracle-12c
 ```
 
 ## Oracle指令
+
 
 ### 进入Oracle
 

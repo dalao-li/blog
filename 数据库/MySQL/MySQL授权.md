@@ -4,17 +4,15 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-10-06 13:11:32
- * @LastEditors: Li Yuanhao
- * @LastEditTime: 2023-03-18 00:33:02
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-13 17:59:23
 -->
 
 # MySQL 授权
 
 
-## 用户
 
-
-### 创建
+## 创建
 
 ```sql
 create user '用户名'@'host' identified by '密码';
@@ -31,8 +29,7 @@ create user '用户名'@'host' identified by '密码';
 create user 'dalao'@'%' identified by '123456'
 ```
 
-
-### 查看
+查看信息
 
 ```sql
 select host, user, authentication_string from mysql.user;
@@ -44,9 +41,7 @@ select host, user, authentication_string from mysql.user;
 ![](https://cdn.hurra.ltd/img/20200516001919.png)
 
 
-## 授权
-
-### 查看
+## 查看
 
 - 查看所有用户权限
 
@@ -61,7 +56,7 @@ show grants;
 show grants for'用户名'@'%';
 ```
 
-### 授权
+## 授权
 
 - 授权操作只有root用户才有权限操作
 

@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-02-04 23:48:41
- * @LastEditors: Li Yuanhao
- * @LastEditTime: 2023-03-18 00:35:19
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-13 18:00:50
 -->
 
 # SQLServer
@@ -81,10 +81,10 @@ GO
 import pymssql
 
 conn = pymssql.connect(
-    host = IP:端口, 
-    user = "sa", 
-    password = 密码, 
-    database = 数据库, 
+    host = IP:端口,
+    user = "sa",
+    password = 密码,
+    database = 数据库,
     charset = 'utf8'
 )
 

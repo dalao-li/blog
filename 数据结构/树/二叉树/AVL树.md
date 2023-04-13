@@ -4,8 +4,8 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: Li Yuanhao
- * @LastEditTime: 2023-03-18 00:14:15
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-13 17:52:28
 -->
 
 # AVL
@@ -31,7 +31,9 @@
 
 该树为$AVL$树
 
+
 ## 实现
+
 
 ### 节点定义
 
@@ -60,7 +62,7 @@ typedef struct AVLNode {
 
 ```c
 template <class T>
-int get_height(AVLNode<T> *node) {
+int GetHeight(AVLNode<T> *node) {
     if(node == nullptr) {
         return 0;
     }
@@ -73,11 +75,12 @@ int get_height(AVLNode<T> *node) {
 
 ```c
 template <class T>
-int get_balance_factor(AVLNode<T> *node) {
+int GetBalanceFactor(AVLNode<T> *node) {
     if(node == nullptr) {
         return 0;
     }
-    return get_height(node->leftSon) - get_height(node->rightSon);
+
+    return GetHeight(node->leftSon) - GetHeight(node->rightSon);
 }
 ```
 
@@ -87,22 +90,23 @@ int get_balance_factor(AVLNode<T> *node) {
 ```c
 // 判断是否平衡
 template <class T>
-bool is_balance(AVLNode<T> *node) {
+bool IsBalance(AVLNode<T> *node) {
     if(node == nullptr){
         return true;
     }
 
-    if(abs(get_balance_factor(node)) > 1) {
+    if(abs(GetBalanceFactor(node)) > 1) {
         return false;
     }
-    return is_balance(node->leftSon) && is_balance(node->rightSon);
+
+    return IsBalance(node->leftSon) && IsBalance(node->rightSon);
 }
 ```
 
 
 ### 左旋
 
-- $AVL$ 树若在`右子树`插入右孩子导致失衡时, 需进行单左旋调整
+- $AVL$ 树若在`右子树`插入右孩子导致失衡时, 单左旋调整
 
 - 旋转围绕最小失衡子树的根节点进行
 
@@ -116,15 +120,16 @@ bool is_balance(AVLNode<T> *node) {
 ```c
 // 左旋, root为最小失衡子树的根节点
 template <class T>
-AVLNode<T> *left_rotation(AVLNode<T> *root) {
+AVLNode<T> *LeftRotate(AVLNode<T> *root) {
     AVLNode<T> *p = root->rightSon;
 
     root->rightSon = p->leftSon;
     p->leftSon = root;
 
     // 改变指向后, 更新结点对应的高度
-    root->height = max(get_height(root->leftSon), get_height(root->rightSon)) + 1;
-    p->height = max(get_height(p->leftSon), get_height(p->rightSon))+1;
+    root->height = max(GetHeight(root->leftSon), GetHeight(root->rightSon)) + 1;
+    p->height = max(GetHeight(p->leftSon), GetHeight(p->rightSon)) + 1;
+
     return p;
 }
 ```
@@ -132,7 +137,7 @@ AVLNode<T> *left_rotation(AVLNode<T> *root) {
 
 ### 右旋
 
-- $AVL$ 树若在`左子树`插入`左孩子`导致失衡时, 需进行单右旋调整
+- $AVL$ 树若在`左子树`插入`左孩子`导致失衡时, 单右旋调整
 
 - 旋转围绕最小失衡子树的根节点进行
 
@@ -140,14 +145,14 @@ AVLNode<T> *left_rotation(AVLNode<T> *root) {
 
 ```c
 template <class T>
-AVLNode<T>* right_rotation(AVLNode<T> *&root) {
+AVLNode<T>* RightRotate(AVLNode<T> *&root) {
     AVLNode<T> *p = root->leftSon;
 
     root->leftSon = p->rightSon;
     p->rightSon = root;
 
-    root->height = max(get_height(root->leftSon), get_height(root->rightSon)) + 1;
-    p->height = max(get_height(p->leftSon), get_height(p->rightSon)) + 1;
+    root->height = max(GetHeight(root->leftSon), GetHeight(root->rightSon)) + 1;
+    p->height = max(GetHeight(p->leftSon), GetHeight(p->rightSon)) + 1;
     return p;
 }
 ```
@@ -155,13 +160,13 @@ AVLNode<T>* right_rotation(AVLNode<T> *&root) {
 
 ### 先右旋后左旋
 
-- $AVL$ 树在 `右子树`上插入`左孩子`导致失衡时, 需进行先右旋后左旋调整
+- $AVL$ 树在 `右子树`上插入`左孩子`导致失衡时, 先右旋后左旋调整
 
 ```c
 template <class T>
-AVLNode<T>* right_left_rotation(AVLNode<T> *&root) {
-    root->rightSon = right_rotation(root->rightSon);
-    return left_rotation(root);
+AVLNode<T>* RightAndLeftRotate(AVLNode<T> *&root) {
+    root->rightSon = RightRotate(root->rightSon);
+    return LeftRotate(root);
 }
 ```
 
@@ -172,13 +177,13 @@ AVLNode<T>* right_left_rotation(AVLNode<T> *&root) {
 
 ### 先左旋后右旋
 
-- $AVL$ 树在`左子树`上插入`右孩子`导致失衡时, 需进行先左旋后右旋调整
+- $AVL$ 树在`左子树`上插入`右孩子`导致失衡时, 先左旋后右旋调整
 
 ```c
 template <class T>
-AVLNode<T>* left_right_rotation(AVLNode<T> *&root) {
-    root->leftSon = left_rotation(root->leftSon);
-    return right_rotation(root);
+AVLNode<T>* LeftAndRightRotate(AVLNode<T> *&root) {
+    root->leftSon = LeftRotate(root->leftSon);
+    return RightRotate(root);
 }
 ```
 

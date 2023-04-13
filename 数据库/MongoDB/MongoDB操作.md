@@ -4,8 +4,8 @@
  * @Author: dalao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: Li Yuanhao
- * @LastEditTime: 2023-03-18 00:31:39
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-13 17:56:27
 -->
 
 
@@ -13,6 +13,7 @@
 
 
 ## 创建
+
 
 ### 创建容器
 
@@ -29,7 +30,7 @@ docker exec -it mongo mongo admin
 ### 创建用户
 
 
-创建一个名为 admin, 密码为 123456 的用户
+创建名为 admin, 密码为 123456 的用户
 
 ```sh
 db.createUser({ user:'admin', pwd:'123456', roles:[{ role:'userAdminAnyDatabase', db:'admin'}, "readWriteAnyDatabase"]})
@@ -46,10 +47,6 @@ db.createUser({ user:'admin', pwd:'123456', roles:[{ role:'userAdminAnyDatabase'
 db.auth(用户名, 密码)
 ```
 
-```sh
-db.auth('admin', '123456')
-```
-
 ![](https://cdn.hurra.ltd/img/20220112184110.png)
 
 
@@ -64,9 +61,7 @@ db.auth('admin', '123456')
 use 数据库
 ```
 
-- 创建 test 数据库
-
-这里暂不会显示, 因为其中还未插入数据
+创建 test 数据库, 这里暂不会显示, 因为其中还未插入数据
 
 ![](https://cdn.hurra.ltd/img/20220112184225.png)
 

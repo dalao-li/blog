@@ -4,7 +4,7 @@
  * @Author: daLao
  * @Email: dalao@xxx.com
  * @Date: 2022-11-19 22:04:55
- * @LastEditors: Li Yuanhao
+ * @LastEditors: dalao
  * @LastEditTime: 2023-03-02 23:44:46
  */
 
@@ -16,7 +16,7 @@
 #include <chrono>
 #include <atomic>
 
-int main(void )
+int main(void)
 {
     std::queue<int> production;
     std::mutex mtx;
