@@ -13,9 +13,9 @@
 ## 下载
 
 ```sh
-进入vscode官方网站，点击download下载
+进入vscode官方网站, 点击download下载
 
-复制下载地址，将地址中的/stable前换成vscode.cdn.azure.cn
+复制下载地址, 将地址中的/stable前换成vscode.cdn.azure.cn
 ```
 
 

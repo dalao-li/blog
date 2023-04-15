@@ -5,10 +5,10 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-22 21:58:02
  * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 10:04:04
+ * @LastEditTime: 2023-04-15 10:59:48
 -->
 
-## Pipenv
+# Pipenv
 
 
 Python依赖管理工具, pip和virtualenv的组合体, 基于 Pipfile 的依赖记录方式, 用于替代requirements.txt.

@@ -7,7 +7,7 @@
  # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: dalao
- # @LastEditTime: 2023-02-07 00:52:18
+ # @LastEditTime: 2023-04-15 10:41:20
 ### 
 
 # 设置flameshot快捷键
@@ -17,16 +17,17 @@
 DISK_PATH="/media/${USER}/disk_my/"
 
 
-# 系统初始化配置 
-init_system(){
+update_system(){
     sudo sed -i 's#security.ubuntu.com#mirrors.aliyun.com#g' /etc/apt/sources.list
     sudo sed -i 's#cn.archive.ubuntu.com#mirrors.aliyun.com#g' /etc/apt/sources.list
-    sudo apt-get update && sudo apt-get upgrade -y
+    sudo apt update && sudo apt upgrade -y
+}
+
+
+# 系统初始化配置 
+init_system(){
+    sudo apt install -y vlc flameshot vim wget grub-customizer gnome-shell python3-pip xclip
     
-    sudo apt-get install -y vlc flameshot vim git wget grub-customizer gnome-shell gnome-tweak-tool python3-pip xclip
-    
-    git config --global user.name "dalao"
-    git config --global user.email "dalao@xxx.com"
     git config --global core.editor "code -w"
     # 防止中文乱码
     git config --global core.quotepath false
@@ -35,14 +36,14 @@ init_system(){
 
 # 安装docker
 install_docker(){
-    sudo apt-get install -y curl
+    sudo apt install -y curl
 
     # 添加秘钥
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
 
     sudo add-apt-repository "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu $(lsb_release -cs) stable" 
 
-    sudo apt-get update -y && sudo apt-get install docker-ce -y
+    sudo apt update -y && sudo apt install docker-ce -y
 
     # 添加docker用户组, 将登陆用户加入到docker用户组中
     sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo newgrp docker 
@@ -85,13 +86,13 @@ set_proxy(){
 
     sudo wget ${url} -O "${HOME}/${path}"
  
-    sudo docker run -itd \
-        -p 7890:7890 \
-        -p 7891:7891 \
-        -p 9090:9090 \
+    sudo docker run -itd                                                              \
+        -p 7890:7890                                                                  \
+        -p 7891:7891                                                                  \
+        -p 9090:9090                                                                  \
         --mount type=bind, source="${HOME}/${path}", target="/root/${path}", readonly \
-        --restart=unless-stopped \
-        --name=clash_test \
+        --restart=unless-stopped                                                      \
+        --name=clash_test                                                             \
         dreamacro/clash:v1.8.0
     # https://clash.razord.top/ 
     # https://www.woccloud.io/

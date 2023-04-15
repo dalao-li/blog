@@ -4,15 +4,15 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-10 11:23:08
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-05 22:01:18
+ * @LastEditors: dalao
+ * @LastEditTime: 2023-04-15 10:46:32
 -->
 
 
-## awk
+# awk
 
 
-### 文本分析
+## 文本分析
 
 将文件逐行读入, 以空格为默认分隔符将每行切片, 再对切开的部分进行各种分析处理
 

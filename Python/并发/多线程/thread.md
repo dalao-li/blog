@@ -4,11 +4,11 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-26 11:01:43
- * @LastEditors: daLao
- * @LastEditTime: 2022-10-06 23:09:09
+ * @LastEditors: dalao
+ * @LastEditTime: 2023-04-15 10:57:53
 -->
 
-## 多线程
+# 多线程
 
 
 进程是由若干线程组成的, 一个进程至少有一个线程
@@ -59,8 +59,7 @@ threading模块current_thread()函数, 永远返回当前线程的实例
 主线程实例的名叫MainThread
 
 
-
-### 互斥锁
+## 互斥锁
 
 
 多进程中, 同一个变量各有一份拷贝存在于每个进程中, 互不影响

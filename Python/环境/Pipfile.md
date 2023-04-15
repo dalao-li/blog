@@ -4,12 +4,12 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-05-27 22:19:43
+ * @LastEditors: dalao
+ * @LastEditTime: 2023-04-15 10:59:52
 -->
 
 
-## Pipfile
+# Pipfile
 
 
 - Pipfile 文件是 `TOML格式`而不是 requirements.txt 这样的纯文本.
@@ -30,7 +30,7 @@ pipenv install
 
 
 
-### 内容
+## 内容
 
 
 ```sh
@@ -60,8 +60,7 @@ python_version = "3.6"
 ```
 
 
-
-### 全部安装
+## 全部安装
 
 
 进入目录, 创建虚拟环境
@@ -93,8 +92,7 @@ python_version = "3.8"
 可以看到 Flask 包已经安装
 
 
-
-### 部分安装
+## 部分安装
 
 
 通常有一些 Python 包只在开发环境中需要, 而不是在生产环境中, 例如单元测试包

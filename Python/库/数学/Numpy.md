@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-01 22:41:56
+ * @LastEditors: dalao
+ * @LastEditTime: 2023-04-15 11:00:09
 -->
 
-## Numpy
+# Numpy
 
 
-### 创建
+## 创建
 
 ```py
 numpy.array(object, dtype = None, copy = True, order = None, subok = False, ndmin = 0)
@@ -27,7 +27,7 @@ numpy.array(object, dtype = None, copy = True, order = None, subok = False, ndmi
 | ndmin  | 指定生成数组的最小维度                                     |
 
 
-#### 单维度
+### 单维度
 
 ```py
 import numpy as np
@@ -39,7 +39,7 @@ print(a)
 ```
 
 
-#### 多维度
+### 多维度
 
 ```py
 import numpy as np
@@ -52,7 +52,7 @@ print(a)
 ```
 
 
-#### 最小维度
+### 最小维度
 
 ```py
 import numpy as np
@@ -64,7 +64,7 @@ print (a)
 ```
 
 
-#### dtype 参数
+### dtype 参数
 
 ```py
 import numpy as np

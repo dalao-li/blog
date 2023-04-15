@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-21 18:34:00
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-05 22:12:01
+ * @LastEditors: dalao
+ * @LastEditTime: 2023-04-15 10:46:41
 -->
 
-## grep
+# grep
 
 
-### 文本查找
+## 文本查找
 
 ```sh
 grep -[参数] 匹配项
@@ -30,10 +30,10 @@ grep -[参数] 匹配项
 
 
 
-### 单查询
+## 单查询
 
 
-#### 模糊匹配
+### 模糊匹配
 
 
 含有匹配项的字段都会匹配
@@ -48,7 +48,7 @@ grep "abc"
 ```
 
 
-#### 精确匹配
+### 精确匹配
 
 
 ```sh
@@ -62,7 +62,7 @@ grep -w "abc"
 
 
 
-### 与查询
+## 与查询
 
 在前一个查询的结果中继续查询
 
@@ -79,8 +79,7 @@ grep 'Mar 10 16:3' /var/log/secure | grep Accepted
 ![](https://cdn.hurra.ltd/img/20210310175209.png)
 
 
-
-### 或查询
+## 或查询
 
 
 ```sh
@@ -91,7 +90,7 @@ grep -E '模式1|模式2' [匹配项]
 
 
 
-### 非查询
+## 非查询
 
 
 去除包含模式1的进程行, 避免影响最终数据的正确性
@@ -111,17 +110,17 @@ ps -aux | grep vlc | grep -v grep
 
 
 
-### 正则
+## 正则
 
 
-#### 查看以pattern开头的行
+### 查看以pattern开头的行
 
 ```sh
 grep ^pattern
 ```
 
 
-### 查找以pattern结尾的行
+## 查找以pattern结尾的行
 
 ```sh
 grep pattern$

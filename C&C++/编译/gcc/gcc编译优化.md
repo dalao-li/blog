@@ -12,35 +12,35 @@
 
 ## -O1
 
-在不影响编译速度的情况下，尽量采取一些优化算法降低代码大小和加快代码运行的速度，并启用以下优化选
+在不影响编译速度的情况下, 尽量采取一些优化算法降低代码大小和加快代码运行的速度, 并启用以下优化选
 
 ### -fauto-inc-dec
-地址访问时，合并地址访问指令和地址的递增和递减操作
+地址访问时, 合并地址访问指令和地址的递增和递减操作
 
 ### -fbranch-count-reg
 在计数寄存器中运行递减和分支指令
-而不是单独运行递减指令，并与零比较，然后再根据结果进行分支
+而不是单独运行递减指令, 并与零比较, 然后再根据结果进行分支
 
 ### -combine-stack-adjustments
-跟踪堆栈的push和pop，并尝试找到合并它们的方法
+跟踪堆栈的push和pop, 并尝试找到合并它们的方法
 
 
 ### -fcompare-elim
-判断计算结果的flag寄存器，如果可以，用flag寄存器的结果来代替现式地比较操作
+判断计算结果的flag寄存器, 如果可以, 用flag寄存器的结果来代替现式地比较操作
 
 
 ### fcprop-registers
-通过寄存器存有的值，通过计算变量的依赖，减少从内存中读取该变量的值，通过拷贝传播，来减少变量的拷贝
+通过寄存器存有的值, 通过计算变量的依赖, 减少从内存中读取该变量的值, 通过拷贝传播, 来减少变量的拷贝
 
 ### -fdce
 消除死代码
 
 ### -fdefer-pop
-程序一般在函数返回时，会pop出栈中元素
-而编译器，会合并多个函数调用，并一次性pop出相关的元素
+程序一般在函数返回时, 会pop出栈中元素
+而编译器, 会合并多个函数调用, 并一次性pop出相关的元素
 
 #### -fdelayed-branch
-尝试对指令重新排序，来利用延迟分支指令后可用的指令槽
+尝试对指令重新排序, 来利用延迟分支指令后可用的指令槽
 
 ### -fdse
 对死代码进行消除
@@ -75,19 +75,19 @@ The pass tries to combine two instructions and checks if the result can be simpl
 优化循环的不变量
 
 ### -freorder-blocks
-对编译后的函数中的基本块进行重新排序，以减少所采取的分支数量，提高代码的定位性。
+对编译后的函数中的基本块进行重新排序, 以减少所采取的分支数量, 提高代码的定位性。
 
 ### -fshrink-wrap
-函数的开场白仅在使用前才初始化，而不是在函数开始的时候做
+函数的开场白仅在使用前才初始化, 而不是在函数开始的时候做
 
 ### -fshrink-wrap-separate
-把函数的开场白和结束语分开，尽在使用的时候才初始化
+把函数的开场白和结束语分开, 尽在使用的时候才初始化
 
 ### -fsplit-wide-types
-对于某些需要占用多个寄存器的变量，独立的申请寄存器
+对于某些需要占用多个寄存器的变量, 独立的申请寄存器
 
 ### -fssa-backprop
-在定义链上传播相关使用的信息，来简化定义
+在定义链上传播相关使用的信息, 来简化定义
 
 ### -fssa-phiopt
 优化条件代码
@@ -100,7 +100,7 @@ The pass tries to combine two instructions and checks if the result can be simpl
 尝试更多的寄存器级的优化以及指令级的优化, 会在编译期间占用更多的内存和编译时间
 
 ### -fthread-jumps
-判断是否有double jump，并进行优化
+判断是否有double jump, 并进行优化
 
 
 ### -falign-functions 
@@ -144,14 +144,14 @@ The pass tries to combine two instructions and checks if the result can be simpl
 ### -fipa-cp-alignment 
 ### -fipa-bit-cp 
 ### -fipa-sra
-过程间优化，删除未使用的参数，将值传递优化为引用传递
+过程间优化, 删除未使用的参数, 将值传递优化为引用传递
 
 ### -fipa-icf 
 ### -fisolate-erroneous-paths-dereference
-检测由于取消空指针而触发错误或未定义行为的路径，将这些路径隔离
+检测由于取消空指针而触发错误或未定义行为的路径, 将这些路径隔离
 
 ### -flra-remat
-通过上下文敏感，重用变量
+通过上下文敏感, 重用变量
 
 ### -foptimize-sibling-calls
 优化同级和尾部递归调用
@@ -195,19 +195,19 @@ The pass tries to combine two instructions and checks if the result can be simpl
 ### -ftree-pre 
 ### -ftree-vrp 
 ### -fipa-ra
-函数调用者，如果某些寄存器没有用到，则可以不需要保存这些寄存器的值
+函数调用者, 如果某些寄存器没有用到, 则可以不需要保存这些寄存器的值
 
 ## -O3
 
-除了执行O2所有的优化选项之外，一般还会采用很多向量化算法，提高程序的并行度，并利用CPU的流水线和cache来加快运行速度，
+除了执行O2所有的优化选项之外, 一般还会采用很多向量化算法, 提高程序的并行度, 并利用CPU的流水线和cache来加快运行速度, 
 
-这个选项会加大代码的大小，并降低目标代码的执行时间
+这个选项会加大代码的大小, 并降低目标代码的执行时间
 
 ### -finline-functions
 采用一些启发式算法对函数进行内联
 
 ### -funswitch-loops
-找到循环的不变条件，并移到循环外部
+找到循环的不变条件, 并移到循环外部
 
 ### -fpredictive-commoning
 在循环间重用计算
@@ -219,7 +219,7 @@ The pass tries to combine two instructions and checks if the result can be simpl
 向量化优化
 
 ### -ftree-loop-distribute-patterns
-把loop的某些部分转化为标准函数，例如memset
+把loop的某些部分转化为标准函数, 例如memset
 
 ### -fsplit-paths
 ### -ftree-slp-vectorize
@@ -231,11 +231,11 @@ The pass tries to combine two instructions and checks if the result can be simpl
 
 ### -fpeel-loops
 ### -fipa-cp-clone
-过程间调用函数克隆，让常量传播更有效
+过程间调用函数克隆, 让常量传播更有效
 
 ## -Os
 
-目的是尽量减少目标代码的大小，这对存储容量很小的设备尤为重要
+目的是尽量减少目标代码的大小, 这对存储容量很小的设备尤为重要
 
 ### -falign-functions
 对齐

@@ -4,13 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-10-23 23:00:29
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-05 22:41:26
+ * @LastEditors: dalao
+ * @LastEditTime: 2023-04-15 10:49:07
 -->
 
-## 查看
+# 查看
 
-### tail
+
+## tail
 
 
 ```sh
@@ -20,7 +21,6 @@ tail -n 行数 日志名
 # 查看指定行数后的日志
 tail -n +行数 日志名
 ```
-
 
 
 ### head

@@ -45,13 +45,13 @@ clang++ main.cpp -E -c -o main.i
 
 ### .i -> .bc
 
-main.bc 为 bitcode文件，是clang的一种中间表示(对应步骤 2 的输出)
+main.bc 为 bitcode文件, 是clang的一种中间表示(对应步骤 2 的输出)
 
 ```
 clang main.i -emit-llvm  -c -o main.bc
 ```
 
-(4) main.ll 为一种文本化的中间表示，可以打开来看的(对应步骤 2 的输出， 和 .bc 一样都是中间表示，可以相互转化)；
+(4) main.ll 为一种文本化的中间表示, 可以打开来看的(对应步骤 2 的输出,  和 .bc 一样都是中间表示, 可以相互转化)；
 
 (5) main.s 为汇编结果(对应步骤 3 的输出)；
 

@@ -36,9 +36,9 @@ clang++: warning: unable to find a Visual Studio installation; try running Clang
 1 error generated.
 ```
 
-Clang可以从GCC那借用C++标准库，也就是libstdc++
+Clang可以从GCC那借用C++标准库, 也就是libstdc++
 
-在Windows上MinGW项目提供了一个Windows版的GCC，包含libstd++可供Clang使用
+在Windows上MinGW项目提供了一个Windows版的GCC, 包含libstd++可供Clang使用
 
 ### 设置target
 

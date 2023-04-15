@@ -10,19 +10,20 @@
 
 package main
 
-import (
-	"log"
-	"os"
-)
+import "fmt"
+
+type Student struct {
+    id int
+    name string
+    school string
+}
 
 func main() {
-	f, err := os.Create("test.txt")
+	stu := new(Student)
 
-	defer f.Close()
+	stu.id = 1000
+	stu.name = "wang"
+	stu.school = "MIT"
 
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	log.Println(f)
+	fmt.Println(stu)
 }

@@ -48,7 +48,7 @@ int main(void)
         [&]() -> void
         {
             std::unique_lock<std::mutex> lock(mtx);
-            // 如果生成没有结束或者队列中还有产品没有消费，则继续消费，否则结束消费
+            // 如果生成没有结束或者队列中还有产品没有消费, 则继续消费, 否则结束消费
             while (!done || !production.empty())
             {
                 // 防止误唤醒
