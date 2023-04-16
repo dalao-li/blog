@@ -4,17 +4,17 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 00:46:56
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:37:30
 -->
 
-## Django动态路由
+# Django动态路由
 
 
-### 关键字实现
+## 关键字实现
 
 
-#### 单关键字
+### 单关键字
 
 views.py文件
 
@@ -46,7 +46,7 @@ urlpatterns = [
 
 
 
-#### 多关键字
+### 多关键字
 
 views.py文件
 
@@ -69,8 +69,7 @@ urlpatterns = [
 前面的 w+传给 v1, 后面的 w+传给 v2此时可以匹配`127.0.0.1:8000/dis/<字符1>/<字符2>`这类 url, 并且字符 1 将传给 dis 函数的 v1 参数;字符 2 将传给 dis 函数的 v2 参数
 
 
-
-### 反射实现
+## 反射实现
 
 
 反射, 通过输入的函数名调用函数

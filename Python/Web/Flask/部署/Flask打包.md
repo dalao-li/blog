@@ -4,16 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-30 22:01:01
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 00:55:23
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:40:28
 -->
 
-[Python-web Flask框架项目打包成exe文件](https://www.cxyzjd.com/article/qq_42370335/114276385)  
-
-[Flask项目能打包为单个exe文件运行？掌握原理后居然如此简单！](https://bbs.huaweicloud.com/blogs/210229)
+# Flask打包
 
 
-### 方法一
+## 方法一
 
 
 ```sh
@@ -24,7 +22,7 @@ dist 目录下会生成可执行文件
 
 
 
-### 方法二
+## 方法二
 
 
 - 安装
@@ -58,3 +56,10 @@ pyinstaller -F *.spec
 ```
 
 ![](https://cdn.hurra.ltd/img/20211230223519.png)
+
+
+## 参考
+
+[Python-web Flask框架项目打包成exe文件](https://www.cxyzjd.com/article/qq_42370335/114276385)  
+
+[Flask项目能打包为单个exe文件运行？掌握原理后居然如此简单！](https://bbs.huaweicloud.com/blogs/210229)

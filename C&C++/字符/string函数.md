@@ -4,11 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-11-27 20:45:27
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-19 22:38:14
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:01:36
 -->
 
-## string函数
+# string函数
 
 
 - 头文件
@@ -18,8 +18,7 @@
 ```
 
 
-
-### 函数
+## 函数
 
 
 | 函数             | 说明                                                        |
@@ -29,8 +28,7 @@
 | `strchr(s1, ch)` | 返回一个指针, 指向 ch在s1中首次出现位置                     |
 
 
-
-### strstr
+## strstr
 
 
 - 查找 s2在s1中首次出现的位置, 返回第一次出现s2的位置, 若未找到则返回NULL
@@ -49,8 +47,7 @@ ret = strstr(haystack, needle);
 ```
 
 
-
-### strcat
+## strcat
 
 
 - 把 src 所指向的字符串追加到 dest 所指向的字符串的结尾
@@ -72,8 +69,7 @@ printf("%s\n", dest);
 ```
 
 
-
-### strcpy
+## strcpy
 
 
 - 把 src 所指向的字符串复制到 dest
@@ -93,8 +89,7 @@ printf("%s\n", a);
 ```
 
 
-
-### memset
+## memset
 
 
 - 复制字符 c(一个无符号字符)到参数 str 所指向字符串的前 n 个字符

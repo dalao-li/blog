@@ -4,14 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-02-03 13:54:04
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 00:39:39
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:34:53
 -->
 
-## 部署Django
-
-
-### 建立
+# uwsgi部署Django
 
 
 建立项目mysite
@@ -22,12 +19,11 @@ django-admin.py startproject mysite
 python manage.py runserver 0.0.0.0:8000
 ```
 
-### 配置
+## 配置
 
 
-#### uwsgi
+### uwsgi
 
-config.ini
 
 ```ini
 [uwsgi]
@@ -48,7 +44,7 @@ buffer-size = 32768
 ```
 
 
-#### nginx
+### nginx
 
 
 ```sh

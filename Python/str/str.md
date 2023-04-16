@@ -4,22 +4,22 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-01 20:37:22
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-05 23:09:48
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:34:11
 -->
 
 
-## 字符串
+# 字符串
 
 
-### 定义
+## 定义
 
 ```py
 s = "Hello World"
 ```
 
 
-#### input
+## input
 
 Python input() 接受的输入数据均为字符串格式
 
@@ -34,7 +34,7 @@ print(type(s))
 ```
 
 
-### 切片
+## 切片
 
 
 | 语法          | 范围          |
@@ -58,10 +58,10 @@ s[:5]
 ```
 
 
-### 函数
+## 函数
 
 
-#### 分割
+### 分割
 
 ```py
 split('字符')
@@ -78,10 +78,10 @@ type(s.split())
 ```
 
 
-### 查找
+## 查找
 
 
-#### 子串查找
+### 子串查找
 
 ```py
 find(s, start, end)
@@ -99,7 +99,7 @@ print(x)
 ```
 
 
-#### 次数查找
+### 次数查找
 
 ```py
 conut(s, start, end)
@@ -108,11 +108,10 @@ conut(s, start, end)
 返回字符串[start, end]范围内s出现的次数
 
 
+## 过滤
 
-### 过滤
 
-
-#### 子符过滤
+### 子符过滤
 
 ```py
 strip(str)
@@ -134,7 +133,7 @@ print(a.strip("12a"))
 ```
 
 
-### 格式化
+## 格式化
 
 ```py
 name = "Dalao"

@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-02-04 21:43:48
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 19:46:21
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:36:23
 -->
 
-## Django Manager
+# Django Manager
 
 
-### Models
+## Models
 
 ```py
 class User(models.Model):
@@ -67,7 +67,7 @@ User.objects.find_name(name)
 ```
 
 
-### DRF
+## DRF
 
 
 models.py

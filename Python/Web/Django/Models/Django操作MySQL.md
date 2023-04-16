@@ -8,7 +8,7 @@
  * @LastEditTime: 2022-04-18 19:47:12
 -->
 
-## Django 操作MySQL
+# Django 操作 MySQL
 
 
 建立应用 app
@@ -41,7 +41,7 @@ DATABASES = {
 ```
 
 
-### 建表
+## 建表
 
 
 编辑 app/models.py
@@ -69,7 +69,7 @@ class Stu(models.Model):
 ```
 
 
-### 字段
+## 字段
 
 
 | 类型          | 说明                                                                                                                            |
@@ -83,8 +83,7 @@ class Stu(models.Model):
 | FileField     | 上传文件类型                                                                                                                    |
 | ImageField    | 图像类型                                                                                                                        |
 
-
-### 字段参数
+## 字段参数
 
 
 | 类型         | 说明                                                                                                        |
@@ -111,7 +110,7 @@ python manage.py migrate
 ![](https://cdn.hurra.ltd/img/20200802233105.png)
 
 
-### 管理
+## 管理
 
 
 Django 自带后台管理页面, 使用前需创建管理员用户
@@ -146,8 +145,7 @@ admin.site.register(Stu)
 ![](https://cdn.hurra.ltd/img/20200802213738.png)
 
 
-
-### 新增
+## 新增
 
 
 可视化, 直接使用 Django 管理页面新增数据
@@ -177,7 +175,7 @@ s = Stu.objects.create(num='D-123', name='强', age=19, sex='M')
 
 
 
-### 查询
+## 查询
 
 
 - 获取所有对象
@@ -219,7 +217,7 @@ Stu.objects.filter(num='B-456').exists()
 ![](https://cdn.hurra.ltd/img/20200803004453.png)
 
 
-### 修改
+## 修改
 
 
 ![](https://cdn.hurra.ltd/img/20200803002039.png)
@@ -235,7 +233,7 @@ Stu.objects.filter(sex='M').update(age=18)
 
 
 
-### 删除
+## 删除
 
 
 ```py

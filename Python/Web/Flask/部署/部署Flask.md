@@ -8,10 +8,10 @@
  * @LastEditTime: 2023-03-18 00:47:16
 -->
 
-## 部署Flask
+# Flask部署
 
 
-### Docker单例部署
+## Docker单例部署
 
 
 - Dockerfile
@@ -33,7 +33,7 @@ CMD flask run --host=0.0.0.0 --port=5000
 ```
 
 
-### supervisor部署
+## supervisor部署
 
 
 - flask.conf
@@ -67,8 +67,7 @@ CMD supervisord -c /etc/supervisord.conf
 ```
 
 
-### uwsgi部署
-
+## uwsgi部署
 
 - config.ini
 
@@ -113,7 +112,7 @@ CMD uwsgi config.ini
 ```
 
 
-### Nginx代理
+## Nginx代理
 
 
 - nginx.conf

@@ -4,28 +4,28 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-11-15 20:40:55
- * @LastEditors: DaLao
- * @LastEditTime: 2022-09-04 13:16:03
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:27:46
 -->
 
-## Vector
+# Vector
 
 
-### 初始化
+## 初始化
 
 
-#### 赋值
+### 赋值
 
-```c
+```c++
 std::vector<T> v;
 
 std::vector<int> v = {1, 2, 3, 4, 5};
 ```
 
 
-#### 拷贝
+### 拷贝
 
-```c
+```c++
 std::vector<T> v(count, value);
 
 // 初始化10个0
@@ -33,40 +33,39 @@ std::vector<int> v(10, 0);
 ```
 
 
-#### 预处理
+### 预处理
 
 若知道需保存数据量size, 可用reserve提前申请, 避免多次动态申请内存消耗时间
 
-```c
+```c++
 std::vector<T> v;
 
 v.reserve(size);
 ```
 
 
-#### 二维Vector
+### 二维Vector
 
 ```c
 std::vector<vector<T> > v;
 ```
 
 
+## 增加
 
-### 增加
 
+### 尾部插入
 
-#### 尾部插入
-
-```c
+```c++
 std::vector<T> v;
 
 v.push_back(value);
 ```
 
 
-#### 指定位置插入
+### 指定位置插入
 
-```c
+```c++
 std::vector<T> v;
 
 // 在index位置插入value
@@ -74,12 +73,12 @@ v.insert(v.begin() + index, value);
 ```
 
 
-### 遍历
+## 遍历
 
 
-#### 迭代器访问
+### 迭代器访问
 
-```c
+```c++
 std::vector<T> v;
 
 for(vector<T>::iterator it = v.begin(); it != v.end(); it++) {
@@ -92,9 +91,9 @@ for(auto it = v.begin(); it != v.end(); it++) {
 ```
 
 
-#### 下标访问
+### 下标访问
 
-```c
+```c++
 std::vector<T> v;
 
 for(unsigned int i = 0; i < v.size(); i++){
@@ -104,10 +103,10 @@ for(unsigned int i = 0; i < v.size(); i++){
 
 
 
-### 删除
+## 删除
 
 
-#### 删除x, y之间的元素
+### 删除x, y之间的元素
 
 ```c
 std::vector<T> v;
@@ -116,7 +115,7 @@ v.earse(v.begin() + x, v.end() - y);
 ```
 
 
-#### 删除末尾元素
+### 删除末尾元素
 
 ```c
 std::vector<T> v;
@@ -125,7 +124,7 @@ v.pop_back();
 ```
 
 
-#### 删除index + 1位置元素
+### 删除index + 1位置元素
 
 ```c
 std::vector<T> v;
@@ -134,7 +133,7 @@ v.erase(v.begin() + index)
 ```
 
 
-#### 清空
+### 清空
 
 ```c
 std::vector<T> v;
@@ -143,7 +142,7 @@ v.clear();
 ```
 
 
-### 1.5 翻转
+## 翻转
 
 ```c
 std::vector<T> v;

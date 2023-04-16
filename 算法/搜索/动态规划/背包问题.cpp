@@ -10,31 +10,31 @@
 
 #include <iostream>
 #include <algorithm>
-#define MAX 100
+
 using namespace std;
+
+#define MAX 100
+
 int n, W;
+
 int w[MAX], v[MAX];
 
 int rec(int i, int j)
 {
     int res;
-    if (i == n)
-    {
+    if (i == n) {
         res = 0;
     }
-    else if (j < w[i])
-    {
+    else if (j < w[i]) {
         res = rec(i + 1, j);
     }
-    else
-    {
+    else {
         res = max(rec(i + 1, j), rec(i + 1, j - w[i]) + v[i]);
     }
     return res;
 }
 
-int main()
-{
+int main() {
     cin >> W >> n;
     printf("%d\n", rec(0, W));
 }

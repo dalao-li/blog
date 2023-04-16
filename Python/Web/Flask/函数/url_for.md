@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-01 17:20:15
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-27 23:22:53
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:41:00
 -->
 
-## url_for
+# url_for
 
 
-### 返回静态文件
+## 返回静态文件
 
 ```js
 <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
@@ -21,7 +21,7 @@
 ```
 
 
-### 动态路由
+## 动态路由
 
 ```html
 <a href="{{ url_for('test', name=1) }}">点击这里查看</a>

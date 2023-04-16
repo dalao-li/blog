@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-02-01 16:49:59
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-18 19:47:43
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:37:05
 -->
 
-## Django连接多数据库
+# Django连接多数据库
 
 
-### 设置
+## 设置
 
 
 建立Django项目, 在建立两个应用app1与app2
@@ -68,7 +68,7 @@ CACHES = {
 ```
 
 
-### 数据库路由方法类
+## 数据库路由方法类
 
 与settings.py同级目录下建立database_router.py文件
 ```py
@@ -135,8 +135,7 @@ class DatabaseAppsRouter(object):
 ```
 
 
-
-### 增加数据路由表与规则方法
+## 增加数据路由表与规则方法
 
 
 settings.py文件中添加内容, 此处项目名为demo

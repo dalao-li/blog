@@ -4,18 +4,18 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-20 11:26:41
- * @LastEditors: daLao
- * @LastEditTime: 2022-12-01 00:04:09
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 19:29:21
 -->
 
 
-## DLL
+# DLL
 
 
-### VS2019
+## VS2019
 
 
-#### 编写
+### 编写
 
 
 VS2019 选择创建动态链接库(DLL)项目
@@ -59,7 +59,7 @@ void hello() {
 ```
 
 
-#### 编译
+### 编译
 
 
 ![](https://cdn.hurra.ltd/img/20210120113257.png)
@@ -70,10 +70,10 @@ X86 将编译为 32 位的 dll, X64 将编译为 64 为的 dll
 
 
 
-### Clion
+## Clion
 
 
-#### 编写
+### 编写
 
 
 建立一个 C Library 项目 hello
@@ -89,8 +89,7 @@ library.c 文件中已有默认代码
 ![](https://cdn.hurra.ltd/img/20201028181058.png)
 
 
-
-#### 调用
+### 调用
 
 
 另建立一个项目 Demo, 在其根目录下建立 lib 目录, 将上一步生成的 dll 文件拷入
@@ -149,7 +148,7 @@ target_link_libraries(Demo libhello.dll)
 
 
 
-#### 测试
+### 测试
 
 
 新建 C Library 项目 num
@@ -220,7 +219,7 @@ int main() {
 
 
 
-### Python 调用
+## Python 调用
 
 
 ```py
@@ -239,7 +238,7 @@ pdll.hello()
 
 
 
-### dll 与 lib的区别
+## dll 与 lib的区别
 
 
 - lib 是编译时调用, dll 是运行时调用

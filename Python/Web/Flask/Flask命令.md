@@ -8,8 +8,10 @@
  * @LastEditTime: 2022-07-03 00:58:00
 -->
 
+# Flask命令
 
-### 运行
+
+## 运行
 
 
 ```sh
@@ -23,7 +25,7 @@ flask run --host=0.0.0.0 --port=5000
 ```
 
 
-### shell
+## shell
 
 ```sh
 source venv/bin/activate
@@ -32,14 +34,14 @@ python -m flask run --host=0.0.0.0 --port=5000
 ```
 
 
-#### 终止进程
+### 终止进程
 
 ```sh
 ps -aux | grep flask | grep -v grep | awk {'print $2'} | xargs kill -9 && python -m flask run --host=0.0.0.0 --port=500
 ```
 
 
-### 脚本
+## 脚本
 
 
 ```sh

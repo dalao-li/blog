@@ -4,17 +4,17 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-01 20:37:22
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 01:01:50
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:43:10
 -->
 
-## Socket
+# Socket
 
 
-### TCP
+## TCP
 
 
-#### 服务端 server
+### 服务端 server
 
 ```py
 import socket
@@ -48,7 +48,7 @@ if __name__ == '__main__':
 ```
 
 
-#### 客户端 client
+### 客户端 client
 
 ```py
 import socket
@@ -79,10 +79,10 @@ if __name__ == '__main__':
 ```
 
 
-### UDP
+## UDP
 
 
-#### 服务端 server
+### 服务端 server
 
 ```py
 import socket
@@ -107,7 +107,7 @@ if __name__ == '__main__':
 ```
 
 
-#### 客户端 client
+### 客户端 client
 
 ```py
 import socket
@@ -134,8 +134,7 @@ if __name__ == '__main__':
 ![](https://cdn.hurra.ltd/img/20210112224731.png)
 
 
-
-### 多线程 server 端
+## 多线程 server 端
 
 
 ```py

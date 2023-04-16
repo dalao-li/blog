@@ -4,15 +4,15 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-08-14 01:23:03
- * @LastEditors: daLao
- * @LastEditTime: 2022-10-03 23:54:14
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:02:49
 -->
 
 
-## FILE
+# FILE
 
 
-### 定义
+## 定义
 
 ```c++
 #ifndef _FILE_DEFINED
@@ -44,10 +44,10 @@ typedef struct _iobuf FILE;
 FILE结构是间接地操作系统的文件控制块(FCB)来实现对文件的操作
 
 
-### 函数
+## 函数
 
 
-#### fopen
+### fopen
 
 ```c++
 // 打开文件.读文件到内存.返回文件信息结构指针

@@ -4,12 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-23 15:07:52
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-05 23:39:10
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:40:39
 -->
 
+# Flask跨域
 
-### 问题
+## 问题
 
 前端使用 XMLHttpRequest 发送 GET 请求时, 后端 Flask已收到请求, 但前端无法显示返回值
 
@@ -63,7 +64,7 @@ if __name__ == '__main__':
     app.run()
 ```
 
-### 分析
+## 分析
 
 使用 F12 进入控制台后发现如下错误
 
@@ -72,7 +73,7 @@ if __name__ == '__main__':
 通过查询此为跨域问题, 所以需设置Flask允许跨域
 
 
-### 解决
+## 解决
 
 Flask 配 Cors 跨域, 使用 flask-cors 包, 并有两种方式
 

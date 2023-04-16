@@ -4,14 +4,14 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 00:51:25
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:38:11
 -->
 
-## Django入门
+# Django入门
 
 
-### 创建项目
+## 创建项目
 
 ![](https://cdn.hurra.ltd/img/20200801113226.png)
 
@@ -28,8 +28,7 @@
 - manage: 一个命令行工具, 用来和 Django 项目进行交互
 
 
-
-### 创建应用
+## 创建应用
 
 创建名为 app 的应用
 
@@ -52,7 +51,7 @@ python manage.py startapp app
 - views: 视图层, 直接和浏览器进行交互
 
 
-### 应用注册
+## 应用注册
 
 新建应用需在 settings.py文件中的 INSTALLED_APPS 列表中注册, 使程序找到该服务
 
@@ -166,7 +165,7 @@ STATIC_URL = '/static/'
 ```
 
 
-### 视图
+## 视图
 
 编辑app/view.py文件
 
@@ -180,7 +179,7 @@ def hello(request):
 ```
 
 
-### 路由
+## 路由
 
 编辑app/urls.py文件
 
@@ -197,7 +196,7 @@ urlpatterns = [
 ```
 
 
-### 测试
+## 测试
 
 运行, 访问http://127.0.0.1:8000/hello
 

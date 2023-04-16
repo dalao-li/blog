@@ -4,14 +4,14 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 00:43:07
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:35:50
 -->
 
-## Django体温登记系统
+# Django体温登记系统
 
 
-### 技术
+## 技术
 
 
 ```sh
@@ -23,7 +23,7 @@ Web 框架 : Django
 ```
 
 
-### 初始化
+## 初始化
 
 
 - 建立 Django 项目
@@ -55,7 +55,7 @@ python manage.py startapp app
 
 
 
-### 数据库设计
+## 数据库设计
 
 
 - 表设计
@@ -360,7 +360,7 @@ function delCallback(value) {
 ![](https://cdn.hurra.ltd/img/20200805190123.png)
 
 
-### 视图函数
+## 视图函数
 
 
 编辑 app/views.py 文件
@@ -401,7 +401,7 @@ def del_record(request):
 ```
 
 
-### 绑定路由
+## 绑定路由
 
 
 在 app 目录下新建 urls.py 文件:
@@ -439,8 +439,7 @@ urlpatterns = [
 ![](https://cdn.hurra.ltd/img/20200806160425.png)
 
 
-
-### 部署
+## 部署
 
 
 本项目采用 Docker + Gunicorn 方式进行部署

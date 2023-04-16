@@ -8,10 +8,10 @@
  * @LastEditTime: 2022-04-03 22:39:13
 -->
 
-## send_from_directory
+# send_from_directory
 
 
-### 返回静态文件
+## 返回静态文件
 
 ```py
 send_from_directory('文件目录', 文件名)

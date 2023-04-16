@@ -4,17 +4,17 @@
  * @Author: daLao
  * @Email: dalao@xxx.com
  * @Date: 2022-10-26 19:54:53
- * @LastEditors: daLao
- * @LastEditTime: 2022-10-26 23:19:57
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:16:01
 -->
 
-## decltype类型
+# decltype
 
 
 decltype 指 declare type, 即声明类型, 是 C++11 新增的一个关键字, 功能是在编译时期进行自动类型推导
 
 
-### 与auto区别
+## 与auto区别
 
 auto 和 decltype 关键字都可以自动推导出变量的类型
 
@@ -33,7 +33,7 @@ decltype 根据 exp 表达式推导出变量的类型, 跟 = 右边的 value 没
 decltype 可以写成下面的形式: 
 
 
-### exp 注意事项
+## exp 注意事项
 
 exp 就是一个普通的表达式, 它可以是任意复杂的形式, 但是必须要保证结果有类型, 不能是 void
 
@@ -56,7 +56,7 @@ decltype(x + 100) y;
 decltype 能够根据变量、字面量、带有运算符的表达式推导出变量的类型
 
 
-### 推导规则
+## 推导规则
 
 1. 如果 参数exp 是一个不被括号( )包围的表达式, 或者是一个类成员访问表达式, 或者是一个单独的变量, 则 decltype(exp) 的类型就和 exp 一致
 
@@ -199,7 +199,7 @@ int main()
 有一种很简单的方法来区分左值和右值, 对表达式取地址, 如果编译器不报错就为左值, 否则为右值
 
 
-### 实际应用
+## 实际应用
 
 
 auto 只能用于类的静态成员, 不能用于类的非静态成员(普通成员)

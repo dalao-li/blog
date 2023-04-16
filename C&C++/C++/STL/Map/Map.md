@@ -4,25 +4,25 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-08-18 16:22:55
- * @LastEditors: DaLao
- * @LastEditTime: 2022-09-04 13:08:19
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-16 23:25:17
 -->
 
-## Map
+# Map
 
 
-### 定义
+## 定义
 
-```c
+```c++
 template <class T, class V>
 std::map<T, V> m;
 ```
 
 
-### 添加
+## 添加
 
 
-#### 插入
+### 插入
 
 ```c
 template <class T, class V>
@@ -32,7 +32,7 @@ m.insert(make_pair(key, value))
 ```
 
 
-#### 直接添加
+### 添加
 
 template <class T, class V>
 std::map<T, V> m;
@@ -58,9 +58,14 @@ m[key]
 template <class T, class V>
 std::map<T, V> m;
 
+// 方法1
 for(map<T, V>::iterator it = m.begin(); it != m.end(); it++) {
-    // key = it->first;
-    // value = it->second;
+    // it->first, it->second;
+}
+
+// 方法2
+for (auto &[k, v] : m) {
+    // k, v
 }
 ```
 
@@ -69,7 +74,7 @@ for(map<T, V>::iterator it = m.begin(); it != m.end(); it++) {
 
 查找 key 是否存在, 若iterator 指向end() 即不存在
 
-```c
+```c++
 template <class T, class V>
 std::map<T, V> m;
 
@@ -83,7 +88,7 @@ it.find(key)
 
 删除键为 key 的键值对
 
-```c
+```c++
 template <class T, class V>
 std::map<T, V> m;
 
@@ -97,7 +102,7 @@ m.erase(key)
 ### 初始化
 
 
-```c
+```c++
 pair<T, V> p;
 
 p.first = key;
@@ -105,7 +110,7 @@ p.second = value;
 ```
 
 
-```c
+```c++
 pair<T, V> p;
 
 p = make_pair(key, value);
