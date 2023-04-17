@@ -5,11 +5,10 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-13 17:52:28
+ * @LastEditTime: 2023-04-17 16:41:10
 -->
 
 # AVL
-
 
 ## 性质
 
@@ -31,13 +30,11 @@
 
 该树为$AVL$树
 
-
 ## 实现
-
 
 ### 节点定义
 
-```c
+```c++
 template <class T>
 typedef struct AVLNode {
     T value;
@@ -54,13 +51,11 @@ typedef struct AVLNode {
 } AVLNode, AVLNodeList;
 ```
 
-
 ### 节点信息
-
 
 #### 获取节点高度
 
-```c
+```c++
 template <class T>
 int GetHeight(AVLNode<T> *node) {
     if(node == nullptr) {
@@ -70,10 +65,9 @@ int GetHeight(AVLNode<T> *node) {
 }
 ```
 
-
 #### 获取节点平衡因子
 
-```c
+```c++
 template <class T>
 int GetBalanceFactor(AVLNode<T> *node) {
     if(node == nullptr) {
@@ -84,10 +78,9 @@ int GetBalanceFactor(AVLNode<T> *node) {
 }
 ```
 
-
 #### 判断
 
-```c
+```c++
 // 判断是否平衡
 template <class T>
 bool IsBalance(AVLNode<T> *node) {
@@ -103,7 +96,6 @@ bool IsBalance(AVLNode<T> *node) {
 }
 ```
 
-
 ### 左旋
 
 - $AVL$ 树若在`右子树`插入右孩子导致失衡时, 单左旋调整
@@ -117,7 +109,7 @@ bool IsBalance(AVLNode<T> *node) {
 
 最小失衡子树的根节点为节点$5$
 
-```c
+```c++
 // 左旋, root为最小失衡子树的根节点
 template <class T>
 AVLNode<T> *LeftRotate(AVLNode<T> *root) {
@@ -134,7 +126,6 @@ AVLNode<T> *LeftRotate(AVLNode<T> *root) {
 }
 ```
 
-
 ### 右旋
 
 - $AVL$ 树若在`左子树`插入`左孩子`导致失衡时, 单右旋调整
@@ -143,7 +134,7 @@ AVLNode<T> *LeftRotate(AVLNode<T> *root) {
 
 ![](https://cdn.hurra.ltd/img/2022-3-26-2336.svg)
 
-```c
+```c++
 template <class T>
 AVLNode<T>* RightRotate(AVLNode<T> *&root) {
     AVLNode<T> *p = root->leftSon;
@@ -157,12 +148,11 @@ AVLNode<T>* RightRotate(AVLNode<T> *&root) {
 }
 ```
 
-
 ### 先右旋后左旋
 
 - $AVL$ 树在 `右子树`上插入`左孩子`导致失衡时, 先右旋后左旋调整
 
-```c
+```c++
 template <class T>
 AVLNode<T>* RightAndLeftRotate(AVLNode<T> *&root) {
     root->rightSon = RightRotate(root->rightSon);
@@ -174,12 +164,11 @@ AVLNode<T>* RightAndLeftRotate(AVLNode<T> *&root) {
 
 红色为插入节点;绿色为最小失衡子树的根节点
 
-
 ### 先左旋后右旋
 
 - $AVL$ 树在`左子树`上插入`右孩子`导致失衡时, 先左旋后右旋调整
 
-```c
+```c++
 template <class T>
 AVLNode<T>* LeftAndRightRotate(AVLNode<T> *&root) {
     root->leftSon = LeftRotate(root->leftSon);
@@ -190,5 +179,3 @@ AVLNode<T>* LeftAndRightRotate(AVLNode<T> *&root) {
 ![](https://cdn.hurra.ltd/img/2022-3-27-0000.svg)
 
 红色为插入节点, 绿色为最小失衡子树的根节点
-
-

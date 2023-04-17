@@ -16,7 +16,6 @@
 docker network ls
 ```
 
-
 ## 互联
 
 - 创建网络
@@ -32,7 +31,6 @@ docker network create -d bridge my_bridge
 ```
 
 ![](https://cdn.hurra.ltd/img/20220316205625.png)
-
 
 - 同网络互联
 

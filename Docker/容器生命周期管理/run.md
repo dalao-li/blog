@@ -4,13 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-12 01:44:11
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-09 00:27:50
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 16:51:34
 -->
 
-
 # run
-
 
 ```sh
 docker run [参数] 镜像ID (命令)
@@ -23,7 +21,6 @@ docker run [参数] 镜像ID (命令)
 | `-i` | 以交互模式运行容器           |
 | `-t` | 为容器重新分配一个伪输入终端 |
 | `-d` | 后台运行并返回容器ID         |
-
 
 ## -p
 
@@ -43,7 +40,6 @@ docker run -itd -p 7890:80 nginx
 
 开放一个或一组端口
 
-
 ## -e
 
 设置容器环境变量
@@ -60,11 +56,11 @@ docker run -itd -e MYSQL_ROOT_PASSWORD=123 mysql:5.6
 
 - 设置环境变量STR_VEN=abcdefg
 
-```
+```sh
 docker run -itd --name=box -e STR_VEN=abcdefg busybox
 ```
-![](https://cdn.hurra.ltd/img/20220112045036.png)
 
+![](https://cdn.hurra.ltd/img/20220112045036.png)
 
 ### --env-file=[]
 
@@ -90,18 +86,15 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 --mount type=bind, source=/src/app, target=/root/app, readonly
 ```
 
-
 ## -v
 
 挂载本地目录到容器中, 若本地目录不存在, 会自动创建文件夹
-
 
 - 配置时区
 
 ```sh
 -v /etc/localtime:/etc/localtime:ro
 ```
-
 
 ## --net
 
@@ -112,7 +105,6 @@ docker run -itd --mount type=bind, source=/src/app, target=/root/app nginx:alpin
 ```
 
 支持 bridge, host, none, container四种类型
-
 
 ## --link
 
@@ -143,9 +135,7 @@ docker exec -it ubuntu_test bash -c 'apt-get update && apt-get install -y mysql-
 mysql -h db -u root -p123
 ```
 
-
 ## 问题
-
 
 - 执行命令后容器停止
 

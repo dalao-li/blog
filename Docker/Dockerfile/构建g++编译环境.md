@@ -5,11 +5,10 @@
  * @Email: dalao_li@163.com
  * @Date: 2023-02-07 00:12:47
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-13 18:01:57
+ * @LastEditTime: 2023-04-17 16:50:58
 -->
 
 # 搭建g++编译环境
-
 
 ## 镜像
 
@@ -18,7 +17,6 @@ alpine:latest
 ```
 
 ## 示例
-
 
 ### 源文件
 
@@ -54,16 +52,13 @@ COPY . .
 RUN g++ -static Main.cpp -o Main
 ```
 
-
 ### 编译
 
-```
+```sh
 docker build -t gpp:v1 .
 ```
 
 ![](https://cdn.hurra.ltd/img/20230207002040.png)
-
-
 
 ### 运行
 
@@ -72,4 +67,3 @@ docker build -t gpp:v1 .
 从容器中拷贝出可执行文件Main并执行
 
 ![](https://cdn.hurra.ltd/img/20230207002230.png)
-

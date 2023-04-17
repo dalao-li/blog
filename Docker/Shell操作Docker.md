@@ -7,8 +7,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-15 10:21:24
- * @LastEditors: dalao
- * @LastEditTime: 2023-03-18 00:43:45
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 16:50:39
 -->
 
 # Shell Docker
@@ -27,8 +27,6 @@ docker rmi -f  `docker images | grep '<none>' | awk '{print $3}'` 
 docker rm `{docker ps -a | grep Exited | awk '{print $1}'`
 ```
 
-
-
 ### 获取容器ID
 
 ```sh
@@ -42,7 +40,6 @@ $(docker ps -aqf "name=容器名")
 | a    | 即使容器没运行也能获取 |
 | q    | 仅输出容器ID           |
 | f    | filter                 |
-
 
 ## 判断容器是否存在
 
@@ -77,7 +74,7 @@ done < images.txt
 
 ### 还原
 
-```
+```sh
 while read -r line;do
     docker load < "\${line//\//_}".tar
 done < images.txt
