@@ -15,84 +15,107 @@
 在不影响编译速度的情况下, 尽量采取一些优化算法降低代码大小和加快代码运行的速度, 并启用以下优化选
 
 ### -fauto-inc-dec
+
 地址访问时, 合并地址访问指令和地址的递增和递减操作
 
 ### -fbranch-count-reg
+
 在计数寄存器中运行递减和分支指令
 而不是单独运行递减指令, 并与零比较, 然后再根据结果进行分支
 
 ### -combine-stack-adjustments
+
 跟踪堆栈的push和pop, 并尝试找到合并它们的方法
 
-
 ### -fcompare-elim
+
 判断计算结果的flag寄存器, 如果可以, 用flag寄存器的结果来代替现式地比较操作
 
-
 ### fcprop-registers
+
 通过寄存器存有的值, 通过计算变量的依赖, 减少从内存中读取该变量的值, 通过拷贝传播, 来减少变量的拷贝
 
 ### -fdce
+
 消除死代码
 
 ### -fdefer-pop
+
 程序一般在函数返回时, 会pop出栈中元素
 而编译器, 会合并多个函数调用, 并一次性pop出相关的元素
 
 #### -fdelayed-branch
+
 尝试对指令重新排序, 来利用延迟分支指令后可用的指令槽
 
 ### -fdse
+
 对死代码进行消除
 
 ### -fforward-propagate
+
 The pass tries to combine two instructions and checks if the result can be simplified. If loop unrolling is active, two passes are performed and the second is scheduled after loop unrolling.
 
 ### -fguess-branch-probability
+
 分支预测
 
 ### -fif-conversion2
+
 利用条件执行把if条件转化为无分支等价代码
 
 ### -fif-conversion
+
 利用moves, min, max, set, abs等手段把if条件转化为无分支等价代码
 
 ### -finline-functions-called-once
+
 把静态函数转为inline函数
 
-
 ### -fipa-pure-const
+
 发现函数是纯函数还是常量函数
 
 ### -fipa-profile
+
 对cold(仅调用一次的函数)函数进行优化
 
 ### -fipa-reference
+
 ### -fmerge-constants
+
 合并常数计算
 
 ### -fmove-loop-invariants
+
 优化循环的不变量
 
 ### -freorder-blocks
+
 对编译后的函数中的基本块进行重新排序, 以减少所采取的分支数量, 提高代码的定位性。
 
 ### -fshrink-wrap
+
 函数的开场白仅在使用前才初始化, 而不是在函数开始的时候做
 
 ### -fshrink-wrap-separate
+
 把函数的开场白和结束语分开, 尽在使用的时候才初始化
 
 ### -fsplit-wide-types
+
 对于某些需要占用多个寄存器的变量, 独立的申请寄存器
 
 ### -fssa-backprop
+
 在定义链上传播相关使用的信息, 来简化定义
 
 ### -fssa-phiopt
+
 优化条件代码
 
 ### -fstore-merging
+
 合并存储
 
 ## -O2
@@ -100,79 +123,109 @@ The pass tries to combine two instructions and checks if the result can be simpl
 尝试更多的寄存器级的优化以及指令级的优化, 会在编译期间占用更多的内存和编译时间
 
 ### -fthread-jumps
+
 判断是否有double jump, 并进行优化
 
+### -falign-functions
 
-### -falign-functions 
 把函数的开始地址对齐到2的幂
 
-
 ### -falign-jumps
+
 把分支的起点地址对齐到2的幂
 
 ### -falign-loops
+
 把循环的开始地址对齐到2的幂
 
-### -falign-labels 
+### -falign-labels
+
 把标签的地址对齐到2的幂
 
-### -fcaller-saves 
-### -fcrossjumping 
-### -fcse-follow-jumps 
-### -fcse-skip-blocks 
+### -fcaller-saves
+
+### -fcrossjumping
+
+### -fcse-follow-jumps
+
+### -fcse-skip-blocks
+
 ### -fdelete-null-pointer-checks
+
 检查是否存在delete空指针
 
-
 ### -fdevirtualize
-### -fdevirtualize-speculatively 
+
+### -fdevirtualize-speculatively
+
 用子类虚函数覆盖虚函数函数指针, 将对虚拟函数的调用转换为直接调用
 
-### -fexpensive-optimizations 
+### -fexpensive-optimizations
+
 ### -fgcse
+
 ### -fgcse-lm
+
 全局的公用子表达式优化
 
-### -fhoist-adjacent-loads 
+### -fhoist-adjacent-loads
+
 ### -finline-small-functions
+
 把小函数优化为内联函数
 
-### -findirect-inlining 
+### -findirect-inlining
+
 ### -fipa-cp
+
 过程间常数传播
 
-### -fipa-cp-alignment 
-### -fipa-bit-cp 
+### -fipa-cp-alignment
+
+### -fipa-bit-cp
+
 ### -fipa-sra
+
 过程间优化, 删除未使用的参数, 将值传递优化为引用传递
 
-### -fipa-icf 
+### -fipa-icf
+
 ### -fisolate-erroneous-paths-dereference
+
 检测由于取消空指针而触发错误或未定义行为的路径, 将这些路径隔离
 
 ### -flra-remat
+
 通过上下文敏感, 重用变量
 
 ### -foptimize-sibling-calls
+
 优化同级和尾部递归调用
 
 ### -foptimize-strlen
+
 优化strlen函数
 
 ### -fpartial-inlining
+
 部分内联函数
 
 ### -fpeephole2
+
 机器相关优化
 
 ### -freorder-blocks-algorithm=stc
+
 块内代码重排优化
 
 ### -freorder-blocks-and-partition
+
 ### -freorder-functions
+
 重排代码
 
 ### -frerun-cse-after-loop
+
 重新运行公共表达式减少在循环后
 
 

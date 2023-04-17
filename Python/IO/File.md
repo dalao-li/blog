@@ -4,15 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-09-24 20:37:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-08-21 23:51:13
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:18:56
 -->
 
-## 文件
+# 文件
 
-
-### 创建
-
+## 创建
 
 ```py
 path = ""
@@ -25,10 +23,7 @@ if os.path.exists(path):
 
 ![](https://cdn.hurra.ltd/img/20211225130907.png)
 
-
-
-#### 创建临时文件
-
+### 创建临时文件
 
 tempfile.NamedTemporaryFile 函数用于创建具有特定名称的临时文件
 
@@ -39,12 +34,9 @@ def touch_tmp_file(request):
     return HttpResponse(f"tmp file: {tmp_file} created!", content_type='text/plain')
 ```
 
+## 修改
 
-
-### 修改
-
-
-#### 写入追加
+### 写入追加
 
 - `'w'`写入, `'a'`追加
 
@@ -56,16 +48,13 @@ f.close()
 
 ![](https://cdn.hurra.ltd/img/20211225132548.png)
 
-
-#### 重命名
+### 重命名
   
 ```py
 os.rename(old_path, new_path)
 ```
 
-
-### 读取
-
+## 读取
 
 ```py
 with open(path, 'r', encoding = 'utf-8') as f:
@@ -80,10 +69,7 @@ f.close()
 
 ![](https://cdn.hurra.ltd/img/20211225142026.png)
 
-
-
-### 移动
-
+## 移动
 
 ```py
 import os
@@ -100,9 +86,7 @@ def move_file(source_path: str, target_path: str):
     shutil.move(source_path,  target_path)
 ```
 
-
-
-### 删除
+## 删除
 
 
 ```py
@@ -112,13 +96,9 @@ def del_file(path: str):
     os.remove(path)
 ```
 
+## 显示
 
-
-### 显示
-
-
-#### 显示文件
-
+### 显示文件
 
 ```py
 def display_all_files(folder_path: str):
@@ -131,9 +111,7 @@ def display_all_files(folder_path: str):
 
 ![](https://cdn.hurra.ltd/img/20211225150924.png)
 
-
-
-#### 递归显示
+### 递归显示
 
 
 ```py
@@ -145,16 +123,13 @@ def display_all_folders(folder_path: str):
             display_all_files(path)
 ```
 
+## 问题
 
-### 问题
-
-
-#### 路径错误
+### 路径错误
 
 Windows路径中 `\` 会被视作转义字符, 导致路径错误
 
 若文件路径为`C:\Users\XXX\Desktop\x.txt`, 需改为
-
 
 ```sh
 r'C:\Users\XXX\Desktop\x.txt' 或

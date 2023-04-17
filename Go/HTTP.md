@@ -10,8 +10,7 @@
 
 # Go Http
 
-
-### Web Hello World
+## Web Hello World
 
 ```go
 package main
@@ -32,8 +31,7 @@ func main() {
 
 ![](https://cdn.hurra.ltd/img/20210110181933.png)
 
-
-### 并发 Hello World
+## 并发 Hello World
 
 ```go
 package main

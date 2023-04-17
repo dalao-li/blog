@@ -8,8 +8,7 @@
  * @LastEditTime: 2022-07-03 00:08:12
 -->
 
-## BytesIO
-
+# BytesIO
 
 BytesIO实现了在内存中读写bytes
 
@@ -22,7 +21,6 @@ f.write('中文'.encode('utf-8'))
 # b'\xe4\xb8\xad\xe6\x96\x87'
 f.getvalue()
 ```
-
 
 ```py
 f= <FileStorage: '涉农股专家公示名录.xlsx' ('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')>

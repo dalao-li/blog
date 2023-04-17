@@ -4,15 +4,13 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-28 22:29:34
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:37:55
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:11:57
 -->
 
 # Django命令
 
-
 ## 初始化
-
 
 ### 建立项目
 
@@ -20,13 +18,11 @@
 django-admin.py startproject [项目名]
 ```
 
-
 ### 新建应用
 
 ```py
 python manage.py startapp 应用名
 ```
-
 
 ### 运行
 
@@ -34,10 +30,7 @@ python manage.py startapp 应用名
 python manage.py runserver [0.0.0.0:8000]
 ```
 
-
-
 ## 数据库
-
 
 ### 迁移
 
@@ -54,7 +47,6 @@ python manage.py migrate
 ```sh
 python manage.py migrate --database=路由表中应用对应的数据库
 ```
-
 
 ### 创建管理员用户
 

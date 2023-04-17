@@ -5,11 +5,10 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: daLao
- * @LastEditTime: 2022-09-21 22:12:30
+ * @LastEditTime: 2023-04-17 15:23:29
 -->
 
-## tkinter
-
+# tkinter
 
 ```py
 from tkinter import *
@@ -30,8 +29,6 @@ class Application(Frame):
 
         self.downButton = Button(self, text = '下载', font = ('Arial', 12), command = download)
         self.downButton.place(x = 100, y = 80, width = 100, height = 50)
-
-
 
 if __name__ == '__main__':
     app = Application()

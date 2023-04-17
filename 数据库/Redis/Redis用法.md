@@ -10,7 +10,6 @@
 
 # Readis
 
-
 ### 命令
 
 ### 建立键
@@ -19,13 +18,11 @@
 SET key redis
 ```
 
-
 ### 删除键
 
 ```sh
 DEL key
 ```
-
 
 ### 检查key是否存在
 
@@ -33,13 +30,11 @@ DEL key
 EXISTS key
 ```
 
-
 ### 以秒为给定key设置过期时间
 
 ```sh
 EXPIRE key seconds
 ```
-
 
 ### 以秒返回给定key的剩余生存时间
 
@@ -47,9 +42,7 @@ EXPIRE key seconds
 TTL key
 ```
 
-
 ## 安全操作
-
 
 ### 设置密码
 
@@ -57,16 +50,13 @@ TTL key
 CONFIG set requirepass "密码"
 ```
 
-
 ### 查看密码
 
 ```sh
 CONFIG get requirepass
 ```
 
-
 ## Docker部署
-
 
 ### 允许远程访问
 
@@ -79,7 +69,6 @@ protected-mode no
 # password
 requirepass 123456
 ```
-
 
 - 拉取容器
 
@@ -95,13 +84,11 @@ docker run -itd \
 docker run -itd -p 6379:6379 -v $PWD/redis.conf:/etc/redis/redis.conf --name redis-server redis 
 ```
 
-
 ### 连接
 
 ```sh
 docker exec -it redis-test redis-cli
 ```
-
 
 ## GUI软件
 

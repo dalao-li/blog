@@ -8,12 +8,9 @@
  * @LastEditTime: 2023-04-05 02:23:28
 -->
 
-
 # Hypervisor
 
-
 ## 概念
-
 
 虚拟机监视器(virtual machine monitor, VMM), 是用来建立与执行虚拟机器的软件、固件或硬件
 
@@ -29,10 +26,7 @@ Hypervisor不但协调着这些硬件资源的访问, 也同时在各个虚拟�
 
 当服务器启动并执行Hypervisor时, 它会加载所有虚拟机客户端的操作系统同时会分配给每一台虚拟机适量的内存, CPU, 网络和磁盘
 
-
-
 ## 原生或裸机hypervisor
-
 
 虚拟机管理程序直接运行在宿主机的硬件上来控制硬件和管理客操作系统
 
@@ -42,12 +36,9 @@ Hypervisor不但协调着这些硬件资源的访问, 也同时在各个虚拟�
 
 - 运行效率高
 
-
 ![](https://cdn.hurra.ltd/img/20210207190941.png)
 
-
 ## 寄居或托管hypervisor
-
 
 虚拟机管理程序运行在传统的操作系统上, 就像其他计算机程序那样运行
 
@@ -57,21 +48,18 @@ Hypervisor不但协调着这些硬件资源的访问, 也同时在各个虚拟�
 
 - 运行效率一般较原生低
 
-
 ![](https://cdn.hurra.ltd/img/20210207191615.png)
-
 
 ## Hyper-v
 
-
 ### 嵌套虚拟化
-
 
 请确保虚拟机为关闭状态
   
 ```sh
 Get-VM
 ```
+
 ![](https://cdn.hurra.ltd/img/20210207140309.png)
 
 此处虚拟机名为CentOS 7
@@ -79,11 +67,12 @@ Get-VM
 ```sh
 Get-VMProcessor -VMName 虚拟机名 | fl
 ```
+
 ![](https://cdn.hurra.ltd/img/20210207140508.png)
 
 显示嵌套虚拟化选项值为False
 
-```
+```sh
 Set-VMProcessor -ExposeVirtualizationExtensions $true -VMName 虚拟机名
 ```
 
@@ -91,10 +80,7 @@ Set-VMProcessor -ExposeVirtualizationExtensions $true -VMName 虚拟机名
 
 ![](https://cdn.hurra.ltd/img/20210207140853.png)
 
-
-
 ### Vmware于Hyper共存
-
 
 在Vmware中创建虚拟机的时候, Vmware提示
 
@@ -106,13 +92,11 @@ VMware Workstation和Hyper-V不兼容.
 
 两者都是基于 $CPU$ 等底层硬件的 $Hypervisor$ 机制来实现的, 而他们必须独占管理 $Hypervisor$, 因此不能在一台电脑中同时运行
 
-
 - 关闭Hyper-v
 
 ```sh
 bcdedit /set hypervisorlaunchtype off
 ```
-
 
 - 开启Hyper-v
 

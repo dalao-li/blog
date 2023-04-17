@@ -10,9 +10,7 @@
 
 # SQL外键
 
-
 ## 概念
-
 
 外键是另一表的主键, 可重复, 可为空, 用于数据约束
 
@@ -22,9 +20,7 @@
 
 - `FOREIGN KEY` 用于约束预防破坏表之间连接的动作, 防止非法数据插入外键列
 
-
 ## 实例
-
 
 ```sql
 CREATE TABLE `Stu`  (
@@ -89,7 +85,6 @@ INSERT INTO Score (s_id, c_id, score) VALUES ('2017-XAB-3653', 'AV-275455', 97);
 ![](https://cdn.hurra.ltd/img/20201005170512.png)
 
 显示插入错误, 因为 c_id = BV-000001 在其指向的 Course 表中不存在, 产生了约束错误
-
 
 - 现在有位同学编号为 X-47-W, 其量子力学成绩为 80 分, 插入 Score 表
 

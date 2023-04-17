@@ -4,20 +4,17 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-02 23:02:30
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:33:00
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:19:25
 -->
 
 # 字典
 
-
 字典是另一种可变容器模型, 且可存储任意类型对象
 
-字典的每个键值以`:`分割, 每个键值对之间用`, `分割, 字典包括在花括号 {} 中
-
+字典的每个键值以`:`分割, 每个键值对之间用`,`分割, 字典包括在花括号 {} 中
 
 ## 访问
-
 
 ### 键值对
 
@@ -27,7 +24,6 @@ d = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
 # 7
 d['Age']
 ```
-
 
 ### 遍历
 
@@ -40,9 +36,7 @@ for k, v in d.items():
 # lass First
 ```
 
-
 ## 修改
-
 
 ```py
 dict[key] = value
@@ -55,9 +49,7 @@ d = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
 d['Name] = 'Wang';
 ```
 
-
 ## 删除
-
 
 ### 删除键值
 
@@ -74,13 +66,11 @@ del d['Age']
 print(d)
 ```
 
-
 ### 清空字典所有条目
 
 ```py
 dict.clear()
 ```
-
 
 ### 删除字典
 
@@ -88,10 +78,7 @@ dict.clear()
 del dict
 ```
 
-
-
 ## 函数
-
 
 ### 内置函数
 
@@ -101,7 +88,6 @@ del dict
 | len(dict)         | 计算字典元素个数           |
 | str(dict)         | 输出字典可打印的字符串表示 |
 | type(variable)    | 返回输入的变量类型         |
-
 
 ### 字典函数
 
@@ -129,7 +115,6 @@ d.get('height', 30)
 ```
 
 ## 转换
-
 
 通过import json导入
 

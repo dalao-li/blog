@@ -4,15 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-10-26 22:19:58
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-05 02:23:03
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:49:21
 -->
 
 # bat
 
-
 ## 指令
-
 
 ### 注释
 
@@ -22,7 +20,6 @@ REM 注释内容
 
 :: 注释内容
 ```
-
 
 ### 系统变量
 
@@ -46,7 +43,6 @@ REM 获取上一命令执行结果码
 
 ### echo
 
-
 ```bat
 REM 输出提示信息
 echo 输出内容
@@ -61,7 +57,6 @@ REM @echo将关闭该命令回显, 即执行时不会显示该命令
 @echo off
 ```
 
-
 ### 跳转
 
 goto 和 :
@@ -74,7 +69,6 @@ REM 建立index标号
 REM 跳转到index标号处, 注意标号需以字母开头
 goto index
 ```
-
 
 ### 文件
 

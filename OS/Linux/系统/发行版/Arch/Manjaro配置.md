@@ -8,12 +8,9 @@
  * @LastEditTime: 2023-04-09 00:15:15
 -->
 
-
 # Manjaro配置
 
-
 ## 换源
-
 
 - 添加国内源
 
@@ -40,7 +37,6 @@ SigLevel = Optional TrustAll
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 
-
 ## 更新
 
 ```sh
@@ -65,8 +61,7 @@ rm /var/lib/pacman/db.lck
 sudo pacman -Syudd
 ```
 
-
-##  文件管理器
+## 文件管理器
 
 - 查看当前文件管理器
 
@@ -94,16 +89,13 @@ vscode 设置中添加
 "terminal.integrated.fontFamily": "NotoSansMono Nerd Font"
 ```
 
-
 ### gedit
 
 ```sh
 sudo pacman -Syyu libvoikko hspell nuspell hunspell aspell
 ```
 
-
 ## 软件
-
 
 ### VM
 
@@ -135,17 +127,15 @@ yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
 
 - 安装
 
-
 ```sh
 yay -S --noconfirm visual-studio-code-bin flameshot grub-customizer vlc
 ```
 
 - 卸载
 
-```
+```sh
 yay -Rns
 ```
-
 
 ### 安装deb
 
@@ -159,7 +149,6 @@ sudo debtap xxxxxx.deb
 
 sudo pacman -U xxxxxxz.zst
 ```
-
 
 ### 中文输入法
 
@@ -193,7 +182,6 @@ export LC_CTYPE=zh_CN.UTF-8
 
 重启
 
-
 ### Anaconda
 
 ```sh
@@ -201,7 +189,6 @@ echo "export PATH=$HOME/anaconda3/bin:$PATH">>~/.bashrc
 
 source ~/.bashrc
 ```
-
 
 ### 向日葵
 

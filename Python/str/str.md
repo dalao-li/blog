@@ -8,16 +8,13 @@
  * @LastEditTime: 2023-04-16 23:34:11
 -->
 
-
 # 字符串
-
 
 ## 定义
 
 ```py
 s = "Hello World"
 ```
-
 
 ## input
 
@@ -33,16 +30,13 @@ print(s)
 print(type(s))
 ```
 
-
 ## 切片
-
 
 | 语法          | 范围          |
 | ------------- | ------------- |
 | $[start:end]$ | [start, end)  |
 | $[start:]$    | [start, 末尾] |
 | $[:end]$      | [开头, end)   |
-
 
 ```py
 s = "HELLO WORLD!"
@@ -57,9 +51,7 @@ s[3:]
 s[:5]
 ```
 
-
 ## 函数
-
 
 ### 分割
 
@@ -77,9 +69,7 @@ s.split()
 type(s.split())
 ```
 
-
 ## 查找
-
 
 ### 子串查找
 
@@ -98,7 +88,6 @@ x = s.find("cd", 0, -1)
 print(x)
 ```
 
-
 ### 次数查找
 
 ```py
@@ -107,9 +96,7 @@ conut(s, start, end)
 
 返回字符串[start, end]范围内s出现的次数
 
-
 ## 过滤
-
 
 ### 子符过滤
 
@@ -131,7 +118,6 @@ print(a.strip("a1"))
 # 3
 print(a.strip("12a"))
 ```
-
 
 ## 格式化
 

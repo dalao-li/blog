@@ -4,19 +4,17 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-02-06 13:09:18
- * @LastEditors: dalao
- * @LastEditTime: 2022-04-10 14:52:02
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:21:49
 -->
 
-## 单元测试
-
+# 单元测试
 
 单元测试是指, 对软件中的最小可测试单元在与程序其他部分相隔离的情况下进行检查和验证的工作
 
 最小可测试单元通常是指函数或者类, 一般是开发来做, 按照测试阶段来分, 为单元测试、集成测试、系统测试以及验收测试
 
-
-### unittest框架
+## unittest框架
 
 - test case
 
@@ -38,8 +36,7 @@
 
 执行测试用例, 并返回测试用例的执行结果.它还可以用图形或者文本接口, 把返回的测试结果更形象的展现出来, 如:HTMLTestRunner
 
-
-### TestCase测试用例
+## TestCase测试用例
 
 编写测试用例前, 需建一个测试类继承unittest里的TestCase类, 编写测试用例的步骤如下
 
@@ -50,7 +47,6 @@
 - 定义测试方法, 方法名必须以test_开头
   
 - 调用unittest.main()方法来运行测试用例, unittest.main()方法会搜索该模块下所有以test开头的测试用例方法, 并自动执行
-
 
 以注册功能为例
 

@@ -4,15 +4,13 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: dalao
- * @LastEditTime: 2023-03-18 00:31:52
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 16:29:35
 -->
 
 # Docker部署MySQL
 
-
 ## 指令
-
 
 ```sh
 docker run -itd \
@@ -32,9 +30,7 @@ docker run -itd \
 docker run -itd --name=mysql -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123  mysql:5.7
 ```
 
-
 ## 远程连接
-
 
 ### 登录
 
@@ -56,9 +52,7 @@ flush privileges;
 
 ![](https://cdn.hurra.ltd/img/20211227135502.png)
 
-
 ## 常见问题
-
 
 ### 中文乱码
 
@@ -67,7 +61,6 @@ echo "character-set-server=utf8" >> /etc/mysql/mysql.conf.d/mysqld.cnf
 
 service mysql restart
 ```
-
 
 ### 降低占用内存
 

@@ -5,16 +5,12 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-12-12 23:58:17
  * @LastEditors: daLao
- * @LastEditTime: 2022-12-13 00:01:46
+ * @LastEditTime: 2023-04-17 16:06:37
 -->
 
-[CMake学习笔记05--ExternalProject_Add模块](https://blog.csdn.net/zym326975/article/details/106118063)
-
-## ExternalProject
-
+# ExternalProject
 
 - 创建名为gflag-2.2.2.cmake的文件
-
 
 在项目中创建名为Cmake的文件夹下创建名为gflag-2.2.2.cmake的文件
 
@@ -46,3 +42,7 @@ include(cmake/gflag-2.2.2.cmake)
 include(cmake/hwloc-1.11.cmake)
 include(cmake/protobuf-2.6.1.cmake)
 include(cmake/protobuf-2.6.1-compile.cmake)
+
+## 参考
+
+[CMake学习笔记05--ExternalProject_Add模块](https://blog.csdn.net/zym326975/article/details/106118063)

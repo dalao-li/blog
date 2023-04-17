@@ -5,15 +5,14 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-10-24 18:18:03
  * @LastEditors: daLao
- * @LastEditTime: 2022-10-24 18:18:22
+ * @LastEditTime: 2023-04-17 15:20:34
 -->
 
-## sys模块
+# sys模块
 
 "sys"即"system", "系统"之意该模块提供了一些接口, 用于访问 Python 解释器自身使用和维护的变量, 同时模块中还提供了一部分函数, 可以与解释器进行比较深度的交互
 
-
-### sys.argv
+## sys.argv
 
 "argv"即"argument value"的简写, 是一个列表对象, 其中存储的是在命令行调用 Python 脚本时提供的"命令行参数"
 
@@ -51,8 +50,7 @@ The list of command line arguments:
  ['Main.py', 'arg1', 'arg2', 'arg3']
 ```
 
-
-### sys.platform
+## sys.platform
 
 得到关于运行平台更详细的信息
 
@@ -71,8 +69,7 @@ Linux 上
 'linux'
 ```
 
-
-### sys.byteorder
+## sys.byteorder
 
 byteorder"即"字节序", 指的是在计算机内部存储数据时, 数据的低位字节存储在存储空间中的高位还是低位
 
@@ -89,8 +86,7 @@ byteorder"即"字节序", 指的是在计算机内部存储数据时, 数据的�
 
 另一种存储顺序是"大端存储", 即数据的高位字节存储在存储空间的低位地址上, 此时sys.byteorder的值为"big"
 
-
-### sys.executable
+## sys.executable
 
 该属性是一个字符串, 在正常情况下, 其值是当前运行的 Python 解释器对应的可执行程序所在的绝对路径
 

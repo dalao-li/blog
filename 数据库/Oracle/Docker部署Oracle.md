@@ -5,11 +5,10 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-13 17:59:58
+ * @LastEditTime: 2023-04-17 16:30:44
 -->
 
 # Docker部署Oracle
-
 
 ## Docker指令
 
@@ -26,7 +25,6 @@ docker run -itd --name=orace -p 8080:8080 -p 1521:1521 truevoly/oracle-12c
 
 ## Oracle指令
 
-
 ### 进入Oracle
 
 sys 用户的默认密码 oracle
@@ -35,13 +33,11 @@ sys 用户的默认密码 oracle
 sqlplus sys as sysdba
 ```
 
-
 ### 查看表空间
 
 ```sql
 select tablespace_name from dba_tablespaces;
 ```
-
 
 ### 查看表空间路径
 

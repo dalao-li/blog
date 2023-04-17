@@ -4,19 +4,17 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-26 11:01:43
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-15 10:57:53
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:25:51
 -->
 
 # 多线程
-
 
 进程是由若干线程组成的, 一个进程至少有一个线程
 
 线程是操作系统直接支持的执行单元
 
 Python的线程是真正的Posix Thread, 而不是模拟出来的线程
-
 
 ```py
 import time
@@ -58,9 +56,7 @@ threading模块current_thread()函数, 永远返回当前线程的实例
 
 主线程实例的名叫MainThread
 
-
 ## 互斥锁
-
 
 多进程中, 同一个变量各有一份拷贝存在于每个进程中, 互不影响
 

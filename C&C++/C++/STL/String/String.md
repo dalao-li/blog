@@ -8,9 +8,7 @@
  * @LastEditTime: 2023-04-16 23:26:46
 -->
 
-
 # String
-
 
 ## c_str
 
@@ -20,9 +18,7 @@ const char* c_str() const
 
 返回一个指向正规C字符串的指针常量, 内容与本string串相同
 
-
 ## 函数
-
 
 ### getline
 
@@ -33,7 +29,6 @@ std::string str;
 
 getline(std::cin, str);
 ```
-
 
 ### find
 
@@ -57,7 +52,6 @@ int main() {
     return 0;
 }
 ```
-
 
 ### erase
 

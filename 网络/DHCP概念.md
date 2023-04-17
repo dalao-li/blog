@@ -4,16 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-24 17:08:04
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-05 16:30:28
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:59:38
 -->
-
 
 # DHCP
 
-
 ## 协议
-
 
 动态主机配置协议($Dynamic$ $Host$ $Configuration$ $Protocol$)是使用$UDP$协议工作的局域网网络协议
 
@@ -23,10 +20,7 @@
 
 - 为内部网络用户接受$IP$租约
 
-
-
 ## DHCP服务器
-
 
 专门承载和运行DHCP服务, 帮助管理IP的专用服务器
 
@@ -34,28 +28,19 @@
 
 - 大部分路由器可以转发DHCP配置请求, 因此, 互联网的每个子网并不都需要DHCP服务器
 
-
 - 客户机不需手工配置TCP/IP
-
 
 - 使用$DHCP$服务器能大大减少配置花费的开销和重新配置网络上计算机的时间, 服务器可以在指派地址租约时配置所有的附加配置值
 
-
 - 提供安全可信的配置, DHCP避免了在每台计算机上手工输入数值引起的配置错误, 还能防止网络上计算机配置地址的冲突
-
 
 - 客户机在子网间移动时, 旧的IP地址自动释放以便再次使用.在再次启动客户机时, $DHCP$服务器会自动为客户机重新配置$TCP/IP$
 
-
 - 管理员可以集中为整个互联网指定通用和特定子网的TCP/IP参数, 并且可以定义使用保留地址的客户机的参数.
-
 
 利用DHCP服务器, 我们可以灵活的利用手工分配、自动分配及动态分配3种分配方式, 为DHCP客户机分配TCP/IP地址, 从而做到更为方便的管理和维护DHCP客户机, 同时也可以有效解决IP不够用的问题
 
-
-
 ## 配置DHCP主机
-
 
 新建VMnet10网卡
 
@@ -71,13 +56,11 @@
 yum install -y dhcp
 ```
 
-
 复制模板文件
 
 ```sh
 cp /usr/share/doc/dhcp-4.2.5/dhcpd.conf.example  /etc/dhcp/dhcpd.conf 
 ```
-
 
 编辑/etc/dhcp/dhcpd.conf, 增加
 

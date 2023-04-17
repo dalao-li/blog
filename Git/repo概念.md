@@ -4,33 +4,27 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 19:54:30
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:57:48
 -->
 
+# Repo
 
-## Repo
+## 管理工具
 
-### 管理工具
-
-
-#### git
+### git
 
 版本管理库, 在git库中没有中心服务器的概念, 真正的分布式
 
-
-#### repo
+### repo
 
 repo就是多个git库的管理工具。如果是多个git库同时管理, 可以使用repo, 当然使用gerrit, 就必须用repo
 
-
-#### gerrit
+### gerrit
 
 gerrit是一个建立在git版本控制基础之上, 基于Web的代码审查工具
 
-
-
-### repo流程
+## repo流程
 
 - 初始化
 
@@ -64,20 +58,17 @@ repo upload xxx
 
 重复5-7步, 直到review通过, 然后merge改动, 完毕
 
+## Repo指令
 
-
-### Repo指令
-
-#### init
+### init
 
 ```sh
 repo init -u [URL] [OPTIONS]
 ```
+
 初始化
 
-
-
-#### sync
+### sync
 
 ```sh
 repi sync (参数) [项目列表]

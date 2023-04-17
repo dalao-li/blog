@@ -10,7 +10,6 @@
 
 # Numpy
 
-
 ## 创建
 
 ```py
@@ -26,7 +25,6 @@ numpy.array(object, dtype = None, copy = True, order = None, subok = False, ndmi
 | subok  | 默认返回一个与基类类型一致的数组                           |
 | ndmin  | 指定生成数组的最小维度                                     |
 
-
 ### 单维度
 
 ```py
@@ -37,7 +35,6 @@ a = np.array([1, 2, 3, 4, 5, 6])
 # [1 2 3 4 5 6]
 print(a)
 ```
-
 
 ### 多维度
 
@@ -51,7 +48,6 @@ a = np.array([[1, 2, 3], [4, 5, 6]])
 print(a)
 ```
 
-
 ### 最小维度
 
 ```py
@@ -62,7 +58,6 @@ a = np.array([1, 2, 3, 4, 5], ndmin = 2)
 # [[1 2 3 4 5]]
 print (a)
 ```
-
 
 ### dtype 参数
 

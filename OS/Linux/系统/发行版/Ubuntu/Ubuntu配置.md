@@ -4,15 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-07-15 11:40:19
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-09 00:15:55
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:42:25
 -->
 
 # Ubuntu设置
 
-
 ## 重启
-
 
 $Ubuntu$出现什么状况, 千万不要强制重启
 
@@ -23,13 +21,9 @@ $Ubuntu$出现什么状况, 千万不要强制重启
 
 - 依次按下<kbd>R</kbd> 键, <kbd>E</kbd> 键, <kbd>I</kbd> 键, <kbd>U</kbd> 键, <kbd>S</kbd> 键, <kbd>B</kbd> 键
 
-
 这些步骤做完后, 系统就会安全重启
 
-
-
 ## 关闭root密码
-
 
 ```sh
 sudo vim /etc/sudoers
@@ -42,7 +36,6 @@ dalao ALL=(ALL:ALL) ALL
 
 dalao ALL=(ALL) NOPASSWD:ALL
 ```
-
 
 ## 更新源
 
@@ -58,16 +51,11 @@ apt-get update
 apt-get upgrade
 ```
 
-
 ## 插件
-
 
 ![](https://cdn.hurra.ltd/img/20210814015815.png)
 
-
-
 ## 转换目录语言
-
 
 ```sh
 export LANG=en_US
@@ -77,19 +65,13 @@ xdg-user-dirs-gtk-update
 export LANG=zh_CN
 ```
 
-
-
 ## 程序包缓存文件已损坏
-
 
 ```sh
 sudo rm -rf /var/lib/apt/lists/*  
 ```
 
-
-
 ## 转换rpm到deb
-
 
 ```sh
 sudo apt-get install -y rpm alien
@@ -99,10 +81,7 @@ sudo alien -d [package].rpm &
 sudo dpkg -i [package].deb
 ```
 
-
-
 ## sougou输入法
-
 
 - 隐藏搜狗输入法配置栏
 
@@ -110,28 +89,25 @@ sudo dpkg -i [package].deb
 sudo sed -i 's#StatusAppearance=.*#StatusAppearance=0#' ${HOME}/.config/sogoupinyin/conf/env.ini
 ```
 
-
-
 ## 消除双图标
-
 
 ```sh
 xprop | grep WM_CLASS
 ```
 
 此时鼠标会变成一个十字的准星, 此时点击已经打开的应用界面
+
 ```sh
 WM_CLASS(STRING) = ".......", "XXXXXX"
 ```
+
 然后在该应用的.desktop文件末尾添加
 
 ```sh
 StartupWMClass=XXXXXX
 ```
 
-
 ## 卸载软件
-
 
 ```sh
 # 查找安装包名
@@ -140,9 +116,7 @@ dpkg -l *软件相关字段*
 sudo apt-get --purge remove 包名
 ```
 
-
 ### VM
-
 
 - 激活码
 
@@ -162,9 +136,7 @@ sudo apt-get install build-essential linux-headers-$(uname -r)
 sudo vmware-installer -u vmware-workstation
 ```
 
-
 ### 快捷指令
-
 
 ```sh
 # alias 新指令='原本指令'
@@ -177,10 +149,7 @@ EOF
 source ~/.bashrc
 ```
 
-
-
 ### QQ Wechat
-
 
 ```sh
 #!/bin/bash
@@ -220,4 +189,3 @@ docker run -itd \
    -e UID=$(id -u) \
    bestwu/wechat
 ```
-

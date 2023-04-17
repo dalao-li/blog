@@ -4,8 +4,8 @@
  * @Author: dalao
  * @Email: dalao_li@163.com
  * @Date: 2023-02-27 00:30:30
- * @LastEditors: dalao
- * @LastEditTime: 2023-02-27 00:30:38
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 09:10:59
 -->
 
 # Qt 事件
@@ -38,7 +38,7 @@
 void mousePressEvent(QMouseEvent *event);
 ```
 
-- 判断鼠标左右键
+- 判断鼠标键
 
 ```c
 void MainWindow::mousePressEvent(QMouseEvent *event)

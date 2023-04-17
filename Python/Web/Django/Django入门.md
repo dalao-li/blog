@@ -4,12 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:38:11
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:11:42
 -->
 
 # Django入门
-
 
 ## 创建项目
 
@@ -26,7 +25,6 @@
 - wsgi: python 程序和 web 服务器的通信协议
 
 - manage: 一个命令行工具, 用来和 Django 项目进行交互
-
 
 ## 创建应用
 
@@ -49,7 +47,6 @@ python manage.py startapp app
 - tests: 编写测试脚本
 
 - views: 视图层, 直接和浏览器进行交互
-
 
 ## 应用注册
 
@@ -164,7 +161,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 ```
 
-
 ## 视图
 
 编辑app/view.py文件
@@ -177,7 +173,6 @@ from django.shortcuts import render
 def hello(request):
     return HttpResponse('Hello World')
 ```
-
 
 ## 路由
 
@@ -195,7 +190,6 @@ urlpatterns = [
 ]
 ```
 
-
 ## 测试
 
 运行, 访问http://127.0.0.1:8000/hello
@@ -203,6 +197,3 @@ urlpatterns = [
 ![](https://cdn.hurra.ltd/img/20200801113106.png)
 
 ![](https://cdn.hurra.ltd/img/20200801113140.png)
-
-
-

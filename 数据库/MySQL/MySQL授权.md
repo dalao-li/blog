@@ -5,18 +5,17 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-10-06 13:11:32
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-13 17:59:23
+ * @LastEditTime: 2023-04-17 16:30:23
 -->
 
 # MySQL 授权
-
-
 
 ## 创建
 
 ```sql
 create user '用户名'@'host' identified by '密码';
 ```
+
 | host值    | 含义             |
 | --------- | ---------------- |
 | localhost | 本地登录用户     |
@@ -37,9 +36,7 @@ select host, user, authentication_string from mysql.user;
 
 ![](https://cdn.hurra.ltd/img/20200516001828.png)
 
-
 ![](https://cdn.hurra.ltd/img/20200516001919.png)
-
 
 ## 查看
 
@@ -48,7 +45,6 @@ select host, user, authentication_string from mysql.user;
 ```sql
 show grants;
 ```
-
 
 - 查看指定用户权限
 
@@ -77,7 +73,6 @@ grant all privileges on *.* to '用户名'@'%' identified by '密码';
 授予dalao用户对所有数据库所有表的所有操作权限
 
 ![](https://cdn.hurra.ltd/img/20200516003253.png)
-
 
 ![](https://cdn.hurra.ltd/img/20200516003557.png)
 

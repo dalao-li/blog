@@ -4,8 +4,8 @@
  * @Author: dalao
  * @Email: dalao_li@163.com
  * @Date: 2023-03-13 00:50:11
- * @LastEditors: dalao
- * @LastEditTime: 2023-03-18 00:30:04
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 16:11:35
 -->
 
 # LLVM 环境搭建
@@ -20,7 +20,6 @@ TODO
 
 ## Linux
 
-
 ### Ubuntu
 
 - 下载源码
@@ -31,7 +30,7 @@ sudo wget https://github.com/llvm/llvm-project/archive/refs/tags/llvmorg-15.0.7.
 
 - 解压源码
 
-```sh 
+```sh
 sudo tar xvf llvm-project-llvmorg-15.0.7
 ```
 

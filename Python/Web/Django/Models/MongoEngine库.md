@@ -4,12 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-04-22 23:42:03
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:37:16
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:15:02
 -->
 
 # MongoEngine
-
 
 ## Models
 
@@ -31,16 +30,13 @@ class User(Document):
     }
 ```
 
-
 ## 转JSON
 
 ```py
 user = User.objects.filter(name='Wang').first().to_json(ensure_ascii=False)
 ```
 
-
 ## 增加
-
 
 ```py
 User(....).create()
@@ -55,9 +51,7 @@ scores.append(Score(name='C++', score=90))
 User.objects.filter(name='Wang').first().update(scores=scores)
 ```
 
-
 ## 修改
-
 
 ```py
 # 修改值 set__

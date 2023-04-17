@@ -4,20 +4,17 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-08 15:24:45
- * @LastEditors: DaLao
- * @LastEditTime: 2022-05-27 22:24:49
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:21:33
 -->
 
-## selenium
+# selenium
 
-
-### 下载 chromedriver
-
+## 下载 chromedriver
 
 下载与谷歌浏览器版本对应的chromedriver.exe并放在谷歌浏览器的安装目录与Python安装目录下
 
-
-### 模拟搜索
+## 模拟搜索
 
 ```py
 from selenium import webdriver
@@ -41,9 +38,7 @@ inputs.submit()
 
 ![](https://cdn.hurra.ltd/img/20210308152746.png)
 
-
-
-### 元素定位
+## 元素定位
 
 ```py
 find_element_by_id()
@@ -63,8 +58,7 @@ find_element_by_xpath()
 find_element_by_css_selector()
 ```
 
-
-### 浏览器操作
+## 浏览器操作
 
 - 控制浏览器大小
 
@@ -90,8 +84,7 @@ browser.refresh()
 browser.refresh() 
 ```
 
-
-### 键盘鼠标操作
+## 键盘鼠标操作
 
 - 点击和输入
 
@@ -152,8 +145,7 @@ send_keys(Keys.F1)
 ......
 ```
 
-
-### 获取断言信息
+## 获取断言信息
 
 ```py
 # 打印当前页面title

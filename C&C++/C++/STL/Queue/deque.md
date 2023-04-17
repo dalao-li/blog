@@ -10,21 +10,17 @@
 
 # deque
 
-
 ```c++
 #include<deque>
 ```
 
-
 ## 插入
-
 
 ### 头部插入
 
-```c
+```c++
 push_front()
 ```
-
 
 ### 尾部插入
 
@@ -32,16 +28,13 @@ push_front()
 push_back()
 ```
 
-
 ### 插入元素 e 到 p 位置
 
 ```c
 iterator insert(p, e)
 ```
 
-
 ## 删除
-
 
 ### 删除头部的元素
 
@@ -49,13 +42,11 @@ iterator insert(p, e)
 pop_front()
 ```
 
-
 ### 删除尾部的元素
 
 ```c
 pop_back()
 ```
-
 
 ### 删除 p 位置上元素
 
@@ -63,9 +54,7 @@ pop_back()
 iterator erase(iterator p)
 ```
 
-
 ## 查找
-
 
 ### 返回位置 p 上的元素
 
@@ -73,20 +62,17 @@ iterator erase(iterator p)
 reference at(size_type p)
 ```
 
-
 ### 返回头部元素
 
 ```c
 front()
 ```
 
-
 ### 返回尾部元素
 
 ```c
 back()
 ```
-
 
 ## 实例
 

@@ -5,15 +5,14 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-10-26 19:54:27
  * @LastEditors: daLao
- * @LastEditTime: 2022-10-26 22:04:26
+ * @LastEditTime: 2023-04-17 15:20:21
 -->
 
-## collections 模块
+# collections 模块
 
 collections 是 python 的内置模块, 提供了很多方便且高性能的关于集合的操作, 掌握这些知识有助于提高代码的性能和可读性
 
-
-### namedtuple 功能
+## namedtuple 功能
 
 namedtuple() 返回一个新的元组子类
 
@@ -38,9 +37,7 @@ print(name, age, weight)
 print(user.name, user.age, user.weight)
 ```
 
-
 namedtuple() 相当于直接定义了一个新的类, 其比直接定义 class 的方式省很多空间, 同时其返回值是一个 tuple, 支持 tuple 的各种操作
-
 
 - 将序列直接转换为新的 tuple 对象
 
@@ -52,7 +49,6 @@ user = User._make(user)
 print(user) 
 ```
 
-
 - 返回一个 dict
 
 ```py
@@ -61,7 +57,6 @@ user = User("admin", 20, 60)
 # OrderedDict([('name', 'admin'), ('age', 20), ('weight', 60)])
 print(user._asdict()) 
 ```
-
 
 ## ChainMap
 
@@ -92,11 +87,9 @@ for key, value in users.items():
     print(key, value)
 ```
 
-
 如果 ChainMap() 中的多个字典有重复 key, 查看的时候可以看到所有的 key, 但遍历的时候却只会遍历 key 第一次出现的位置, 其余的忽略
 
 同时可通过返回的新的视图来更新原来的的字典数据, 进一步验证了该操作不是做的拷贝, 而是直接指向原字典, 
-
 
 ## deque 功能
 
@@ -117,7 +110,6 @@ print(q)
 # 0
 print(q.popleft())
 ```
-
 
 ## Counter
 

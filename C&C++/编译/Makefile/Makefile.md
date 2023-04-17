@@ -5,14 +5,12 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-11-11 23:58:36
  * @LastEditors: daLao
- * @LastEditTime: 2022-10-02 01:53:16
+ * @LastEditTime: 2023-04-17 16:11:57
 -->
 
-## Makefile
+# Makefile
 
-
-### 手动编译
-
+## 手动编译
 
 - hellomake.h
 
@@ -53,9 +51,7 @@ gcc -o hellomake hellomake.c hellofunc.c -I.
 
 ![](https://cdn.hurra.ltd/img/20211112220904.png)
 
-
-
-### Makefile 1
+## Makefile 1
 
 
 ```makefile
@@ -69,9 +65,7 @@ make命令不带参数会默认执行makefile文件中的第一条规则
 
 通过将命令依赖的文件列表放在`:`之后的第一行, 若其中的任何文件发生更改, make就会执行hellomake规则
 
-
-
-###  Makefile 2
+## Makefile 2
 
 
 ```makefile
@@ -94,10 +88,7 @@ hellofunc.o:
 
 ![](https://cdn.hurra.ltd/img/20211112225303.png)
 
-
-
-### Makefile 3
-
+## Makefile 3
 
 上个版本的makefile还忽略对头文件的依赖, 若修改了hellomake.h文件, 然后重新执行make, 并不会重编头文件, 需告诉make所有.c文件依赖哪些.h文件
 
@@ -124,10 +115,7 @@ hellomake:hellomake.o hellofunc.o
 
 ![](https://cdn.hurra.ltd/img/20211113010244.png)
 
-
-
-### Makefile 4
-
+## Makefile 4
 
 最后使用特殊宏`$@ $^`分别表示`:`左边和右边, 进行简化
 
@@ -150,10 +138,7 @@ hellomake: $(OBJ)
     $(CC) -o $@ $^ $(CFLAG)
 ```
 
-
-
-### Makefile 5
-
+## Makefile 5
 
 若想把头文件, 源文件和其他库文件分别放在不同文件夹, 并隐藏中间文件(目标文件), 则需在makefile定义include文件夹, lib文件夹路径, 并且把目标文件放到项目src文件夹的子文件夹obj里面
 

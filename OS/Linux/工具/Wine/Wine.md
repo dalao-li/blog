@@ -8,29 +8,23 @@
  * @LastEditTime: 2022-07-01 22:35:38
 -->
 
+# Wine
 
-## Wine
+## 配置
 
-
-
-### 配置
-
-
-#### 安装
+### 安装
 
 ```sh
 sudo apt-get install -y wine64
 ```
 
-
-#### 配置页面
-
+### 配置页面
 
 ```sh
 winecfg
 ```
 
-#### Docker搭建
+### Docker搭建
 
 启动前额外输入
 
@@ -38,14 +32,13 @@ winecfg
 xhost +
 ```
 
-
-### PVS
+## PVS
 
 ```sh
 xhost +
 ```
 
-#### Docker
+## Docker
 
 ```sh
 docker run -itd \

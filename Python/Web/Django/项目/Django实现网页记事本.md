@@ -4,17 +4,15 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:35:18
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:15:24
 -->
 
 # Django网页笔记本
 
-
 ## 完整代码
 
 > https://github.com/Dalao-Li/WebNotepad-Django.git
-
 
 ## 运行结果
 
@@ -30,7 +28,6 @@
 
 ![](https://cdn.hurra.ltd/img/20200816225928.png)
 
-
 ## 涉及技术
 
 > - CSS : BootStrap4, Font Awesome, 
@@ -38,9 +35,7 @@
 > - Web 框架 : Django
 > - 数据库 : Sqlite3
 
-
 ## 概要设计
-
 
 ### 前端
 
@@ -72,7 +67,6 @@
 
 显示所有已经删除的记事
 
-
 ### 数据库
 
 sqlite3
@@ -90,16 +84,11 @@ note
 | e_time | 结束时间       | 必须比开始时间晚                                                                                           |
 | status | 该记事状态     | U(underway): 进行中<br>F(finish) : 已完成<br>D(deleted) : 已删除 <br> O(Overtime):已超时<br>P(Plan):未开始 |
 
-
 ## 具体实现
-
 
 ### 初始化项目
 
-
-建立项目
-
-建立一个应用 app
+建立项目, 建立一个应用 app
 
 ```py
 python manage.py startapp app
@@ -120,8 +109,6 @@ python manage.py startapp app
 ![](https://cdn.hurra.ltd/img/20200805182830.png)
 
 在 app 目录下新建 static 与 templates 目录, 用于存放静态文件和模板文件
-
-
 
 ### 前端
 
@@ -542,9 +529,7 @@ function modifyNote() {
 }
 ```
 
-
 ## 后端
-
 
 ### 数据库
 
@@ -581,7 +566,6 @@ python manage.py migrate
 ```
 
 ![](https://cdn.hurra.ltd/img/20200809154710.png)
-
 
 ### 视图函数
 
@@ -634,7 +618,6 @@ def change_note_status(request):
         return HttpResponse(json.dumps({'result': 1}))
     return HttpResponse(json.dumps({'result': -1}))
 ```
-
 
 ### 绑定路由
 

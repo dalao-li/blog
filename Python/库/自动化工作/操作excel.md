@@ -8,10 +8,9 @@
  * @LastEditTime: 2022-05-27 22:25:21
 -->
 
-## Excel 
+# Excel 
 
-
-### 读取excel
+## 读取
 
 ```py
 def read_excel(f):
@@ -44,8 +43,7 @@ def read_excel(f):
         # j[0], j[1], j[2]...
 ```
 
-
-### 下载excel
+## 下载
 
 ```py
 def download_excel():
@@ -77,7 +75,7 @@ def download(id):
     return response
 ```
 
-### GUI
+## GUI
 
 ```py
 import tkinter as tk 

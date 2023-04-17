@@ -5,14 +5,12 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-02-04 23:48:41
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-13 18:00:50
+ * @LastEditTime: 2023-04-17 16:31:43
 -->
 
 # SQLServer
 
-
 ## Docker部署
-
 
 ```sh
 docker run -itd \
@@ -32,16 +30,13 @@ docker run -itd -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Dalao@13546!" -p 1433:1433 --
 | SA           | 用户名 |
 | Dalao@13546! | 密码   |
 
-
 ## 命令
-
 
 ### 进入SQLSercer
 
 ```sh
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Dalao@13546!"
 ```
-
 
 ### 显示所有数据库
 
@@ -51,7 +46,6 @@ GO
 ```
 
 ![](https://cdn.hurra.ltd/img/20201012110513.png)
-
 
 ### 显示表
 
@@ -64,10 +58,7 @@ GO
 
 别忘记输入`GO`, 那样才会执行命令(反人类的SQLServer)
 
-
-
 ## Python 交互
-
 
 ### Navicat 连接
 

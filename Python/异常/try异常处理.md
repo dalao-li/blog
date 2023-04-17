@@ -5,14 +5,13 @@
  * @Email: dalao@xxx.com
  * @QQ: 1061299112
  * @Date: 2021-01-25 22:06:50
- * @LastEditors: DaLao
- * @LastEditTime: 2022-08-21 23:47:11
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:19:32
 -->
 
-## 异常
+# 异常
 
-
-### 格式
+## 格式
 
 ```py
 try:

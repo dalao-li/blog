@@ -10,24 +10,19 @@
 
 # Winodws设置
 
-
 ## 设置Host
 
 ```sh
 C:\Windows\System32\drivers\etc\host
 ```
 
-
 ## 关闭window defener
-
 
 ```sh
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /d 1 /t REG_DWORD /f
 ```
 
-
 ## MBR->GPT
-
 
 ```sh
 # 查询所有磁盘

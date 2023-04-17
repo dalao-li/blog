@@ -8,7 +8,7 @@
  * @LastEditTime: 2022-04-16 15:27:49
 -->
 
-## sizeof
+# sizeof
 
 
 `sizeof` 是单目运算符

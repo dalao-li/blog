@@ -4,12 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-08-19 23:44:15
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:43:56
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:10:44
 -->
 
 # Python设置
-
 
 ## 换源
 
@@ -21,23 +20,19 @@ python -m pip install  -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host 
 pip config set global.index-url http://mirrors.aliyun.com/pypi/simple
 ```
 
-
 ## 生成requestment
 
 ```sh
 pip freeze > requirements.txt
 ```
 
-
 ## 虚拟环境
-
 
 ### 激活
 
 ```sh
 source venv/bin/activate
 ```
-
 
 ### 退出
 

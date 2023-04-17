@@ -4,12 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-02-04 21:43:48
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:36:23
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:13:05
 -->
 
 # Django Manager
-
 
 ## Models
 
@@ -66,13 +65,10 @@ User.objects.add_user(name, pwd)
 User.objects.find_name(name)
 ```
 
-
 ## DRF
 
-
-models.py
-
 ```py
+# models.py
 import uuid as uuid
 from werkzeug.security import generate_password_hash
 from django.db import models
@@ -125,9 +121,8 @@ urlpatterns = [
 ]
 ```
 
-urls.py
-
 ```py
+# urls.py
 from rest_framework import serializers
 from app.models import User
 

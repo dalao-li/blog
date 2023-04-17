@@ -4,13 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-08-14 01:23:03
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:02:49
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 16:17:23
 -->
 
-
 # FILE
-
 
 ## 定义
 
@@ -43,13 +41,11 @@ typedef struct _iobuf FILE;
 
 FILE结构是间接地操作系统的文件控制块(FCB)来实现对文件的操作
 
-
 ## 函数
-
 
 ### fopen
 
 ```c++
 // 打开文件.读文件到内存.返回文件信息结构指针
 FILE *fopen(char *file, char *open_mode)
-```
+``

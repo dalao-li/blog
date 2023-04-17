@@ -10,9 +10,7 @@
 
 # Git设置
 
-
 ## 配置
-
 
 ```sh
 # 配置用户名
@@ -28,8 +26,6 @@ git config --global core.editor "code -w"
 git config --global core.quotepath false
 ```
 
-
-
 ## 创建公钥
 
 ```sh
@@ -38,10 +34,7 @@ ssh-keygen -t rsa -C "邮箱"
 
 公钥位置`.ssh/id_rsa.pub`
 
-
-
 ## .git设置
-
 
 ```sh
 git gc --prune=now

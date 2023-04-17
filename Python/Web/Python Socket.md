@@ -4,15 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-01 20:37:22
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:43:10
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:11:01
 -->
 
 # Socket
 
-
 ## TCP
-
 
 ### 服务端 server
 
@@ -47,7 +45,6 @@ if __name__ == '__main__':
     s.close()
 ```
 
-
 ### 客户端 client
 
 ```py
@@ -78,9 +75,7 @@ if __name__ == '__main__':
     s.close()
 ```
 
-
 ## UDP
-
 
 ### 服务端 server
 
@@ -105,7 +100,6 @@ while True:
 if __name__ == '__main__':
     s.close()
 ```
-
 
 ### 客户端 client
 
@@ -133,9 +127,7 @@ if __name__ == '__main__':
 
 ![](https://cdn.hurra.ltd/img/20210112224731.png)
 
-
 ## 多线程 server 端
-
 
 ```py
 import socket, threading

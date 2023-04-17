@@ -4,21 +4,17 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-09 10:48:54
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-01 22:32:55
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:27:36
 -->
 
-## Jenkins
-
+# Jenkins
 
 ![](https://cdn.hurra.ltd/img/20210308111903.png)
 
+## 安装
 
-### 安装
-
-
-#### Linux安装
-
+### Linux安装
 
 - 安装jdk1.8
 
@@ -36,17 +32,13 @@ sudo wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/war/2.284/jenkins.war
 java -jar -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION=true  jenkins.war --httpPort=8080
 ```
 
-
 ![](https://cdn.hurra.ltd/img/20210309093313.png)
 
 ![](https://cdn.hurra.ltd/img/20210309093347.png)
 
 ![](https://cdn.hurra.ltd/img/20210309094244.png)
 
-
-
-#### Windows安装
-
+### Windows安装
 
 - 用管理员身份启动cmd, 进入jenkins安装根目录
 
@@ -54,13 +46,11 @@ java -jar -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PRO
 C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins
 ```
 
-
 - 启动命令
   
 ```sh
 net start jenkins
 ```
-
 
 - 关闭命令
 
@@ -68,9 +58,7 @@ net start jenkins
 net stop jenkins
 ```
 
-
 ### Docker部署
-
 
 ```sh
 docker run -itd -u root \
@@ -84,10 +72,7 @@ docker run -itd -u root \
 
 ![](https://cdn.hurra.ltd/img/20210308113523.png)
 
-
-
-### 示例
-
+## 示例
 
 使用Jenkins实现对Python程序的持续集成持续部署
 

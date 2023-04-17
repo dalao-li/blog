@@ -10,9 +10,7 @@
 
 # Vector
 
-
 ## 初始化
-
 
 ### 赋值
 
@@ -22,7 +20,6 @@ std::vector<T> v;
 std::vector<int> v = {1, 2, 3, 4, 5};
 ```
 
-
 ### 拷贝
 
 ```c++
@@ -31,7 +28,6 @@ std::vector<T> v(count, value);
 // 初始化10个0
 std::vector<int> v(10, 0);
 ```
-
 
 ### 预处理
 
@@ -43,16 +39,13 @@ std::vector<T> v;
 v.reserve(size);
 ```
 
-
 ### 二维Vector
 
 ```c
 std::vector<vector<T> > v;
 ```
 
-
 ## 增加
-
 
 ### 尾部插入
 
@@ -61,7 +54,6 @@ std::vector<T> v;
 
 v.push_back(value);
 ```
-
 
 ### 指定位置插入
 
@@ -72,9 +64,7 @@ std::vector<T> v;
 v.insert(v.begin() + index, value);
 ```
 
-
 ## 遍历
-
 
 ### 迭代器访问
 
@@ -90,7 +80,6 @@ for(auto it = v.begin(); it != v.end(); it++) {
 }
 ```
 
-
 ### 下标访问
 
 ```c++
@@ -101,10 +90,7 @@ for(unsigned int i = 0; i < v.size(); i++){
 }
 ```
 
-
-
 ## 删除
-
 
 ### 删除x, y之间的元素
 
@@ -114,7 +100,6 @@ std::vector<T> v;
 v.earse(v.begin() + x, v.end() - y);
 ```
 
-
 ### 删除末尾元素
 
 ```c
@@ -122,7 +107,6 @@ std::vector<T> v;
 
 v.pop_back();
 ```
-
 
 ### 删除index + 1位置元素
 
@@ -132,7 +116,6 @@ std::vector<T> v;
 v.erase(v.begin() + index)
 ```
 
-
 ### 清空
 
 ```c
@@ -140,7 +123,6 @@ std::vector<T> v;
 
 v.clear();
 ```
-
 
 ## 翻转
 
@@ -150,13 +132,9 @@ std::vector<T> v;
 reverse(v.begin(), v.end());
 ```
 
-
-
 ## Vector算法
 
-
 ### 排序
-
 
 #### 数字排序
 
@@ -165,7 +143,6 @@ std::vector<T> v;
 
 std::sort(v.begin(), v.end());
 ```
-
 
 #### 对象排序
 
@@ -196,10 +173,7 @@ std::vector<Stu> stu;
 std::sort(stu.begin(), stu.end(), cmp);
 ```
 
-
-
 ### 数学计算
-
 
 #### 最值
 
@@ -218,13 +192,11 @@ std::vector<T>::iterator it = min_element(v.begin(), v.end());
 std::vector<T>::iterator index = v.begin() - it;
 ```
 
-
 #### 累加
 
 ```c++
 accumulate(v.begin(), v.end(), 0, plus<T>())
 ```
-
 
 #### 累乘
 

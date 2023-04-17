@@ -10,16 +10,11 @@
 
 # string函数
 
-
-- 头文件
-
 ```c
 #include<string.h>
 ```
 
-
 ## 函数
-
 
 | 函数             | 说明                                                        |
 | ---------------- | ----------------------------------------------------------- |
@@ -27,9 +22,7 @@
 | `strcmp(s1, s2)` | 若 s1 == s2, 值 0<br>若 s1<s2 值小于 0<br>若 s1>s2 值大于 0 |
 | `strchr(s1, ch)` | 返回一个指针, 指向 ch在s1中首次出现位置                     |
 
-
 ## strstr
-
 
 - 查找 s2在s1中首次出现的位置, 返回第一次出现s2的位置, 若未找到则返回NULL
 
@@ -46,9 +39,7 @@ char *ret;
 ret = strstr(haystack, needle);
 ```
 
-
 ## strcat
-
 
 - 把 src 所指向的字符串追加到 dest 所指向的字符串的结尾
 
@@ -68,9 +59,7 @@ strcat(dest, src);
 printf("%s\n", dest);
 ```
 
-
 ## strcpy
-
 
 - 把 src 所指向的字符串复制到 dest
 
@@ -88,15 +77,14 @@ strcpy(a, b);
 printf("%s\n", a);
 ```
 
-
 ## memset
-
 
 - 复制字符 c(一个无符号字符)到参数 str 所指向字符串的前 n 个字符
 
 ```c
 void *memset(void *str, int c, size_t n)
 ```
+
 | 参数 | 含义                   |
 | ---- | ---------------------- |
 | str  | 指向要填充的内存块     |

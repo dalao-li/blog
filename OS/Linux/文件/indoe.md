@@ -4,24 +4,19 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-11 11:44:56
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-05 02:11:11
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:41:36
 -->
 
 # inode
 
-
 ## 扇区
-
 
 扇区(sector)是硬盘的最小存储单位, 每个扇区储存512字节(0.5KB)
 
 OS读取硬盘时为提高效率, 会一次性连续读取多个扇区
 
-
-
 ## 块(block)
-
 
 块(block)由多个扇区组成, 是文件存取的最小单位, 大小常见为4KB, 即连续八个扇区组成
 
@@ -29,10 +24,7 @@ OS读取硬盘时为提高效率, 会一次性连续读取多个扇区
 
 储存文件元信息的区域就是inode(索引节点)
 
-
-
 ## inode区
-
 
 硬盘格式化的时候OS自动将硬盘分成两个区域
 
@@ -44,10 +36,7 @@ OS读取硬盘时为提高效率, 会一次性连续读取多个扇区
 
 如1GB的硬盘中, 每个inode节点的大小为128字节, 每1KB就设置一个inode, 那么inode table的大小为128MB, 占硬盘空间的12.8\%
 
-
-
 ## inode内容
-
 
 每个文件对应的inode内容包含
 
@@ -73,20 +62,15 @@ OS读取硬盘时为提高效率, 会一次性连续读取多个扇区
 
 ![](https://cdn.hurra.ltd/img/20220401223348.png)
 
-
-
 ## inode作用
-
 
 - 删除文件
 
 当文件名包含特殊字符无法正常删除时, 可直接删除inode节点, 即可删除文件
 
-
 - 移动/重命名文件
 
 只会改变文件名, 不影响inode号码
-
 
 - 文件操作
 
@@ -96,21 +80,17 @@ OS读取硬盘时为提高效率, 会一次性连续读取多个扇区
 
 下次运行软件的时候, 文件名就自动指向新版文件, 旧版文件的inode则被回收
 
-
-
 ## indoe命令
 
-
 ### indeo信息
-
 
 - 查看分区的indoe信息
   
 ```sh
 df -i
 ```
-![](https://cdn.hurra.ltd/img/20211227232839.png)
 
+![](https://cdn.hurra.ltd/img/20211227232839.png)
 
 - 查看文件indoe信息
   
@@ -118,21 +98,17 @@ df -i
 stat 文件
 ```
 
-
 ![](https://cdn.hurra.ltd/img/20211227232930.png)
-
 
 - 查看文件的indoe号码
   
 ```sh
 ls -il
 ```
+
 ![](https://cdn.hurra.ltd/img/20211227233018.png)
 
-
-
 ### indoe号码
-
 
 - 硬链接
 
@@ -141,8 +117,8 @@ indoe号码与源文件相同
 ```sh
 ln 源文件 链接文件
 ```
-![](https://cdn.hurra.ltd/img/20211227234119.png)
 
+![](https://cdn.hurra.ltd/img/20211227234119.png)
 
 - 软链接
 
@@ -152,12 +128,8 @@ inode号码不同, 但是indoe号码指向的是源文件的名字
 ln -s 源文件 链接文件
 ```
 
-
 ### 删除
 
 ```sh
 find [搜索的路径] -inum [文件的indoe号码] -delete
 ```
-
-
-

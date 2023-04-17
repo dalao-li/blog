@@ -4,13 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-15 10:59:52
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:24:26
 -->
 
-
 # Pipfile
-
 
 - Pipfile 文件是 `TOML格式`而不是 requirements.txt 这样的纯文本.
 
@@ -20,7 +18,6 @@
 
 - 提供版本锁支持, 存为 Pipfile.lock
 
-
 ```sh
 # 创建
 pipenv install
@@ -28,10 +25,7 @@ pipenv install
 
 若项目中有 requirements.txt 文件, 则生成对应内容的 Pipfile 文件与 Pipfile.lock 文件
 
-
-
 ## 内容
-
 
 ```sh
 # 库安装源
@@ -59,9 +53,7 @@ flask = "*"
 python_version = "3.6"
 ```
 
-
 ## 全部安装
-
 
 进入目录, 创建虚拟环境
 
@@ -91,9 +83,7 @@ python_version = "3.8"
 
 可以看到 Flask 包已经安装
 
-
 ## 部分安装
-
 
 通常有一些 Python 包只在开发环境中需要, 而不是在生产环境中, 例如单元测试包
 

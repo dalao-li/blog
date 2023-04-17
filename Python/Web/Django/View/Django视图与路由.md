@@ -4,22 +4,17 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-03 00:48:24
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:12:53
 -->
 
- 
 # Django 路由与视图
-
 
 访问网站的本质即为访问对应的 html 文件, 后在由浏览器等对其进行渲染, 最终展示出页面
 
-
 ## 视图
 
-
 ### 静态读取
-
 
 访问http://127.0.0.1:8000/app/index, 读取index.html, 显示内容
 
@@ -74,7 +69,6 @@ def index(request):
     return render(request, 'index.html')
 ```
 
-
 - 绑定子路由
 
 编写好函数后, 需将其绑定到对应路由, 由于此处是在项目中的应用里配置, 故为子路由
@@ -115,10 +109,7 @@ urlpatterns = [
 
 ![](https://cdn.hurra.ltd/img/20200803193631.png)
 
-
-
 ### 读取数据
-
 
 访问http://127.0.0.1:8000/app/db, 在网页上显示数据库中所有元素信息
 

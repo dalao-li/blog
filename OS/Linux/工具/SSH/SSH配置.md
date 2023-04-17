@@ -8,13 +8,11 @@
  * @LastEditTime: 2022-11-06 00:36:03
 -->
 
-## SSH
+# SSH
 
+## 命令
 
-### 命令
-
-
-#### 连接
+### 连接
 
 ```sh
 ssh 用户名@IP地址 (-p 端口号)
@@ -26,21 +24,17 @@ ssh 用户名@IP地址 (-p 端口号)
 ssh dalao@192.168.1.1
 ```
 
-
-#### 清除密钥
+### 清除密钥
 
 ```sh
 ssh-keygen -R [远程主机IP]
-``` 
+```
 
-
-#### 免密
-
+### 免密
 
 - 手动复制
 
 将本地`id_rsa.pub` 复制到远程主机`.ssh/authorized_keys`里
-
 
 - 命令复制
 
@@ -50,13 +44,9 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
 
 ![](https://cdn.hurra.ltd/img/20211229213337.png)
 
+## SSH配置
 
-
-### SSH配置
-
-
-#### .ssh目录
-
+### .ssh目录
 
 在根目录(/root/或者/home/用户名)下生成 .ssh目录
 
@@ -73,10 +63,7 @@ ssh-keygen -t rsa
 | id_rsa.pub      | 本机公钥文件             |
 | know_hosts      | 存储已认证主机的host key |
 
-
-
-#### 配置文件
-
+### 配置文件
 
 ```sh
 /etc/ssh/sshd_condfig
@@ -93,13 +80,9 @@ PubkeyAuthentication yes
 PasswordAuthentication no
 ```
 
+## SSH工具
 
-
-### SSH工具
-
-
-#### 获取登录信息
-
+### 获取登录信息
 
 /etc/ssh/目录下新建sshrc文件
 
@@ -121,13 +104,9 @@ server=${ifconfig wlp2s0 | sed -n '2p' | awk '{print $2}'}
 echo ${user} ${ip} ${time} ${server}
 ```
 
-
-
-#### Web工具
-
+## Web工具
 
 [Github 地址](https://github.com/huashengdun/webssh)
-
 
 ```sh
 pip3 install webssh
@@ -138,7 +117,6 @@ pip3 install webssh
 ```sh
 wssh
 ```
-
 
 - 绑定IP地址和端口启动
 

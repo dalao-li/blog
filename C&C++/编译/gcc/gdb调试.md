@@ -8,8 +8,7 @@
  * @LastEditTime: 2022-09-11 18:27:38
 -->
 
-## gdb
-
+# gdb
 
 - 编译
 
@@ -23,31 +22,25 @@ gcc -g main.c -o main
 gdb [program]
 ```
 
+## 指令
 
-### 指令
-
-
-#### run
+### run
 
 运行程序, 遇到断点后, 程序会在断点处停止运行, 等待用户输入下一步的命令
 
-
-#### continue
+### continue
 
 继续执行, 到下一个断点处(或运行结束)
 
-
-#### next
+### next
 
 单步跟踪程序, 遇到函数调用时, 直接调用, 不进入函数
 
-
-#### step
+### step
 
 单步调试, 遇到有函数调用, 进入函数运行
 
-
-#### until
+### until
 
 运行程序直到退出循环体
 
@@ -55,70 +48,55 @@ gdb [program]
 
     运行至某行, 不仅仅用来跳出循环
 
-
-#### finish
+### finish
 
 运行程序, 直到当前函数完成返回, 并打印函数返回时的堆栈地址和返回值及参数值等信息
 
-
-#### call 函数(参数)
+### call 函数(参数)
 
 调用程序中可见的函数, 并传递参数, 如: call gdb_test(55)
 
-
-#### quit
+### quit
 
 退出gdb
 
+## 设置断点
 
-### 设置断点
-
-
-#### break
+### break
 
 在第n行处设置断点
 
-
-#### break func
+### break func
 
 在函数func()的入口处设置断点
 
-
-#### delete n
+### delete n
 
 删除第n个断点
 
-
-#### disable n
+### disable n
 
 暂停第n个断点
 
-
-#### enable n
+### enable n
 
 开启第n个断点
 
-
-#### clear n
+### clear n
 
 清除第n行的断点
 
-
-#### info breakpoints
+### info breakpoints
 
 显示当前程序的断点设置情况
 
-
-#### delete breakpoints
+### delete breakpoints
 
 清除所有断点
 
+## 查看源代码
 
-
-### 查看源代码
-
-
-#### list
+### list
 
 列出程序的源代码, 默认每次显示10行
 
@@ -126,27 +104,21 @@ gdb [program]
 
 将显示当前文件以"行号"为中心的前后10行代码, 如: list 12
 
-
 - list 函数名
 
 将显示函数的源代码
-
 
 - list : 不带参数
 
 将接着上一次 list 命令输出下边内容
 
+## 打印表达式
 
-
-### 打印表达式
-
-
-#### print 
+### print
 
 print 表达式
 
 `表达式`可以是任何当前正在被测试程序的有效表达式, 如当前正在调试C语言的程序, 那么"表达式"可以是任何C语言的有效表达式, 包括数字, 变量甚至是函数调用
-
 
 - print 数字a
 
@@ -156,26 +128,21 @@ print 表达式
 
 a 值加1显示
 
-
 - print name
 
 显示字符串 name 的值
-
 
 - print gdb_test(22)
 
 将以整数22作为参数调用 gdb_test() 函数
 
-
 - print gdb_test(a)
 
 将以变量 a 作为参数调用 gdb_test() 函数
 
-
 #### display
 
 在单步运行时将非常有用, 使用display命令设置一个表达式后, 它将在每次单步进行指令后, 紧接着输出被设置的表达式及值。如:  display a
-
 
 #### watch
 
@@ -185,12 +152,9 @@ a 值加1显示
 
 查询变量或函数
 
-
 #### info function
 
 查询函数
-
-
 
 ### 查询运行信息
 
@@ -206,9 +170,7 @@ show args: 查看设置好的参数
 
 info program:  来查看程序的是否在运行, 进程号, 被暂停的原因。
 
-
 ### 分割窗口
-
 
 #### layout
 

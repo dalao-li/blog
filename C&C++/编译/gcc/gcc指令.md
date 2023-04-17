@@ -10,31 +10,33 @@
 
 # gcc选项
 
+## 编译
 
-### 编译
+### -E
 
-#### -E
 仅进行预处理操作
 
 ```sh
 gcc main.c -E -o main.i
 ```
 
-#### -S
+### -S
+
 将预处理文件生成汇编文件
+
 ```sh
 gcc main.i -S -o main.s
 ```
 
+### -c
 
-#### -c
 将汇编文件生成目标文件
+
 ```sh
 gcc main.s -c -o main.o
 ```
 
-
-#### -o
+### -o
 
 直接生成可执行文件
 
@@ -42,8 +44,7 @@ gcc main.s -c -o main.o
 gcc main.c -o main
 ```
 
-
-#### -D
+### -D
 
 条件编译
 
@@ -61,7 +62,6 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-
 ```sh
 # 编译指令
 gcc main.c -o main -DYES=1
@@ -71,7 +71,7 @@ OK
 Hello World
 ```
 
-#### -static
+### -static
 
 禁用动态库, 避免依赖问题, 但编译出程序较大
 
@@ -79,27 +79,28 @@ Hello World
 gcc -static main.c -o main
 ```
 
-
-#### -I
+### -I
 
 指定include头文件目录
 
+## 提示
 
-### 提示
-
-#### -w
+### -w
 
 忽略所有警告
 
-#### -Werror
+### -Werror
 
 不区分警告和错误, 遇到任何警告都停止编译
 
-#### -Wall
+### -Wall
+
 对代码所有可能有问题的地方发出警告
 
-#### -Wshadow
+### -Wshadow
+
 作用域相关存在变量同名时发出告警
 
-#### -Wextra
+### -Wextra
+
 对所有合法但值得怀疑的表达式发出告警

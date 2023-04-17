@@ -4,24 +4,21 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-11-11 23:55:20
- * @LastEditors: DaLao
- * @LastEditTime: 2022-04-29 23:31:20
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:30:37
 -->
 
-## VIM
+# Vim
 
+## 打开到指定行
 
-### 打开到指定行
-
-
-#### 打开文件
+### 打开文件
 
 ```sh
 vim 文件名 +行号
 ```
 
-
-#### 文件内操作
+### 文件内操作
 
 - 跳转末尾
 

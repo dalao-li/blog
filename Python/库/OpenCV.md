@@ -8,10 +8,9 @@
  * @LastEditTime: 2022-04-11 21:05:23
 -->
 
-## OpenCV
+# OpenCV
 
-
-### 安装 OpenCV
+## 安装
 
 ```py
 pip install opencv-python
@@ -27,9 +26,7 @@ pip uninstall numpy
 pip install numpy==1.19.3
 ```
 
-
-
-### 显示图像
+## 显示图像
 
 ```py
 import cv2 as cv
@@ -49,9 +46,7 @@ cv.waitKey(0)
 cv.destroyAllWindows()
 ```
 
-
-
-### 图片人脸识别
+## 图片人脸识别
 
 ```py
 import cv2 as cv
@@ -93,8 +88,7 @@ if __name__ == '__main__':
     cv.destroyAllWindows()
 ```
 
-
-### 视频人脸识别
+## 视频人脸识别
 
 ```py
 import cv2 as cv

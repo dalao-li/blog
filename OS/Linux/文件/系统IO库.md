@@ -4,16 +4,13 @@
  * @Author: dalao
  * @Email: dalao@xxx.com
  * @Date: 2022-04-07 23:26:04
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-05 02:11:02
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:40:22
 -->
-
 
 # 系统调用
 
-
-### write
-
+## write
 
 write把缓冲区buf的前nbytes个字节写入到与文件描述符fd关联的文件中, 返回实际写入的字节数
 
@@ -26,7 +23,6 @@ size_t write(int fildes, const void *buf, size_t nbytes)
 | 正常写入   | 实际写入的字节数 |
 | 未写入数据 | 0                |
 | 调用错误   | -1               |
-
 
 ```c
 #include<stdio.h>
@@ -49,10 +45,7 @@ int main(void) {
 Here is some data
 ```
 
-
-
 ### read
-
 
 ```c
 #include<unistd.h>
@@ -97,10 +90,7 @@ int main(void) {
 Hello World!
 ```
 
-
-
 ### open
-
 
 ```c
 #include<fcntl.h>
@@ -120,7 +110,6 @@ int open(const char *path, int oflags, mode_t mode);
 | O_RDONLY | 只读方式打开 |
 | O_WRONLY | 只写方式打开 |
 | O_RDWR   | 读写方式打开 |
-
 
 ```c
 #include<unistd.h>

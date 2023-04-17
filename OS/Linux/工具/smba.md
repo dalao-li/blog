@@ -4,25 +4,21 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-07-03 15:31:25
- * @LastEditors: DaLao
- * @LastEditTime: 2022-08-15 22:51:12
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:30:29
 -->
 
-## samba
+# samba
 
-
-### 安装
-
+## 安装
 
 ```sh
 sudo apt-get install samba -y
 ```
 
+## 配置
 
-### 配置
-
-
-#### 设置目录
+### 设置目录
 
 - 创建共享目录
 
@@ -32,12 +28,11 @@ sudo mkdir $HOME/share
 
 - 设置目录权限
 
-```
+```sh
 sudo chmod +x $HOME/share
 ```
 
-
-#### 修改配置
+### 修改配置
 
 - 修改smb.conf
 
@@ -60,7 +55,7 @@ valid users = samba
 writable = yes
 ```
 
-#### 设置用户
+### 设置用户
 
 - 创建smba用户 samba
 
@@ -80,34 +75,27 @@ sudo smbpasswd -a samba
 sudo service smbd restart
 ```
 
+## 测试
 
-### 测试
-
-
-#### Linux访问
+### Linux访问
 
 ```sh
 smd://192.168.0.1/
 ```
 
-
-#### Windows访问
+### Windows访问
 
 ```sh
 \\192.168.0.1\
 ```
 
+## 映射
 
-### 映射
-
-
-#### Windows
+### Windows
 
 ![](https://cdn.hurra.ltd/img/20220703154339.png)
 
-
-
-### Shell脚本
+## Shell脚本
 
 ```sh
 set_samba() {

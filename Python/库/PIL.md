@@ -8,10 +8,9 @@
  * @LastEditTime: 2022-09-22 23:13:33
 -->
 
-## PIL基础
+# PIL基础
 
-
-### 安装
+## 安装
 
 ```sh
 pip install pillow -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com

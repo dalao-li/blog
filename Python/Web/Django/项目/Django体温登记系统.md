@@ -4,15 +4,13 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:35:50
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:16:09
 -->
 
 # Django体温登记系统
 
-
 ## 技术
-
 
 ```sh
 CSS : Bootstrap
@@ -22,9 +20,7 @@ Web 框架 : Django
 数据库 : Sqlite3
 ```
 
-
 ## 初始化
-
 
 - 建立 Django 项目
 
@@ -53,10 +49,7 @@ python manage.py startapp app
 
 ![](https://cdn.hurra.ltd/img/20200805182830.png)
 
-
-
 ## 数据库设计
-
 
 - 表设计
 
@@ -92,7 +85,6 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-
 - 创建管理员用户
 
 ```py
@@ -103,10 +95,7 @@ python manage.py createsuperuser
 
 ![](https://cdn.hurra.ltd/img/20200802153640.png)
 
-
-
 ### 视图 
-
 
 在 app 目录下新建 templates 文件夹
 
@@ -359,9 +348,7 @@ function delCallback(value) {
 
 ![](https://cdn.hurra.ltd/img/20200805190123.png)
 
-
 ## 视图函数
-
 
 编辑 app/views.py 文件
 
@@ -400,9 +387,7 @@ def del_record(request):
 
 ```
 
-
 ## 绑定路由
-
 
 在 app 目录下新建 urls.py 文件:
 
@@ -438,9 +423,7 @@ urlpatterns = [
 
 ![](https://cdn.hurra.ltd/img/20200806160425.png)
 
-
 ## 部署
-
 
 本项目采用 Docker + Gunicorn 方式进行部署
 
@@ -476,7 +459,6 @@ bind = "0.0.0.0:8000"
 timeout = 30
 ```
 
-
 - 生成项目依赖文件
 
 ```py
@@ -497,7 +479,6 @@ zope.event==4.4
 zope.interface==5.1.0
 ```
 
-
 - 编写 Dockerfile
 
 ```docker
@@ -515,7 +496,6 @@ COPY . .
 
 CMD ["gunicorn", "demo.wsgi", "-c", "gunicorn_config.py"]
 ```
-
 
 ```shell
 docker build -t mydemo .

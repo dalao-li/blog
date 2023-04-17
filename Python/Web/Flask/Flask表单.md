@@ -4,16 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-17 06:34:26
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:42:39
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-17 15:11:18
 -->
-
 
 # Flask表单
 
-
 ## 表单
-
 
 ```html
 <form action="{{ url_for('main_page')}}" method='POST'>
@@ -30,9 +27,7 @@
 </form>
 ```
 
-
 ## 后端
-
 
 ```py
 @app.route('/main', methods=['GET', 'POST'])
