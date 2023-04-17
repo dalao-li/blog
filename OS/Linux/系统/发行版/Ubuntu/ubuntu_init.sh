@@ -6,8 +6,8 @@
  # @Author: DaLao
  # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
- # @LastEditors: dalao
- # @LastEditTime: 2023-04-15 10:41:20
+ # @LastEditors: daLao
+ # @LastEditTime: 2023-04-17 23:32:57
 ### 
 
 # 设置flameshot快捷键
@@ -39,23 +39,26 @@ install_docker(){
     sudo apt install -y curl
 
     # 添加秘钥
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-    sudo add-apt-repository "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu $(lsb_release -cs) stable" 
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-    sudo apt update -y && sudo apt install docker-ce -y
+    sudo apt update -y
+
+    sudo apt install -y docker-ce docker-ce-cli containerd.io
 
     # 添加docker用户组, 将登陆用户加入到docker用户组中
-    sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo newgrp docker 
+    sudo usermod -aG docker $USER
 
-    su ${USER}
+    sudo newgrp docker
+
     # 修改源
     sudo bash -c "cat > /etc/docker/daemon.json" <<EOF
 {
     "registry-mirrors":["https://997nddro.mirror.aliyuncs.com"]
 }
 EOF
-    sudo service docker start
+    sudo service docker restart
 
     set_proxy &
 }
@@ -78,7 +81,7 @@ install_node(){
 
 # 安装代理
 set_proxy(){
-    url="https://rss.biteb-sub.com/link/Wm3Nd5ZrQTJwDGbH?"
+    url="https://rss.biteb-sub.com/link/yhl3kILmLOfaGg6W?clash=1&log-level=info"
     
     path=".config/clash/config.yaml"
     
@@ -86,16 +89,15 @@ set_proxy(){
 
     sudo wget ${url} -O "${HOME}/${path}"
  
-    sudo docker run -itd                                                              \
-        -p 7890:7890                                                                  \
-        -p 7891:7891                                                                  \
-        -p 9090:9090                                                                  \
-        --mount type=bind, source="${HOME}/${path}", target="/root/${path}", readonly \
-        --restart=unless-stopped                                                      \
-        --name=clash_test                                                             \
+    sudo docker run -itd                                                           \
+        -p 7890:7890                                                               \
+        -p 7891:7891                                                               \
+        -p 9090:9090                                                               \
+        --mount type=bind,source="${HOME}/${path}",target="/root/${path}",readonly \
+        --restart=unless-stopped                                                   \
+        --name=clash_test                                                          \
         dreamacro/clash:v1.8.0
-    # https://clash.razord.top/ 
-    # https://www.woccloud.io/
+    # https://clash.razord.top/
 }
 
 
