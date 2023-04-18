@@ -5,10 +5,14 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-07-15 11:40:19
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 15:42:25
+ * @LastEditTime: 2023-04-18 23:46:01
 -->
 
 # Ubuntu设置
+
+## 分辨率设置
+
+[解决 Ubuntu 22.04 Fractional Scaling 画面伸缩后应用程序模糊](https://blog.csdn.net/wu_weijie/article/details/126401259)
 
 ## 重启
 
@@ -116,7 +120,7 @@ dpkg -l *软件相关字段*
 sudo apt-get --purge remove 包名
 ```
 
-### VM
+## VM
 
 - 激活码
 

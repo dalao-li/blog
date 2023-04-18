@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-08-17 00:11:16
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-15 10:53:23
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-18 23:11:53
 -->
 
 # GRUB
@@ -32,15 +32,18 @@ GRUB_TIMEOUT_STYLE="false"
 - 更新
 
 ```sh
-sudo grub-mkconfig -o /boot/grub/grub.cfg  
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## Ubuntu
 
 ### 多硬盘启动
 
+图形化管理工具 grub-customizer
+
 ```sh
-# 安装 grub-customizer
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+
 sudo apt-get install -y grub-customizer
 ```
 
