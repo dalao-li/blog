@@ -4,13 +4,13 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-24 15:25:28
- * @LastEditors: dalao
- * @LastEditTime: 2023-03-18 00:34:51
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-19 14:04:13
 -->
 
 # Readis
 
-### 命令
+## 命令
 
 ### 建立键
 
@@ -24,19 +24,19 @@ SET key redis
 DEL key
 ```
 
-### 检查key是否存在
+### 检查key存在
 
 ```sh
 EXISTS key
 ```
 
-### 以秒为给定key设置过期时间
+### key设置过期时间
 
 ```sh
 EXPIRE key seconds
 ```
 
-### 以秒返回给定key的剩余生存时间
+### 返回key剩余生存时间
 
 ```sh
 TTL key
@@ -73,10 +73,10 @@ requirepass 123456
 - 拉取容器
 
 ```sh
-docker run -itd \
-    -p 6379:6379 \
+docker run -itd                              \
+    -p 6379:6379                             \
     -v $PWD/redis.conf:/etc/redis/redis.conf \
-    --name redis-test \
+    --name redis-test                        \
     redis
 ```
 

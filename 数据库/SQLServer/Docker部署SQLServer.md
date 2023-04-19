@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-02-04 23:48:41
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 16:31:43
+ * @LastEditTime: 2023-04-19 14:03:35
 -->
 
 # SQLServer
@@ -13,16 +13,12 @@
 ## Docker部署
 
 ```sh
-docker run -itd \
-    -e "ACCEPT_EULA=Y" \
+docker run -itd                   \
+    -e "ACCEPT_EULA=Y"            \
     -e "SA_PASSWORD=Dalao@13546!" \
-    -p 1433:1433  \
-    --name sqlserver2019 \
+    -p 1433:1433                  \
+    --name sqlserver2019          \
     registry.cn-hangzhou.aliyuncs.com/vex/sqlserver:v1
-```
-
-```sh
-docker run -itd -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Dalao@13546!" -p 1433:1433 --name sqlserver2019 registry.cn-hangzhou.aliyuncs.com/vex/sqlserver:v1
 ```
 
 | 值           | 属性   |

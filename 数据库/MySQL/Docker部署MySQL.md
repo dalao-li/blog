@@ -13,21 +13,17 @@
 ## 指令
 
 ```sh
-docker run -itd \
-    --name=mysql \
-    -p 3306:3306 \
+docker run -itd                  \
+    --name=mysql                 \
+    -p 3306:3306                 \
     -v $PWD/mysql:/var/lib/mysql \
     # 建立普通用户
-    -e MYSQL_USER=dalao \
+    -e MYSQL_USER=dalao          \
     # 设置用户密码
-    -e MYSQL_PASSWORD=456 \
+    -e MYSQL_PASSWORD=456        \
     # 设置root用户密码
-    -e MYSQL_ROOT_PASSWORD=123 \
+    -e MYSQL_ROOT_PASSWORD=123    \
     mysql:5.7
-```
-
-```sh
-docker run -itd --name=mysql -p 3306:3306 -v $PWD/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123  mysql:5.7
 ```
 
 ## 远程连接

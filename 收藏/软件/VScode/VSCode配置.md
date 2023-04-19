@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-10-12 23:24:59
- * @LastEditors: DaLao
- * @LastEditTime: 2022-07-01 22:33:34
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-19 14:08:10
 -->
 
 # VSCode
@@ -18,21 +18,15 @@
 复制下载地址, 将地址中的/stable前换成vscode.cdn.azure.cn
 ```
 
-
-
 ## 设置
 
-
 ### 以root权限运行
-
 
 ```sh
 sudo code --user-data-dir="~/.vscode-root"
 ```
 
-
 ### 选中内容高亮
-
 
 ```sh
 "workbench.colorCustomizations": {
@@ -41,12 +35,9 @@ sudo code --user-data-dir="~/.vscode-root"
 }
 ```
 
-
 ## 快捷键
 
-
 ### 查找
-
 
 | 功能             | 快捷键                                            |
 | ---------------- | ------------------------------------------------- |
@@ -78,9 +69,7 @@ highlight-icemode
 | 查看函数引用 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd>+ <kbd>F</kbd> |
 | 查看函数调用 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd>+ <kbd>C</kbd> |
 
-
 ### 跳转
-
 
 | 功能                        | 快捷键                                                               |
 | --------------------------- | -------------------------------------------------------------------- |
@@ -89,9 +78,7 @@ highlight-icemode
 | 跳转到行首/尾               | <kbd>Home</kbd> / <kbd>End</kbd>                                     |
 | 跳转到当前文件开头/结尾     | <kbd>Ctrl</kbd> + <kbd>Home</kbd> / <kbd>Ctrl</kbd> + <kbd>End</kbd> |
 
-
 ### 显示
-
 
 | 功能                 | 快捷键                                                                                                |
 | -------------------- | ----------------------------------------------------------------------------------------------------- |
@@ -101,9 +88,7 @@ highlight-icemode
 | 新建/关闭文件        | <kbd>Ctrl</kbd> + <kbd>N</kbd> / <kbd>Ctrl</kbd> + <kbd>W</kbd>                                       |
 | 重新打开关闭的编辑器 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>                                                     |
 
-
 ### 编辑
-
 
 | 功能                 | 快捷键                                                                                       |
 | -------------------- | -------------------------------------------------------------------------------------------- |
