@@ -7,7 +7,7 @@
  # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: daLao
- # @LastEditTime: 2023-04-19 11:13:43
+ # @LastEditTime: 2023-04-19 22:03:54
 ### 
 
 # 设置flameshot快捷键
@@ -87,7 +87,7 @@ set_proxy(){
     sudo wget ${url} -O "${HOME}/${path}"
  
     sudo docker run -itd                                                           \
-        -p 7890:7890 -p 7891:7891  -p 9090:9090                                    \                          \
+        -p 7890:7890 -p 7891:7891  -p 9090:9090                                    \
         --mount type=bind,source="${HOME}/${path}",target="/root/${path}",readonly \
         --restart=unless-stopped                                                   \
         --name=clash                                                               \
