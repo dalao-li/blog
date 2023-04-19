@@ -7,7 +7,7 @@
  # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: daLao
- # @LastEditTime: 2023-04-17 23:32:57
+ # @LastEditTime: 2023-04-19 11:13:43
 ### 
 
 # 设置flameshot快捷键
@@ -16,8 +16,7 @@
 
 DISK_PATH="/media/${USER}/disk_my/"
 
-
-update_system(){
+update_source(){
     sudo sed -i 's#security.ubuntu.com#mirrors.aliyun.com#g' /etc/apt/sources.list
     sudo sed -i 's#cn.archive.ubuntu.com#mirrors.aliyun.com#g' /etc/apt/sources.list
     sudo apt update && sudo apt upgrade -y
@@ -59,8 +58,6 @@ install_docker(){
 }
 EOF
     sudo service docker restart
-
-    set_proxy &
 }
 
 
@@ -90,12 +87,10 @@ set_proxy(){
     sudo wget ${url} -O "${HOME}/${path}"
  
     sudo docker run -itd                                                           \
-        -p 7890:7890                                                               \
-        -p 7891:7891                                                               \
-        -p 9090:9090                                                               \
+        -p 7890:7890 -p 7891:7891  -p 9090:9090                                    \                          \
         --mount type=bind,source="${HOME}/${path}",target="/root/${path}",readonly \
         --restart=unless-stopped                                                   \
-        --name=clash_test                                                          \
+        --name=clash                                                               \
         dreamacro/clash:v1.8.0
     # https://clash.razord.top/
 }

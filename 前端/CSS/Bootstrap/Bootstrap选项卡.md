@@ -4,8 +4,8 @@
  * @Author: dalao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-05 02:01:55
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-19 12:03:34
 -->
 
 # Bootstrap选项卡
@@ -21,7 +21,6 @@
 - href 后跟选项卡对应页面的 id
 
 - data-toggle="tab" 用以绑定触发事件, 即点击不同选项卡时切换页面
-
 
 ## 代码
 

@@ -10,7 +10,6 @@
 
 # Qt 事件
 
-
 [参考链接](https://www.cnblogs.com/linuxAndMcu/)
 
 ## Qt键盘事件
@@ -19,12 +18,9 @@
 #include <QKeyEvent>
 ```
 
-
 ### 按下
 
-
 ### 释放
-
 
 ## Qt鼠标事件
 
@@ -61,9 +57,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 void mouseReleaseEvent(QMouseEvent *event);
 ```
 
-
 ### 移动
-
 
 ```c
 void mouseMoveEvent(QMouseEvent *event);

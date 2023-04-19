@@ -4,13 +4,11 @@
  * @Author: daLao
  * @Email: dalao@xxx.com
  * @Date: 2022-09-25 23:27:18
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:10:27
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-19 11:57:26
 -->
 
-
 # this
-
 
 ## 概念
 
@@ -25,7 +23,6 @@ this 可以访问类的所有private、protected、public 属性成员
 ### 赋值
 
 对象被创建后编译器自动给 this 赋值, 用户不能显式赋值
-
 
 ```c++
 #include <iostream>

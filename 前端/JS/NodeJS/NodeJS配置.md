@@ -10,7 +10,6 @@
 
 # NodeJS
 
-
 ## 安装
 
 - Ubuntu
@@ -31,7 +30,6 @@ sudo ln -s /opt/node-v16.13.1-linux-x64/bin/node /usr/local/bin/node
 sudo pacman -S nodejs npm
 ```
 
-
 ## 换源
 
 ```sh
@@ -44,7 +42,6 @@ npm config set registry http://mirrors.cloud.tencent.com/npm/
 # 如果返回http://mirrors.cloud.tencent.com/npm/, 说明镜像配置成功
 npm config get registry
 ```
-
 
 ## 卸载
 

@@ -4,12 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-18 16:29:32
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-05 02:03:56
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-19 12:05:40
 -->
 
 # JS用法
-
 
 ## 控件
 
@@ -25,7 +24,6 @@
 document.getElementById("id")
 ```
 
-
 ### 获取值
 
 ```js
@@ -34,7 +32,6 @@ document.getElementById("id").value();
 // div
 document.getElementById("id").innerHTML
 ```
-
 
 ## 事件
 
@@ -52,16 +49,13 @@ addBtn.addEventListener("click", ()=>{
 ()=>
 ```
 
-
 ## 弹窗
-
 
 ### 提示框回调
 
 ```js
 alert()
 ```
-
 
 ### 确认提示框
 
@@ -76,7 +70,6 @@ if (confirm(msg)){
 }
 ```
 
-
 ### 输入提示框
 
 ```js
@@ -87,9 +80,7 @@ if (value != null && value != "") {
 }
 ```
 
-
 ## HTTP
-
 
 ### GET
 
@@ -111,7 +102,6 @@ function get(url, callback) {
 ```
 
 ![](https://cdn.hurra.ltd/img/20211113203754.png)
-
 
 ### POST
 

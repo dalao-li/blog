@@ -5,22 +5,16 @@
  * @Email: dalao_li@163.com
  * @Date: 2023-03-13 00:50:11
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 16:11:35
+ * @LastEditTime: 2023-04-19 11:51:44
 -->
 
 # LLVM 环境搭建
-
-> llvm版本 15.7
-
-[LLVM概述——介绍与安装](https://zhuanlan.zhihu.com/p/102028114)
 
 ## Windows
 
 TODO
 
 ## Linux
-
-### Ubuntu
 
 - 下载源码
 
@@ -57,3 +51,7 @@ sudo cmake --build build -j ${nproc}
 ```sh
 sudo cmake --install build
 ```
+
+## 参考
+
+[LLVM概述——介绍与安装](https://zhuanlan.zhihu.com/p/102028114)

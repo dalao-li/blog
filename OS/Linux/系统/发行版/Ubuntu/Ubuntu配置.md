@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-07-15 11:40:19
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-18 23:46:01
+ * @LastEditTime: 2023-04-19 11:45:11
 -->
 
 # Ubuntu设置
@@ -17,7 +17,6 @@
 ## 重启
 
 $Ubuntu$出现什么状况, 千万不要强制重启
-
 
 - 同时按住 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> 不要放
 

@@ -4,12 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-08 20:42:19
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-05 02:05:15
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-19 12:06:37
 -->
 
 # DOM Nodes
-
 
 ## 节点
 
@@ -25,7 +24,6 @@ HTML 文档中的所有内容都是节点
   
 - 注释是`注释节点`
 
-
 ## 方法
 
 - getElementById() 返回带有指定 ID 的元素
@@ -36,40 +34,33 @@ HTML 文档中的所有内容都是节点
 const b = document.getElementById("submitBtn")
 ```
 
-- appendChild(node) 
+- appendChild(node)
 
 插入新的子节点(元素)
-
 
 - removeChild(node)
 
 删除子节点(元素)
 
-
 - createAttribute()
 
 创建属性节点
-
 
 - createElement()
 
 创建元素节点
 
-
 - createTextNode()
 
 创建文本节点
-
 
 - getAttribute()
 
 返回指定的属性值
 
-
 - setAttribute()
 
 把指定属性设置或修改为指定的值
-
 
 ## 属性
 

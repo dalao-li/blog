@@ -26,13 +26,11 @@ $("#id")[0] 或
 $("#id").get(0)
 ```
 
-
 ## 获取值
 
 ```js
 $("#id").val();
 ```
-
 
 ## 事件
 
@@ -42,13 +40,11 @@ $("#addBtn").click(functon(){
 })
 ```
 
-
 ### 匿名函数
 
 ```js
 function(){}
 ```
-
 
 ## HTTP请求
 
@@ -59,7 +55,7 @@ $.get(URL, callback)
 $.post(URL, data, callback)
 ```
 
-#### 封装 Ajax
+### 封装 Ajax
 
 | 参数     | 含义       |
 | -------- | ---------- |
@@ -67,7 +63,6 @@ $.post(URL, data, callback)
 | url      | 发送的 url |
 | parm     | 发送的数据 |
 | callback | 回调函数   |
-
 
 ```js
 // 发送ajax请求

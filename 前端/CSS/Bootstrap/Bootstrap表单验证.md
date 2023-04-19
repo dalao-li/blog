@@ -4,23 +4,23 @@
  * @Author: dalao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-05 02:01:03
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-19 12:03:09
 -->
 
 # Bootstrap表单
 
-
 ## 效果
 
 ![](https://cdn.hurra.ltd/img/20200526231712.png)
+
 ![](https://cdn.hurra.ltd/img/20200526231734.png)
+
 ![](https://cdn.hurra.ltd/img/20200526231855.png)
 
 - 项目结构
 
 ![](https://cdn.hurra.ltd/img/20200526233425.png)
-
 
 ## head 部分
 
@@ -272,5 +272,3 @@
         });
     </script>
 ```
-
-

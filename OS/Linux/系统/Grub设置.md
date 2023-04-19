@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-08-17 00:11:16
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-18 23:11:53
+ * @LastEditTime: 2023-04-19 11:46:49
 -->
 
 # GRUB
@@ -17,7 +17,6 @@ GRUB可用于选择操作系统分区上的不同内核, 也可用于向这些�
 Linux常见的引导程序包括LILO、GRUB、GRUB2
 
 ## 双系统修复
-
 
 ```sh
 sudo gedit /etc/default/grub
