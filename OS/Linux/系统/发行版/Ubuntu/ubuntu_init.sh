@@ -7,7 +7,7 @@
  # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: daLao
- # @LastEditTime: 2023-04-19 22:03:54
+ # @LastEditTime: 2023-04-21 00:28:25
 ### 
 
 # 设置flameshot快捷键
@@ -26,7 +26,7 @@ update_source(){
 # 系统初始化配置 
 init_system(){
     sudo apt install -y vlc flameshot vim wget grub-customizer gnome-shell python3-pip xclip
-    
+
     git config --global core.editor "code -w"
     # 防止中文乱码
     git config --global core.quotepath false
