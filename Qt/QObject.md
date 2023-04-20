@@ -1,5 +1,14 @@
-# QObject
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: daLao
+ * @Email: dalao@xxx.com
+ * @Date: 2023-04-19 09:08:42
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-20 15:36:50
+-->
 
+# QObject
 
 ## 派生
 
@@ -33,4 +42,3 @@ Test::Test(QObject *parent) : QObject(parent)
 
 }
 ```
-
