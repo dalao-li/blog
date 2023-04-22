@@ -6,8 +6,8 @@
  # @Author: DaLao
  # @Email: dalao@xxx.com
  # @Date: 2022-01-17 02:05:53
- # @LastEditors: dalao
- # @LastEditTime: 2022-04-16 11:22:32
+ # @LastEditors: daLao
+ # @LastEditTime: 2023-04-21 23:32:32
 ### 
 
 init(){
@@ -60,8 +60,8 @@ set_docker(){
     sudo groupadd docker
 
     sudo usermod -aG docker ${USER}
-    
-    sudo newgrp docker 
+
+    sudo newgrp docker
 
     sudo bash -c "cat > /etc/docker/daemon.json" <<EOF
 {

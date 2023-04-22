@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-06-13 20:32:36
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-09 00:15:15
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-21 23:33:56
 -->
 
 # Manjaro配置
@@ -73,7 +73,7 @@ xdg-mime query default inode/directory
 
 - 设置默认文件管理器
 
-安装Vscode后, 文件管理器会被修改为Vscode, 可用以下命令重新设置
+安装Vscode后, 文件管理器会被修改为Vscode, 可重新设置
 
 ```sh
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
