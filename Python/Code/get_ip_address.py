@@ -10,7 +10,7 @@ LastEditTime: 2022-07-03 00:38:59
 
 import requests
 
-ip = ''
+ip = '61.185.159.167'
 
 r = requests.get("http://ip-api.com/json/" + ip)
 

@@ -26,8 +26,7 @@ function download(){
 }
 ```
 
-
-### 动态ID
+## 动态ID
 
 ![](https://cdn.hurra.ltd/img/20200829232106.png)
 
