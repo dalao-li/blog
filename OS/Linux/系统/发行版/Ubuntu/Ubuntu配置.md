@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-07-15 11:40:19
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-19 11:45:11
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-22 18:19:06
 -->
 
 # Ubuntu设置
@@ -124,7 +124,7 @@ sudo apt-get --purge remove 包名
 - 激活码
 
 ```sh
-ZF3R0-FHED2-M80TY-8QYGC-NPKYF
+JU090-6039P-08409-8J0QH-2YR7F
 ```
 
 - 安装vm所需驱动

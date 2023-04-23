@@ -4,8 +4,8 @@
  * @Author: daLao
  * @Email: dalao@xxx.com
  * @Date: 2023-04-19 00:22:12
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-21 00:06:13
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-22 18:55:41
 -->
 
 # Qt环境搭建
@@ -29,6 +29,8 @@ qmake --version
 ### 问题
 
 #### QtQuick.Controls 未注册
+
+![20230422185540](https://cdn.hurra.ltd/img/20230422185540.png)
 
 ```sh
 QtQuick.Controls": Cannot protect module QtQuick.Controls 2 as it was never registered

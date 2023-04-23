@@ -6,8 +6,8 @@
  # @Author: DaLao
  # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
- # @LastEditors: daLao
- # @LastEditTime: 2023-04-21 00:28:25
+ # @LastEditors: dalao_li
+ # @LastEditTime: 2023-04-22 18:06:47
 ### 
 
 # 设置flameshot快捷键
