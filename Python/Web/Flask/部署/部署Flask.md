@@ -4,15 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-08-19 00:00:59
- * @LastEditors: dalao
- * @LastEditTime: 2023-03-18 00:47:16
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-23 09:30:40
 -->
 
 # Flask部署
 
-
 ## Docker单例部署
-
 
 - Dockerfile
 
@@ -32,9 +30,7 @@ RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ Flask
 CMD flask run --host=0.0.0.0 --port=5000
 ```
 
-
 ## supervisor部署
-
 
 - flask.conf
 
@@ -65,7 +61,6 @@ RUN pip install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple/  --t
 
 CMD supervisord -c /etc/supervisord.conf
 ```
-
 
 ## uwsgi部署
 
@@ -111,9 +106,7 @@ COPY . .
 CMD uwsgi config.ini
 ```
 
-
 ## Nginx代理
-
 
 - nginx.conf
 

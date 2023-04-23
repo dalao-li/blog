@@ -4,11 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-28 20:34:49
- * @LastEditors: DaLao
- * @LastEditTime: 2022-03-18 22:25:19
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-23 09:25:59
 -->
 
-### 读取网页中表格
+# pandas
+
+## 读取网页中表格
 
 ```py
 import pandas as pd
@@ -19,8 +21,7 @@ url='http://www.kuaidaili.com/free/'
 df = pd.read_html(url)[0] 
 ```
 
-
-### 下载表格
+## 下载表格
 
 ```py
 import pandas as pd

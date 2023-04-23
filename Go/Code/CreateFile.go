@@ -11,18 +11,18 @@
 package main
 
 import (
-	"log"
-	"os"
+    "log"
+    "os"
 )
 
 func main() {
-	f, err := os.Create("test.txt")
+    f, err := os.Create("test.txt")
 
-	defer f.Close()
+    defer f.Close()
 
-	if err != nil {
-		log.Fatal(err)
-	}
+    if err != nil {
+        log.Fatal(err)
+    }
 
-	log.Println(f)
+    log.Println(f)
 }

@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-11-30 23:00:31
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 16:06:15
+ * @LastEditTime: 2023-04-23 09:53:43
 -->
 
 # CMakeLists.txt
@@ -86,7 +86,7 @@ add_subdirectory(source_dir [binary_dir] [EXCLUDE_FROM_ALL])
 
 source_dir选项指定了CMakeLists.txt源文件和代码文件的位置, 如果是相对路径会被解释为相对于当前的目录, 也可以是绝对路径
 
-binary_dir选项指定了输出文件的路径, 如果是相对路径, 会被解释为相对于当前输出路径, 也可以是绝对路径。
+binary_dir选项指定了输出文件的路径, 如果是相对路径, 会被解释为相对于当前输出路径, 也可以是绝对路径. 
 
 如果没有指定binary_dir, binary_dir的值将会是没有做任何相对路径展开的source_dir
 

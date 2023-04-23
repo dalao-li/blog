@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-07-15 11:40:19
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-19 11:45:11
+ * @LastEditTime: 2023-04-23 09:45:46
 -->
 
 # Ubuntu设置
@@ -159,36 +159,36 @@ source ~/.bashrc
 
 xhost +
 
-docker run -itd \
-   --name qq \
-   --device /dev/snd \
-   --ipc="host"\
-   -v ${HOME}/QQ/TencentFiles:/TencentFiles \
-   -v /tmp/.X11-unix:/tmp/.X11-unix \
-   -e XMODIFIERS=@im=fcitx \
-   -e QT_IM_MODULE=fcitx \
-   -e GTK_IM_MODULE=fcitx \
-   -e DISPLAY=unix$DISPLAY \
+docker run -itd                                     \
+   --name qq                                        \
+   --device /dev/snd                                \
+   --ipc="host"                                     \
+   -v ${HOME}/QQ/TencentFiles:/TencentFiles         \
+   -v /tmp/.X11-unix:/tmp/.X11-unix                 \
+   -e XMODIFIERS=@im=fcitx                          \
+   -e QT_IM_MODULE=fcitx                            \
+   -e GTK_IM_MODULE=fcitx                           \
+   -e DISPLAY=unix$DISPLAY                          \
    -e AUDIO_GID=$(getent group audio | cut -d: -f3) \
    -e VIDEO_GID=$(getent group video | cut -d: -f3) \
-   -e GID=$(id -g) \
-   -e UID=$(id -u) \
+   -e GID=$(id -g)                                  \
+   -e UID=$(id -u)                                  \
    bestwu/qq:office
 
 
-docker run -itd \
-   --name wechat \
-   --device /dev/snd \
-   --ipc="host"\
-   -v /tmp/.X11-unix:/tmp/.X11-unix \
-   -v ${HOME}/WeChatFiles:/WeChatFiles \
-   -e XMODIFIERS=@im=fcitx \
-   -e QT_IM_MODULE=fcitx \
-   -e GTK_IM_MODULE=fcitx \
-   -e DISPLAY=unix$DISPLAY \
+docker run -itd                                     \
+   --name wechat                                    \
+   --device /dev/snd                                \
+   --ipc="host"                                     \
+   -v /tmp/.X11-unix:/tmp/.X11-unix                 \
+   -v ${HOME}/WeChatFiles:/WeChatFiles              \
+   -e XMODIFIERS=@im=fcitx                          \
+   -e QT_IM_MODULE=fcitx                            \
+   -e GTK_IM_MODULE=fcitx                           \
+   -e DISPLAY=unix$DISPLAY                          \
    -e AUDIO_GID=$(getent group audio | cut -d: -f3) \
    -e VIDEO_GID=$(getent group video | cut -d: -f3) \
-   -e GID=$(id -g) \
-   -e UID=$(id -u) \
+   -e GID=$(id -g)                                  \
+   -e UID=$(id -u)                                  \
    bestwu/wechat
 ```

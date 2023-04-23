@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-02-01 16:49:59
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 15:14:45
+ * @LastEditTime: 2023-04-23 09:29:40
 -->
 
 # Django连接多数据库
@@ -134,7 +134,8 @@ class DatabaseAppsRouter(object):
 
 ## 增加数据路由表与规则方法
 
-settings.py文件中添加内容, 此处项目名为demo
+settings.py文件中添加内容
+
 ```py
 # 数据库路由规则方法
 DATABASE_ROUTERS = ['项目名.database_router.DatabaseAppsRouter']

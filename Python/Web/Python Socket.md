@@ -5,14 +5,14 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-12-01 20:37:22
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 15:11:01
+ * @LastEditTime: 2023-04-23 09:32:45
 -->
 
 # Socket
 
 ## TCP
 
-### 服务端 server
+### TCP 服务端 server
 
 ```py
 import socket
@@ -45,7 +45,7 @@ if __name__ == '__main__':
     s.close()
 ```
 
-### 客户端 client
+### TCP 客户端 client
 
 ```py
 import socket

@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 15:16:09
+ * @LastEditTime: 2023-04-23 09:28:40
 -->
 
 # Django体温登记系统
@@ -95,7 +95,7 @@ python manage.py createsuperuser
 
 ![](https://cdn.hurra.ltd/img/20200802153640.png)
 
-### 视图 
+### 视图
 
 在 app 目录下新建 templates 文件夹
 
@@ -228,9 +228,7 @@ python manage.py createsuperuser
 </html>
 ```
 
-
 ### JS
-
 
 app 目录下新建 static 目录, 存放静态文件
 
@@ -345,7 +343,6 @@ function delCallback(value) {
 }
 ```
 
-
 ![](https://cdn.hurra.ltd/img/20200805190123.png)
 
 ## 视图函数
@@ -428,7 +425,6 @@ urlpatterns = [
 本项目采用 Docker + Gunicorn 方式进行部署
 
 - 部署后可能会出现无法访问静态文件的情况, 因此编辑主目录下 urls.py文件, 新增:
-
 
 ```py
 from django.contrib import admin

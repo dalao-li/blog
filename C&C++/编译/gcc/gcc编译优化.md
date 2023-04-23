@@ -92,7 +92,7 @@ The pass tries to combine two instructions and checks if the result can be simpl
 
 ### -freorder-blocks
 
-对编译后的函数中的基本块进行重新排序, 以减少所采取的分支数量, 提高代码的定位性。
+对编译后的函数中的基本块进行重新排序, 以减少所采取的分支数量, 提高代码的定位性. 
 
 ### -fshrink-wrap
 

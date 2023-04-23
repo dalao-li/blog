@@ -4,11 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-17 17:59:27
- * @LastEditors: dalao
- * @LastEditTime: 2023-03-17 23:30:42
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-23 15:24:58
 -->
 
-# Git设置
+# git设置
 
 ## 配置
 
@@ -34,7 +34,7 @@ ssh-keygen -t rsa -C "邮箱"
 
 公钥位置`.ssh/id_rsa.pub`
 
-## .git设置
+## .git优化
 
 ```sh
 git gc --prune=now
