@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-10-26 19:54:27
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 15:20:21
+ * @LastEditTime: 2023-04-23 09:26:53
 -->
 
 # collections 模块
@@ -89,7 +89,7 @@ for key, value in users.items():
 
 如果 ChainMap() 中的多个字典有重复 key, 查看的时候可以看到所有的 key, 但遍历的时候却只会遍历 key 第一次出现的位置, 其余的忽略
 
-同时可通过返回的新的视图来更新原来的的字典数据, 进一步验证了该操作不是做的拷贝, 而是直接指向原字典, 
+同时可通过返回的新的视图来更新原来的的字典数据, 进一步验证了该操作不是做的拷贝, 而是直接指向原字典
 
 ## deque 功能
 

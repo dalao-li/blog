@@ -61,11 +61,12 @@ net stop jenkins
 ### Docker部署
 
 ```sh
-docker run -itd -u root \
-  -p 8080:8080 -p 50000:50000 \
-  -v /var/jenkins_home:/var/jenkins_home \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  jenkinsci/blueocean
+docker run -itd                                  \
+    -u root                                      \
+    -p 8080:8080 -p 50000:50000                  \
+    -v /var/jenkins_home:/var/jenkins_home       \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    jenkinsci/blueocean
 ```
 
 ![](https://cdn.hurra.ltd/img/20210308113221.png)

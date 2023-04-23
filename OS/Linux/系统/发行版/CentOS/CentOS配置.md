@@ -5,13 +5,12 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-10-16 12:46:09
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 15:47:33
+ * @LastEditTime: 2023-04-23 09:44:33
 -->
 
 # CentOS系统
 
 ## 更新源
-
 
 ```sh
 sudo rm -rf /etc/yum.repos.d/*

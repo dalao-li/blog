@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-03-16 23:24:23
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 15:46:07
+ * @LastEditTime: 2023-04-23 09:48:02
 -->
 
 # xargs
@@ -22,8 +22,14 @@
 xargs 命令
 ```
 
+- 二次显示
+
 ```sh
 echo "hello world" | xargs echo
+```
 
+- 根据进程ID杀手进程
+
+```sh
 ps -aux | grep vlc | grep -v grep | awk '{print $2}' | sudo xargs kill -9
 ```

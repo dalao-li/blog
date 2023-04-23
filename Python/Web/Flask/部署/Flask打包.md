@@ -4,15 +4,13 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-30 22:01:01
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:40:28
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-23 09:30:55
 -->
 
 # Flask打包
 
-
 ## 方法一
-
 
 ```sh
 pyinstaller -F -i --add-data="./static;./static" --add-data="./templates;./templates"  app.py
@@ -20,10 +18,7 @@ pyinstaller -F -i --add-data="./static;./static" --add-data="./templates;./templ
 
 dist 目录下会生成可执行文件
 
-
-
 ## 方法二
-
 
 - 安装
 
@@ -41,13 +36,11 @@ pyinstaller -F app.py
 
 将static 与templates 目录复制到dist目录下
 
-
 - 修改.spec
 
 ```sh
 datas=[('./static', 'static'), ('./templates', 'templates')], 
 ```
-
 
 - 打包
 
@@ -56,7 +49,6 @@ pyinstaller -F *.spec
 ```
 
 ![](https://cdn.hurra.ltd/img/20211230223519.png)
-
 
 ## 参考
 

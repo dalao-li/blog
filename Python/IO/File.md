@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-09-24 20:37:24
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 15:18:56
+ * @LastEditTime: 2023-04-23 09:27:56
 -->
 
 # 文件
@@ -112,7 +112,6 @@ def display_all_files(folder_path: str):
 ![](https://cdn.hurra.ltd/img/20211225150924.png)
 
 ### 递归显示
-
 
 ```py
 def display_all_folders(folder_path: str):

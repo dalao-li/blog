@@ -18,7 +18,7 @@
 
 ### repo
 
-repo就是多个git库的管理工具。如果是多个git库同时管理, 可以使用repo, 当然使用gerrit, 就必须用repo
+repo就是多个git库的管理工具. 如果是多个git库同时管理, 可以使用repo, 当然使用gerrit, 就必须用repo
 
 ### gerrit
 

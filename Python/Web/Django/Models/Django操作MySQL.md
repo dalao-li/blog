@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 15:14:14
+ * @LastEditTime: 2023-04-23 09:29:23
 -->
 
 # Django 操作 MySQL
@@ -86,7 +86,6 @@ class Stu(models.Model):
 | primary_key  | 若为字段设置了 primary_key=True, 则当前字段变为主键; primary_key=True 隐含 null=False 和 unique=True 的意思 |
 | verbose_name | 为字段设置可读, 直观的别名                                                                                  |
 | choices      | 选择框标签, 值为一个二维的二元元组;第一个元素表示数据库内的真实值, 第二个表示页面上的显示内容               |
-
 
 ```py
 # 为改动创建迁移记录

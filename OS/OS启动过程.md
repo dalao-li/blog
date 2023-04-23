@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-15 10:57:01
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-23 10:05:46
 -->
 
 # 计算机启动过程
@@ -36,4 +36,4 @@ $BIOS$ 找到了下一阶段的启动程序所在设备, 会读取该设备的�
 
 ## 加载内核
 
-选择操作系统(内核)后, 会加载内核, 下面就交给内核去处理了
+选择操作系统(内核)后, 会加载内核, 交给内核处理

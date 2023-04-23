@@ -4,8 +4,8 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:37:30
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-23 09:30:01
 -->
 
 # Django动态路由
@@ -40,7 +40,6 @@ urlpatterns = [
 ![](https://cdn.hurra.ltd/img/20200903085713.png)
 
 ![](https://cdn.hurra.ltd/img/20200903091232.png)
-
 
 ### 多关键字
 
