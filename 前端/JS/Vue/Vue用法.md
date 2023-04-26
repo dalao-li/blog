@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-19 12:05:21
+ * @LastEditTime: 2023-04-24 10:11:34
 -->
 
 # Vue
@@ -42,9 +42,7 @@ this.axios.post("http://127.0.0.1:5000/login", {
 });
 ```
 
-
 ## HTTP
-
 
 ### GET 请求
 
@@ -84,8 +82,6 @@ this.axios.post("http://127.0.0.1:5000/login", {
 </html>
 ```
 
-
-
 ```json
 data = [
   { name: "LI_LI", age: 18 }, 
@@ -95,7 +91,6 @@ data = [
 ```
 
 ![](https://cdn.hurra.ltd/img/20200725123717.png)
-
 
 ### POST 请求
 

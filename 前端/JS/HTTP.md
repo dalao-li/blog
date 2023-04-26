@@ -5,80 +5,10 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-03-18 16:29:32
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-19 12:05:40
+ * @LastEditTime: 2023-04-24 10:06:16
 -->
 
 # JS用法
-
-## 控件
-
-```html
-<input type="text" id="name" />
-
-<button type="button" id="addBtn"></button>
-```
-
-### 获取控件
-
-```js
-document.getElementById("id")
-```
-
-### 获取值
-
-```js
-document.getElementById("id").value();
-
-// div
-document.getElementById("id").innerHTML
-```
-
-## 事件
-
-```js
-const addBtn = document.getElementById("addBtn");
-
-addBtn.addEventListener("click", ()=>{
-    ...
-})
-```
-
-### 匿名函数
-
-```js
-()=>
-```
-
-## 弹窗
-
-### 提示框回调
-
-```js
-alert()
-```
-
-### 确认提示框
-
-```js
-const msg = "内容？\n\n请确认！"
-
-// 确认按钮
-if (confirm(msg)){
-    
-} else {
-
-}
-```
-
-### 输入提示框
-
-```js
-const value = prompt("Input Text", "Default Text")
-
-if (value != null && value != "") {
-    alert(value)
-}
-```
 
 ## HTTP
 

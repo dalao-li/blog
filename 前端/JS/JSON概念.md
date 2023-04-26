@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
  * @LastEditors: daLao
- * @LastEditTime: 2023-04-19 12:06:14
+ * @LastEditTime: 2023-04-24 10:11:16
 -->
 
 # JSON
@@ -32,6 +32,25 @@ JS 操作的是 JSON 对象
 
 ```js
 const obj = { "name": "dalao", "pwd": 123456 }
+```
+
+### 读取
+
+```js
+const data = { "name": "dalao", "pwd": 123456 }
+
+// 方法1
+for (var i in data) {
+    // data[i].name
+    // data[i].pwd
+}
+
+// 方法2
+for (var i in data) {
+    for (var key in data[i]) {
+        // data[i][key]
+    }
+}
 ```
 
 ### 对象转换为字符串

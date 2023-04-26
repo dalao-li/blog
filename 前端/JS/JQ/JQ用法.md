@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-01 01:39:36
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-05 02:03:13
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-24 10:12:28
 -->
 
 # JS语法
@@ -36,7 +36,7 @@ $("#id").val();
 
 ```js
 $("#addBtn").click(functon(){
-    ...
+    //...
 })
 ```
 
@@ -78,7 +78,7 @@ function sendAjax(type, url, param, callback) {
         dataType: "json", 
         success: function (data) {
             callback(data.result)
-        }, 
+        },
         error: function () {
         // 失败处理
     }, 
@@ -86,7 +86,7 @@ function sendAjax(type, url, param, callback) {
 }
 ```
 
-## 获取表格值
+### 获取表格值
 
 ```html
 <form method="post" action="" id="form">

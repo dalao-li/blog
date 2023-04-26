@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-07 00:19:50
- * @LastEditors: dalao
- * @LastEditTime: 2023-04-05 02:02:22
+ * @LastEditors: daLao
+ * @LastEditTime: 2023-04-24 10:12:07
 -->
 
 # Hexo
@@ -160,7 +160,7 @@ mathjax: true
 
 ### 综合问题
 
-- hexo not found 
+- hexo not found
 
 ```py
 echo "export PATH=$PATH:/opt/node-v16.13.1-linux-x64/lib/node_modules/hexo-cli/bin" >> ~/.bashrc
@@ -171,7 +171,6 @@ source ~/.bashrc
 - 1
 
 ![](https://cdn.hurra.ltd/img/20211207230441.png)
-
 
 - 将nodejs升级到高于12.0.0的版本
 
