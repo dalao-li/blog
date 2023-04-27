@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-02-13 19:00:24
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-24 10:11:34
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-26 23:54:04
 -->
 
 # Vue
@@ -28,18 +28,18 @@ npm i element-ui -S
 ```
 
 ```js
-this.axios.get("http://127.0.0.1:5000/test").then((response) =>{
-    const r = response.data;
-    console.log(r.result);
-});
+this.axios.get("http://127.0.0.1:5000/test").then((response)=> {
+    const r = response.data
+    console.log(r.result)
+})
 
 this.axios.post("http://127.0.0.1:5000/login", {
         name: this.param.username, 
         pwd: this.param.password, 
     }).then((response) => {
-    const r = response.data;
-    console.log(r.result);
-});
+    const r = response.data
+    console.log(r.result)
+})
 ```
 
 ## HTTP

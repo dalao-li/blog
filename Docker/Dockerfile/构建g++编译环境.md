@@ -4,8 +4,8 @@
  * @Author: dalao
  * @Email: dalao_li@163.com
  * @Date: 2023-02-07 00:12:47
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 16:50:58
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-25 20:31:58
 -->
 
 # 搭建g++编译环境
@@ -20,9 +20,7 @@ alpine:latest
 
 ### 源文件
 
-- c++
-
-Main.cpp
+- Main.cpp
 
 ```c++
 #include <iostream>

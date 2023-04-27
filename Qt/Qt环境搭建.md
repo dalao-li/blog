@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2023-04-19 00:22:12
  * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-22 18:55:41
+ * @LastEditTime: 2023-04-25 20:48:48
 -->
 
 # Qt环境搭建
@@ -15,7 +15,7 @@
 ### 在线安装
 
 ```sh
-sudo apt-get install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qtcreator qtdeclarative5-dev
+sudo apt-get install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qtcreator qtdeclarative5-dev qtquickcontrols2-5-dev
 ```
 
 ### 查看版本

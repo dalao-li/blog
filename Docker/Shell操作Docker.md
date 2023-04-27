@@ -7,8 +7,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-15 10:21:24
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 16:50:39
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-25 20:33:30
 -->
 
 # Shell Docker
@@ -79,4 +79,3 @@ while read -r line;do
     docker load < "\${line//\//_}".tar
 done < images.txt
 ```
-

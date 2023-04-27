@@ -4,11 +4,11 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-01 01:39:36
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-24 10:12:28
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-26 23:55:13
 -->
 
-# JS语法
+# JQ语法
 
 ```html
 <input type="text" id="name" />
@@ -18,7 +18,7 @@
 
 ## 获取控件
 
-jQuery 利用$("#id")获取的是一个[object Object]
+利用$("#id")获取的是一个[object Object]
 
 ```js
 $("#id")[0] 或 
@@ -40,7 +40,7 @@ $("#addBtn").click(functon(){
 })
 ```
 
-### 匿名函数
+## 匿名函数
 
 ```js
 function(){}
