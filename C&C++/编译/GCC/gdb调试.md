@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-03-12 22:41:18
- * @LastEditors: DaLao
- * @LastEditTime: 2022-09-11 18:27:38
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-05-03 17:32:47
 -->
 
 # gdb
@@ -168,7 +168,7 @@ set args 参数:指定运行时的参数
 
 show args: 查看设置好的参数
 
-info program:  来查看程序的是否在运行, 进程号, 被暂停的原因. 
+info program:  来查看程序的是否在运行, 进程号, 被暂停的原因
 
 ### 分割窗口
 

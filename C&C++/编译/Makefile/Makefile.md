@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-11-11 23:58:36
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 16:11:57
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-05-03 17:33:53
 -->
 
 # Makefile
@@ -53,7 +53,6 @@ gcc -o hellomake hellomake.c hellofunc.c -I.
 
 ## Makefile 1
 
-
 ```makefile
 hellomake: hellomake.c hellofunc.c
     gcc -o hellomake hellomake.c hellofunc.c -I.
@@ -66,7 +65,6 @@ make命令不带参数会默认执行makefile文件中的第一条规则
 通过将命令依赖的文件列表放在`:`之后的第一行, 若其中的任何文件发生更改, make就会执行hellomake规则
 
 ## Makefile 2
-
 
 ```makefile
 # 定义使用哪个编译器

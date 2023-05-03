@@ -4,29 +4,44 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-07-15 11:40:19
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-23 09:45:46
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-04-29 14:41:28
  * @LastEditors: dalao_li
  * @LastEditTime: 2023-04-22 18:19:06
 -->
 
-# Ubuntu设置
+# Ubuntu系统配置
 
-## 分辨率设置
+## 设置回收站
 
-[解决 Ubuntu 22.04 Fractional Scaling 画面伸缩后应用程序模糊](https://blog.csdn.net/wu_weijie/article/details/126401259)
+- 安装
 
-## 重启
+```sh
+sudo apt-get install trash-cli
+```
 
-$Ubuntu$出现什么状况, 千万不要强制重启
+- 指令
 
-- 同时按住 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> 不要放
+.bashrc 或 .zshrc 添加指令
 
-- 按一下 <kbd>SysRq</kbd> 键(有的是<kbd>PrtSc</kbd>)
+```sh
+alias rm='trash-put'
+alias rl='trash-list'
+```
 
-- 依次按下<kbd>R</kbd> 键, <kbd>E</kbd> 键, <kbd>I</kbd> 键, <kbd>U</kbd> 键, <kbd>S</kbd> 键, <kbd>B</kbd> 键
+生效
 
-这些步骤做完后, 系统就会安全重启
+```sh
+source .bashrc 或
+
+source .zshrc
+```
+
+- 回收站路径
+
+```sh
+~/.local/share/Trash/files
+```
 
 ## 关闭root密码
 
@@ -34,7 +49,7 @@ $Ubuntu$出现什么状况, 千万不要强制重启
 sudo vim /etc/sudoers
 ```
 
-![](https://cdn.hurra.ltd/img/2021-07-17_00-08.png)
+![9](https://cdn.hurra.ltd/img/2021-07-17_00-08.png)
 
 ```sh
 dalao ALL=(ALL:ALL) ALL
@@ -55,10 +70,6 @@ apt-get update
 ```sh
 apt-get upgrade
 ```
-
-## 插件
-
-![](https://cdn.hurra.ltd/img/20210814015815.png)
 
 ## 转换目录语言
 
@@ -86,14 +97,6 @@ sudo alien -d [package].rpm &
 sudo dpkg -i [package].deb
 ```
 
-## sougou输入法
-
-- 隐藏搜狗输入法配置栏
-
-```sh
-sudo sed -i 's#StatusAppearance=.*#StatusAppearance=0#' ${HOME}/.config/sogoupinyin/conf/env.ini
-```
-
 ## 消除双图标
 
 ```sh
@@ -103,13 +106,13 @@ xprop | grep WM_CLASS
 此时鼠标会变成一个十字的准星, 此时点击已经打开的应用界面
 
 ```sh
-WM_CLASS(STRING) = ".......", "XXXXXX"
+WM_CLASS(STRING) = "信息1", "信息2"
 ```
 
 然后在该应用的.desktop文件末尾添加
 
 ```sh
-StartupWMClass=XXXXXX
+StartupWMClass=信息2
 ```
 
 ## 卸载软件
@@ -141,7 +144,7 @@ sudo apt-get install build-essential linux-headers-$(uname -r)
 sudo vmware-installer -u vmware-workstation
 ```
 
-### 快捷指令
+## 快捷指令
 
 ```sh
 # alias 新指令='原本指令'
@@ -194,3 +197,19 @@ docker run -itd                                     \
    -e UID=$(id -u)                                  \
    bestwu/wechat
 ```
+
+## 分辨率设置
+
+[解决 Ubuntu 22.04 Fractional Scaling 画面伸缩后应用程序模糊](https://blog.csdn.net/wu_weijie/article/details/126401259)
+
+## 重启
+
+$Ubuntu$出现什么状况, 千万不要强制重启
+
+- 同时按住 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> 不要放
+
+- 按一下 <kbd>SysRq</kbd> 键(有的是<kbd>PrtSc</kbd>)
+
+- 依次按下<kbd>R</kbd> 键, <kbd>E</kbd> 键, <kbd>I</kbd> 键, <kbd>U</kbd> 键, <kbd>S</kbd> 键, <kbd>B</kbd> 键
+
+这些步骤做完后, 系统就会安全重启
