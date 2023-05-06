@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-01-12 04:30:33
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 16:51:14
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-05-05 00:03:24
 -->
 
 # exec
@@ -13,7 +13,7 @@
 容器执行命令
 
 ```shell
-docker exec [参数] 镜像ID 命令
+docker exec [参数] <镜像ID> {命令}
 ```
 
 | 参数 | 含义                        |
@@ -28,7 +28,7 @@ docker exec [参数] 镜像ID 命令
 docker exec [参数] 镜像ID 命令
 ```
 
-- busybox容器创建目录
+- busybox容器创建目录test
 
 ```sh
 docker run -itd --name=box busybox 

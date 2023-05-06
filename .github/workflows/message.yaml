@@ -1,0 +1,31 @@
+name: Blog Update Message
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # copy git 仓库到虚拟机上
+    - name: 'Checkout codes'
+      uses: actions/checkout@v1
+    
+    # 获取最新一条提交的git log  
+    - name: Get Git Log
+      id: git_log
+      uses: Edisonboy/latest-git-log-action@main
+      with:
+        tag: origin/master
+
+    # 发送邮件    
+    - name: Send email
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.163.com
+        server_port: 25
+        username: ${{secrets.MAIL_USERNAME}}
+        password: ${{secrets.MAIL_PASSWORD}}
+        subject: dalao_li blog update message
+        to: ${{secrets.MAIL_TOUSERNAME}}
+        from: ${{secrets.MAIL_USERNAME}}
+        body: ${{github.repository}} push log : ${{steps.git_log.outputs.log}}

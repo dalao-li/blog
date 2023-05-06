@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-09-29 21:52:15
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-23 09:50:06
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-05-07 00:14:46
 -->
 
 # test
@@ -97,6 +97,6 @@ n3=10
 if test ${n1} -ge ${n2} -o ${n1} -eq ${n3};then
     echo "n1 大于等于 n2 或等于n3"
 else
-    ...
+    #...
 fi
 ```
