@@ -28,4 +28,4 @@ jobs:
         subject: dalao_li blog update message
         to: ${{secrets.MAIL_TOUSERNAME}}
         from: ${{secrets.MAIL_USERNAME}}
-        body: ${{github.repository}} push log : ${{steps.git_log.log}}
+        body: ${{github.repository}} push log : ${{steps.git_log}}
