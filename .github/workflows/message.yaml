@@ -21,4 +21,4 @@ jobs:
           subject: dalao_li blog update message
           to: ${{secrets.MAIL_TOUSERNAME}}
           from: ${{secrets.MAIL_USERNAME}}
-          body: git log
+          body: "提示"
