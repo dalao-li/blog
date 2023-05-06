@@ -13,7 +13,7 @@ jobs:
     # 获取最新一条提交的git log  
     - name: Get Git Log
       id: git_log
-      uses: Edisonboy/latest-git-log-action@main
+      uses: JantHsueh/get-git-log-action@master
       with:
         tag: origin/master
 
@@ -28,4 +28,4 @@ jobs:
         subject: dalao_li blog update message
         to: ${{secrets.MAIL_TOUSERNAME}}
         from: ${{secrets.MAIL_USERNAME}}
-        body: ${{github.repository}} push log : ${{steps.git_log.outputs.log}}
+        body: ${{github.repository}} push log : ${{steps.git_log.log}}
