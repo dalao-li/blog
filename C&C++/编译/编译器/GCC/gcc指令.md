@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-05-21 23:09:51
- * @LastEditors: dalao
- * @LastEditTime: 2023-03-09 13:13:41
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-06-01 00:01:20
 -->
 
 # gcc选项
@@ -63,7 +63,6 @@ int main(int argc, char *argv[]) {
 ```
 
 ```sh
-# 编译指令
 gcc main.c -o main -DYES=1
 
 # 运行结果
