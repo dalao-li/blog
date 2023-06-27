@@ -4,8 +4,8 @@
  * @Author: daLao
  * @Email: dalao@xxx.com
  * @Date: 2022-11-19 22:04:55
- * @LastEditors: dalao
- * @LastEditTime: 2023-03-02 23:44:46
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-06-20 23:31:45
  */
 
 #include <iostream>
@@ -19,10 +19,15 @@
 int main(void)
 {
     std::queue<int> production;
+    
     std::mutex mtx;
     std::condition_variable cv;
-    bool ready = false; // 是否有产品可供消费
-    bool done = false;  // 生产结束
+
+    // 是否有产品可供消费
+    bool ready = false;
+
+    // 生产结束
+    bool done = false;
 
     std::thread producer(
         [&]() -> void
