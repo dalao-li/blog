@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-11-19 22:04:55
  * @LastEditors: dalao_li
- * @LastEditTime: 2023-06-20 23:31:45
+ * @LastEditTime: 2023-06-28 22:30:45
  */
 
 #include <iostream>
@@ -19,7 +19,7 @@
 int main(void)
 {
     std::queue<int> production;
-    
+
     std::mutex mtx;
     std::condition_variable cv;
 
@@ -41,11 +41,11 @@ int main(void)
                 std::unique_lock<std::mutex> lock(mtx);
                 production.push(i);
 
-                // 有产品可以消费了
+                // 有产品可以消费
                 ready = true;
                 cv.notify_one();
             }
-            // 生产结束了
+            // 生产结束
             done = true;
         });
 
