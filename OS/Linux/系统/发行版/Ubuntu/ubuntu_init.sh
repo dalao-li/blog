@@ -7,7 +7,7 @@
  # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: dalao_li
- # @LastEditTime: 2023-04-22 18:06:47
+ # @LastEditTime: 2023-09-15 22:55:14
 ### 
 
 # 设置flameshot快捷键
@@ -19,6 +19,7 @@ DISK_PATH="/media/${USER}/disk_my/"
 update_source(){
     sudo sed -i 's#security.ubuntu.com#mirrors.aliyun.com#g' /etc/apt/sources.list
     sudo sed -i 's#cn.archive.ubuntu.com#mirrors.aliyun.com#g' /etc/apt/sources.list
+    sudo sed -i 's#archive.ubuntu.com#mirrors.aliyun.com#g' /etc/apt/sources.list
     sudo apt update && sudo apt upgrade -y
 }
 
