@@ -5,10 +5,12 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-07-15 11:40:19
  * @LastEditors: dalao_li
- * @LastEditTime: 2023-05-07 00:10:20
+ * @LastEditTime: 2023-09-16 16:18:19
  * @LastEditors: dalao_li
  * @LastEditTime: 2023-04-22 18:19:06
 -->
+
+> [Trash-Cli：Linux 上的命令行回收站工具](https://zhuanlan.zhihu.com/p/44948578)
 
 # Ubuntu系统配置
 
