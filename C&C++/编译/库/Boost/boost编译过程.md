@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2023-09-16 17:10:52
  * @LastEditors: dalao_li
- * @LastEditTime: 2023-09-16 19:42:23
+ * @LastEditTime: 2023-09-16 22:49:16
 -->
 
 # boost编译过程
@@ -57,6 +57,7 @@ int main() {
 ```sh
 g++ test.cpp -o test
 
+# Boost 版本108000
 ./test
 ```
 
