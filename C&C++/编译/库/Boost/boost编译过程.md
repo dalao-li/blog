@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2023-09-16 17:10:52
  * @LastEditors: dalao_li
- * @LastEditTime: 2023-09-16 22:49:16
+ * @LastEditTime: 2023-09-17 11:24:49
 -->
 
 # boost编译过程
@@ -31,11 +31,11 @@ cd boost_1_80_0
 使用自带脚本安装
 
 ```sh
-./bootstrapt.sh
+sudo ./bootstrap.sh
 ```
 
 ```sh
-./b2 --buildtype=complete install
+sudo ./b2 --buildtype=complete install
 ```
 
 ## 测试
