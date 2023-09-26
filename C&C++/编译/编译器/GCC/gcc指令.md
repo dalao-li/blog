@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-05-21 23:09:51
  * @LastEditors: dalao_li
- * @LastEditTime: 2023-06-01 00:01:20
+ * @LastEditTime: 2023-09-24 19:54:11
 -->
 
 # gcc选项
@@ -62,10 +62,12 @@ int main(int argc, char *argv[]) {
 }
 ```
 
+运行
+
 ```sh
 gcc main.c -o main -DYES=1
 
-# 运行结果
+# 输出 
 OK
 Hello World
 ```

@@ -4,14 +4,15 @@
  * @Author: dalao
  * @Email: dalao_li@163.com
  * @Date: 2023-03-14 22:27:29
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-19 11:56:25
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-09-24 20:03:07
 -->
 
 # malloc底层实现
 
 ```c
-#include <malloc.h>
+#include<stdio.h>
+#include<malloc.h>
 
 int main(void) {
     int *p = (int *)malloc(sizeof(int));
@@ -87,7 +88,9 @@ mmap功能为
 
 ## 管理方式
 
-因为brk、sbrk、mmap都属于系统调用, 若每次申请内存, 都调用这三个, 那么每次都会产生系统调用, 影响性能;其次, 这样申请的内存容易产生碎片, 因为堆是从低地址到高地址, 如果高地址的内存没有被释放, 低地址的内存就不能被回收
+brk、sbrk、mmap都属于系统调用, 若每次申请内存, 都调用这三个, 那么每次都会产生系统调用, 影响性能;
+
+其次, 这样申请的内存容易产生碎片, 因为堆是从低地址到高地址, 如果高地址的内存没有被释放, 低地址的内存就不能被回收
 
 所以malloc采用的是内存池的管理方式(ptmalloc)
 

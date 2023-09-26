@@ -5,7 +5,7 @@
  * @Email: dalao_li@163.com
  * @Date: 2023-09-16 17:10:52
  * @LastEditors: dalao_li
- * @LastEditTime: 2023-09-17 11:24:49
+ * @LastEditTime: 2023-09-17 12:08:50
 -->
 
 # boost编译过程
@@ -28,11 +28,13 @@ sudo tar -jxvf boost_1_80_0.tar.bz2
 cd boost_1_80_0
 ```
 
-使用自带脚本安装
+使用自带脚本, 生成b2引擎
 
 ```sh
 sudo ./bootstrap.sh
 ```
+
+使用b2引擎编译
 
 ```sh
 sudo ./b2 --buildtype=complete install
@@ -45,9 +47,8 @@ sudo ./b2 --buildtype=complete install
 #include <iostream>
 #include <boost/version.hpp>
 
-using namespace std;
 int main() {
-    cout << "Boost 版本" << BOOST_VERSION << endl;
+    std::cout << "Boost 版本" << BOOST_VERSION << std::endl;
     return 0;
 }
 ```

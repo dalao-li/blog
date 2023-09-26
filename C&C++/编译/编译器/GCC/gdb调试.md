@@ -5,18 +5,18 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-03-12 22:41:18
  * @LastEditors: dalao_li
- * @LastEditTime: 2023-05-03 17:32:47
+ * @LastEditTime: 2023-09-24 19:55:54
 -->
 
 # gdb
 
-- 编译
+编译
 
 ```c
 gcc -g main.c -o main
 ```
 
-- 调试
+调试
 
 ```c
 gdb [program]
@@ -46,7 +46,7 @@ gdb [program]
 
 - until+行号
 
-    运行至某行, 不仅仅用来跳出循环
+运行至某行, 不仅仅用来跳出循环
 
 ### finish
 

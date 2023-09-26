@@ -4,8 +4,8 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 16:29:35
+ * @LastEditors: dalao_li
+ * @LastEditTime: 2023-09-23 16:17:36
 -->
 
 # Docker部署MySQL
@@ -22,7 +22,7 @@ docker run -itd                  \
     # 设置用户密码
     -e MYSQL_PASSWORD=456        \
     # 设置root用户密码
-    -e MYSQL_ROOT_PASSWORD=123    \
+    -e MYSQL_ROOT_PASSWORD=123   \
     mysql:5.7
 ```
 
