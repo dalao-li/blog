@@ -4,15 +4,17 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-02-04 23:48:41
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-19 14:03:35
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-10-28 22:15:27
 -->
 
 # SQLServer
 
-## Docker部署
+## 部署
 
 ```sh
+# 用户名 SA
+# 密码 Dalao@13546!
 docker run -itd                   \
     -e "ACCEPT_EULA=Y"            \
     -e "SA_PASSWORD=Dalao@13546!" \
@@ -21,14 +23,9 @@ docker run -itd                   \
     registry.cn-hangzhou.aliyuncs.com/vex/sqlserver:v1
 ```
 
-| 值           | 属性   |
-| ------------ | ------ |
-| SA           | 用户名 |
-| Dalao@13546! | 密码   |
-
 ## 命令
 
-### 进入SQLSercer
+### 进入
 
 ```sh
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Dalao@13546!"
@@ -56,7 +53,7 @@ GO
 
 ## Python 交互
 
-### Navicat 连接
+### 连接
 
 ![](https://cdn.hurra.ltd/img/20201012105710.png)
 

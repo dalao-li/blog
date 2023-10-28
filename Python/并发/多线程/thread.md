@@ -4,8 +4,8 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-26 11:01:43
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-23 09:24:55
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-10-28 18:30:27
 -->
 
 # 多线程
@@ -78,7 +78,7 @@ lock.acquire()
 lock.release()
 ```
 
-- 上下文管理
+### 上下文管理
 
 ```py
 import threading
