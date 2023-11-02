@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-20 11:26:41
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 19:29:21
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-10-29 12:20:38
 -->
 
 # DLL
@@ -36,7 +36,7 @@ DLLEXPORT void hello();
 
 `#define DLLEXPORT extern "C" __declspec(dllexport)`
 
-- windows 下需要使用\_\_declspec(dllexport)的声明来说明这个函数是动态库导出  
+- windows 下需要使用\_\_declspec(dllexport)的声明来说明这个函数是动态库导出
 
 - extern "C"声明避免编译器对函数名称进行 name mangling, 这对于使用 C++来编写 DLL/SO 是必须的
 
