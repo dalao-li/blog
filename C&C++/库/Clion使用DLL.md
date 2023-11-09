@@ -5,66 +5,12 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-20 11:26:41
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-10-29 12:20:38
+ * @LastEditTime: 2023-11-09 22:21:39
 -->
 
-# DLL
+# Clion使用DLL
 
-## VS2019
-
-### 编写
-
-VS2019 选择创建动态链接库(DLL)项目
-
-```c++
-// pch.h 文件
-#ifndef PCH_H
-#define PCH_H
-
-
-#define DLLEXPORT extern "C" __declspec(dllexport)
-
-// 添加要在此处预编译的标头
-#include "framework.h"
-
-DLLEXPORT int add(int a, int b);
-
-DLLEXPORT void hello();
-
-#endif
-```
-
-`#define DLLEXPORT extern "C" __declspec(dllexport)`
-
-- windows 下需要使用\_\_declspec(dllexport)的声明来说明这个函数是动态库导出
-
-- extern "C"声明避免编译器对函数名称进行 name mangling, 这对于使用 C++来编写 DLL/SO 是必须的
-
-```c
-// pch.cpp
-#include "pch.h"
-#include<iostream>
-
-int add(int a, int b) {
-    return a + b;
-}
-
-void hello() {
-    std::cout << "Hello World" << std::endl;
-}
-```
-
-### 编译
-
-![](https://cdn.hurra.ltd/img/20210120113257.png)
-
-X86 将编译为 32 位的 dll, X64 将编译为 64 为的 dll
-
-![](https://cdn.hurra.ltd/img/20210120113457.png)
-
-## Clion
-
-### 编写
+## 编写
 
 建立一个 C Library 项目 hello
 
@@ -78,7 +24,7 @@ library.c 文件中已有默认代码
 
 ![](https://cdn.hurra.ltd/img/20201028181058.png)
 
-### 调用
+## 调用
 
 另建立一个项目 Demo, 在其根目录下建立 lib 目录, 将上一步生成的 dll 文件拷入
 
@@ -134,7 +80,7 @@ target_link_libraries(Demo libhello.dll)
 
 ![](https://cdn.hurra.ltd/img/20201028184425.png)
 
-### 测试
+## 测试
 
 新建 C Library 项目 num
 

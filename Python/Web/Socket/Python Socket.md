@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-12-01 20:37:22
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-23 09:32:45
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-11-03 22:24:19
 -->
 
 # Socket
@@ -17,12 +17,10 @@
 ```py
 import socket
 
-# 服务端地址和端口
 server_address = ('127.0.0.1', 5005)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# 绑定服务端地址和端口
 s.bind(server_address)
 
 # 监听
@@ -33,7 +31,6 @@ conn, client_address = s.accept()
 # print('[+] 用户连接:', client_address)
 
 while True:
-    # buffersize 等于 1024
     data = conn.recv(1024)
     # print('[回复]', data.decode())
     send = input('输入: ')
@@ -53,10 +50,8 @@ import sys
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# 服务端地址和端口
 server_address = ('127.0.0.1', 5005)
 
-# 尝试连接服务端
 try:
     s.connect(server_address)
 except Exception:
@@ -65,7 +60,6 @@ except Exception:
 
 while True:
     send = input('输入: ')
-    # 发送消息
     s.sendall(send.encode())
     data = s.recv(1024)
     print('[回复]', data.decode())
@@ -84,9 +78,7 @@ import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-# 服务端地址和端口
 server_address = ('127.0.0.1', 31500)
-# 绑定服务端地址和端口
 s.bind(server_address)
 
 while True:
@@ -108,7 +100,6 @@ import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-# 服务端地址和端口
 server_address = ('127.0.0.1', 31500)
 
 while True:
@@ -130,42 +121,36 @@ if __name__ == '__main__':
 ## 多线程 server 端
 
 ```py
-import socket, threading
+import socket
+import threading
 
 server_address = ('127.0.0.1', 31500)
 
 class SocketServer:
-
     def __init__(self):
-        # 建立一个tcp/ip scoket
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-         # 绑定端口号
-        sock.bind(server_address)
-        # 监听
-        sock.listen(128)
-        self.sock = sock
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.sock.bind(server_address)
+        self.sock.listen(128)
 
     def start_server(self):
         while True:
-            print('开始等待多个客户端过来')
+            print('Wait')
             conn, address = self.sock.accept()
-            print('客户 %s 过来了', %address)
+            print('Client %s come in', %address)
             t = threading.Thread(target=self.client_recv, args=(conn, address))
             t.start()
 
     def client_recv(self, client, addr):
         while True:
-            # 获取到客户端的数据
             data = client.recv(1024)
             if not data or data.decode() == 'bye':
-                # 如果没有发送过来数据就代表客户端close了, 或者发过来bye代表连接要断开
-                print('服务结束', addr)
-                # 断开连接, 为下一个服务
+                # 如果没有发送过来数据就代表客户端close, 或者发过来bye代表连接要断开
+                print('Over', addr)
                 client.close()
                 break
             else:
-                print('%s 发送 %s',  %(addr, data.decode()))
-                msg = '统一回复, 人不在'
+                print('%s Send %s',  %(addr, data.decode()))
+                msg = 'Test'
                 client.send(msg.encode())
 
 if __name__ == '__main__':
