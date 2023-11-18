@@ -4,15 +4,31 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-05-21 23:09:51
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-09-24 19:54:11
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-11-18 11:38:44
 -->
 
 # gcc选项
 
 ## 编译
 
-### -E
+### 动态库
+
+```sh
+gcc main.c -fPIC -shared -o main.so
+```
+- fPIC
+
+创建与地址无关的编译程序 (pic, position independent code),为了能够在多个应用程序间共享
+
+- shared
+
+此选项将尽量使用动态库.所以生成文件较小, 但需要系统动态库
+
+
+### 单步
+
+- -E
 
 仅进行预处理操作
 
@@ -20,7 +36,7 @@
 gcc main.c -E -o main.i
 ```
 
-### -S
+- -S
 
 将预处理文件生成汇编文件
 
@@ -28,7 +44,7 @@ gcc main.c -E -o main.i
 gcc main.i -S -o main.s
 ```
 
-### -c
+- -c
 
 将汇编文件生成目标文件
 
@@ -36,7 +52,7 @@ gcc main.i -S -o main.s
 gcc main.s -c -o main.o
 ```
 
-### -o
+- -o
 
 直接生成可执行文件
 
@@ -44,9 +60,12 @@ gcc main.s -c -o main.o
 gcc main.c -o main
 ```
 
-### -D
+### 条件编译
 
-条件编译
+```sh
+# 仅编译YES宏包含部分
+gcc main.c -o main -DYES=1
+```
 
 ```c++
 #include <stdio.h>
@@ -62,11 +81,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-运行
-
 ```sh
-gcc main.c -o main -DYES=1
-
 # 输出 
 OK
 Hello World

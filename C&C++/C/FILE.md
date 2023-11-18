@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2022-08-14 01:23:03
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 16:17:23
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-11-18 17:27:37
 -->
 
 # FILE
@@ -45,7 +45,7 @@ FILE结构是间接地操作系统的文件控制块(FCB)来实现对文件的�
 
 ### fopen
 
-```c++
+```c
 // 打开文件.读文件到内存.返回文件信息结构指针
 FILE *fopen(char *file, char *open_mode)
 ``
