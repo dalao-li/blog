@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-05-21 23:09:51
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-11-18 11:38:44
+ * @LastEditTime: 2023-11-23 21:25:31
 -->
 
 # gcc选项
@@ -23,7 +23,7 @@ gcc main.c -fPIC -shared -o main.so
 
 - shared
 
-此选项将尽量使用动态库.所以生成文件较小, 但需要系统动态库
+此选项将尽量使用动态库, 所以生成文件较小, 但需要系统动态库
 
 
 ### 单步
@@ -60,7 +60,7 @@ gcc main.s -c -o main.o
 gcc main.c -o main
 ```
 
-### 条件编译
+### -D 条件编译
 
 ```sh
 # 仅编译YES宏包含部分
@@ -87,17 +87,29 @@ OK
 Hello World
 ```
 
-### -static
+### -static 禁用动态库
 
-禁用动态库, 避免依赖问题, 但编译出程序较大
+避免依赖问题, 但编译出程序较大
 
 ```c
 gcc -static main.c -o main
 ```
 
-### -I
+### -I 添加头文件搜索路径
 
-指定include头文件目录
+- 添加 /path/to/include 目录作为头文件搜索路径
+
+```c
+g++ -I /path/to/include source.cpp -o executable
+```
+
+### -L 添加库文件搜索路径
+
+- 添加 /path/to/lib 目录作为库文件搜索路径
+
+```sh
+g++ -L /path/to/lib source.cpp -o executable
+```
 
 ## 提示
 

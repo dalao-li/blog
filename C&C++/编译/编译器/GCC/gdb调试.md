@@ -5,18 +5,18 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-03-12 22:41:18
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-11-09 22:38:02
+ * @LastEditTime: 2023-11-23 21:29:15
 -->
 
 # gdb
 
-编译
+- 编译
 
 ```c
 gcc -g main.c -o main
 ```
 
-调试
+- 调试
 
 ```c
 gdb [program]
