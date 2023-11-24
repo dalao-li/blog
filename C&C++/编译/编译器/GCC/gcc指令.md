@@ -5,14 +5,14 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-05-21 23:09:51
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-11-23 21:25:31
+ * @LastEditTime: 2023-11-23 23:13:29
 -->
 
 # gcc选项
 
 ## 编译
 
-### 动态库
+### -shared 动态库
 
 ```sh
 gcc main.c -fPIC -shared -o main.so
