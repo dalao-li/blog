@@ -4,21 +4,21 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-11-11 23:58:36
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-05-03 17:33:53
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-12-02 00:44:37
 -->
 
 # Makefile
 
 ## 手动编译
 
-- hellomake.h
+hellomake.h
 
 ```c
 void hello();
 ```
 
-- hellomake.c
+hellomake.c
 
 ```c
 #include "hellomake.h"
@@ -29,7 +29,7 @@ int main(){
 }
 ```
 
-- hellofunc.c
+hellofunc.c
 
 ```c
 #include <stdio.h>
