@@ -1,5 +1,5 @@
 // *C++和posix接口实现一个线程池
-//-三个组件：任务队列，执行队列，线程池（中枢管理）
+//-三个组件：任务队列, 执行队列, 线程池(中枢管理）
 
 #include <iostream>
 #include <deque>
@@ -13,7 +13,7 @@
 
 using namespace std;
 
-//-打印线程错误专用，根据err来识别错误信息
+//-打印线程错误专用, 根据err来识别错误信息
 static inline void ERR_EXIT_THREAD(int err, const char *msg)
 {
     fprintf(stderr, "%s:%s\n", strerror(err), msg);
@@ -149,7 +149,7 @@ void *ExecElement::start(void *arg)
         pthread_mutex_lock(&(exec->mPool->mMutex));
         while (exec->mPool->mTaskQueue.empty())
         {
-            //-如果任务队列为空，等待新任务
+            //-如果任务队列为空, 等待新任务
             if (!exec->mIsAble)
             {
                 break;

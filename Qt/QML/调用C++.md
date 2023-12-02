@@ -4,8 +4,8 @@
  * @Author: daLao
  * @Email: dalao@xxx.com
  * @Date: 2023-04-17 09:00:16
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-23 15:29:54
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-12-03 00:42:15
 -->
 
 # QML调用C++
@@ -24,7 +24,7 @@
 
 - 从 QObject 或 QObject 的派生类继承, 并使用Q_OBJECT宏
 
-和使用信号与槽的前提条件一样, 这两个条件是为了让类能够进入Qt的元对象系统（meta-object system）中
+和使用信号与槽的前提条件一样, 这两个条件是为了让类能够进入Qt的元对象系统(meta-object system)中
 
 只有使用元对象系统, 类的某些方法或属性才可能通过字符串形式的名字来调用, 才可在 QML 中被访问
 

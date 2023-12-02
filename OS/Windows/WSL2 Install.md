@@ -4,8 +4,8 @@
  * @Autor: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:34
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 15:49:42
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-12-03 00:40:54
 -->
 
 # WSL2
@@ -40,11 +40,9 @@ sudo apt install -y docker-ce
 
 ## 设置权限
 
-使用 docker info 命令出现问题
+使用 docker info 命令出现权限不足问题
 
 ![](https://cdn.hurra.ltd/img/20200721210505.png)
-
-这是权限不足的原因, 可使用以下命令解决
 
 ```sh
 # 添加docker用户组
@@ -69,7 +67,7 @@ sudo service docker start
 
 ![](https://cdn.hurra.ltd/img/20200721211633.png)
 
-该进程是 WSL 的进程.它比较占内存, 不使用 WSL2 的时候可关闭, 方法如下, 使用管理员打开 CMD, 运行:
+该进程是 WSL 的进程,比较占内存, 不使用 WSL2 的时候可关闭
 
 ```s
 wsl --shutdown

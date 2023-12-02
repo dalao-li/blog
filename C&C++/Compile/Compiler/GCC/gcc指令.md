@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-05-21 23:09:51
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-11-23 23:13:29
+ * @LastEditTime: 2023-12-03 00:38:33
 -->
 
 # gcc选项
@@ -60,6 +60,22 @@ gcc main.s -c -o main.o
 gcc main.c -o main
 ```
 
+### -I 添加头文件搜索路径
+
+- 添加 /path/to/include 目录作为头文件搜索路径
+
+```c
+g++ -I /path/to/include source.cpp -o executable
+```
+
+### -L 添加库文件搜索路径
+
+- 添加 /path/to/lib 目录作为库文件搜索路径
+
+```sh
+g++ -L /path/to/lib source.cpp -o executable
+```
+
 ### -D 条件编译
 
 ```sh
@@ -93,22 +109,6 @@ Hello World
 
 ```c
 gcc -static main.c -o main
-```
-
-### -I 添加头文件搜索路径
-
-- 添加 /path/to/include 目录作为头文件搜索路径
-
-```c
-g++ -I /path/to/include source.cpp -o executable
-```
-
-### -L 添加库文件搜索路径
-
-- 添加 /path/to/lib 目录作为库文件搜索路径
-
-```sh
-g++ -L /path/to/lib source.cpp -o executable
 ```
 
 ## 提示

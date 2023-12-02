@@ -10,4 +10,4 @@
 
 # Arch
 
-[Arch Linux图文安装教程（2022.08.01）](https://blog.csdn.net/love906897406/article/details/126109464)
+[Arch Linux图文安装教程(2022.08.01）](https://blog.csdn.net/love906897406/article/details/126109464)

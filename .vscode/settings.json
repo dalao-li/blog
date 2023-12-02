@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "array": "c",
+        "atomic": "c",
+        "format": "c",
+        "memory": "c",
+        "utility": "c",
+        "xutility": "c"
+    }
+}

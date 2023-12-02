@@ -140,7 +140,7 @@ void accept_request(int client)
 /* Inform the client that a request it has made has a problem.
  * Parameters: client socket */
 /**********************************************************************/
-// 返回给客户端这是个错误请求，HTTP 状态吗 400 BAD REQUEST
+// 返回给客户端这是个错误请求, HTTP 状态吗 400 BAD REQUEST
 void bad_request(int client)
 {
     char buf[1024];
@@ -214,7 +214,7 @@ void error_die(const char *sc)
  * Parameters: client socket descriptor
  *             path to the CGI script */
 /**********************************************************************/
-// 运行 cgi 程序的处理，也是个主要函数
+// 运行 cgi 程序的处理, 也是个主要函数
 void execute_cgi(int client, const char *path,
                  const char *method, const char *query_string)
 {
@@ -326,7 +326,7 @@ void execute_cgi(int client, const char *path,
  *             the size of the buffer
  * Returns: the number of bytes stored (excluding null) */
 /**********************************************************************/
-// 读取套接字的一行，把回车换行等情况都统一为换行符结束
+// 读取套接字的一行, 把回车换行等情况都统一为换行符结束
 int get_line(int sock, char *buf, int size)
 {
     int i = 0;
@@ -446,7 +446,7 @@ void serve_file(int client, const char *filename)
  * Parameters: pointer to variable containing the port to connect on
  * Returns: the socket */
 /**********************************************************************/
-// 初始化 httpd 服务，包括建立套接字，绑定端口，进行监听等
+// 初始化 httpd 服务, 包括建立套接字, 绑定端口, 进行监听等
 int startup(u_short *port)
 {
     int httpd = 0;
@@ -517,9 +517,7 @@ int main(void)
 
     while (1)
     {
-        client_sock = accept(server_sock,
-                             (struct sockaddr *)&client_name,
-                             &client_name_len);
+        client_sock = accept(server_sock, (struct sockaddr *)&client_name, &client_name_len);
         if (client_sock == -1)
             error_die("accept");
         /* accept_request(client_sock); */
