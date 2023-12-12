@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-11-27 20:45:27
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-16 23:01:36
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-12-03 13:59:11
 -->
 
 # string函数
@@ -14,13 +14,14 @@
 #include<string.h>
 ```
 
-## 函数
+## strcmp
 
-| 函数             | 说明                                                        |
-| ---------------- | ----------------------------------------------------------- |
-| `strlen(s1)`     | 返回s1 的长度.                                              |
-| `strcmp(s1, s2)` | 若 s1 == s2, 值 0<br>若 s1<s2 值小于 0<br>若 s1>s2 值大于 0 |
-| `strchr(s1, ch)` | 返回一个指针, 指向 ch在s1中首次出现位置                     |
+- 若 s1 == s2, 值 0; 若 s1<s2 值小于 0; 若 s1>s2 值大于 0
+
+```c
+int strcmp(const char *s1, const char *s2)
+```
+
 
 ## strstr
 
@@ -76,6 +77,15 @@ strcpy(a, b);
 // ABC
 printf("%s\n", a);
 ```
+
+## strncpy
+
+- 把 src 所指向的字符串复制到 dest, 最多复制 n 个字符. 当 src 的长度小于 n 时, dest 的剩余部分将用空字节填充
+
+```c
+char *strncpy(char *dest, const char *src, size_t n)
+```
+
 
 ## memset
 
