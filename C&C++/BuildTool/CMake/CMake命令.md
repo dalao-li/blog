@@ -5,16 +5,13 @@
  * @Email: dalao_li@163.com
  * @Date: 2023-09-16 16:02:42
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-12-03 00:34:48
+ * @LastEditTime: 2023-12-14 21:57:19
 -->
 
 # CMake命令
 
-
-
 ```cpp
 // Main.cpp
-
 #include<iostream>
 
 int main(void) {

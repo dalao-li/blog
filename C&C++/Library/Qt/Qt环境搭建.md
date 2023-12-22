@@ -4,8 +4,8 @@
  * @Author: daLao
  * @Email: dalao@xxx.com
  * @Date: 2023-04-19 00:22:12
- * @LastEditors: dalao_li
- * @LastEditTime: 2023-04-25 20:48:48
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-12-17 00:17:22
 -->
 
 # Qt环境搭建
@@ -51,3 +51,8 @@ sudo apt install qml-module-qtquick-controls2
 ```sh
 sudo apt install qml-module-qtquick-dialogs
 ```
+
+
+## Windows
+
+[QT5.14下载地址](https://download.qt.io/archive/qt/5.14/5.14.0/qt-opensource-windows-x86-5.14.0.exe)
