@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-03-14 13:31:07
- * @LastEditors: daLao
- * @LastEditTime: 2022-11-06 00:36:03
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2024-05-19 22:08:26
 -->
 
 # SSH
@@ -20,7 +20,7 @@ ssh 用户名@IP地址 (-p 端口号)
 
 连接192.168.1.1的dalao用户, 端口号默认为20
 
-```sh 
+```sh
 ssh dalao@192.168.1.1
 ```
 
@@ -30,13 +30,13 @@ ssh dalao@192.168.1.1
 ssh-keygen -R [远程主机IP]
 ```
 
-### 免密
+### 免密登录
 
-- 手动复制
+- 手动复制密钥
 
 将本地`id_rsa.pub` 复制到远程主机`.ssh/authorized_keys`里
 
-- 命令复制
+- 命令复制密钥
 
 ```sh
 ssh-copy-id -i ~/.ssh/id_rsa.pub [远程用户]@[远程主机IP]
@@ -84,7 +84,7 @@ PasswordAuthentication no
 
 ### 获取登录信息
 
-/etc/ssh/目录下新建sshrc文件
+/etc/ssh/目录下新建sshrc
 
 ```sh
 #!/bin/bash
@@ -106,19 +106,19 @@ echo ${user} ${ip} ${time} ${server}
 
 ## Web工具
 
-[Github 地址](https://github.com/huashengdun/webssh)
+[https://github.com/huashengdun/webssh](https://github.com/huashengdun/webssh)
 
 ```sh
 pip3 install webssh
 ```
 
-- 直接运行wssh, 使用默认8888端口
+- 直接运行wssh, 默认8888端口
 
 ```sh
 wssh
 ```
 
-- 绑定IP地址和端口启动
+- 绑定IP地址端口
 
 ```sh
 wssh --address='IP地址' --port=端口

@@ -5,22 +5,23 @@
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:34
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-10-28 22:21:19
+ * @LastEditTime: 2024-05-19 23:28:02
 -->
 
 # Docker部署Oracle
 
 ## 指令
 
-```shell
-docker run -itd \
+```sh
+docker run -itd  \
     --name=orace \
-    -p 8080:8080 -p 1521:1521 \
+    -p 8080:8080 \
+    -p 1521:1521 \
     truevoly/oracle-12c
 ```
 
 
-## Oracle指令
+## 指令
 
 ### 进入Oracle
 

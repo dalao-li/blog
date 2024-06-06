@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email: dalao@xxx.com
  * @Date: 2021-01-16 17:59:35
- * @LastEditors: dalao
- * @LastEditTime: 2023-03-18 00:33:39
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2024-06-06 15:05:15
 -->
 
 # SQL外键
@@ -20,22 +20,27 @@
 
 - `FOREIGN KEY` 用于约束预防破坏表之间连接的动作, 防止非法数据插入外键列
 
-## 实例
+## 示例
 
 ```sql
-CREATE TABLE `Stu`  (
+# ---------------------------------------------------------------------------------------------------------
+CREATE TABLE `Stu` (
   `s_id` varchar(255)  NOT NULL, 
   `s_name` varchar(255), 
   PRIMARY KEY (`s_id`) USING BTREE
 );
+# ---------------------------------------------------------------------------------------------------------
 
-CREATE TABLE `Course`  (
+# ---------------------------------------------------------------------------------------------------------
+CREATE TABLE `Course` (
   `c_id` varchar(255)  NOT NULL, 
   `c_name` varchar(255), 
   PRIMARY KEY (`c_id`) USING BTREE
 );
+# ---------------------------------------------------------------------------------------------------------
 
-CREATE TABLE `Score`  (
+# ---------------------------------------------------------------------------------------------------------
+CREATE TABLE `Score` (
   `r_id` int(0) NOT NULL AUTO_INCREMENT, 
   `s_id` varchar(255), 
   `c_id` varchar(255), 
@@ -50,17 +55,18 @@ CREATE TABLE `Score`  (
   # Score.s_id(外键)指向 Stu.s_id(主键)
   CONSTRAINT `s_id` FOREIGN KEY (`s_id`) REFERENCES `Stu` (`s_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 );
+# ---------------------------------------------------------------------------------------------------------
 ```
 
-若向 Score 表中插入一行数据, 其中 Score.s_id, Score.c_id 值必须存在于 Stu 表与Course 表中, 否则会报错
+若向 Score 表中插入一行数据, 其中 Score.s_id与Score.c_id 值必须存在于 Stu 表与Course 表中, 否则会报错
 
 Stu 表
 
 | s_id          | s_name |
 | ------------- | ------ |
-| 2017-XAB-3653 | 李五句 |
-| 2017-XAB-3663 | 崔大机 |
-| 2017-XAB-3669 | 武杀朱 |
+| 2017-XAB-3653 | Li     |
+| 2017-XAB-3663 | Sui    |
+| 2017-XAB-3669 | Wu     |
 
 Course 表
 
@@ -70,7 +76,7 @@ Course 表
 | AV-275455 | 量子力学 |
 | AV-999900 | 流体力学 |
 
-- 向 Score 表中插入李五句的量子力学成绩 97 分
+- 向 Score 表中插入Li的量子力学成绩 97 分
 
 ```sql
 INSERT INTO Score (s_id, c_id, score) VALUES ('2017-XAB-3653', 'AV-275455', 97);
@@ -80,7 +86,7 @@ INSERT INTO Score (s_id, c_id, score) VALUES ('2017-XAB-3653', 'AV-275455', 97);
 
 插入正常, 因为s_id, c_id 的值都在 Stu 与 Course 表中存在
 
-- 现在李五句有门课编号为 BV-000001, 成绩为 80 分, 插入 Score 
+- 现在Li有门课编号为 BV-000001, 成绩为 80 分, 插入 Score 
 
 ![](https://cdn.hurra.ltd/img/20201005170512.png)
 
