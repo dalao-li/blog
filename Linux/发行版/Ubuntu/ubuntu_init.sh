@@ -7,7 +7,7 @@
  # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
  # @LastEditors: Please set LastEditors
- # @LastEditTime: 2024-06-10 11:50:56
+ # @LastEditTime: 2024-06-10 16:52:35
 ### 
 
 # 设置flameshot快捷键
@@ -36,23 +36,14 @@ init_system(){
 
 # 安装docker
 install_docker(){
-    sudo apt install -y curl
-
-    # 添加秘钥
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-    sudo apt update -y
-
-    sudo apt install -y docker-ce docker-ce-cli containerd.io
+    sudo apt install docker.io
 
     # 添加docker用户组, 将登陆用户加入到docker用户组中
     sudo usermod -aG docker $USER
 
     sudo newgrp docker
 
-    # 修改源
+    # 修改Docker源
     sudo bash -c "cat > /etc/docker/daemon.json" <<EOF
 {
     "registry-mirrors":["https://997nddro.mirror.aliyuncs.com"]
@@ -184,7 +175,7 @@ install_anaconda(){
 
 # 安装虚拟机
 install_vm(){
-    sudo apt-get install -y build-essential linux-headers-$(uname -r)
+    sudo apt install -y build-essential linux-headers-$(uname -r)
 
     sudo sh ${DISK_PATH}/Ubuntu/App/VMware-Workstation-Full-16.1.1-17801498.x86_64.bundle
 }

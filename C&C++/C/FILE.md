@@ -5,7 +5,7 @@
  * @Email: dalao@xxx.com
  * @Date: 2022-08-14 01:23:03
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-11-18 17:27:37
+ * @LastEditTime: 2024-06-10 18:32:21
 -->
 
 # FILE
@@ -19,7 +19,7 @@ struct _iobuf {
     char *_ptr;
     // 当前缓冲区的相对位置
     int _cnt;
-    // 指基础位置(即是文件的起始位置)
+    // 文件起始位置
     char *_base;
     // 文件标志
     int _flag;
@@ -41,7 +41,7 @@ typedef struct _iobuf FILE;
 
 FILE结构是间接地操作系统的文件控制块(FCB)来实现对文件的操作
 
-## 函数
+## 接口
 
 ### fopen
 

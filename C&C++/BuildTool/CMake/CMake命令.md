@@ -5,13 +5,17 @@
  * @Email: dalao_li@163.com
  * @Date: 2023-09-16 16:02:42
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-12-14 21:57:19
+ * @LastEditTime: 2024-06-10 17:57:47
 -->
 
 # CMake命令
 
+
+## 实例
+
+- Main.cpp
+
 ```cpp
-// Main.cpp
 #include<iostream>
 
 int main(void) {
@@ -20,7 +24,11 @@ int main(void) {
     return 0;
 }
 
-// CMakeLists.txt
+```
+
+- CMakeLists.txt
+
+```sh
 project(Hello)
 
 set(SRC_LIST Main.cpp)
@@ -42,11 +50,6 @@ cmake build
 cmake -B build
 ```
 
-此处使用MSVC编译器构建出了一个VS项目
-
-![](https://cdn.hurra.ltd/img/20231202003303.png)
-
-
 - 指定src目录的CMakeList.txt, 指定构建目录build
 
 ```sh
@@ -67,7 +70,8 @@ cmake --build .
 cmake --build build
 ```
 
-生成可执行文件hello
+生成可执行文件
+
 ![](https://cdn.hurra.ltd/img/20231202004223.png)
 
 ## 安装
@@ -79,6 +83,5 @@ cmake --install build
 ```
 
 ## 卸载
-
 
 [卸载 make install 编译安装的软件](https://blog.csdn.net/reasonyuanrobot/article/details/106732047)

@@ -4,13 +4,13 @@
 
 ### cmake_minimum_required
 
-- 设置一个工程所需要的最低CMake版本
+设置一个工程所需要的最低CMake版本
 
 ```cmake
 cmake_minimum_required(VERSION major[.minor[.patch[.tweak]]] [FATAL_ERROR])
 ```
 
-设置该工程最低CMake版本为3.10
+- 设置该工程最低CMake版本为3.10
 
 ```sh
 cmake_minimum_required(VERSION 3.10)
@@ -18,7 +18,7 @@ cmake_minimum_required(VERSION 3.10)
 
 ### project
 
-- 设置项目名与版本
+设置项目名与版本
 
 ```sh
 project(Test VERSION 1.0)
@@ -26,13 +26,13 @@ project(Test VERSION 1.0)
 
 ### set
 
-- 将一个CMAKE变量设置为给定值
+将一个CMAKE变量设置为给定值
 
 ```sh
 set(<variable> <value> [[CACHE <type> <docstring> [FORCE]] | PARENT_SCOPE])
 ```
 
-设置为C++版本为C++11
+- 设置为C++版本为C++11
 
 ```sh
 set(CMAKE_CXX_STANDARD 11)
@@ -42,7 +42,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 ### include_directories
 
-- 为构建树添加包含路径
+为构建树添加包含路径
 
 ```cmake
 include_directories([AFTER|BEFORE] [SYSTEM] dir1 dir2 ...)
@@ -50,7 +50,7 @@ include_directories([AFTER|BEFORE] [SYSTEM] dir1 dir2 ...)
 
 ### add_library
 
-- 根据调用的命令里列出的源文件来创建库文件
+根据调用的命令里列出的源文件来创建库文件
 
 ```cmake
 add_library(<name> [STATIC | SHARED | MODULE] [EXCLUDE_FROM_ALL] source1 source2 ... sourceN)
@@ -66,7 +66,7 @@ name 对应于逻辑目标名称, 而且在一个工程的全局域内必须唯�
 
 `MODULE` 库是不会被链接到其它目标中的插件, 但是可能会在运行时使用dlopen-系列的函数动态链接
 
-- 创建动态库
+#### 创建动态库
 
 ```c++
 // API.h
@@ -98,7 +98,7 @@ add_library(API SHARED ${SRC_LIST})
 
 ### add_subdirectory
 
-- 为构建添加一个子路径
+为构建添加一个子路径
 
 ```sh
 add_subdirectory(source_dir [binary_dir] [EXCLUDE_FROM_ALL])
