@@ -6,8 +6,8 @@
  # @Author: DaLao
  # @Email: dalao@xxx.com
  # @Date: 2021-07-10 13:27:20
- # @LastEditors: dalao_li
- # @LastEditTime: 2023-09-15 22:55:14
+ # @LastEditors: Please set LastEditors
+ # @LastEditTime: 2024-06-10 11:50:56
 ### 
 
 # 设置flameshot快捷键
@@ -79,7 +79,7 @@ install_node(){
 
 # 安装代理
 set_proxy(){
-    url="https://rss.biteb-sub.com/link/yhl3kILmLOfaGg6W?clash=1&log-level=info"
+    url="https://cdn.woccloud.org/s/RR5AuofL98Pchv39?clash=2&extend=1"
     
     path=".config/clash/config.yaml"
     
