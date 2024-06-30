@@ -2,10 +2,10 @@
  * @Description: 
  * @Version: 1.0
  * @Author: daLao
- * @Email: dalao@xxx.com
+ * @Email:  
  * @Date: 2023-04-19 00:22:12
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-12-17 00:17:22
+ * @LastEditTime: 2024-06-28 22:32:52
 -->
 
 # Qt环境搭建
@@ -55,4 +55,18 @@ sudo apt install qml-module-qtquick-dialogs
 
 ## Windows
 
+
+### 离线安装
 [QT5.14下载地址](https://download.qt.io/archive/qt/5.14/5.14.0/qt-opensource-windows-x86-5.14.0.exe)
+
+
+### 在线安装
+
+- 下载
+
+[https://download.qt.io/official_releases/online_installers/](https://download.qt.io/official_releases/online_installers/)
+
+- 安装
+
+```sh./qt-unified-windows-x64-X.X.X-online.exe --mirror https://mirror.nju.edu.cn/qt  
+```
