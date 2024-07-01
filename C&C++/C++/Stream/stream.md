@@ -4,8 +4,8 @@
  * @Author: DaLao
  * @Email:  
  * @Date: 2022-09-02 20:37:12
- * @LastEditors: daLao
- * @LastEditTime: 2023-04-17 16:17:47
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2024-07-01 16:37:15
 -->
 
 # stream
@@ -191,8 +191,6 @@ void change_type(T &target, V &source)
 ```c++
 #include <iostream>
 #include <sstream>
-
-...
 
 int main()
 {
